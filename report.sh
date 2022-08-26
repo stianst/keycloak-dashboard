@@ -10,11 +10,23 @@ PR_EXPIRED_COUNT=`gh api -X GET search/issues -f q="repo:keycloak/keycloak is:pr
 
 echo "# Keycloak Community Dashboard"
 echo ""
+echo "## Warnings"
+echo ""
+
+if [ "$PR_COUNT" -ge "$MAX_PRS" ]; then
+  echo "* Too many open PRs";
+fi
+
+if [ "$PR_EXPIRED_COUNT" -gt "0" ]; then
+  echo "* Some PRs have been around for too long"
+fi
+
+echo ""
 echo "## PRs"
 echo ""
-echo "[Total PRs](https://github.com/keycloak/keycloak/pulls): $MAX_PRS"
+echo "* [Total PRs](https://github.com/keycloak/keycloak/pulls): $PR_COUNT"
 echo ""
-echo "[Older than $MAX_AGE months](https://github.com/keycloak/keycloak/pulls?q=created%3A<$DATE_EXPIRED): $PR_EXPIRED_COUNT"
+echo "* [Older than $MAX_AGE months](https://github.com/keycloak/keycloak/pulls?q=created%3A<$DATE_EXPIRED): $PR_EXPIRED_COUNT"
 
 #echo ""
 #echo "PRs more than one year old:"
