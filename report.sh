@@ -48,6 +48,6 @@ echo "* [Older than $MAX_AGE months](https://github.com/keycloak/keycloak/pulls?
 echo ""
 echo "## Bugs"
 echo ""
-echo "* Open bugs: $BUG_COUNT"
-echo "* Non-triaged bugs: $BUG_TRIAGE_COUNT"
+echo "* [Open bugs](https://github.com/keycloak/keycloak/issues?q=is%3Aissue+is%3Aopen+label%3Akind%2Fbug+-label%3Astatus%2Ftriage+): $BUG_COUNT"
+echo "* [Non-triaged bugs](https://github.com/keycloak/keycloak/issues?q=is%3Aissue+is%3Aopen+label%3Akind%2Fbug+label%3Astatus%2Ftriage): $BUG_TRIAGE_COUNT"
 echo ""
