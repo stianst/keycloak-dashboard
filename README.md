@@ -9,13 +9,13 @@
 ## GitHub Workflows
 
 * Nightly release: ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/keycloak-rel/keycloak-rel/Release%20Nightly)
-* Keycloak CI: ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/keycloak/keycloak/Keycloak%20CI)
-* Keycloak Operator CI: ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/keycloak/keycloak/Keycloak%20Operator%20CI)
-* CodeQL JS Adapter: ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/keycloak/keycloak/CodeQL%20JS%20Adapter)
-* CodeQL Java: ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/keycloak/keycloak/CodeQL%20Java)
-* CodeQL Themes: ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/keycloak/keycloak/CodeQL%20Themes)
-* Snyk: ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/keycloak/keycloak/Snyk)
-* Trivy: ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/keycloak/keycloak/Trivy)
+* Keycloak CI: ![GitHub Workflow Status (event)](https://img.shields.io/github/workflow/status/keycloak/keycloak/Keycloak%20CI?event=schedule&branch=main)
+* Keycloak Operator CI: ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/keycloak/keycloak/Keycloak%20Operator%20CI?event=schedule&branch=main)
+* CodeQL JS Adapter: ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/keycloak/keycloak/CodeQL%20JS%20Adapter?event=schedule&branch=main)
+* CodeQL Java: ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/keycloak/keycloak/CodeQL%20Java?event=schedule&branch=main)
+* CodeQL Themes: ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/keycloak/keycloak/CodeQL%20Themes?event=schedule&branch=main)
+* Snyk: ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/keycloak/keycloak/Snyk?event=schedule&branch=main)
+* Trivy: ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/keycloak/keycloak/Trivy?event=schedule&branch=main)
 
 ## PRs
 
