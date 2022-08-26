@@ -11,10 +11,6 @@ PR_EXPIRED_COUNT=`gh api -X GET search/issues -f q="repo:keycloak/keycloak is:pr
 BUG_COUNT=`gh api -X GET search/issues -f q="repo:keycloak/keycloak is:issue is:open label:kind/bug -label:status/triage" -f per_page=1 -q .total_count`
 BUG_TRIAGE_COUNT=`gh api -X GET search/issues -f q="repo:keycloak/keycloak is:issue is:open label:kind/bug label:status/triage" -f per_page=1 -q .total_count`
 
-echo "# Keycloak Community Dashboard"
-echo ""
-
-echo ""
 echo "## Warnings"
 echo ""
 
