@@ -1,6 +1,3 @@
-# Keycloak Community Dashboard
-
-
 ## Warnings
 
 * Too many open PRs
