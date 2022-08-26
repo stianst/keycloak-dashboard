@@ -13,6 +13,7 @@ echo ""
 echo "## PRs"
 echo ""
 echo "[Total PRs](https://github.com/keycloak/keycloak/pulls): $MAX_PRS"
+echo ""
 echo "[Older than $MAX_AGE months](https://github.com/keycloak/keycloak/pulls?q=created%3A<$DATE_EXPIRED): $PR_EXPIRED_COUNT"
 
 #echo ""
