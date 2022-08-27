@@ -1,6 +1,5 @@
 ## Warnings
 
-* Some PRs have been around for too long
 
 ## GitHub Workflows
 
@@ -15,9 +14,15 @@
 
 ## PRs
 
-* [Total PRs](https://github.com/keycloak/keycloak/pulls): 198
+* [Total PRs](https://github.com/keycloak/keycloak/pulls): {
+  "documentation_url": "https://docs.github.com/en/free-pro-team@latest/rest/overview/resources-in-the-rest-api#secondary-rate-limits",
+  "message": "You have exceeded a secondary rate limit. Please wait a few minutes before you try again."
+}
 
-* [Older than 12 months](https://github.com/keycloak/keycloak/pulls?q=created%3A<2021-08-27): 48
+* [Older than 12 months](https://github.com/keycloak/keycloak/pulls?q=created%3A<2021-08-27): {
+  "documentation_url": "https://docs.github.com/en/free-pro-team@latest/rest/overview/resources-in-the-rest-api#secondary-rate-limits",
+  "message": "You have exceeded a secondary rate limit. Please wait a few minutes before you try again."
+}
 
 ## Bugs
 
