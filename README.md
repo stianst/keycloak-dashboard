@@ -1,6 +1,5 @@
 ## Warnings
 
-* Some PRs have been around for too long
 
 ## GitHub Workflows
 
@@ -15,13 +14,25 @@
 
 ## PRs
 
-* [Total PRs](https://github.com/keycloak/keycloak/pulls): 198
+* [Total PRs](https://github.com/keycloak/keycloak/pulls): {
+  "documentation_url": "https://docs.github.com/en/free-pro-team@latest/rest/overview/resources-in-the-rest-api#secondary-rate-limits",
+  "message": "You have exceeded a secondary rate limit. Please wait a few minutes before you try again."
+}
 
-* [Older than 12 months](https://github.com/keycloak/keycloak/pulls?q=created%3A<2021-08-27): 48
+* [Older than 12 months](https://github.com/keycloak/keycloak/pulls?q=created%3A<2021-08-27): {
+  "documentation_url": "https://docs.github.com/en/free-pro-team@latest/rest/overview/resources-in-the-rest-api#secondary-rate-limits",
+  "message": "You have exceeded a secondary rate limit. Please wait a few minutes before you try again."
+}
 
 ## Bugs
 
-* [Open bugs](https://github.com/keycloak/keycloak/issues?q=is%3Aissue+is%3Aopen+label%3Akind%2Fbug+-label%3Astatus%2Ftriage+): 118
+* [Open bugs](https://github.com/keycloak/keycloak/issues?q=is%3Aissue+is%3Aopen+label%3Akind%2Fbug+-label%3Astatus%2Ftriage+): {
+  "documentation_url": "https://docs.github.com/en/free-pro-team@latest/rest/overview/resources-in-the-rest-api#secondary-rate-limits",
+  "message": "You have exceeded a secondary rate limit. Please wait a few minutes before you try again."
+}
 
-* [Non-triaged bugs](https://github.com/keycloak/keycloak/issues?q=is%3Aissue+is%3Aopen+label%3Akind%2Fbug+label%3Astatus%2Ftriage): 482
+* [Non-triaged bugs](https://github.com/keycloak/keycloak/issues?q=is%3Aissue+is%3Aopen+label%3Akind%2Fbug+label%3Astatus%2Ftriage): {
+  "documentation_url": "https://docs.github.com/en/free-pro-team@latest/rest/overview/resources-in-the-rest-api#secondary-rate-limits",
+  "message": "You have exceeded a secondary rate limit. Please wait a few minutes before you try again."
+}
 
