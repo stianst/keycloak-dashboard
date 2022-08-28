@@ -18,11 +18,11 @@
 
 * [Total PRs](https://github.com/keycloak/keycloak/pulls): 200
 
-* [Older than 12 months](https://github.com/keycloak/keycloak/pulls?q=created%3A<2021-08-27): 48
+* [Older than 12 months](https://github.com/keycloak/keycloak/pulls?q=created%3A<2021-08-28): 50
 
 ## Bugs
 
 * [Open bugs](https://github.com/keycloak/keycloak/issues?q=is%3Aissue+is%3Aopen+label%3Akind%2Fbug+-label%3Astatus%2Ftriage+): 118
 
-* [Non-triaged bugs](https://github.com/keycloak/keycloak/issues?q=is%3Aissue+is%3Aopen+label%3Akind%2Fbug+label%3Astatus%2Ftriage): 482
+* [Non-triaged bugs](https://github.com/keycloak/keycloak/issues?q=is%3Aissue+is%3Aopen+label%3Akind%2Fbug+label%3Astatus%2Ftriage): 483
 
