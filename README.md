@@ -21,6 +21,9 @@
 * [Older than 12 months](https://github.com/keycloak/keycloak/pulls?q=created%3A<2021-08-29): 51
 * [Older than 18 months](https://github.com/keycloak/keycloak/pulls?q=created%3A<2021-03-01): 4
 
+* [Created last 7 days](https://github.com/keycloak/keycloak/pulls?q=is%3Apr+created%3A%3E2022-08-21): 32
+* [Closed last 7 days](https://github.com/keycloak/keycloak/pulls?q=is%3Apr+is%3Aclosed+closed%3A%3E2022-08-21): 99
+
 ## Bugs
 
 * [Open bugs](https://github.com/keycloak/keycloak/issues?q=is%3Aissue+is%3Aopen+label%3Akind%2Fbug+-label%3Astatus%2Ftriage+): 118
