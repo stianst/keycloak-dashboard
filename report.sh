@@ -32,23 +32,23 @@ fi
 echo ""
 echo "## GitHub Workflows"
 echo ""
-echo "* Nightly release: ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/keycloak-rel/keycloak-rel/Release%20Nightly)"
-echo "* Keycloak CI: ![GitHub Workflow Status (event)](https://img.shields.io/github/workflow/status/keycloak/keycloak/Keycloak%20CI?event=schedule&branch=main)"
-echo "* Keycloak Operator CI: ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/keycloak/keycloak/Keycloak%20Operator%20CI?event=schedule&branch=main)"
-echo "* CodeQL JS Adapter: ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/keycloak/keycloak/CodeQL%20JS%20Adapter?event=schedule&branch=main)"
-echo "* CodeQL Java: ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/keycloak/keycloak/CodeQL%20Java?event=schedule&branch=main)"
-echo "* CodeQL Themes: ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/keycloak/keycloak/CodeQL%20Themes?event=schedule&branch=main)"
-echo "* Snyk: ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/keycloak/keycloak/Snyk?event=schedule&branch=main)"
-echo "* Trivy: ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/keycloak/keycloak/Trivy?event=schedule&branch=main)"
+echo "* [Nightly release: ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/keycloak-rel/keycloak-rel/Release%20Nightly)"](https://github.com/keycloak-rel/keycloak-rel/actions/workflows/release-nightly.yml)
+echo "* [Keycloak CI: ![GitHub Workflow Status (event)](https://img.shields.io/github/workflow/status/keycloak/keycloak/Keycloak%20CI?event=schedule&branch=main)"](https://github.com/keycloak/keycloak/actions/workflows/ci.yml?query=event%3Aschedule+branch%3Amain)
+echo "* [Keycloak Operator CI: ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/keycloak/keycloak/Keycloak%20Operator%20CI?event=schedule&branch=main)"](https://github.com/keycloak/keycloak/actions/workflows/operator-ci.yml?query=event%3Aschedule+branch%3Amain)
+echo "* [CodeQL JS Adapter: ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/keycloak/keycloak/CodeQL%20JS%20Adapter?event=schedule&branch=main)"](https://github.com/keycloak/keycloak/actions/workflows/codeql-js-adapter-analysis.yml?query=event%3Aschedule+branch%3Amain)
+echo "* [CodeQL Java: ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/keycloak/keycloak/CodeQL%20Java?event=schedule&branch=main)"](https://github.com/keycloak/keycloak/actions/workflows/codeql-java-analysis.yml?query=event%3Aschedule+branch%3Amain)
+echo "* [CodeQL Themes: ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/keycloak/keycloak/CodeQL%20Themes?event=schedule&branch=main)"](https://github.com/keycloak/keycloak/actions/workflows/codeql-theme-analysis.yml?query=event%3Aschedule+branch%3Amain)
+echo "* [Snyk: ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/keycloak/keycloak/Snyk?event=schedule&branch=main)"](https://github.com/keycloak/keycloak/actions/workflows/snyk.yml?query=event%3Aschedule+branch%3Amain)
+echo "* [Trivy: ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/keycloak/keycloak/Trivy?event=schedule&branch=main)"](https://github.com/keycloak/keycloak/actions/workflows/trivy-analysis.yml?query=event%3Aschedule+branch%3Amain)
 
 echo ""
 echo "## PRs"
 echo ""
-echo "* [Total PRs](https://github.com/keycloak/keycloak/pulls): $PR_COUNT"
+echo "* [Open PRs](https://github.com/keycloak/keycloak/pulls): $PR_COUNT"
 echo ""
-echo "* [Older than 6 months](https://github.com/keycloak/keycloak/pulls?q=created%3A<$DATE_6_EXPIRED): $PR_EXPIRED_6_COUNT"
-echo "* [Older than 12 months](https://github.com/keycloak/keycloak/pulls?q=created%3A<$DATE_12_EXPIRED): $PR_EXPIRED_12_COUNT"
-echo "* [Older than 18 months](https://github.com/keycloak/keycloak/pulls?q=created%3A<$DATE_18_EXPIRED): $PR_EXPIRED_18_COUNT"
+echo "* [Older than 6 months](https://github.com/keycloak/keycloak/pulls?q=is%3Apr+is%3Aopen+created%3A%3C$DATE_6_EXPIRED): $PR_EXPIRED_6_COUNT"
+echo "* [Older than 12 months](hhttps://github.com/keycloak/keycloak/pulls?q=is%3Apr+is%3Aopen+created%3A%3C$DATE_12_EXPIRED): $PR_EXPIRED_12_COUNT"
+echo "* [Older than 18 months](https://github.com/keycloak/keycloak/pulls?q=is%3Apr+is%3Aopen+created%3A%3C$DATE_18_EXPIRED): $PR_EXPIRED_18_COUNT"
 echo ""
 echo "* [Created last 7 days](https://github.com/keycloak/keycloak/pulls?q=is%3Apr+created%3A%3E$DATE_8_DAYS_AGO): $PR_OPENED_LAST_7"
 echo "* [Closed last 7 days](https://github.com/keycloak/keycloak/pulls?q=is%3Apr+is%3Aclosed+closed%3A%3E$DATE_8_DAYS_AGO): $PR_CLOSED_LAST_7"
