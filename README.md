@@ -17,7 +17,9 @@
 
 * [Total PRs](https://github.com/keycloak/keycloak/pulls): 199
 
+* [Older than 6 months](https://github.com/keycloak/keycloak/pulls?q=created%3A<2022-03-01): 96
 * [Older than 12 months](https://github.com/keycloak/keycloak/pulls?q=created%3A<2021-08-29): 51
+* [Older than 18 months](https://github.com/keycloak/keycloak/pulls?q=created%3A<2021-03-01): 4
 
 ## Bugs
 
