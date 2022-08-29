@@ -32,14 +32,14 @@ fi
 echo ""
 echo "## GitHub Workflows"
 echo ""
-echo "* [Nightly release: ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/keycloak-rel/keycloak-rel/Release%20Nightly)"](https://github.com/keycloak-rel/keycloak-rel/actions/workflows/release-nightly.yml)
-echo "* [Keycloak CI: ![GitHub Workflow Status (event)](https://img.shields.io/github/workflow/status/keycloak/keycloak/Keycloak%20CI?event=schedule&branch=main)"](https://github.com/keycloak/keycloak/actions/workflows/ci.yml?query=event%3Aschedule+branch%3Amain)
-echo "* [Keycloak Operator CI: ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/keycloak/keycloak/Keycloak%20Operator%20CI?event=schedule&branch=main)"](https://github.com/keycloak/keycloak/actions/workflows/operator-ci.yml?query=event%3Aschedule+branch%3Amain)
-echo "* [CodeQL JS Adapter: ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/keycloak/keycloak/CodeQL%20JS%20Adapter?event=schedule&branch=main)"](https://github.com/keycloak/keycloak/actions/workflows/codeql-js-adapter-analysis.yml?query=event%3Aschedule+branch%3Amain)
-echo "* [CodeQL Java: ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/keycloak/keycloak/CodeQL%20Java?event=schedule&branch=main)"](https://github.com/keycloak/keycloak/actions/workflows/codeql-java-analysis.yml?query=event%3Aschedule+branch%3Amain)
-echo "* [CodeQL Themes: ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/keycloak/keycloak/CodeQL%20Themes?event=schedule&branch=main)"](https://github.com/keycloak/keycloak/actions/workflows/codeql-theme-analysis.yml?query=event%3Aschedule+branch%3Amain)
-echo "* [Snyk: ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/keycloak/keycloak/Snyk?event=schedule&branch=main)"](https://github.com/keycloak/keycloak/actions/workflows/snyk.yml?query=event%3Aschedule+branch%3Amain)
-echo "* [Trivy: ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/keycloak/keycloak/Trivy?event=schedule&branch=main)"](https://github.com/keycloak/keycloak/actions/workflows/trivy-analysis.yml?query=event%3Aschedule+branch%3Amain)
+echo "* [Nightly release: ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/keycloak-rel/keycloak-rel/Release%20Nightly)](https://github.com/keycloak-rel/keycloak-rel/actions/workflows/release-nightly.yml)"
+echo "* [Keycloak CI: ![GitHub Workflow Status (event)](https://img.shields.io/github/workflow/status/keycloak/keycloak/Keycloak%20CI?event=schedule&branch=main)](https://github.com/keycloak/keycloak/actions/workflows/ci.yml?query=event%3Aschedule+branch%3Amain)"
+echo "* [Keycloak Operator CI: ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/keycloak/keycloak/Keycloak%20Operator%20CI?event=schedule&branch=main)](https://github.com/keycloak/keycloak/actions/workflows/operator-ci.yml?query=event%3Aschedule+branch%3Amain)"
+echo "* [CodeQL JS Adapter: ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/keycloak/keycloak/CodeQL%20JS%20Adapter?event=schedule&branch=main)](https://github.com/keycloak/keycloak/actions/workflows/codeql-js-adapter-analysis.yml?query=event%3Aschedule+branch%3Amain)"
+echo "* [CodeQL Java: ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/keycloak/keycloak/CodeQL%20Java?event=schedule&branch=main)](https://github.com/keycloak/keycloak/actions/workflows/codeql-java-analysis.yml?query=event%3Aschedule+branch%3Amain)"
+echo "* [CodeQL Themes: ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/keycloak/keycloak/CodeQL%20Themes?event=schedule&branch=main)](https://github.com/keycloak/keycloak/actions/workflows/codeql-theme-analysis.yml?query=event%3Aschedule+branch%3Amain)"
+echo "* [Snyk: ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/keycloak/keycloak/Snyk?event=schedule&branch=main)](https://github.com/keycloak/keycloak/actions/workflows/snyk.yml?query=event%3Aschedule+branch%3Amain)"
+echo "* [Trivy: ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/keycloak/keycloak/Trivy?event=schedule&branch=main)](https://github.com/keycloak/keycloak/actions/workflows/trivy-analysis.yml?query=event%3Aschedule+branch%3Amain)"
 
 echo ""
 echo "## PRs"
