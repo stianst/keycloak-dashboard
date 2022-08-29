@@ -5,11 +5,15 @@ MAX_PRS=200
 DATE_6_EXPIRED=`date -d "-6 month" +%Y-%m-%d`
 DATE_12_EXPIRED=`date -d "-12 month" +%Y-%m-%d`
 DATE_18_EXPIRED=`date -d "-18 month" +%Y-%m-%d`
+DATE_8_DAYS_AGO=`date -d "-8 day" +%Y-%m-%d`
 
 PR_COUNT=`gh api -X GET search/issues -f q="repo:keycloak/keycloak is:pr is:open" -f per_page=1 -q .total_count`
 PR_EXPIRED_6_COUNT=`gh api -X GET search/issues -f q="repo:keycloak/keycloak is:pr is:open created:<$DATE_6_EXPIRED" -f per_page=1 -q .total_count`
 PR_EXPIRED_12_COUNT=`gh api -X GET search/issues -f q="repo:keycloak/keycloak is:pr is:open created:<$DATE_12_EXPIRED" -f per_page=1 -q .total_count`
 PR_EXPIRED_18_COUNT=`gh api -X GET search/issues -f q="repo:keycloak/keycloak is:pr is:open created:<$DATE_18_EXPIRED" -f per_page=1 -q .total_count`
+
+PR_CLOSED_LAST_7=`gh api -X GET search/issues -f q="repo:keycloak/keycloak is:pr is:closed closed:>$DATE_8_DAYS_AGO" -f per_page=1 -q .total_count`
+PR_OPENED_LAST_7=`gh api -X GET search/issues -f q="repo:keycloak/keycloak is:pr created:>$DATE_8_DAYS_AGO" -f per_page=1 -q .total_count`
 
 BUG_COUNT=`gh api -X GET search/issues -f q="repo:keycloak/keycloak is:issue is:open label:kind/bug -label:status/triage" -f per_page=1 -q .total_count`
 BUG_TRIAGE_COUNT=`gh api -X GET search/issues -f q="repo:keycloak/keycloak is:issue is:open label:kind/bug label:status/triage" -f per_page=1 -q .total_count`
@@ -45,6 +49,9 @@ echo ""
 echo "* [Older than 6 months](https://github.com/keycloak/keycloak/pulls?q=created%3A<$DATE_6_EXPIRED): $PR_EXPIRED_6_COUNT"
 echo "* [Older than 12 months](https://github.com/keycloak/keycloak/pulls?q=created%3A<$DATE_12_EXPIRED): $PR_EXPIRED_12_COUNT"
 echo "* [Older than 18 months](https://github.com/keycloak/keycloak/pulls?q=created%3A<$DATE_18_EXPIRED): $PR_EXPIRED_18_COUNT"
+echo ""
+echo "* [Created last 7 days](https://github.com/keycloak/keycloak/pulls?q=is%3Apr+created%3A%3E$DATE_8_DAYS_AGO): $PR_OPENED_LAST_7"
+echo "* [Closed last 7 days](https://github.com/keycloak/keycloak/pulls?q=is%3Apr+is%3Aclosed+closed%3A%3E$DATE_8_DAYS_AGO): $PR_CLOSED_LAST_7"
 
 echo ""
 echo "## Bugs"
