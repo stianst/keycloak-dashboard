@@ -15,14 +15,14 @@
 
 ## PRs
 
-* [Open PRs](https://github.com/keycloak/keycloak/pulls): 186
+* [Open PRs](https://github.com/keycloak/keycloak/pulls): 184
 
 * [Older than 6 months](https://github.com/keycloak/keycloak/pulls?q=is%3Apr+is%3Aopen+created%3A%3C2022-03-03): 90
 * [Older than 12 months](https://github.com/keycloak/keycloak/pulls?q=is%3Apr+is%3Aopen+created%3A%3C2021-08-31): 48
 * [Older than 18 months](https://github.com/keycloak/keycloak/pulls?q=is%3Apr+is%3Aopen+created%3A%3C2021-03-03): 2
 
 * [Created last 7 days](https://github.com/keycloak/keycloak/pulls?q=is%3Apr+created%3A%3E2022-08-23): 40
-* [Closed last 7 days](https://github.com/keycloak/keycloak/pulls?q=is%3Apr+is%3Aclosed+closed%3A%3E2022-08-23): 110
+* [Closed last 7 days](https://github.com/keycloak/keycloak/pulls?q=is%3Apr+is%3Aclosed+closed%3A%3E2022-08-23): 112
 
 ## Bugs
 
