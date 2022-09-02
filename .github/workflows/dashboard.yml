@@ -57,7 +57,7 @@ jobs:
         uses: actions/upload-pages-artifact@v1
 
   deploy:
-    if: ${{ steps.build-dashboard.outputs.build != '' }}
+    if: job.steps.build-dashboard.outputs.build != ''
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
