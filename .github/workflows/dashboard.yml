@@ -47,7 +47,7 @@ jobs:
   build-pages:
     needs: build-dashboard
     runs-on: ubuntu-latest
-    if: needs.build-dashboard.outputs.build != ''
+    if: needs.build-dashboard.outputs.build == 'true'
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -62,7 +62,7 @@ jobs:
         uses: actions/upload-pages-artifact@v1
 
   deploy:
-    if: needs.build-dashboard.outputs.build != ''
+    if: needs.build-dashboard.outputs.build == 'true'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
