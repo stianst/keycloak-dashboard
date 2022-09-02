@@ -25,7 +25,7 @@ jobs:
   build-dashboard:
     runs-on: ubuntu-latest
     outputs:
-      build: ${{ steps.report.build }}
+      build: ${{ steps.report.outputs.build }}
 
     steps:
       - uses: actions/checkout@v3
