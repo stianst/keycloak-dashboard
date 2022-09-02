@@ -1,6 +1,6 @@
 |Warnings|
 |--------|
-|Some PRs have been around for too long|
+|**Some PRs have been around for too long**|
 
 |GitHub Workflows| |
 |----------------|-|
