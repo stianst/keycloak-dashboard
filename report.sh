@@ -23,10 +23,10 @@ BUG_TRIAGE_COUNT=`gh api -X GET search/issues -f q="repo:keycloak/keycloak is:is
 echo "|Warnings|"
 echo "|--------|"
 if [ "$PR_COUNT" -ge "$MAX_PRS" ]; then
-  echo "|Too many open PRs|";
+  echo "|**Too many open PRs**|";
 fi
 if [ "$PR_EXPIRED_12_COUNT" -gt "0" ]; then
-  echo "|Some PRs have been around for too long|"
+  echo "|**Some PRs have been around for too long**|"
 fi
 echo ""
 
