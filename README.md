@@ -21,7 +21,7 @@
 
 * [Open PRs](https://github.com/keycloak/keycloak/pulls): 179
 
-* [Priority PRs](https://github.com/keycloak/keycloak/pulls?q=is%3Apr+is%3Aopen+label%3Apriority%2Fimportant%2Cpriority%2Fcritical): 2
+* [Priority PRs](https://github.com/keycloak/keycloak/pulls?q=is%3Apr+is%3Aopen+label%3Apriority%2Fimportant%2Cpriority%2Fcritical): 6
 
 * [Older than 6 months](https://github.com/keycloak/keycloak/pulls?q=is%3Apr+is%3Aopen+created%3A%3C2022-03-02): 83
 * [Older than 12 months](https://github.com/keycloak/keycloak/pulls?q=is%3Apr+is%3Aopen+created%3A%3C2021-09-02): 42
