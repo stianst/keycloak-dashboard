@@ -31,7 +31,7 @@ fi
 echo ""
 
 echo "|GitHub Workflows| |"
-echo "|----------------| |"
+echo "|----------------|-|"
 echo "|[Nightly release](https://github.com/keycloak-rel/keycloak-rel/actions/workflows/release-nightly.yml)|![GitHub Workflow Status](https://img.shields.io/github/workflow/status/keycloak-rel/keycloak-rel/Release%20Nightly)|"
 echo "|[Keycloak CI](https://github.com/keycloak/keycloak/actions/workflows/ci.yml?query=event%3Aschedule+branch%3Amain)|![GitHub Workflow Status (event)](https://img.shields.io/github/workflow/status/keycloak/keycloak/Keycloak%20CI?event=schedule&branch=main)|"
 echo "|[Keycloak Operator CI](https://github.com/keycloak/keycloak/actions/workflows/operator-ci.yml?query=event%3Aschedule+branch%3Amain)|![GitHub Workflow Status](https://img.shields.io/github/workflow/status/keycloak/keycloak/Keycloak%20Operator%20CI?event=schedule&branch=main)|"
@@ -55,7 +55,7 @@ echo "|[Closed last 7 days](https://github.com/keycloak/keycloak/pulls?q=is%3Apr
 echo ""
 
 echo "|Bugs| |"
-echo "|----| |"
+echo "|----|-|"
 echo "|[Open bugs](https://github.com/keycloak/keycloak/issues?q=is%3Aissue+is%3Aopen+label%3Akind%2Fbug+-label%3Astatus%2Ftriage+)|$BUG_COUNT|"
 echo "|[Non-triaged bugs](https://github.com/keycloak/keycloak/issues?q=is%3Aissue+is%3Aopen+label%3Akind%2Fbug+label%3Astatus%2Ftriage)|$BUG_TRIAGE_COUNT|"
 echo ""
