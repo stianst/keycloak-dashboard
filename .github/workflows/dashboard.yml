@@ -23,7 +23,9 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           bash report.sh > README.md
-          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git config --global user.name "github-actions[bot]"
-          git commit -a -m "Updated dashboard"
-          git push
+          if ( ! git diff --exit-code &>/dev/null ); then 
+            git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git config --global user.name "github-actions[bot]"
+            git commit -a -m "Updated dashboard"
+            git push
+          fi
