@@ -42,7 +42,7 @@ jobs:
   build-pages:
     needs: build-dashboard
     runs-on: ubuntu-latest
-    if: ${{ steps.build-dashboard.outputs.build != '' }}
+    if: job.steps.build-dashboard.outputs.build != ''
     steps:
       - name: Checkout
         uses: actions/checkout@v3
