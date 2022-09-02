@@ -2,9 +2,9 @@
 
 * Some PRs have been around for too long
 
-|GitHub Workflows|#|
-|----------------|-|
-|[Nightly release|![GitHub Workflow Status](https://img.shields.io/github/workflow/status/keycloak-rel/keycloak-rel/Release%20Nightly)](https://github.com/keycloak-rel/keycloak-rel/actions/workflows/release-nightly.yml)|
+## GitHub Workflows
+
+* [Nightly release: ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/keycloak-rel/keycloak-rel/Release%20Nightly)](https://github.com/keycloak-rel/keycloak-rel/actions/workflows/release-nightly.yml)
 
 * [Keycloak CI: ![GitHub Workflow Status (event)](https://img.shields.io/github/workflow/status/keycloak/keycloak/Keycloak%20CI?event=schedule&branch=main)](https://github.com/keycloak/keycloak/actions/workflows/ci.yml?query=event%3Aschedule+branch%3Amain)
 * [Keycloak Operator CI: ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/keycloak/keycloak/Keycloak%20Operator%20CI?event=schedule&branch=main)](https://github.com/keycloak/keycloak/actions/workflows/operator-ci.yml?query=event%3Aschedule+branch%3Amain)
