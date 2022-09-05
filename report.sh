@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -e
 
 MAX_PRS=200
 
