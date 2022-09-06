@@ -6,6 +6,7 @@ DATE_6_EXPIRED=`date -d "-6 month" +%Y-%m-%d`
 DATE_12_EXPIRED=`date -d "-12 month" +%Y-%m-%d`
 DATE_18_EXPIRED=`date -d "-18 month" +%Y-%m-%d`
 DATE_8_DAYS_AGO=`date -d "-8 day" +%Y-%m-%d`
+DATE_31_DAYS_AGO=`date -d "-31 day" +%Y-%m-%d`
 
 PR_COUNT=`gh api -X GET search/issues -f q="repo:keycloak/keycloak is:pr is:open" -f per_page=1 -q .total_count`
 PR_EXPIRED_6_COUNT=`gh api -X GET search/issues -f q="repo:keycloak/keycloak is:pr is:open created:<$DATE_6_EXPIRED" -f per_page=1 -q .total_count`
@@ -16,17 +17,22 @@ PR_IMPORTANT_COUNT=`gh api -X GET search/issues -f q="repo:keycloak/keycloak is:
 
 PR_CLOSED_LAST_7=`gh api -X GET search/issues -f q="repo:keycloak/keycloak is:pr is:closed closed:>$DATE_8_DAYS_AGO" -f per_page=1 -q .total_count`
 PR_OPENED_LAST_7=`gh api -X GET search/issues -f q="repo:keycloak/keycloak is:pr created:>$DATE_8_DAYS_AGO" -f per_page=1 -q .total_count`
+PR_CLOSED_LAST_30=`gh api -X GET search/issues -f q="repo:keycloak/keycloak is:pr is:closed closed:>$DATE_31_DAYS_AGO" -f per_page=1 -q .total_count`
+PR_OPENED_LAST_30=`gh api -X GET search/issues -f q="repo:keycloak/keycloak is:pr created:>$DATE_31_DAYS_AGO" -f per_page=1 -q .total_count`
 
 BUG_COUNT=`gh api -X GET search/issues -f q="repo:keycloak/keycloak is:issue is:open label:kind/bug -label:status/triage" -f per_page=1 -q .total_count`
 BUG_TRIAGE_COUNT=`gh api -X GET search/issues -f q="repo:keycloak/keycloak is:issue is:open label:kind/bug label:status/triage" -f per_page=1 -q .total_count`
 
 echo "|Warnings|"
 echo "|--------|"
+if [ "$PR_IMPORTANT_COUNT" -ge 0 ]; then
+  echo "|Several open priority PRs (#$PR_IMPORTANT_COUNT)|"
+fi
 if [ "$PR_COUNT" -ge "$MAX_PRS" ]; then
-  echo "|**Too many open PRs**|";
+  echo "|More than $MAX_PRS open PRs (#$PR_COUNT) |";
 fi
 if [ "$PR_EXPIRED_12_COUNT" -gt "0" ]; then
-  echo "|**Some PRs have been around for too long**|"
+  echo "|PRs have been open for more than 12 months (#$PR_EXPIRED_12_COUNT)|"
 fi
 echo ""
 
@@ -52,6 +58,8 @@ echo "|[Older than 12 months](https://github.com/keycloak/keycloak/pulls?q=is%3A
 echo "|[Older than 18 months](https://github.com/keycloak/keycloak/pulls?q=is%3Apr+is%3Aopen+created%3A%3C$DATE_18_EXPIRED)|$PR_EXPIRED_18_COUNT|"
 echo "|[Created last 7 days](https://github.com/keycloak/keycloak/pulls?q=is%3Apr+created%3A%3E$DATE_8_DAYS_AGO)|$PR_OPENED_LAST_7|"
 echo "|[Closed last 7 days](https://github.com/keycloak/keycloak/pulls?q=is%3Apr+is%3Aclosed+closed%3A%3E$DATE_8_DAYS_AGO)|$PR_CLOSED_LAST_7|"
+echo "|[Created last 30 days](https://github.com/keycloak/keycloak/pulls?q=is%3Apr+created%3A%3E$DATE_31_DAYS_AGO)|$PR_OPENED_LAST_30|"
+echo "|[Closed last 30 days](https://github.com/keycloak/keycloak/pulls?q=is%3Apr+is%3Aclosed+closed%3A%3E$DATE_31_DAYS_AGO)|$PR_CLOSED_LAST_30|"
 echo ""
 
 echo "|Bugs| |"
