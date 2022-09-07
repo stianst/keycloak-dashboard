@@ -28,6 +28,7 @@ jobs:
   three:
     runs-on: ubuntu-latest
     needs: [one, two]
+    if: needs.one.outputs.job-status == 'Success' || needs.two.outputs.job-status == 'Success'
     steps:
       - uses: actions/checkout@v3
 
