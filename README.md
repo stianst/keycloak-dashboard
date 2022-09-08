@@ -1,7 +1,7 @@
 |Warnings|
 |--------|
 |Several open priority PRs (#4)|
-|PRs have been open for more than 12 months (#38)|
+|PRs have been open for more than 12 months (#37)|
 
 |GitHub Workflows| |
 |----------------|-|
@@ -17,18 +17,18 @@
 
 |PRs| |
 |---|-|
-|[Open PRs](https://github.com/keycloak/keycloak/pulls)|172|
+|[Open PRs](https://github.com/keycloak/keycloak/pulls)|167|
 |[Priority PRs](https://github.com/keycloak/keycloak/pulls?q=is%3Apr+is%3Aopen+label%3Apriority%2Fimportant%2Cpriority%2Fcritical)|4|
-|[Older than 6 months](https://github.com/keycloak/keycloak/pulls?q=is%3Apr+is%3Aopen+created%3A%3C2022-03-08)|78|
-|[Older than 12 months](https://github.com/keycloak/keycloak/pulls?q=is%3Apr+is%3Aopen+created%3A%3C2021-09-08)|38|
-|[Older than 18 months](https://github.com/keycloak/keycloak/pulls?q=is%3Apr+is%3Aopen+created%3A%3C2021-03-08)|2|
-|[Created last 7 days](https://github.com/keycloak/keycloak/pulls?q=is%3Apr+created%3A%3E2022-08-31)|27|
-|[Closed last 7 days](https://github.com/keycloak/keycloak/pulls?q=is%3Apr+is%3Aclosed+closed%3A%3E2022-08-31)|39|
-|[Created last 30 days](https://github.com/keycloak/keycloak/pulls?q=is%3Apr+created%3A%3E2022-08-08)|134|
-|[Closed last 30 days](https://github.com/keycloak/keycloak/pulls?q=is%3Apr+is%3Aclosed+closed%3A%3E2022-08-08)|236|
+|[Older than 6 months](https://github.com/keycloak/keycloak/pulls?q=is%3Apr+is%3Aopen+created%3A%3C2022-03-08)|77|
+|[Older than 12 months](https://github.com/keycloak/keycloak/pulls?q=is%3Apr+is%3Aopen+created%3A%3C2021-09-08)|37|
+|[Older than 18 months](https://github.com/keycloak/keycloak/pulls?q=is%3Apr+is%3Aopen+created%3A%3C2021-03-08)|1|
+|[Created last 7 days](https://github.com/keycloak/keycloak/pulls?q=is%3Apr+created%3A%3E2022-08-31)|31|
+|[Closed last 7 days](https://github.com/keycloak/keycloak/pulls?q=is%3Apr+is%3Aclosed+closed%3A%3E2022-08-31)|48|
+|[Created last 30 days](https://github.com/keycloak/keycloak/pulls?q=is%3Apr+created%3A%3E2022-08-08)|138|
+|[Closed last 30 days](https://github.com/keycloak/keycloak/pulls?q=is%3Apr+is%3Aclosed+closed%3A%3E2022-08-08)|245|
 
 |Bugs| |
 |----|-|
 |[Open bugs](https://github.com/keycloak/keycloak/issues?q=is%3Aissue+is%3Aopen+label%3Akind%2Fbug+-label%3Astatus%2Ftriage+)|116|
-|[Non-triaged bugs](https://github.com/keycloak/keycloak/issues?q=is%3Aissue+is%3Aopen+label%3Akind%2Fbug+label%3Astatus%2Ftriage)|497|
+|[Non-triaged bugs](https://github.com/keycloak/keycloak/issues?q=is%3Aissue+is%3Aopen+label%3Akind%2Fbug+label%3Astatus%2Ftriage)|499|
 
