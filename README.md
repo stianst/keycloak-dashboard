@@ -22,10 +22,10 @@
 |[Older than 6 months](https://github.com/keycloak/keycloak/pulls?q=is%3Apr+is%3Aopen+created%3A%3C2022-03-11)|79|
 |[Older than 12 months](https://github.com/keycloak/keycloak/pulls?q=is%3Apr+is%3Aopen+created%3A%3C2021-09-11)|36|
 |[Older than 18 months](https://github.com/keycloak/keycloak/pulls?q=is%3Apr+is%3Aopen+created%3A%3C2021-03-11)|2|
-|[Created last 7 days](https://github.com/keycloak/keycloak/pulls?q=is%3Apr+created%3A%3E2022-09-03)|34|
-|[Closed last 7 days](https://github.com/keycloak/keycloak/pulls?q=is%3Apr+is%3Aclosed+closed%3A%3E2022-09-03)|44|
-|[Created last 30 days](https://github.com/keycloak/keycloak/pulls?q=is%3Apr+created%3A%3E2022-08-11)|131|
-|[Closed last 30 days](https://github.com/keycloak/keycloak/pulls?q=is%3Apr+is%3Aclosed+closed%3A%3E2022-08-11)|235|
+|[Created last 7 days](https://github.com/keycloak/keycloak/pulls?q=is%3Apr+created%3A%3E2022-09-03)|36|
+|[Closed last 7 days](https://github.com/keycloak/keycloak/pulls?q=is%3Apr+is%3Aclosed+closed%3A%3E2022-09-03)|46|
+|[Created last 30 days](https://github.com/keycloak/keycloak/pulls?q=is%3Apr+created%3A%3E2022-08-11)|133|
+|[Closed last 30 days](https://github.com/keycloak/keycloak/pulls?q=is%3Apr+is%3Aclosed+closed%3A%3E2022-08-11)|237|
 
 |Bugs| |
 |----|-|
