@@ -9,7 +9,8 @@
 |[Keycloak CI](https://github.com/keycloak/keycloak/actions/workflows/ci.yml?query=event%3Aschedule+branch%3Amain)|![GitHub Workflow Status (event)](https://img.shields.io/github/workflow/status/keycloak/keycloak/Keycloak%20CI?event=schedule&branch=main)|
 |[Keycloak Operator CI](https://github.com/keycloak/keycloak/actions/workflows/operator-ci.yml?query=event%3Aschedule+branch%3Amain)|![GitHub Workflow Status](https://img.shields.io/github/workflow/status/keycloak/keycloak/Keycloak%20Operator%20CI?event=schedule&branch=main)|
 |[Keycloak QuickStarts CI](https://github.com/keycloak/keycloak-quickstarts/actions?query=event%3Aschedule)|![GitHub Workflow Status (event)](https://img.shields.io/github/workflow/status/keycloak/keycloak-quickstarts/Quickstarts%20tests?event=schedule)|
-|[CodeQL JS Adapter](https://github.com/keycloak/keycloak/actions/workflows/codeql-js-adapter-analysis.yml?query=event%3Aschedule+branch%3Amain)|![GitHub Workflow Status](https://img.shields.io/github/workflow/status/keycloak/keycloak/CodeQL%20JS%20Adapter?event=schedule&branch=main)|
+|[Keycloak CI](https://github.com/keycloak/keycloak/actions/workflows/ci.yml?query=event%3Aschedule+branch%3Amain)|![GitHub Workflow Status (event)](https://img.shields.io/github/workflow/status/keycloak/keycloak/Keycloak%20CI?event=schedule&branch=main)|
+|[CodeQL JS Adapter](https://github.com/keycloak/keycloak-ui/actions/workflows/cypress.yml?query=event%3Aschedule+branch%3Amain)|![GitHub Workflow Status](https://img.shields.io/github/workflow/status/keycloak/keycloak-ui/Cypress?event=schedule&branch=main)|
 |[CodeQL Java](https://github.com/keycloak/keycloak/actions/workflows/codeql-java-analysis.yml?query=event%3Aschedule+branch%3Amain)|![GitHub Workflow Status](https://img.shields.io/github/workflow/status/keycloak/keycloak/CodeQL%20Java?event=schedule&branch=main)|
 |[CodeQL Themes](https://github.com/keycloak/keycloak/actions/workflows/codeql-theme-analysis.yml?query=event%3Aschedule+branch%3Amain)|![GitHub Workflow Status](https://img.shields.io/github/workflow/status/keycloak/keycloak/CodeQL%20Themes?event=schedule&branch=main)|
 |[Snyk](https://github.com/keycloak/keycloak/actions/workflows/snyk.yml?query=event%3Aschedule+branch%3Amain)|![GitHub Workflow Status](https://img.shields.io/github/workflow/status/keycloak/keycloak/Snyk?event=schedule&branch=main)|
@@ -30,5 +31,5 @@
 |Bugs| |
 |----|-|
 |[Open bugs](https://github.com/keycloak/keycloak/issues?q=is%3Aissue+is%3Aopen+label%3Akind%2Fbug+-label%3Astatus%2Ftriage+)|117|
-|[Non-triaged bugs](https://github.com/keycloak/keycloak/issues?q=is%3Aissue+is%3Aopen+label%3Akind%2Fbug+label%3Astatus%2Ftriage)|494|
+|[Non-triaged bugs](https://github.com/keycloak/keycloak/issues?q=is%3Aissue+is%3Aopen+label%3Akind%2Fbug+label%3Astatus%2Ftriage)|495|
 
