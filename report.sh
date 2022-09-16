@@ -23,6 +23,16 @@ PR_OPENED_LAST_30=`gh api -X GET search/issues -f q="repo:keycloak/keycloak is:p
 BUG_COUNT=`gh api -X GET search/issues -f q="repo:keycloak/keycloak is:issue is:open label:kind/bug -label:status/triage" -f per_page=1 -q .total_count`
 BUG_TRIAGE_COUNT=`gh api -X GET search/issues -f q="repo:keycloak/keycloak is:issue is:open label:kind/bug label:status/triage" -f per_page=1 -q .total_count`
 
+BUGS_WITHOUT_AREA_URL="https://github.com/keycloak/keycloak/issues?q=is%3Aopen+is%3Aissue+label%3Akind%2Fbug"
+AREAS=""
+for i in `gh api --paginate repos/keycloak/keycloak/labels --jq .[].name | grep area/`; do
+	AREAS="$AREAS -label:$i"
+	BUGS_WITHOUT_AREA_URL="$BUGS_WITHOUT_AREA_URL+-label:`echo $i | sed 's|/|%2F|'`"    	
+done
+BUGS_WITHOUT_AREA_PR_COUNT=`gh api -X GET search/issues -f q="repo:keycloak/keycloak is:issue is:open label:kind/bug $AREAS" -f per_page=1 -q .total_count`
+
+
+
 echo "|Warnings|"
 echo "|--------|"
 if [ "$PR_IMPORTANT_COUNT" -ge 0 ]; then
@@ -67,4 +77,5 @@ echo "|Bugs| |"
 echo "|----|-|"
 echo "|[Open bugs](https://github.com/keycloak/keycloak/issues?q=is%3Aissue+is%3Aopen+label%3Akind%2Fbug+-label%3Astatus%2Ftriage+)|$BUG_COUNT|"
 echo "|[Non-triaged bugs](https://github.com/keycloak/keycloak/issues?q=is%3Aissue+is%3Aopen+label%3Akind%2Fbug+label%3Astatus%2Ftriage)|$BUG_TRIAGE_COUNT|"
+echo "|[Bugs without area label]($BUGS_WITHOUT_AREA_URL)|$BUGS_WITHOUT_AREA_PR_COUNT|"
 echo ""
