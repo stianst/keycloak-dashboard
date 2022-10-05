@@ -69,7 +69,7 @@ public class GitHubLoader {
         return count;
     }
 
-    private List<GitHubIssue> queryIssues() {
+    private List<GitHubIssue> queryIssues() throws IOException {
         List<GitHubIssue> issues = new LinkedList<>();
 
         System.out.print("Fetching issues: ");
@@ -85,6 +85,8 @@ public class GitHubLoader {
             GitHubIssue issue = new GitHubIssue();
             issue.setNumber(i.getNumber());
             issue.setTitle(i.getTitle());
+            issue.setCommentsCount(i.getCommentsCount());
+            issue.setHasAssignee(i.getAssignee() != null);
 
             List<String> labels = new LinkedList<>();
             for (GHLabel l : i.getLabels()) {

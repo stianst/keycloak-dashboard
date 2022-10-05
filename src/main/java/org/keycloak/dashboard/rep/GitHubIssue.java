@@ -14,6 +14,12 @@ public class GitHubIssue {
     @JsonProperty
     public List<String> labels;
 
+    @JsonProperty
+    public boolean hasAssignee;
+
+    @JsonProperty
+    public int commentsCount;
+
     public int getNumber() {
         return number;
     }
@@ -36,5 +42,21 @@ public class GitHubIssue {
 
     public void setLabels(List<String> labels) {
         this.labels = labels;
+    }
+
+    public boolean isHasAssignee() {
+        return hasAssignee;
+    }
+
+    public void setHasAssignee(boolean hasAssignee) {
+        this.hasAssignee = hasAssignee;
+    }
+
+    public int getCommentsCount() {
+        return commentsCount;
+    }
+
+    public void setCommentsCount(int commentsCount) {
+        this.commentsCount = commentsCount;
     }
 }
