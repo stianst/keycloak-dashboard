@@ -89,6 +89,7 @@ public class GitHubLoader {
             issue.setTitle(i.getTitle());
             issue.setCommentsCount(i.getCommentsCount());
             issue.setHasAssignee(i.getAssignee() != null);
+            issue.setMilestone(i.getMilestone() != null ? i.getMilestone().getTitle() : null);
 
             List<String> labels = new LinkedList<>();
             for (GHLabel l : i.getLabels()) {

@@ -8,6 +8,7 @@ import org.keycloak.dashboard.util.GHQuery;
 
 import java.io.IOException;
 import java.util.Comparator;
+import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
@@ -26,7 +27,7 @@ public class Bugs {
         int nonTriaged = (int) list.stream().filter(GitHubIssue::isTriage).count();
         int open = list.size() - nonTriaged;
         int missingAreaLabel = (int) list.stream().filter(i -> i.getAreas().isEmpty()).count();
-        int oldWithoutComments = (int) list.stream().filter(i ->i.getUpdatedAt().before(Date.MINUS_6_MONTHS) && i.getCommentsCount() == 0).count();
+        int oldWithoutComments = (int) list.stream().filter(i -> i.getUpdatedAt().before(Date.MINUS_6_MONTHS) && i.getCommentsCount() == 0).count();
 
         Map<String, AreaStat> areas = new LinkedHashMap<>();
         for (GitHubIssue i : list) {
@@ -46,6 +47,13 @@ public class Bugs {
         stats.add(new BugStat("Non-triaged", nonTriaged, Constants.BUG_TRIAGE_WARN, "is:open label:kind/bug label:status/triage"));
         stats.add(new BugStat("Bugs without area label", missingAreaLabel, Constants.BUG_AREA_MISSING_WARN, "is:open label:kind/bug " + getQueryWithoutAreaLabels(data)));
         stats.add(new BugStat("Old bugs without comments", oldWithoutComments, Constants.BUG_OLD_NO_COMMENT_WARN, "is:issue is:open label:kind/bug comments:0 updated:<" + Date.MINUS_6_MONTHS_STRING));
+
+        list.stream().filter(i -> i.getMilestone() != null)
+                .collect(Collectors.groupingBy(GitHubIssue::getMilestone, Collectors.counting())).entrySet().stream()
+                .sorted(Map.Entry.comparingByKey())
+                .forEach((e) ->
+                        stats.add(new BugStat("Milestone: " + e.getKey(), e.getValue().intValue(), -1, "is:open label:kind/bug milestone:" + e.getKey()))
+                );
     }
 
     public List<BugStat> getStats() {

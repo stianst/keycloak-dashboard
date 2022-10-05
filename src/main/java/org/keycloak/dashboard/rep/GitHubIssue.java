@@ -1,5 +1,6 @@
 package org.keycloak.dashboard.rep;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.Date;
@@ -17,6 +18,9 @@ public class GitHubIssue {
 
     @JsonProperty
     public String title;
+
+    @JsonProperty
+    public String milestone;
     @JsonProperty
     public List<String> labels;
 
@@ -58,20 +62,20 @@ public class GitHubIssue {
         this.title = title;
     }
 
+    public String getMilestone() {
+        return milestone;
+    }
+
+    public void setMilestone(String milestone) {
+        this.milestone = milestone;
+    }
+
     public List<String> getLabels() {
         return labels;
     }
 
     public void setLabels(List<String> labels) {
         this.labels = labels;
-    }
-
-    public boolean isTriage() {
-        return labels.contains("status/triage");
-    }
-
-    public List<String> getAreas() {
-        return labels.stream().filter(l -> l.startsWith("area/")).collect(Collectors.toList());
     }
 
     public boolean isHasAssignee() {
@@ -88,5 +92,15 @@ public class GitHubIssue {
 
     public void setCommentsCount(int commentsCount) {
         this.commentsCount = commentsCount;
+    }
+
+    @JsonIgnore
+    public boolean isTriage() {
+        return labels.contains("status/triage");
+    }
+
+    @JsonIgnore
+    public List<String> getAreas() {
+        return labels.stream().filter(l -> l.startsWith("area/")).collect(Collectors.toList());
     }
 }
