@@ -3,6 +3,7 @@ package org.keycloak.dashboard.beans;
 import org.keycloak.dashboard.Constants;
 import org.keycloak.dashboard.rep.GitHubData;
 import org.keycloak.dashboard.rep.GitHubIssue;
+import org.keycloak.dashboard.util.Date;
 import org.keycloak.dashboard.util.GHQuery;
 import org.kohsuke.github.GHIssue;
 import org.kohsuke.github.GHLabel;
@@ -27,6 +28,7 @@ public class Bugs {
         int open = 0;
         int nonTriaged = 0;
         int missingAreaLabel = 0;
+        int oldWithoutComments = 0;
 
         String queryWithoutAreaLabels = getQueryWithoutAreaLabels(data);
 
@@ -62,6 +64,10 @@ public class Bugs {
                     }
                 }
             }
+
+            if (i.getUpdatedAt().before(Date.MINUS_6_MONTHS) && i.getCommentsCount() == 0) {
+                oldWithoutComments++;
+            }
         }
 
         areaStats = areas.values().stream().sorted(Comparator.comparingInt(AreaStat::getTotal).reversed()).collect(Collectors.toList());
@@ -70,6 +76,7 @@ public class Bugs {
         stats.add(new BugStat("Open bugs", open, Constants.BUG_OPEN_WARN, "is:open label:kind/bug -label:status/triage"));
         stats.add(new BugStat("Non-triaged", nonTriaged, Constants.BUG_TRIAGE_WARN, "is:open label:kind/bug label:status/triage"));
         stats.add(new BugStat("Bugs without area label", missingAreaLabel, Constants.BUG_AREA_MISSING_WARN, "is:open label:kind/bug " + queryWithoutAreaLabels));
+        stats.add(new BugStat("Old bugs without comments", oldWithoutComments, Constants.BUG_OLD_NO_COMMENT_WARN, "is:issue is:open label:kind/bug comments:0 updated:<" + Date.MINUS_6_MONTHS_STRING));
     }
 
     public List<BugStat> getStats() {

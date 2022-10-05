@@ -51,14 +51,14 @@ public class GitHubLoader {
         prStat.setOpen(queryPrCount("is:open"));
         prStat.setPriority(queryPrCount("is:open label:priority/important,priority/critical"));
 
-        prStat.setOlderThan6Months(queryPrCount("is:open created:<" + Date.MINUS_6_MONTHS));
-        prStat.setOlderThan12Months(queryPrCount("is:open created:<" + Date.MINUS_12_MONTHS));
-        prStat.setOlderThan18Months(queryPrCount("is:open created:<" + Date.MINUS_18_MONTHS));
+        prStat.setOlderThan6Months(queryPrCount("is:open created:<" + Date.MINUS_6_MONTHS_STRING));
+        prStat.setOlderThan12Months(queryPrCount("is:open created:<" + Date.MINUS_12_MONTHS_STRING));
+        prStat.setOlderThan18Months(queryPrCount("is:open created:<" + Date.MINUS_18_MONTHS_STRING));
 
-        prStat.setCreatedLast7Days(queryPrCount("created:>" + Date.MINUS_8_DAYS));
-        prStat.setClosedLast7Days(queryPrCount("is:closed closed:>" + Date.MINUS_8_DAYS));
-        prStat.setCreatedLast30Days(queryPrCount("created:>" + Date.MINUS_31_DAYS));
-        prStat.setClosedLast30Days(queryPrCount("is:closed closed:>" + Date.MINUS_31_DAYS));
+        prStat.setCreatedLast7Days(queryPrCount("created:>" + Date.MINUS_8_DAYS_STRING));
+        prStat.setClosedLast7Days(queryPrCount("is:closed closed:>" + Date.MINUS_8_DAYS_STRING));
+        prStat.setCreatedLast30Days(queryPrCount("created:>" + Date.MINUS_31_DAYS_STRING));
+        prStat.setClosedLast30Days(queryPrCount("is:closed closed:>" + Date.MINUS_31_DAYS_STRING));
         System.out.println();
         return prStat;
     }

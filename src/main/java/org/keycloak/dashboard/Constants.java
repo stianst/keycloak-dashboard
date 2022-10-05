@@ -14,6 +14,8 @@ public class Constants {
 
     public static final int BUG_TRIAGE_WARN = 100;
 
+    public static final int BUG_OLD_NO_COMMENT_WARN = 10;
+
     public static final int BUG_AREA_MISSING_WARN = 10;
 
     public static final int BUG_AREA_OPEN_WARN = 10;
