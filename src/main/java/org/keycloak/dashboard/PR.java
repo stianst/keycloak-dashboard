@@ -91,10 +91,8 @@ public class PR {
             this.count = count;
             this.warnCount = warnCount;
 
-            ghLink = "https://github.com/keycloak/keycloak/pulls";
-            if (query != null) {
-                ghLink += "?q=" + GHQuery.encode(query);
-            }
+            query = GHQuery.encode("is:pr" + query != null ? " " + query : "");
+            ghLink = "https://github.com/keycloak/keycloak/pulls?q=" + query;
         }
 
         public String getTitle() {

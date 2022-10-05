@@ -139,10 +139,8 @@ public class Bugs {
             this.count = count;
             this.warnCount = warnCount;
 
-            ghLink = "https://github.com/keycloak/keycloak/issues";
-            if (query != null) {
-                ghLink += "?q=" + GHQuery.encode(query);
-            }
+            query = GHQuery.encode("is:issue" + query != null ? " " + query : "");
+            ghLink = "https://github.com/keycloak/keycloak/issues?q=" + query;
         }
 
         public String getTitle() {
@@ -183,9 +181,9 @@ public class Bugs {
 
             String link = "https://github.com/keycloak/keycloak/issues";
 
-            ghLink = link + "?q=" + GHQuery.encode("is:open label:kind/bug label:" + area);
-            ghOpenLink = link + "?q=" + GHQuery.encode("is:open label:kind/bug -label:status/triage label:" + area);
-            ghTriageLink = link + "?q=" + GHQuery.encode("is:open label:kind/bug label:status/triage label:" + area);
+            ghLink = link + "?q=" + GHQuery.encode("is:issue is:open label:kind/bug label:" + area);
+            ghOpenLink = link + "?q=" + GHQuery.encode("is:issue is:open label:kind/bug -label:status/triage label:" + area);
+            ghTriageLink = link + "?q=" + GHQuery.encode("is:issue is:open label:kind/bug label:status/triage label:" + area);
         }
 
         public String getTitle() {
