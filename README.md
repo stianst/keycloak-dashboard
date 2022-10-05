@@ -11,6 +11,9 @@ mvn clean install exec:java -Pgithub
 
 One thing to remember is GitHub rate-limits API requests, so updating the data to frequently can temporarily block you.
 
+Generally when contributing you should not include the updates to `data.json`, as this is updated every 6 hours by
+a GitHub Action.
+
 ## Generating the dashboard
 
 Dashboard uses the cached data to create the static dashboard. You can either run this class from your IDE, or with
