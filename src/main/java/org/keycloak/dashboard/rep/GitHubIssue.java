@@ -2,9 +2,14 @@ package org.keycloak.dashboard.rep;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import java.util.Date;
 import java.util.List;
 
 public class GitHubIssue {
+
+    public Date createdAt;
+
+    public Date updatedAt;
 
     @JsonProperty
     public int number;
@@ -19,6 +24,22 @@ public class GitHubIssue {
 
     @JsonProperty
     public int commentsCount;
+
+    public Date getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(Date createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    public Date getUpdatedAt() {
+        return updatedAt;
+    }
+
+    public void setUpdatedAt(Date updatedAt) {
+        this.updatedAt = updatedAt;
+    }
 
     public int getNumber() {
         return number;

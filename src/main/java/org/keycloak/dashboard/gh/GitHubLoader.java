@@ -55,9 +55,9 @@ public class GitHubLoader {
         prStat.setOlderThan12Months(queryPrCount("is:open created:<" + Date.MINUS_12_MONTHS));
         prStat.setOlderThan18Months(queryPrCount("is:open created:<" + Date.MINUS_18_MONTHS));
 
-        prStat.setCreatedLast7Days(queryPrCount("is:open created:>" + Date.MINUS_8_DAYS));
+        prStat.setCreatedLast7Days(queryPrCount("created:>" + Date.MINUS_8_DAYS));
         prStat.setClosedLast7Days(queryPrCount("is:closed closed:>" + Date.MINUS_8_DAYS));
-        prStat.setCreatedLast30Days(queryPrCount("is:open created:>" + Date.MINUS_31_DAYS));
+        prStat.setCreatedLast30Days(queryPrCount("created:>" + Date.MINUS_31_DAYS));
         prStat.setClosedLast30Days(queryPrCount("is:closed closed:>" + Date.MINUS_31_DAYS));
         System.out.println();
         return prStat;
@@ -83,6 +83,8 @@ public class GitHubLoader {
         for (GHIssue i : list) {
 
             GitHubIssue issue = new GitHubIssue();
+            issue.setCreatedAt(i.getCreatedAt());
+            issue.setUpdatedAt(i.getUpdatedAt());
             issue.setNumber(i.getNumber());
             issue.setTitle(i.getTitle());
             issue.setCommentsCount(i.getCommentsCount());
