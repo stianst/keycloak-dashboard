@@ -23,9 +23,7 @@ public class Dashboard {
     public static void main(String[] args) throws IOException, TemplateException {
         boolean mockGitHub = false;
 
-        File cacheDirectory = new File(".cache");
-        Cache cache = new Cache(cacheDirectory, 10 * 1024 * 1024);
-        OkHttpClient okHttpClient = new OkHttpClient.Builder().cache(cache).build();
+        OkHttpClient okHttpClient = new OkHttpClient.Builder().build();
 
         GitHub gitHub = GitHubBuilder.fromEnvironment()
                 .withConnector(new OkHttpGitHubConnector(okHttpClient))
@@ -50,7 +48,6 @@ public class Dashboard {
 
         okHttpClient.dispatcher().executorService().shutdown();
         okHttpClient.connectionPool().evictAll();
-        okHttpClient.cache().close();
     }
 
 }

@@ -51,7 +51,10 @@ public class Bugs {
             queryWithoutAreaLabels = getQueryWithoutAreaLabels();
 
             PagedSearchIterable<GHIssue> list = gitHub.searchIssues().q("repo:keycloak/keycloak is:issue is:open label:kind/bug").list();
-            list.withPageSize(100);
+            int pageSize = 100;
+            list.withPageSize(pageSize);
+
+            System.out.print(list.getTotalCount() + " ");
 
             int fetchCount = 0;
             for (GHIssue i : list) {
@@ -84,10 +87,10 @@ public class Bugs {
                     }
                 }
 
-                fetchCount++;
-                if (fetchCount % 100 == 0) {
+                if (fetchCount % pageSize == 0) {
                     System.out.print(".");
                 }
+                fetchCount++;
             }
 
             areaStats = areas.values().stream().sorted(Comparator.comparingInt(AreaStat::getTotal).reversed()).collect(Collectors.toList());
