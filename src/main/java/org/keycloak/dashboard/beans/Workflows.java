@@ -1,13 +1,13 @@
-package org.keycloak.dashboard;
+package org.keycloak.dashboard.beans;
 
 import java.util.LinkedList;
 import java.util.List;
 
-public class GitHubWorkflows {
+public class Workflows {
 
     List<Workflow> workflows;
 
-    public GitHubWorkflows() {
+    public Workflows() {
         workflows = new LinkedList<>();
 
         workflows.add(new Workflow("Nightly release", "keycloak-rel/keycloak-rel", "release-nightly.yml", "Release Nightly", null));

@@ -1,18 +1,16 @@
 package org.keycloak.dashboard;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import freemarker.template.TemplateException;
-import okhttp3.Cache;
-import okhttp3.OkHttpClient;
+import org.keycloak.dashboard.beans.Bugs;
+import org.keycloak.dashboard.beans.PR;
+import org.keycloak.dashboard.beans.Workflows;
+import org.keycloak.dashboard.rep.GitHubData;
 import org.keycloak.dashboard.util.FreeMarker;
-import org.kohsuke.github.GitHub;
-import org.kohsuke.github.GitHubBuilder;
-import org.kohsuke.github.extras.okhttp3.OkHttpGitHubConnector;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
 import java.util.Map;
 
 /**
@@ -21,19 +19,17 @@ import java.util.Map;
 public class Dashboard {
 
     public static void main(String[] args) throws IOException, TemplateException {
-        boolean mockGitHub = false;
+        Dashboard dashboard = new Dashboard();
+        dashboard.createDashboard();
+    }
 
-        OkHttpClient okHttpClient = new OkHttpClient.Builder().build();
+    public void createDashboard() throws IOException, TemplateException {
+        ObjectMapper objectMapper = new ObjectMapper();
+        GitHubData data = objectMapper.readValue(new File("data.json"), GitHubData.class);
 
-        GitHub gitHub = GitHubBuilder.fromEnvironment()
-                .withConnector(new OkHttpGitHubConnector(okHttpClient))
-                .build();
-
-        GitHubWorkflows workflows = new GitHubWorkflows();
-
-        PR pr = new PR(gitHub, mockGitHub);
-
-        Bugs bugs = new Bugs(gitHub, mockGitHub);
+        Workflows workflows = new Workflows();
+        PR pr = new PR(data);
+        Bugs bugs = new Bugs(data);
 
         Map<String, Object> attributes = new HashMap<>();
 
@@ -42,12 +38,11 @@ public class Dashboard {
         attributes.put("bugStats", bugs.getStats());
         attributes.put("bugAreaStats", bugs.getAreaStats());
 
-        FreeMarker freeMarker = new FreeMarker(new File("docs"), attributes);
+        File output = new File("docs/index.html");
+        FreeMarker freeMarker = new FreeMarker(attributes);
+        freeMarker.template("index.ftl", output);
 
-        freeMarker.template("index.ftl");
-
-        okHttpClient.dispatcher().executorService().shutdown();
-        okHttpClient.connectionPool().evictAll();
+        System.out.println("Created dashboard: " + output.toURI());
     }
 
 }
