@@ -61,11 +61,11 @@ public class PR {
         }
 
         warnings = new LinkedList<>();
-        if (open > 150) {
-            warnings.add("More than 150 open PRs (#" + open + ")");
+        if (open > Constants.PR_OPEN_WARN) {
+            warnings.add("More than " + Constants.PR_OPEN_WARN + " open PRs (#" + open + ")");
         }
-        if (priority > 0) {
-            warnings.add("Several open priority PRs (#" + priority + ")");
+        if (priority > Constants.PR_PRIORITY_WARN) {
+            warnings.add("More than " + Constants.PR_PRIORITY_WARN + " open priority PRs (#" + priority + ")");
         }
         if (olderThan12Months > 0) {
             warnings.add("PRs have been around for more than 12 months (#" + olderThan12Months + ")");
