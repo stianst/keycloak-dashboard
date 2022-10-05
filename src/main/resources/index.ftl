@@ -12,8 +12,8 @@
 </tr>
 <#list workflows as workflow>
 <tr>
-    <td><a href="${workflow.ghLink}">${workflow.title}</a></td>
-    <td><img src="${workflow.shield}"/></td>
+    <td class="title"><a href="${workflow.ghLink}">${workflow.title}</a></td>
+    <td class="shield"><a href="${workflow.ghLink}"><img src="${workflow.shield}"/></a></td>
 </tr>
 </#list>
 </table>
@@ -24,8 +24,8 @@
 </tr>
 <#list prStats as prStat>
 <tr>
-    <td><a href="${prStat.ghLink}">${prStat.title}</a></td>
-    <td class="${prStat.cssClasses}">${prStat.count}</td>
+    <td class="title"><a href="${prStat.ghLink}">${prStat.title}</a></td>
+    <td class="count ${prStat.cssClasses}"><a href="${prStat.ghLink}">${prStat.count}</a></td>
 </tr>
 </#list>
 </table>
@@ -36,8 +36,8 @@
 </tr>
 <#list bugStats as bugStat>
 <tr>
-    <td><a href="${bugStat.ghLink}">${bugStat.title}</a></td>
-    <td class="${bugStat.cssClasses}">${bugStat.count}</td>
+    <td class="title"><a href="${bugStat.ghLink}">${bugStat.title}</a></td>
+    <td class="count ${bugStat.cssClasses}"><a href="${bugStat.ghLink}">${bugStat.count}</a></td>
 </tr>
 </#list>
 </table>
@@ -50,9 +50,9 @@
 </tr>
 <#list bugAreaStats as bugAreaStat>
 <tr>
-    <td><a href="${bugAreaStat.ghLink}">${bugAreaStat.title}</a></td>
-    <td class="${bugAreaStat.openCssClasses}"><a href="${bugAreaStat.ghOpenLink}">${bugAreaStat.open}</a></td>
-    <td class="${bugAreaStat.triageCssClasses}"><a href="${bugAreaStat.ghTriageLink}">${bugAreaStat.triage}</a></td>
+    <td class="title"><a href="${bugAreaStat.ghLink}">${bugAreaStat.title}</a></td>
+    <td class="count ${bugAreaStat.openCssClasses}"><a href="${bugAreaStat.ghOpenLink}">${bugAreaStat.open}</a></td>
+    <td class="count ${bugAreaStat.triageCssClasses}"><a href="${bugAreaStat.ghTriageLink}">${bugAreaStat.triage}</a></td>
 </tr>
 </#list>
 </table>

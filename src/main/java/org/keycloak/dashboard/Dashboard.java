@@ -21,7 +21,7 @@ import java.util.Map;
 public class Dashboard {
 
     public static void main(String[] args) throws IOException, TemplateException {
-        boolean mockGitHub = false;
+        boolean mockGitHub = true;
 
         OkHttpClient okHttpClient = new OkHttpClient.Builder().build();
 
