@@ -8,16 +8,6 @@
 
 <table>
 <tr>
-    <th>Warnings</th>
-</tr>
-<#list warnings as warning>
-<tr>
-    <td class="warn">${warning}</td>
-</tr>
-</#list>
-
-<table>
-<tr>
     <th colspan="2">GitHub Workflows</th>
 </tr>
 <#list workflows as workflow>

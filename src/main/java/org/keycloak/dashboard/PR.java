@@ -12,7 +12,6 @@ public class PR {
     private GitHub gitHub;
 
     private List<PRStat> stats;
-    private List<String> warnings;
 
     public PR(GitHub gitHub, boolean mockGitHub) {
         this.gitHub = gitHub;
@@ -60,17 +59,6 @@ public class PR {
             closedLast30Days = 145;
         }
 
-        warnings = new LinkedList<>();
-        if (open > Constants.PR_OPEN_WARN) {
-            warnings.add("More than " + Constants.PR_OPEN_WARN + " open PRs (#" + open + ")");
-        }
-        if (priority > Constants.PR_PRIORITY_WARN) {
-            warnings.add("More than " + Constants.PR_PRIORITY_WARN + " open priority PRs (#" + priority + ")");
-        }
-        if (olderThan12Months > 0) {
-            warnings.add("PRs have been around for more than 12 months (#" + olderThan12Months + ")");
-        }
-
         stats = new LinkedList<>();
 
         stats.add(new PRStat("Open PRs", open, Constants.PR_OPEN_WARN, "is:open"));
@@ -89,10 +77,6 @@ public class PR {
 
     public List<PRStat> getStats() {
         return stats;
-    }
-
-    public List<String> getWarnings() {
-        return warnings;
     }
 
     public class PRStat {

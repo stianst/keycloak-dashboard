@@ -31,12 +31,9 @@ public class Dashboard {
                 .withConnector(new OkHttpGitHubConnector(okHttpClient))
                 .build();
 
-        List<String> warnings = new LinkedList<>();
-
         GitHubWorkflows workflows = new GitHubWorkflows();
 
         PR pr = new PR(gitHub, mockGitHub);
-        warnings.addAll(pr.getWarnings());
 
         Bugs bugs = new Bugs(gitHub, mockGitHub);
 
@@ -46,7 +43,6 @@ public class Dashboard {
         attributes.put("prStats", pr.getStats());
         attributes.put("bugStats", bugs.getStats());
         attributes.put("bugAreaStats", bugs.getAreaStats());
-        attributes.put("warnings", warnings);
 
         FreeMarker freeMarker = new FreeMarker(new File("docs"), attributes);
 
