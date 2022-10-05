@@ -57,12 +57,4 @@ public class Dashboard {
         okHttpClient.cache().close();
     }
 
-    private static GitHub createGitHub() throws IOException {
-        File cacheDirectory = new File(".cache");
-        Cache cache = new Cache(cacheDirectory, 10 * 1024 * 1024);
-        return GitHubBuilder.fromEnvironment()
-                .withConnector(new OkHttpGitHubConnector(new OkHttpClient.Builder().cache(cache).build()))
-                .build();
-    }
-
 }
