@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.Date;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class GitHubIssue {
 
@@ -63,6 +64,14 @@ public class GitHubIssue {
 
     public void setLabels(List<String> labels) {
         this.labels = labels;
+    }
+
+    public boolean isTriage() {
+        return labels.contains("status/triage");
+    }
+
+    public List<String> getAreas() {
+        return labels.stream().filter(l -> l.startsWith("area/")).collect(Collectors.toList());
     }
 
     public boolean isHasAssignee() {

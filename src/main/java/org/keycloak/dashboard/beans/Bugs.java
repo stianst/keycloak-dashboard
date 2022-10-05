@@ -5,17 +5,13 @@ import org.keycloak.dashboard.rep.GitHubData;
 import org.keycloak.dashboard.rep.GitHubIssue;
 import org.keycloak.dashboard.util.Date;
 import org.keycloak.dashboard.util.GHQuery;
-import org.kohsuke.github.GHIssue;
-import org.kohsuke.github.GHLabel;
 
 import java.io.IOException;
 import java.util.Comparator;
-import java.util.HashSet;
 import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 import java.util.stream.Collectors;
 
 public class Bugs {
@@ -25,57 +21,30 @@ public class Bugs {
     private List<AreaStat> areaStats;
 
     public Bugs(GitHubData data) throws IOException {
-        int open = 0;
-        int nonTriaged = 0;
-        int missingAreaLabel = 0;
-        int oldWithoutComments = 0;
-
-        String queryWithoutAreaLabels = getQueryWithoutAreaLabels(data);
-
-        Map<String, AreaStat> areas = new LinkedHashMap<>();
         List<GitHubIssue> list = data.getIssues();
 
+        int nonTriaged = (int) list.stream().filter(GitHubIssue::isTriage).count();
+        int open = list.size() - nonTriaged;
+        int missingAreaLabel = (int) list.stream().filter(i -> i.getAreas().isEmpty()).count();
+        int oldWithoutComments = (int) list.stream().filter(i ->i.getUpdatedAt().before(Date.MINUS_6_MONTHS) && i.getCommentsCount() == 0).count();
+
+        Map<String, AreaStat> areas = new LinkedHashMap<>();
         for (GitHubIssue i : list) {
-            Set<String> issuesAreas = new HashSet<>();
-            boolean triage = false;
-            for (String l : i.getLabels()) {
-                if (l.startsWith("area/")) {
-                    issuesAreas.add(l);
-                } else if (l.equals("status/triage")) {
-                    triage = true;
+            for (String a : i.getAreas()) {
+                AreaStat areaStat = areas.computeIfAbsent(a, s -> new AreaStat(a, 0, 0));
+                if (i.isTriage()) {
+                    areaStat.triage++;
+                } else {
+                    areaStat.open++;
                 }
-            }
-
-            if (triage) {
-                nonTriaged++;
-            } else {
-                open++;
-            }
-
-            if (issuesAreas.isEmpty()) {
-                missingAreaLabel++;
-            } else {
-                for (String a : issuesAreas) {
-                    AreaStat areaStat = areas.computeIfAbsent(a, s -> new AreaStat(a, 0, 0));
-                    if (triage) {
-                        areaStat.triage++;
-                    } else {
-                        areaStat.open++;
-                    }
-                }
-            }
-
-            if (i.getUpdatedAt().before(Date.MINUS_6_MONTHS) && i.getCommentsCount() == 0) {
-                oldWithoutComments++;
             }
         }
-
         areaStats = areas.values().stream().sorted(Comparator.comparingInt(AreaStat::getTotal).reversed()).collect(Collectors.toList());
 
         stats = new LinkedList<>();
         stats.add(new BugStat("Open bugs", open, Constants.BUG_OPEN_WARN, "is:open label:kind/bug -label:status/triage"));
         stats.add(new BugStat("Non-triaged", nonTriaged, Constants.BUG_TRIAGE_WARN, "is:open label:kind/bug label:status/triage"));
-        stats.add(new BugStat("Bugs without area label", missingAreaLabel, Constants.BUG_AREA_MISSING_WARN, "is:open label:kind/bug " + queryWithoutAreaLabels));
+        stats.add(new BugStat("Bugs without area label", missingAreaLabel, Constants.BUG_AREA_MISSING_WARN, "is:open label:kind/bug " + getQueryWithoutAreaLabels(data)));
         stats.add(new BugStat("Old bugs without comments", oldWithoutComments, Constants.BUG_OLD_NO_COMMENT_WARN, "is:issue is:open label:kind/bug comments:0 updated:<" + Date.MINUS_6_MONTHS_STRING));
     }
 
