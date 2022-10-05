@@ -23,7 +23,13 @@ public class Dashboard {
     public static void main(String[] args) throws IOException, TemplateException {
         boolean mockGitHub = true;
 
-        GitHub gitHub = createGitHub();
+        File cacheDirectory = new File(".cache");
+        Cache cache = new Cache(cacheDirectory, 10 * 1024 * 1024);
+        OkHttpClient okHttpClient = new OkHttpClient.Builder().cache(cache).build();
+
+        GitHub gitHub = GitHubBuilder.fromEnvironment()
+                .withConnector(new OkHttpGitHubConnector(okHttpClient))
+                .build();
 
         List<String> warnings = new LinkedList<>();
 
@@ -45,6 +51,10 @@ public class Dashboard {
         FreeMarker freeMarker = new FreeMarker(new File("docs"), attributes);
 
         freeMarker.template("index.ftl");
+
+        okHttpClient.dispatcher().executorService().shutdown();
+        okHttpClient.connectionPool().evictAll();
+        okHttpClient.cache().close();
     }
 
     private static GitHub createGitHub() throws IOException {
