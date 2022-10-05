@@ -21,7 +21,7 @@ import java.util.Map;
 public class Dashboard {
 
     public static void main(String[] args) throws IOException, TemplateException {
-        boolean mockGitHub = true;
+        boolean mockGitHub = false;
 
         File cacheDirectory = new File(".cache");
         Cache cache = new Cache(cacheDirectory, 10 * 1024 * 1024);
