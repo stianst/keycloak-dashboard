@@ -12,11 +12,6 @@ on:
     
   workflow_dispatch:
 
-permissions:
-  contents: write
-  pages: write
-  id-token: write
-
 concurrency:
   group: "pages"
   cancel-in-progress: true
@@ -29,9 +24,9 @@ jobs:
 
       - id: report
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          bash report.sh > README.md
+          mvn clean install exec:java
           if ( ! git diff --exit-code &>/dev/null ); then 
             git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git config --global user.name "github-actions[bot]"
