@@ -28,6 +28,7 @@ public class GitHubLoader {
         data.setPrStat(queryPRStat());
         data.setAreas(queryAreas());
         data.setIssues(queryIssues());
+        data.setIssuesWithPr(queryIssuesWithPr());
         return data;
     }
 
@@ -110,5 +111,7 @@ public class GitHubLoader {
         return issues;
     }
 
-
+    private int queryIssuesWithPr() throws IOException {
+        return gitHub.searchIssues().q("repo:keycloak/keycloak is:issue is:open label:kind/bug linked:pr").list().withPageSize(1).getTotalCount();
+    }
 }

@@ -43,7 +43,8 @@ public class Bugs {
         areaStats = areas.values().stream().sorted(Comparator.comparingInt(AreaStat::getTotal).reversed()).collect(Collectors.toList());
 
         stats = new LinkedList<>();
-        stats.add(new BugStat("Open bugs", open, Constants.BUG_OPEN_WARN, "is:open label:kind/bug -label:status/triage"));
+        stats.add(new BugStat("With PR", data.getIssuesWithPr(), Constants.BUG_OPEN_WARN, "is:open label:kind/bug linked:pr"));
+        stats.add(new BugStat("Open bugs", open, 10, "is:open label:kind/bug -label:status/triage"));
         stats.add(new BugStat("Non-triaged", nonTriaged, Constants.BUG_TRIAGE_WARN, "is:open label:kind/bug label:status/triage"));
         stats.add(new BugStat("Bugs without area label", missingAreaLabel, Constants.BUG_AREA_MISSING_WARN, "is:open label:kind/bug " + getQueryWithoutAreaLabels(data)));
         stats.add(new BugStat("Old bugs without comments", oldWithoutComments, Constants.BUG_OLD_NO_COMMENT_WARN, "is:issue is:open label:kind/bug comments:0 updated:<" + Date.MINUS_6_MONTHS_STRING));
@@ -52,7 +53,7 @@ public class Bugs {
                 .collect(Collectors.groupingBy(GitHubIssue::getMilestone, Collectors.counting())).entrySet().stream()
                 .sorted(Map.Entry.comparingByKey())
                 .forEach((e) ->
-                        stats.add(new BugStat("Milestone: " + e.getKey(), e.getValue().intValue(), -1, "is:open label:kind/bug milestone:" + e.getKey()))
+                        stats.add(new BugStat("Milestone: " + e.getKey(), e.getValue().intValue(), 10, "is:open label:kind/bug milestone:" + e.getKey()))
                 );
     }
 

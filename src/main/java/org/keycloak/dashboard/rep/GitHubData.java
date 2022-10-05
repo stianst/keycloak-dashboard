@@ -13,6 +13,8 @@ public class GitHubData {
     @JsonProperty
     public List<GitHubIssue> issues;
 
+    public int issuesWithPr;
+
     public List<String> getAreas() {
         return areas;
     }
@@ -35,5 +37,13 @@ public class GitHubData {
 
     public void setIssues(List<GitHubIssue> issues) {
         this.issues = issues;
+    }
+
+    public int getIssuesWithPr() {
+        return issuesWithPr;
+    }
+
+    public void setIssuesWithPr(int issuesWithPr) {
+        this.issuesWithPr = issuesWithPr;
     }
 }
