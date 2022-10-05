@@ -39,9 +39,9 @@ public class PR {
             olderThan12Months = getPrCount("is:open created:<" + Date.MINUS_12_MONTHS);
             olderThan18Months = getPrCount("is:open created:<" + Date.MINUS_18_MONTHS);
 
-            createdLast7Days = getPrCount("is:open created:<" + Date.MINUS_8_DAYS);
+            createdLast7Days = getPrCount("is:open created:>" + Date.MINUS_8_DAYS);
             closedLast7Days = getPrCount("is:closed closed:>" + Date.MINUS_8_DAYS);
-            createdLast30Days = getPrCount("is:open created:<" + Date.MINUS_31_DAYS);
+            createdLast30Days = getPrCount("is:open created:>" + Date.MINUS_31_DAYS);
             closedLast30Days = getPrCount("is:closed closed:>" + Date.MINUS_31_DAYS);
 
             System.out.println();
