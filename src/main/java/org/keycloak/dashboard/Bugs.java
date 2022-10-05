@@ -139,7 +139,7 @@ public class Bugs {
             this.count = count;
             this.warnCount = warnCount;
 
-            query = GHQuery.encode("is:issue" + query != null ? " " + query : "");
+            query = GHQuery.encode("is:issue" + (query != null ? " " + query : ""));
             ghLink = "https://github.com/keycloak/keycloak/issues?q=" + query;
         }
 

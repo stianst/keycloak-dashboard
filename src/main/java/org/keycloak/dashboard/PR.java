@@ -91,7 +91,7 @@ public class PR {
             this.count = count;
             this.warnCount = warnCount;
 
-            query = GHQuery.encode("is:pr" + query != null ? " " + query : "");
+            query = GHQuery.encode("is:pr" + (query != null ? " " + query : ""));
             ghLink = "https://github.com/keycloak/keycloak/pulls?q=" + query;
         }
 
