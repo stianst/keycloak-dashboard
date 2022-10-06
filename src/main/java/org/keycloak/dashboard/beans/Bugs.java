@@ -33,10 +33,10 @@ public class Bugs {
 
         stats = new LinkedList<>();
         stats.add(new BugStat("With PR", data.getIssuesWithPr(), Config.BUG_OPEN_WARN, "is:open label:kind/bug linked:pr"));
-        stats.add(new BugStat("Open bugs", open, 10, "is:open label:kind/bug -label:status/triage"));
+        stats.add(new BugStat("Open", open, 10, "is:open label:kind/bug -label:status/triage"));
         stats.add(new BugStat("Non-triaged", nonTriaged, Config.BUG_TRIAGE_WARN, "is:open label:kind/bug label:status/triage"));
-        stats.add(new BugStat("Bugs without area label", missingAreaLabel, Config.BUG_AREA_MISSING_WARN, "is:open label:kind/bug " + data.getAreas().stream().map(s -> "-label:" + s).collect(Collectors.joining(" "))));
-        stats.add(new BugStat("Old bugs without comments", oldWithoutComments, Config.BUG_OLD_NO_COMMENT_WARN, "is:issue is:open label:kind/bug comments:0 updated:<" + Date.MINUS_6_MONTHS_STRING));
+        stats.add(new BugStat("Missing area", missingAreaLabel, Config.BUG_AREA_MISSING_WARN, "is:open label:kind/bug " + data.getAreas().stream().map(s -> "-label:" + s).collect(Collectors.joining(" "))));
+        stats.add(new BugStat("Old without comments", oldWithoutComments, Config.BUG_OLD_NO_COMMENT_WARN, "is:issue is:open label:kind/bug comments:0 updated:<" + Date.MINUS_6_MONTHS_STRING));
 
         issues.stream().filter(i -> i.getMilestone() != null)
                 .collect(Collectors.groupingBy(GitHubIssue::getMilestone, Collectors.counting())).entrySet().stream()

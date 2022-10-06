@@ -17,8 +17,8 @@ public class PR {
 
         stats = new LinkedList<>();
 
-        stats.add(new PRStat("Open PRs", prStat.getOpen(), Config.PR_OPEN_WARN, "is:open"));
-        stats.add(new PRStat("Priority PRs", prStat.getPriority(), Config.PR_PRIORITY_WARN, "is:open label:priority/important,priority/critical"));
+        stats.add(new PRStat("Open", prStat.getOpen(), Config.PR_OPEN_WARN, "is:open"));
+        stats.add(new PRStat("Priority", prStat.getPriority(), Config.PR_PRIORITY_WARN, "is:open label:priority/important,priority/critical"));
 
         stats.add(new PRStat("Older than 6 months", prStat.getOlderThan6Months(), Config.PR_OLD_6_WARN, "is:open created:<" + Date.MINUS_6_MONTHS_STRING));
         stats.add(new PRStat("Older than 12 months", prStat.getOlderThan12Months(), Config.PR_OLD_12_WARN, "is:open created:<" + Date.MINUS_12_MONTHS_STRING));
