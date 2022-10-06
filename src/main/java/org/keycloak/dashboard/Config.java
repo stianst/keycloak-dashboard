@@ -1,6 +1,8 @@
 package org.keycloak.dashboard;
 
-public class Constants {
+public class Config {
+
+    public static final boolean PUBLISH = System.getProperties().containsKey("publish");
 
     public static final int PR_OPEN_WARN = 150;
     public static final int PR_PRIORITY_WARN = 150;

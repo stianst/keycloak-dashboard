@@ -1,6 +1,6 @@
 package org.keycloak.dashboard.beans;
 
-import org.keycloak.dashboard.Constants;
+import org.keycloak.dashboard.Config;
 import org.keycloak.dashboard.util.GHQuery;
 
 public class BugAreaStat {
@@ -58,10 +58,10 @@ public class BugAreaStat {
     }
 
     public String getOpenCssClasses() {
-        return open < Constants.BUG_AREA_OPEN_WARN ? "success" : "warn";
+        return open < Config.BUG_AREA_OPEN_WARN ? "success" : "warn";
     }
 
     public String getTriageCssClasses() {
-        return triage < Constants.BUG_AREA_TRIAGE_WARN ? "success" : "warn";
+        return triage < Config.BUG_AREA_TRIAGE_WARN ? "success" : "warn";
     }
 }

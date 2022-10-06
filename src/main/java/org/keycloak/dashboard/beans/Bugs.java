@@ -1,6 +1,6 @@
 package org.keycloak.dashboard.beans;
 
-import org.keycloak.dashboard.Constants;
+import org.keycloak.dashboard.Config;
 import org.keycloak.dashboard.rep.GitHubData;
 import org.keycloak.dashboard.rep.GitHubIssue;
 import org.keycloak.dashboard.rep.Teams;
@@ -32,11 +32,11 @@ public class Bugs {
         teamStats = convertToTeamStats(issues, teams);
 
         stats = new LinkedList<>();
-        stats.add(new BugStat("With PR", data.getIssuesWithPr(), Constants.BUG_OPEN_WARN, "is:open label:kind/bug linked:pr"));
+        stats.add(new BugStat("With PR", data.getIssuesWithPr(), Config.BUG_OPEN_WARN, "is:open label:kind/bug linked:pr"));
         stats.add(new BugStat("Open bugs", open, 10, "is:open label:kind/bug -label:status/triage"));
-        stats.add(new BugStat("Non-triaged", nonTriaged, Constants.BUG_TRIAGE_WARN, "is:open label:kind/bug label:status/triage"));
-        stats.add(new BugStat("Bugs without area label", missingAreaLabel, Constants.BUG_AREA_MISSING_WARN, "is:open label:kind/bug " + data.getAreas().stream().map(s -> "-label:" + s).collect(Collectors.joining(" "))));
-        stats.add(new BugStat("Old bugs without comments", oldWithoutComments, Constants.BUG_OLD_NO_COMMENT_WARN, "is:issue is:open label:kind/bug comments:0 updated:<" + Date.MINUS_6_MONTHS_STRING));
+        stats.add(new BugStat("Non-triaged", nonTriaged, Config.BUG_TRIAGE_WARN, "is:open label:kind/bug label:status/triage"));
+        stats.add(new BugStat("Bugs without area label", missingAreaLabel, Config.BUG_AREA_MISSING_WARN, "is:open label:kind/bug " + data.getAreas().stream().map(s -> "-label:" + s).collect(Collectors.joining(" "))));
+        stats.add(new BugStat("Old bugs without comments", oldWithoutComments, Config.BUG_OLD_NO_COMMENT_WARN, "is:issue is:open label:kind/bug comments:0 updated:<" + Date.MINUS_6_MONTHS_STRING));
 
         issues.stream().filter(i -> i.getMilestone() != null)
                 .collect(Collectors.groupingBy(GitHubIssue::getMilestone, Collectors.counting())).entrySet().stream()

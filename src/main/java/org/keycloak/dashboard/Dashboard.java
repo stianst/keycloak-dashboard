@@ -1,6 +1,5 @@
 package org.keycloak.dashboard;
 
-import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
 import freemarker.template.TemplateException;
@@ -14,10 +13,7 @@ import org.keycloak.dashboard.util.FreeMarker;
 import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
 
 /**
  * Hello world!
@@ -42,6 +38,7 @@ public class Dashboard {
 
         Map<String, Object> attributes = new HashMap<>();
 
+        attributes.put("publish", Config.PUBLISH);
         attributes.put("workflows", workflows.getWorkflows());
         attributes.put("prStats", pr.getStats());
         attributes.put("bugStats", bugs.getStats());
@@ -51,6 +48,11 @@ public class Dashboard {
         File output = new File("docs/index.html");
         FreeMarker freeMarker = new FreeMarker(attributes);
         freeMarker.template("index.ftl", output);
+        freeMarker.template("bugs.ftl", new File("docs/bugs.html"));
+        freeMarker.template("prs.ftl", new File("docs/prs.html"));
+        freeMarker.template("workflows.ftl", new File("docs/workflows.html"));
+
+        System.out.println("Created dashboard: " + output.toURI());
     }
 
 }

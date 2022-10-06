@@ -1,7 +1,5 @@
 <#import "template.ftl" as template>
 
-<@template.page>
+<@template.page title="Workflows">
     <#include "module-workflows.ftl">
-    <#include "module-prs.ftl">
-    <#include "module-bugs.ftl">
 </@template.page>

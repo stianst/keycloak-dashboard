@@ -27,7 +27,7 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: Build dashboard
-        run: mvn clean install exec:java -Pdashboard
+        run: mvn clean install exec:java -Pdashboard -Dpublish
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:

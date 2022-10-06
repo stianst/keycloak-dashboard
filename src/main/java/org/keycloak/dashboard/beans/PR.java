@@ -1,6 +1,6 @@
 package org.keycloak.dashboard.beans;
 
-import org.keycloak.dashboard.Constants;
+import org.keycloak.dashboard.Config;
 import org.keycloak.dashboard.rep.GitHubData;
 import org.keycloak.dashboard.rep.GitHubPRStat;
 import org.keycloak.dashboard.util.Date;
@@ -17,12 +17,12 @@ public class PR {
 
         stats = new LinkedList<>();
 
-        stats.add(new PRStat("Open PRs", prStat.getOpen(), Constants.PR_OPEN_WARN, "is:open"));
-        stats.add(new PRStat("Priority PRs", prStat.getPriority(), Constants.PR_PRIORITY_WARN, "is:open label:priority/important,priority/critical"));
+        stats.add(new PRStat("Open PRs", prStat.getOpen(), Config.PR_OPEN_WARN, "is:open"));
+        stats.add(new PRStat("Priority PRs", prStat.getPriority(), Config.PR_PRIORITY_WARN, "is:open label:priority/important,priority/critical"));
 
-        stats.add(new PRStat("Older than 6 months", prStat.getOlderThan6Months(), Constants.PR_OLD_6_WARN, "is:open created:<" + Date.MINUS_6_MONTHS_STRING));
-        stats.add(new PRStat("Older than 12 months", prStat.getOlderThan12Months(), Constants.PR_OLD_12_WARN, "is:open created:<" + Date.MINUS_12_MONTHS_STRING));
-        stats.add(new PRStat("Older than 18 months", prStat.getOlderThan18Months(), Constants.PR_OLD_18_WARN, "is:open created:<" + Date.MINUS_18_MONTHS_STRING));
+        stats.add(new PRStat("Older than 6 months", prStat.getOlderThan6Months(), Config.PR_OLD_6_WARN, "is:open created:<" + Date.MINUS_6_MONTHS_STRING));
+        stats.add(new PRStat("Older than 12 months", prStat.getOlderThan12Months(), Config.PR_OLD_12_WARN, "is:open created:<" + Date.MINUS_12_MONTHS_STRING));
+        stats.add(new PRStat("Older than 18 months", prStat.getOlderThan18Months(), Config.PR_OLD_18_WARN, "is:open created:<" + Date.MINUS_18_MONTHS_STRING));
 
         int createdLast7Days = prStat.getCreatedLast7Days();
         int closedLast7Days = prStat.getClosedLast7Days();
