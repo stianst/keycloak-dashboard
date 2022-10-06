@@ -4,6 +4,7 @@
 <head>
     <title><#if title?has_content>${title} - </#if>Keycloak Dashboard</title>
     <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
