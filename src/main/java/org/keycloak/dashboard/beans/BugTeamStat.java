@@ -27,7 +27,7 @@ public class BugTeamStat {
         String link = "https://github.com/keycloak/keycloak/issues";
         String areaLabels = areas.stream().collect(Collectors.joining(","));
 
-        ghLink = link + "?q=" + GHQuery.encode("is:issue is:open label:kind/bug label:");
+        ghLink = link + "?q=" + GHQuery.encode("is:issue is:open label:kind/bug label:" + areaLabels);
         ghOpenLink = link + "?q=" + GHQuery.encode("is:issue is:open label:kind/bug -label:status/triage label:" + areaLabels);
         ghTriageLink = link + "?q=" + GHQuery.encode("is:issue is:open label:kind/bug label:status/triage label:" + areaLabels);
     }
