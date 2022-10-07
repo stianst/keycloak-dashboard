@@ -39,6 +39,7 @@ public class Dashboard {
         Map<String, Object> attributes = new HashMap<>();
 
         attributes.put("publish", Config.PUBLISH);
+        attributes.put("updatedDate", data.getUpdatedDate());
         attributes.put("workflows", workflows.getWorkflows());
         attributes.put("prStats", pr.getStats());
         attributes.put("bugStats", bugs.getStats());

@@ -1,3 +1,4 @@
+<div class="module">
 <table>
 <tr>
     <th>Bugs: Areas</th>
@@ -12,3 +13,4 @@
 </tr>
 </#list>
 </table>
+</div>

@@ -1,3 +1,4 @@
+<div class="module">
 <table>
 <tr>
     <th colspan="2">PRs</th>
@@ -9,3 +10,4 @@
 </tr>
 </#list>
 </table>
+</div>

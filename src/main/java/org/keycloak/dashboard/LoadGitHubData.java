@@ -6,6 +6,7 @@ import org.keycloak.dashboard.rep.GitHubData;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Date;
 
 public class LoadGitHubData {
 
@@ -17,6 +18,7 @@ public class LoadGitHubData {
     public void createData() throws IOException {
         GitHubLoader gitHubLoader = new GitHubLoader();
         GitHubData gitHubData = gitHubLoader.query();
+        gitHubData.setUpdatedDate(new Date());
 
         ObjectMapper objectMapper = new ObjectMapper();
 
