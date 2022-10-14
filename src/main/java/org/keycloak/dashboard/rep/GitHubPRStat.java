@@ -23,6 +23,11 @@ public class GitHubPRStat {
     @JsonProperty
     public int closedLast30Days;
 
+    @JsonProperty
+    public int createdLast90Days;
+    @JsonProperty
+    public int closedLast90Days;
+
     public int getOpen() {
         return open;
     }
@@ -95,4 +100,19 @@ public class GitHubPRStat {
         this.closedLast30Days = closedLast30Days;
     }
 
+    public int getCreatedLast90Days() {
+        return createdLast90Days;
+    }
+
+    public void setCreatedLast90Days(int createdLast90Days) {
+        this.createdLast90Days = createdLast90Days;
+    }
+
+    public int getClosedLast90Days() {
+        return closedLast90Days;
+    }
+
+    public void setClosedLast90Days(int closedLast90Days) {
+        this.closedLast90Days = closedLast90Days;
+    }
 }

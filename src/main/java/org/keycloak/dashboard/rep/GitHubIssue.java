@@ -12,6 +12,7 @@ public class GitHubIssue {
     public Date createdAt;
 
     public Date updatedAt;
+    public Date closedAt;
 
     @JsonProperty
     public int number;
@@ -44,6 +45,14 @@ public class GitHubIssue {
 
     public void setUpdatedAt(Date updatedAt) {
         this.updatedAt = updatedAt;
+    }
+
+    public Date getClosedAt() {
+        return closedAt;
+    }
+
+    public void setClosedAt(Date closedAt) {
+        this.closedAt = closedAt;
     }
 
     public int getNumber() {
@@ -92,6 +101,11 @@ public class GitHubIssue {
 
     public void setCommentsCount(int commentsCount) {
         this.commentsCount = commentsCount;
+    }
+
+    @JsonIgnore
+    public boolean isOpen() {
+        return closedAt == null;
     }
 
     @JsonIgnore
