@@ -29,7 +29,7 @@ public class GitHubLoader {
         GitHubData data = new GitHubData();
         data.setPrStat(queryPRStat());
         data.setAreas(queryAreas());
-        data.setIssues(queryIssues(null));
+        data.setIssues(loadIssues());
         data.setIssuesWithPr(queryIssuesWithPr());
         return data;
     }
@@ -41,19 +41,6 @@ public class GitHubLoader {
         data.setIssues(updateIssues(data.getIssues()));
         data.setIssuesWithPr(queryIssuesWithPr());
         return data;
-    }
-
-    private List<GitHubIssue> updateIssues(List<GitHubIssue> issues) throws IOException {
-        Optional<java.util.Date> mostRecent = issues.stream().map(GitHubIssue::getUpdatedAt).max(java.util.Date::compareTo);
-        List<GitHubIssue> updates = queryIssues(Date.toString(mostRecent.get()));
-
-        issues = issues.stream()
-                .filter(i -> i.getClosedAt() == null || i.getClosedAt().after(Date.MINUS_90_DAYS))
-                .filter(i -> updates.stream().filter(j -> j.number == i.number).findFirst().isEmpty())
-                .collect(Collectors.toList());
-        issues.addAll(updates);
-
-        return issues;
     }
 
     private List<String> queryAreas() throws IOException {
@@ -96,16 +83,29 @@ public class GitHubLoader {
         return count;
     }
 
-    private List<GitHubIssue> queryIssues(String updatedSince) throws IOException {
+    private List<GitHubIssue> loadIssues() throws IOException {
         List<GitHubIssue> issues = new LinkedList<>();
 
-        String updatedQuery = updatedSince != null ? " updated:>=" + updatedSince : "";
-
         System.out.print("Fetching open issues: ");
-        issues.addAll(fetchIssues("repo:keycloak/keycloak is:issue is:open label:kind/bug" + updatedQuery));
+        issues.addAll(fetchIssues("repo:keycloak/keycloak is:issue is:open label:kind/bug"));
 
         System.out.print("Fetching closed issues: ");
-        issues.addAll(fetchIssues("repo:keycloak/keycloak is:issue is:closed label:kind/bug closed:>=" + Date.MINUS_90_DAYS_STRING + updatedQuery));
+        issues.addAll(fetchIssues("repo:keycloak/keycloak is:issue is:closed label:kind/bug closed:>=" + Date.MINUS_90_DAYS_STRING));
+
+        return issues;
+    }
+
+    private List<GitHubIssue> updateIssues(List<GitHubIssue> issues) throws IOException {
+        java.util.Date mostRecent = issues.stream().map(GitHubIssue::getUpdatedAt).max(java.util.Date::compareTo).get();
+
+        System.out.print("Fetching updated issues: ");
+        List<GitHubIssue> updates = fetchIssues("repo:keycloak/keycloak is:issue is:open label:kind/bug updated:>=" + Date.toString(mostRecent));
+
+        issues = issues.stream()
+                .filter(i -> i.getClosedAt() == null || i.getClosedAt().after(Date.MINUS_90_DAYS))
+                .filter(i -> updates.stream().filter(j -> j.number == i.number).findFirst().isEmpty())
+                .collect(Collectors.toList());
+        issues.addAll(updates);
 
         return issues;
     }
