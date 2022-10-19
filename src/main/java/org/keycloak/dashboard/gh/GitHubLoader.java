@@ -52,16 +52,16 @@ public class GitHubLoader {
         prStat.setOpen(queryPrCount("is:open"));
         prStat.setPriority(queryPrCount("is:open label:priority/important,priority/critical"));
 
-        prStat.setOlderThan6Months(queryPrCount("is:open created:<" + Date.MINUS_6_MONTHS_STRING));
-        prStat.setOlderThan12Months(queryPrCount("is:open created:<" + Date.MINUS_12_MONTHS_STRING));
-        prStat.setOlderThan18Months(queryPrCount("is:open created:<" + Date.MINUS_18_MONTHS_STRING));
+        prStat.setOlderThan6Months(queryPrCount("is:open created:<=" + Date.MINUS_6_MONTHS_STRING));
+        prStat.setOlderThan12Months(queryPrCount("is:open created:<=" + Date.MINUS_12_MONTHS_STRING));
+        prStat.setOlderThan18Months(queryPrCount("is:open created:<=" + Date.MINUS_18_MONTHS_STRING));
 
-        prStat.setCreatedLast7Days(queryPrCount("created:>" + Date.MINUS_8_DAYS_STRING));
-        prStat.setClosedLast7Days(queryPrCount("is:closed closed:>" + Date.MINUS_8_DAYS_STRING));
-        prStat.setCreatedLast30Days(queryPrCount("created:>" + Date.MINUS_31_DAYS_STRING));
-        prStat.setClosedLast30Days(queryPrCount("is:closed closed:>" + Date.MINUS_31_DAYS_STRING));
-        prStat.setCreatedLast90Days(queryPrCount("created:>" + Date.MINUS_91_DAYS_STRING));
-        prStat.setClosedLast90Days(queryPrCount("is:closed closed:>" + Date.MINUS_91_DAYS_STRING));
+        prStat.setCreatedLast7Days(queryPrCount("created:>=" + Date.MINUS_7_DAYS_STRING));
+        prStat.setClosedLast7Days(queryPrCount("is:closed closed:>=" + Date.MINUS_7_DAYS_STRING));
+        prStat.setCreatedLast30Days(queryPrCount("created:>=" + Date.MINUS_30_DAYS_STRING));
+        prStat.setClosedLast30Days(queryPrCount("is:closed closed:>=" + Date.MINUS_30_DAYS_STRING));
+        prStat.setCreatedLast90Days(queryPrCount("created:>=" + Date.MINUS_90_DAYS_STRING));
+        prStat.setClosedLast90Days(queryPrCount("is:closed closed:>=" + Date.MINUS_90_DAYS_STRING));
         System.out.println();
         return prStat;
     }
@@ -79,7 +79,7 @@ public class GitHubLoader {
         issues.addAll(queryIssues("repo:keycloak/keycloak is:issue is:open label:kind/bug"));
 
         System.out.print("Fetching closed issues: ");
-        issues.addAll(queryIssues("repo:keycloak/keycloak is:issue is:closed label:kind/bug closed:>" + Date.MINUS_91_DAYS_STRING));
+        issues.addAll(queryIssues("repo:keycloak/keycloak is:issue is:closed label:kind/bug closed:>=" + Date.MINUS_90_DAYS_STRING));
 
         return issues;
     }

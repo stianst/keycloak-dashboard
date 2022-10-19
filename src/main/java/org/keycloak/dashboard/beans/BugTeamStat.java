@@ -3,26 +3,26 @@ package org.keycloak.dashboard.beans;
 import org.keycloak.dashboard.Config;
 import org.keycloak.dashboard.util.GHQuery;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 public class BugTeamStat {
 
     String team;
     List<String> areas;
-    int open;
-    int triage;
+    Set<Integer> open = new HashSet<>();
+    Set<Integer> triage = new HashSet<>();
 
     String ghLink;
     String ghOpenLink;
 
     String ghTriageLink;
 
-    public BugTeamStat(String team, List<String> areas, int open, int triage) {
+    public BugTeamStat(String team, List<String> areas) {
         this.team = team;
         this.areas = areas;
-        this.open = open;
-        this.triage = triage;
 
         String link = "https://github.com/keycloak/keycloak/issues";
         String areaLabels = areas.stream().collect(Collectors.joining(","));
@@ -41,15 +41,15 @@ public class BugTeamStat {
     }
 
     public int getTotal() {
-        return open + triage;
+        return open.size() + triage.size();
     }
 
     public int getOpen() {
-        return open;
+        return open.size();
     }
 
     public int getTriage() {
-        return triage;
+        return triage.size();
     }
 
     public String getGhLink() {
@@ -65,10 +65,10 @@ public class BugTeamStat {
     }
 
     public String getOpenCssClasses() {
-        return open < Config.BUG_TEAM_OPEN_WARN ? "success" : "warn";
+        return open.size() < Config.BUG_TEAM_OPEN_WARN ? "success" : "warn";
     }
 
     public String getTriageCssClasses() {
-        return triage < Config.BUG_TEAM_TRIAGE_WARN ? "success" : "warn";
+        return triage.size() < Config.BUG_TEAM_TRIAGE_WARN ? "success" : "warn";
     }
 }
