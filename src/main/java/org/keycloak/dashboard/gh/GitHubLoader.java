@@ -14,6 +14,8 @@ import org.kohsuke.github.PagedSearchIterable;
 import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
 
 public class GitHubLoader {
 
@@ -23,13 +25,35 @@ public class GitHubLoader {
         gitHub = GitHubBuilder.fromEnvironment().build();
     }
 
-    public GitHubData query() throws IOException {
+    public GitHubData load() throws IOException {
         GitHubData data = new GitHubData();
         data.setPrStat(queryPRStat());
         data.setAreas(queryAreas());
-        data.setIssues(queryIssues());
+        data.setIssues(queryIssues(null));
         data.setIssuesWithPr(queryIssuesWithPr());
         return data;
+    }
+
+
+    public GitHubData update(GitHubData data) throws IOException {
+        data.setPrStat(queryPRStat());
+        data.setAreas(queryAreas());
+        data.setIssues(updateIssues(data.getIssues()));
+        data.setIssuesWithPr(queryIssuesWithPr());
+        return data;
+    }
+
+    private List<GitHubIssue> updateIssues(List<GitHubIssue> issues) throws IOException {
+        Optional<java.util.Date> mostRecent = issues.stream().map(GitHubIssue::getUpdatedAt).max(java.util.Date::compareTo);
+        List<GitHubIssue> updates = queryIssues(Date.toString(mostRecent.get()));
+
+        issues = issues.stream()
+                .filter(i -> i.getClosedAt() == null || i.getClosedAt().after(Date.MINUS_90_DAYS))
+                .filter(i -> updates.stream().filter(j -> j.number == i.number).findFirst().isEmpty())
+                .collect(Collectors.toList());
+        issues.addAll(updates);
+
+        return issues;
     }
 
     private List<String> queryAreas() throws IOException {
@@ -72,19 +96,21 @@ public class GitHubLoader {
         return count;
     }
 
-    private List<GitHubIssue> queryIssues() throws IOException {
+    private List<GitHubIssue> queryIssues(String updatedSince) throws IOException {
         List<GitHubIssue> issues = new LinkedList<>();
 
+        String updatedQuery = updatedSince != null ? " updated:>=" + updatedSince : "";
+
         System.out.print("Fetching open issues: ");
-        issues.addAll(queryIssues("repo:keycloak/keycloak is:issue is:open label:kind/bug"));
+        issues.addAll(fetchIssues("repo:keycloak/keycloak is:issue is:open label:kind/bug" + updatedQuery));
 
         System.out.print("Fetching closed issues: ");
-        issues.addAll(queryIssues("repo:keycloak/keycloak is:issue is:closed label:kind/bug closed:>=" + Date.MINUS_90_DAYS_STRING));
+        issues.addAll(fetchIssues("repo:keycloak/keycloak is:issue is:closed label:kind/bug closed:>=" + Date.MINUS_90_DAYS_STRING + updatedQuery));
 
         return issues;
     }
 
-    private List<GitHubIssue> queryIssues(String q) throws IOException {
+    private List<GitHubIssue> fetchIssues(String q) throws IOException {
         List<GitHubIssue> issues = new LinkedList<>();
 
         PagedSearchIterable<GHIssue> list = gitHub.searchIssues().q(q).list();

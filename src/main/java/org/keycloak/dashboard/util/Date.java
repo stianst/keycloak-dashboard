@@ -1,5 +1,6 @@
 package org.keycloak.dashboard.util;
 
+import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
@@ -8,6 +9,8 @@ import java.util.Locale;
 public class Date {
 
     private static DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd", Locale.ENGLISH);
+
+    private static SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 
     public static java.util.Date MINUS_6_MONTHS = Date.minusMonths(6);
 
@@ -43,6 +46,10 @@ public class Date {
 
     public static String minusDaysString(int days) {
         return formatter.format(LocalDateTime.now().minusDays(days));
+    }
+
+    public static String toString(java.util.Date date) {
+        return dateFormat.format(date);
     }
 
 }

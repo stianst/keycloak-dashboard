@@ -17,15 +17,22 @@ public class LoadGitHubData {
 
     public void createData() throws IOException {
         GitHubLoader gitHubLoader = new GitHubLoader();
-        GitHubData gitHubData = gitHubLoader.query();
-        gitHubData.setUpdatedDate(new Date());
-
         ObjectMapper objectMapper = new ObjectMapper();
+        File dataFile = new File("data.json");
 
-        File output = new File("data.json");
-        objectMapper.writerWithDefaultPrettyPrinter().writeValue(output, gitHubData);
+        GitHubData data;
+        if (dataFile.isFile()) {
+            data = objectMapper.readValue(dataFile, GitHubData.class);
+            data = gitHubLoader.update(data);
+        } else {
+            data = gitHubLoader.load();
+        }
 
-        System.out.println("Created data: " + output.toURI());
+        data.setUpdatedDate(new Date());
+
+        objectMapper.writerWithDefaultPrettyPrinter().writeValue(dataFile, data);
+
+        System.out.println("Created data: " + dataFile.toURI());
     }
 
 }
