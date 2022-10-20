@@ -9,6 +9,8 @@ import java.util.stream.Collectors;
 
 public class GitHubIssue {
 
+    public boolean pullRequest;
+
     public Date createdAt;
 
     public Date updatedAt;
@@ -30,6 +32,14 @@ public class GitHubIssue {
 
     @JsonProperty
     public int commentsCount;
+
+    public boolean isPullRequest() {
+        return pullRequest;
+    }
+
+    public void setPullRequest(boolean pullRequest) {
+        this.pullRequest = pullRequest;
+    }
 
     public Date getCreatedAt() {
         return createdAt;
@@ -110,11 +120,22 @@ public class GitHubIssue {
 
     @JsonIgnore
     public boolean isTriage() {
-        return labels.contains("status/triage");
+        return hasLabel("status/triage");
     }
 
     @JsonIgnore
     public List<String> getAreas() {
         return labels.stream().filter(l -> l.startsWith("area/")).collect(Collectors.toList());
     }
+
+    @JsonIgnore
+    public boolean hasLabel(String... label) {
+        for (String l : label) {
+            if (labels.contains(l)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
 }

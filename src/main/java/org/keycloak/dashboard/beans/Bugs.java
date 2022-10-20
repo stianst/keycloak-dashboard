@@ -4,7 +4,7 @@ import org.keycloak.dashboard.Config;
 import org.keycloak.dashboard.rep.GitHubData;
 import org.keycloak.dashboard.rep.GitHubIssue;
 import org.keycloak.dashboard.rep.Teams;
-import org.keycloak.dashboard.util.Date;
+import org.keycloak.dashboard.util.DateUtil;
 
 import java.util.Comparator;
 import java.util.LinkedHashMap;
@@ -26,14 +26,14 @@ public class Bugs {
         int nonTriaged = (int) issues.stream().filter(i -> i.isOpen() && i.isTriage()).count();
         int open = (int) issues.stream().filter(i -> i.isOpen() && !i.isTriage()).count();
         int missingAreaLabel = (int) issues.stream().filter(i -> i.isOpen() && i.getAreas().isEmpty()).count();
-        int oldWithoutComments = (int) issues.stream().filter(i -> i.isOpen() && i.getUpdatedAt().before(Date.MINUS_6_MONTHS) && i.getCommentsCount() == 0).count();
+        int oldWithoutComments = (int) issues.stream().filter(i -> i.isOpen() && i.getUpdatedAt().before(DateUtil.MINUS_6_MONTHS) && i.getCommentsCount() == 0).count();
 
-        int createdLast7Days = (int) issues.stream().filter(i -> i.getCreatedAt().after(Date.MINUS_7_DAYS)).count();
-        int closedLast7Days = (int) issues.stream().filter(i -> i.getClosedAt() != null && i.getClosedAt().after(Date.MINUS_7_DAYS)).count();
-        int createdLast30Days = (int) issues.stream().filter(i -> i.getCreatedAt().after(Date.MINUS_30_DAYS)).count();
-        int closedLast30Days = (int) issues.stream().filter(i -> i.getClosedAt() != null && i.getClosedAt().after(Date.MINUS_30_DAYS)).count();
-        int createdLast90Days = (int) issues.stream().filter(i -> i.getCreatedAt().after(Date.MINUS_90_DAYS)).count();
-        int closedLast90Days = (int) issues.stream().filter(i -> i.getClosedAt() != null && i.getClosedAt().after(Date.MINUS_90_DAYS)).count();
+        int createdLast7Days = (int) issues.stream().filter(i -> i.getCreatedAt().after(DateUtil.MINUS_7_DAYS)).count();
+        int closedLast7Days = (int) issues.stream().filter(i -> i.getClosedAt() != null && i.getClosedAt().after(DateUtil.MINUS_7_DAYS)).count();
+        int createdLast30Days = (int) issues.stream().filter(i -> i.getCreatedAt().after(DateUtil.MINUS_30_DAYS)).count();
+        int closedLast30Days = (int) issues.stream().filter(i -> i.getClosedAt() != null && i.getClosedAt().after(DateUtil.MINUS_30_DAYS)).count();
+        int createdLast90Days = (int) issues.stream().filter(i -> i.getCreatedAt().after(DateUtil.MINUS_90_DAYS)).count();
+        int closedLast90Days = (int) issues.stream().filter(i -> i.getClosedAt() != null && i.getClosedAt().after(DateUtil.MINUS_90_DAYS)).count();
 
 
         areaStats = convertToAreaStats(issues);
@@ -44,16 +44,16 @@ public class Bugs {
         stats.add(new BugStat("Open", open, 10, "is:open label:kind/bug -label:status/triage"));
         stats.add(new BugStat("Non-triaged", nonTriaged, Config.BUG_TRIAGE_WARN, "is:open label:kind/bug label:status/triage"));
         stats.add(new BugStat("Missing area", missingAreaLabel, Config.BUG_AREA_MISSING_WARN, "is:open label:kind/bug " + data.getAreas().stream().map(s -> "-label:" + s).collect(Collectors.joining(" "))));
-        stats.add(new BugStat("Old without comments", oldWithoutComments, Config.BUG_OLD_NO_COMMENT_WARN, "is:issue is:open label:kind/bug comments:0 updated:<=" + Date.MINUS_6_MONTHS_STRING));
+        stats.add(new BugStat("Old without comments", oldWithoutComments, Config.BUG_OLD_NO_COMMENT_WARN, "is:issue is:open label:kind/bug comments:0 updated:<=" + DateUtil.MINUS_6_MONTHS_STRING));
 
-        stats.add(new BugStat("Created last 7 days", createdLast7Days, createdLast7Days > closedLast7Days ? 0 : 999, "label:kind/bug created:>=" + Date.MINUS_7_DAYS_STRING));
-        stats.add(new BugStat("Closed last 7 days", closedLast7Days, createdLast7Days > closedLast7Days ? 0 : 999, "is:closed label:kind/bug closed:>=" + Date.MINUS_7_DAYS_STRING));
+        stats.add(new BugStat("Created last 7 days", createdLast7Days, createdLast7Days > closedLast7Days ? 0 : 999, "label:kind/bug created:>=" + DateUtil.MINUS_7_DAYS_STRING));
+        stats.add(new BugStat("Closed last 7 days", closedLast7Days, createdLast7Days > closedLast7Days ? 0 : 999, "is:closed label:kind/bug closed:>=" + DateUtil.MINUS_7_DAYS_STRING));
 
-        stats.add(new BugStat("Created last 30 days", createdLast30Days, createdLast30Days > closedLast30Days ? 0 : 999, "label:kind/bug created:>=" + Date.MINUS_30_DAYS_STRING));
-        stats.add(new BugStat("Closed last 30 days", closedLast30Days, createdLast30Days > closedLast30Days ? 0 : 999, "is:closed label:kind/bug closed:>=" + Date.MINUS_30_DAYS_STRING));
+        stats.add(new BugStat("Created last 30 days", createdLast30Days, createdLast30Days > closedLast30Days ? 0 : 999, "label:kind/bug created:>=" + DateUtil.MINUS_30_DAYS_STRING));
+        stats.add(new BugStat("Closed last 30 days", closedLast30Days, createdLast30Days > closedLast30Days ? 0 : 999, "is:closed label:kind/bug closed:>=" + DateUtil.MINUS_30_DAYS_STRING));
 
-        stats.add(new BugStat("Created last 90 days", createdLast90Days, createdLast90Days > closedLast90Days ? 0 : 999, "label:kind/bug created:>=" + Date.MINUS_90_DAYS_STRING));
-        stats.add(new BugStat("Closed last 90 days", closedLast90Days, createdLast90Days > closedLast90Days ? 0 : 999, "is:closed label:kind/bug closed:>=" + Date.MINUS_90_DAYS_STRING));
+        stats.add(new BugStat("Created last 90 days", createdLast90Days, createdLast90Days > closedLast90Days ? 0 : 999, "label:kind/bug created:>=" + DateUtil.MINUS_90_DAYS_STRING));
+        stats.add(new BugStat("Closed last 90 days", closedLast90Days, createdLast90Days > closedLast90Days ? 0 : 999, "is:closed label:kind/bug closed:>=" + DateUtil.MINUS_90_DAYS_STRING));
 
         issues.stream().filter(i -> i.isOpen() && i.getMilestone() != null)
                 .collect(Collectors.groupingBy(GitHubIssue::getMilestone, Collectors.counting())).entrySet().stream()

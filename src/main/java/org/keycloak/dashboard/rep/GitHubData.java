@@ -12,9 +12,9 @@ public class GitHubData {
     @JsonProperty
     public List<String> areas;
     @JsonProperty
-    public GitHubPRStat prStat;
-    @JsonProperty
     public List<GitHubIssue> issues;
+    @JsonProperty
+    public List<GitHubIssue> prs;
 
     public int issuesWithPr;
 
@@ -34,20 +34,20 @@ public class GitHubData {
         this.areas = areas;
     }
 
-    public GitHubPRStat getPrStat() {
-        return prStat;
-    }
-
-    public void setPrStat(GitHubPRStat prStat) {
-        this.prStat = prStat;
-    }
-
     public List<GitHubIssue> getIssues() {
         return issues;
     }
 
     public void setIssues(List<GitHubIssue> issues) {
         this.issues = issues;
+    }
+
+    public List<GitHubIssue> getPrs() {
+        return prs;
+    }
+
+    public void setPrs(List<GitHubIssue> prs) {
+        this.prs = prs;
     }
 
     public int getIssuesWithPr() {

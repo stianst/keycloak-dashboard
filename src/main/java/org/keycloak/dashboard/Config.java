@@ -1,8 +1,15 @@
 package org.keycloak.dashboard;
 
+import org.keycloak.dashboard.util.DateUtil;
+
+import java.util.Date;
+
 public class Config {
 
     public static final boolean PUBLISH = System.getProperties().containsKey("publish");
+
+    public static final Date EXPIRATION_OLD_ISSUES = DateUtil.MINUS_90_DAYS;
+    public static final String EXPIRATION_OLD_ISSUES_STRING = DateUtil.MINUS_90_DAYS_STRING;
 
     public static final int PR_OPEN_WARN = 150;
     public static final int PR_PRIORITY_WARN = 150;
