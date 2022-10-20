@@ -17,7 +17,7 @@
 
 <#nested>
 
-<div class="footer">Last updated: ${updatedDate?string('dd.MM.yyyy HH:mm:ss')}</div>
+<div class="footer">Last updated: ${updatedDate?string["dd MMMM yyyy, HH:mm '('zzz')'"]}</div>
 </body>
 </html>
 </#macro>
