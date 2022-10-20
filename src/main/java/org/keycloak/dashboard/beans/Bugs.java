@@ -27,6 +27,7 @@ public class Bugs {
         int open = (int) issues.stream().filter(i -> i.isOpen() && !i.isTriage()).count();
         int missingAreaLabel = (int) issues.stream().filter(i -> i.isOpen() && i.getAreas().isEmpty()).count();
         int oldWithoutComments = (int) issues.stream().filter(i -> i.isOpen() && i.getUpdatedAt().before(DateUtil.MINUS_6_MONTHS) && i.getCommentsCount() == 0).count();
+        int priority = (int) issues.stream().filter(i -> i.isOpen() && i.hasLabel("priority/important", "priority/critical")).count();
 
         int createdLast7Days = (int) issues.stream().filter(i -> i.getCreatedAt().after(DateUtil.MINUS_7_DAYS)).count();
         int closedLast7Days = (int) issues.stream().filter(i -> i.getClosedAt() != null && i.getClosedAt().after(DateUtil.MINUS_7_DAYS)).count();
@@ -42,6 +43,7 @@ public class Bugs {
         stats = new LinkedList<>();
         stats.add(new BugStat("With PR", data.getIssuesWithPr(), Config.BUG_OPEN_WARN, "is:open label:kind/bug linked:pr"));
         stats.add(new BugStat("Open", open, 10, "is:open label:kind/bug -label:status/triage"));
+        stats.add(new BugStat("Priority", priority, Config.PR_PRIORITY_WARN, "is:open label:kind/bug label:priority/important,priority/critical"));
         stats.add(new BugStat("Non-triaged", nonTriaged, Config.BUG_TRIAGE_WARN, "is:open label:kind/bug label:status/triage"));
         stats.add(new BugStat("Missing area", missingAreaLabel, Config.BUG_AREA_MISSING_WARN, "is:open label:kind/bug " + data.getAreas().stream().map(s -> "-label:" + s).collect(Collectors.joining(" "))));
         stats.add(new BugStat("Old without comments", oldWithoutComments, Config.BUG_OLD_NO_COMMENT_WARN, "is:issue is:open label:kind/bug comments:0 updated:<=" + DateUtil.MINUS_6_MONTHS_STRING));
