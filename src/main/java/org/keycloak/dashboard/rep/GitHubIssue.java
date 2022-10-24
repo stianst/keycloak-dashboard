@@ -9,8 +9,6 @@ import java.util.stream.Collectors;
 
 public class GitHubIssue {
 
-    public boolean pullRequest;
-
     public Date createdAt;
 
     public Date updatedAt;
@@ -20,26 +18,12 @@ public class GitHubIssue {
     public int number;
 
     @JsonProperty
-    public String title;
-
-    @JsonProperty
     public String milestone;
     @JsonProperty
     public List<String> labels;
 
     @JsonProperty
-    public boolean hasAssignee;
-
-    @JsonProperty
     public int commentsCount;
-
-    public boolean isPullRequest() {
-        return pullRequest;
-    }
-
-    public void setPullRequest(boolean pullRequest) {
-        this.pullRequest = pullRequest;
-    }
 
     public Date getCreatedAt() {
         return createdAt;
@@ -73,14 +57,6 @@ public class GitHubIssue {
         this.number = number;
     }
 
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
     public String getMilestone() {
         return milestone;
     }
@@ -95,14 +71,6 @@ public class GitHubIssue {
 
     public void setLabels(List<String> labels) {
         this.labels = labels;
-    }
-
-    public boolean isHasAssignee() {
-        return hasAssignee;
-    }
-
-    public void setHasAssignee(boolean hasAssignee) {
-        this.hasAssignee = hasAssignee;
     }
 
     public int getCommentsCount() {

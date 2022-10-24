@@ -61,7 +61,7 @@ public class GitHubLoader {
     }
 
     private List<GitHubIssue> updateIssues(List<GitHubIssue> issues) throws IOException {
-        return issuesLoader.updateIssues(issues, "repo:keycloak/keycloak is:issue is:open label:kind/bug");
+        return issuesLoader.updateIssues(issues, "repo:keycloak/keycloak is:issue label:kind/bug");
     }
 
     private List<GitHubIssue> loadPRs() throws IOException {
@@ -71,7 +71,7 @@ public class GitHubLoader {
     }
 
     private List<GitHubIssue> updatePRs(List<GitHubIssue> issues) throws IOException {
-        return issuesLoader.updatePRs(issues, "repo:keycloak/keycloak is:pr is:open");
+        return issuesLoader.updatePRs(issues, "repo:keycloak/keycloak is:pr");
     }
 
     private int queryIssuesWithPr() throws IOException {

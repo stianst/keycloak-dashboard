@@ -89,14 +89,11 @@ public class GitHubIssuesLoader {
 
     private GitHubIssue convert(GHIssue i) throws IOException {
         GitHubIssue issue = new GitHubIssue();
-        issue.setPullRequest(i.isPullRequest());
         issue.setCreatedAt(i.getCreatedAt());
         issue.setUpdatedAt(i.getUpdatedAt());
         issue.setClosedAt(i.getClosedAt());
         issue.setNumber(i.getNumber());
-        issue.setTitle(i.getTitle());
         issue.setCommentsCount(i.getCommentsCount());
-        issue.setHasAssignee(i.getAssignee() != null);
         issue.setMilestone(i.getMilestone() != null ? i.getMilestone().getTitle() : null);
 
         List<String> labels = new LinkedList<>();
