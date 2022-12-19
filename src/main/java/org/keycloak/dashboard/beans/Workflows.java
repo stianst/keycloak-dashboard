@@ -10,11 +10,11 @@ public class Workflows {
     public Workflows() {
         workflows = new LinkedList<>();
 
-        workflows.add(new Workflow("Nightly release", "keycloak-rel/keycloak-rel", "release-nightly.yml", "Release Nightly", null));
+        workflows.add(new Workflow("Nightly release", "keycloak-rel/keycloak-rel", "release-nightly.yml", "Release Nightly", "branch=main"));
 
         workflows.add(new Workflow("Keycloak CI", "keycloak/keycloak", "ci.yml", "Keycloak CI", "event=schedule branch=main"));
         workflows.add(new Workflow("Keycloak Operator CI", "keycloak/keycloak", "operator-ci.yml", "Keycloak Operator CI", "event=schedule branch=main"));
-        workflows.add(new Workflow("Keycloak QuickStarts CI", "keycloak/keycloak-quickstarts", "ci.yml", "Quickstarts tests", "event=schedule"));
+        workflows.add(new Workflow("Keycloak QuickStarts CI", "keycloak/keycloak-quickstarts", "ci.yml", "Quickstarts tests", "event=schedule branch=latest"));
         workflows.add(new Workflow("Keycloak UI CI", "keycloak/keycloak-ui", "cypress.yml", "Cypress", "event=schedule branch=main"));
 
         workflows.add(new Workflow("CodeQL JS Adapter", "keycloak/keycloak", "codeql-js-adapter-analysis.yml", "CodeQL JS Adapter", "event=schedule branch=main"));
@@ -42,7 +42,7 @@ public class Workflows {
                 ghLink += "?query=" + query.replaceAll("=", "%3A").replaceAll(" ", "+");
             }
 
-            shield = "https://img.shields.io/github/workflow/status/" + repository + "/" + workflowName.replaceAll(" ", "%20") + "?label=&style=flat-square";
+            shield = "https://img.shields.io/github/actions/workflow/status/" + repository + "/" + workflowFile + "?label=&style=flat-square";
             if (query != null) {
                 shield += "&" + query.replaceAll(" ", "&");
             }
