@@ -18,7 +18,7 @@ public class Workflows {
         workflows.add(new Workflow("Keycloak UI CI", "keycloak/keycloak-ui", "cypress.yml", "Cypress", "event=schedule branch=main"));
 
         workflows.add(new Workflow("CodeQL", "keycloak/keycloak", "codeql-analysis.yml", "CodeQL", "event=schedule branch=main"));
-        workflows.add(new Workflow("Snyk", "keycloak/keycloak", "snyk.yml", "Snyk", "event=schedule branch=main"));
+        workflows.add(new Workflow("Snyk", "keycloak/keycloak", "snyk-analysis.yml", "Snyk", "event=schedule branch=main"));
         workflows.add(new Workflow("Trivy", "keycloak/keycloak", "trivy-analysis.yml", "Trivy", "event=schedule branch=main"));
     }
 
