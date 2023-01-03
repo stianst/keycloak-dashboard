@@ -89,6 +89,7 @@ public class GitHubIssuesLoader {
 
     private GitHubIssue convert(GHIssue i) throws IOException {
         GitHubIssue issue = new GitHubIssue();
+        issue.setTitle(i.getTitle());
         issue.setCreatedAt(i.getCreatedAt());
         issue.setUpdatedAt(i.getUpdatedAt());
         issue.setClosedAt(i.getClosedAt());

@@ -20,6 +20,8 @@ public class Bugs {
     private List<BugAreaStat> areaStats;
     private List<BugTeamStat> teamStats;
 
+    private List<GitHubIssue> flakyTests;
+
     public Bugs(GitHubData data, Teams teams) {
         List<GitHubIssue> issues = data.getIssues();
 
@@ -36,6 +38,7 @@ public class Bugs {
         int createdLast90Days = (int) issues.stream().filter(i -> i.getCreatedAt().after(DateUtil.MINUS_90_DAYS)).count();
         int closedLast90Days = (int) issues.stream().filter(i -> i.getClosedAt() != null && i.getClosedAt().after(DateUtil.MINUS_90_DAYS)).count();
 
+        flakyTests = issues.stream().filter(i -> i.hasLabel("flaky-test") && i.isOpen()).collect(Collectors.toList());
 
         areaStats = convertToAreaStats(issues);
         teamStats = convertToTeamStats(issues, teams);
@@ -118,4 +121,7 @@ public class Bugs {
         return teamStats;
     }
 
+    public List<GitHubIssue> getFlakyTests() {
+        return flakyTests;
+    }
 }

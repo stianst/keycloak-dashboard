@@ -53,6 +53,7 @@ public class Dashboard {
         attributes.put("bugTeamStats", bugs.getTeamStats());
         attributes.put("failedRuns", logFailedParser.getFailedRuns());
         attributes.put("failedTests", logFailedParser.getFailedTests());
+        attributes.put("flakyTests", bugs.getFlakyTests());
 
         File output = new File("docs/index.html");
         FreeMarker freeMarker = new FreeMarker(attributes);
