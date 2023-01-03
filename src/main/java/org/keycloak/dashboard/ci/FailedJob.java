@@ -5,11 +5,13 @@ import java.util.List;
 
 public class FailedJob {
 
+    private FailedRun failedRun;
     private String name;
 
     private JobConclusion conclusion;
 
-    public FailedJob(String name, JobConclusion conclusion) {
+    public FailedJob(FailedRun failedRun, String name, JobConclusion conclusion) {
+        this.failedRun = failedRun;
         this.name = name;
         this.conclusion = conclusion;
     }
@@ -30,6 +32,10 @@ public class FailedJob {
 
     public String getFailedGoal() {
         return failedGoal;
+    }
+
+    public FailedRun getFailedRun() {
+        return failedRun;
     }
 
     public void setFailedGoal(String failedGoal) {

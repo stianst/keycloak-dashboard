@@ -1,11 +1,14 @@
 package org.keycloak.dashboard.ci;
 
+import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
 
 public class FailedRun {
 
     private String runId;
+
+    private Date date;
 
     private List<FailedJob> failedJobs = new LinkedList<>();
 
@@ -15,6 +18,14 @@ public class FailedRun {
 
     public String getRunId() {
         return runId;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
     }
 
     public List<FailedJob> getFailedJobs() {

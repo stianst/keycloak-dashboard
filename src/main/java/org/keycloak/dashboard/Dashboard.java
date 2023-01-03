@@ -14,6 +14,7 @@ import org.keycloak.dashboard.util.FreeMarker;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.ParseException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -23,12 +24,12 @@ import java.util.Map;
  */
 public class Dashboard {
 
-    public static void main(String[] args) throws IOException, TemplateException {
+    public static void main(String[] args) throws IOException, TemplateException, ParseException {
         Dashboard dashboard = new Dashboard();
         dashboard.createDashboard();
     }
 
-    public void createDashboard() throws IOException, TemplateException {
+    public void createDashboard() throws IOException, TemplateException, ParseException {
         ObjectMapper objectMapper = new ObjectMapper();
         GitHubData data = objectMapper.readValue(new File("data.json"), GitHubData.class);
 
