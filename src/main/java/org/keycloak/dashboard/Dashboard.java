@@ -6,6 +6,8 @@ import freemarker.template.TemplateException;
 import org.keycloak.dashboard.beans.Bugs;
 import org.keycloak.dashboard.beans.PR;
 import org.keycloak.dashboard.beans.Workflows;
+import org.keycloak.dashboard.ci.FailedRun;
+import org.keycloak.dashboard.ci.LogFailedParser;
 import org.keycloak.dashboard.rep.GitHubData;
 import org.keycloak.dashboard.rep.Teams;
 import org.keycloak.dashboard.util.FreeMarker;
@@ -13,6 +15,7 @@ import org.keycloak.dashboard.util.FreeMarker;
 import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -36,6 +39,9 @@ public class Dashboard {
         PR pr = new PR(data);
         Bugs bugs = new Bugs(data, teams);
 
+        LogFailedParser logFailedParser = new LogFailedParser();
+        logFailedParser.parseAll();
+
         Map<String, Object> attributes = new HashMap<>();
 
         attributes.put("publish", Config.PUBLISH);
@@ -45,6 +51,8 @@ public class Dashboard {
         attributes.put("bugStats", bugs.getStats());
         attributes.put("bugAreaStats", bugs.getAreaStats());
         attributes.put("bugTeamStats", bugs.getTeamStats());
+        attributes.put("failedRuns", logFailedParser.getFailedRuns());
+        attributes.put("failedTests", logFailedParser.getFailedTests());
 
         File output = new File("docs/index.html");
         FreeMarker freeMarker = new FreeMarker(attributes);
@@ -52,6 +60,7 @@ public class Dashboard {
         freeMarker.template("bugs.ftl", new File("docs/bugs.html"));
         freeMarker.template("prs.ftl", new File("docs/prs.html"));
         freeMarker.template("workflows.ftl", new File("docs/workflows.html"));
+        freeMarker.template("tests.ftl", new File("docs/tests.html"));
 
         System.out.println("Created dashboard: " + output.toURI());
     }

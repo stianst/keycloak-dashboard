@@ -12,7 +12,7 @@
 <body>
 
 <div class="menu">
-    <a href="<#if publish>./<#else>index.html</#if>">Overview</a>|<a href="workflows<#if !publish>.html</#if>">Workflows</a>|<a href="prs<#if !publish>.html</#if>">PRs</a>|<a href="bugs<#if !publish>.html</#if>">Bugs</a>
+    <a href="<#if publish>./<#else>index.html</#if>">Overview</a>|<a href="workflows<#if !publish>.html</#if>">Workflows</a>|<a href="prs<#if !publish>.html</#if>">PRs</a>|<a href="bugs<#if !publish>.html</#if>">Bugs</a>|<a href="tests<#if !publish>.html</#if>">Tests</a>
 </div>
 
 <#nested>

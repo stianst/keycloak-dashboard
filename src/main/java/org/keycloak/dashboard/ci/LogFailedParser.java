@@ -1,0 +1,185 @@
+package org.keycloak.dashboard.ci;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.function.Function;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
+
+public class LogFailedParser {
+
+    final Pattern TEST_CASE_PATTERN = Pattern.compile("([\\w]*\\.[\\w]*)");
+
+    static final Set<String> IGNORED_JOBS = new HashSet<>();
+    static {
+        IGNORED_JOBS.add("Set check conclusion");
+        IGNORED_JOBS.add("Status Check - Keycloak CI");
+    };
+
+    private List<FailedRun> failedRuns = new LinkedList<>();
+
+    public static void main(String[] args) throws IOException {
+        LogFailedParser parser = new LogFailedParser();
+
+        parser.parseAll();
+
+        parser.print();
+    }
+
+    public Map<String, Integer> getFailedTests() {
+        return failedRuns.stream()
+                .map(FailedRun::getFailedJobs).flatMap(Collection::stream)
+                .map(FailedJob::getFailedTests).flatMap(Collection::stream)
+                .collect(Collectors.toMap(Function.identity(), s -> 1, Math::addExact));
+    }
+
+    public List<FailedRun> getFailedRuns() {
+        return failedRuns;
+    }
+
+    public void parseAll() throws IOException {
+        List<String> runs = Arrays.stream(new File("logs").listFiles(file -> file.getName().startsWith("jobs-")))
+                .map(file -> file.getName().replaceAll("jobs-", ""))
+                .collect(Collectors.toList());
+        for (String run : runs) {
+            parse(run);
+        }
+    }
+
+    public void parse(String runId) throws IOException {
+        File conclusionFile = new File("logs/jobs-" + runId);
+        File logFile = new File("logs/log-" + runId);
+
+        FailedRun failedRun = new FailedRun(runId);
+        failedRuns.add(failedRun);
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(conclusionFile)));
+        List<FailedJob> jobs = new LinkedList<>();
+        for (String l = br.readLine(); l != null; l = br.readLine()) {
+            String[] split = l.split(": ");
+            String name = split[0];
+            JobConclusion conclusion = JobConclusion.fromLog(split[1]);
+            if (conclusion != JobConclusion.SUCCESS && !IGNORED_JOBS.contains(name)) {
+                jobs.add(new FailedJob(name, conclusion));
+            }
+        }
+
+        for (FailedJob job : jobs) {
+            if (job.getConclusion() == JobConclusion.FAILURE) {
+                if (job.getName().equals("Store Model Tests")) {
+                    failedRun.addAll(parseModelTest(job, logFile));
+                } else {
+                    failedRun.add(parseTest(job, logFile));
+                }
+            } else {
+                failedRun.add(job);
+            }
+        }
+    }
+
+    public void print() {
+        System.out.println("==============================================================================================================");
+        System.out.println("Failed tests");
+        System.out.println();
+        failedRuns.stream()
+                .map(FailedRun::getFailedJobs).flatMap(Collection::stream)
+                .map(FailedJob::getFailedTests).flatMap(Collection::stream)
+                .sorted()
+                .collect(Collectors.toMap(Function.identity(), s -> 1, Math::addExact)).forEach((s, c) -> System.out.println(s + "\t" + c));
+        System.out.println("==============================================================================================================");
+
+        for (FailedRun failedRun : failedRuns) {
+            System.out.println("==============================================================================================================");
+            System.out.println("https://github.com/keycloak/keycloak/actions/runs/" + failedRun.getRunId());
+
+            for (FailedJob job : failedRun.getFailedJobs()) {
+                System.out.println("--------------------------------------------------------------------------------------------------------------");
+                System.out.println(job.getName() + " - " + job.getConclusion());
+                if (!job.getErrorLog().isEmpty()) {
+                    System.out.println("--------------------------------------------------------------------------------------------------------------");
+                    System.out.println(job.getFailedGoal());
+                    System.out.println();
+                    for (String l : job.getErrorLog()) {
+                        System.out.println(l);
+                    }
+                }
+            }
+        }
+
+    }
+
+    private FailedJob parseTest(FailedJob job, File logFile) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(logFile)));
+        List<String> errorLines = new LinkedList<>();
+        for (String l = br.readLine(); l != null; l = br.readLine()) {
+            if (l.startsWith(job.getName()) && l.contains(" [ERROR] ")) {
+                String[] split = l.split("\\[ERROR] ");
+                if (split.length == 2) {
+                    errorLines.add(split[1]);
+                }
+            }
+        }
+        parse(job, errorLines);
+        return job;
+    }
+
+
+    private List<FailedJob> parseModelTest(FailedJob job, File logFile) throws IOException {
+        List<FailedJob> failedJobs = new LinkedList<>();
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(logFile)));
+        List<String> errorLines = null;
+
+        FailedJob failedJob = null;
+        for (String l = br.readLine(); l != null; l = br.readLine()) {
+            if (l.contains("======== Start of Profile")) {
+                String profile = l.split("======== Start of Profile")[1];
+                failedJob = new FailedJob(job.getName() + " (" + profile.trim() + ")", job.getConclusion());
+                errorLines = new LinkedList<>();
+            } else if (l.contains("======== End of Profile")) {
+                if (!errorLines.isEmpty()) {
+                    parse(failedJob, errorLines);
+                    failedJobs.add(failedJob);
+                    failedJob = null;
+                }
+            } else if (failedJob != null && l.startsWith(job.getName()) && l.contains(" [ERROR] ")) {
+                String[] split = l.split("\\[ERROR] ");
+                if (split.length == 2) {
+                    errorLines.add(split[1]);
+                }
+            }
+        }
+
+        return failedJobs;
+    }
+
+    private void parse(FailedJob job, List<String> errorLines) {
+        for (String l : errorLines) {
+            if (l.startsWith("Errors:")) {
+                job.addErrorLog(l);
+            } else if (l.startsWith("Failures:")) {
+                job.addErrorLog(l);
+            } else if (l.startsWith("  ")) {
+                job.addErrorLog(l);
+                Matcher m = TEST_CASE_PATTERN.matcher(l);
+                if (m.find()) {
+                    job.addFailedTests(m.group(1));
+                }
+            } else if (l.startsWith("Failed to execute goal")) {
+                job.setFailedGoal(l);
+            }
+        }
+    }
+
+}
