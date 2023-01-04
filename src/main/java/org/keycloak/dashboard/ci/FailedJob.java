@@ -2,6 +2,7 @@ package org.keycloak.dashboard.ci;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Locale;
 
 public class FailedJob {
 
@@ -24,6 +25,18 @@ public class FailedJob {
 
     public String getName() {
         return name;
+    }
+
+    public String getJobName() {
+        return name.contains("(") ? name.substring(0, name.indexOf('(') - 1) : name;
+    }
+
+    public String getProfileName() {
+        return name.contains("(") ? name.substring(name.indexOf('(') + 1, name.indexOf(')')) : null;
+    }
+
+    public String getAnchor() {
+        return getJobName().toLowerCase(Locale.ROOT).replaceAll(" ", "-").replaceAll("\\(", "-").replaceAll("\\)", "");
     }
 
     public JobConclusion getConclusion() {

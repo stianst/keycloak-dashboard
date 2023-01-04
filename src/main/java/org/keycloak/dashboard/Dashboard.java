@@ -53,6 +53,7 @@ public class Dashboard {
         attributes.put("bugAreaStats", bugs.getAreaStats());
         attributes.put("bugTeamStats", bugs.getTeamStats());
         attributes.put("failedRuns", logFailedParser.getFailedRuns());
+        attributes.put("failedJobs", logFailedParser.getFailedJobs());
         attributes.put("failedTests", logFailedParser.getFailedTests());
         attributes.put("flakyTests", bugs.getFlakyTests());
 

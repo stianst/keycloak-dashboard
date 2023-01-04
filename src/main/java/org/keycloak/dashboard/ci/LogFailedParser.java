@@ -63,6 +63,19 @@ public class LogFailedParser {
         return failedRuns;
     }
 
+    public Map<String, List<FailedJob>> getFailedJobs() {
+        Map<String, List<FailedJob>> failedJobs = new TreeMap<>();
+        for (FailedRun run : failedRuns) {
+            for (FailedJob job : run.getFailedJobs()) {
+                if (!failedJobs.containsKey(job.getJobName())) {
+                    failedJobs.put(job.getJobName(), new LinkedList<>());
+                }
+                failedJobs.get(job.getJobName()).add(job);
+            }
+        }
+        return failedJobs;
+    }
+
     public void parseAll() throws IOException, ParseException {
         List<String> runs = Arrays.stream(new File("logs").listFiles(file -> file.getName().startsWith("jobs-")))
                 .map(file -> file.getName().replaceAll("jobs-", ""))
@@ -90,7 +103,7 @@ public class LogFailedParser {
             String[] split = l.split(": ");
             String name = split[0];
             JobConclusion conclusion = JobConclusion.fromLog(split[1]);
-            if (conclusion != JobConclusion.SUCCESS && !IGNORED_JOBS.contains(name)) {
+            if (conclusion != JobConclusion.SUCCESS && conclusion != JobConclusion.SKIPPED && !IGNORED_JOBS.contains(name)) {
                 jobs.add(new FailedJob(failedRun, name, conclusion));
             }
         }
