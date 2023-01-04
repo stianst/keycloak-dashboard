@@ -56,10 +56,10 @@ ${job.failedRun.date?date} / <a href="#failed-run-${job.failedRun.runId}">${job.
 <#list failedJobs?keys as jobName>
 <div class="tests">
 <a id="failed-job-${failedJobs[jobName][0].anchor}"></a>
-<h3>${jobName}</h3>
+<h2>${jobName}</h2>
 
 <#list failedJobs[jobName] as job>
-<h4>${job.failedRun.date} / <a href="#failed-run-${job.failedRun.runId}">${job.failedRun.runId}</a> <#if job.profileName?has_content>/ ${job.profileName}</#if> / ${job.conclusion}</h4>
+<h3>${job.failedRun.date?date} / <a href="#failed-run-${job.failedRun.runId}">${job.failedRun.runId}</a> <#if job.profileName?has_content>/ ${job.profileName}</#if> / ${job.conclusion}</h3>
 <#if job.errorLog?has_content>
 <pre>
 <#list job.errorLog as log>
@@ -84,10 +84,10 @@ ${job.failedGoal}
 <#list failedRuns as run>
 <div class="tests">
 <a id="failed-run-${run.runId}"></a>
-<h3><a href="https://github.com/keycloak/keycloak/actions/runs/${run.runId}">${run.date?date} - ${run.runId}</a></h3>
+<h2><a href="https://github.com/keycloak/keycloak/actions/runs/${run.runId}">${run.date?date} - ${run.runId}</a></h2>
 
 <#list run.failedJobs as job>
-<h4>${job.name} - ${job.conclusion}</h4>
+<h3>${job.name} - ${job.conclusion}</h3>
 <#if job.errorLog?has_content>
 <pre>
 <#list job.errorLog as log>
