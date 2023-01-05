@@ -1,5 +1,7 @@
 package org.keycloak.dashboard.ci;
 
+import org.keycloak.dashboard.util.DateUtil;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
@@ -11,7 +13,9 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.Comparator;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -36,12 +40,26 @@ public class LogFailedParser {
 
     private List<FailedRun> failedRuns = new LinkedList<>();
 
+    private List<FailedRun> resolvedRuns = new LinkedList<>();
+
     public static void main(String[] args) throws IOException, ParseException {
         LogFailedParser parser = new LogFailedParser();
 
         parser.parseAll();
 
         parser.print();
+    }
+
+    public List<FailedJob> getRecentFailedJobs() {
+        Date fromDate = DateUtil.MINUS_7_DAYS;
+        List<FailedJob> recentFailedJobs = new LinkedList<>();
+        for (FailedRun run : failedRuns) {
+            if (run.getDate().after(fromDate)) {
+                recentFailedJobs.addAll(run.getFailedJobs());
+            }
+        }
+        recentFailedJobs.sort((j1, j2) -> j2.getFailedRun().getDate().compareTo(j1.getFailedRun().getDate()));
+        return recentFailedJobs;
     }
 
     public Map<String, List<FailedJob>> getFailedTests() {
@@ -63,6 +81,10 @@ public class LogFailedParser {
         return failedRuns;
     }
 
+    public List<FailedRun> getResolvedRuns() {
+        return resolvedRuns;
+    }
+
     public Map<String, List<FailedJob>> getFailedJobs() {
         Map<String, List<FailedJob>> failedJobs = new TreeMap<>();
         for (FailedRun run : failedRuns) {
@@ -78,9 +100,9 @@ public class LogFailedParser {
 
     public void parseAll() throws IOException, ParseException {
         Set<String> excludedRuns = new HashSet<>();
-        File excludedRunsFile = new File("excluded-runs");
+        File excludedRunsFile = new File("resolved-runs");
         if (excludedRunsFile.isFile()) {
-            BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream("excluded-runs")));
+            BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream("resolved-runs")));
             for (String l = br.readLine(); l != null; l = br.readLine()) {
                 if (!l.startsWith("#")) {
                     excludedRuns.add(l.trim());
@@ -92,8 +114,61 @@ public class LogFailedParser {
                 .map(file -> file.getName().replaceAll("jobs-", ""))
                 .collect(Collectors.toList());
         for (String run : runs) {
-            if (!excludedRuns.contains(run)) {
-                parse(run);
+            parse(run);
+        }
+
+        filterResolved();
+    }
+
+    public void filterResolved() throws IOException {
+        File resolvedRunsFile = new File("resolved-runs");
+        Map<String, List<String>> resolvedRuns = new HashMap<>();
+        if (!resolvedRunsFile.isFile()) {
+            return;
+        }
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream("resolved-runs")));
+        for (String l = br.readLine(); l != null; l = br.readLine()) {
+            l = l.trim();
+            if (!l.startsWith("#") && !l.isBlank()) {
+                String[] split = l.split("/");
+                String runId = split[0];
+                String jobName = split[1];
+                if (!resolvedRuns.containsKey(runId)) {
+                    resolvedRuns.put(runId, new LinkedList<>());
+                }
+                resolvedRuns.get(runId).add(jobName);
+            }
+        }
+
+        Iterator<FailedRun> runItr = failedRuns.iterator();
+        while (runItr.hasNext()) {
+            FailedRun failedRun = runItr.next();
+            List<String> resolvedJobs = resolvedRuns.get(failedRun.getRunId());
+            if (resolvedJobs != null && !resolvedJobs.isEmpty()) {
+                FailedRun resolvedRun = new FailedRun(failedRun.getRunId());
+                resolvedRun.setDate(failedRun.getDate());
+                this.resolvedRuns.add(resolvedRun);
+
+                if (resolvedJobs.contains("*")) {
+                    runItr.remove();
+                    System.out.println("Marking run as fully resolved: " + failedRun.getRunId());
+                } else {
+                    Iterator<FailedJob> jobItr = failedRun.getFailedJobs().iterator();
+                    while (jobItr.hasNext()) {
+                        FailedJob job = jobItr.next();
+                        if (resolvedJobs.contains(job.getName())) {
+                            resolvedRun.add(job);
+                            jobItr.remove();
+                            System.out.println("Found resolved job: " + resolvedRun.getRunId() + "/" + job.getName());
+                        }
+                    }
+
+                    if (failedRun.getFailedJobs().isEmpty()) {
+                        System.out.println("Removing empty run: " + failedRun.getRunId());
+                        runItr.remove();
+                    }
+                }
             }
         }
     }
