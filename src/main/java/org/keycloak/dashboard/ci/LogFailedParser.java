@@ -77,11 +77,24 @@ public class LogFailedParser {
     }
 
     public void parseAll() throws IOException, ParseException {
+        Set<String> excludedRuns = new HashSet<>();
+        File excludedRunsFile = new File("excluded-runs");
+        if (excludedRunsFile.isFile()) {
+            BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream("excluded-runs")));
+            for (String l = br.readLine(); l != null; l = br.readLine()) {
+                if (!l.startsWith("#")) {
+                    excludedRuns.add(l.trim());
+                }
+            }
+        }
+
         List<String> runs = Arrays.stream(new File("logs").listFiles(file -> file.getName().startsWith("jobs-")))
                 .map(file -> file.getName().replaceAll("jobs-", ""))
                 .collect(Collectors.toList());
         for (String run : runs) {
-            parse(run);
+            if (!excludedRuns.contains(run)) {
+                parse(run);
+            }
         }
     }
 
