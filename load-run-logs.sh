@@ -4,7 +4,7 @@
 FROM=2022-12-22
 TO=`date +%Y-%m-%d`
 
-RUNS=`gh api -X GET repos/keycloak/keycloak/actions/workflows/ci.yml/runs -f status=failure -f event=schedule -f created=$FROM..$TO --jq '.workflow_runs[] | (.id|tostring) + ":::" + .created_at'`
+RUNS=`gh api -X GET repos/keycloak/keycloak/actions/workflows/ci.yml/runs -f status=failure -f event=schedule -f created=$FROM..$TO --jq '.workflow_runs[] | (.id|tostring) + ":::" + .updated_at'`
 
 RUN_IDS=(`echo $RUNS | sed 's|:::[^ ]*||g'`)
 RUN_DATES=(`echo $RUNS | sed 's|[^ ]*:::||g'`)
