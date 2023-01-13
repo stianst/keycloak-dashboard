@@ -10,12 +10,14 @@
             </#list>
         </ul>
 
-        <#list failedJobs?keys as jobName>
-        <a id="failed-job-${failedJobs[jobName][0].anchor}"></a>
-        <div class="section-heading">
-            ${jobName}
-        </div>
         <table>
+            <#list failedJobs?keys as jobName>
+            <tr>
+                <th>
+                    <a id="failed-job-${failedJobs[jobName][0].anchor}"></a>
+                    ${jobName}
+                </th>
+            </tr>
             <#list failedJobs[jobName] as job>
             <tr>
                 <td class="size10">${job.failedRun.date?date}</td>
@@ -33,12 +35,11 @@
             </td>
             <#else>
             <td></td>
-                  </#if>
-            </td>
+            </#if>
             </tr>
             </#list>
-        </table>
         </#list>
+        </table>
     </div>
 </div>
 

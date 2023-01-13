@@ -10,12 +10,14 @@
             </#list>
         </ul>
 
-        <#list failedRuns as run>
-        <a id="failed-run-${run.runId}"></a>
-        <div class="section-heading">
-            <a href="https://github.com/keycloak/keycloak/actions/runs/${run.runId}">${run.date?date} - ${run.runId}</a>
-        </div>
         <table>
+            <#list failedRuns as run>
+            <tr>
+                <th>
+                    <a id="failed-run-${run.runId}"></a>
+                    <a href="https://github.com/keycloak/keycloak/actions/runs/${run.runId}">${run.date?date} - ${run.runId}</a>
+                </th>
+            </tr>
             <#list run.failedJobs as job>
             <tr>
                 <td class="size20">${job.name}</td>
@@ -34,7 +36,7 @@
                 </#if>
             </tr>
             </#list>
-        </table>
         </#list>
+        </table>
     </div>
 </div>
