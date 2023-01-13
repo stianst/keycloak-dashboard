@@ -1,4 +1,4 @@
-<a id="failed-runs"></a>
+<a id="resolved-runs"></a>
 <div class="modal">
     <div class="header">
         Resolved runs
@@ -10,16 +10,18 @@
             </#list>
         </ul>
 
-        <#list resolvedRuns as run>
-        <a id="failed-run-${run.runId}"></a>
-        <div class="section-heading">
-            <a href="https://github.com/keycloak/keycloak/actions/runs/${run.runId}">${run.date?date} - ${run.runId}</a>
-        </div>
         <table>
+            <#list resolvedRuns as run>
+            <tr>
+                <th colspan="3">
+                    <a id="resolved-run-${run.runId}"></a>
+                    <a href="https://github.com/keycloak/keycloak/actions/runs/${run.runId}">${run.date?date} - ${run.runId}</a>
+                </th>
+            </tr>
             <#list run.failedJobs as job>
             <tr>
                 <td class="size20">${job.name}</td>
-                <td class="size10">${job.conclusion}<td>
+                <td class="size10">${job.conclusion}</td>
                 <#if job.errorLog?has_content>
                 <td class="failures">
                     <div class="failures">
@@ -34,7 +36,7 @@
                 </#if>
             </tr>
             </#list>
-        </table>
         </#list>
+        </table>
     </div>
 </div>

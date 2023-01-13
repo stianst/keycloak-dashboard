@@ -13,7 +13,7 @@
         <table>
             <#list failedRuns as run>
             <tr>
-                <th>
+                <th colspan="3">
                     <a id="failed-run-${run.runId}"></a>
                     <a href="https://github.com/keycloak/keycloak/actions/runs/${run.runId}">${run.date?date} - ${run.runId}</a>
                 </th>
@@ -21,7 +21,7 @@
             <#list run.failedJobs as job>
             <tr>
                 <td class="size20">${job.name}</td>
-                <td class="size10">${job.conclusion}<td>
+                <td class="size10">${job.conclusion}</td>
                 <#if job.errorLog?has_content>
                 <td class="failures">
                     <div class="failures">
