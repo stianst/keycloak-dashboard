@@ -5,11 +5,6 @@
     </div>
     <div class="body">
         <table>
-            <tr>
-                <th>Test</th>
-                <th>Count</th>
-                <th>Jobs</th>
-            </tr>
             <#list failedTests?keys as test>
             <tr>
                 <td>${test}</a></td>

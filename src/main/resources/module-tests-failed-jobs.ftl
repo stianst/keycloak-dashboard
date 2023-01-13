@@ -11,7 +11,7 @@
         </ul>
 
         <#list failedJobs?keys as jobName>
-        <a id="failed-job-${failedJobs[jobName][0].anchor}">
+        <a id="failed-job-${failedJobs[jobName][0].anchor}"></a>
         <div class="section-heading">
             ${jobName}
         </div>
