@@ -1,5 +1,5 @@
 <#import "template.ftl" as template>
 
 <@template.page title="PRs">
-    <#include "module-prs.ftl">
+    <div class="modal-wrapper"><#include "module-prs.ftl"></div>
 </@template.page>

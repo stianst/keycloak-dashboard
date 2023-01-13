@@ -1,7 +1,7 @@
 <#import "template.ftl" as template>
 
 <@template.page title="Bugs">
-    <#include "module-bugs.ftl">
-    <#include "module-bugs-teams.ftl">
-    <#include "module-bugs-areas.ftl">
+    <div class="modal-wrapper"><#include "module-bugs.ftl"></div>
+    <div class="modal-wrapper"><#include "module-bugs-teams.ftl"></div>
+    <div class="modal-wrapper"><#include "module-bugs-areas.ftl"></div>
 </@template.page>
