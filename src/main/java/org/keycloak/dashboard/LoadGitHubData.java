@@ -5,17 +5,16 @@ import org.keycloak.dashboard.gh.GitHubLoader;
 import org.keycloak.dashboard.rep.GitHubData;
 
 import java.io.File;
-import java.io.IOException;
 import java.util.Date;
 
 public class LoadGitHubData {
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws Exception {
         LoadGitHubData data = new LoadGitHubData();
         data.createData();
     }
 
-    public void createData() throws IOException {
+    public void createData() throws Exception {
         GitHubLoader gitHubLoader = new GitHubLoader();
         ObjectMapper objectMapper = new ObjectMapper();
         File dataFile = new File("data.json");

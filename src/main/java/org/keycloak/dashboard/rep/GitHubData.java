@@ -15,6 +15,8 @@ public class GitHubData {
     public List<GitHubIssue> issues;
     @JsonProperty
     public List<GitHubIssue> prs;
+    @JsonProperty
+    public List<PullRequestWait> pullRequestWaits;
 
     public int issuesWithPr;
 
@@ -56,5 +58,13 @@ public class GitHubData {
 
     public void setIssuesWithPr(int issuesWithPr) {
         this.issuesWithPr = issuesWithPr;
+    }
+
+    public List<PullRequestWait> getPullRequestWaits() {
+        return pullRequestWaits;
+    }
+
+    public void setPullRequestWaits(List<PullRequestWait> pullRequestWaits) {
+        this.pullRequestWaits = pullRequestWaits;
     }
 }

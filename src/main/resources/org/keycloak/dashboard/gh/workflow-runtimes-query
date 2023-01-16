@@ -1,0 +1,37 @@
+{
+  search(query: "repo:keycloak/keycloak is:merged is:pr is:pr is:closed closed:>=$$FROM_DATE$$", type: ISSUE, first: $$FIRST$$) {
+    edges {
+      node {
+        ... on PullRequest {
+          commits(last: 1) {
+            edges {
+              node {
+                pullRequest {
+                  number,
+                  title,
+                  mergedAt,
+                  commits(last: 1) {
+                    edges {
+                      node {
+                        commit {
+                          checkSuites(first: 10) {
+                            edges {
+                              node {
+                                createdAt
+                                updatedAt
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -30,8 +30,6 @@ public class LogFailedParser {
 
     final Pattern TEST_CASE_PATTERN = Pattern.compile("([\\w]*\\.[\\w]*)");
 
-    final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'");
-
     static final Set<String> IGNORED_JOBS = new HashSet<>();
     static {
         IGNORED_JOBS.add("Set check conclusion");
@@ -184,7 +182,7 @@ public class LogFailedParser {
         List<FailedJob> jobs = new LinkedList<>();
 
         String jsonDate = br.readLine().substring(2);
-        Date date = DATE_FORMAT.parse(jsonDate);
+        Date date = DateUtil.fromJson(jsonDate);
         failedRun.setDate(date);
 
         for (String l = br.readLine(); l != null; l = br.readLine()) {

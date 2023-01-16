@@ -18,26 +18,36 @@ public class GitHubLoader {
 
     private GitHubIssuesLoader issuesLoader;
 
+    private WorkflowRuntimeLoader workflowRuntimeLoader;
+
     public GitHubLoader() throws IOException {
         gitHub = GitHubBuilder.fromEnvironment().build();
         issuesLoader = new GitHubIssuesLoader(gitHub);
+        workflowRuntimeLoader = new WorkflowRuntimeLoader();
     }
 
-    public GitHubData load() throws IOException {
+    public GitHubData load() throws Exception {
         GitHubData data = new GitHubData();
         data.setAreas(queryAreas());
         data.setIssues(loadIssues());
         data.setPrs(loadPRs());
         data.setIssuesWithPr(queryIssuesWithPr());
+        data.setPullRequestWaits(workflowRuntimeLoader.load());
         return data;
     }
 
-
-    public GitHubData update(GitHubData data) throws IOException {
+    public GitHubData update(GitHubData data) throws Exception {
         data.setAreas(queryAreas());
         data.setIssues(updateIssues(data.getIssues()));
         data.setPrs(updatePRs(data.getPrs()));
         data.setIssuesWithPr(queryIssuesWithPr());
+
+        if (data.getPullRequestWaits() == null || data.getPullRequestWaits().isEmpty()) {
+            data.setPullRequestWaits(workflowRuntimeLoader.load());
+        } else {
+            data.setPullRequestWaits(workflowRuntimeLoader.update(data.getPullRequestWaits()));
+        }
+
         return data;
     }
 
@@ -80,4 +90,7 @@ public class GitHubLoader {
         System.out.println(".");
         return totalCount;
     }
+
+
+
 }
