@@ -44,28 +44,43 @@ public class Bugs {
         teamStats = convertToTeamStats(issues, teams);
 
         stats = new LinkedList<>();
-        stats.add(new BugStat("With PR", data.getIssuesWithPr(), Config.BUG_OPEN_WARN, "is:open label:kind/bug linked:pr"));
-        stats.add(new BugStat("Open", open, 10, "is:open label:kind/bug -label:status/triage"));
-        stats.add(new BugStat("Priority", priority, Config.PR_PRIORITY_WARN, "is:open label:kind/bug label:priority/important,priority/critical"));
+
+        stats.add(new BugStat("With PR", data.getIssuesWithPr(), Config.BUG_PR_WARN, "is:open label:kind/bug linked:pr"));
+
+        stats.add(new BugStat("Total", open, Config.BUG_OPEN_WARN, "is:open label:kind/bug -label:status/triage"));
+
+        stats.add(new BugStat("Priority", priority, Config.BUG_PRIORITY_WARN, "is:open label:kind/bug label:priority/important,priority/critical"));
+
         stats.add(new BugStat("Non-triaged", nonTriaged, Config.BUG_TRIAGE_WARN, "is:open label:kind/bug label:status/triage"));
+
         stats.add(new BugStat("Missing area", missingAreaLabel, Config.BUG_AREA_MISSING_WARN, "is:open label:kind/bug " + data.getAreas().stream().map(s -> "-label:" + s).collect(Collectors.joining(" "))));
+
         stats.add(new BugStat("Old without comments", oldWithoutComments, Config.BUG_OLD_NO_COMMENT_WARN, "is:issue is:open label:kind/bug comments:0 updated:<=" + DateUtil.MINUS_6_MONTHS_STRING));
 
-        stats.add(new BugStat("Created last 7 days", createdLast7Days, createdLast7Days > closedLast7Days ? 0 : 999, "label:kind/bug created:>=" + DateUtil.MINUS_7_DAYS_STRING));
-        stats.add(new BugStat("Closed last 7 days", closedLast7Days, createdLast7Days > closedLast7Days ? 0 : 999, "is:closed label:kind/bug closed:>=" + DateUtil.MINUS_7_DAYS_STRING));
+        stats.add(new BugStat("Last 7 days",
+                createdLast7Days, createdLast7Days > closedLast7Days ? 0 : 999, "label:kind/bug created:>=" + DateUtil.MINUS_7_DAYS_STRING,
+                closedLast7Days, createdLast7Days > closedLast7Days ? 0 : 999, "is:closed label:kind/bug closed:>=" + DateUtil.MINUS_7_DAYS_STRING));
 
-        stats.add(new BugStat("Created last 30 days", createdLast30Days, createdLast30Days > closedLast30Days ? 0 : 999, "label:kind/bug created:>=" + DateUtil.MINUS_30_DAYS_STRING));
-        stats.add(new BugStat("Closed last 30 days", closedLast30Days, createdLast30Days > closedLast30Days ? 0 : 999, "is:closed label:kind/bug closed:>=" + DateUtil.MINUS_30_DAYS_STRING));
+        stats.add(new BugStat("Last 30 days",
+                createdLast30Days, createdLast30Days > closedLast30Days ? 0 : 999, "label:kind/bug created:>=" + DateUtil.MINUS_30_DAYS_STRING,
+                closedLast30Days, createdLast30Days > closedLast30Days ? 0 : 999, "is:closed label:kind/bug closed:>=" + DateUtil.MINUS_30_DAYS_STRING));
 
-        stats.add(new BugStat("Created last 90 days", createdLast90Days, createdLast90Days > closedLast90Days ? 0 : 999, "label:kind/bug created:>=" + DateUtil.MINUS_90_DAYS_STRING));
-        stats.add(new BugStat("Closed last 90 days", closedLast90Days, createdLast90Days > closedLast90Days ? 0 : 999, "is:closed label:kind/bug closed:>=" + DateUtil.MINUS_90_DAYS_STRING));
+        stats.add(new BugStat("Last 90 days",
+                createdLast90Days, createdLast90Days > closedLast90Days ? 0 : 999, "label:kind/bug created:>=" + DateUtil.MINUS_90_DAYS_STRING,
+                closedLast90Days, createdLast90Days > closedLast90Days ? 0 : 999, "is:closed label:kind/bug closed:>=" + DateUtil.MINUS_90_DAYS_STRING));
 
-        issues.stream().filter(i -> i.isOpen() && i.getMilestone() != null)
-                .collect(Collectors.groupingBy(GitHubIssue::getMilestone, Collectors.counting())).entrySet().stream()
+        issues.stream().filter(i -> i.getMilestone() != null)
+                .collect(Collectors.groupingBy(GitHubIssue::getMilestone, Collectors.toList())).entrySet().stream()
                 .sorted(Map.Entry.comparingByKey())
-                .forEach((e) ->
-                        stats.add(new BugStat("Milestone: " + e.getKey(), e.getValue().intValue(), 10, "is:open label:kind/bug milestone:" + e.getKey()))
-                );
+                .forEach((e) -> {
+                            int openCount = (int) e.getValue().stream().filter(i -> i.isOpen()).count();
+                            int closedCount = (int) e.getValue().stream().filter(i -> !i.isOpen()).count();
+                            if (openCount > 0) {
+                                stats.add(new BugStat("Milestone: " + e.getKey(),
+                                        openCount, 10, "is:open label:kind/bug milestone:" + e.getKey(),
+                                        closedCount, -1, "is:closed label:kind/bug milestone:" + e.getKey()));
+                            }
+                        });
     }
 
     private List<BugAreaStat> convertToAreaStats(List<GitHubIssue> issues) {

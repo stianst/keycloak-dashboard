@@ -38,14 +38,17 @@ public class PR {
         stats.add(new PRStat("Older than 12 months", olderThan12Months, Config.PR_OLD_12_WARN, "is:open created:<=" + DateUtil.MINUS_12_MONTHS_STRING));
         stats.add(new PRStat("Older than 18 months", olderThan18Months, Config.PR_OLD_18_WARN, "is:open created:<=" + DateUtil.MINUS_18_MONTHS_STRING));
 
-        stats.add(new PRStat("Created last 7 days", createdLast7Days, createdLast7Days > closedLast7Days ? 0 : 999, "created:>=" + DateUtil.MINUS_7_DAYS_STRING));
-        stats.add(new PRStat("Closed last 7 days", closedLast7Days, createdLast7Days > closedLast7Days ? 0 : 999, "is:closed closed:>=" + DateUtil.MINUS_7_DAYS_STRING));
+        stats.add(new PRStat("Last 7 days",
+                createdLast7Days, createdLast7Days > closedLast7Days ? 0 : 999, "created:>=" + DateUtil.MINUS_7_DAYS_STRING,
+                closedLast7Days, createdLast7Days > closedLast7Days ? 0 : 999, "is:closed closed:>=" + DateUtil.MINUS_7_DAYS_STRING));
 
-        stats.add(new PRStat("Created last 30 days", createdLast30Days, createdLast30Days > closedLast30Days ? 0 : 999, "created:>=" + DateUtil.MINUS_30_DAYS_STRING));
-        stats.add(new PRStat("Closed last 30 days", closedLast30Days, createdLast30Days > closedLast30Days ? 0 : 999, "is:closed closed:>=" + DateUtil.MINUS_30_DAYS_STRING));
+        stats.add(new PRStat("Last 30 days",
+                createdLast30Days, createdLast30Days > closedLast30Days ? 0 : 999, "created:>=" + DateUtil.MINUS_30_DAYS_STRING,
+                closedLast30Days, createdLast30Days > closedLast30Days ? 0 : 999, "is:closed closed:>=" + DateUtil.MINUS_30_DAYS_STRING));
 
-        stats.add(new PRStat("Created last 90 days", createdLast90Days, createdLast90Days > closedLast90Days ? 0 : 999, "created:>=" + DateUtil.MINUS_90_DAYS_STRING));
-        stats.add(new PRStat("Closed last 90 days", closedLast90Days, createdLast90Days > closedLast90Days ? 0 : 999, "is:closed closed:>=" + DateUtil.MINUS_90_DAYS_STRING));
+        stats.add(new PRStat("Last 90 days",
+                createdLast90Days, createdLast90Days > closedLast90Days ? 0 : 999, "created:>=" + DateUtil.MINUS_90_DAYS_STRING,
+                closedLast90Days, createdLast90Days > closedLast90Days ? 0 : 999, "is:closed closed:>=" + DateUtil.MINUS_90_DAYS_STRING));
     }
 
     public List<PRStat> getStats() {
