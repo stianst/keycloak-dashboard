@@ -16,20 +16,38 @@ a:hover {
     text-decoration: underline;
 }
 
-div.modal-wrapper {
-    width: 25%;
+div.modal-float {
+    margin: 1% 0 1% 1%;
+    width: 23.75%;
     float: left;
-    min-width: 300px;
+    box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+}
+
+@media screen and (max-width: 1280px) {
+    div.modal-float {
+        width: 48.5%;
+    }
 }
 
 div.modal {
-    margin: 20px;
-    border-radius: 7px;
+    margin: 1%;
+    box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+}
+
+@media screen and (max-width: 800px) {
+    div.modal-float {
+        float: none;
+        width: 100%;
+        margin: 1% 0 0 0;
+    }
+
+    div.modal {
+        margin: 1% 0 0 0;
+    }
 }
 
 div.header {
     background-color: #333;
-    border-radius: 7px 7px 0 0;
     padding: 10px;
     font-size: 16px;
     font-weight: bold;
@@ -38,7 +56,6 @@ div.header {
 
 div.body {
     background-color: #fff;
-    border-radius: 0 0 7px 7px;
 }
 
 div.body table {
@@ -54,8 +71,13 @@ div.body tr:nth-child(even) {
     background: #f0f0f0;
 }
 
+div.body tr:nth-child(odd) {
+    background: #fff;
+}
+
 div.body table.nested tr {
     border-bottom: 0px;
+    background: none;
 }
 
 div.body tr:last-child {
@@ -119,9 +141,9 @@ div.body div.failures {
 
 ul.menu {
     background-color: #333;
-    border-radius: 7px 7px 0 0;
+    box-shadow: 0 2px 2px rgba(0,0,0,0.2);
     padding: 10px;
-    margin: 20px 20px 0 20px;
+    margin: 0;
     list-style-type: none;
 }
 
@@ -133,7 +155,6 @@ ul.menu a {
 
 ul.menu li {
     display: inline-block;
-    border-radius: 4px;
     padding: 10px;
     margin-right: 10px;
     text-align: center;
@@ -147,14 +168,13 @@ div.updated {
     right: 0;
     background-color: #888;
     padding: 5px;
-    border-radius: 7px 0 0 0;
 }
 
 ul.sub-menu {
     background-color: #444;
+    box-shadow: 0 2px 2px rgba(0,0,0,0.2);
     padding: 10px;
-    border-radius: 0 0 7px 7px;
-    margin: 0px 20px 20px 20px;
+    margin: 0px;
     list-style-type: none;
 }
 
@@ -167,7 +187,6 @@ ul.sub-menu a {
     padding: 5px 10px;
     font-weight: bold;
     font-size: 12px;
-    border-radius: 5px;
     line-height: 20px;
 }
 
@@ -202,170 +221,3 @@ td.warn {
     background-color: #e05d44;
 }
 
-
-/* old
-
-
-div.menu {
-    padding: 10px;
-}
-
-div.menu a {
-    padding: 5px 10px;
-    font-weight: bold;
-    font-size: 14px;
-    border-radius: 5px;
-}
-
-div.menu a:hover {
-    background-color: #e2e2e2;
-}
-
-div.sub-menu {
-    padding: 10px;
-}
-
-div.sub-menu a {
-    padding: 5px 10px;
-    font-weight: bold;
-    font-size: 12px;
-    border-radius: 5px;
-    line-height: 20px;
-}
-
-div.sub-menu a:hover {
-    background-color: #e2e2e2;
-}
-
-div.module {
-    background-color: #fff;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    float: left;
-    padding: 10px;
-    margin: 10px;
-}
-
-div.module table {
-    border-collapse: collapse;
-}
-
-div.module tr {
-    border-bottom: 1px solid #ddd;
-}
-
-div.module tr:last-child {
-    border-bottom: 0;
-}
-
-div.module th {
-    font-size: 14px;
-    text-align: left;
-    padding: 5px;
-}
-
-div.module a {
-    padding: 5px;
-    display: block;
-}
-
-div.module a:hover {
-    background-color: #eee;
-}
-
-td.success a, td.warn a {
-    color: #fff;
-}
-
-td.success {
-    background-color: #44cc11;
-}
-
-td.success a:hover {
-    background-color: #32940d;
-}
-
-td.warn {
-    background-color: #e05d44;
-}
-
-td.warn a:hover {
-    background-color: #9c4231;
-}
-
-td.count {
-    width: 25px;
-}
-
-td.count a {
-    text-align: center;
-}
-
-td.shield {
-    text-align: right;
-}
-
-td.shield a {
-    padding: 0;
-}
-
-
-div.tests {
-    background-color: #fff;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    margin: 10px;
-}
-
-div.tests th {
-    font-size: 14px;
-    text-align: left;
-    padding: 5px;
-}
-
-div.tests td {
-    padding: 5px;
-}
-
-div.tests table {
-    border-collapse: collapse;
-}
-
-div.tests tr {
-    border-bottom: 1px solid #ddd;
-}
-
-div.tests tr:last-child {
-    border-bottom: 0;
-}
-
-div.tests pre {
-    background-color: #f0f0f0;
-    overflow: auto;
-    padding: 10px;
-}
-
-div.tests a:hover {
-    background-color: #eee;
-}
-
-div.tests h1 {
-    background-color: #f00;
-    margin: 20px 10px 10px 10px;
-    padding: 10px;
-}
-
-.nowrap {
-    white-space:nowrap;
-}
-
-@media screen and (max-width: 800px) {
-    div.module {
-        float: none;
-    }
-
-    div.module table {
-        width: 100%;
-    }
-}
- */

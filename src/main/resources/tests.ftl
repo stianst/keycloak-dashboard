@@ -10,11 +10,11 @@
     <li><a href="#resolved-runs">Resolved runs</a></li>
 </ul>
 
-<#include "module-tests-recently-failed.ftl">
-<#include "module-tests-failed-tests.ftl">
-<#include "module-tests-flaky-tests.ftl">
-<#include "module-tests-failed-jobs.ftl">
-<#include "module-tests-failed-runs.ftl">
-<#include "module-tests-resolved-runs.ftl">
+<div class="modal"><#include "module-tests-recently-failed.ftl"></div>
+<div class="modal"><#include "module-tests-failed-tests.ftl"></div>
+<div class="modal"><#include "module-tests-flaky-tests.ftl"></div>
+<div class="modal"><#include "module-tests-failed-jobs.ftl"></div>
+<div class="modal"><#include "module-tests-failed-runs.ftl"></div>
+<div class="modal"><#include "module-tests-resolved-runs.ftl"></div>
 
 </@template.page>

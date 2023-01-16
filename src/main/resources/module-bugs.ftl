@@ -1,4 +1,3 @@
-<div class="modal">
     <div class="header">
         Bugs
     </div>
@@ -12,4 +11,3 @@
             </#list>
         </table>
     </div>
-</div>
