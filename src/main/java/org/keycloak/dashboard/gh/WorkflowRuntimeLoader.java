@@ -9,7 +9,6 @@ import org.keycloak.dashboard.util.DateUtil;
 
 import javax.json.JsonObject;
 import javax.json.JsonValue;
-import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.util.Comparator;
 import java.util.Date;
@@ -25,7 +24,6 @@ import static org.keycloak.dashboard.Config.EXPIRATION_OLD_ISSUES;
 
 public class WorkflowRuntimeLoader {
 
-    private static final String[] AUTH_ENV_KEYS = { "GITHUB_TOKEN", "GH_TOKEN", "GITHUB_OAUTH" };
 
     public List<PullRequestWait> update(List<PullRequestWait> currentList) throws Exception {
         currentList = currentList.stream().filter(c -> c.getMergedAt().after(EXPIRATION_OLD_ISSUES)).collect(Collectors.toList());
@@ -76,7 +74,7 @@ public class WorkflowRuntimeLoader {
         DynamicGraphQLClient client = new VertxDynamicGraphQLClientBuilder()
                 .vertx(vertx)
                 .url("https://api.github.com/graphql")
-                .header("Authorization", "bearer " + token()).build();
+                .header("Authorization", "bearer " + TokenUtil.token()).build();
         List<PullRequestWait> waitTimes = new LinkedList<>();
 
         try {
@@ -103,6 +101,7 @@ public class WorkflowRuntimeLoader {
                         .get("pullRequest").asJsonObject();
 
                 int number = pullRequest.getInt("number");
+                String author = pullRequest.getJsonObject("author").getString("login");
                 Date mergedAt = DateUtil.fromJson(pullRequest.getString("mergedAt"));
 
                 Iterator<JsonValue> checkSuiteItr = pullRequest.get("commits").asJsonObject()
@@ -133,7 +132,7 @@ public class WorkflowRuntimeLoader {
 
                 if (completedAt != null && startedAt != null) {
                     int minutes = (int) ((completedAt.getTime() - startedAt.getTime()) / (60 * 1000));
-                    waitTimes.add(new PullRequestWait(number, minutes, mergedAt, completedAt));
+                    waitTimes.add(new PullRequestWait(number, author, minutes, mergedAt, completedAt));
                 }
             }
         } finally {
@@ -142,33 +141,6 @@ public class WorkflowRuntimeLoader {
         }
 
         return waitTimes;
-    }
-
-    private static String token() throws IOException {
-        String token = tokenFromEnv();
-        if (token != null) {
-            return token;
-        }
-        token = tokenFromGhCli();
-        if (token != null) {
-            return token;
-        }
-
-        throw new RuntimeException("Failed to get token for GitHub APIs");
-    }
-
-    private static String tokenFromEnv() {
-        for (String k : AUTH_ENV_KEYS) {
-            String v = System.getenv(k);
-            if (v != null) {
-                return v;
-            }
-        }
-        return null;
-    }
-
-    private static String tokenFromGhCli() throws IOException {
-        return new String(Runtime.getRuntime().exec("gh auth token").getInputStream().readAllBytes(), StandardCharsets.UTF_8).trim();
     }
 
 }

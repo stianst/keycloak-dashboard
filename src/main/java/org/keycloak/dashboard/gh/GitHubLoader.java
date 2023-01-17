@@ -4,6 +4,7 @@ import org.keycloak.dashboard.Config;
 import org.keycloak.dashboard.rep.GitHubData;
 import org.keycloak.dashboard.rep.GitHubIssue;
 import org.kohsuke.github.GHLabel;
+import org.kohsuke.github.GHPerson;
 import org.kohsuke.github.GHRepository;
 import org.kohsuke.github.GitHub;
 import org.kohsuke.github.GitHubBuilder;
@@ -11,6 +12,7 @@ import org.kohsuke.github.GitHubBuilder;
 import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class GitHubLoader {
 
@@ -21,7 +23,7 @@ public class GitHubLoader {
     private WorkflowRuntimeLoader workflowRuntimeLoader;
 
     public GitHubLoader() throws IOException {
-        gitHub = GitHubBuilder.fromEnvironment().build();
+        gitHub = GitHubBuilder.fromEnvironment().withJwtToken(TokenUtil.token()).build();
         issuesLoader = new GitHubIssuesLoader(gitHub);
         workflowRuntimeLoader = new WorkflowRuntimeLoader();
     }
@@ -29,6 +31,7 @@ public class GitHubLoader {
     public GitHubData load() throws Exception {
         GitHubData data = new GitHubData();
         data.setAreas(queryAreas());
+        data.setKeycloakDevelopers(queryDevTeam());
         data.setIssues(loadIssues());
         data.setPrs(loadPRs());
         data.setIssuesWithPr(queryIssuesWithPr());
@@ -38,6 +41,7 @@ public class GitHubLoader {
 
     public GitHubData update(GitHubData data) throws Exception {
         data.setAreas(queryAreas());
+        data.setKeycloakDevelopers(queryDevTeam());
         data.setIssues(updateIssues(data.getIssues()));
         data.setPrs(updatePRs(data.getPrs()));
         data.setIssuesWithPr(queryIssuesWithPr());
@@ -62,6 +66,13 @@ public class GitHubLoader {
         }
         System.out.println(".");
         return areas;
+    }
+
+    private List<String> queryDevTeam() throws IOException {
+        System.out.print("Fetching kc-developers members: ");
+        List<String> members = gitHub.getOrganization("keycloak").getTeamByName("kc-developers").getMembers().stream().map(GHPerson::getLogin).collect(Collectors.toList());
+        System.out.println(".");
+        return members;
     }
 
     private List<GitHubIssue> loadIssues() throws IOException {

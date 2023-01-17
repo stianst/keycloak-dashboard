@@ -5,6 +5,7 @@ import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
 import freemarker.template.TemplateException;
 import org.keycloak.dashboard.beans.Bugs;
 import org.keycloak.dashboard.beans.PR;
+import org.keycloak.dashboard.beans.WorkflowWaitTimes;
 import org.keycloak.dashboard.beans.Workflows;
 import org.keycloak.dashboard.ci.FailedRun;
 import org.keycloak.dashboard.ci.LogFailedParser;
@@ -58,6 +59,7 @@ public class Dashboard {
         attributes.put("failedJobs", logFailedParser.getFailedJobs());
         attributes.put("failedTests", logFailedParser.getFailedTests());
         attributes.put("flakyTests", bugs.getFlakyTests());
+        attributes.put("workflowWaitTimes", new WorkflowWaitTimes(data).getWorkFlowWaitPerMonthList());
 
         File output = new File("docs/index.html");
         FreeMarker freeMarker = new FreeMarker(attributes);

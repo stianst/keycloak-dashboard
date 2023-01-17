@@ -12,9 +12,11 @@ public class DateUtil {
 
     private static final SimpleDateFormat JSON_DATE_FORMAT = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'");
 
-    private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd", Locale.ENGLISH);
+    private static final DateTimeFormatter DATE_STRING_FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd", Locale.ENGLISH);
 
-    private static final SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+    private static final SimpleDateFormat TO_MONTH_STRING_FORMATTER = new SimpleDateFormat("yyyy-MM", Locale.ENGLISH);
+
+    private static final SimpleDateFormat TO_DATE_STRING_FORMATTER = new SimpleDateFormat("yyyy-MM-dd");
 
     public static final java.util.Date MINUS_6_MONTHS = DateUtil.minusMonths(6);
     public static final java.util.Date MINUS_12_MONTHS = DateUtil.minusMonths(12);
@@ -47,19 +49,23 @@ public class DateUtil {
     }
 
     public static String minusMonthsString(int months) {
-        return formatter.format(LocalDateTime.now().minusMonths(months));
+        return DATE_STRING_FORMATTER.format(LocalDateTime.now().minusMonths(months));
     }
 
     public static String minusDaysString(int days) {
-        return formatter.format(LocalDateTime.now().minusDays(days));
+        return DATE_STRING_FORMATTER.format(LocalDateTime.now().minusDays(days));
     }
 
     public static Date fromJson(String date) throws ParseException {
         return JSON_DATE_FORMAT.parse(date);
     }
 
+    public static String monthString(Date date) {
+        return TO_MONTH_STRING_FORMATTER.format(date);
+    }
+
     public static String toString(java.util.Date date) {
-        return dateFormat.format(date);
+        return TO_DATE_STRING_FORMATTER.format(date);
     }
 
 }

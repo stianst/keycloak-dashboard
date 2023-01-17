@@ -18,6 +18,9 @@ public class GitHubData {
     @JsonProperty
     public List<PullRequestWait> pullRequestWaits;
 
+    @JsonProperty
+    public List<String> keycloakDevelopers;
+
     public int issuesWithPr;
 
     public Date getUpdatedDate() {
@@ -66,5 +69,13 @@ public class GitHubData {
 
     public void setPullRequestWaits(List<PullRequestWait> pullRequestWaits) {
         this.pullRequestWaits = pullRequestWaits;
+    }
+
+    public List<String> getKeycloakDevelopers() {
+        return keycloakDevelopers;
+    }
+
+    public void setKeycloakDevelopers(List<String> keycloakDevelopers) {
+        this.keycloakDevelopers = keycloakDevelopers;
     }
 }

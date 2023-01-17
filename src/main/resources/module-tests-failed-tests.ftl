@@ -6,13 +6,13 @@
     <table>
         <tr>
             <th>Test</th>
-            <th>Count</th>
+            <th class="center">Count</th>
             <th>Failures</th>
         </tr>
         <#list failedTests?keys as test>
         <tr>
             <td>${test}</a></td>
-            <td class="size10">${failedTests[test]?size}</td>
+            <td class="size5 center">${failedTests[test]?size}</td>
             <td class="nopadding">
                 <table class="nested">
                     <#list failedTests[test] as job>

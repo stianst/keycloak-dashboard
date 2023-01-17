@@ -1,6 +1,5 @@
 package org.keycloak.dashboard.rep;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.Date;
@@ -19,11 +18,15 @@ public class PullRequestWait {
     @JsonProperty
     private Date completedAt;
 
+    @JsonProperty
+    private String author;
+
     public PullRequestWait() {
     }
 
-    public PullRequestWait(int number, int minutes, Date mergedAt, Date completedAt) {
+    public PullRequestWait(int number, String author, int minutes, Date mergedAt, Date completedAt) {
         this.number = number;
+        this.author = author;
         this.minutes = minutes;
         this.mergedAt = mergedAt;
         this.completedAt = completedAt;
@@ -59,5 +62,13 @@ public class PullRequestWait {
 
     public void setCompletedAt(Date completedAt) {
         this.completedAt = completedAt;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
     }
 }
