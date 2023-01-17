@@ -1,5 +1,5 @@
 {
-  search(query: "repo:keycloak/keycloak is:merged is:pr is:pr is:closed closed:>=$$FROM_DATE$$", type: ISSUE, first: $$FIRST$$) {
+  search(query: "repo:keycloak/keycloak is:pr is:merged merged:$$FROM_DATE$$", type: ISSUE, first: $$FIRST$$) {
     edges {
       node {
         ... on PullRequest {
@@ -8,7 +8,6 @@
               node {
                 pullRequest {
                   number,
-                  title,
                   mergedAt,
                   commits(last: 1) {
                     edges {

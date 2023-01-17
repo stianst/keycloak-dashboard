@@ -52,7 +52,7 @@ public class GitHubIssuesLoader {
     private List<GitHubIssue> updateIssues(boolean pr, List<GitHubIssue> issues, String query) throws IOException {
         java.util.Date mostRecent = issues.stream().map(GitHubIssue::getUpdatedAt).max(java.util.Date::compareTo).get();
 
-        System.out.print("Fetching updated " + (pr ? "prs" : "issues") + ": ");
+        System.out.print("Fetching updated " + (pr ? "prs" : "issues") + " since " + DateUtil.toString(mostRecent) + ": ");
         List<GitHubIssue> updates = query(query + " updated:>=" + DateUtil.toString(mostRecent));
         System.out.println();
 
