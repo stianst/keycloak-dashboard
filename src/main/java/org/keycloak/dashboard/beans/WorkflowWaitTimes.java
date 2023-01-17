@@ -1,11 +1,13 @@
 package org.keycloak.dashboard.beans;
 
+import org.keycloak.dashboard.Config;
 import org.keycloak.dashboard.rep.GitHubData;
 import org.keycloak.dashboard.rep.PullRequestWait;
 import org.keycloak.dashboard.util.DateUtil;
 
 import java.util.Comparator;
 import java.util.List;
+import java.util.OptionalDouble;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -60,32 +62,34 @@ public class WorkflowWaitTimes {
             return list.stream().max(Comparator.comparing(PullRequestWait::getMinutes)).get().getMinutes();
         }
 
-        public long getCountFast() {
-            return getFastStream().count();
+        public long getFastPercentage() {
+            return Math.round(100 * getFastStream().count() / getCount());
         }
 
-        public long getCountSlow() {
-            return getSlowStream().count();
+        public long getSlowPercentage() {
+            return Math.round(100 * getSlowStream().count() / getCount());
         }
 
-        public long getAverageSlow() {
-            return Math.round(getSlowStream().mapToDouble(PullRequestWait::getMinutes).average().getAsDouble());
+        public Long getAverageSlow() {
+            OptionalDouble average = getSlowStream().mapToDouble(PullRequestWait::getMinutes).average();
+            return average.isPresent() ? Math.round(average.getAsDouble()) : null;
         }
 
-        public long getAverageFast() {
-            return Math.round(getFastStream().mapToDouble(PullRequestWait::getMinutes).average().getAsDouble());
+        public Long getAverageFast() {
+            OptionalDouble average = getFastStream().mapToDouble(PullRequestWait::getMinutes).average();
+            return average.isPresent() ? Math.round(average.getAsDouble()) : null;
         }
 
         public List<PullRequestWait> getSlowest() {
-            return getSlowStream().sorted(Comparator.comparing(PullRequestWait::getMinutes).reversed()).limit(5).collect(Collectors.toList());
+            return getSlowStream().sorted(Comparator.comparing(PullRequestWait::getMinutes).reversed()).limit(Config.PR_WAIT_TIME_MAX_SLOW).collect(Collectors.toList());
         }
 
         private Stream<PullRequestWait> getFastStream() {
-            return list.stream().filter(p -> p.getMinutes() < 120);
+            return list.stream().filter(p -> p.getMinutes() < Config.PR_WAIT_TIME_FAST_TIME);
         }
 
         private Stream<PullRequestWait> getSlowStream() {
-            return list.stream().filter(p -> p.getMinutes() >= 120);
+            return list.stream().filter(p -> p.getMinutes() >= Config.PR_WAIT_TIME_FAST_TIME);
         }
 
     }
