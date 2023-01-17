@@ -62,34 +62,27 @@ public class WorkflowWaitTimes {
             return list.stream().max(Comparator.comparing(PullRequestWait::getMinutes)).get().getMinutes();
         }
 
-        public long getFastPercentage() {
-            return Math.round(100 * getFastStream().count() / getCount());
+        public long getPercentage60m() {
+            return Math.round(100 * list.stream().filter(p -> p.getMinutes() < 60).count() / getCount());
         }
 
-        public long getSlowPercentage() {
-            return Math.round(100 * getSlowStream().count() / getCount());
+        public long getPercentage90m() {
+            return Math.round(100 * list.stream().filter(p -> p.getMinutes() < 90).count() / getCount());
         }
 
-        public Long getAverageSlow() {
-            OptionalDouble average = getSlowStream().mapToDouble(PullRequestWait::getMinutes).average();
-            return average.isPresent() ? Math.round(average.getAsDouble()) : null;
+        public long getPercentage120m() {
+            return Math.round(100 * list.stream().filter(p -> p.getMinutes() < 120).count() / getCount());
         }
 
-        public Long getAverageFast() {
-            OptionalDouble average = getFastStream().mapToDouble(PullRequestWait::getMinutes).average();
-            return average.isPresent() ? Math.round(average.getAsDouble()) : null;
+        public long getPercentage180m() {
+            return Math.round(100 * list.stream().filter(p -> p.getMinutes() < 180).count() / getCount());
         }
 
         public List<PullRequestWait> getSlowest() {
-            return getSlowStream().sorted(Comparator.comparing(PullRequestWait::getMinutes).reversed()).limit(Config.PR_WAIT_TIME_MAX_SLOW).collect(Collectors.toList());
-        }
-
-        private Stream<PullRequestWait> getFastStream() {
-            return list.stream().filter(p -> p.getMinutes() < Config.PR_WAIT_TIME_FAST_TIME);
-        }
-
-        private Stream<PullRequestWait> getSlowStream() {
-            return list.stream().filter(p -> p.getMinutes() >= Config.PR_WAIT_TIME_FAST_TIME);
+            return list.stream()
+                    .sorted(Comparator.comparing(PullRequestWait::getMinutes).reversed())
+                    .limit(Config.PR_WAIT_TIME_MAX_SLOW)
+                    .collect(Collectors.toList());
         }
 
     }
