@@ -21,15 +21,19 @@ public class PullRequestWait {
     @JsonProperty
     private String author;
 
+    @JsonProperty
+    private String baseRef;
+
     public PullRequestWait() {
     }
 
-    public PullRequestWait(int number, String author, int minutes, Date mergedAt, Date completedAt) {
+    public PullRequestWait(int number, String author, int minutes, Date mergedAt, Date completedAt, String baseRef) {
         this.number = number;
         this.author = author;
         this.minutes = minutes;
         this.mergedAt = mergedAt;
         this.completedAt = completedAt;
+        this.baseRef = baseRef;
     }
 
     public int getNumber() {
@@ -70,5 +74,13 @@ public class PullRequestWait {
 
     public void setAuthor(String author) {
         this.author = author;
+    }
+
+    public String getBaseRef() {
+        return baseRef;
+    }
+
+    public void setBaseRef(String baseRef) {
+        this.baseRef = baseRef;
     }
 }

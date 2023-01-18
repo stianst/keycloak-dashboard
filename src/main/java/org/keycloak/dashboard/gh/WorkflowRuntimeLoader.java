@@ -87,36 +87,37 @@ public class WorkflowRuntimeLoader {
             JsonObject jsonObject = client.executeSync(query).getData();
 
             Iterator<JsonValue> itr = jsonObject
-                    .get("search").asJsonObject()
-                    .get("edges").asJsonArray()
+                    .getJsonObject("search")
+                    .getJsonArray("edges")
                     .iterator();
 
             while (itr.hasNext()) {
 
                 JsonObject pullRequest = itr.next().asJsonObject()
-                        .get("node").asJsonObject()
-                        .get("commits").asJsonObject()
-                        .get("edges").asJsonArray().get(0).asJsonObject()
-                        .get("node").asJsonObject()
-                        .get("pullRequest").asJsonObject();
+                        .getJsonObject("node")
+                        .getJsonObject("commits")
+                        .getJsonArray("edges").getJsonObject(0)
+                        .getJsonObject("node")
+                        .getJsonObject("pullRequest");
 
                 int number = pullRequest.getInt("number");
                 String author = pullRequest.getJsonObject("author").getString("login");
                 Date mergedAt = DateUtil.fromJson(pullRequest.getString("mergedAt"));
+                String baseRef = pullRequest.getString("baseRefName");
 
-                Iterator<JsonValue> checkSuiteItr = pullRequest.get("commits").asJsonObject()
-                        .get("edges").asJsonArray().get(0).asJsonObject()
-                        .get("node").asJsonObject()
-                        .get("commit").asJsonObject()
-                        .get("checkSuites").asJsonObject()
-                        .get("edges").asJsonArray().iterator();
+                Iterator<JsonValue> checkSuiteItr = pullRequest.getJsonObject("commits")
+                        .getJsonArray("edges").getJsonObject(0)
+                        .getJsonObject("node")
+                        .getJsonObject("commit")
+                        .getJsonObject("checkSuites")
+                        .getJsonArray("edges").iterator();
 
                 Date startedAt = null;
                 Date completedAt = null;
 
                 while (checkSuiteItr.hasNext()) {
                     JsonObject checkSuite = checkSuiteItr.next().asJsonObject()
-                            .get("node").asJsonObject();
+                            .getJsonObject("node");
 
                     Date createdAt = DateUtil.fromJson(checkSuite.getString("createdAt"));
                     Date updatedAt = DateUtil.fromJson(checkSuite.getString("updatedAt"));
@@ -132,7 +133,7 @@ public class WorkflowRuntimeLoader {
 
                 if (completedAt != null && startedAt != null) {
                     int minutes = (int) ((completedAt.getTime() - startedAt.getTime()) / (60 * 1000));
-                    waitTimes.add(new PullRequestWait(number, author, minutes, mergedAt, completedAt));
+                    waitTimes.add(new PullRequestWait(number, author, minutes, mergedAt, completedAt, baseRef));
                 }
             }
         } finally {

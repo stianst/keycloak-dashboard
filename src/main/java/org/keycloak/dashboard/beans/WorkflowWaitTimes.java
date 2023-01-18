@@ -7,9 +7,7 @@ import org.keycloak.dashboard.util.DateUtil;
 
 import java.util.Comparator;
 import java.util.List;
-import java.util.OptionalDouble;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class WorkflowWaitTimes {
 
@@ -21,10 +19,18 @@ public class WorkflowWaitTimes {
 
         workFlowWaitPerMonthList = data.getPullRequestWaits().stream()
                 .filter(p -> data.getKeycloakDevelopers().contains(p.getAuthor()))
+                .filter(p-> p.getBaseRef().equals("main"))
                 .collect(Collectors.groupingBy(p -> DateUtil.monthString(p.getCompletedAt())))
                 .entrySet().stream().map(e -> new WorkFlowWaitPerMonth(e.getKey(), e.getValue()))
                 .sorted(Comparator.comparing(WorkFlowWaitPerMonth::getMonth).reversed())
                 .collect(Collectors.toList());
+
+        List<PullRequestWait> last7days = data.getPullRequestWaits().stream()
+                .filter(p -> data.getKeycloakDevelopers().contains(p.getAuthor()))
+                .filter(p-> p.getBaseRef().equals("main"))
+                .filter(p -> DateUtil.MINUS_7_DAYS.before(p.getCompletedAt()))
+                .collect(Collectors.toList());
+        workFlowWaitPerMonthList.add(0, new WorkFlowWaitPerMonth("Last 7 days", last7days));
     }
 
     public List<WorkFlowWaitPerMonth> getWorkFlowWaitPerMonthList() {
