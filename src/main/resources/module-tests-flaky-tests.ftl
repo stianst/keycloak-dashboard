@@ -5,13 +5,17 @@
 <div class="body">
     <table>
         <tr>
-            <th>Issues</th>
-            <th>Comments</th>
+            <th>Package</th>
+            <th>Class</th>
+            <th>Method</th>
+            <th>Count</th>
         </tr>
         <#list flakyTests as flakyTest>
         <tr>
-            <td class="title"><a href="https://github.com/keycloak/keycloak/issues/${flakyTest.number?string.computer}">${flakyTest.title}</a></td>
-            <td class="count">${flakyTest.commentsCount}</td>
+            <td><a href="https://github.com/keycloak/keycloak/issues/${flakyTest.number?string.computer}">${flakyTest.package}</a></td>
+            <td><a href="https://github.com/keycloak/keycloak/issues/${flakyTest.number?string.computer}">${flakyTest.testClass}</a></td>
+            <td><a href="https://github.com/keycloak/keycloak/issues/${flakyTest.number?string.computer}">${flakyTest.testMethod}</a></td>
+            <td>${flakyTest.count}</td>
         </tr>
         </#list>
     </table>
