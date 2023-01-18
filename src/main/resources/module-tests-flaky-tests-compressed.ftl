@@ -6,7 +6,7 @@
     <table>
         <tr>
             <th>Test</th>
-            <th>Count</th>
+            <th class="center">Count</th>
         </tr>
         <#list flakyTests as flakyTest>
         <tr>
@@ -15,7 +15,7 @@
                     ${flakyTest.package}<br/>
                     ${flakyTest.testClass}#${flakyTest.testMethod}</a>
             </td>
-            <td>${flakyTest.count}</td>
+            <td class="center">${flakyTest.count}</td>
         </tr>
         </#list>
     </table>
