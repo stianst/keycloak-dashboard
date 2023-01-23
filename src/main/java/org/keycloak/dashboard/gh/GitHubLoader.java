@@ -70,7 +70,7 @@ public class GitHubLoader {
 
     private List<String> queryDevTeam() throws IOException {
         System.out.print("Fetching kc-developers members: ");
-        List<String> members = gitHub.getOrganization("keycloak").getTeamByName("kc-developers").getMembers().stream().map(GHPerson::getLogin).collect(Collectors.toList());
+        List<String> members = gitHub.getOrganization("keycloak").getTeam(5375977l).getMembers().stream().map(GHPerson::getLogin).collect(Collectors.toList());
         System.out.println(".");
         return members;
     }

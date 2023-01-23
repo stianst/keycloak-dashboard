@@ -7,7 +7,6 @@ import org.keycloak.dashboard.beans.Bugs;
 import org.keycloak.dashboard.beans.PR;
 import org.keycloak.dashboard.beans.WorkflowWaitTimes;
 import org.keycloak.dashboard.beans.Workflows;
-import org.keycloak.dashboard.ci.FailedRun;
 import org.keycloak.dashboard.ci.LogFailedParser;
 import org.keycloak.dashboard.rep.GitHubData;
 import org.keycloak.dashboard.rep.Teams;
@@ -17,7 +16,6 @@ import java.io.File;
 import java.io.IOException;
 import java.text.ParseException;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 /**
