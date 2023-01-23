@@ -41,7 +41,11 @@ public class GitHubLoader {
 
     public GitHubData update(GitHubData data) throws Exception {
         data.setAreas(queryAreas());
-        data.setKeycloakDevelopers(queryDevTeam());
+
+        List<String> devTeam = queryDevTeam();
+        if (devTeam != null && !devTeam.isEmpty()) {
+            data.setKeycloakDevelopers(devTeam);
+        }
         data.setIssues(updateIssues(data.getIssues()));
         data.setPrs(updatePRs(data.getPrs()));
         data.setIssuesWithPr(queryIssuesWithPr());
@@ -69,10 +73,15 @@ public class GitHubLoader {
     }
 
     private List<String> queryDevTeam() throws IOException {
-        System.out.print("Fetching kc-developers members: ");
-        List<String> members = gitHub.getOrganization("keycloak").getTeam(5375977l).getMembers().stream().map(GHPerson::getLogin).collect(Collectors.toList());
-        System.out.println(".");
-        return members;
+        try {
+            System.out.print("Fetching kc-developers members: ");
+            List<String> members = gitHub.getOrganization("keycloak").getTeamByName("kc-developers").getMembers().stream().map(GHPerson::getLogin).collect(Collectors.toList());
+            System.out.println(".");
+            return members;
+        } catch (IOException e) {
+            System.err.println("Failed to load kc-developers team");
+            return null;
+        }
     }
 
     private List<GitHubIssue> loadIssues() throws IOException {
