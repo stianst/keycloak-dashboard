@@ -12,8 +12,9 @@
         <tr>
             <td>
                 <a href="https://github.com/keycloak/keycloak/issues/${flakyTest.number?string.computer}">
-                    ${flakyTest.package}<br/>
-                    ${flakyTest.testClass}#${flakyTest.testMethod}</a>
+                    <i>${flakyTest.package}</i><br/>
+                    ${flakyTest.testClass}<br/>
+                    <b>${flakyTest.testMethod}</b></a>
             </td>
             <td class="center">${flakyTest.count}</td>
         </tr>

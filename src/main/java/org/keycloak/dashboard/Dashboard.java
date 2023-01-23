@@ -8,6 +8,7 @@ import org.keycloak.dashboard.beans.PR;
 import org.keycloak.dashboard.beans.WorkflowWaitTimes;
 import org.keycloak.dashboard.beans.Workflows;
 import org.keycloak.dashboard.ci.LogFailedParser;
+import org.keycloak.dashboard.rep.TeamMembers;
 import org.keycloak.dashboard.rep.GitHubData;
 import org.keycloak.dashboard.rep.Teams;
 import org.keycloak.dashboard.util.FreeMarker;
@@ -34,6 +35,7 @@ public class Dashboard {
 
         ObjectMapper yamlMapper = new ObjectMapper(new YAMLFactory());
         Teams teams = yamlMapper.readValue(new File("teams.yml"), Teams.class);
+        TeamMembers teamMembers = yamlMapper.readValue(new File("team-members.yml"), TeamMembers.class);
 
         Workflows workflows = new Workflows();
         PR pr = new PR(data);
@@ -57,7 +59,7 @@ public class Dashboard {
         attributes.put("failedJobs", logFailedParser.getFailedJobs());
         attributes.put("failedTests", logFailedParser.getFailedTests());
         attributes.put("flakyTests", bugs.getFlakyTests());
-        attributes.put("workflowWaitTimes", new WorkflowWaitTimes(data).getWorkFlowWaitPerMonthList());
+        attributes.put("workflowWaitTimes", new WorkflowWaitTimes(data, teamMembers).getWorkFlowWaitPerMonthList());
 
         File output = new File("docs/index.html");
         FreeMarker freeMarker = new FreeMarker(attributes);

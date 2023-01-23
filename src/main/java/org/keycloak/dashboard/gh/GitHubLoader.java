@@ -32,7 +32,10 @@ public class GitHubLoader {
     public GitHubData load() throws Exception {
         GitHubData data = new GitHubData();
         data.setAreas(queryAreas());
-        data.setKeycloakDevelopers(queryDevTeam());
+
+        // GitHub Action token doesn't have access to list team members, maintained manually in team-members.yml for now
+        // data.setKeycloakDevelopers(queryDevTeam());
+
         data.setIssues(loadIssues());
         data.setPrs(loadPRs());
         data.setIssuesWithPr(queryIssuesWithPr());
@@ -43,10 +46,9 @@ public class GitHubLoader {
     public GitHubData update(GitHubData data) throws Exception {
         data.setAreas(queryAreas());
 
-        List<String> devTeam = queryDevTeam();
-        if (devTeam != null && !devTeam.isEmpty()) {
-            data.setKeycloakDevelopers(devTeam);
-        }
+        // GitHub Action token doesn't have access to list team members, maintained manually in team-members.yml for now
+        // data.setKeycloakDevelopers(queryDevTeam());
+
         data.setIssues(updateIssues(data.getIssues()));
         data.setPrs(updatePRs(data.getPrs()));
         data.setIssuesWithPr(queryIssuesWithPr());
@@ -74,15 +76,10 @@ public class GitHubLoader {
     }
 
     private List<String> queryDevTeam() throws IOException {
-        try {
-            System.out.print("Fetching kc-developers members: ");
-            List<String> members = gitHub.getOrganization("keycloak").getTeamByName("kc-developers").getMembers().stream().map(GHPerson::getLogin).collect(Collectors.toList());
-            System.out.println(".");
-            return members;
-        } catch (GHException e) {
-            System.err.println("Failed to load kc-developers team");
-            return null;
-        }
+        System.out.print("Fetching kc-developers members: ");
+        List<String> members = gitHub.getOrganization("keycloak").getTeamByName("kc-developers").getMembers().stream().map(GHPerson::getLogin).collect(Collectors.toList());
+        System.out.println(".");
+        return members;
     }
 
     private List<GitHubIssue> loadIssues() throws IOException {
