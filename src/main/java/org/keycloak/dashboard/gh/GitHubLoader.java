@@ -3,6 +3,7 @@ package org.keycloak.dashboard.gh;
 import org.keycloak.dashboard.Config;
 import org.keycloak.dashboard.rep.GitHubData;
 import org.keycloak.dashboard.rep.GitHubIssue;
+import org.kohsuke.github.GHException;
 import org.kohsuke.github.GHLabel;
 import org.kohsuke.github.GHPerson;
 import org.kohsuke.github.GHRepository;
@@ -78,7 +79,7 @@ public class GitHubLoader {
             List<String> members = gitHub.getOrganization("keycloak").getTeamByName("kc-developers").getMembers().stream().map(GHPerson::getLogin).collect(Collectors.toList());
             System.out.println(".");
             return members;
-        } catch (IOException e) {
+        } catch (GHException e) {
             System.err.println("Failed to load kc-developers team");
             return null;
         }
