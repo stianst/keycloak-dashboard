@@ -4,19 +4,26 @@
 </div>
 <div class="body">
     <table>
-        <tr>
-            <th>Test</th>
-            <th class="center">Count</th>
-        </tr>
         <#list flakyTests as flakyTest>
         <tr>
-            <td>
-                <a href="https://github.com/keycloak/keycloak/issues/${flakyTest.number?string.computer}">
-                    <i>${flakyTest.package}</i><br/>
-                    ${flakyTest.testClass}<br/>
-                    <b>${flakyTest.testMethod}</b></a>
+            <td class="nopadding">
+                <table class="nested">
+                    <tr>
+                        <td>Created: ${flakyTest.createdAt?date}</td>
+                        <td>Updated: ${flakyTest.updatedAt?date}</td>
+                        <td>Count: ${flakyTest.count}</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <a href="https://github.com/keycloak/keycloak/issues/${flakyTest.number?string.computer}">
+                                ${flakyTest.package}<br/>
+                                ${flakyTest.testClass}<br/>
+                                <b>${flakyTest.testMethod}</b>
+                            </a>
+                        </td>
+                    </tr>
+                </table>
             </td>
-            <td class="center">${flakyTest.count}</td>
         </tr>
         </#list>
     </table>

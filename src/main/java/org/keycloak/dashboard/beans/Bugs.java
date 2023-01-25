@@ -38,7 +38,7 @@ public class Bugs {
         int createdLast90Days = (int) issues.stream().filter(i -> i.getCreatedAt().after(DateUtil.MINUS_90_DAYS)).count();
         int closedLast90Days = (int) issues.stream().filter(i -> i.getClosedAt() != null && i.getClosedAt().after(DateUtil.MINUS_90_DAYS)).count();
 
-        flakyTests = issues.stream().filter(i -> i.hasLabel("flaky-test") && i.isOpen()).map(f -> new FlakyTest(f)).collect(Collectors.toList());
+        flakyTests = issues.stream().filter(i -> i.hasLabel("flaky-test") && i.isOpen()).map(f -> new FlakyTest(f)).sorted(Comparator.comparing(FlakyTest::getUpdatedAt).reversed()).collect(Collectors.toList());
 
         areaStats = convertToAreaStats(issues);
         teamStats = convertToTeamStats(issues, teams);
