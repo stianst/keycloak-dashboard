@@ -2,6 +2,8 @@ package org.keycloak.dashboard.beans;
 
 import org.keycloak.dashboard.rep.GitHubIssue;
 
+import java.util.Date;
+
 public class FlakyTest {
 
     private GitHubIssue issue;
@@ -36,5 +38,14 @@ public class FlakyTest {
     public int getNumber() {
         return issue.getNumber();
     }
+
+    public Date getCreatedAt() {
+        return issue.createdAt;
+    }
+
+    public Date getUpdatedAt() {
+        return issue.getUpdatedAt();
+    }
+
 
 }
