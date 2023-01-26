@@ -89,6 +89,7 @@ public class WorkflowWaitTimes {
 
         public List<PullRequestWait> getSlowest() {
             return list.stream()
+                    .filter(pullRequestWait -> pullRequestWait.getMinutes() >= Config.PR_WAIT_TIME_SLOW_THRESHOLD)
                     .sorted(Comparator.comparing(PullRequestWait::getMinutes).reversed())
                     .limit(Config.PR_WAIT_TIME_MAX_SLOW)
                     .collect(Collectors.toList());

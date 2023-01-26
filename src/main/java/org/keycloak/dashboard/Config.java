@@ -33,6 +33,7 @@ public class Config {
     public static final int BUG_TEAM_OPEN_WARN = 50;
     public static final int BUG_TEAM_TRIAGE_WARN = 50;
 
-    public static final int PR_WAIT_TIME_MAX_SLOW = 5;
+    public static final int PR_WAIT_TIME_MAX_SLOW = 50;
+    public static final int PR_WAIT_TIME_SLOW_THRESHOLD = 90;
 
 }
