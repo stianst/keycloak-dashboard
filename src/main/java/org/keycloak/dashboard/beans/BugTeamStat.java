@@ -33,7 +33,7 @@ public class BugTeamStat {
     }
 
     public String getTitle() {
-        return team;
+        return team.substring("team/".length());
     }
 
     public List<String> getAreas() {

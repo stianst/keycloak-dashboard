@@ -15,6 +15,7 @@ import org.keycloak.dashboard.util.FreeMarker;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.URL;
 import java.text.ParseException;
 import java.util.HashMap;
 import java.util.Map;
@@ -34,7 +35,7 @@ public class Dashboard {
         GitHubData data = objectMapper.readValue(new File("data.json"), GitHubData.class);
 
         ObjectMapper yamlMapper = new ObjectMapper(new YAMLFactory());
-        Teams teams = yamlMapper.readValue(new File("teams.yml"), Teams.class);
+        Teams teams = yamlMapper.readValue(new URL("https://raw.githubusercontent.com/keycloak/keycloak/main/.github/teams.yml"), Teams.class);
         TeamMembers teamMembers = yamlMapper.readValue(new File("team-members.yml"), TeamMembers.class);
 
         Workflows workflows = new Workflows();
