@@ -60,6 +60,7 @@ public class Dashboard {
         attributes.put("failedJobs", logFailedParser.getFailedJobs());
         attributes.put("failedTests", logFailedParser.getFailedTests());
         attributes.put("flakyTests", bugs.getFlakyTests());
+        attributes.put("nextRelease", bugs.getNextRelease());
         attributes.put("workflowWaitTimes", new WorkflowWaitTimes(data, teamMembers).getWorkFlowWaitPerMonthList());
 
         File output = new File("docs/index.html");

@@ -31,24 +31,24 @@ public class PR {
 
         stats = new LinkedList<>();
 
-        stats.add(new PRStat("Open", open, Config.PR_OPEN_WARN, "is:open"));
-        stats.add(new PRStat("Priority", priority, Config.PR_PRIORITY_WARN, "is:open label:priority/important,priority/critical"));
+        stats.add(new PRStat("Open", open, Config.PR_OPEN_WARN, Config.PR_OPEN_ERROR, "is:open"));
+        stats.add(new PRStat("Priority", priority, Config.PR_PRIORITY_WARN, Config.PR_PRIORITY_ERROR, "is:open label:priority/important,priority/critical"));
 
-        stats.add(new PRStat("Older than 6 months", olderThan6Months, Config.PR_OLD_6_WARN, "is:open created:<=" + DateUtil.MINUS_6_MONTHS_STRING));
-        stats.add(new PRStat("Older than 12 months", olderThan12Months, Config.PR_OLD_12_WARN, "is:open created:<=" + DateUtil.MINUS_12_MONTHS_STRING));
-        stats.add(new PRStat("Older than 18 months", olderThan18Months, Config.PR_OLD_18_WARN, "is:open created:<=" + DateUtil.MINUS_18_MONTHS_STRING));
+        stats.add(new PRStat("Older than 6 months", olderThan6Months, Config.PR_OLD_6_WARN, Config.PR_OLD_6_ERROR, "is:open created:<=" + DateUtil.MINUS_6_MONTHS_STRING));
+        stats.add(new PRStat("Older than 12 months", olderThan12Months, Config.PR_OLD_12_WARN, Config.PR_OLD_12_ERROR, "is:open created:<=" + DateUtil.MINUS_12_MONTHS_STRING));
+        stats.add(new PRStat("Older than 18 months", olderThan18Months, Config.PR_OLD_18_WARN, Config.PR_OLD_18_ERROR, "is:open created:<=" + DateUtil.MINUS_18_MONTHS_STRING));
 
         stats.add(new PRStat("Last 7 days",
-                createdLast7Days, createdLast7Days > closedLast7Days ? 0 : 999, "created:>=" + DateUtil.MINUS_7_DAYS_STRING,
-                closedLast7Days, createdLast7Days > closedLast7Days ? 0 : 999, "is:closed closed:>=" + DateUtil.MINUS_7_DAYS_STRING));
+                createdLast7Days, 0, createdLast7Days > closedLast7Days ? 1 : 999, "created:>=" + DateUtil.MINUS_7_DAYS_STRING,
+                closedLast7Days, 0, createdLast7Days > closedLast7Days ? 1 : 999, "is:closed closed:>=" + DateUtil.MINUS_7_DAYS_STRING));
 
         stats.add(new PRStat("Last 30 days",
-                createdLast30Days, createdLast30Days > closedLast30Days ? 0 : 999, "created:>=" + DateUtil.MINUS_30_DAYS_STRING,
-                closedLast30Days, createdLast30Days > closedLast30Days ? 0 : 999, "is:closed closed:>=" + DateUtil.MINUS_30_DAYS_STRING));
+                createdLast30Days, 0, createdLast30Days > closedLast30Days ? 1 : 999, "created:>=" + DateUtil.MINUS_30_DAYS_STRING,
+                closedLast30Days, 0, createdLast30Days > closedLast30Days ? 1 : 999, "is:closed closed:>=" + DateUtil.MINUS_30_DAYS_STRING));
 
         stats.add(new PRStat("Last 90 days",
-                createdLast90Days, createdLast90Days > closedLast90Days ? 0 : 999, "created:>=" + DateUtil.MINUS_90_DAYS_STRING,
-                closedLast90Days, createdLast90Days > closedLast90Days ? 0 : 999, "is:closed closed:>=" + DateUtil.MINUS_90_DAYS_STRING));
+                createdLast90Days, 0, createdLast90Days > closedLast90Days ? 1 : 999, "created:>=" + DateUtil.MINUS_90_DAYS_STRING,
+                closedLast90Days, 0, createdLast90Days > closedLast90Days ? 1 : 999, "is:closed closed:>=" + DateUtil.MINUS_90_DAYS_STRING));
     }
 
     public List<PRStat> getStats() {

@@ -1,6 +1,7 @@
 package org.keycloak.dashboard.beans;
 
 import org.keycloak.dashboard.Config;
+import org.keycloak.dashboard.util.Css;
 import org.keycloak.dashboard.util.GHQuery;
 
 import java.util.HashSet;
@@ -12,15 +13,19 @@ public class BugTeamStat {
 
     String team;
     List<String> areas;
+    Set<Integer> nextRelease = new HashSet<>();
     Set<Integer> open = new HashSet<>();
     Set<Integer> triage = new HashSet<>();
+    Set<Integer> backlog = new HashSet<>();
+    Set<Integer> backlogTriage = new HashSet<>();
 
     String ghLink;
+    String ghNextReleaseLink;
     String ghOpenLink;
 
     String ghTriageLink;
 
-    public BugTeamStat(String team, List<String> areas) {
+    public BugTeamStat(String team, List<String> areas, String nextRelease) {
         this.team = team;
         this.areas = areas;
 
@@ -28,6 +33,7 @@ public class BugTeamStat {
         String areaLabels = areas.stream().collect(Collectors.joining(","));
 
         ghLink = link + "?q=" + GHQuery.encode("is:issue is:open label:kind/bug label:" + areaLabels);
+        ghNextReleaseLink = link + "?q=" + GHQuery.encode("is:issue is:open label:kind/bug milestone:" + nextRelease + " label:" + areaLabels);
         ghOpenLink = link + "?q=" + GHQuery.encode("is:issue is:open label:kind/bug -label:status/triage label:" + areaLabels);
         ghTriageLink = link + "?q=" + GHQuery.encode("is:issue is:open label:kind/bug label:status/triage label:" + areaLabels);
     }
@@ -44,12 +50,24 @@ public class BugTeamStat {
         return open.size() + triage.size();
     }
 
+    public int getNextRelease() {
+        return nextRelease.size();
+    }
+
     public int getOpen() {
         return open.size();
     }
 
     public int getTriage() {
         return triage.size();
+    }
+
+    public int getBacklog() {
+        return backlog.size();
+    }
+
+    public int getBacklogTriage() {
+        return backlogTriage.size();
     }
 
     public String getGhLink() {
@@ -60,15 +78,28 @@ public class BugTeamStat {
         return ghOpenLink;
     }
 
+    public String getGhNextReleaseLink() {
+        return ghNextReleaseLink;
+    }
+
     public String getGhTriageLink() {
         return ghTriageLink;
     }
 
+    public String getNextCssClasses() {
+        return Css.getCountClass(nextRelease.size(), Config.BUG_TEAM_NEXT_WARN, Config.BUG_TEAM_NEXT_ERROR);
+    }
     public String getOpenCssClasses() {
-        return open.size() < Config.BUG_TEAM_OPEN_WARN ? "success" : "warn";
+        return Css.getCountClass(open.size(), Config.BUG_TEAM_OPEN_WARN, Config.BUG_TEAM_OPEN_ERROR);
     }
 
     public String getTriageCssClasses() {
-        return triage.size() < Config.BUG_TEAM_TRIAGE_WARN ? "success" : "warn";
+        return Css.getCountClass(triage.size(), Config.BUG_TEAM_TRIAGE_WARN, Config.BUG_TEAM_TRIAGE_ERROR);
+    }
+    public String getBacklogTriageCssClasses() {
+        return Css.getCountClass(backlogTriage.size(), Config.BUG_TEAM_BACKLOG_TRIAGE_WARN, Config.BUG_TEAM_BACKLOG_TRIAGE_ERROR);
+    }
+    public String getBacklogCssClasses() {
+        return Css.getCountClass(backlog.size(), Config.BUG_TEAM_BACKLOG_WARN, Config.BUG_TEAM_BACKLOG_ERROR);
     }
 }

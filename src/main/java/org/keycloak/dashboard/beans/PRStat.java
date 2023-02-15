@@ -1,5 +1,7 @@
 package org.keycloak.dashboard.beans;
 
+import org.keycloak.dashboard.Config;
+import org.keycloak.dashboard.util.Css;
 import org.keycloak.dashboard.util.GHQuery;
 
 public class PRStat {
@@ -7,26 +9,31 @@ public class PRStat {
     private String title;
     private int openCount;
     private int openWarnCount;
+    private int openErrorCount;
     private String openGhLink;
 
     private Integer closedCount;
     private Integer closedWarnCount;
+    private int closedErrorCount;
     private String closedGhLink;
 
-    public PRStat(String title, int openCount, int openWarnCount, String openQuery) {
+    public PRStat(String title, int openCount, int openWarnCount, int openErrorCount, String openQuery) {
         this.title = title;
         this.openCount = openCount;
         this.openWarnCount = openWarnCount;
+        this.openErrorCount = openErrorCount;
         this.openGhLink = getQueryGhLink(openQuery);
     }
 
-    public PRStat(String title, int openCount, int openWarnCount, String openQuery, int closedCount, int closedWarnCount, String closedQuery) {
+    public PRStat(String title, int openCount, int openWarnCount, int openErrorCount, String openQuery, int closedCount, int closedWarnCount, int closedErrorCount, String closedQuery) {
         this.title = title;
         this.openCount = openCount;
         this.openWarnCount = openWarnCount;
+        this.openErrorCount = openErrorCount;
         this.openGhLink = getQueryGhLink(openQuery);
         this.closedCount = closedCount;
         this.closedWarnCount = closedWarnCount;
+        this.closedErrorCount = closedErrorCount;
         this.closedGhLink = getQueryGhLink(closedQuery);
     }
 
@@ -56,17 +63,9 @@ public class PRStat {
     }
 
     public String getOpenCssClasses() {
-        if (openWarnCount >= 0) {
-            return openCount < openWarnCount ? "success" : "warn";
-        } else {
-            return "blank";
-        }
+        return Css.getCountClass(openCount, openWarnCount, openErrorCount);
     }
     public String getClosedCssClasses() {
-        if (closedWarnCount >= 0) {
-            return closedCount < closedWarnCount ? "success" : "warn";
-        } else {
-            return "blank";
-        }
+        return Css.getCountClass(closedCount, closedWarnCount, closedErrorCount);
     }
 }
