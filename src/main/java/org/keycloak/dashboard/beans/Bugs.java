@@ -42,7 +42,11 @@ public class Bugs {
         int createdLast90Days = (int) issues.stream().filter(i -> i.getCreatedAt().after(DateUtil.MINUS_90_DAYS)).count();
         int closedLast90Days = (int) issues.stream().filter(i -> i.getClosedAt() != null && i.getClosedAt().after(DateUtil.MINUS_90_DAYS)).count();
 
-        flakyTests = issues.stream().filter(i -> i.hasLabel("flaky-test") && i.isOpen()).map(f -> new FlakyTest(f)).sorted(Comparator.comparing(FlakyTest::getUpdatedAt).reversed()).collect(Collectors.toList());
+        flakyTests = issues.stream()
+                .filter(i -> i.hasLabel("flaky-test") && i.isOpen()).map(f -> new FlakyTest(f))
+                .filter(i -> !(i.getPackage().startsWith("org.keycloak.testsuite.model") && "Backlog".equals(i.getMilestone())))
+                .sorted(Comparator.comparing(FlakyTest::getUpdatedAt).reversed())
+                .collect(Collectors.toList());
 
         areaStats = convertToAreaStats(issues);
         teamStats = convertToTeamStats(issues, teams);
