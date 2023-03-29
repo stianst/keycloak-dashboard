@@ -24,6 +24,9 @@ public class BugTeamStat {
     String ghOpenLink;
 
     String ghTriageLink;
+    String ghBacklogLink;
+
+    String ghTriageBacklogLink;
 
     public BugTeamStat(String team, List<String> areas, String nextRelease) {
         this.team = team;
@@ -34,8 +37,10 @@ public class BugTeamStat {
 
         ghLink = link + "?q=" + GHQuery.encode("is:issue is:open label:kind/bug label:" + areaLabels);
         ghNextReleaseLink = link + "?q=" + GHQuery.encode("is:issue is:open label:kind/bug milestone:" + nextRelease + " label:" + areaLabels);
-        ghOpenLink = link + "?q=" + GHQuery.encode("is:issue is:open label:kind/bug -label:status/triage label:" + areaLabels);
-        ghTriageLink = link + "?q=" + GHQuery.encode("is:issue is:open label:kind/bug label:status/triage label:" + areaLabels);
+        ghOpenLink = link + "?q=" + GHQuery.encode("is:issue is:open label:kind/bug -label:status/triage no:milestone label:" + areaLabels);
+        ghTriageLink = link + "?q=" + GHQuery.encode("is:issue is:open label:kind/bug label:status/triage -milestone:Backlog label:" + areaLabels);
+        ghBacklogLink = link + "?q=" + GHQuery.encode("is:issue is:open label:kind/bug -label:status/triage milestone:Backlog label:" + areaLabels);
+        ghTriageBacklogLink = link + "?q=" + GHQuery.encode("is:issue is:open label:kind/bug label:status/triage milestone:Backlog label:" + areaLabels);
     }
 
     public String getTitle() {
@@ -76,6 +81,14 @@ public class BugTeamStat {
 
     public String getGhOpenLink() {
         return ghOpenLink;
+    }
+
+    public String getGhBacklogLink() {
+        return ghBacklogLink;
+    }
+
+    public String getGhTriageBacklogLink() {
+        return ghTriageBacklogLink;
     }
 
     public String getGhNextReleaseLink() {

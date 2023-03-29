@@ -17,8 +17,8 @@
             <td class="count ${bugTeamStat.nextCssClasses} size5 center"><a href="${bugTeamStat.ghNextReleaseLink}">${bugTeamStat.nextRelease}</a></td>
             <td class="count ${bugTeamStat.openCssClasses} size5 center"><a href="${bugTeamStat.ghOpenLink}">${bugTeamStat.open}</a></td>
             <td class="count ${bugTeamStat.triageCssClasses} size5 center"><a href="${bugTeamStat.ghTriageLink}">${bugTeamStat.triage}</a></td>
-            <td class="count ${bugTeamStat.backlogCssClasses} size5 center">${bugTeamStat.backlog}</td>
-            <td class="count ${bugTeamStat.backlogTriageCssClasses} size5 center">${bugTeamStat.backlogTriage}</td>
+            <td class="count ${bugTeamStat.backlogCssClasses} size5 center"><a href="${bugTeamStat.ghBacklogLink}">${bugTeamStat.backlog}</a></td>
+            <td class="count ${bugTeamStat.backlogTriageCssClasses} size5 center"><a href="${bugTeamStat.ghTriageBacklogLink}">${bugTeamStat.backlogTriage}</a></td>
         </tr>
         </#list>
     </table>

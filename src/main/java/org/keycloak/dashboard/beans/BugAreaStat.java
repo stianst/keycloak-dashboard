@@ -17,6 +17,8 @@ public class BugAreaStat {
     String ghNextReleaseLink;
 
     String ghTriageLink;
+    String ghBacklogLink;
+    String ghTriageBacklogLink;
 
     public BugAreaStat(String area, String nextRelease) {
         this.area = area;
@@ -30,8 +32,10 @@ public class BugAreaStat {
 
         ghLink = link + "?q=" + GHQuery.encode("is:issue is:open label:kind/bug label:" + area);
         ghNextReleaseLink = link + "?q=" + GHQuery.encode("is:issue is:open label:kind/bug label:" + area + " milestone:" + nextRelease);
-        ghOpenLink = link + "?q=" + GHQuery.encode("is:issue is:open label:kind/bug -label:status/triage label:" + area);
-        ghTriageLink = link + "?q=" + GHQuery.encode("is:issue is:open label:kind/bug label:status/triage label:" + area);
+        ghOpenLink = link + "?q=" + GHQuery.encode("is:issue is:open label:kind/bug -label:status/triage no:milestone label:" + area);
+        ghTriageLink = link + "?q=" + GHQuery.encode("is:issue is:open label:kind/bug label:status/triage -milestone:Backlog label:" + area);
+        ghBacklogLink = link + "?q=" + GHQuery.encode("is:issue is:open label:kind/bug -label:status/triage milestone:Backlog label:" + area);
+        ghTriageBacklogLink = link + "?q=" + GHQuery.encode("is:issue is:open label:kind/bug label:status/triage milestone:Backlog label:" + area);
     }
 
     public String getTitle() {
@@ -79,6 +83,14 @@ public class BugAreaStat {
 
     public String getGhTriageLink() {
         return ghTriageLink;
+    }
+
+    public String getGhBacklogLink() {
+        return ghBacklogLink;
+    }
+
+    public String getGhTriageBacklogLink() {
+        return ghTriageBacklogLink;
     }
 
     public String getNextCssClasses() {
