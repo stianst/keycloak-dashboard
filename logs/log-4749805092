@@ -1,0 +1,247 @@
+Build	Build Keycloak	2023-04-20T02:16:34.9402945Z Prepare all required actions
+Build	Build Keycloak	2023-04-20T02:16:34.9403321Z Getting action download info
+Build	Build Keycloak	2023-04-20T02:16:35.1025160Z Download action repository 'actions/setup-java@v3' (SHA:5ffc13f4174014e2d4d4572b3d74c3fa61aeb2c2)
+Build	Build Keycloak	2023-04-20T02:16:35.3942796Z Download action repository 'actions/upload-artifact@v3' (SHA:0b7f8abb1508181956e8e162db84b466c27e18ce)
+Build	Build Keycloak	2023-04-20T02:16:35.5950267Z ##[group]Run ./.github/actions/build-keycloak
+Build	Build Keycloak	2023-04-20T02:16:35.5950612Z with:
+Build	Build Keycloak	2023-04-20T02:16:35.5950845Z   upload-m2-repo: true
+Build	Build Keycloak	2023-04-20T02:16:35.5951190Z   upload-dist: false
+Build	Build Keycloak	2023-04-20T02:16:35.5951482Z   jdk-dist: temurin
+Build	Build Keycloak	2023-04-20T02:16:35.5951709Z   jdk-version: 17
+Build	Build Keycloak	2023-04-20T02:16:35.5951971Z env:
+Build	Build Keycloak	2023-04-20T02:16:35.5952236Z   DEFAULT_JDK_VERSION: 17
+Build	Build Keycloak	2023-04-20T02:16:35.5952660Z   DEFAULT_JDK_DIST: temurin
+Build	Build Keycloak	2023-04-20T02:16:35.5952983Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Build	Build Keycloak	2023-04-20T02:16:35.5953273Z ##[endgroup]
+Build	Build Keycloak	2023-04-20T02:16:35.6360353Z ##[group]Run actions/setup-java@v3
+Build	Build Keycloak	2023-04-20T02:16:35.6360610Z with:
+Build	Build Keycloak	2023-04-20T02:16:35.6360876Z   distribution: temurin
+Build	Build Keycloak	2023-04-20T02:16:35.6361103Z   java-version: 17
+Build	Build Keycloak	2023-04-20T02:16:35.6361321Z   java-package: jdk
+Build	Build Keycloak	2023-04-20T02:16:35.6361525Z   check-latest: false
+Build	Build Keycloak	2023-04-20T02:16:35.6361737Z   server-id: github
+Build	Build Keycloak	2023-04-20T02:16:35.6361965Z   server-username: GITHUB_ACTOR
+Build	Build Keycloak	2023-04-20T02:16:35.6362218Z   server-password: GITHUB_TOKEN
+Build	Build Keycloak	2023-04-20T02:16:35.6362461Z   overwrite-settings: true
+Build	Build Keycloak	2023-04-20T02:16:35.6362689Z   job-status: success
+Build	Build Keycloak	2023-04-20T02:16:35.6363056Z   token: ***
+Build	Build Keycloak	2023-04-20T02:16:35.6363245Z env:
+Build	Build Keycloak	2023-04-20T02:16:35.6363449Z   DEFAULT_JDK_VERSION: 17
+Build	Build Keycloak	2023-04-20T02:16:35.6363665Z   DEFAULT_JDK_DIST: temurin
+Build	Build Keycloak	2023-04-20T02:16:35.6363901Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Build	Build Keycloak	2023-04-20T02:16:35.6364126Z ##[endgroup]
+Build	Build Keycloak	2023-04-20T02:16:35.8625402Z ##[group]Installed distributions
+Build	Build Keycloak	2023-04-20T02:16:35.8685064Z Resolved Java 17.0.6+10 from tool-cache
+Build	Build Keycloak	2023-04-20T02:16:35.8685491Z Setting Java 17.0.6+10 as the default
+Build	Build Keycloak	2023-04-20T02:16:35.8708683Z Creating toolchains.xml for JDK version 17 from temurin
+Build	Build Keycloak	2023-04-20T02:16:35.8812994Z Writing to /home/runner/.m2/toolchains.xml
+Build	Build Keycloak	2023-04-20T02:16:35.8814423Z 
+Build	Build Keycloak	2023-04-20T02:16:35.8814773Z Java configuration:
+Build	Build Keycloak	2023-04-20T02:16:35.8815005Z   Distribution: temurin
+Build	Build Keycloak	2023-04-20T02:16:35.8816847Z   Version: 17.0.6+10
+Build	Build Keycloak	2023-04-20T02:16:35.8817386Z   Path: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.6-10/x64
+Build	Build Keycloak	2023-04-20T02:16:35.8817950Z 
+Build	Build Keycloak	2023-04-20T02:16:35.8819019Z ##[endgroup]
+Build	Build Keycloak	2023-04-20T02:16:35.8844406Z Creating settings.xml with server-id: github
+Build	Build Keycloak	2023-04-20T02:16:35.8893803Z Writing to /home/runner/.m2/settings.xml
+Build	Build Keycloak	2023-04-20T02:16:35.9059595Z Prepare all required actions
+Build	Build Keycloak	2023-04-20T02:16:35.9059917Z Getting action download info
+Build	Build Keycloak	2023-04-20T02:16:36.0782280Z Download action repository 'actions/cache@v3' (SHA:88522ab9f39a2ea568f7027eddc7d8d8bc9d59c8)
+Build	Build Keycloak	2023-04-20T02:16:36.3619085Z ##[group]Run ./.github/actions/maven-cache
+Build	Build Keycloak	2023-04-20T02:16:36.3619347Z with:
+Build	Build Keycloak	2023-04-20T02:16:36.3619577Z   create-cache-if-it-doesnt-exist: true
+Build	Build Keycloak	2023-04-20T02:16:36.3619851Z env:
+Build	Build Keycloak	2023-04-20T02:16:36.3620060Z   DEFAULT_JDK_VERSION: 17
+Build	Build Keycloak	2023-04-20T02:16:36.3620285Z   DEFAULT_JDK_DIST: temurin
+Build	Build Keycloak	2023-04-20T02:16:36.3620507Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Build	Build Keycloak	2023-04-20T02:16:36.3620819Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.6-10/x64
+Build	Build Keycloak	2023-04-20T02:16:36.3621197Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.6-10/x64
+Build	Build Keycloak	2023-04-20T02:16:36.3621473Z ##[endgroup]
+Build	Build Keycloak	2023-04-20T02:16:36.3679335Z ##[group]Run echo "key=mvn-`date -u "+%Y-%U"`" >> $GITHUB_OUTPUT
+Build	Build Keycloak	2023-04-20T02:16:36.3679749Z [36;1mecho "key=mvn-`date -u "+%Y-%U"`" >> $GITHUB_OUTPUT[0m
+Build	Build Keycloak	2023-04-20T02:16:36.3740838Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Build	Build Keycloak	2023-04-20T02:16:36.3741134Z env:
+Build	Build Keycloak	2023-04-20T02:16:36.3741337Z   DEFAULT_JDK_VERSION: 17
+Build	Build Keycloak	2023-04-20T02:16:36.3741553Z   DEFAULT_JDK_DIST: temurin
+Build	Build Keycloak	2023-04-20T02:16:36.3741794Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Build	Build Keycloak	2023-04-20T02:16:36.3742157Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.6-10/x64
+Build	Build Keycloak	2023-04-20T02:16:36.3742844Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.6-10/x64
+Build	Build Keycloak	2023-04-20T02:16:36.3743136Z ##[endgroup]
+Build	Build Keycloak	2023-04-20T02:16:36.3961182Z ##[group]Run actions/cache@v3
+Build	Build Keycloak	2023-04-20T02:16:36.3961426Z with:
+Build	Build Keycloak	2023-04-20T02:16:36.3961662Z   path: ~/.m2/repository/*/*
+Build	Build Keycloak	!~/.m2/repository/org/keycloak
+Build	Build Keycloak	
+Build	Build Keycloak	2023-04-20T02:16:36.3961924Z   key: mvn-2023-16
+Build	Build Keycloak	2023-04-20T02:16:36.3962153Z   enableCrossOsArchive: false
+Build	Build Keycloak	2023-04-20T02:16:36.3962389Z   fail-on-cache-miss: false
+Build	Build Keycloak	2023-04-20T02:16:36.3962617Z   lookup-only: false
+Build	Build Keycloak	2023-04-20T02:16:36.3962818Z env:
+Build	Build Keycloak	2023-04-20T02:16:36.3962996Z   DEFAULT_JDK_VERSION: 17
+Build	Build Keycloak	2023-04-20T02:16:36.3963217Z   DEFAULT_JDK_DIST: temurin
+Build	Build Keycloak	2023-04-20T02:16:36.3963449Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Build	Build Keycloak	2023-04-20T02:16:36.3963746Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.6-10/x64
+Build	Build Keycloak	2023-04-20T02:16:36.3964112Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.6-10/x64
+Build	Build Keycloak	2023-04-20T02:16:36.3964403Z ##[endgroup]
+Build	Build Keycloak	2023-04-20T02:16:37.7160044Z Received 176160768 of 587105817 (30.0%), 168.0 MBs/sec
+Build	Build Keycloak	2023-04-20T02:16:38.7166612Z Received 373293056 of 587105817 (63.6%), 177.9 MBs/sec
+Build	Build Keycloak	2023-04-20T02:16:39.7274005Z Received 557842432 of 587105817 (95.0%), 176.9 MBs/sec
+Build	Build Keycloak	2023-04-20T02:16:39.8777509Z Received 587105817 of 587105817 (100.0%), 177.1 MBs/sec
+Build	Build Keycloak	2023-04-20T02:16:39.8780106Z Cache Size: ~560 MB (587105817 B)
+Build	Build Keycloak	2023-04-20T02:16:39.8824976Z [command]/usr/bin/tar -xf /home/runner/work/_temp/ac590841-1fbd-405b-918e-6a14af792a05/cache.tzst -P -C /home/runner/work/keycloak/keycloak --use-compress-program unzstd
+Build	Build Keycloak	2023-04-20T02:16:42.2026838Z Cache restored successfully
+Build	Build Keycloak	2023-04-20T02:16:42.3398317Z Cache restored from key: mvn-2023-16
+Build	Build Keycloak	2023-04-20T02:16:43.4302742Z ##[group]Run actions/cache@v3
+Build	Build Keycloak	2023-04-20T02:16:43.4302979Z with:
+Build	Build Keycloak	2023-04-20T02:16:43.4303210Z   path: .mvn/wrapper/maven-wrapper.jar
+Build	Build Keycloak	2023-04-20T02:16:43.4303636Z   key: Linux-maven-wrapper-ac67ab8387fc70aa9d192e2a54873acf916c4044422cb78548bcb1017b0c6dfe
+Build	Build Keycloak	2023-04-20T02:16:43.4304249Z   restore-keys: Linux-maven-wrapper-
+Build	Build Keycloak	2023-04-20T02:16:43.4304538Z   enableCrossOsArchive: false
+Build	Build Keycloak	2023-04-20T02:16:43.4304788Z   fail-on-cache-miss: false
+Build	Build Keycloak	2023-04-20T02:16:43.4305021Z   lookup-only: false
+Build	Build Keycloak	2023-04-20T02:16:43.4305217Z env:
+Build	Build Keycloak	2023-04-20T02:16:43.4305405Z   DEFAULT_JDK_VERSION: 17
+Build	Build Keycloak	2023-04-20T02:16:43.4305632Z   DEFAULT_JDK_DIST: temurin
+Build	Build Keycloak	2023-04-20T02:16:43.4305868Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Build	Build Keycloak	2023-04-20T02:16:43.4306181Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.6-10/x64
+Build	Build Keycloak	2023-04-20T02:16:43.4306554Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.6-10/x64
+Build	Build Keycloak	2023-04-20T02:16:43.4306841Z ##[endgroup]
+Build	Build Keycloak	2023-04-20T02:16:43.7697232Z Received 51804 of 51804 (100.0%), 1.5 MBs/sec
+Build	Build Keycloak	2023-04-20T02:16:43.7697787Z Cache Size: ~0 MB (51804 B)
+Build	Build Keycloak	2023-04-20T02:16:43.7724810Z [command]/usr/bin/tar -xf /home/runner/work/_temp/5f5ef427-26cd-4641-a6aa-32ea4bf2debd/cache.tzst -P -C /home/runner/work/keycloak/keycloak --use-compress-program unzstd
+Build	Build Keycloak	2023-04-20T02:16:43.7784078Z Cache restored successfully
+Build	Build Keycloak	2023-04-20T02:16:43.7891787Z Cache restored from key: Linux-maven-wrapper-ac67ab8387fc70aa9d192e2a54873acf916c4044422cb78548bcb1017b0c6dfe
+Build	Build Keycloak	2023-04-20T02:16:43.7982070Z Prepare all required actions
+Build	Build Keycloak	2023-04-20T02:16:43.7982384Z Getting action download info
+Build	Build Keycloak	2023-04-20T02:16:43.9097828Z ##[group]Run ./.github/actions/phantomjs-cache
+Build	Build Keycloak	2023-04-20T02:16:43.9098146Z with:
+Build	Build Keycloak	2023-04-20T02:16:43.9098377Z   version: 2.1.1
+Build	Build Keycloak	2023-04-20T02:16:43.9098615Z env:
+Build	Build Keycloak	2023-04-20T02:16:43.9098849Z   DEFAULT_JDK_VERSION: 17
+Build	Build Keycloak	2023-04-20T02:16:43.9099119Z   DEFAULT_JDK_DIST: temurin
+Build	Build Keycloak	2023-04-20T02:16:43.9099400Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Build	Build Keycloak	2023-04-20T02:16:43.9099769Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.6-10/x64
+Build	Build Keycloak	2023-04-20T02:16:43.9100212Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.6-10/x64
+Build	Build Keycloak	2023-04-20T02:16:43.9100551Z ##[endgroup]
+Build	Build Keycloak	2023-04-20T02:16:43.9132194Z ##[group]Run actions/cache@v3
+Build	Build Keycloak	2023-04-20T02:16:43.9132497Z with:
+Build	Build Keycloak	2023-04-20T02:16:43.9132740Z   path: ~/.arquillian/drone
+Build	Build Keycloak	2023-04-20T02:16:43.9133262Z   key: phantomjs-2.1.1
+Build	Build Keycloak	2023-04-20T02:16:43.9133549Z   enableCrossOsArchive: false
+Build	Build Keycloak	2023-04-20T02:16:43.9133845Z   fail-on-cache-miss: false
+Build	Build Keycloak	2023-04-20T02:16:43.9134110Z   lookup-only: false
+Build	Build Keycloak	2023-04-20T02:16:43.9134348Z env:
+Build	Build Keycloak	2023-04-20T02:16:43.9134585Z   DEFAULT_JDK_VERSION: 17
+Build	Build Keycloak	2023-04-20T02:16:43.9134854Z   DEFAULT_JDK_DIST: temurin
+Build	Build Keycloak	2023-04-20T02:16:43.9135137Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Build	Build Keycloak	2023-04-20T02:16:43.9135505Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.6-10/x64
+Build	Build Keycloak	2023-04-20T02:16:43.9135946Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.6-10/x64
+Build	Build Keycloak	2023-04-20T02:16:43.9136287Z ##[endgroup]
+Build	Build Keycloak	2023-04-20T02:16:44.4344435Z Received 23368338 of 23368338 (100.0%), 106.1 MBs/sec
+Build	Build Keycloak	2023-04-20T02:16:44.4346126Z Cache Size: ~22 MB (23368338 B)
+Build	Build Keycloak	2023-04-20T02:16:44.4373215Z [command]/usr/bin/tar -xf /home/runner/work/_temp/7bd5c1f3-5df4-4254-839a-dddbfc9827e6/cache.tzst -P -C /home/runner/work/keycloak/keycloak --use-compress-program unzstd
+Build	Build Keycloak	2023-04-20T02:16:44.4764746Z Cache restored successfully
+Build	Build Keycloak	2023-04-20T02:16:44.4900236Z Cache restored from key: phantomjs-2.1.1
+Build	Build Keycloak	2023-04-20T02:16:44.5018039Z Prepare all required actions
+Build	Build Keycloak	2023-04-20T02:16:44.5018384Z Getting action download info
+Build	Build Keycloak	2023-04-20T02:16:44.6175855Z ##[group]Run ./.github/actions/npm-cache
+Build	Build Keycloak	2023-04-20T02:16:44.6176129Z env:
+Build	Build Keycloak	2023-04-20T02:16:44.6176348Z   DEFAULT_JDK_VERSION: 17
+Build	Build Keycloak	2023-04-20T02:16:44.6176608Z   DEFAULT_JDK_DIST: temurin
+Build	Build Keycloak	2023-04-20T02:16:44.6176865Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Build	Build Keycloak	2023-04-20T02:16:44.6177196Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.6-10/x64
+Build	Build Keycloak	2023-04-20T02:16:44.6177592Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.6-10/x64
+Build	Build Keycloak	2023-04-20T02:16:44.6177895Z ##[endgroup]
+Build	Build Keycloak	2023-04-20T02:16:44.6195173Z ##[group]Run echo "key=npm-`date -u "+%Y-%U"`" >> $GITHUB_OUTPUT
+Build	Build Keycloak	2023-04-20T02:16:44.6195651Z [36;1mecho "key=npm-`date -u "+%Y-%U"`" >> $GITHUB_OUTPUT[0m
+Build	Build Keycloak	2023-04-20T02:16:44.6250036Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Build	Build Keycloak	2023-04-20T02:16:44.6250512Z env:
+Build	Build Keycloak	2023-04-20T02:16:44.6250813Z   DEFAULT_JDK_VERSION: 17
+Build	Build Keycloak	2023-04-20T02:16:44.6251153Z   DEFAULT_JDK_DIST: temurin
+Build	Build Keycloak	2023-04-20T02:16:44.6251487Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Build	Build Keycloak	2023-04-20T02:16:44.6251942Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.6-10/x64
+Build	Build Keycloak	2023-04-20T02:16:44.6252459Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.6-10/x64
+Build	Build Keycloak	2023-04-20T02:16:44.6252853Z ##[endgroup]
+Build	Build Keycloak	2023-04-20T02:16:44.6416884Z ##[group]Run actions/cache@v3
+Build	Build Keycloak	2023-04-20T02:16:44.6417121Z with:
+Build	Build Keycloak	2023-04-20T02:16:44.6417329Z   path: ~/.npm
+Build	Build Keycloak	2023-04-20T02:16:44.6417552Z   key: npm-2023-16
+Build	Build Keycloak	2023-04-20T02:16:44.6438675Z   enableCrossOsArchive: false
+Build	Build Keycloak	2023-04-20T02:16:44.6438938Z   fail-on-cache-miss: false
+Build	Build Keycloak	2023-04-20T02:16:44.6439182Z   lookup-only: false
+Build	Build Keycloak	2023-04-20T02:16:44.6439384Z env:
+Build	Build Keycloak	2023-04-20T02:16:44.6439583Z   DEFAULT_JDK_VERSION: 17
+Build	Build Keycloak	2023-04-20T02:16:44.6439828Z   DEFAULT_JDK_DIST: temurin
+Build	Build Keycloak	2023-04-20T02:16:44.6440082Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Build	Build Keycloak	2023-04-20T02:16:44.6440398Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.6-10/x64
+Build	Build Keycloak	2023-04-20T02:16:44.6440777Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.6-10/x64
+Build	Build Keycloak	2023-04-20T02:16:44.6441067Z ##[endgroup]
+Build	Build Keycloak	2023-04-20T02:16:45.9608989Z Received 159383552 of 189016102 (84.3%), 150.3 MBs/sec
+Build	Build Keycloak	2023-04-20T02:16:46.1442269Z Received 189016102 of 189016102 (100.0%), 151.0 MBs/sec
+Build	Build Keycloak	2023-04-20T02:16:46.1454458Z Cache Size: ~180 MB (189016102 B)
+Build	Build Keycloak	2023-04-20T02:16:46.1498339Z [command]/usr/bin/tar -xf /home/runner/work/_temp/2153da71-fde4-465b-9a85-ece794c7a881/cache.tzst -P -C /home/runner/work/keycloak/keycloak --use-compress-program unzstd
+Build	Build Keycloak	2023-04-20T02:16:46.7974278Z Cache restored successfully
+Build	Build Keycloak	2023-04-20T02:16:46.8352319Z Cache restored from key: npm-2023-16
+Build	Build Keycloak	2023-04-20T02:16:46.8485569Z ##[group]Run MVN_HTTP_CONFIG="-Dhttp.keepAlive=false -Dmaven.wagon.http.pool=false -Dmaven.wagon.http.retryHandler.class=standard -Dmaven.wagon.http.retryHandler.count=3 -Dmaven.wagon.httpconnectionManager.ttlSeconds=120"
+Build	Build Keycloak	2023-04-20T02:16:46.8486858Z [36;1mMVN_HTTP_CONFIG="-Dhttp.keepAlive=false -Dmaven.wagon.http.pool=false -Dmaven.wagon.http.retryHandler.class=standard -Dmaven.wagon.http.retryHandler.count=3 -Dmaven.wagon.httpconnectionManager.ttlSeconds=120"[0m
+Build	Build Keycloak	2023-04-20T02:16:46.8487581Z [36;1m./mvnw install dependency:resolve -nsu -B -e -DskipTests -DskipExamples $MVN_HTTP_CONFIG [0m
+Build	Build Keycloak	2023-04-20T02:16:46.8541847Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Build	Build Keycloak	2023-04-20T02:16:46.8542161Z env:
+Build	Build Keycloak	2023-04-20T02:16:46.8542391Z   DEFAULT_JDK_VERSION: 17
+Build	Build Keycloak	2023-04-20T02:16:46.8542665Z   DEFAULT_JDK_DIST: temurin
+Build	Build Keycloak	2023-04-20T02:16:46.8542931Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Build	Build Keycloak	2023-04-20T02:16:46.8543274Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.6-10/x64
+Build	Build Keycloak	2023-04-20T02:16:46.8543680Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.6-10/x64
+Build	Build Keycloak	2023-04-20T02:16:46.8544008Z ##[endgroup]
+Build	Build Keycloak	2023-04-20T02:16:47.5091307Z ##[error]Exception in thread "main" java.net.UnknownHostException: repo.maven.apache.org
+Build	Build Keycloak	2023-04-20T02:16:47.5100032Z 	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:567)
+Build	Build Keycloak	2023-04-20T02:16:47.5100545Z 	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+Build	Build Keycloak	2023-04-20T02:16:47.5100976Z 	at java.base/java.net.Socket.connect(Socket.java:633)
+Build	Build Keycloak	2023-04-20T02:16:47.5101420Z 	at java.base/sun.security.ssl.SSLSocketImpl.connect(SSLSocketImpl.java:304)
+Build	Build Keycloak	2023-04-20T02:16:47.5101952Z 	at java.base/sun.security.ssl.BaseSSLSocketImpl.connect(BaseSSLSocketImpl.java:174)
+Build	Build Keycloak	2023-04-20T02:16:47.5102425Z 	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:183)
+Build	Build Keycloak	2023-04-20T02:16:47.5102877Z 	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:531)
+Build	Build Keycloak	2023-04-20T02:16:47.5103356Z 	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:636)
+Build	Build Keycloak	2023-04-20T02:16:47.5106178Z 	at java.base/sun.net.www.protocol.https.HttpsClient.<init>(HttpsClient.java:266)
+Build	Build Keycloak	2023-04-20T02:16:47.5107169Z 	at java.base/sun.net.www.protocol.https.HttpsClient.New(HttpsClient.java:380)
+Build	Build Keycloak	2023-04-20T02:16:47.5109368Z 	at java.base/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.getNewHttpClient(AbstractDelegateHttpsURLConnection.java:193)
+Build	Build Keycloak	2023-04-20T02:16:47.5110386Z 	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242)
+Build	Build Keycloak	2023-04-20T02:16:47.5111207Z 	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+Build	Build Keycloak	2023-04-20T02:16:47.5112162Z 	at java.base/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:179)
+Build	Build Keycloak	2023-04-20T02:16:47.5113191Z 	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1665)
+Build	Build Keycloak	2023-04-20T02:16:47.5113834Z 	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1589)
+Build	Build Keycloak	2023-04-20T02:16:47.5114537Z 	at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:224)
+Build	Build Keycloak	2023-04-20T02:16:47.5115206Z 	at org.apache.maven.wrapper.DefaultDownloader.downloadInternal(DefaultDownloader.java:106)
+Build	Build Keycloak	2023-04-20T02:16:47.5115799Z 	at org.apache.maven.wrapper.DefaultDownloader.download(DefaultDownloader.java:93)
+Build	Build Keycloak	2023-04-20T02:16:47.5116319Z 	at org.apache.maven.wrapper.Installer.createDist(Installer.java:86)
+Build	Build Keycloak	2023-04-20T02:16:47.5116825Z 	at org.apache.maven.wrapper.WrapperExecutor.execute(WrapperExecutor.java:155)
+Build	Build Keycloak	2023-04-20T02:16:47.5117371Z 	at org.apache.maven.wrapper.MavenWrapperMain.main(MavenWrapperMain.java:72)
+Build	Build Keycloak	2023-04-20T02:16:47.5181940Z ##[error]Process completed with exit code 1.
+Status Check - Keycloak CI	Check status	2023-04-20T02:17:02.4989003Z Prepare all required actions
+Status Check - Keycloak CI	Check status	2023-04-20T02:17:02.5030010Z ##[group]Run ./.github/actions/checks-job-pass
+Status Check - Keycloak CI	Check status	2023-04-20T02:17:02.5030256Z with:
+Status Check - Keycloak CI	Check status	2023-04-20T02:17:02.5030451Z   required: true
+Status Check - Keycloak CI	Check status	2023-04-20T02:17:02.5030640Z env:
+Status Check - Keycloak CI	Check status	2023-04-20T02:17:02.5030823Z   DEFAULT_JDK_VERSION: 17
+Status Check - Keycloak CI	Check status	2023-04-20T02:17:02.5031048Z   DEFAULT_JDK_DIST: temurin
+Status Check - Keycloak CI	Check status	2023-04-20T02:17:02.5031286Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Status Check - Keycloak CI	Check status	2023-04-20T02:17:02.5031492Z ##[endgroup]
+Status Check - Keycloak CI	Check status	2023-04-20T02:17:02.5319373Z ##[group]Run if [ "true" == "false" ]; then
+Status Check - Keycloak CI	Check status	2023-04-20T02:17:02.5319718Z [36;1mif [ "true" == "false" ]; then[0m
+Status Check - Keycloak CI	Check status	2023-04-20T02:17:02.5319983Z [36;1m  echo "Not required to run, skipping"[0m
+Status Check - Keycloak CI	Check status	2023-04-20T02:17:02.5320218Z [36;1melse[0m
+Status Check - Keycloak CI	Check status	2023-04-20T02:17:02.5320420Z [36;1m  if [ "" == "success" ]; then[0m
+Status Check - Keycloak CI	Check status	2023-04-20T02:17:02.5320646Z [36;1m    echo "Success"[0m
+Status Check - Keycloak CI	Check status	2023-04-20T02:17:02.5320872Z [36;1m  else[0m
+Status Check - Keycloak CI	Check status	2023-04-20T02:17:02.5321097Z [36;1m    echo "Required to run, but didn't succeed"[0m
+Status Check - Keycloak CI	Check status	2023-04-20T02:17:02.5321337Z [36;1m    exit 1[0m
+Status Check - Keycloak CI	Check status	2023-04-20T02:17:02.5321584Z [36;1m  fi        [0m
+Status Check - Keycloak CI	Check status	2023-04-20T02:17:02.5321772Z [36;1mfi[0m
+Status Check - Keycloak CI	Check status	2023-04-20T02:17:02.5381137Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Status Check - Keycloak CI	Check status	2023-04-20T02:17:02.5381424Z env:
+Status Check - Keycloak CI	Check status	2023-04-20T02:17:02.5381630Z   DEFAULT_JDK_VERSION: 17
+Status Check - Keycloak CI	Check status	2023-04-20T02:17:02.5381842Z   DEFAULT_JDK_DIST: temurin
+Status Check - Keycloak CI	Check status	2023-04-20T02:17:02.5382078Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Status Check - Keycloak CI	Check status	2023-04-20T02:17:02.5382300Z ##[endgroup]
+Status Check - Keycloak CI	Check status	2023-04-20T02:17:02.5540453Z Required to run, but didn't succeed
+Status Check - Keycloak CI	Check status	2023-04-20T02:17:02.5558023Z ##[error]Process completed with exit code 1.
