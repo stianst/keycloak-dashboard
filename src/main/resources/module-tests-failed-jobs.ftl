@@ -29,7 +29,7 @@
                 <#list job.errorLog as log>
                 ${log}&nbsp;<br/><br/>
             </#list>
-            ${job.failedGoal}
+            ${job.failedGoal!}
             </div>
         </td>
         <#else>
