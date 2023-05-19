@@ -1,0 +1,934 @@
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:01.9277672Z ##[group]Run TESTS=`testsuite/integration-arquillian/tests/base/testsuites/suite.sh database`
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:01.9278165Z [36;1mTESTS=`testsuite/integration-arquillian/tests/base/testsuites/suite.sh database`[0m
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:01.9278497Z [36;1mecho "Tests: $TESTS"[0m
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:01.9279002Z [36;1m./mvnw test -Dsurefire.rerunFailingTestsCount=2 -nsu -B -Pauth-server-quarkus -Pdb-mssql -Dtest=$TESTS -pl testsuite/integration-arquillian/tests/base | misc/log/trimmer.sh[0m
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:01.9336049Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:01.9336342Z env:
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:01.9336763Z   DEFAULT_JDK_VERSION: 17
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:01.9337003Z   DEFAULT_JDK_DIST: temurin
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:01.9337254Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:01.9337599Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.7-7/x64
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:01.9337981Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.7-7/x64
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:01.9338295Z ##[endgroup]
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:02.3904576Z Tests: AccountRestServiceTest,AuthorizationCodeTest,AuthorizationTest,ClientRegistrationTest,EventStoreProviderTest,ExportImportTest,GeneratedRsaKeyProviderTest,KcOidcBrokerTest,LDAPUserLoginTest,LoginTest,PasswordPolicyTest,RefreshTokenTest,RequiredActionUpdateProfileTest,SSOTest,SamlClientTest,TransactionsTest,UserProfileTest,org.keycloak.testsuite.admin.**,org.keycloak.testsuite.authz.**ManagementTest,org.keycloak.testsuite.zerodowntime.**
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:05.7804833Z -- [INFO] Scanning for projects...
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:07.6599375Z -- [WARNING] 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:07.6626172Z -- [WARNING] Some problems were encountered while building the effective model for org.keycloak.testsuite:integration-arquillian-util:jar:999.0.0-SNAPSHOT
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:07.6675799Z -- [WARNING] 'dependencies.dependency.scope' for org.jboss.arquillian:arquillian-bom:pom must be one of [provided, compile, runtime, test, system] but is 'import'. @ line 64, column 20
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:07.6682319Z -- [WARNING] 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:07.6696285Z -- [WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:07.6701608Z -- [WARNING] 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:07.6707520Z -- [WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:07.6712533Z -- [WARNING] 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:07.7068023Z -- [INFO] 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:07.7075105Z -- [INFO] ------< org.keycloak.testsuite:integration-arquillian-tests-base >------
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:07.7080738Z -- [INFO] Building Base TestSuite 999.0.0-SNAPSHOT
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:07.7086908Z -- [INFO] --------------------------------[ jar ]---------------------------------
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:09.2025552Z -- [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jboss/jboss-parent/37/jboss-parent-37.pom
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:09.3437766Z -- [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jboss/jboss-parent/37/jboss-parent-37.pom (0 B at 0 B/s)
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:09.5319991Z -- [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jboss/jboss-parent/38/jboss-parent-38.pom
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:09.5409899Z -- [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jboss/jboss-parent/38/jboss-parent-38.pom (0 B at 0 B/s)
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:09.5784975Z -- [INFO] Downloading from central: https://repo.maven.apache.org/maven2/net/java/dev/jna/jna/5.8.0/jna-5.8.0.pom
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:09.9879107Z -- [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/net/java/dev/jna/jna/5.8.0/jna-5.8.0.pom (1.6 kB at 3.8 kB/s)
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:10.4765518Z -- [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jboss/shrinkwrap/resolver/shrinkwrap-resolver-spi/3.1.4/shrinkwrap-resolver-spi-3.1.4.pom
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:10.4847413Z -- [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jboss/shrinkwrap/resolver/shrinkwrap-resolver-spi/3.1.4/shrinkwrap-resolver-spi-3.1.4.pom (0 B at 0 B/s)
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:10.4914602Z -- [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jboss/shrinkwrap/resolver/shrinkwrap-resolver-spi-maven/3.1.4/shrinkwrap-resolver-spi-maven-3.1.4.pom
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:10.5046309Z -- [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jboss/shrinkwrap/resolver/shrinkwrap-resolver-spi-maven/3.1.4/shrinkwrap-resolver-spi-maven-3.1.4.pom (0 B at 0 B/s)
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:10.5047619Z -- [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jboss/shrinkwrap/resolver/shrinkwrap-resolver-api-maven-archive/3.1.4/shrinkwrap-resolver-api-maven-archive-3.1.4.pom
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:10.5218817Z -- [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jboss/shrinkwrap/resolver/shrinkwrap-resolver-api-maven-archive/3.1.4/shrinkwrap-resolver-api-maven-archive-3.1.4.pom (0 B at 0 B/s)
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:10.5238132Z -- [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jboss/shrinkwrap/resolver/shrinkwrap-resolver-impl-maven/3.1.4/shrinkwrap-resolver-impl-maven-3.1.4.pom
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:10.5358993Z -- [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jboss/shrinkwrap/resolver/shrinkwrap-resolver-impl-maven/3.1.4/shrinkwrap-resolver-impl-maven-3.1.4.pom (0 B at 0 B/s)
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:10.5709325Z -- [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jboss/shrinkwrap/resolver/shrinkwrap-resolver-impl-maven-archive/3.1.4/shrinkwrap-resolver-impl-maven-archive-3.1.4.pom
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:10.5848518Z -- [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jboss/shrinkwrap/resolver/shrinkwrap-resolver-impl-maven-archive/3.1.4/shrinkwrap-resolver-impl-maven-archive-3.1.4.pom (0 B at 0 B/s)
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:10.5884007Z -- [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jboss/shrinkwrap/resolver/shrinkwrap-resolver-spi-maven-archive/3.1.4/shrinkwrap-resolver-spi-maven-archive-3.1.4.pom
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:10.6050038Z -- [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jboss/shrinkwrap/resolver/shrinkwrap-resolver-spi-maven-archive/3.1.4/shrinkwrap-resolver-spi-maven-archive-3.1.4.pom (0 B at 0 B/s)
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:11.0861936Z -- [INFO] Downloading from central: https://repo.maven.apache.org/maven2/net/java/dev/jna/jna/5.8.0/jna-5.8.0.jar
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:11.2383741Z -- [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/net/java/dev/jna/jna/5.8.0/jna-5.8.0.jar (1.7 MB at 11 MB/s)
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:11.2583211Z -- [INFO] 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:11.2617155Z -- [INFO] --- maven-enforcer-plugin:3.0.0-M3:enforce (enforce-java-version) @ integration-arquillian-tests-base ---
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:11.3766424Z -- [INFO] 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:11.3822990Z -- [INFO] --- maven-enforcer-plugin:3.0.0-M3:enforce (enforce-maven-version) @ integration-arquillian-tests-base ---
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:11.3842480Z -- [INFO] 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:11.3856893Z -- [INFO] --- maven-enforcer-plugin:3.0.0-M3:enforce (enforce-maven) @ integration-arquillian-tests-base ---
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:11.3868352Z -- [INFO] 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:11.3881116Z -- [INFO] --- buildnumber-maven-plugin:1.4:create (get-scm-revision) @ integration-arquillian-tests-base ---
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:11.5679143Z -- [INFO] Executing: /bin/sh -c cd '/home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base' && 'git' 'rev-parse' '--verify' 'HEAD'
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:11.5686072Z -- [INFO] Working directory: /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:11.5831364Z -- [INFO] Storing buildNumber: c30b234bbb163c82dbd4a4270f31800e5a4596f3 at timestamp: 1684354991550
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:11.5961057Z -- [INFO] Storing buildScmBranch: main
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:11.5961716Z -- [INFO] 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:11.5962494Z -- [INFO] --- directory-maven-plugin:0.3.1:directory-of (keycloak-parent-basedir) @ integration-arquillian-tests-base ---
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:11.6422798Z -- [INFO] Directory of org.keycloak:keycloak-parent set to: /home/runner/work/keycloak/keycloak
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:11.6431928Z -- [INFO] 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:11.6437717Z -- [INFO] --- maven-resources-plugin:3.0.1:copy-resources (copy-truststore) @ integration-arquillian-tests-base ---
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:11.7082279Z -- [INFO] Using 'UTF-8' encoding to copy filtered resources.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:11.7246389Z -- [INFO] Copying 3 resources
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:11.7321235Z -- [INFO] 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:11.7329295Z -- [INFO] --- maven-resources-plugin:3.0.1:copy-resources (copy-common-dependencies) @ integration-arquillian-tests-base ---
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:11.7362335Z -- [INFO] Using 'UTF-8' encoding to copy filtered resources.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:11.7511813Z -- [INFO] Copying 12 resources
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:11.7550280Z -- [INFO] 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:11.7556279Z -- [INFO] --- maven-resources-plugin:3.0.1:resources (default-resources) @ integration-arquillian-tests-base ---
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:11.7587365Z -- [INFO] Using 'UTF-8' encoding to copy filtered resources.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:11.7595201Z -- [INFO] Copying 2 resources
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:11.7631770Z -- [INFO] 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:11.7637560Z -- [INFO] --- maven-resources-plugin:3.0.1:copy-resources (copy-admin-user-json-file) @ integration-arquillian-tests-base ---
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:11.7679653Z -- [INFO] Using 'UTF-8' encoding to copy filtered resources.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:11.7743146Z -- [INFO] Copying 1 resource
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:11.7847584Z -- [INFO] 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:11.7852633Z -- [INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ integration-arquillian-tests-base ---
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:11.9242059Z -- [INFO] Changes detected - recompiling the module!
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:11.9279760Z -- [INFO] Compiling 385 source files to /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/target/classes
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5029363Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/util/DroneUtils.java:[81,27] isAccessible() in java.lang.reflect.AccessibleObject has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5035684Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/util/DroneUtils.java:[92,27] isAccessible() in java.lang.reflect.AccessibleObject has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5040305Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/util/DroneUtils.java:[102,27] isAccessible() in java.lang.reflect.AccessibleObject has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5061537Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/util/WaitUtils.java:[172,27] unchecked method invocation: method until in class org.openqa.selenium.support.ui.FluentWait is applied to given types
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5062584Z --   required: java.util.function.Function<? super T,V>
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5067911Z --   found:    org.openqa.selenium.support.ui.ExpectedCondition
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5126004Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/util/WaitUtils.java:[172,28] unchecked conversion
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5126885Z --   required: java.util.function.Function<? super T,V>
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5131950Z --   found:    org.openqa.selenium.support.ui.ExpectedCondition
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5150035Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/util/OAuthClient.java:[1366,52] parse(java.net.URI,java.lang.String) in org.apache.http.client.utils.URLEncodedUtils has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5154711Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/util/SamlStreams.java:[39,9] <T>assertThat(T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5158727Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/updaters/ServerResourceUpdater.java:[89,20] unchecked cast
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5159742Z --   required: T
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5161882Z --   found:    org.keycloak.testsuite.updaters.ServerResourceUpdater<T,Res,Rep>
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5166036Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/updaters/ServerResourceUpdater.java:[103,20] unchecked cast
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5166712Z --   required: T
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5168563Z --   found:    org.keycloak.testsuite.updaters.ServerResourceUpdater<T,Res,Rep>
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5174475Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/updaters/ServerResourceUpdater.java:[140,52] unchecked conversion
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5175197Z --   required: java.util.Set<V>
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5177171Z --   found:    java.util.Set
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5180820Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/updaters/ServerResourceUpdater.java:[141,51] unchecked conversion
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5181513Z --   required: java.util.Set<V>
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5183549Z --   found:    java.util.Set
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5188095Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/page/AbstractPatternFlyAlert.java:[69,84] unchecked method invocation: method until in class org.openqa.selenium.support.ui.FluentWait is applied to given types
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5188881Z --   required: java.util.function.Function<? super T,V>
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5191053Z --   found:    org.openqa.selenium.support.ui.ExpectedCondition
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5194506Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/page/AbstractPatternFlyAlert.java:[69,85] unchecked conversion
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5195095Z --   required: java.util.function.Function<? super T,V>
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5197212Z --   found:    org.openqa.selenium.support.ui.ExpectedCondition
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5200590Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/util/SamlClient.java:[149,17] <T>assertThat(T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5228787Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/util/SamlClient.java:[177,17] <T>assertThat(T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5229967Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/util/SamlClient.java:[248,17] <T>assertThat(T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5230931Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/util/SamlClient.java:[316,17] <T>assertThat(T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5231861Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/util/SamlClient.java:[522,17] <T>assertThat(T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5232871Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/util/SamlClient.java:[634,9] <T>assertThat(java.lang.String,T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5233889Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/util/SamlClient.java:[648,9] <T>assertThat(T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5235146Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/util/SamlClient.java:[664,53] parse(java.net.URI,java.lang.String) in org.apache.http.client.utils.URLEncodedUtils has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5236262Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/util/saml/RequiredConsentBuilder.java:[59,9] <T>assertThat(T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5237471Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/util/saml/RequiredConsentBuilder.java:[61,9] <T>assertThat(T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5238454Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/util/saml/RequiredConsentBuilder.java:[62,9] <T>assertThat(T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5245262Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/util/SamlClientBuilder.java:[131,19] <T>assertThat(T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5252383Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/util/SamlClientBuilder.java:[267,19] <T>assertThat(T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5266975Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/util/SamlClientBuilder.java:[268,19] <T>assertThat(java.lang.String,T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5271310Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/util/saml/ModifySamlResponseStepBuilder.java:[167,13] <T>assertThat(T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5275530Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/util/saml/ModifySamlResponseStepBuilder.java:[171,37] parse(java.net.URI,java.lang.String) in org.apache.http.client.utils.URLEncodedUtils has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5279311Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/util/saml/ModifySamlResponseStepBuilder.java:[175,21] <T>assertThat(java.lang.String,T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5282968Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/util/saml/ModifySamlResponseStepBuilder.java:[181,13] <T>assertThat(T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5287147Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/util/saml/ModifySamlResponseStepBuilder.java:[211,13] <T>assertThat(T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5291050Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/util/saml/ModifySamlResponseStepBuilder.java:[214,13] <T>assertThat(T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5299501Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/util/saml/ModifySamlResponseStepBuilder.java:[221,13] <T>assertThat(java.lang.String,T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5305163Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/util/saml/ModifySamlResponseStepBuilder.java:[222,13] <T>assertThat(java.lang.String,T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5354948Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/util/saml/LoginBuilder.java:[68,13] <T>assertThat(T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5356480Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/util/saml/LoginBuilder.java:[70,13] <T>assertThat(T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5357739Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/util/saml/LoginBuilder.java:[120,13] <T>assertThat(java.lang.String,T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5359021Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/util/saml/LoginBuilder.java:[122,13] <T>assertThat(java.lang.String,T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5360229Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/util/saml/UpdateProfileBuilder.java:[65,9] <T>assertThat(T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5361244Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/util/saml/UpdateProfileBuilder.java:[67,9] <T>assertThat(T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5362125Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/util/javascript/XMLHttpRequest.java:[75,67] unchecked cast
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5362706Z --   required: java.util.Map<java.lang.String,java.lang.Object>
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5363101Z --   found:    java.lang.Object
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5363943Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/updaters/Creator.java:[61,16] unchecked call to Creator(java.lang.String,T,java.lang.Runnable) as a member of the raw type org.keycloak.testsuite.updaters.Creator
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5365114Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/updaters/Creator.java:[61,16] unchecked conversion
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5365822Z --   required: org.keycloak.testsuite.updaters.Creator<org.keycloak.admin.client.resource.RealmResource>
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5366366Z --   found:    org.keycloak.testsuite.updaters.Creator
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5367242Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/updaters/Creator.java:[70,20] unchecked call to Creator(java.lang.String,T,java.lang.Runnable) as a member of the raw type org.keycloak.testsuite.updaters.Creator
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5368177Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/updaters/Creator.java:[70,20] unchecked conversion
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5368876Z --   required: org.keycloak.testsuite.updaters.Creator<org.keycloak.admin.client.resource.GroupResource>
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5369525Z --   found:    org.keycloak.testsuite.updaters.Creator
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5370399Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/updaters/Creator.java:[80,20] unchecked call to Creator(java.lang.String,T,java.lang.Runnable) as a member of the raw type org.keycloak.testsuite.updaters.Creator
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5371325Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/updaters/Creator.java:[80,20] unchecked conversion
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5372122Z --   required: org.keycloak.testsuite.updaters.Creator<org.keycloak.admin.client.resource.ClientResource>
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5372659Z --   found:    org.keycloak.testsuite.updaters.Creator
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5373543Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/updaters/Creator.java:[90,20] unchecked call to Creator(java.lang.String,T,java.lang.Runnable) as a member of the raw type org.keycloak.testsuite.updaters.Creator
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5374490Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/updaters/Creator.java:[90,20] unchecked conversion
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5375177Z --   required: org.keycloak.testsuite.updaters.Creator<org.keycloak.admin.client.resource.UserResource>
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5375701Z --   found:    org.keycloak.testsuite.updaters.Creator
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5376579Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/updaters/Creator.java:[100,20] unchecked call to Creator(java.lang.String,T,java.lang.Runnable) as a member of the raw type org.keycloak.testsuite.updaters.Creator
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5377515Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/updaters/Creator.java:[100,20] unchecked conversion
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5378224Z --   required: org.keycloak.testsuite.updaters.Creator<org.keycloak.admin.client.resource.ComponentResource>
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5378777Z --   found:    org.keycloak.testsuite.updaters.Creator
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5379579Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/updaters/Creator.java:[115,15] <T>assertThat(java.lang.String,T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5380705Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/updaters/Creator.java:[120,20] unchecked call to Creator(java.lang.String,T,java.lang.Runnable) as a member of the raw type org.keycloak.testsuite.updaters.Creator
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5381615Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/updaters/Creator.java:[120,20] unchecked conversion
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5382505Z --   required: org.keycloak.testsuite.updaters.Creator<org.keycloak.admin.client.resource.IdentityProviderResource>
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5383082Z --   found:    org.keycloak.testsuite.updaters.Creator
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5383804Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/util/matchers/SamlStatusResponseTypeMatcher.java:[26,31] unchecked conversion
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5384529Z --   required: java.util.List<org.hamcrest.Matcher<java.net.URI>>
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5384912Z --   found:    java.util.ArrayList
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5450028Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/containers/KeycloakContainerFeaturesController.java:[84,13] <T>assertThat(java.lang.String,T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5451627Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/containers/SecurityActions.java:[126,29] isAccessible() in java.lang.reflect.AccessibleObject has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5452685Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/containers/SecurityActions.java:[186,31] isAccessible() in java.lang.reflect.AccessibleObject has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5453818Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/containers/SecurityActions.java:[221,39] isAccessible() in java.lang.reflect.AccessibleObject has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5454800Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/containers/SecurityActions.java:[245,40] isAccessible() in java.lang.reflect.AccessibleObject has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5455797Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/ModelTestExecutor.java:[53,33] TestResult() in org.jboss.arquillian.test.spi.TestResult has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5456946Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/ModelTestExecutor.java:[64,27] setStatus(org.jboss.arquillian.test.spi.TestResult.Status) in org.jboss.arquillian.test.spi.TestResult has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5458177Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/ModelTestExecutor.java:[66,27] setStatus(org.jboss.arquillian.test.spi.TestResult.Status) in org.jboss.arquillian.test.spi.TestResult has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5459157Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/ModelTestExecutor.java:[76,109] unchecked cast
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5459865Z --   required: org.jboss.arquillian.core.api.InstanceProducer<org.jboss.arquillian.test.spi.TestResult>
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5460336Z --   found:    java.lang.Object
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5461081Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/util/saml/SessionStateChecker.java:[91,17] <T>assertThat(T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5462116Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/util/saml/SessionStateChecker.java:[92,17] <T>assertThat(T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5463134Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/util/saml/SessionStateChecker.java:[95,13] <T>assertThat(T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5464101Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/util/saml/SessionStateChecker.java:[96,13] <T>assertThat(T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5465074Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/util/saml/SessionStateChecker.java:[104,13] <T>assertThat(T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5466062Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/util/saml/SessionStateChecker.java:[105,13] <T>assertThat(T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5467146Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/util/saml/SessionStateChecker.java:[112,43] <T>assertThat(T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5468136Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/util/saml/SessionStateChecker.java:[152,17] <T>assertThat(T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5469215Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/util/saml/SessionStateChecker.java:[157,17] <T>assertThat(T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5470236Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/updaters/UserAttributeUpdater.java:[44,9] <T>assertThat(T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5471257Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/util/AdminClientUtil.java:[153,17] useProtocol(java.lang.String) in org.apache.http.ssl.SSLContextBuilder has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5472304Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/CrossDCTestEnricher.java:[399,9] <T>assertThat(T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5473319Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/CrossDCTestEnricher.java:[401,9] <T>assertThat(T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5474379Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/CrossDCTestEnricher.java:[430,46] unchecked method invocation: method isAnnotationPresent in class java.lang.Class is applied to given types
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5475107Z --   required: java.lang.Class<? extends java.lang.annotation.Annotation>
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5475481Z --   found:    java.lang.Class
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5476100Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/CrossDCTestEnricher.java:[430,47] unchecked conversion
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5476706Z --   required: java.lang.Class<? extends java.lang.annotation.Annotation>
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5477067Z --   found:    java.lang.Class
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5477965Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/KeycloakArquillianExtension.java:[67,61] org.keycloak.testsuite.arquillian.DeploymentArchiveProcessor in org.keycloak.testsuite.arquillian has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5478658Z -- [INFO] 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5479143Z -- [INFO] --- maven-resources-plugin:3.0.1:copy-resources (example-realms) @ integration-arquillian-tests-base ---
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5527399Z -- [INFO] Using 'UTF-8' encoding to copy filtered resources.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5527808Z -- [INFO] Copying 13 resources
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5840945Z -- [INFO] 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.5845897Z -- [INFO] --- maven-dependency-plugin:3.1.2:unpack (unpack-undertow-server) @ integration-arquillian-tests-base ---
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.8449967Z -- [INFO] Skipping plugin execution
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.8452177Z -- [INFO] 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.8453227Z -- [INFO] --- maven-dependency-plugin:3.1.2:unpack (unpack-quarkus-server) @ integration-arquillian-tests-base ---
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.8454515Z -- [INFO] Configured Artifact: org.keycloak.testsuite:integration-arquillian-servers-auth-server-quarkus:999.0.0-SNAPSHOT:zip
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:18.8700346Z -- [INFO] Unpacking /home/runner/.m2/repository/org/keycloak/testsuite/integration-arquillian-servers-auth-server-quarkus/999.0.0-SNAPSHOT/integration-arquillian-servers-auth-server-quarkus-999.0.0-SNAPSHOT.zip to /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/target/containers with includes "" and excludes ""
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:21.1559647Z -- [INFO] 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:21.1560562Z -- [INFO] --- maven-dependency-plugin:3.1.2:unpack (unpack-app-server) @ integration-arquillian-tests-base ---
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:21.1566299Z -- [INFO] Configured Artifact: org.keycloak.testsuite:integration-arquillian-servers-app-server-wildfly:999.0.0-SNAPSHOT:zip
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:21.1647047Z -- [INFO] Unpacking /home/runner/.m2/repository/org/keycloak/testsuite/integration-arquillian-servers-app-server-wildfly/999.0.0-SNAPSHOT/integration-arquillian-servers-app-server-wildfly-999.0.0-SNAPSHOT.zip to /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/target/containers with includes "" and excludes ""
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:24.3120334Z -- [INFO] 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:24.3121311Z -- [INFO] --- maven-dependency-plugin:3.1.2:copy (example-wars) @ integration-arquillian-tests-base ---
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:24.3156966Z -- [INFO] Configured Artifact: org.keycloak.testsuite:hello-world-authz-service:999.0.0-SNAPSHOT:war
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:24.3190381Z -- [INFO] Configured Artifact: org.keycloak.testsuite:photoz-html5-client:999.0.0-SNAPSHOT:war
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:24.3221435Z -- [INFO] Configured Artifact: org.keycloak.testsuite:photoz-restful-api:999.0.0-SNAPSHOT:war
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:24.3250460Z -- [INFO] Configured Artifact: org.keycloak.testsuite:servlet-authz-app:999.0.0-SNAPSHOT:war
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:24.3277642Z -- [INFO] Configured Artifact: org.keycloak.testsuite:servlet-policy-enforcer:999.0.0-SNAPSHOT:war
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:24.3304569Z -- [INFO] Configured Artifact: org.keycloak.testsuite:integration-arquillian-test-apps-cors-angular-product:999.0.0-SNAPSHOT:war
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:24.3335978Z -- [INFO] Configured Artifact: org.keycloak.testsuite:integration-arquillian-test-apps-cors-database-service:999.0.0-SNAPSHOT:war
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:24.3389264Z -- [INFO] Copying hello-world-authz-service-999.0.0-SNAPSHOT.war to /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/target/examples/hello-world-authz-service-999.0.0-SNAPSHOT.war
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:24.3390592Z -- [INFO] Copying photoz-html5-client-999.0.0-SNAPSHOT.war to /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/target/examples/photoz-html5-client-999.0.0-SNAPSHOT.war
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:24.3391800Z -- [INFO] Copying photoz-restful-api-999.0.0-SNAPSHOT.war to /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/target/examples/photoz-restful-api-999.0.0-SNAPSHOT.war
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:24.3393778Z -- [INFO] Copying servlet-authz-app-999.0.0-SNAPSHOT.war to /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/target/examples/servlet-authz-app-999.0.0-SNAPSHOT.war
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:24.3396491Z -- [INFO] Copying servlet-policy-enforcer-999.0.0-SNAPSHOT.war to /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/target/examples/servlet-policy-enforcer-999.0.0-SNAPSHOT.war
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:24.3399477Z -- [INFO] Copying integration-arquillian-test-apps-cors-angular-product-999.0.0-SNAPSHOT.war to /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/target/examples/integration-arquillian-test-apps-cors-angular-product-999.0.0-SNAPSHOT.war
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:24.3406749Z -- [INFO] Copying integration-arquillian-test-apps-cors-database-service-999.0.0-SNAPSHOT.war to /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/target/examples/integration-arquillian-test-apps-cors-database-service-999.0.0-SNAPSHOT.war
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:24.3410988Z -- [INFO] 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:24.3563065Z -- [INFO] --- maven-dependency-plugin:3.1.2:unpack (test-apps-realms) @ integration-arquillian-tests-base ---
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:24.3563905Z -- [INFO] Configured Artifact: org.keycloak.testsuite:integration-arquillian-test-apps-dist:999.0.0-SNAPSHOT:zip
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:24.3565369Z -- [INFO] Unpacking /home/runner/.m2/repository/org/keycloak/testsuite/integration-arquillian-test-apps-dist/999.0.0-SNAPSHOT/integration-arquillian-test-apps-dist-999.0.0-SNAPSHOT.zip to /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/target/examples with includes "**/*realm.json,**/*authz-service.json,**/testsaml.json,**/*-keycloak.json" and excludes ""
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:24.3607711Z -- [INFO] 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:24.3611026Z -- [INFO] --- maven-dependency-plugin:3.1.2:unpack (unpack-client-cli-dist) @ integration-arquillian-tests-base ---
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:24.3715817Z -- [INFO] Configured Artifact: org.keycloak:keycloak-client-cli-dist:999.0.0-SNAPSHOT:zip
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:24.3722442Z -- [INFO] Unpacking /home/runner/.m2/repository/org/keycloak/keycloak-client-cli-dist/999.0.0-SNAPSHOT/keycloak-client-cli-dist-999.0.0-SNAPSHOT.zip to /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/target/containers with includes "" and excludes ""
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:24.5406008Z -- [INFO] 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:24.5407132Z -- [INFO] --- maven-dependency-plugin:3.1.2:copy-dependencies (copy-testsuite-providers-to-base-testsuite) @ integration-arquillian-tests-base ---
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:24.5543000Z -- [INFO] Copying integration-arquillian-testsuite-providers-999.0.0-SNAPSHOT.jar to /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/target/lib/integration-arquillian-testsuite-providers-999.0.0-SNAPSHOT.jar
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:24.5543841Z -- [INFO] 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:24.5544358Z -- [INFO] --- maven-resources-plugin:3.0.1:testResources (default-testResources) @ integration-arquillian-tests-base ---
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:24.5562753Z -- [INFO] Using 'UTF-8' encoding to copy filtered resources.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:24.5645545Z -- [INFO] Copying 40 resources
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:25.1008691Z -- [INFO] Copying 365 resources
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:25.1578629Z -- [INFO] 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:25.1579876Z -- [INFO] --- maven-antrun-plugin:1.8:run (clean-second-cache-server-arquillian-bug-workaround) @ integration-arquillian-tests-base ---
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:25.1772273Z -- [INFO] Skipping Antrun execution
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:25.1772924Z -- [INFO] 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:25.1773747Z -- [INFO] --- maven-antrun-plugin:1.8:run (default) @ integration-arquillian-tests-base ---
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:25.3479523Z -- [INFO] Executing tasks
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:25.3480620Z -- 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:25.3481156Z -- main:
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:25.3711841Z -- [INFO] Executed tasks
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:25.3713193Z -- [INFO] 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:25.3715107Z -- [INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ integration-arquillian-tests-base ---
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:25.4449696Z -- [INFO] Changes detected - recompiling the module!
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:25.4506382Z -- [INFO] Compiling 727 source files to /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/target/test-classes
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9103171Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/util/AssertAdminEvents.java:[191,19] <T>assertThat(T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9104704Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/util/AssertAdminEvents.java:[219,97] unchecked cast
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9105500Z --   required: java.util.List<org.keycloak.representations.idm.RoleRepresentation>
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9106101Z --   found:    java.lang.Object
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9106973Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/AbstractFirstBrokerLoginTest.java:[979,9] <T>assertThat(T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9108575Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/BrokerRunOnServerUtil.java:[147,45] removeExpired(org.keycloak.models.RealmModel) in org.keycloak.sessions.AuthenticationSessionProvider has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9138428Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/AssertEvents.java:[96,89] isEmptyOrNullString() in org.hamcrest.Matchers has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9139996Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/AssertEvents.java:[366,19] <T>assertThat(java.lang.String,T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9141169Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/AssertEvents.java:[367,19] <T>assertThat(java.lang.String,T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9142302Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/AssertEvents.java:[368,19] <T>assertThat(java.lang.String,T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9143416Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/AssertEvents.java:[369,19] <T>assertThat(java.lang.String,T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9144518Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/AssertEvents.java:[370,19] <T>assertThat(java.lang.String,T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9145598Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/AssertEvents.java:[371,19] <T>assertThat(java.lang.String,T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9146670Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/AssertEvents.java:[372,19] <T>assertThat(java.lang.String,T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9147739Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/AssertEvents.java:[384,27] <T>assertThat(java.lang.String,T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9149047Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/authz/adapter/example/AbstractServletPolicyEnforcerTest.java:[327,21] setUri(java.lang.String) in org.keycloak.representations.idm.authorization.ResourceRepresentation has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9150505Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/authz/adapter/example/AbstractServletPolicyEnforcerTest.java:[334,32] getUri() in org.keycloak.representations.idm.authorization.ResourceRepresentation has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9151927Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/authz/adapter/example/AbstractServletPolicyEnforcerTest.java:[340,32] getUri() in org.keycloak.representations.idm.authorization.ResourceRepresentation has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9153517Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/authz/adapter/example/AbstractServletPolicyEnforcerTest.java:[346,32] getUri() in org.keycloak.representations.idm.authorization.ResourceRepresentation has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9154995Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/authz/adapter/example/AbstractServletPolicyEnforcerTest.java:[366,21] setUri(java.lang.String) in org.keycloak.representations.idm.authorization.ResourceRepresentation has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9167820Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/saml/AbstractSamlTest.java:[165,9] <T>assertThat(T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9169065Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/saml/AbstractSamlTest.java:[168,9] <T>assertThat(T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9170122Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/saml/AbstractSamlTest.java:[169,9] <T>assertThat(T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9171204Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/AbstractAdvancedBrokerTest.java:[373,9] <T>assertThat(T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9172352Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/AbstractAdvancedBrokerTest.java:[374,9] <T>assertThat(T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9173552Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/AbstractAdvancedBrokerTest.java:[387,13] <T>assertThat(T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9174680Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/AbstractAdvancedBrokerTest.java:[389,13] <T>assertThat(T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9175799Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/AbstractAdvancedBrokerTest.java:[390,13] <T>assertThat(T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9176920Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/AbstractAdvancedBrokerTest.java:[421,9] <T>assertThat(T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9178028Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/AbstractAdvancedBrokerTest.java:[422,9] <T>assertThat(T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9179131Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/AbstractAdvancedBrokerTest.java:[434,9] <T>assertThat(T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9180238Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/AbstractAdvancedBrokerTest.java:[435,9] <T>assertThat(T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9181531Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/authz/AuthzClientTest.java:[18,67] none() in org.junit.rules.ExpectedException has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9205601Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/authz/AuthorizationAPITest.java:[81,21] defaultRoles(java.lang.String...) in org.keycloak.testsuite.util.ClientBuilder has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9208159Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/authz/AuthorizationAPITest.java:[87,21] defaultRoles(java.lang.String...) in org.keycloak.testsuite.util.ClientBuilder has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9209306Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/model/ClientModelTest.java:[98,15] updateClient() in org.keycloak.models.ClientModel has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9210384Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/admin/ImpersonationTest.java:[334,19] <T>assertThat(T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9230608Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/admin/ImpersonationTest.java:[347,19] <T>assertThat(T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9242319Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/admin/ImpersonationTest.java:[441,19] <T>assertThat(T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9243267Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/client/ClientSecretRotationTest.java:[760,59] unchecked conversion
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9243885Z --   required: java.util.Map<java.lang.String,java.lang.String>
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9244249Z --   found:    java.util.Map
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9245244Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/AbstractIdentityProviderMapperTest.java:[71,9] <T>assertThat(java.lang.String,T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9246433Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/AbstractIdentityProviderMapperTest.java:[73,9] <T>assertThat(java.lang.String,T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9247600Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/AbstractIdentityProviderMapperTest.java:[74,9] <T>assertThat(java.lang.String,T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9248793Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/client/policies/AbstractClientPoliciesTest.java:[566,42] org.apache.http.impl.client.DefaultHttpClient in org.apache.http.impl.client has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9249816Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/client/policies/AbstractClientPoliciesTest.java:[688,59] unchecked conversion
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9250435Z --   required: java.util.Map<java.lang.String,java.lang.String>
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9250977Z --   found:    java.util.Map
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9251630Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/client/policies/AbstractClientPoliciesTest.java:[746,55] unchecked conversion
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9252226Z --   required: java.util.Map<java.lang.String,java.lang.String>
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9252567Z --   found:    java.util.Map
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9253197Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/client/policies/AbstractClientPoliciesTest.java:[1081,104] unchecked cast
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9253882Z --   required: java.util.Collection<java.lang.String>
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9254206Z --   found:    java.util.List
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9254962Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/migration/AbstractMigrationTest.java:[786,43] getExpiration() in org.keycloak.representations.JsonWebToken has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9255875Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/saml/BrokerTest.java:[330,63] unchecked conversion
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9256597Z --   required: org.keycloak.saml.BaseSAML2BindingBuilder<org.keycloak.saml.BaseSAML2BindingBuilder>
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9257134Z --   found:    org.keycloak.saml.BaseSAML2BindingBuilder
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9258284Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/authz/admin/ClaimInformationPointProviderTest.java:[176,30] unchecked call to create(java.util.Map<java.lang.String,java.lang.Object>) as a member of the raw type org.keycloak.adapters.authorization.cip.spi.ClaimInformationPointProviderFactory
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9259656Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/authz/admin/ClaimInformationPointProviderTest.java:[346,20] javax.security.cert.X509Certificate in javax.security.cert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9260766Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/authz/admin/ClaimInformationPointProviderTest.java:[347,28] javax.security.cert.X509Certificate in javax.security.cert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9262257Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/admin/UserFederationLdapConnectionTest.java:[80,25] testLDAPConnection(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) in org.keycloak.admin.client.resource.RealmResource has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9263709Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/admin/UserFederationLdapConnectionTest.java:[148,15] <T>assertThat(T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9264755Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/OfflineTokenTest.java:[253,37] getExpiration() in org.keycloak.representations.JsonWebToken has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9265756Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/OfflineTokenTest.java:[349,44] getExpiration() in org.keycloak.representations.JsonWebToken has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9266736Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/OfflineTokenTest.java:[384,44] getExpiration() in org.keycloak.representations.JsonWebToken has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9267832Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/OfflineTokenTest.java:[433,44] getExpiration() in org.keycloak.representations.JsonWebToken has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9268809Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/OfflineTokenTest.java:[669,37] getExpiration() in org.keycloak.representations.JsonWebToken has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9269794Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/OfflineTokenTest.java:[706,38] getExpiration() in org.keycloak.representations.JsonWebToken has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9270858Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/OfflineTokenTest.java:[930,44] getExpiration() in org.keycloak.representations.JsonWebToken has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9271850Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/OfflineTokenTest.java:[978,19] <T>assertThat(T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9272809Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/OfflineTokenTest.java:[979,19] <T>assertThat(T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9273758Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/OfflineTokenTest.java:[988,19] <T>assertThat(T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9275118Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/admin/PermissionsTest.java:[373,35] testLDAPConnection(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) in org.keycloak.admin.client.resource.RealmResource has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9276464Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/admin/PermissionsTest.java:[512,15] <T>assertThat(T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9277434Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/admin/PermissionsTest.java:[515,15] <T>assertThat(T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9278592Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/admin/PermissionsTest.java:[669,83] unchecked method invocation: method createMapper in interface org.keycloak.admin.client.resource.ProtocolMappersResource is applied to given types
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9279499Z --   required: java.util.List<org.keycloak.representations.idm.ProtocolMapperRepresentation>
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9279970Z --   found:    java.util.List
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9280552Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/admin/PermissionsTest.java:[669,95] unchecked conversion
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9281228Z --   required: java.util.List<org.keycloak.representations.idm.ProtocolMapperRepresentation>
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9281675Z --   found:    java.util.List
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9282433Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/admin/PermissionsTest.java:[1537,48] resetPasswordEmail() in org.keycloak.admin.client.resource.UserResource has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9283751Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/admin/PermissionsTest.java:[1821,64] getRealmLocalizationTexts(java.lang.String,java.lang.Boolean) in org.keycloak.admin.client.resource.RealmLocalizationResource has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9365635Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/authz/admin/AbstractAuthorizationTest.java:[134,25] defaultRoles(java.lang.String...) in org.keycloak.testsuite.util.ClientBuilder has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9367121Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/util/UserBuilder.java:[159,12] setTotp(java.lang.Boolean) in org.keycloak.representations.idm.UserRepresentation has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9368245Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/util/UserBuilder.java:[176,12] setTotp(java.lang.Boolean) in org.keycloak.representations.idm.UserRepresentation has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9369385Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/actions/RequiredActionEmailVerificationTest.java:[860,15] <T>assertThat(T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9370499Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/actions/RequiredActionEmailVerificationTest.java:[899,15] <T>assertThat(T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9371598Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/actions/RequiredActionEmailVerificationTest.java:[943,15] <T>assertThat(T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9372801Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/authz/AuthzClientCredentialsTest.java:[335,25] defaultRoles(java.lang.String...) in org.keycloak.testsuite.util.ClientBuilder has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9373907Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/cluster/AbstractInvalidationClusterTest.java:[178,41] unchecked method invocation: method sort in class java.util.Collections is applied to given types
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9374533Z --   required: java.util.List<T>
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9374824Z --   found:    java.util.List
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9375460Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/cluster/AbstractInvalidationClusterTest.java:[178,42] unchecked conversion
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9376001Z --   required: java.util.List<T>
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9376332Z --   found:    java.util.List
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9377210Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/saml/RoleMapperTest.java:[74,34] unchecked method invocation: method setDefaultClientScopes in class org.keycloak.testsuite.updaters.ClientAttributeUpdater is applied to given types
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9377997Z --   required: java.util.List<java.lang.String>
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9378347Z --   found:    java.util.List
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9378931Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/saml/RoleMapperTest.java:[74,46] unchecked conversion
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9379443Z --   required: java.util.List<java.lang.String>
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9379744Z --   found:    java.util.List
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9380574Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/saml/RoleMapperTest.java:[192,9] <T>assertThat(T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9381548Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/saml/RoleMapperTest.java:[202,9] <T>assertThat(T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9382532Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/saml/AudienceProtocolMappersTest.java:[80,15] <T>assertThat(T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9383664Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/saml/AudienceProtocolMappersTest.java:[82,15] <T>assertThat(T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9384703Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/saml/AudienceProtocolMappersTest.java:[94,15] <T>assertThat(T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9385725Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/saml/AudienceProtocolMappersTest.java:[170,19] <T>assertThat(T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9386787Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/saml/AudienceProtocolMappersTest.java:[198,19] <T>assertThat(T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9387820Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/saml/SamlRedirectBindingTest.java:[52,9] <T>assertThat(T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9388823Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/saml/SamlRedirectBindingTest.java:[53,9] <T>assertThat(T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9389826Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/saml/SamlRedirectBindingTest.java:[54,9] <T>assertThat(T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9390838Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/saml/SamlRedirectBindingTest.java:[55,9] <T>assertThat(T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9391839Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/saml/SamlRedirectBindingTest.java:[72,25] <T>assertThat(T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9392840Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/saml/SamlRedirectBindingTest.java:[73,25] <T>assertThat(T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9393860Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/saml/SamlRedirectBindingTest.java:[75,25] <T>assertThat(T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9394889Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/adapter/servlet/SAMLServletAdapterTest.java:[622,15] <T>assertThat(T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9396024Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/adapter/servlet/SAMLServletAdapterTest.java:[623,15] <T>assertThat(T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9397049Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/adapter/servlet/SAMLServletAdapterTest.java:[624,15] <T>assertThat(T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9398190Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/adapter/servlet/SAMLServletAdapterTest.java:[900,25] <T>assertThat(T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9399211Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/adapter/servlet/SAMLServletAdapterTest.java:[901,25] <T>assertThat(T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9400241Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/adapter/servlet/SAMLServletAdapterTest.java:[921,25] <T>assertThat(T,org.hamcrest.Matcher<? super T>) in org.junit.Assert has been deprecated
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9401230Z -- [INFO] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/adapter/servlet/SAMLServletAdapterTest.java: Some input files additionally use or override a deprecated API.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9402185Z -- [INFO] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/crossdc/AbstractAdminCrossDCTest.java: Some input files additionally use unchecked or unsafe operations.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9402697Z -- [INFO] 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9403236Z -- [INFO] --- shrinkwrap-resolver-maven-plugin:3.1.4:propagate-execution-context (default) @ integration-arquillian-tests-base ---
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9771344Z -- [INFO] 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:40.9772400Z -- [INFO] --- docker-maven-plugin:0.40.3:start (start-db-container) @ integration-arquillian-tests-base ---
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:23:41.9088979Z -- [INFO] DOCKER> Pulling from mssql/server
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:08.0379425Z -- [INFO] DOCKER> Digest: sha256:603a19e6c5be21ca615de325a2fb758827558de0a8c4a9925256a4329b4e41be
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:08.0388973Z -- [INFO] DOCKER> Status: Downloaded newer image for mcr.microsoft.com/mssql/server:2022-latest
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:08.0406895Z -- [INFO] DOCKER> Pulled mcr.microsoft.com/mssql/server:2022-latest in 26 seconds 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:08.1268246Z -- [INFO] DOCKER> [mcr.microsoft.com/mssql/server:2022-latest] "testdb": Start container 3006ac161ee6
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:08.4859077Z -- testdb> SQL Server 2022 will run as non-root by default.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:08.4884754Z -- testdb> This container is running as user mssql.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:08.4885536Z -- testdb> To learn more visit https://go.microsoft.com/fwlink/?linkid=2099216.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:10.8601477Z -- testdb> 2023-05-17 20:24:10.82 Server      Setup step is copying system data file 'C:\templatedata\master.mdf' to '/var/opt/mssql/data/master.mdf'.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:10.8812935Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:10.8814207Z -- 2023-05-17 20:24:10.86 Server      Did not find an existing master data file /var/opt/mssql/data/master.mdf, copying the missing default master and other system database files. If you have moved the database location, but not moved the database files, startup may fail. To repair: shutdown SQL Server, move the master database to configured location, and restart.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:10.8829244Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:10.8886738Z -- 2023-05-17 20:24:10.87 Server      Setup step is copying system data file 'C:\templatedata\mastlog.ldf' to '/var/opt/mssql/data/mastlog.ldf'.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:10.8887876Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:10.8888706Z -- 2023-05-17 20:24:10.88 Server      Setup step is copying system data file 'C:\templatedata\model.mdf' to '/var/opt/mssql/data/model.mdf'.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:10.9016432Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:10.9017589Z -- 2023-05-17 20:24:10.89 Server      Setup step is copying system data file 'C:\templatedata\modellog.ldf' to '/var/opt/mssql/data/modellog.ldf'.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:10.9134937Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:10.9135736Z -- 2023-05-17 20:24:10.90 Server      Setup step is copying system data file 'C:\templatedata\msdbdata.mdf' to '/var/opt/mssql/data/msdbdata.mdf'.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:10.9325315Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:10.9326143Z -- 2023-05-17 20:24:10.92 Server      Setup step is copying system data file 'C:\templatedata\msdblog.ldf' to '/var/opt/mssql/data/msdblog.ldf'.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:10.9370015Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:10.9370887Z -- 2023-05-17 20:24:10.93 Server      Setup step is copying system data file 'C:\templatedata\model_replicatedmaster.mdf' to '/var/opt/mssql/data/model_replicatedmaster.mdf'.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:10.9601735Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:10.9608699Z -- 2023-05-17 20:24:10.95 Server      Setup step is copying system data file 'C:\templatedata\model_replicatedmaster.ldf' to '/var/opt/mssql/data/model_replicatedmaster.ldf'.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:10.9609484Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:10.9610465Z -- 2023-05-17 20:24:10.95 Server      Setup step is copying system data file 'C:\templatedata\model_msdbdata.mdf' to '/var/opt/mssql/data/model_msdbdata.mdf'.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:10.9786166Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:10.9787044Z -- 2023-05-17 20:24:10.97 Server      Setup step is copying system data file 'C:\templatedata\model_msdblog.ldf' to '/var/opt/mssql/data/model_msdblog.ldf'.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:11.0176104Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:11.0212339Z -- 2023-05-17 20:24:11.00 Server      Microsoft SQL Server 2022 (RTM-CU4) (KB5026717) - 16.0.4035.4 (X64)
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:11.0225689Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:11.0226534Z -- 	May  1 2023 10:34:45
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:11.0234171Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:11.0245335Z -- 	Copyright (C) 2022 Microsoft Corporation
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:11.0246728Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:11.0247839Z -- 	Developer Edition (64-bit) on Linux (Ubuntu 20.04.6 LTS) <X64>
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:11.0248323Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:11.0261704Z -- 2023-05-17 20:24:11.00 Server      UTC adjustment: 0:00
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:11.0263417Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:11.0276002Z -- 2023-05-17 20:24:11.00 Server      (c) Microsoft Corporation.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:11.0288251Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:11.0289407Z -- 2023-05-17 20:24:11.01 Server      All rights reserved.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:11.0298913Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:11.0318670Z -- 2023-05-17 20:24:11.01 Server      Server process ID is 416.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:11.0319549Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:11.0320294Z -- 2023-05-17 20:24:11.01 Server      Logging SQL Server messages in file '/var/opt/mssql/log/errorlog'.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:11.0322049Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:11.0322738Z -- 2023-05-17 20:24:11.01 Server      Registry startup parameters:
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:11.0384681Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:11.0385431Z -- 	 -d /var/opt/mssql/data/master.mdf
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:11.0389079Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:11.0390013Z -- 	 -l /var/opt/mssql/data/mastlog.ldf
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:11.0391687Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:11.0392270Z -- 	 -e /var/opt/mssql/log/errorlog
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:11.0393173Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:11.0394235Z -- 2023-05-17 20:24:11.01 Server      SQL Server detected 1 sockets with 2 cores per socket and 2 logical processors per socket, 2 total logical processors; using 2 logical processors based on SQL Server licensing. This is an informational message; no user action is required.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:11.0396498Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:11.0398443Z -- 2023-05-17 20:24:11.02 Server      SQL Server is starting at normal priority base (=7). This is an informational message only. No user action is required.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:11.0400186Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:11.0400965Z -- 2023-05-17 20:24:11.02 Server      Detected 5555 MB of RAM. This is an informational message; no user action is required.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:11.0401852Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:11.0402556Z -- 2023-05-17 20:24:11.02 Server      Using conventional memory in the memory manager.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:11.0404192Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:11.0405812Z -- 2023-05-17 20:24:11.02 Server      Detected pause instruction latency: 76 cycles.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:11.0407384Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:11.0408067Z -- 2023-05-17 20:24:11.02 Server      Spin divider value used: 1
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:11.0409754Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:11.0410461Z -- 2023-05-17 20:24:11.02 Server      Page exclusion bitmap is enabled.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:11.0636443Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:11.0637211Z -- 2023-05-17 20:24:11.05 Server      Buffer pool extension is not supported on Linux platform.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:11.0746997Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:11.0747655Z -- 2023-05-17 20:24:11.06 Server      Buffer Pool: Allocating 1048576 bytes for 800703 hashPages.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:11.2474172Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:11.2475383Z -- 2023-05-17 20:24:11.24 Server      Buffer pool extension is already disabled. No action is necessary.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:11.7867944Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:11.7876719Z -- 2023-05-17 20:24:11.78 Server      Installing Client TLS certificates to the store.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:11.7988413Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:11.7989597Z -- 2023-05-17 20:24:11.79 Server      Error searching first file in /var/opt/mssql/security/ca-certificates: 3(The system cannot find the path specified.)
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:11.8034653Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:11.8035248Z -- 2023-05-17 20:24:11.79 Server      CPU vectorization level(s) detected:  SSE SSE2 SSE3 SSSE3 SSE41 SSE42 AVX AVX2 POPCNT BMI1 BMI2 AVX512 (F CD BW DQ VL)
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:11.8606158Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:11.8608335Z -- 2023-05-17 20:24:11.84 Server      Successfully initialized the TLS configuration. Allowed TLS protocol versions are ['1.0 1.1 1.2']. Allowed TLS ciphers are ['ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA:!DHE-RSA-AES256-GCM-SHA384:!DHE-RSA-AES128-GCM-SHA256:!DHE-RSA-AES256-SHA:!DHE-RSA-AES128-SHA'].
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:11.8853373Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:11.8854348Z -- 2023-05-17 20:24:11.87 Server      Query Store settings initialized with enabled = 1,
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:11.9036673Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:11.9037365Z -- 2023-05-17 20:24:11.89 Server      The maximum number of dedicated administrator connections for this instance is '1'
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:11.9165645Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:11.9166483Z -- 2023-05-17 20:24:11.90 Server      Node configuration: node 0: CPU mask: 0x0000000000000003:0 Active CPU mask: 0x0000000000000003:0. This message provides a description of the NUMA configuration for this computer. This is an informational message only. No user action is required.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:11.9395347Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:11.9719611Z -- 2023-05-17 20:24:11.92 Server      Using dynamic lock allocation.  Initial allocation of 2500 Lock blocks and 5000 Lock Owner blocks per node.  This is an informational message only.  No user action is required.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:11.9720166Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:11.9720792Z -- 2023-05-17 20:24:11.96 Server      In-Memory OLTP initialized on lowend machine.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:11.9966119Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:11.9966671Z -- 2023-05-17 20:24:11.98 Server      [INFO] Created Extended Events session 'hkenginexesession'
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.0106709Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.0108923Z -- 2023-05-17 20:24:11.98 Server      Database Instant File Initialization: enabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.0169906Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.0170478Z -- ForceFlush is enabled for this instance.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.0277517Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.0278175Z -- 2023-05-17 20:24:12.01 Server      Total Log Writer threads: 1, Node CPUs: 1, Nodes: 1, Log Writer threads per CPU: 1, Log Writer threads per Node: 2
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.0433982Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.0434730Z -- 2023-05-17 20:24:12.03 Server      clflushopt is selected for pmem flush operation.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.0534829Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.0535490Z -- 2023-05-17 20:24:12.04 Server      Software Usage Metrics is disabled.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.0670869Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.0672144Z -- 2023-05-17 20:24:12.05 Server      CLR version v4.0.30319 loaded.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.0753783Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.0755271Z -- 2023-05-17 20:24:12.06 spid14s     [1]. Feature Status: PVS: 0. CTR: 0. ConcurrentPFSUpdate: 1. ConcurrentGAMUpdate: 1. ConcurrentSGAMUpdate: 1, CleanupUnderUserTransaction: 0. TranLevelPVS: 0
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.0862066Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.0863231Z -- 2023-05-17 20:24:12.07 spid14s     Starting up database 'master'.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.1375741Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.1377448Z -- ForceFlush feature is enabled for log durability.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.1721441Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.1723441Z -- 2023-05-17 20:24:12.15 spid14s     The tail of the log for database master is being rewritten to match the new sector size of 4096 bytes.  1024 bytes at offset 396288 in file /var/opt/mssql/data/mastlog.ldf will be written.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.2821038Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.2823533Z -- 2023-05-17 20:24:12.27 spid14s     Converting database 'master' from version 927 to the current version 957.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.2861082Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.2863979Z -- 2023-05-17 20:24:12.27 spid14s     Database 'master' running the upgrade step from version 927 to version 928.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.3201235Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.3201822Z -- 2023-05-17 20:24:12.30 spid14s     Database 'master' running the upgrade step from version 928 to version 929.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.3538895Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.3539875Z -- 2023-05-17 20:24:12.34 spid14s     Database 'master' running the upgrade step from version 929 to version 930.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.3686888Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.3687740Z -- 2023-05-17 20:24:12.35 spid14s     Database 'master' running the upgrade step from version 930 to version 931.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.3820465Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.3821033Z -- 2023-05-17 20:24:12.36 spid14s     Database 'master' running the upgrade step from version 931 to version 932.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.3910587Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.3911381Z -- 2023-05-17 20:24:12.37 spid14s     Database 'master' running the upgrade step from version 932 to version 933.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.4121563Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.4122805Z -- 2023-05-17 20:24:12.40 spid14s     Database 'master' running the upgrade step from version 933 to version 934.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.4254486Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.4255155Z -- 2023-05-17 20:24:12.41 spid14s     Database 'master' running the upgrade step from version 934 to version 935.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.4525536Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.4526646Z -- 2023-05-17 20:24:12.43 spid14s     Database 'master' running the upgrade step from version 935 to version 936.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.4615468Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.4616314Z -- 2023-05-17 20:24:12.45 spid14s     Database 'master' running the upgrade step from version 936 to version 937.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.4706992Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.4707787Z -- 2023-05-17 20:24:12.45 spid14s     Database 'master' running the upgrade step from version 937 to version 938.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.4749229Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.4749879Z -- 2023-05-17 20:24:12.46 Server      Common language runtime (CLR) functionality initialized.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.4841038Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.4841559Z -- 2023-05-17 20:24:12.47 spid14s     Database 'master' running the upgrade step from version 938 to version 939.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.4959878Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.4960731Z -- 2023-05-17 20:24:12.48 spid14s     Database 'master' running the upgrade step from version 939 to version 940.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.5028221Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.5028987Z -- 2023-05-17 20:24:12.49 spid14s     Database 'master' running the upgrade step from version 940 to version 941.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.5150866Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.5151616Z -- 2023-05-17 20:24:12.50 spid14s     Database 'master' running the upgrade step from version 941 to version 942.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.5204796Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.5205500Z -- 2023-05-17 20:24:12.51 spid14s     Database 'master' running the upgrade step from version 942 to version 943.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.5438580Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.5439310Z -- 2023-05-17 20:24:12.53 spid14s     Database 'master' running the upgrade step from version 943 to version 944.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.5511169Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.5511962Z -- 2023-05-17 20:24:12.54 spid14s     Database 'master' running the upgrade step from version 944 to version 945.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.5637553Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.5638320Z -- 2023-05-17 20:24:12.55 spid14s     Database 'master' running the upgrade step from version 945 to version 946.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.5741327Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.5742248Z -- 2023-05-17 20:24:12.56 spid14s     Database 'master' running the upgrade step from version 946 to version 947.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.5812398Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.5813111Z -- 2023-05-17 20:24:12.57 spid14s     Database 'master' running the upgrade step from version 947 to version 948.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.5880924Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.5881549Z -- 2023-05-17 20:24:12.57 spid14s     Database 'master' running the upgrade step from version 948 to version 949.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.5978814Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.5982167Z -- 2023-05-17 20:24:12.59 spid14s     Database 'master' running the upgrade step from version 949 to version 950.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.6013629Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.6014477Z -- 2023-05-17 20:24:12.59 spid14s     Database 'master' running the upgrade step from version 950 to version 951.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.6164108Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.6165301Z -- 2023-05-17 20:24:12.61 spid14s     Database 'master' running the upgrade step from version 951 to version 952.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.6229398Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.6229993Z -- 2023-05-17 20:24:12.61 spid14s     Database 'master' running the upgrade step from version 952 to version 953.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.6329558Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.6330073Z -- 2023-05-17 20:24:12.62 spid14s     Database 'master' running the upgrade step from version 953 to version 954.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.6391463Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.6392056Z -- 2023-05-17 20:24:12.63 spid14s     Database 'master' running the upgrade step from version 954 to version 955.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.6481641Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.6482366Z -- 2023-05-17 20:24:12.63 spid14s     Database 'master' running the upgrade step from version 955 to version 956.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.6667936Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.6668567Z -- 2023-05-17 20:24:12.65 spid14s     Database 'master' running the upgrade step from version 956 to version 957.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.7522958Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.7523746Z -- 2023-05-17 20:24:12.73 spid16s     [32767]. Feature Status: PVS: 0. CTR: 0. ConcurrentPFSUpdate: 1. ConcurrentGAMUpdate: 1. ConcurrentSGAMUpdate: 1, CleanupUnderUserTransaction: 0. TranLevelPVS: 0
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.7680318Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.7680835Z -- 2023-05-17 20:24:12.75 spid16s     Starting up database 'mssqlsystemresource'.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.7788307Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.7788782Z -- 2023-05-17 20:24:12.77 spid23s     Password policy update was successful.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.7946914Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.7947787Z -- 2023-05-17 20:24:12.78 spid16s     The resource database build version is 16.00.4035. This is an informational message only. No user action is required.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.8234557Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.8236163Z -- 2023-05-17 20:24:12.80 spid14s     [32762]. Feature Status: PVS: 0. CTR: 0. ConcurrentPFSUpdate: 1. ConcurrentGAMUpdate: 1. ConcurrentSGAMUpdate: 1, CleanupUnderUserTransaction: 0. TranLevelPVS: 0
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.8314969Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.8315427Z -- 2023-05-17 20:24:12.82 spid14s     Starting up database 'model_replicatedmaster'.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.8633986Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.8634705Z -- 2023-05-17 20:24:12.84 spid16s     [3]. Feature Status: PVS: 0. CTR: 0. ConcurrentPFSUpdate: 1. ConcurrentGAMUpdate: 1. ConcurrentSGAMUpdate: 1, CleanupUnderUserTransaction: 0. TranLevelPVS: 0
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.8722589Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.8722980Z -- 2023-05-17 20:24:12.86 spid16s     Starting up database 'model'.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.9254812Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.9255662Z -- 2023-05-17 20:24:12.90 spid14s     The tail of the log for database model_replicatedmaster is being rewritten to match the new sector size of 4096 bytes.  2560 bytes at offset 99840 in file /var/opt/mssql/data/model_replicatedmaster.ldf will be written.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.9392074Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.9392806Z -- 2023-05-17 20:24:12.91 spid16s     The tail of the log for database model is being rewritten to match the new sector size of 4096 bytes.  2048 bytes at offset 75776 in file /var/opt/mssql/data/modellog.ldf will be written.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.9650652Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.9651262Z -- 2023-05-17 20:24:12.95 spid14s     Converting database 'model_replicatedmaster' from version 927 to the current version 957.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.9718309Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.9718879Z -- 2023-05-17 20:24:12.96 spid14s     Database 'model_replicatedmaster' running the upgrade step from version 927 to version 928.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.9762648Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.9763235Z -- 2023-05-17 20:24:12.96 spid16s     Converting database 'model' from version 927 to the current version 957.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.9800579Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.9801084Z -- 2023-05-17 20:24:12.97 spid16s     Database 'model' running the upgrade step from version 927 to version 928.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.9841994Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.9842568Z -- 2023-05-17 20:24:12.97 spid14s     Database 'model_replicatedmaster' running the upgrade step from version 928 to version 929.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.9979927Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:12.9980482Z -- 2023-05-17 20:24:12.99 spid16s     Database 'model' running the upgrade step from version 928 to version 929.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.0227576Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.0228235Z -- 2023-05-17 20:24:13.01 spid14s     Database 'model_replicatedmaster' running the upgrade step from version 929 to version 930.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.0300218Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.0300775Z -- 2023-05-17 20:24:13.02 spid16s     Database 'model' running the upgrade step from version 929 to version 930.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.0452955Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.0453513Z -- 2023-05-17 20:24:13.03 spid16s     Database 'model' running the upgrade step from version 930 to version 931.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.0550495Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.0551086Z -- 2023-05-17 20:24:13.03 spid14s     Database 'model_replicatedmaster' running the upgrade step from version 930 to version 931.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.0580510Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.0581043Z -- 2023-05-17 20:24:13.04 spid16s     Database 'model' running the upgrade step from version 931 to version 932.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.0624380Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.0625032Z -- 2023-05-17 20:24:13.05 spid16s     Database 'model' running the upgrade step from version 932 to version 933.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.0642729Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.0643245Z -- 2023-05-17 20:24:13.05 spid14s     Database 'model_replicatedmaster' running the upgrade step from version 931 to version 932.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.0715145Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.0715651Z -- 2023-05-17 20:24:13.06 spid16s     Database 'model' running the upgrade step from version 933 to version 934.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.0744106Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.0744629Z -- 2023-05-17 20:24:13.06 spid14s     Database 'model_replicatedmaster' running the upgrade step from version 932 to version 933.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.0788263Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.0789065Z -- 2023-05-17 20:24:13.07 spid16s     Database 'model' running the upgrade step from version 934 to version 935.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.0852837Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.0853554Z -- 2023-05-17 20:24:13.08 spid14s     Database 'model_replicatedmaster' running the upgrade step from version 933 to version 934.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.0898123Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.0898627Z -- 2023-05-17 20:24:13.08 spid16s     Database 'model' running the upgrade step from version 935 to version 936.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.0981736Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.0982242Z -- 2023-05-17 20:24:13.08 spid14s     Database 'model_replicatedmaster' running the upgrade step from version 934 to version 935.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.1026095Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.1026571Z -- 2023-05-17 20:24:13.09 spid16s     Database 'model' running the upgrade step from version 936 to version 937.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.1070809Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.1071321Z -- 2023-05-17 20:24:13.10 spid14s     Database 'model_replicatedmaster' running the upgrade step from version 935 to version 936.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.1113221Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.1113692Z -- 2023-05-17 20:24:13.10 spid16s     Database 'model' running the upgrade step from version 937 to version 938.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.1147243Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.1147749Z -- 2023-05-17 20:24:13.11 spid14s     Database 'model_replicatedmaster' running the upgrade step from version 936 to version 937.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.1204263Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.1204932Z -- 2023-05-17 20:24:13.11 spid16s     Database 'model' running the upgrade step from version 938 to version 939.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.1244912Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.1245410Z -- 2023-05-17 20:24:13.11 spid14s     Database 'model_replicatedmaster' running the upgrade step from version 937 to version 938.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.1288646Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.1289161Z -- 2023-05-17 20:24:13.12 spid16s     Database 'model' running the upgrade step from version 939 to version 940.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.1355361Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.1355915Z -- 2023-05-17 20:24:13.12 spid14s     Database 'model_replicatedmaster' running the upgrade step from version 938 to version 939.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.1411332Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.1411865Z -- 2023-05-17 20:24:13.13 spid16s     Database 'model' running the upgrade step from version 940 to version 941.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.1443233Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.1443732Z -- 2023-05-17 20:24:13.13 spid14s     Database 'model_replicatedmaster' running the upgrade step from version 939 to version 940.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.1507286Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.1507781Z -- 2023-05-17 20:24:13.14 spid16s     Database 'model' running the upgrade step from version 941 to version 942.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.1529102Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.1529638Z -- 2023-05-17 20:24:13.14 spid14s     Database 'model_replicatedmaster' running the upgrade step from version 940 to version 941.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.1597579Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.1598121Z -- 2023-05-17 20:24:13.15 spid14s     Database 'model_replicatedmaster' running the upgrade step from version 941 to version 942.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.1646004Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.1646526Z -- 2023-05-17 20:24:13.15 spid16s     Database 'model' running the upgrade step from version 942 to version 943.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.1709656Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.1710486Z -- 2023-05-17 20:24:13.16 spid14s     Database 'model_replicatedmaster' running the upgrade step from version 942 to version 943.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.2076599Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.2077158Z -- 2023-05-17 20:24:13.20 spid16s     Database 'model' running the upgrade step from version 943 to version 944.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.2153428Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.2153951Z -- 2023-05-17 20:24:13.21 spid16s     Database 'model' running the upgrade step from version 944 to version 945.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.2347226Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.2347842Z -- 2023-05-17 20:24:13.22 spid14s     Database 'model_replicatedmaster' running the upgrade step from version 943 to version 944.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.2417273Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.2417804Z -- 2023-05-17 20:24:13.23 spid16s     Database 'model' running the upgrade step from version 945 to version 946.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.2456164Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.2456695Z -- 2023-05-17 20:24:13.23 spid14s     Database 'model_replicatedmaster' running the upgrade step from version 944 to version 945.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.2603425Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.2603953Z -- 2023-05-17 20:24:13.25 spid16s     Database 'model' running the upgrade step from version 946 to version 947.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.2609319Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.2609833Z -- 2023-05-17 20:24:13.25 spid14s     Database 'model_replicatedmaster' running the upgrade step from version 945 to version 946.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.2618656Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.2619120Z -- 2023-05-17 20:24:13.25 spid16s     Database 'model' running the upgrade step from version 947 to version 948.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.2685430Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.2685946Z -- 2023-05-17 20:24:13.26 spid16s     Database 'model' running the upgrade step from version 948 to version 949.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.2765155Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.2765921Z -- 2023-05-17 20:24:13.27 spid14s     Database 'model_replicatedmaster' running the upgrade step from version 946 to version 947.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.2818206Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.2819272Z -- 2023-05-17 20:24:13.27 spid16s     Database 'model' running the upgrade step from version 949 to version 950.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.2865365Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.2866414Z -- 2023-05-17 20:24:13.28 spid14s     Database 'model_replicatedmaster' running the upgrade step from version 947 to version 948.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.2930122Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.2931051Z -- 2023-05-17 20:24:13.28 spid16s     Database 'model' running the upgrade step from version 950 to version 951.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.3003984Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.3004965Z -- 2023-05-17 20:24:13.29 spid14s     Database 'model_replicatedmaster' running the upgrade step from version 948 to version 949.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.3098234Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.3099447Z -- 2023-05-17 20:24:13.30 spid14s     Database 'model_replicatedmaster' running the upgrade step from version 949 to version 950.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.3153287Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.3154322Z -- 2023-05-17 20:24:13.31 spid14s     Database 'model_replicatedmaster' running the upgrade step from version 950 to version 951.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.3197118Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.3197812Z -- 2023-05-17 20:24:13.31 spid16s     Database 'model' running the upgrade step from version 951 to version 952.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.3267246Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.3267943Z -- 2023-05-17 20:24:13.32 spid16s     Database 'model' running the upgrade step from version 952 to version 953.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.3384230Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.3384945Z -- 2023-05-17 20:24:13.33 spid16s     Database 'model' running the upgrade step from version 953 to version 954.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.3432930Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.3433720Z -- 2023-05-17 20:24:13.33 spid14s     Database 'model_replicatedmaster' running the upgrade step from version 951 to version 952.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.3483225Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.3483902Z -- 2023-05-17 20:24:13.34 spid16s     Database 'model' running the upgrade step from version 954 to version 955.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.3550899Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.3551603Z -- 2023-05-17 20:24:13.34 spid14s     Database 'model_replicatedmaster' running the upgrade step from version 952 to version 953.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.3646207Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.3646915Z -- 2023-05-17 20:24:13.35 spid16s     Database 'model' running the upgrade step from version 955 to version 956.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.3749104Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.3749939Z -- 2023-05-17 20:24:13.36 spid14s     Database 'model_replicatedmaster' running the upgrade step from version 953 to version 954.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.3803478Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.3804247Z -- 2023-05-17 20:24:13.37 spid14s     Database 'model_replicatedmaster' running the upgrade step from version 954 to version 955.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.3887921Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.3888757Z -- 2023-05-17 20:24:13.38 spid16s     Database 'model' running the upgrade step from version 956 to version 957.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.3925999Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.3926698Z -- 2023-05-17 20:24:13.38 spid14s     Database 'model_replicatedmaster' running the upgrade step from version 955 to version 956.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.4148821Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.4149651Z -- 2023-05-17 20:24:13.40 spid14s     Database 'model_replicatedmaster' running the upgrade step from version 956 to version 957.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.4756572Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.4757554Z -- 2023-05-17 20:24:13.46 spid14s     [32761]. Feature Status: PVS: 0. CTR: 0. ConcurrentPFSUpdate: 1. ConcurrentGAMUpdate: 1. ConcurrentSGAMUpdate: 1, CleanupUnderUserTransaction: 0. TranLevelPVS: 0
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.4786470Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.4787097Z -- 2023-05-17 20:24:13.47 spid14s     Starting up database 'model_msdb'.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.5588563Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.5589756Z -- 2023-05-17 20:24:13.55 spid14s     Converting database 'model_msdb' from version 927 to the current version 957.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.5624336Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.5626553Z -- 2023-05-17 20:24:13.55 spid14s     Database 'model_msdb' running the upgrade step from version 927 to version 928.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.5736670Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.5738829Z -- 2023-05-17 20:24:13.56 spid14s     Database 'model_msdb' running the upgrade step from version 928 to version 929.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.6083193Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.6083743Z -- 2023-05-17 20:24:13.60 spid14s     Database 'model_msdb' running the upgrade step from version 929 to version 930.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.6230733Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.6231265Z -- 2023-05-17 20:24:13.61 spid14s     Database 'model_msdb' running the upgrade step from version 930 to version 931.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.6313206Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.6313873Z -- 2023-05-17 20:24:13.62 spid14s     Database 'model_msdb' running the upgrade step from version 931 to version 932.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.6435354Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.6435894Z -- 2023-05-17 20:24:13.63 spid14s     Database 'model_msdb' running the upgrade step from version 932 to version 933.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.6530608Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.6531127Z -- 2023-05-17 20:24:13.64 spid14s     Database 'model_msdb' running the upgrade step from version 933 to version 934.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.6618341Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.6618826Z -- 2023-05-17 20:24:13.65 spid14s     Database 'model_msdb' running the upgrade step from version 934 to version 935.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.6671989Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.6672464Z -- 2023-05-17 20:24:13.66 spid14s     Database 'model_msdb' running the upgrade step from version 935 to version 936.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.6728056Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.6728619Z -- 2023-05-17 20:24:13.66 spid14s     Database 'model_msdb' running the upgrade step from version 936 to version 937.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.6830148Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.6830753Z -- 2023-05-17 20:24:13.67 spid14s     Database 'model_msdb' running the upgrade step from version 937 to version 938.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.6896063Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.6896557Z -- 2023-05-17 20:24:13.68 spid14s     Database 'model_msdb' running the upgrade step from version 938 to version 939.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.6958087Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.6958595Z -- 2023-05-17 20:24:13.69 spid14s     Database 'model_msdb' running the upgrade step from version 939 to version 940.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.7019272Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.7019758Z -- 2023-05-17 20:24:13.69 spid14s     Database 'model_msdb' running the upgrade step from version 940 to version 941.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.7087308Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.7087871Z -- 2023-05-17 20:24:13.70 spid14s     Database 'model_msdb' running the upgrade step from version 941 to version 942.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.7125719Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.7126212Z -- 2023-05-17 20:24:13.71 spid14s     Database 'model_msdb' running the upgrade step from version 942 to version 943.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.7448624Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.7449201Z -- 2023-05-17 20:24:13.74 spid14s     Database 'model_msdb' running the upgrade step from version 943 to version 944.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.7555280Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.7555824Z -- 2023-05-17 20:24:13.74 spid14s     Database 'model_msdb' running the upgrade step from version 944 to version 945.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.7759915Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.7760462Z -- 2023-05-17 20:24:13.77 spid14s     Database 'model_msdb' running the upgrade step from version 945 to version 946.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.7836668Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.7837162Z -- 2023-05-17 20:24:13.77 spid14s     Database 'model_msdb' running the upgrade step from version 946 to version 947.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.7902227Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.7902809Z -- 2023-05-17 20:24:13.78 spid14s     Database 'model_msdb' running the upgrade step from version 947 to version 948.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.7980149Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.7980661Z -- 2023-05-17 20:24:13.79 spid14s     Database 'model_msdb' running the upgrade step from version 948 to version 949.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.8082581Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.8083097Z -- 2023-05-17 20:24:13.80 spid14s     Database 'model_msdb' running the upgrade step from version 949 to version 950.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.8146250Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.8146763Z -- 2023-05-17 20:24:13.80 spid14s     Database 'model_msdb' running the upgrade step from version 950 to version 951.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.8356550Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.8357113Z -- 2023-05-17 20:24:13.83 spid14s     Database 'model_msdb' running the upgrade step from version 951 to version 952.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.8420614Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.8421168Z -- 2023-05-17 20:24:13.83 spid14s     Database 'model_msdb' running the upgrade step from version 952 to version 953.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.8556948Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.8557499Z -- 2023-05-17 20:24:13.85 spid14s     Database 'model_msdb' running the upgrade step from version 953 to version 954.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.8662365Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.8662868Z -- 2023-05-17 20:24:13.86 spid14s     Database 'model_msdb' running the upgrade step from version 954 to version 955.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.8742581Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.8743074Z -- 2023-05-17 20:24:13.86 spid14s     Database 'model_msdb' running the upgrade step from version 955 to version 956.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.9064796Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.9065331Z -- 2023-05-17 20:24:13.89 spid14s     Database 'model_msdb' running the upgrade step from version 956 to version 957.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.9664527Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.9665017Z -- 2023-05-17 20:24:13.95 spid14s     Resource governor reconfiguration succeeded.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.9688172Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.9688599Z -- 2023-05-17 20:24:13.96 spid28s     External governance manager initialized
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.9719841Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.9720272Z -- 2023-05-17 20:24:13.96 spid28s     Attribute synchronization manager initialized
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.9805593Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.9806122Z -- 2023-05-17 20:24:13.97 spid14s     SQL Server Audit is starting the audits. This is an informational message. No user action is required.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.9895910Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.9896481Z -- 2023-05-17 20:24:13.97 spid14s     SQL Server Audit has started the audits. This is an informational message. No user action is required.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.9987864Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:13.9988300Z -- 2023-05-17 20:24:13.99 spid14s     XE session 'system_health' started.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.0427536Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.0428043Z -- 2023-05-17 20:24:14.03 spid14s     SQL Trace ID 1 was started by login "sa".
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.0556876Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.0557461Z -- 2023-05-17 20:24:14.05 spid14s     Server name is '3006ac161ee6'. This is an informational message only. No user action is required.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.0905534Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.0905947Z -- 2023-05-17 20:24:14.08 spid16s     Clearing tempdb database.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.1017331Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.1017939Z -- 2023-05-17 20:24:14.08 spid36s     Always On: The availability replica manager is starting. This is an informational message only. No user action is required.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.1145809Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.1146516Z -- 2023-05-17 20:24:14.09 spid38s     [4]. Feature Status: PVS: 0. CTR: 0. ConcurrentPFSUpdate: 1. ConcurrentGAMUpdate: 1. ConcurrentSGAMUpdate: 1, CleanupUnderUserTransaction: 0. TranLevelPVS: 0
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.1285332Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.1286025Z -- 2023-05-17 20:24:14.10 spid36s     Always On: The availability replica manager is waiting for the instance of SQL Server to allow client connections. This is an informational message only. No user action is required.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.1333451Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.1333857Z -- 2023-05-17 20:24:14.11 spid38s     Starting up database 'msdb'.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.2328517Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.2329086Z -- 2023-05-17 20:24:14.22 spid38s     Converting database 'msdb' from version 927 to the current version 957.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.2392969Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.2393520Z -- 2023-05-17 20:24:14.23 spid38s     Database 'msdb' running the upgrade step from version 927 to version 928.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.2639155Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.2639697Z -- 2023-05-17 20:24:14.26 spid38s     Database 'msdb' running the upgrade step from version 928 to version 929.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.3048706Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.3049411Z -- 2023-05-17 20:24:14.29 spid16s     [2]. Feature Status: PVS: 0. CTR: 0. ConcurrentPFSUpdate: 1. ConcurrentGAMUpdate: 1. ConcurrentSGAMUpdate: 1, CleanupUnderUserTransaction: 0. TranLevelPVS: 0
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.3108868Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.3109368Z -- 2023-05-17 20:24:14.30 spid16s     Starting up database 'tempdb'.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.3227226Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.3227742Z -- 2023-05-17 20:24:14.31 spid38s     Database 'msdb' running the upgrade step from version 929 to version 930.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.3423445Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.3423998Z -- 2023-05-17 20:24:14.33 spid38s     Database 'msdb' running the upgrade step from version 930 to version 931.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.3546371Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.3546894Z -- 2023-05-17 20:24:14.34 spid38s     Database 'msdb' running the upgrade step from version 931 to version 932.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.3647188Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.3647705Z -- 2023-05-17 20:24:14.35 spid38s     Database 'msdb' running the upgrade step from version 932 to version 933.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.3878935Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.3879502Z -- 2023-05-17 20:24:14.37 spid38s     Database 'msdb' running the upgrade step from version 933 to version 934.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.3946487Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.3947053Z -- 2023-05-17 20:24:14.38 spid38s     Database 'msdb' running the upgrade step from version 934 to version 935.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.3995338Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.3995810Z -- 2023-05-17 20:24:14.39 spid38s     Database 'msdb' running the upgrade step from version 935 to version 936.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.4034596Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.4035126Z -- 2023-05-17 20:24:14.39 spid38s     Database 'msdb' running the upgrade step from version 936 to version 937.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.4074952Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.4075428Z -- 2023-05-17 20:24:14.40 spid38s     Database 'msdb' running the upgrade step from version 937 to version 938.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.4117977Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.4118444Z -- 2023-05-17 20:24:14.40 spid38s     Database 'msdb' running the upgrade step from version 938 to version 939.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.4192676Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.4193623Z -- 2023-05-17 20:24:14.41 spid16s     The tempdb database has 1 data file(s).
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.4223353Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.4224052Z -- 2023-05-17 20:24:14.41 spid38s     Database 'msdb' running the upgrade step from version 939 to version 940.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.4313220Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.4313679Z -- 2023-05-17 20:24:14.42 spid39s     The Service Broker endpoint is in disabled or stopped state.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.4376731Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.4377203Z -- 2023-05-17 20:24:14.43 spid39s     The Database Mirroring endpoint is in disabled or stopped state.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.4412009Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.4412523Z -- 2023-05-17 20:24:14.43 spid38s     Database 'msdb' running the upgrade step from version 940 to version 941.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.4445287Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.4445750Z -- 2023-05-17 20:24:14.44 spid38s     Database 'msdb' running the upgrade step from version 941 to version 942.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.4480908Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.4481395Z -- 2023-05-17 20:24:14.44 spid38s     Database 'msdb' running the upgrade step from version 942 to version 943.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.4617650Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.4618080Z -- 2023-05-17 20:24:14.45 spid39s     Service Broker manager has started.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.4772553Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.4773043Z -- 2023-05-17 20:24:14.47 spid38s     Database 'msdb' running the upgrade step from version 943 to version 944.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.4805192Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.4805661Z -- 2023-05-17 20:24:14.47 spid38s     Database 'msdb' running the upgrade step from version 944 to version 945.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.4919422Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.4919902Z -- 2023-05-17 20:24:14.48 spid38s     Database 'msdb' running the upgrade step from version 945 to version 946.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.4960682Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.4961161Z -- 2023-05-17 20:24:14.49 spid38s     Database 'msdb' running the upgrade step from version 946 to version 947.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.5032622Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.5033096Z -- 2023-05-17 20:24:14.50 spid38s     Database 'msdb' running the upgrade step from version 947 to version 948.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.5057500Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.5057956Z -- 2023-05-17 20:24:14.50 spid38s     Database 'msdb' running the upgrade step from version 948 to version 949.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.5104829Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.5105310Z -- 2023-05-17 20:24:14.50 spid38s     Database 'msdb' running the upgrade step from version 949 to version 950.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.5140532Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.5140995Z -- 2023-05-17 20:24:14.51 spid38s     Database 'msdb' running the upgrade step from version 950 to version 951.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.5267440Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.5267940Z -- 2023-05-17 20:24:14.52 spid38s     Database 'msdb' running the upgrade step from version 951 to version 952.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.5298490Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.5298964Z -- 2023-05-17 20:24:14.52 spid38s     Database 'msdb' running the upgrade step from version 952 to version 953.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.5359401Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.5359903Z -- 2023-05-17 20:24:14.53 spid38s     Database 'msdb' running the upgrade step from version 953 to version 954.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.5438702Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.5439193Z -- 2023-05-17 20:24:14.53 spid23s     A self-generated certificate was successfully loaded for encryption.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.5468982Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.5469461Z -- 2023-05-17 20:24:14.53 spid38s     Database 'msdb' running the upgrade step from version 954 to version 955.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.5554123Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.5554587Z -- 2023-05-17 20:24:14.54 spid23s     Server is listening on [ 'any' <ipv6> 1433] accept sockets 1.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.5558529Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.5558990Z -- 2023-05-17 20:24:14.54 spid38s     Database 'msdb' running the upgrade step from version 955 to version 956.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.5590521Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.5590965Z -- 2023-05-17 20:24:14.55 spid23s     Server is listening on [ 'any' <ipv4> 1433] accept sockets 1.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.5703418Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.5704090Z -- 2023-05-17 20:24:14.56 Server      Server is listening on [ ::1 <ipv6> 1434] accept sockets 1.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.5713798Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.5714249Z -- 2023-05-17 20:24:14.56 Server      Server is listening on [ 127.0.0.1 <ipv4> 1434] accept sockets 1.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.5866259Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.5866798Z -- 2023-05-17 20:24:14.58 Server      Dedicated admin connection support was established for listening locally on port 1434.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.5891791Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.5892406Z -- 2023-05-17 20:24:14.58 spid23s     Server is listening on [ ::1 <ipv6> 1431] accept sockets 1.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.5900272Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.5900766Z -- 2023-05-17 20:24:14.58 spid23s     Server is listening on [ 127.0.0.1 <ipv4> 1431] accept sockets 1.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.5922180Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.5923007Z -- 2023-05-17 20:24:14.58 spid23s     SQL Server is now ready for client connections. This is an informational message; no user action is required.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.5991112Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.5991684Z -- 2023-05-17 20:24:14.59 spid38s     Database 'msdb' running the upgrade step from version 956 to version 957.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.6251603Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.6304222Z -- 2023-05-17 20:24:14.62 spid14s     Recovery is complete. This is an informational message only. No user action is required.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.7294244Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.7294848Z -- 2023-05-17 20:24:14.72 spid32s     The default language (LCID 0) has been set for engine and full-text services.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.7698967Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:24:14.7699580Z -- 2023-05-17 20:24:14.75 spid32s     The tempdb database has 2 data file(s).
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:29:13.7512536Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:29:13.7513094Z -- 2023-05-17 20:29:13.74 spid51      XE session 'telemetry_xevents' started.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:29:24.6286362Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:29:24.6287049Z -- 2023-05-17 20:29:24.62 spid51      Attempting to load library 'xplog70.dll' into memory. This is an informational message only. No user action is required.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:29:24.6565897Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:29:24.6566725Z -- 2023-05-17 20:29:24.64 spid51      Using 'xplog70.dll' version '2022.160.4035' to execute extended stored procedure 'xp_msver'. This is an informational message only; no user action is required.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:31:26.0813367Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:31:26.0813894Z -- 2023-05-17 20:31:26.07 spid51      Using 'dbghelp.dll' version '4.0.5'
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:39:10.8788696Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:39:10.8789530Z -- 2023-05-17 20:39:10.87 spid52      XE session 'telemetry_xevents' stopping.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:39:10.8899826Z -- testdb> 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:39:10.8900936Z -- 2023-05-17 20:39:10.88 spid52      XE session 'telemetry_xevents' started.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:57:28.5857695Z -- [ERROR] DOCKER> IO Error while requesting logs: org.apache.http.ConnectionClosedException: Premature end of chunk coded message body: closing chunk expected Thread-6
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:57:28.5872491Z -- [ERROR] DOCKER> [mcr.microsoft.com/mssql/server:2022-latest] "testdb": Timeout after 2000090 ms while waiting on log out '(?si)SQL Server is now ready for client connections.*Service Broker manager has started'
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:57:28.5882036Z -- [ERROR] DOCKER> Error occurred during container startup, shutting down...
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:57:38.8582721Z -- [INFO] DOCKER> [mcr.microsoft.com/mssql/server:2022-latest] "testdb": Stop and removed container 3006ac161ee6 after 10262 ms
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:57:38.8689619Z -- [ERROR] DOCKER> I/O Error [[mcr.microsoft.com/mssql/server:2022-latest] "testdb": Timeout after 2000090 ms while waiting on log out '(?si)SQL Server is now ready for client connections.*Service Broker manager has started']
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:57:38.8690777Z -- [INFO] ------------------------------------------------------------------------
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:57:38.8691668Z -- [INFO] BUILD FAILURE
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:57:38.8692486Z -- [INFO] ------------------------------------------------------------------------
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:57:38.8692877Z -- [INFO] Total time:  34:33 min
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:57:38.8693218Z -- [INFO] Finished at: 2023-05-17T20:57:38Z
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:57:38.8693934Z -- [INFO] ------------------------------------------------------------------------
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:57:38.8695004Z -- [ERROR] Failed to execute goal io.fabric8:docker-maven-plugin:0.40.3:start (start-db-container) on project integration-arquillian-tests-base: I/O Error: [mcr.microsoft.com/mssql/server:2022-latest] "testdb": Timeout after 2000090 ms while waiting on log out '(?si)SQL Server is now ready for client connections.*Service Broker manager has started' -> [Help 1]
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:57:38.8695694Z -- [ERROR] 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:57:38.8696070Z -- [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:57:38.8696527Z -- [ERROR] Re-run Maven using the -X switch to enable full debug logging.
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:57:38.8696845Z -- [ERROR] 
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:57:38.8698749Z -- [ERROR] For more information about the errors and possible solutions, please read the following articles:
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:57:38.8702962Z -- [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
+Legacy Store IT (mssql)	Run base tests	2023-05-17T20:57:38.9073773Z ##[error]Process completed with exit code 1.
