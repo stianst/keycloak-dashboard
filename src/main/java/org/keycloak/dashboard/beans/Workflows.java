@@ -21,6 +21,8 @@ public class Workflows {
         workflows.add(new Workflow("CodeQL", "keycloak/keycloak", "codeql-analysis.yml", "CodeQL", "event=schedule branch=main"));
         workflows.add(new Workflow("Snyk", "keycloak/keycloak", "snyk-analysis.yml", "Snyk", "event=schedule branch=main"));
         workflows.add(new Workflow("Trivy", "keycloak/keycloak", "trivy-analysis.yml", "Trivy", "event=schedule branch=main"));
+
+        workflows.add(new Workflow("Dashboard", "stianst/keycloak-dashboard", "data.yml", "Update data", "event=schedule branch=main"));
     }
 
     public List<Workflow> getWorkflows() {
