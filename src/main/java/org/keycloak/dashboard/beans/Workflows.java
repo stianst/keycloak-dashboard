@@ -14,7 +14,8 @@ public class Workflows {
 
         workflows.add(new Workflow("Keycloak CI", "keycloak/keycloak", "ci.yml", "Keycloak CI", "event=schedule branch=main"));
         workflows.add(new Workflow("Keycloak Operator CI", "keycloak/keycloak", "operator-ci.yml", "Keycloak Operator CI", "event=schedule branch=main"));
-        workflows.add(new Workflow("Keycloak QuickStarts CI", "keycloak/keycloak-quickstarts", "ci.yml", "Quickstarts tests", "event=schedule branch=latest"));
+        workflows.add(new Workflow("Keycloak QuickStarts CI", "keycloak/keycloak-quickstarts", "ci.yml", "Quickstarts tests", "event=workflow_dispatch branch=main"));
+        workflows.add(new Workflow("Keycloak QuickStarts Schedule", "keycloak/keycloak-quickstarts", "schedule.yml", "Scheduled workflows", "event=schedule"));
         workflows.add(new Workflow("Keycloak UI CI", "keycloak/keycloak-ui", "cypress.yml", "Cypress", "event=schedule branch=main"));
 
         workflows.add(new Workflow("CodeQL", "keycloak/keycloak", "codeql-analysis.yml", "CodeQL", "event=schedule branch=main"));
