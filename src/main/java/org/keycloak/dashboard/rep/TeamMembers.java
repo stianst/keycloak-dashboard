@@ -6,7 +6,7 @@ import java.util.List;
 public class TeamMembers extends HashMap<String, List<String>> {
 
     public boolean isDeveloper(String login) {
-        return get("kc-developers").contains(login);
+        return get("developers").contains(login);
     }
 
 }

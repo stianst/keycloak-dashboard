@@ -75,9 +75,9 @@ public class GitHubLoader {
         return areas;
     }
 
-    private List<String> queryDevTeam() throws IOException {
-        System.out.print("Fetching kc-developers members: ");
-        List<String> members = gitHub.getOrganization("keycloak").getTeamByName("kc-developers").getMembers().stream().map(GHPerson::getLogin).collect(Collectors.toList());
+    public List<String> queryDevTeam() throws IOException {
+        System.out.print("Fetching developers members: ");
+        List<String> members = gitHub.getOrganization("keycloak").getTeamByName("developers").getMembers().stream().map(GHPerson::getLogin).collect(Collectors.toList());
         System.out.println(".");
         return members;
     }
