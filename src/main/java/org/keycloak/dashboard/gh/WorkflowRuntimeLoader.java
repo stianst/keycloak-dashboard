@@ -41,11 +41,11 @@ public class WorkflowRuntimeLoader {
     }
 
     public List<PullRequestWait> load() throws Exception {
-        System.out.print("Loading pull request wait times for last " + Config.MAX_HISTORY + " days: ");
+        System.out.print("Loading pull request wait times for last " + Config.MAX_HISTORY_WORKFLOWS + " days: ");
 
         List<PullRequestWait> list = new LinkedList<>();
 
-        for (int fromDays = Config.MAX_HISTORY; fromDays > 0; fromDays = fromDays - 8) {
+        for (int fromDays = Config.MAX_HISTORY_WORKFLOWS; fromDays > 0; fromDays = fromDays - 8) {
             int toDays = (fromDays - 7) >= 0 ? (fromDays - 7) : 0;
 
             String fromDate = DateUtil.minusDaysString(fromDays);

@@ -20,7 +20,7 @@ public class WorkflowWaitTimes {
         this.data = data;
 
         workFlowWaitPerMonthList = data.getPullRequestWaits().stream()
-                .filter(p -> teamMembers.isDeveloper(p.getAuthor()))
+                .filter(p -> teamMembers.isDeveloper(p.getAuthor(), false))
                 .filter(p-> p.getBaseRef().equals("main"))
                 .collect(Collectors.groupingBy(p -> DateUtil.monthString(p.getCompletedAt())))
                 .entrySet().stream().map(e -> new WorkFlowWaitPerMonth(e.getKey(), e.getValue()))
@@ -29,7 +29,7 @@ public class WorkflowWaitTimes {
         this.teamMembers = teamMembers;
 
         List<PullRequestWait> last7days = data.getPullRequestWaits().stream()
-                .filter(p -> teamMembers.isDeveloper(p.getAuthor()))
+                .filter(p -> teamMembers.isDeveloper(p.getAuthor(), false))
                 .filter(p-> p.getBaseRef().equals("main"))
                 .filter(p -> DateUtil.MINUS_7_DAYS.before(p.getCompletedAt()))
                 .collect(Collectors.toList());

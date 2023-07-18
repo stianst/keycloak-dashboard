@@ -3,6 +3,7 @@ package org.keycloak.dashboard.gh;
 import org.keycloak.dashboard.Config;
 import org.keycloak.dashboard.rep.GitHubData;
 import org.keycloak.dashboard.rep.GitHubIssue;
+import org.keycloak.dashboard.util.DateUtil;
 import org.kohsuke.github.GHException;
 import org.kohsuke.github.GHLabel;
 import org.kohsuke.github.GHPerson;
@@ -11,8 +12,11 @@ import org.kohsuke.github.GitHub;
 import org.kohsuke.github.GitHubBuilder;
 
 import java.io.IOException;
+import java.util.Calendar;
+import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 public class GitHubLoader {
@@ -75,17 +79,20 @@ public class GitHubLoader {
         return areas;
     }
 
-    public List<String> queryDevTeam() throws IOException {
-        System.out.print("Fetching developers members: ");
-        List<String> members = gitHub.getOrganization("keycloak").getTeamByName("developers").getMembers().stream().map(GHPerson::getLogin).collect(Collectors.toList());
+    public List<String> queryTeam(String team) throws IOException {
+        System.out.print("Fetching " + team + " team members: ");
+        List<String> members = gitHub.getOrganization("keycloak").getTeamByName(team).getMembers().stream().map(GHPerson::getLogin).collect(Collectors.toList());
         System.out.println(".");
         return members;
     }
 
     private List<GitHubIssue> loadIssues() throws IOException {
-        return issuesLoader.loadIssues(
-                "repo:keycloak/keycloak is:issue is:open label:kind/bug",
-                "repo:keycloak/keycloak is:issue is:closed label:kind/bug closed:>=" + Config.EXPIRATION_OLD_ISSUES_STRING);
+        List<String> queries = new LinkedList<>();
+        queries.add("repo:keycloak/keycloak is:issue is:open label:kind/bug");
+        for (String month : DateUtil.monthStrings(Config.MAX_HISTORY)) {
+            queries.add("repo:keycloak/keycloak is:issue is:closed label:kind/bug closed:" + month);
+        }
+        return issuesLoader.loadIssues(queries.toArray(new String[0]));
     }
 
     private List<GitHubIssue> updateIssues(List<GitHubIssue> issues) throws IOException {
@@ -93,9 +100,12 @@ public class GitHubLoader {
     }
 
     private List<GitHubIssue> loadPRs() throws IOException {
-        return issuesLoader.loadPRs(
-                "repo:keycloak/keycloak is:pr is:open",
-                "repo:keycloak/keycloak is:pr is:closed closed:>=" + Config.EXPIRATION_OLD_ISSUES_STRING);
+        List<String> queries = new LinkedList<>();
+        queries.add("repo:keycloak/keycloak is:pr is:open");
+        for (String month : DateUtil.monthStrings(Config.MAX_HISTORY)) {
+            queries.add("repo:keycloak/keycloak is:pr is:closed closed:" + month);
+        }
+        return issuesLoader.loadPRs(queries.toArray(new String[0]));
     }
 
     private List<GitHubIssue> updatePRs(List<GitHubIssue> issues) throws IOException {

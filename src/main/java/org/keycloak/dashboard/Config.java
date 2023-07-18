@@ -8,10 +8,10 @@ public class Config {
 
     public static final boolean PUBLISH = System.getProperties().containsKey("publish");
 
-    public static final int MAX_HISTORY = 90;
+    public static final int MAX_HISTORY = 12 * 3;
+    public static final int MAX_HISTORY_WORKFLOWS = 90;
 
-    public static final Date EXPIRATION_OLD_ISSUES = DateUtil.minusdays(MAX_HISTORY);
-    public static final String EXPIRATION_OLD_ISSUES_STRING = DateUtil.minusDaysString(MAX_HISTORY);
+    public static final Date EXPIRATION_OLD_ISSUES = DateUtil.minusMonths(MAX_HISTORY);
 
     public static final int PR_OPEN_WARN = 150;
     public static final int PR_OPEN_ERROR = 200;

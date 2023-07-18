@@ -1,11 +1,15 @@
 package org.keycloak.dashboard.util;
 
+import org.keycloak.dashboard.Config;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Locale;
 
 public class DateUtil {
@@ -21,6 +25,8 @@ public class DateUtil {
     public static final java.util.Date MINUS_6_MONTHS = DateUtil.minusMonths(6);
     public static final java.util.Date MINUS_12_MONTHS = DateUtil.minusMonths(12);
     public static final java.util.Date MINUS_18_MONTHS = DateUtil.minusMonths(18);
+    public static final java.util.Date MINUS_24_MONTHS = DateUtil.minusMonths(24);
+    public static final java.util.Date MINUS_36_MONTHS = DateUtil.minusMonths(36);
 
     public static final java.util.Date MINUS_7_DAYS = DateUtil.minusdays(7);
     public static final java.util.Date MINUS_30_DAYS = DateUtil.minusdays(30);
@@ -66,6 +72,24 @@ public class DateUtil {
 
     public static String toString(java.util.Date date) {
         return TO_DATE_STRING_FORMATTER.format(date);
+    }
+
+    public static List<String> monthStrings(int history) {
+        List<String> months = new LinkedList<>();
+        Calendar now = Calendar.getInstance();
+
+        Calendar cal = Calendar.getInstance();
+        cal.add(Calendar.MONTH, -history);
+
+        while (true) {
+            months.add(DateUtil.monthString(cal.getTime()));
+            cal.add(Calendar.MONTH, 1);
+            if (cal.after(now)) {
+                break;
+            }
+        }
+
+        return months;
     }
 
 }

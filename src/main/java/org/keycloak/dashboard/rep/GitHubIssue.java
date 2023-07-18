@@ -20,6 +20,9 @@ public class GitHubIssue {
     @JsonProperty
     public String title;
 
+    @JsonProperty
+    public String userLogin;
+
     public String getTitle() {
         return title;
     }
@@ -90,6 +93,14 @@ public class GitHubIssue {
 
     public void setCommentsCount(int commentsCount) {
         this.commentsCount = commentsCount;
+    }
+
+    public String getUserLogin() {
+        return userLogin;
+    }
+
+    public void setUserLogin(String userLogin) {
+        this.userLogin = userLogin;
     }
 
     @JsonIgnore
