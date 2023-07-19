@@ -96,11 +96,10 @@ public class LogFailedParser {
         Iterator<FailedRun> runItr = failedRuns.iterator();
         while (runItr.hasNext()) {
             FailedRun failedRun = runItr.next();
-
-
             if (resolvedIssues.isResolved(failedRun, data)) {
                 System.out.println("Found resolved run: " + failedRun.getRunId());
                 runItr.remove();
+                resolvedRuns.add(failedRun);
             } else if (!failedRun.getFailedJobs().isEmpty()) {
                 Iterator<FailedJob> jobItr = failedRun.getFailedJobs().iterator();
                 List<FailedJob> resolvedJobs = new LinkedList<>();
