@@ -10,6 +10,7 @@ public class FailedRun {
 
     private Date date;
 
+    private ResolvedIssue resolvedBy;
     private List<FailedJob> failedJobs = new LinkedList<>();
 
     public FailedRun(String runId) {
@@ -40,4 +41,15 @@ public class FailedRun {
         this.failedJobs.addAll(failedJob);
     }
 
+    public void setFailedJobs(List<FailedJob> failedJobs) {
+        this.failedJobs = failedJobs;
+    }
+
+    public ResolvedIssue getResolvedBy() {
+        return resolvedBy;
+    }
+
+    public void setResolvedBy(ResolvedIssue resolvedBy) {
+        this.resolvedBy = resolvedBy;
+    }
 }

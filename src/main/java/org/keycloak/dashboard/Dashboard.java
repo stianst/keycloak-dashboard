@@ -42,7 +42,7 @@ public class Dashboard {
         PR pr = new PR(data);
         Bugs bugs = new Bugs(data, teams);
 
-        LogFailedParser logFailedParser = new LogFailedParser();
+        LogFailedParser logFailedParser = new LogFailedParser(data);
         logFailedParser.parseAll();
 
         Map<String, Object> attributes = new HashMap<>();

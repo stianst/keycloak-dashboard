@@ -8,8 +8,8 @@ public class FailedJob {
 
     private FailedRun failedRun;
     private String name;
-
     private JobConclusion conclusion;
+    private ResolvedIssue resolvedBy;
 
     public FailedJob(FailedRun failedRun, String name, JobConclusion conclusion) {
         this.failedRun = failedRun;
@@ -27,6 +27,17 @@ public class FailedJob {
 
     public String getJobName() {
         return name.contains("(") ? name.substring(0, name.indexOf('(') - 1) : name;
+    }
+
+    public ResolvedIssue getResolvedBy() {
+        if (failedRun.getResolvedBy() != null) {
+            return failedRun.getResolvedBy();
+        }
+        return resolvedBy;
+    }
+
+    public void setResolvedBy(ResolvedIssue resolvedBy) {
+        this.resolvedBy = resolvedBy;
     }
 
     public String getProfileName() {

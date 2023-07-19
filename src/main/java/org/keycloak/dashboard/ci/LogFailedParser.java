@@ -1,5 +1,6 @@
 package org.keycloak.dashboard.ci;
 
+import org.keycloak.dashboard.rep.GitHubData;
 import org.keycloak.dashboard.util.DateUtil;
 
 import java.io.BufferedReader;
@@ -39,13 +40,10 @@ public class LogFailedParser {
     private List<FailedRun> failedRuns = new LinkedList<>();
 
     private List<FailedRun> resolvedRuns = new LinkedList<>();
+    private GitHubData data;
 
-    public static void main(String[] args) throws IOException, ParseException {
-        LogFailedParser parser = new LogFailedParser();
-
-        parser.parseAll();
-
-        parser.print();
+    public LogFailedParser(GitHubData data) {
+        this.data = data;
     }
 
     public List<FailedJob> getRecentFailedJobs() {
@@ -82,17 +80,6 @@ public class LogFailedParser {
     }
 
     public void parseAll() throws IOException, ParseException {
-        Set<String> excludedRuns = new HashSet<>();
-        File excludedRunsFile = new File("resolved-runs");
-        if (excludedRunsFile.isFile()) {
-            BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream("resolved-runs")));
-            for (String l = br.readLine(); l != null; l = br.readLine()) {
-                if (!l.startsWith("#")) {
-                    excludedRuns.add(l.trim());
-                }
-            }
-        }
-
         List<String> runs = Arrays.stream(new File("logs").listFiles(file -> file.getName().startsWith("jobs-")))
                 .map(file -> file.getName().replaceAll("jobs-", ""))
                 .collect(Collectors.toList());
@@ -104,53 +91,33 @@ public class LogFailedParser {
     }
 
     public void filterResolved() throws IOException {
-        File resolvedRunsFile = new File("resolved-runs");
-        Map<String, List<String>> resolvedRuns = new HashMap<>();
-        if (!resolvedRunsFile.isFile()) {
-            return;
-        }
-
-        BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream("resolved-runs")));
-        for (String l = br.readLine(); l != null; l = br.readLine()) {
-            l = l.trim();
-            if (!l.startsWith("#") && !l.isBlank()) {
-                String[] split = l.split("/");
-                String runId = split[0];
-                String jobName = split[1];
-                if (!resolvedRuns.containsKey(runId)) {
-                    resolvedRuns.put(runId, new LinkedList<>());
-                }
-                resolvedRuns.get(runId).add(jobName);
-            }
-        }
+        ResolvedIssues resolvedIssues = ResolvedIssues.load();
 
         Iterator<FailedRun> runItr = failedRuns.iterator();
         while (runItr.hasNext()) {
             FailedRun failedRun = runItr.next();
-            List<String> resolvedJobs = resolvedRuns.get(failedRun.getRunId());
-            if (resolvedJobs != null && !resolvedJobs.isEmpty()) {
-                FailedRun resolvedRun = new FailedRun(failedRun.getRunId());
-                resolvedRun.setDate(failedRun.getDate());
-                this.resolvedRuns.add(resolvedRun);
 
-                if (resolvedJobs.contains("*")) {
-                    runItr.remove();
+
+            if (resolvedIssues.isResolved(failedRun, data)) {
+                System.out.println("Found resolved run: " + failedRun.getRunId());
+                runItr.remove();
+            } else if (!failedRun.getFailedJobs().isEmpty()) {
+                Iterator<FailedJob> jobItr = failedRun.getFailedJobs().iterator();
+                List<FailedJob> resolvedJobs = new LinkedList<>();
+                while (jobItr.hasNext()) {
+                    FailedJob job = jobItr.next();
+                    if (resolvedIssues.isResolved(job, data)) {
+                        resolvedJobs.add(job);
+                        jobItr.remove();
+                        System.out.println("Found resolved job: " + failedRun.getRunId() + "/" + job.getName());
+                    }
+                }
+
+                if (failedRun.getFailedJobs().isEmpty()) {
+                    failedRun.setFailedJobs(resolvedJobs);
                     System.out.println("Marking run as fully resolved: " + failedRun.getRunId());
-                } else {
-                    Iterator<FailedJob> jobItr = failedRun.getFailedJobs().iterator();
-                    while (jobItr.hasNext()) {
-                        FailedJob job = jobItr.next();
-                        if (resolvedJobs.contains(job.getName())) {
-                            resolvedRun.add(job);
-                            jobItr.remove();
-                            System.out.println("Found resolved job: " + resolvedRun.getRunId() + "/" + job.getName());
-                        }
-                    }
-
-                    if (failedRun.getFailedJobs().isEmpty()) {
-                        System.out.println("Removing empty run: " + failedRun.getRunId());
-                        runItr.remove();
-                    }
+                    resolvedRuns.add(failedRun);
+                    runItr.remove();
                 }
             }
         }

@@ -102,7 +102,6 @@ public class Bugs {
                         areaStat.nextRelease++;
                     } else if ("Backlog".equals(i.getMilestone())) {
                         if (i.isTriage()) {
-                            System.out.println(a + " -- " + i.getMilestone());
                             areaStat.backlogTriage++;
                         } else {
                             areaStat.backlog++;
