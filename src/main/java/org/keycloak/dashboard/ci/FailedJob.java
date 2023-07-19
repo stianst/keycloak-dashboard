@@ -19,8 +19,6 @@ public class FailedJob {
 
     private String failedGoal;
 
-    private List<String> failedTests = new LinkedList<>();
-
     private List<String> errorLog = new LinkedList<>();
 
     public String getName() {
@@ -53,14 +51,6 @@ public class FailedJob {
 
     public void setFailedGoal(String failedGoal) {
         this.failedGoal = failedGoal;
-    }
-
-    public List<String> getFailedTests() {
-        return failedTests;
-    }
-
-    public void addFailedTests(String failedTest) {
-        this.failedTests.add(failedTest);
     }
 
     public List<String> getErrorLog() {

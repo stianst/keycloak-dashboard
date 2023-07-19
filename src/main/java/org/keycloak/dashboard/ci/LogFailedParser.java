@@ -60,21 +60,6 @@ public class LogFailedParser {
         return recentFailedJobs;
     }
 
-    public Map<String, List<FailedJob>> getFailedTests() {
-        Map<String, List<FailedJob>> failedTests = new TreeMap<>();
-        for (FailedRun run : failedRuns) {
-            for (FailedJob job : run.getFailedJobs()) {
-                for (String failedTest : job.getFailedTests()) {
-                    if (!failedTests.containsKey(failedTest)) {
-                        failedTests.put(failedTest, new LinkedList<>());
-                    }
-                    failedTests.get(failedTest).add(job);
-                }
-            }
-        }
-        return failedTests;
-    }
-
     public List<FailedRun> getFailedRuns() {
         return failedRuns;
     }
@@ -210,16 +195,6 @@ public class LogFailedParser {
     }
 
     public void print() {
-        System.out.println("==============================================================================================================");
-        System.out.println("Failed tests");
-        System.out.println();
-        failedRuns.stream()
-                .map(FailedRun::getFailedJobs).flatMap(Collection::stream)
-                .map(FailedJob::getFailedTests).flatMap(Collection::stream)
-                .sorted()
-                .collect(Collectors.toMap(Function.identity(), s -> 1, Math::addExact)).forEach((s, c) -> System.out.println(s + "\t" + c));
-        System.out.println("==============================================================================================================");
-
         for (FailedRun failedRun : failedRuns) {
             System.out.println("==============================================================================================================");
             System.out.println("https://github.com/keycloak/keycloak/actions/runs/" + failedRun.getRunId());
@@ -293,10 +268,6 @@ public class LogFailedParser {
                 job.addErrorLog(l);
             } else if (l.startsWith("  ")) {
                 job.addErrorLog(l);
-                Matcher m = TEST_CASE_PATTERN.matcher(l);
-                if (m.find()) {
-                    job.addFailedTests(m.group(1));
-                }
             } else if (l.startsWith("Failed to execute goal")) {
                 job.setFailedGoal(l);
             }
