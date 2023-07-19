@@ -20,7 +20,7 @@
         <#list failedJobs[jobName] as job>
         <tr>
             <td class="size10">${job.failedRun.date?date}</td>
-            <td class="size10"><a href="#failed-run-${job.failedRun.runId}">${job.failedRun.runId}</a></td>
+            <td class="size10"><a href="https://github.com/keycloak/keycloak/actions/runs/${job.failedRun.runId}">${job.failedRun.runId}</a></td>
             <td class="size20"><#if job.profileName?has_content>${job.profileName}</#if></td>
             <td class="size10">${job.conclusion}</td>
         <#if job.errorLog?has_content>
