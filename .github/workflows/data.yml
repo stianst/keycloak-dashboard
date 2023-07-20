@@ -33,6 +33,7 @@ jobs:
         run: |
           mvn clean install exec:java -Pgithub
           ./load-run-logs.sh
+          ./load-retried-prs.sh
           if ( ! git diff --exit-code &>/dev/null ); then 
             git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git config --global user.name "github-actions[bot]"

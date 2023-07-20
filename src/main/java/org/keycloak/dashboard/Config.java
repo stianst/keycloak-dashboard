@@ -60,7 +60,7 @@ public class Config {
     public static final int BUG_TEAM_BACKLOG_TRIAGE_WARN = 10;
     public static final int BUG_TEAM_BACKLOG_TRIAGE_ERROR = 50;
 
-    public static final int PR_WAIT_TIME_MAX_SLOW = 50;
+    public static final int PR_WAIT_TIME_MAX_SLOW = 10;
     public static final int PR_WAIT_TIME_SLOW_THRESHOLD = 90;
 
 }

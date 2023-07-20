@@ -13,7 +13,7 @@
             <th>&#60;90m</th>
             <th>&#60;120m</th>
             <th>&#60;180m</th>
-            <th>Slowest</th>
+            <th>Slowest (excluding retried last 7 days)</th>
         </tr>
         <#list workflowWaitTimes as workflowWaitTime>
         <tr>
