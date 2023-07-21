@@ -44,7 +44,7 @@ public class WorkflowWaitTimes {
     }
 
     public static boolean isRetried(PullRequestWait pullRequestWait, List<RetriedPR> retriedPRs) {
-        return retriedPRs.stream().filter(r -> r.getPrNumber() == pullRequestWait.getNumber()).findFirst().isPresent();
+        return retriedPRs.stream().filter(r -> r.getPrNumber() != null && r.getPrNumber() == pullRequestWait.getNumber()).findFirst().isPresent();
     }
 
     public static class WorkFlowWaitPerMonth {

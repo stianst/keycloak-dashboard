@@ -43,7 +43,7 @@ public class RetriedPR {
         while (itr.hasNext()) {
             String[] split = itr.next().split(",");
             Date date = DateUtil.fromJson(split[0].substring(1, split[0].length() - 1));
-            Integer prNumber = Integer.parseInt(split[1]);
+            Integer prNumber = !split[1].equals("null") ? Integer.parseInt(split[1]) : null;
             String runId = split[2];
             Integer attempt = Integer.parseInt(split[3]);
 

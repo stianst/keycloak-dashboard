@@ -12,7 +12,7 @@
         <#list retriedPRs as retriedPR>
         <tr>
             <td>${retriedPR.date?date}</td>
-            <td><a href="https://github.com/keycloak/keycloak/pull/${retriedPR.prNumber?string.computer}">#${retriedPR.prNumber?string.computer}</a></td>
+            <td><#if retriedPR.prNumber?has_content><a href="https://github.com/keycloak/keycloak/pull/${retriedPR.prNumber?string.computer}">#${retriedPR.prNumber?string.computer}</a></#if></td>
             <td><a href="https://github.com/keycloak/keycloak/actions/runs/${retriedPR.runId}">${retriedPR.runId}</a></td>
             <td><a href="https://github.com/keycloak/keycloak/actions/runs/${retriedPR.runId}/attempts/${retriedPR.attempt}">${retriedPR.attempt}</a></td>
         </tr>
