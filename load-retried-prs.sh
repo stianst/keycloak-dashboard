@@ -1,9 +1,9 @@
 #!/bin/bash -e
 
-DATE_7_DAYS_AGO=$(date --date="7 days ago" "+%Y-%m-%d")
+DATE_30_DAYS_AGO=$(date --date="30 days ago" "+%Y-%m-%d")
 DATE_TODAY=$(date "+%Y-%m-%d")
 
-CREATED="$DATE_7_DAYS_AGO..$DATE_TODAY"
+CREATED="$DATE_30_DAYS_AGO..$DATE_TODAY"
 
 REPORT='retried-prs'
 

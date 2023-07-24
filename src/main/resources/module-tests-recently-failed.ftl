@@ -7,7 +7,7 @@
         <#list recentFailedJobs as job>
         <tr>
             <td class="size10">${job.failedRun.date?date}</td>
-            <td class="size10"><a href="tests.html#failed-run-${job.failedRun.runId}">${job.failedRun.runId}</a></td>
+            <td class="size10"><a href="https://github.com/keycloak/keycloak/actions/runs/${job.failedRun.runId}">${job.failedRun.runId}</a></td>
             <td class="size10 warn">${job.conclusion}</td>
             <td><a href="#failed-job-${job.anchor}">${job.name}</a></td>
         </tr>

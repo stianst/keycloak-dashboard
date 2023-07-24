@@ -10,19 +10,24 @@ public class Workflows {
     public Workflows() {
         workflows = new LinkedList<>();
 
-        workflows.add(new Workflow("Nightly release", "keycloak-rel/keycloak-rel", "release-nightly.yml", "Release Nightly", "branch=main"));
+        workflows.add(new Workflow("Nightly release", "keycloak-rel/keycloak-rel", "release-nightly.yml", "branch=main"));
 
-        workflows.add(new Workflow("Keycloak CI", "keycloak/keycloak", "ci.yml", "Keycloak CI", "event=schedule branch=main"));
-        workflows.add(new Workflow("Keycloak Operator CI", "keycloak/keycloak", "operator-ci.yml", "Keycloak Operator CI", "event=schedule branch=main"));
-        workflows.add(new Workflow("Keycloak QuickStarts CI", "keycloak/keycloak-quickstarts", "ci.yml", "Quickstarts tests", "event=workflow_dispatch branch=main"));
-        workflows.add(new Workflow("Keycloak QuickStarts Schedule", "keycloak/keycloak-quickstarts", "schedule.yml", "Scheduled workflows", "event=schedule"));
-        workflows.add(new Workflow("Keycloak UI CI", "keycloak/keycloak-ui", "cypress.yml", "Cypress", "event=schedule branch=main"));
+        workflows.add(new Workflow("Keycloak CI", "keycloak/keycloak", "ci.yml", "branch=main"));
+        workflows.add(new Workflow("Keycloak Documentation", "keycloak/keycloak", "documentation.yml", "branch=main"));
+        workflows.add(new Workflow("Keycloak Guides", "keycloak/keycloak", "guides.yml", "branch=main"));
+        workflows.add(new Workflow("Keycloak Operator CI", "keycloak/keycloak", "operator-ci.yml", "branch=main"));
+        workflows.add(new Workflow("Keycloak JavaScript CI", "keycloak/keycloak", "js-ci.yml", "branch=main"));
 
-        workflows.add(new Workflow("CodeQL", "keycloak/keycloak", "codeql-analysis.yml", "CodeQL", "event=schedule branch=main"));
-        workflows.add(new Workflow("Snyk", "keycloak/keycloak", "snyk-analysis.yml", "Snyk", "event=schedule branch=main"));
-        workflows.add(new Workflow("Trivy", "keycloak/keycloak", "trivy-analysis.yml", "Trivy", "event=schedule branch=main"));
+        workflows.add(new Workflow("Keycloak QuickStarts CI", "keycloak/keycloak-quickstarts", "ci.yml", "branch=main"));
 
-        workflows.add(new Workflow("Dashboard", "stianst/keycloak-dashboard", "data.yml", "Update data", "event=schedule branch=main"));
+        workflows.add(new Workflow("CodeQL", "keycloak/keycloak", "codeql-analysis.yml", "branch=main"));
+        workflows.add(new Workflow("Snyk", "keycloak/keycloak", "snyk-analysis.yml", "branch=main"));
+        workflows.add(new Workflow("Trivy", "keycloak/keycloak", "trivy-analysis.yml", "branch=main"));
+
+        workflows.add(new Workflow("Schedule nightly workflows", "keycloak/keycloak", "schedule-nightly.yml", "branch=main"));
+        workflows.add(new Workflow("Schedule QuickStarts nightly", "keycloak/keycloak-quickstarts", "schedule.yml", ""));
+
+        workflows.add(new Workflow("Update dashboard", "stianst/keycloak-dashboard", "data.yml", "branch=main"));
     }
 
     public List<Workflow> getWorkflows() {
@@ -35,7 +40,7 @@ public class Workflows {
         private String ghLink;
         private String shield;
 
-        public Workflow(String title, String repository, String workflowFile, String workflowName, String query) {
+        public Workflow(String title, String repository, String workflowFile, String query) {
             this.title = title;
 
             ghLink = "https://github.com/" + repository + "/actions/workflows/" + workflowFile;

@@ -1,5 +1,5 @@
 <div class="header">
-    Retried PRs last 7 days
+    Retried PRs last 30 days
 </div>
 <div class="body">
     <table>
