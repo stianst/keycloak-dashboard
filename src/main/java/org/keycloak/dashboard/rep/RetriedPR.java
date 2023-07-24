@@ -1,5 +1,7 @@
 package org.keycloak.dashboard.rep;
 
+import org.keycloak.dashboard.ci.ResolvedIssue;
+import org.keycloak.dashboard.ci.ResolvedIssues;
 import org.keycloak.dashboard.util.DateUtil;
 
 import java.io.File;
@@ -13,17 +15,12 @@ import java.util.List;
 
 public class RetriedPR {
 
-    public static void main(String[] args) throws IOException, ParseException {
-        List<RetriedPR> list = RetriedPR.load();
-        for (RetriedPR l : list) {
-            System.out.println(l.getDate());
-        }
-    }
-
     private Date date;
     private Integer prNumber;
     private String runId;
     private Integer attempt;
+
+    private ResolvedIssue resolvedBy;
 
     public RetriedPR(Date date, Integer prNumber, String runId, Integer attempt) {
         this.date = date;
@@ -32,7 +29,7 @@ public class RetriedPR {
         this.attempt = attempt;
     }
 
-    public static List<RetriedPR> load() throws IOException, ParseException {
+    public static List<RetriedPR> load(GitHubData data, ResolvedIssues resolvedIssues) throws IOException, ParseException {
         List<RetriedPR> list = new LinkedList<>();
 
         File retriedPRsFile = new File("retried-prs");
@@ -48,7 +45,10 @@ public class RetriedPR {
             Integer attempt = Integer.parseInt(split[3]);
 
             RetriedPR retriedPR = new RetriedPR(date, prNumber, runId, attempt);
-            list.add(retriedPR);
+            retriedPR.setResolvedBy(resolvedIssues.getResolved(retriedPR));
+            if (retriedPR.getResolvedBy() == null || !retriedPR.getResolvedBy().isResolved()) {
+                list.add(retriedPR);
+            }
         }
         return list;
     }
@@ -67,5 +67,13 @@ public class RetriedPR {
 
     public Integer getAttempt() {
         return attempt;
+    }
+
+    public ResolvedIssue getResolvedBy() {
+        return resolvedBy;
+    }
+
+    public void setResolvedBy(ResolvedIssue resolvedBy) {
+        this.resolvedBy = resolvedBy;
     }
 }

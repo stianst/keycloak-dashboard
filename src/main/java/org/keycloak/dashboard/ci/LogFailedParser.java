@@ -41,9 +41,11 @@ public class LogFailedParser {
 
     private List<FailedRun> resolvedRuns = new LinkedList<>();
     private GitHubData data;
+    private ResolvedIssues resolvedIssues;
 
-    public LogFailedParser(GitHubData data) {
+    public LogFailedParser(GitHubData data, ResolvedIssues resolvedIssues) {
         this.data = data;
+        this.resolvedIssues = resolvedIssues;
     }
 
     public List<FailedJob> getRecentFailedJobs() {
@@ -90,13 +92,12 @@ public class LogFailedParser {
         filterResolved();
     }
 
-    public void filterResolved() throws IOException {
-        ResolvedIssues resolvedIssues = ResolvedIssues.load();
-
+    public void filterResolved() {
         Iterator<FailedRun> runItr = failedRuns.iterator();
         while (runItr.hasNext()) {
             FailedRun failedRun = runItr.next();
-            if (resolvedIssues.isResolved(failedRun, data)) {
+            failedRun.setResolvedBy(resolvedIssues.getResolved(failedRun));
+            if (failedRun.getResolvedBy() != null && failedRun.getResolvedBy().isResolved()) {
                 System.out.println("Found resolved run: " + failedRun.getRunId());
                 runItr.remove();
                 resolvedRuns.add(failedRun);
@@ -105,7 +106,8 @@ public class LogFailedParser {
                 List<FailedJob> resolvedJobs = new LinkedList<>();
                 while (jobItr.hasNext()) {
                     FailedJob job = jobItr.next();
-                    if (resolvedIssues.isResolved(job, data)) {
+                    job.setResolvedBy(resolvedIssues.getResolved(job));
+                    if (job.getResolvedBy() != null && job.getResolvedBy().isResolved()) {
                         resolvedJobs.add(job);
                         jobItr.remove();
                         System.out.println("Found resolved job: " + failedRun.getRunId() + "/" + job.getName());

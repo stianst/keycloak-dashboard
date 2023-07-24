@@ -8,6 +8,7 @@ import org.keycloak.dashboard.beans.PR;
 import org.keycloak.dashboard.beans.WorkflowWaitTimes;
 import org.keycloak.dashboard.beans.Workflows;
 import org.keycloak.dashboard.ci.LogFailedParser;
+import org.keycloak.dashboard.ci.ResolvedIssues;
 import org.keycloak.dashboard.rep.RetriedPR;
 import org.keycloak.dashboard.rep.TeamMembers;
 import org.keycloak.dashboard.rep.GitHubData;
@@ -44,10 +45,13 @@ public class Dashboard {
         PR pr = new PR(data);
         Bugs bugs = new Bugs(data, teams);
 
-        LogFailedParser logFailedParser = new LogFailedParser(data);
+        ResolvedIssues resolvedIssues = ResolvedIssues.load(data);
+
+        LogFailedParser logFailedParser = new LogFailedParser(data, resolvedIssues);
         logFailedParser.parseAll();
 
-        List<RetriedPR> retriedPRs = RetriedPR.load();
+
+        List<RetriedPR> retriedPRs = RetriedPR.load(data, resolvedIssues);
 
         Map<String, Object> attributes = new HashMap<>();
 

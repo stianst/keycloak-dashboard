@@ -7,6 +7,7 @@ public class ResolvedIssue {
     private String id;
     private String description;
     private Integer issue;
+    private boolean resolved;
     private String resolution;
     private List<String> resolves;
 
@@ -40,6 +41,14 @@ public class ResolvedIssue {
 
     public void setIssue(Integer issue) {
         this.issue = issue;
+    }
+
+    public boolean isResolved() {
+        return resolved;
+    }
+
+    public void setResolved(boolean resolved) {
+        this.resolved = resolved;
     }
 
     public String getResolution() {

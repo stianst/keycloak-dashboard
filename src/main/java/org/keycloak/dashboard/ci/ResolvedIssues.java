@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
 import org.keycloak.dashboard.rep.GitHubData;
 import org.keycloak.dashboard.rep.GitHubIssue;
+import org.keycloak.dashboard.rep.RetriedPR;
 
 import java.io.File;
 import java.io.IOException;
@@ -15,7 +16,6 @@ import java.util.Optional;
 public class ResolvedIssues {
 
     public static void main(String[] args) throws IOException {
-        ResolvedIssues resolvedRuns = load();
 
         GitHubData gitHubData = new GitHubData();
         LinkedList<GitHubIssue> issues = new LinkedList<>();
@@ -25,63 +25,69 @@ public class ResolvedIssues {
         issues.add(issue);
         gitHubData.setIssues(issues);
 
+        ResolvedIssues resolvedRuns = load(gitHubData);
+
         FailedRun failedRun = new FailedRun("5550656326");
         FailedJob job = new FailedJob(failedRun, "Base IT", JobConclusion.FAILURE);
-        System.out.println(resolvedRuns.isResolved(job, gitHubData));
+        System.out.println(resolvedRuns.getResolved(job).isResolved());
 
     }
 
-    public static ResolvedIssues load() throws IOException {
+    public static ResolvedIssues load(GitHubData data) throws IOException {
         ObjectMapper yamlMapper = new ObjectMapper(new YAMLFactory());
-        return yamlMapper.readValue(new File("resolved-issues.yml"), ResolvedIssues.class);
+        ResolvedIssues resolvedIssues = yamlMapper.readValue(new File("resolved-issues.yml"), ResolvedIssues.class);
+        for (ResolvedIssue i : resolvedIssues.issues) {
+            if (i.getIssue() == null) {
+                i.setResolved(true);
+            } else {
+                Optional<GitHubIssue> issue = data.getIssues().stream().filter(ghIssue -> ghIssue.getNumber() == i.getIssue()).findFirst();
+                if (issue.isPresent() && !issue.get().isOpen()) {
+                    i.setResolved(true);
+                } else {
+                    i.setResolved(false);
+                }
+            }
+        }
+        return resolvedIssues;
     }
 
 
     public List<ResolvedIssue> issues;
 
-    public boolean isResolved(FailedRun failedRun, GitHubData data) {
+    public ResolvedIssue getResolved(FailedRun failedRun) {
         String runMatch = failedRun.getRunId() + "/*";
         for (ResolvedIssue i : issues) {
             for (String r : i.getResolves()) {
                 if (r.equals(runMatch)) {
-                    failedRun.setResolvedBy(i);
-                    if (isResolved(i, data)) {
-                        return true;
-                    }
+                    return i;
                 }
             }
         }
-        return false;
+        return null;
     }
 
-    public boolean isResolved(FailedJob failedJob, GitHubData data) {
+    public ResolvedIssue getResolved(FailedJob failedJob) {
         String jobMatch = failedJob.getFailedRun().getRunId() + "/" + failedJob.getName();
-
         for (ResolvedIssue i : issues) {
             for (String r : i.getResolves()) {
                 if (r.equals(jobMatch)) {
-                    failedJob.setResolvedBy(i);
-                    if (isResolved(i, data)) {
-                        return true;
-                    }
+                    return i;
                 }
             }
         }
-
-        return false;
+        return null;
     }
 
-    public boolean isResolved(ResolvedIssue resolvedIssue, GitHubData data) {
-        Integer ghIssueNumber = resolvedIssue.getIssue();
-        if (ghIssueNumber == null) {
-            return true;
-        } else {
-            Optional<GitHubIssue> issue = data.getIssues().stream().filter(ghIssue -> ghIssue.getNumber() == ghIssueNumber).findFirst();
-            if (issue.isPresent() && !issue.get().isOpen()) {
-                return true;
+    public ResolvedIssue getResolved(RetriedPR retriedPR) {
+        String jobMatch = retriedPR.getRunId() + "/*";
+        for (ResolvedIssue i : issues) {
+            for (String r : i.getResolves()) {
+                if (r.equals(jobMatch)) {
+                    return i;
+                }
             }
         }
-        return false;
+        return null;
     }
 
     public List<ResolvedIssue> getIssues() {
