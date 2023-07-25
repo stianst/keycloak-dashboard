@@ -9,9 +9,9 @@ if [ ! -d logs ]; then
   mkdir logs
 fi
 
-for i in $(gh api -X GET repos/keycloak/keycloak/actions/workflows/ci.yml/runs --paginate -f status=failure -f branch=main -f created=$FROM..$TO --jq '.workflow_runs[] | [.id, .updated_at, .event] | @csv'); do
+for i in $(gh api -X GET repos/keycloak/keycloak/actions/workflows/ci.yml/runs --paginate -f status=failure -f branch=main -f created=$FROM..$TO --jq '.workflow_runs[] | [.id, .created_at, .event] | @csv'); do
   RUN_ID=$(echo $i | cut -d ',' -f 1)
-  UPDATED=$(echo $i | cut -d ',' -f 2 | sed 's/"//g')
+  RUN_DATE=$(echo $i | cut -d ',' -f 2 | sed 's/"//g')
   EVENT=$(echo $i | cut -d ',' -f 3 | sed 's/"//g')
 
   if [ "$EVENT" != "pull_request" ]; then
