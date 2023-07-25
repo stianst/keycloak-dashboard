@@ -21,7 +21,7 @@ for i in $(gh api -X GET repos/keycloak/keycloak/actions/workflows/ci.yml/runs -
         echo "Downloading run: $RUN_ID"
 
         echo "# $RUN_DATE" > logs/jobs-$RUN_ID
-        gh run view -R keycloak/keycloak $RUN_ID --json jobs --jq '.jobs[] | .name + ": [" + .conclusion + "]"' >> logs/jobs-$RUN_ID
+        gh api -X GET repos/keycloak/keycloak/actions/runs/$RUN_ID/jobs --paginate --jq '.jobs[] | .name + ": [" + .conclusion + "]"' >> logs/jobs-$RUN_ID
         gh run view -R keycloak/keycloak $RUN_ID --log-failed > logs/log-$RUN_ID
       else
         echo "Run exits: $RUN_ID"
