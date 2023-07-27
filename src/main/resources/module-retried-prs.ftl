@@ -9,6 +9,7 @@
             <th>Resolved by</th>
             <th>Run</th>
             <th>Attempt</th>
+            <th>Failed jobs</th>
         </tr>
         <#list retriedPRs as retriedPR>
         <tr>
@@ -22,6 +23,7 @@
             </td>
             <td><a href="https://github.com/keycloak/keycloak/actions/runs/${retriedPR.runId}">${retriedPR.runId}</a></td>
             <td><a href="https://github.com/keycloak/keycloak/actions/runs/${retriedPR.runId}/attempts/${retriedPR.attempt}">${retriedPR.attempt}</a></td>
+            <td>${retriedPR.failedJob?join('<br/>')}</td>
         </tr>
         </#list>
     </table>

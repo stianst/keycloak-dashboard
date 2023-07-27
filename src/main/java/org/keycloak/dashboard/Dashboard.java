@@ -51,7 +51,7 @@ public class Dashboard {
         logFailedParser.parseAll();
 
 
-        List<RetriedPR> retriedPRs = RetriedPR.load(data, resolvedIssues);
+        List<RetriedPR> retriedPRs = RetriedPR.load(resolvedIssues);
 
         Map<String, Object> attributes = new HashMap<>();
 
