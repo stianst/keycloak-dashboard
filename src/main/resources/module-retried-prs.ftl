@@ -6,7 +6,7 @@
         <tr>
             <th>Date</th>
             <th>PR</th>
-            <th>Resolved by</th>
+            <th>Tracked by</th>
             <th>Run</th>
             <th>Attempt</th>
             <th>Failed jobs</th>
