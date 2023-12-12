@@ -150,6 +150,9 @@ public class LogFailedParser {
         String event = header.length > 1 ? header[1] : null;
         failedRun.setEvent(event);
 
+        String attempt = header.length > 2 ? header[2] : null;
+        failedRun.setAttempt(attempt);
+
         for (String l = br.readLine(); l != null; l = br.readLine()) {
             String[] split = l.split(": ");
             String name = split[0];

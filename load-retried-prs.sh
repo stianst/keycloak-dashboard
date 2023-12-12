@@ -28,7 +28,7 @@ for i in $(gh api -X GET repos/keycloak/keycloak/actions/workflows/ci.yml/runs -
       RUN_IDS+=($RUN_ID)
 
       if [ ! -f logs/pr-jobs-$RUN_ID ]; then
-        echo "# $RUN_DATE $EVENT" > logs/pr-jobs-$RUN_ID
+        echo "# $RUN_DATE $EVENT $RUN_ATTEMPT" > logs/pr-jobs-$RUN_ID
         gh api -X GET repos/keycloak/keycloak/actions/runs/$RUN_ID/attempts/$RUN_ATTEMPT/jobs --paginate --jq '.jobs[] | .name + ": [" + .conclusion + "]"' >> logs/pr-jobs-$RUN_ID
       fi
 
