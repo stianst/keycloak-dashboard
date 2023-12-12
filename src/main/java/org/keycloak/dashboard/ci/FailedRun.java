@@ -10,6 +10,8 @@ public class FailedRun {
 
     private Date date;
 
+    private String event;
+
     private ResolvedIssue resolvedBy;
     private List<FailedJob> failedJobs = new LinkedList<>();
 
@@ -27,6 +29,14 @@ public class FailedRun {
 
     public void setDate(Date date) {
         this.date = date;
+    }
+
+    public String getEvent() {
+        return event;
+    }
+
+    public void setEvent(String event) {
+        this.event = event;
     }
 
     public List<FailedJob> getFailedJobs() {

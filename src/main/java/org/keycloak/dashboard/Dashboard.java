@@ -9,7 +9,6 @@ import org.keycloak.dashboard.beans.WorkflowWaitTimes;
 import org.keycloak.dashboard.beans.Workflows;
 import org.keycloak.dashboard.ci.LogFailedParser;
 import org.keycloak.dashboard.ci.ResolvedIssues;
-import org.keycloak.dashboard.rep.RetriedPR;
 import org.keycloak.dashboard.rep.TeamMembers;
 import org.keycloak.dashboard.rep.GitHubData;
 import org.keycloak.dashboard.rep.Teams;
@@ -50,9 +49,6 @@ public class Dashboard {
         LogFailedParser logFailedParser = new LogFailedParser(data, resolvedIssues);
         logFailedParser.parseAll();
 
-
-        List<RetriedPR> retriedPRs = RetriedPR.load(resolvedIssues);
-
         Map<String, Object> attributes = new HashMap<>();
 
         attributes.put("publish", Config.PUBLISH);
@@ -68,8 +64,7 @@ public class Dashboard {
         attributes.put("failedJobs", logFailedParser.getFailedJobs());
         attributes.put("flakyTests", bugs.getFlakyTests());
         attributes.put("nextRelease", bugs.getNextRelease());
-        attributes.put("workflowWaitTimes", new WorkflowWaitTimes(data, teamMembers, retriedPRs).getWorkFlowWaitPerMonthList());
-        attributes.put("retriedPRs", retriedPRs);
+        attributes.put("workflowWaitTimes", new WorkflowWaitTimes(data, teamMembers).getWorkFlowWaitPerMonthList());
 
         File output = new File("docs/index.html");
         FreeMarker freeMarker = new FreeMarker(attributes);

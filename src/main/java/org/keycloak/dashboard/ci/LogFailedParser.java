@@ -86,7 +86,14 @@ public class LogFailedParser {
                 .map(file -> file.getName().replaceAll("jobs-", ""))
                 .collect(Collectors.toList());
         for (String run : runs) {
-            parse(run);
+            parse(run, false);
+        }
+
+        runs = Arrays.stream(new File("logs").listFiles(file -> file.getName().startsWith("pr-jobs-")))
+                .map(file -> file.getName().replaceAll("pr-jobs-", ""))
+                .collect(Collectors.toList());
+        for (String run : runs) {
+            parse(run, true);
         }
 
         filterResolved();
@@ -124,9 +131,9 @@ public class LogFailedParser {
         }
     }
 
-    public void parse(String runId) throws IOException, ParseException {
-        File conclusionFile = new File("logs/jobs-" + runId);
-        File logFile = new File("logs/log-" + runId);
+    public void parse(String runId, boolean pr) throws IOException, ParseException {
+        File conclusionFile = new File("logs/" + (pr ? "pr-" : "") + "jobs-" + runId);
+        File logFile = new File("logs/" + (pr ? "pr-" : "") + "log-" + runId);
 
         FailedRun failedRun = new FailedRun(runId);
         failedRuns.add(failedRun);
@@ -134,9 +141,14 @@ public class LogFailedParser {
         BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(conclusionFile)));
         List<FailedJob> jobs = new LinkedList<>();
 
-        String jsonDate = br.readLine().substring(2);
+        String[] header = br.readLine().substring(2).split(" ");
+
+        String jsonDate = header[0];
         Date date = DateUtil.fromJson(jsonDate);
         failedRun.setDate(date);
+
+        String event = header.length > 1 ? header[1] : null;
+        failedRun.setEvent(event);
 
         for (String l = br.readLine(); l != null; l = br.readLine()) {
             String[] split = l.split(": ");

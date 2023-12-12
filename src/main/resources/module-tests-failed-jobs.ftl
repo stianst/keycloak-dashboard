@@ -13,6 +13,7 @@
         <tr>
             <th>Date</th>
             <th>Run</th>
+            <th>Event</th>
             <th>Resolved by</th>
             <th>Profile</th>
             <th>Conclusion</th>
@@ -20,7 +21,7 @@
         </tr>
         <#list failedJobs?keys as jobName>
         <tr>
-            <th colspan="6">
+            <th colspan="7">
                 <a id="failed-job-${failedJobs[jobName][0].anchor}"></a>
                 ${jobName}
             </th>
@@ -29,6 +30,7 @@
         <tr>
             <td class="size10">${job.failedRun.date?date}</td>
             <td class="size10"><a href="https://github.com/keycloak/keycloak/actions/runs/${job.failedRun.runId}">${job.failedRun.runId}</a></td>
+            <td class="size10">${job.failedRun.event!}</td>
             <td class="size10">
                 <#if job.resolvedBy??>
                     <#if job.resolvedBy.issue?has_content><a href="https://github.com/keycloak/keycloak/issues/${job.resolvedBy.issue?string.computer}">#${job.resolvedBy.issue?string.computer}</a></#if>

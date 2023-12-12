@@ -1,10 +1,9 @@
 package org.keycloak.dashboard.beans;
 
 import org.keycloak.dashboard.Config;
-import org.keycloak.dashboard.rep.RetriedPR;
-import org.keycloak.dashboard.rep.TeamMembers;
 import org.keycloak.dashboard.rep.GitHubData;
 import org.keycloak.dashboard.rep.PullRequestWait;
+import org.keycloak.dashboard.rep.TeamMembers;
 import org.keycloak.dashboard.util.DateUtil;
 
 import java.util.Comparator;
@@ -17,13 +16,12 @@ public class WorkflowWaitTimes {
     private TeamMembers teamMembers;
     private GitHubData data;
 
-    public WorkflowWaitTimes(GitHubData data, TeamMembers teamMembers, List<RetriedPR> retriedPRs) {
+    public WorkflowWaitTimes(GitHubData data, TeamMembers teamMembers) {
         this.data = data;
 
         workFlowWaitPerMonthList = data.getPullRequestWaits().stream()
                 .filter(p -> teamMembers.isDeveloper(p.getAuthor(), false))
                 .filter(p -> p.getBaseRef().equals("main"))
-                .filter(p -> !isRetried(p, retriedPRs))
                 .collect(Collectors.groupingBy(p -> DateUtil.monthString(p.getCompletedAt())))
                 .entrySet().stream().map(e -> new WorkFlowWaitPerMonth(e.getKey(), e.getValue()))
                 .sorted(Comparator.comparing(WorkFlowWaitPerMonth::getMonth).reversed())
@@ -34,17 +32,12 @@ public class WorkflowWaitTimes {
                 .filter(p -> teamMembers.isDeveloper(p.getAuthor(), false))
                 .filter(p-> p.getBaseRef().equals("main"))
                 .filter(p -> DateUtil.MINUS_7_DAYS.before(p.getCompletedAt()))
-                .filter(p -> !isRetried(p, retriedPRs))
                 .collect(Collectors.toList());
         workFlowWaitPerMonthList.add(0, new WorkFlowWaitPerMonth("Last 7 days", last7days));
     }
 
     public List<WorkFlowWaitPerMonth> getWorkFlowWaitPerMonthList() {
         return workFlowWaitPerMonthList;
-    }
-
-    public static boolean isRetried(PullRequestWait pullRequestWait, List<RetriedPR> retriedPRs) {
-        return retriedPRs.stream().filter(r -> r.getPrNumber() != null && r.getPrNumber() == pullRequestWait.getNumber()).findFirst().isPresent();
     }
 
     public static class WorkFlowWaitPerMonth {

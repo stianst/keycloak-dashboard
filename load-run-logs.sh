@@ -20,7 +20,7 @@ for i in $(gh api -X GET repos/keycloak/keycloak/actions/workflows/ci.yml/runs -
     if [ ! -f logs/jobs-$RUN_ID ]; then
         echo "Downloading run: $RUN_ID"
 
-        echo "# $RUN_DATE" > logs/jobs-$RUN_ID
+        echo "# $RUN_DATE $EVENT" > logs/jobs-$RUN_ID
         gh api -X GET repos/keycloak/keycloak/actions/runs/$RUN_ID/jobs --paginate --jq '.jobs[] | .name + ": [" + .conclusion + "]"' >> logs/jobs-$RUN_ID
         gh run view -R keycloak/keycloak $RUN_ID --log-failed > logs/log-$RUN_ID
       else
@@ -33,6 +33,7 @@ for i in `ls logs/jobs-*`; do
   RUN_ID=`echo $i | sed 's|logs/jobs-||g'`
   if [[ ! " ${RUN_IDS[*]} " =~ " ${RUN_ID} " ]]; then
     echo "Purging old run: $RUN_ID"
-    rm logs/*-$RUN_ID
+    rm logs/jobs-$RUN_ID
+    rm logs/log-$RUN_ID
   fi
 done

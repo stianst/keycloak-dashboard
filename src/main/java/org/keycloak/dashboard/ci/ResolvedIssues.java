@@ -4,7 +4,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
 import org.keycloak.dashboard.rep.GitHubData;
 import org.keycloak.dashboard.rep.GitHubIssue;
-import org.keycloak.dashboard.rep.RetriedPR;
 
 import java.io.File;
 import java.io.IOException;
@@ -68,18 +67,6 @@ public class ResolvedIssues {
 
     public ResolvedIssue getResolved(FailedJob failedJob) {
         String jobMatch = failedJob.getFailedRun().getRunId() + "/" + failedJob.getName();
-        for (ResolvedIssue i : issues) {
-            for (String r : i.getResolves()) {
-                if (r.equals(jobMatch)) {
-                    return i;
-                }
-            }
-        }
-        return null;
-    }
-
-    public ResolvedIssue getResolved(RetriedPR retriedPR) {
-        String jobMatch = retriedPR.getRunId() + "/*";
         for (ResolvedIssue i : issues) {
             for (String r : i.getResolves()) {
                 if (r.equals(jobMatch)) {

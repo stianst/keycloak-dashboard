@@ -8,8 +8,5 @@
     <div class="modal-float-50">
         <div class="modal-float-margin"><#include "module-prs-wait-times.ftl"></div>
     </div>
-    <div class="modal-float-50">
-        <div class="modal-float-margin"><#include "module-retried-prs.ftl"></div>
-    </div>
 </div>
 </@template.page>
