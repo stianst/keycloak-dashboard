@@ -19,7 +19,6 @@ import java.io.IOException;
 import java.net.URL;
 import java.text.ParseException;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 /**
@@ -58,10 +57,10 @@ public class Dashboard {
         attributes.put("bugStats", bugs.getStats());
         attributes.put("bugAreaStats", bugs.getAreaStats());
         attributes.put("bugTeamStats", bugs.getTeamStats());
-        attributes.put("recentFailedJobs", logFailedParser.getRecentFailedJobs());
         attributes.put("failedRuns", logFailedParser.getFailedRuns());
         attributes.put("resolvedRuns", logFailedParser.getResolvedRuns());
-        attributes.put("failedJobs", logFailedParser.getFailedJobs());
+        attributes.put("failedJobs", logFailedParser.getUnlinkedFailedJobs());
+        attributes.put("linkedFailedJobs", logFailedParser.getLinkedFailedJobs());
         attributes.put("flakyTests", bugs.getFlakyTests());
         attributes.put("nextRelease", bugs.getNextRelease());
         attributes.put("workflowWaitTimes", new WorkflowWaitTimes(data, teamMembers).getWorkFlowWaitPerMonthList());

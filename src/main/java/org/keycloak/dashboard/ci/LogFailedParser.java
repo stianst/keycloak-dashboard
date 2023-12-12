@@ -9,12 +9,9 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.Arrays;
-import java.util.Collection;
 import java.util.Comparator;
 import java.util.Date;
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -22,8 +19,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
-import java.util.function.Function;
-import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
@@ -48,18 +43,6 @@ public class LogFailedParser {
         this.resolvedIssues = resolvedIssues;
     }
 
-    public List<FailedJob> getRecentFailedJobs() {
-        Date fromDate = DateUtil.MINUS_7_DAYS;
-        List<FailedJob> recentFailedJobs = new LinkedList<>();
-        for (FailedRun run : failedRuns) {
-            if (run.getDate().after(fromDate)) {
-                recentFailedJobs.addAll(run.getFailedJobs());
-            }
-        }
-        recentFailedJobs.sort((j1, j2) -> j2.getFailedRun().getDate().compareTo(j1.getFailedRun().getDate()));
-        return recentFailedJobs;
-    }
-
     public List<FailedRun> getFailedRuns() {
         return failedRuns;
     }
@@ -68,9 +51,22 @@ public class LogFailedParser {
         return resolvedRuns;
     }
 
-    public Map<String, List<FailedJob>> getFailedJobs() {
+    public Map<String, List<FailedJob>> getLinkedFailedJobs() {
         Map<String, List<FailedJob>> failedJobs = new TreeMap<>();
-        for (FailedRun run : failedRuns) {
+        for (FailedRun run : failedRuns.stream().filter(failedRun -> failedRun.getResolvedBy() != null).collect(Collectors.toList())) {
+            for (FailedJob job : run.getFailedJobs()) {
+                if (!failedJobs.containsKey(run.getResolvedBy().getId())) {
+                    failedJobs.put(run.getResolvedBy().getId(), new LinkedList<>());
+                }
+                failedJobs.get(run.getResolvedBy().getId()).add(job);
+            }
+        }
+        return failedJobs;
+    }
+
+    public Map<String, List<FailedJob>> getUnlinkedFailedJobs() {
+        Map<String, List<FailedJob>> failedJobs = new TreeMap<>();
+        for (FailedRun run : failedRuns.stream().filter(failedRun -> failedRun.getResolvedBy() == null).collect(Collectors.toList())) {
             for (FailedJob job : run.getFailedJobs()) {
                 if (!failedJobs.containsKey(job.getJobName())) {
                     failedJobs.put(job.getJobName(), new LinkedList<>());

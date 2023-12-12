@@ -45,6 +45,9 @@ public class ResolvedIssues {
                 } else {
                     i.setResolved(false);
                 }
+                if (issue.isPresent() && i.getDescription() == null) {
+                    i.setDescription(issue.get().getTitle());
+                }
             }
         }
         return resolvedIssues;
