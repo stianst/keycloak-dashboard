@@ -60,30 +60,51 @@ public class WorkflowWaitTimes {
         }
 
         public long getAverage() {
+            if (list.isEmpty()) {
+                return -1;
+            }
             return Math.round(list.stream().mapToDouble(PullRequestWait::getMinutes).average().getAsDouble());
         }
 
         public long getMin() {
+            if (list.isEmpty()) {
+                return -1;
+            }
             return list.stream().min(Comparator.comparing(PullRequestWait::getMinutes)).get().getMinutes();
         }
 
         public long getMax() {
+            if (list.isEmpty()) {
+                return -1;
+            }
             return list.stream().max(Comparator.comparing(PullRequestWait::getMinutes)).get().getMinutes();
         }
 
         public long getPercentage60m() {
+            if (list.isEmpty()) {
+                return -1;
+            }
             return Math.round(100 * list.stream().filter(p -> p.getMinutes() < 60).count() / getCount());
         }
 
         public long getPercentage90m() {
+            if (list.isEmpty()) {
+                return -1;
+            }
             return Math.round(100 * list.stream().filter(p -> p.getMinutes() < 90).count() / getCount());
         }
 
         public long getPercentage120m() {
+            if (list.isEmpty()) {
+                return -1;
+            }
             return Math.round(100 * list.stream().filter(p -> p.getMinutes() < 120).count() / getCount());
         }
 
         public long getPercentage180m() {
+            if (list.isEmpty()) {
+                return -1;
+            }
             return Math.round(100 * list.stream().filter(p -> p.getMinutes() < 180).count() / getCount());
         }
 

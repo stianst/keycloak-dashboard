@@ -43,7 +43,7 @@ public class Bugs {
         int closedLast90Days = (int) issues.stream().filter(i -> i.getClosedAt() != null && i.getClosedAt().after(DateUtil.MINUS_90_DAYS)).count();
 
         flakyTests = issues.stream()
-                .filter(i -> i.hasLabel("flaky-test") && i.isOpen()).map(f -> new FlakyTest(f))
+                .filter(i -> i.hasLabel("flaky-test") && i.isOpen() && i.getTitle().startsWith("Flaky test:")).map(f -> new FlakyTest(f))
                 .filter(i -> !(i.getPackage().startsWith("org.keycloak.testsuite.model") && "Backlog".equals(i.getMilestone())))
                 .filter(i -> !(i.getPackage().equals("org.keycloak.testsuite.ui.account2") && "Backlog".equals(i.getMilestone())))
                 .sorted(Comparator.comparing(FlakyTest::getUpdatedAt).reversed())
