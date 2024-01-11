@@ -34,7 +34,7 @@ public class ResolvedIssues {
 
     public static ResolvedIssues load(GitHubData data) throws IOException {
         ObjectMapper yamlMapper = new ObjectMapper(new YAMLFactory());
-        ResolvedIssues resolvedIssues = yamlMapper.readValue(new File("resolved-issues.yml"), ResolvedIssues.class);
+        ResolvedIssues resolvedIssues = yamlMapper.readValue(new File("failed-jobs-reporting.yml"), ResolvedIssues.class);
         for (ResolvedIssue i : resolvedIssues.issues) {
             if (i.getIssue() == null) {
                 i.setResolved(true);
