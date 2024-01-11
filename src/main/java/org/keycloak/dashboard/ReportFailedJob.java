@@ -21,9 +21,14 @@ import java.util.Optional;
 public class ReportFailedJob {
 
     public static void main(String[] args) throws IOException {
-        String j = System.getProperty("job").trim();
+        String[] jobRefs = System.getProperty("job").split(",");
+        for (int i = 0; i < jobRefs.length; i++) {
+            jobRefs[i] = jobRefs[i].trim();
+            if (jobRefs[i].indexOf('/') == -1) {
+                jobRefs[i] = jobRefs[i] + "/*";
+            }
+        }
 
-        final String jobRef = j.indexOf('/') == -1 ? j + "/*" : j;
         final Integer issueNumber = Integer.parseInt(System.getProperty("issue").trim());
 
         ObjectMapper yamlMapper = new ObjectMapper(new YAMLFactory());
@@ -35,14 +40,15 @@ public class ReportFailedJob {
         Optional<ResolvedIssue> existingIssue = resolvedIssues.getIssues().stream().filter(i -> issueNumber.equals(i.getIssue())).findFirst();
         if (existingIssue.isPresent()) {
             ResolvedIssue resolvedIssue = existingIssue.get();
-            Optional<String> existingResolves = resolvedIssue.getResolves().stream().filter(r -> Objects.equals(r, jobRef)).findFirst();
-            if (existingResolves.isPresent()) {
-                System.err.println("job [" + jobRef + "] already linked to issue [" + issueNumber + "]");
-                System.exit(1);
-            } else {
-                resolvedIssue.getResolves().add(0, jobRef);
-                updated = true;
-                System.out.println("job [" + jobRef + "] added to existing issue [" + resolvedIssue.getId() + " " + resolvedIssue.getDescription() + "]");
+            for (String jobRef : jobRefs) {
+                Optional<String> existingResolves = resolvedIssue.getResolves().stream().filter(r -> Objects.equals(r, jobRef)).findFirst();
+                if (existingResolves.isPresent()) {
+                    System.err.println("job [" + jobRef + "] already linked to issue [" + issueNumber + "]");
+                } else {
+                    resolvedIssue.getResolves().add(0, jobRef);
+                    updated = true;
+                    System.out.println("job [" + jobRef + "] added to existing issue [" + resolvedIssue.getId() + " " + resolvedIssue.getDescription() + "]");
+                }
             }
         } else {
             GitHub gitHub = GitHubBuilder.fromEnvironment().withJwtToken(TokenUtil.token()).build();
@@ -61,13 +67,14 @@ public class ReportFailedJob {
             resolvedIssue.setDescription(ghIssue.getTitle());
 
             List<String> resolves = new LinkedList<>();
-            resolves.add(jobRef);
+            for (String jobRef : jobRefs) {
+                resolves.add(jobRef);
+                System.out.println("job [" + jobRef + "] added to new issue [" + resolvedIssue.getId() + " " + resolvedIssue.getDescription() + "]");
+            }
             resolvedIssue.setResolves(resolves);
 
             resolvedIssues.getIssues().add(0, resolvedIssue);
             updated = true;
-
-            System.out.println("job [" + jobRef + "] added to new issue [" + resolvedIssue.getId() + " " + resolvedIssue.getDescription() + "]");
         }
 
         if (updated) {
