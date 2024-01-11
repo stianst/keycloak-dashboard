@@ -1,0 +1,51 @@
+name: Report failed job
+
+on:
+  workflow_dispatch:
+    inputs:
+      job:
+        type: string
+        description: "Job reference. If single job failed for workflow use job ref (for example 7383755647), or if there
+          are multiple failed include job name (for example 7383755647/Store Model Tests)"
+        required: true
+      issue:
+        type: number
+        description: "GitHub issue number to link to"
+        required: true
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "report-failed-jobs"
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - id: report
+        env:
+          GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          mvn clean install exec:java -Preport-failed-job -Djob="${{ inputs.job }}" -Dissue="${{ inputs.issue }}"
+          if ( ! git diff --exit-code &>/dev/null ); then 
+            git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git config --global user.name "github-actions[bot]"
+            git add --all 
+            git commit -m "Updated failed-jobs-reporting.yml"
+            git push
+          fi
+  deploy:
+    uses: ./.github/workflows/pages.yml
+    needs: [update]
