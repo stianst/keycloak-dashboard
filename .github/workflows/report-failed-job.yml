@@ -34,19 +34,30 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
+      - id: build
+        run:
+          mvn clean install
+
       - id: report
         env:
           GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          mvn clean install exec:java -Preport-failed-job -Djob="${{ inputs.job }}" -Dissue="${{ inputs.issue }}"
-          if ( ! git diff --exit-code &>/dev/null ); then 
-            git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git config --global user.name "github-actions[bot]"
-            git add --all 
-            git commit -m "Updated failed-jobs-reporting.yml"
-            git push
+          mvn exec:java -Preport-failed-job -Djob="${{ inputs.job }}" -Dissue="${{ inputs.issue }}"
+
+      - id: commit
+        env:
+          GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run:
+          if ( ! git diff --exit-code &>/dev/null ); then
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+          git add --all
+          git commit -m "Updated failed-jobs-reporting.yml"
+          git push
           fi
+
   deploy:
     uses: ./.github/workflows/pages.yml
     needs: [update]
