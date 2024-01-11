@@ -21,10 +21,10 @@ import java.util.Optional;
 public class ReportFailedJob {
 
     public static void main(String[] args) throws IOException {
-        String j = System.getProperty("job");
+        String j = System.getProperty("job").trim();
 
         final String jobRef = j.indexOf('/') == -1 ? j + "/*" : j;
-        final Integer issueNumber = Integer.parseInt(System.getProperty("issue"));
+        final Integer issueNumber = Integer.parseInt(System.getProperty("issue").trim());
 
         ObjectMapper yamlMapper = new ObjectMapper(new YAMLFactory());
         yamlMapper.setSerializationInclusion(JsonInclude.Include.NON_EMPTY);
