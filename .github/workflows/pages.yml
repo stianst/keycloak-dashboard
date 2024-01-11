@@ -34,6 +34,7 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '17'
+          cache: 'maven'
       - name: Build dashboard
         run: mvn clean install exec:java -Pdashboard -Dpublish
       - name: Upload artifact
