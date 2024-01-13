@@ -1,0 +1,275 @@
+FIPS IT (non-strict)	Run base tests	2024-01-12T21:17:54.1720258Z ##[group]Run docker run --rm --workdir /github/workspace -e "SUREFIRE_RERUN_FAILING_COUNT" -v "/home/runner/work/keycloak/keycloak":"/github/workspace" -v "$HOME/.m2":"/root/.m2" registry.access.redhat.com/ubi8/ubi:latest .github/scripts/run-fips-it.sh non-strict
+FIPS IT (non-strict)	Run base tests	2024-01-12T21:17:54.1722472Z [36;1mdocker run --rm --workdir /github/workspace -e "SUREFIRE_RERUN_FAILING_COUNT" -v "/home/runner/work/keycloak/keycloak":"/github/workspace" -v "$HOME/.m2":"/root/.m2" registry.access.redhat.com/ubi8/ubi:latest .github/scripts/run-fips-it.sh non-strict[0m
+FIPS IT (non-strict)	Run base tests	2024-01-12T21:17:54.1774317Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+FIPS IT (non-strict)	Run base tests	2024-01-12T21:17:54.1774755Z env:
+FIPS IT (non-strict)	Run base tests	2024-01-12T21:17:54.1775123Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+FIPS IT (non-strict)	Run base tests	2024-01-12T21:17:54.1775608Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+FIPS IT (non-strict)	Run base tests	2024-01-12T21:17:54.1776026Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+FIPS IT (non-strict)	Run base tests	2024-01-12T21:17:54.1776599Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.9-9/x64
+FIPS IT (non-strict)	Run base tests	2024-01-12T21:17:54.1777288Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.9-9/x64
+FIPS IT (non-strict)	Run base tests	2024-01-12T21:17:54.1777781Z ##[endgroup]
+FIPS IT (non-strict)	Run base tests	2024-01-12T21:17:54.2459304Z Unable to find image 'registry.access.redhat.com/ubi8/ubi:latest' locally
+FIPS IT (non-strict)	Run base tests	2024-01-12T21:17:55.1466733Z latest: Pulling from ubi8/ubi
+FIPS IT (non-strict)	Run base tests	2024-01-12T21:17:55.3838865Z c2650fe947f6: Pulling fs layer
+FIPS IT (non-strict)	Run base tests	2024-01-12T21:17:56.0709357Z c2650fe947f6: Verifying Checksum
+FIPS IT (non-strict)	Run base tests	2024-01-12T21:17:56.0710114Z c2650fe947f6: Download complete
+FIPS IT (non-strict)	Run base tests	2024-01-12T21:17:58.9075320Z c2650fe947f6: Pull complete
+FIPS IT (non-strict)	Run base tests	2024-01-12T21:17:58.9122688Z Digest: sha256:1fdb97f2d2a44fdef3feaa69100f154631bae65130105ac685d0e34eb1d8c3d0
+FIPS IT (non-strict)	Run base tests	2024-01-12T21:17:58.9138259Z Status: Downloaded newer image for registry.access.redhat.com/ubi8/ubi:latest
+FIPS IT (non-strict)	Run base tests	2024-01-12T21:18:01.7226406Z Updating Subscription Management repositories.
+FIPS IT (non-strict)	Run base tests	2024-01-12T21:18:01.7230469Z Unable to read consumer identity
+FIPS IT (non-strict)	Run base tests	2024-01-12T21:18:01.7260594Z 
+FIPS IT (non-strict)	Run base tests	2024-01-12T21:18:01.7262082Z This system is not registered with an entitlement server. You can use subscription-manager to register.
+FIPS IT (non-strict)	Run base tests	2024-01-12T21:18:01.7263126Z 
+FIPS IT (non-strict)	Run base tests	2024-01-12T21:18:03.1041017Z Red Hat Universal Base Image 8 (RPMs) - BaseOS  537 kB/s | 717 kB     00:01    
+FIPS IT (non-strict)	Run base tests	2024-01-12T21:18:05.3899311Z Red Hat Universal Base Image 8 (RPMs) - AppStre 308 kB/s | 668 kB     00:02    
+FIPS IT (non-strict)	Run base tests	2024-01-12T21:18:05.3905786Z Errors during downloading metadata for repository 'ubi-8-appstream-rpms':
+FIPS IT (non-strict)	Run base tests	2024-01-12T21:18:05.3909028Z   - Curl error (52): Server returned nothing (no headers, no data) for https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi8/8/x86_64/appstream/os/repodata/cb85879a8b7e5ca205be113c6f40d5d326bd7ef3fb6fe710b001fe90e00eeed6-filelists.xml.gz [Empty reply from server]
+FIPS IT (non-strict)	Run base tests	2024-01-12T21:18:05.4011277Z Error: Failed to download metadata for repo 'ubi-8-appstream-rpms': Yum repo downloading error: Downloading error(s): repodata/cb85879a8b7e5ca205be113c6f40d5d326bd7ef3fb6fe710b001fe90e00eeed6-filelists.xml.gz - Cannot download, all mirrors were already tried without success
+FIPS IT (non-strict)	Run base tests	2024-01-12T21:18:05.5229889Z Setting system policy to FIPS
+FIPS IT (non-strict)	Run base tests	2024-01-12T21:18:05.5231078Z Note: System-wide crypto policies are applied on application start-up.
+FIPS IT (non-strict)	Run base tests	2024-01-12T21:18:05.5232100Z It is recommended to restart the system for the change of policies
+FIPS IT (non-strict)	Run base tests	2024-01-12T21:18:05.5232839Z to fully take place.
+FIPS IT (non-strict)	Run base tests	2024-01-12T21:18:05.5331813Z The grubby command is missing, please configure the bootloader manually.
+FIPS IT (non-strict)	Run base tests	2024-01-12T21:18:05.5337213Z FIPS mode will be enabled.
+FIPS IT (non-strict)	Run base tests	2024-01-12T21:18:05.5338373Z Now you need to configure the bootloader to add kernel options "fips=1"
+FIPS IT (non-strict)	Run base tests	2024-01-12T21:18:05.5339010Z and reboot the system for the setting to take effect.
+FIPS IT (non-strict)	Run base tests	2024-01-12T21:18:05.5425704Z STRICT_OPTIONS: 
+FIPS IT (non-strict)	Run base tests	2024-01-12T21:18:05.6552419Z Tests: LoginTest,LoginTotpTest,PasswordHashingTest,ClientAuthSignedJWTTest,CredentialsTest,JavaKeystoreKeyProviderTest,ServerInfoTest,UserFederationLdapConnectionTest,LDAPUserLoginTest,org.keycloak.testsuite.x509.**,MutualTLSClientTest,FAPI1Test,FAPICIBATest,KcRegTest,KcRegCreateTest,KcAdmTest,KcAdmCreateTest,SAMLServletAdapterTest,SamlSignatureTest,KcOidcBrokerJWETest,KcOidcBrokerJWEUserInfoJustEncryptedTest,KcSamlBrokerTest,KcSamlFirstBrokerLoginTest,KcSamlEncryptedIdTest,KcSamlSignedBrokerTest,KcSamlSpDescriptorTest,KerberosLdapTest,TrustStoreEmailTest
+FIPS IT (non-strict)	Run base tests	2024-01-12T21:18:05.6576040Z misc/log/trimmer.sh: line 6: javac: command not found
+FIPS IT (non-strict)	Run base tests	2024-01-12T21:18:05.8636361Z ##[error]Process completed with exit code 127.
+FIPS IT (strict)	Run base tests	2024-01-12T21:17:59.0607789Z ##[group]Run docker run --rm --workdir /github/workspace -e "SUREFIRE_RERUN_FAILING_COUNT" -v "/home/runner/work/keycloak/keycloak":"/github/workspace" -v "$HOME/.m2":"/root/.m2" registry.access.redhat.com/ubi8/ubi:latest .github/scripts/run-fips-it.sh strict
+FIPS IT (strict)	Run base tests	2024-01-12T21:17:59.0610015Z [36;1mdocker run --rm --workdir /github/workspace -e "SUREFIRE_RERUN_FAILING_COUNT" -v "/home/runner/work/keycloak/keycloak":"/github/workspace" -v "$HOME/.m2":"/root/.m2" registry.access.redhat.com/ubi8/ubi:latest .github/scripts/run-fips-it.sh strict[0m
+FIPS IT (strict)	Run base tests	2024-01-12T21:17:59.0661330Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+FIPS IT (strict)	Run base tests	2024-01-12T21:17:59.0661768Z env:
+FIPS IT (strict)	Run base tests	2024-01-12T21:17:59.0662140Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+FIPS IT (strict)	Run base tests	2024-01-12T21:17:59.0662631Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+FIPS IT (strict)	Run base tests	2024-01-12T21:17:59.0663043Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+FIPS IT (strict)	Run base tests	2024-01-12T21:17:59.0663611Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.9-9/x64
+FIPS IT (strict)	Run base tests	2024-01-12T21:17:59.0664294Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.9-9/x64
+FIPS IT (strict)	Run base tests	2024-01-12T21:17:59.0664785Z ##[endgroup]
+FIPS IT (strict)	Run base tests	2024-01-12T21:17:59.1158219Z Unable to find image 'registry.access.redhat.com/ubi8/ubi:latest' locally
+FIPS IT (strict)	Run base tests	2024-01-12T21:17:59.9559220Z latest: Pulling from ubi8/ubi
+FIPS IT (strict)	Run base tests	2024-01-12T21:18:00.3009008Z c2650fe947f6: Pulling fs layer
+FIPS IT (strict)	Run base tests	2024-01-12T21:18:01.0366580Z c2650fe947f6: Verifying Checksum
+FIPS IT (strict)	Run base tests	2024-01-12T21:18:01.0367236Z c2650fe947f6: Download complete
+FIPS IT (strict)	Run base tests	2024-01-12T21:18:03.8321591Z c2650fe947f6: Pull complete
+FIPS IT (strict)	Run base tests	2024-01-12T21:18:03.8374931Z Digest: sha256:1fdb97f2d2a44fdef3feaa69100f154631bae65130105ac685d0e34eb1d8c3d0
+FIPS IT (strict)	Run base tests	2024-01-12T21:18:03.8387525Z Status: Downloaded newer image for registry.access.redhat.com/ubi8/ubi:latest
+FIPS IT (strict)	Run base tests	2024-01-12T21:18:07.1861428Z Updating Subscription Management repositories.
+FIPS IT (strict)	Run base tests	2024-01-12T21:18:07.1862389Z Unable to read consumer identity
+FIPS IT (strict)	Run base tests	2024-01-12T21:18:07.1891321Z 
+FIPS IT (strict)	Run base tests	2024-01-12T21:18:07.1892786Z This system is not registered with an entitlement server. You can use subscription-manager to register.
+FIPS IT (strict)	Run base tests	2024-01-12T21:18:07.1893522Z 
+FIPS IT (strict)	Run base tests	2024-01-12T21:18:08.3225804Z Red Hat Universal Base Image 8 (RPMs) - BaseOS  652 kB/s | 717 kB     00:01    
+FIPS IT (strict)	Run base tests	2024-01-12T21:18:11.3783610Z Red Hat Universal Base Image 8 (RPMs) - AppStre 227 kB/s | 668 kB     00:02    
+FIPS IT (strict)	Run base tests	2024-01-12T21:18:11.3792065Z Errors during downloading metadata for repository 'ubi-8-appstream-rpms':
+FIPS IT (strict)	Run base tests	2024-01-12T21:18:11.3795251Z   - Curl error (52): Server returned nothing (no headers, no data) for https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi8/8/x86_64/appstream/os/repodata/cb85879a8b7e5ca205be113c6f40d5d326bd7ef3fb6fe710b001fe90e00eeed6-filelists.xml.gz [Empty reply from server]
+FIPS IT (strict)	Run base tests	2024-01-12T21:18:11.3884149Z Error: Failed to download metadata for repo 'ubi-8-appstream-rpms': Yum repo downloading error: Downloading error(s): repodata/cb85879a8b7e5ca205be113c6f40d5d326bd7ef3fb6fe710b001fe90e00eeed6-filelists.xml.gz - Cannot download, all mirrors were already tried without success
+FIPS IT (strict)	Run base tests	2024-01-12T21:18:11.5042532Z Setting system policy to FIPS
+FIPS IT (strict)	Run base tests	2024-01-12T21:18:11.5043785Z Note: System-wide crypto policies are applied on application start-up.
+FIPS IT (strict)	Run base tests	2024-01-12T21:18:11.5044867Z It is recommended to restart the system for the change of policies
+FIPS IT (strict)	Run base tests	2024-01-12T21:18:11.5045670Z to fully take place.
+FIPS IT (strict)	Run base tests	2024-01-12T21:18:11.5133692Z The grubby command is missing, please configure the bootloader manually.
+FIPS IT (strict)	Run base tests	2024-01-12T21:18:11.5139421Z FIPS mode will be enabled.
+FIPS IT (strict)	Run base tests	2024-01-12T21:18:11.5140325Z Now you need to configure the bootloader to add kernel options "fips=1"
+FIPS IT (strict)	Run base tests	2024-01-12T21:18:11.5140940Z and reboot the system for the setting to take effect.
+FIPS IT (strict)	Run base tests	2024-01-12T21:18:11.5229096Z STRICT_OPTIONS: -Dauth.server.fips.mode=strict -Dauth.server.supported.keystore.types=BCFKS -Dauth.server.keystore.type=bcfks -Dauth.server.supported.rsa.key.sizes=2048,4096
+FIPS IT (strict)	Run base tests	2024-01-12T21:18:11.6343864Z Tests: LoginTest,LoginTotpTest,PasswordHashingTest,ClientAuthSignedJWTTest,CredentialsTest,JavaKeystoreKeyProviderTest,ServerInfoTest,UserFederationLdapConnectionTest,LDAPUserLoginTest,org.keycloak.testsuite.x509.**,MutualTLSClientTest,FAPI1Test,FAPICIBATest,KcRegTest,KcRegCreateTest,KcAdmTest,KcAdmCreateTest,SAMLServletAdapterTest,SamlSignatureTest,KcOidcBrokerJWETest,KcOidcBrokerJWEUserInfoJustEncryptedTest,KcSamlBrokerTest,KcSamlFirstBrokerLoginTest,KcSamlEncryptedIdTest,KcSamlSignedBrokerTest,KcSamlSpDescriptorTest,KerberosLdapTest,TrustStoreEmailTest
+FIPS IT (strict)	Run base tests	2024-01-12T21:18:11.6372454Z misc/log/trimmer.sh: line 6: javac: command not found
+FIPS IT (strict)	Run base tests	2024-01-12T21:18:11.8295862Z ##[error]Process completed with exit code 127.
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9246709Z Prepare all required actions
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9350239Z ##[group]Run ./.github/actions/status-check
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9350912Z with:
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9354856Z   jobs: {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "conditional": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	      "ci": "true",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	      "ci-sssd": "false",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	      "ci-store": "false"
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    }
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "build": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "unit-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "base-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "quarkus-unit-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "quarkus-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "jdk-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "legacy-store-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "skipped",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "store-model-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "skipped",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "clustering-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "fips-unit-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "fips-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "failure",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "account-console-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "forms-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "webauthn-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "sssd-unit-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "skipped",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "migration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  }
+Status Check - Keycloak CI	Run /./.github/actions/status-check	}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9359415Z env:
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9359882Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9360427Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9360982Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9361520Z ##[endgroup]
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9634943Z ##[group]Run JOBS='{
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9635547Z [36;1mJOBS='{[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9636039Z [36;1m  "conditional": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9636467Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9636864Z [36;1m    "outputs": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9637313Z [36;1m      "ci": "true",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9637719Z [36;1m      "ci-sssd": "false",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9638109Z [36;1m      "ci-store": "false"[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9638571Z [36;1m    }[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9638913Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9639272Z [36;1m  "build": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9639700Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9640124Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9640451Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9640853Z [36;1m  "unit-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9641249Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9641603Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9642015Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9642389Z [36;1m  "base-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9642792Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9643288Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9643734Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9644040Z [36;1m  "quarkus-unit-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9644539Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9644955Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9645287Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9645729Z [36;1m  "quarkus-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9646182Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9646544Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9646980Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9647668Z [36;1m  "jdk-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9648090Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9648595Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9649026Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9649365Z [36;1m  "legacy-store-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9649911Z [36;1m    "result": "skipped",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9650625Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9650972Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9651372Z [36;1m  "store-model-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9652070Z [36;1m    "result": "skipped",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9652434Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9652855Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9653242Z [36;1m  "clustering-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9653697Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9654188Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9654560Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9654885Z [36;1m  "fips-unit-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9655312Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9655712Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9656062Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9656425Z [36;1m  "fips-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9656861Z [36;1m    "result": "failure",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9657243Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9657637Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9658019Z [36;1m  "account-console-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9658501Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9659155Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9659482Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9659829Z [36;1m  "forms-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9660328Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9660684Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9661034Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9661479Z [36;1m  "webauthn-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9661885Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9662287Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9662686Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9662981Z [36;1m  "sssd-unit-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9663393Z [36;1m    "result": "skipped",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9663910Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9664222Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9664572Z [36;1m  "migration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9665022Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9665375Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9665746Z [36;1m  }[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9666103Z [36;1m}'[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9666378Z [36;1m[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9666707Z [36;1mecho "Job status:"[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9667314Z [36;1mecho $JOBS | jq -r 'to_entries[] | " - \(.key): \(.value.result)"'[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9667821Z [36;1m[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9668298Z [36;1mfor i in $(echo $JOBS | jq -r 'to_entries[] | .value.result'); do[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9669086Z [36;1m  if [ "$i" != "success" ] && [ "$i" != "skipped" ]; then[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9669567Z [36;1m    echo ""[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9669957Z [36;1m    echo "Status check not okay!"[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9670440Z [36;1m    exit 1[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9670750Z [36;1m  fi[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9671062Z [36;1mdone[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9741594Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9742371Z env:
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9742939Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9743553Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9744072Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9744562Z ##[endgroup]
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:19.9901375Z Job status:
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:20.0121002Z  - conditional: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:20.0121681Z  - build: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:20.0122419Z  - unit-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:20.0122953Z  - base-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:20.0123554Z  - quarkus-unit-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:20.0124290Z  - quarkus-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:20.0124902Z  - jdk-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:20.0125560Z  - legacy-store-integration-tests: skipped
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:20.0126341Z  - store-model-tests: skipped
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:20.0126798Z  - clustering-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:20.0128367Z  - fips-unit-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:20.0129182Z  - fips-integration-tests: failure
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:20.0130017Z  - account-console-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:20.0131314Z  - forms-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:20.0132250Z  - webauthn-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:20.0132953Z  - sssd-unit-tests: skipped
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:20.0133458Z  - migration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:20.0337615Z 
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:20.0338328Z Status check not okay!
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-01-12T22:17:20.0353064Z ##[error]Process completed with exit code 1.
