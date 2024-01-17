@@ -119,15 +119,22 @@ public class WorkflowRuntimeLoader {
                     JsonObject checkSuite = checkSuiteItr.next().asJsonObject()
                             .getJsonObject("node");
 
-                    Date createdAt = DateUtil.fromJson(checkSuite.getString("createdAt"));
-                    Date updatedAt = DateUtil.fromJson(checkSuite.getString("updatedAt"));
-
-                    if (startedAt == null || createdAt.before(startedAt)) {
-                        startedAt = createdAt;
+                    String workflowName = "";
+                    if (!checkSuite.get("workflowRun").getValueType().equals(JsonValue.ValueType.NULL)) {
+                        workflowName = checkSuite.getJsonObject("workflowRun").getJsonObject("workflow").getString("name");
                     }
 
-                    if (completedAt == null || updatedAt.after(completedAt)) {
-                        completedAt = updatedAt;
+                    if (!workflowName.equals("Labeller")) {
+                        Date createdAt = DateUtil.fromJson(checkSuite.getString("createdAt"));
+                        Date updatedAt = DateUtil.fromJson(checkSuite.getString("updatedAt"));
+
+                        if (startedAt == null || createdAt.before(startedAt)) {
+                            startedAt = createdAt;
+                        }
+
+                        if (completedAt == null || updatedAt.after(completedAt)) {
+                            completedAt = updatedAt;
+                        }
                     }
                 }
 
