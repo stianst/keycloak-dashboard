@@ -13,8 +13,8 @@ import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 public class BugTeamStat {
-
     private static final String ISSUES_LINK = "https://github.com/keycloak/keycloak/issues";
+
     private final String teamQuery;
     private final List<GitHubIssue> openIssues;
 
@@ -23,9 +23,9 @@ public class BugTeamStat {
 
     private List<Column> columns = new LinkedList<>();
 
-    public BugTeamStat(String team, List<GitHubIssue> openIssues, String nextRelease) {
+    public BugTeamStat(String team, String teamQuery, List<GitHubIssue> openIssues, String nextRelease) {
         this.team = team;
-        this.teamQuery = "is:issue is:open label:kind/bug label:team/" + team;
+        this.teamQuery = teamQuery;
         this.openIssues = openIssues;
         this.nextRelease = nextRelease;
 

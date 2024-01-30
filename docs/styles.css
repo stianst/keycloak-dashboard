@@ -20,12 +20,12 @@ div.content {
 }
 
 div.modal-float {
-    width: 25%;
+    max-width: 100%;
     float: left;
 }
 
 div.modal-float-50 {
-    width: 50%;
+
     float: left;
 }
 
@@ -35,13 +35,6 @@ div.modal-float-margin {
 
 div.modal {
     margin: 10px 0 0 10px;
-}
-
-@media screen and (max-width: 1200px) {
-    div.modal-float, div.modal-float-50 {
-        float: none;
-        width: 100%;
-    }
 }
 
 div.header {
@@ -58,11 +51,14 @@ div.body {
 
 div.body table {
     border-collapse: collapse;
-    width: 100%;
 }
 
 div.body tr {
     border-bottom: 1px solid #ddd;
+}
+
+div.body td {
+    border-left: 1px solid #ddd;
 }
 
 div.body tr:nth-child(even) {
@@ -97,6 +93,10 @@ div.body td {
     vertical-align: middle !important;
 }
 
+.shield img {
+    margin-right: 5px;
+}
+
 .center {
     text-align: center !important;
 }
@@ -106,19 +106,15 @@ td.nopadding {
 }
 
 td.size5 {
-    width: 5% !important;
 }
 
 td.size10 {
-    width: 10% !important;
 }
 
 td.size20 {
-    width: 20% !important;
 }
 
 td.size50 {
-    width: 50% !important;
 }
 
 div.body div.section-heading {
@@ -135,10 +131,10 @@ div.body td.failures {
 
 div.body div.failures {
     font-family: monospace;
+    padding: 10px;
+    max-width: 700px;
     max-height: 100px;
     overflow: auto;
-    width: 100%;
-    padding: 10px 0;
 }
 
 ul.menu {

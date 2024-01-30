@@ -143,7 +143,13 @@ public class Bugs {
         List<BugTeamStat> teamStats = new LinkedList<>();
         for (Map.Entry<String, List<GitHubIssue>> e : teamIssues.entrySet()) {
             String teamName = e.getKey().replaceFirst("team/", "");
-            teamStats.add(new BugTeamStat(teamName, e.getValue(), nextRelease));
+            String teamQuery;
+            if (teamName.equals("missing team")) {
+                teamQuery = "is:issue is:open label:kind/bug -label:" + teams.keySet().stream().collect(Collectors.joining(","));
+            } else {
+                teamQuery = "is:issue is:open label:kind/bug label:team/" + teamName;
+            }
+            teamStats.add(new BugTeamStat(teamName, teamQuery, e.getValue(), nextRelease));
         }
 
         teamStats.sort(Comparator.comparingInt(BugTeamStat::getTotal).reversed());
