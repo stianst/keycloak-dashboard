@@ -13,7 +13,7 @@
         <tr>
             <td><a href="${bugTeamStat.teamGhLink}">${bugTeamStat.title}</a></td>
             <#list bugTeamStat.columns as col>
-            <td class="count ${col.cssClasses} size5 center"><a href="${col.ghLink}">${col.count}</a></td>
+            <td class="count ${col.cssClasses} center"><a href="${col.ghLink}">${col.count}</a></td>
             </#list>
         </tr>
         </#list>

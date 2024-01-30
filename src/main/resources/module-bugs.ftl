@@ -11,11 +11,11 @@
             <#list bugStats as bugStat>
             <tr>
                 <td class="title"><a href="${bugStat.openGhLink}">${bugStat.title}</a></td>
-                <td class="openCount ${bugStat.openCssClasses} size5 center"><a href="${bugStat.openGhLink}">${bugStat.openCount}</a></td>
+                <td class="count ${bugStat.openCssClasses} center"><a href="${bugStat.openGhLink}">${bugStat.openCount}</a></td>
                 <#if bugStat.closedCount?has_content>
-                <td class="closedCount ${bugStat.closedCssClasses} size5 center"><a href="${bugStat.closedGhLink}">${bugStat.closedCount}</a></td>
+                <td class="count ${bugStat.closedCssClasses} center"><a href="${bugStat.closedGhLink}">${bugStat.closedCount}</a></td>
                 <#else>
-                <td class="size5"></td>
+                <td class="count"></td>
                 </#if>
             </tr>
             </#list>
