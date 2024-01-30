@@ -1,118 +1,123 @@
 package org.keycloak.dashboard.beans;
 
 import org.keycloak.dashboard.Config;
+import org.keycloak.dashboard.rep.GitHubIssue;
 import org.keycloak.dashboard.util.Css;
 import org.keycloak.dashboard.util.GHQuery;
 
 import java.util.HashSet;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 public class BugTeamStat {
 
-    String team;
-    List<String> areas;
-    Set<Integer> nextRelease = new HashSet<>();
-    Set<Integer> open = new HashSet<>();
-    Set<Integer> triage = new HashSet<>();
-    Set<Integer> backlog = new HashSet<>();
-    Set<Integer> backlogTriage = new HashSet<>();
+    private static final String ISSUES_LINK = "https://github.com/keycloak/keycloak/issues";
+    private final String teamQuery;
+    private final List<GitHubIssue> openIssues;
 
-    String ghLink;
-    String ghNextReleaseLink;
-    String ghOpenLink;
+    private String team;
+    private final String nextRelease;
 
-    String ghTriageLink;
-    String ghBacklogLink;
+    private List<Column> columns = new LinkedList<>();
 
-    String ghTriageBacklogLink;
-
-    public BugTeamStat(String team, List<String> areas, String nextRelease) {
+    public BugTeamStat(String team, List<GitHubIssue> openIssues, String nextRelease) {
         this.team = team;
-        this.areas = areas;
+        this.teamQuery = "is:issue is:open label:kind/bug label:team/" + team;
+        this.openIssues = openIssues;
+        this.nextRelease = nextRelease;
 
-        String link = "https://github.com/keycloak/keycloak/issues";
-        String areaLabels = areas.stream().collect(Collectors.joining(","));
+        columns.add(new Column(nextRelease,
+                i -> nextRelease.equals(i.getMilestone()),
+                "milestone:" + nextRelease,
+                Config.BUG_TEAM_NEXT_WARN, Config.BUG_TEAM_NEXT_ERROR));
 
-        ghLink = link + "?q=" + GHQuery.encode("is:issue is:open label:kind/bug label:" + areaLabels);
-        ghNextReleaseLink = link + "?q=" + GHQuery.encode("is:issue is:open label:kind/bug milestone:" + nextRelease + " label:" + areaLabels);
-        ghOpenLink = link + "?q=" + GHQuery.encode("is:issue is:open label:kind/bug -label:status/triage no:milestone label:" + areaLabels);
-        ghTriageLink = link + "?q=" + GHQuery.encode("is:issue is:open label:kind/bug label:status/triage -milestone:Backlog label:" + areaLabels);
-        ghBacklogLink = link + "?q=" + GHQuery.encode("is:issue is:open label:kind/bug -label:status/triage milestone:Backlog label:" + areaLabels);
-        ghTriageBacklogLink = link + "?q=" + GHQuery.encode("is:issue is:open label:kind/bug label:status/triage milestone:Backlog label:" + areaLabels);
+        columns.add(new Column("Open",
+                i -> !i.getLabels().contains("status/triage") && (i.getMilestone() == null || !i.getMilestone().equals("Backlog")),
+                "-label:status/triage -milestone:Backlog",
+                Config.BUG_TEAM_OPEN_WARN, Config.BUG_TEAM_OPEN_ERROR));
+
+        columns.add(new Column("Triage",
+                i -> i.getLabels().contains("status/triage") && (i.getMilestone() == null || !i.getMilestone().equals("Backlog")),
+                "label:status/triage -milestone:Backlog",
+                Config.BUG_TEAM_TRIAGE_WARN, Config.BUG_TEAM_TRIAGE_ERROR));
+
+        columns.add(new Column("Backlog",
+                i -> !i.getLabels().contains("status/triage") && !i.getLabels().contains("help wanted") && i.getMilestone() != null && i.getMilestone().equals("Backlog"),
+                "-label:status/triage -label:\"help wanted\" milestone:Backlog",
+                Config.BUG_TEAM_OPEN_WARN, Config.BUG_TEAM_OPEN_ERROR));
+
+        columns.add(new Column("Triage Backlog",
+                i -> i.getLabels().contains("status/triage") && i.getMilestone() != null && i.getMilestone().equals("Backlog"),
+                "label:status/triage milestone:Backlog",
+                Config.BUG_TEAM_BACKLOG_TRIAGE_WARN, Config.BUG_TEAM_BACKLOG_TRIAGE_ERROR));
+
+        columns.add(new Column("Help Wanted",
+                i -> i.getLabels().contains("help wanted"),
+                "label:\"help wanted\"",
+                Config.BUG_TEAM_OPEN_WARN, Config.BUG_TEAM_OPEN_ERROR));
     }
 
     public String getTitle() {
-        return team.substring("team/".length());
-    }
-
-    public List<String> getAreas() {
-        return areas;
+        return team;
     }
 
     public int getTotal() {
-        return open.size() + triage.size();
+        return openIssues.size();
     }
 
-    public int getNextRelease() {
-        return nextRelease.size();
+    public List<Column> getColumns() {
+        return columns;
     }
 
-    public int getOpen() {
-        return open.size();
+    public String getTeamGhLink() {
+        return getLink(null);
     }
 
-    public int getTriage() {
-        return triage.size();
+    public final class Column {
+        String label;
+
+        String link;
+
+        int count;
+
+        int warnCount;
+
+        int errorCount;
+
+        public Column(String label, Predicate<GitHubIssue> predicate, String query, int warnCount, int errorCount) {
+            this.label = label;
+            this.link = getLink(query);
+            this.count = getFilteredCount(predicate);
+            this.warnCount = warnCount;
+            this.errorCount = errorCount;
+        }
+
+        public String getLabel() {
+            return label;
+        }
+
+        public String getGhLink() {
+            return link;
+        }
+
+        public int getCount() {
+            return count;
+        }
+
+        public String getCssClasses() {
+            return Css.getCountClass(count, warnCount, errorCount);
+        }
     }
 
-    public int getBacklog() {
-        return backlog.size();
+    private String getLink(String query) {
+        String q = query == null ? teamQuery : teamQuery + " " + query;
+        return ISSUES_LINK + "?q=" + GHQuery.encode(q);
     }
 
-    public int getBacklogTriage() {
-        return backlogTriage.size();
-    }
-
-    public String getGhLink() {
-        return ghLink;
-    }
-
-    public String getGhOpenLink() {
-        return ghOpenLink;
-    }
-
-    public String getGhBacklogLink() {
-        return ghBacklogLink;
-    }
-
-    public String getGhTriageBacklogLink() {
-        return ghTriageBacklogLink;
-    }
-
-    public String getGhNextReleaseLink() {
-        return ghNextReleaseLink;
-    }
-
-    public String getGhTriageLink() {
-        return ghTriageLink;
-    }
-
-    public String getNextCssClasses() {
-        return Css.getCountClass(nextRelease.size(), Config.BUG_TEAM_NEXT_WARN, Config.BUG_TEAM_NEXT_ERROR);
-    }
-    public String getOpenCssClasses() {
-        return Css.getCountClass(open.size(), Config.BUG_TEAM_OPEN_WARN, Config.BUG_TEAM_OPEN_ERROR);
-    }
-
-    public String getTriageCssClasses() {
-        return Css.getCountClass(triage.size(), Config.BUG_TEAM_TRIAGE_WARN, Config.BUG_TEAM_TRIAGE_ERROR);
-    }
-    public String getBacklogTriageCssClasses() {
-        return Css.getCountClass(backlogTriage.size(), Config.BUG_TEAM_BACKLOG_TRIAGE_WARN, Config.BUG_TEAM_BACKLOG_TRIAGE_ERROR);
-    }
-    public String getBacklogCssClasses() {
-        return Css.getCountClass(backlog.size(), Config.BUG_TEAM_BACKLOG_WARN, Config.BUG_TEAM_BACKLOG_ERROR);
+    private int getFilteredCount(Predicate<GitHubIssue> predicate) {
+        return (int) openIssues.stream().filter(predicate).count();
     }
 }

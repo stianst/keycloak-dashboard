@@ -118,6 +118,10 @@ public class GitHubIssue {
         return labels.stream().filter(l -> l.startsWith("area/")).collect(Collectors.toList());
     }
 
+    public List<String> getTeams() {
+        return labels.stream().filter(l -> l.startsWith("team/")).collect(Collectors.toList());
+    }
+
     @JsonIgnore
     public boolean hasLabel(String... label) {
         for (String l : label) {

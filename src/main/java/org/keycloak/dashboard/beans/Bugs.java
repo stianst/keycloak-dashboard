@@ -120,37 +120,35 @@ public class Bugs {
     }
 
     private List<BugTeamStat> convertToTeamStats(List<GitHubIssue> issues, Teams teams) {
-        Map<String, BugTeamStat> areas = new LinkedHashMap<>();
-        for (Map.Entry<String, List<String>> e : teams.entrySet()) {
-            areas.put(e.getKey(), new BugTeamStat(e.getKey(), e.getValue(), nextRelease));
+        Map<String, List<GitHubIssue>> teamIssues = new LinkedHashMap<>();
+        for (String teamLabel : teams.keySet()) {
+            teamIssues.put(teamLabel, new LinkedList<>());
         }
 
+        teamIssues.put("missing team", new LinkedList<>());
+
         for (GitHubIssue i : issues) {
-            for (String a : i.getAreas()) {
-                if (i.isOpen()) {
-                    for (BugTeamStat s : areas.values()) {
-                        if (s.getAreas().contains(a)) {
-                            if (nextRelease.equals(i.getMilestone())) {
-                                s.nextRelease.add(i.number);
-                            } else if ("Backlog".equals(i.getMilestone())) {
-                                if (i.isTriage()) {
-                                    s.backlogTriage.add(i.number);
-                                } else {
-                                    s.backlog.add(i.number);
-                                }
-                            } else {
-                                if (i.isTriage()) {
-                                    s.triage.add(i.number);
-                                } else {
-                                    s.open.add(i.number);
-                                }
-                            }
-                        }
-                    }
+            if (i.isOpen()) {
+                List<List<GitHubIssue>> addToTeams = teamIssues.entrySet().stream().filter(e -> i.getTeams().contains(e.getKey())).map(Map.Entry::getValue).collect(Collectors.toList());
+                if (addToTeams.isEmpty()) {
+                    addToTeams.add(teamIssues.get("missing team"));
+                }
+
+                for (List<GitHubIssue> s : addToTeams) {
+                    s.add(i);
                 }
             }
         }
-        return areas.values().stream().sorted(Comparator.comparingInt(BugTeamStat::getTotal).reversed()).collect(Collectors.toList());
+
+        List<BugTeamStat> teamStats = new LinkedList<>();
+        for (Map.Entry<String, List<GitHubIssue>> e : teamIssues.entrySet()) {
+            String teamName = e.getKey().replaceFirst("team/", "");
+            teamStats.add(new BugTeamStat(teamName, e.getValue(), nextRelease));
+        }
+
+        teamStats.sort(Comparator.comparingInt(BugTeamStat::getTotal).reversed());
+
+        return teamStats;
     }
 
     public String getNextRelease() {
