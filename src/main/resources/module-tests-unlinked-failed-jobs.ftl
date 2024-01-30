@@ -27,11 +27,11 @@
         </tr>
         <#list failedJobs[jobName] as job>
         <tr>
-            <td class="size10">${job.failedRun.date?date}</td>
-            <td class="size10"><a href="https://github.com/keycloak/keycloak/actions/runs/${job.failedRun.runId}<#if job.failedRun.attempt?has_content>/attempts/${job.failedRun.attempt}</#if>">${job.failedRun.runId}</a></td>
-            <td class="size10">${job.failedRun.event!}</td>
-            <td class="size20"><#if job.profileName?has_content>${job.profileName}</#if></td>
-            <td class="size10">${job.conclusion}</td>
+            <td>${job.failedRun.date?date}</td>
+            <td><a href="https://github.com/keycloak/keycloak/actions/runs/${job.failedRun.runId}<#if job.failedRun.attempt?has_content>/attempts/${job.failedRun.attempt}</#if>">${job.failedRun.runId}</a></td>
+            <td>${job.failedRun.event!}</td>
+            <td><#if job.profileName?has_content>${job.profileName}</#if></td>
+            <td>${job.conclusion}</td>
         <#if job.errorLog?has_content>
         <td class="failures">
             <div class="failures">

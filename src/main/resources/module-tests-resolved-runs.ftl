@@ -19,14 +19,14 @@
         </tr>
         <#list run.failedJobs as job>
         <tr>
-            <td class="size20">${job.name}</td>
+            <td>${job.name}</td>
             <td>
             <#if job.resolvedBy??>
                 <#if job.resolvedBy.issue?has_content><a href="https://github.com/keycloak/keycloak/issues/${job.resolvedBy.issue?string.computer}">#${job.resolvedBy.issue?string.computer}</a></#if>
                 <#if job.resolvedBy.resolution?has_content>${job.resolvedBy.resolution}</#if>
             </#if>
             </td>
-            <td class="size10">${job.conclusion}</td>
+            <td>${job.conclusion}</td>
             <#if job.errorLog?has_content>
             <td class="failures">
                 <div class="failures">
