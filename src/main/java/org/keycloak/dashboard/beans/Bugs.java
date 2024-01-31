@@ -125,13 +125,15 @@ public class Bugs {
             teamIssues.put(teamLabel, new LinkedList<>());
         }
 
-        teamIssues.put("missing team", new LinkedList<>());
+        if (!teamIssues.containsKey("no-team")) {
+            teamIssues.put("no-team", new LinkedList<>());
+        }
 
         for (GitHubIssue i : issues) {
             if (i.isOpen()) {
                 List<List<GitHubIssue>> addToTeams = teamIssues.entrySet().stream().filter(e -> i.getTeams().contains(e.getKey())).map(Map.Entry::getValue).collect(Collectors.toList());
                 if (addToTeams.isEmpty()) {
-                    addToTeams.add(teamIssues.get("missing team"));
+                    addToTeams.add(teamIssues.get("no-team"));
                 }
 
                 for (List<GitHubIssue> s : addToTeams) {
@@ -144,7 +146,7 @@ public class Bugs {
         for (Map.Entry<String, List<GitHubIssue>> e : teamIssues.entrySet()) {
             String teamName = e.getKey().replaceFirst("team/", "");
             String teamQuery;
-            if (teamName.equals("missing team")) {
+            if (teamName.equals("no-team")) {
                 teamQuery = "is:issue is:open label:kind/bug -label:" + teams.keySet().stream().collect(Collectors.joining(","));
             } else {
                 teamQuery = "is:issue is:open label:kind/bug label:team/" + teamName;
