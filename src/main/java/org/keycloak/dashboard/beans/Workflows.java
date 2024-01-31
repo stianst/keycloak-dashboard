@@ -13,9 +13,11 @@ public class Workflows {
         workflows.add(new Workflow("Nightly release", "keycloak-rel/keycloak-rel", "release-nightly.yml", "branch=main"));
 
         workflows.add(new Workflow("Keycloak CI", "keycloak/keycloak", "ci.yml", "branch=main"));
+        workflows.add(new Workflow("Keycloak CI - Quarkus nightly", "keycloak/keycloak", "ci.yml", "branch=quarkus-next"));
         workflows.add(new Workflow("Keycloak Documentation", "keycloak/keycloak", "documentation.yml", "branch=main"));
         workflows.add(new Workflow("Keycloak Guides", "keycloak/keycloak", "guides.yml", "branch=main"));
         workflows.add(new Workflow("Keycloak Operator CI", "keycloak/keycloak", "operator-ci.yml", "branch=main"));
+        workflows.add(new Workflow("Keycloak Operator CI - Quarkus nightly", "keycloak/keycloak", "operator-ci.yml", "branch=quarkus-next"));
         workflows.add(new Workflow("Keycloak JavaScript CI", "keycloak/keycloak", "js-ci.yml", "branch=main"));
 
         workflows.add(new Workflow("Keycloak QuickStarts CI", "keycloak/keycloak-quickstarts", "ci.yml", "branch=main"));
