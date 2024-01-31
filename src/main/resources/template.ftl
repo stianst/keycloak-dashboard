@@ -22,6 +22,8 @@
 
 <#nested>
 
+<div class="clear" style="padding: 5px"></div>:
+
 </body>
 </html>
 </#macro>
