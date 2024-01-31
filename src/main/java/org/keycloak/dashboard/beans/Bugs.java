@@ -154,7 +154,7 @@ public class Bugs {
             teamStats.add(new BugTeamStat(teamName, teamQuery, e.getValue(), nextRelease));
         }
 
-        teamStats.sort(Comparator.comparingInt(BugTeamStat::getTotal).reversed());
+        teamStats.sort(Comparator.comparing(BugTeamStat::getTitle));
 
         return teamStats;
     }
