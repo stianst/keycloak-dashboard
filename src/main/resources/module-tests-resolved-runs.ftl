@@ -3,12 +3,6 @@
     Resolved runs
 </div>
 <div class="body">
-    <ul class="body-menu">
-        <#list resolvedRuns as run>
-        <li> <a href="#resolved-run-${run.runId}" class="nowrap">${run.date?date} - ${run.runId}</a></li>
-        </#list>
-    </ul>
-
     <table>
         <#list resolvedRuns as run>
         <tr>

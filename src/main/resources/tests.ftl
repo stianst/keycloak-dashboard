@@ -9,22 +9,24 @@
 </ul>
 
 <div class="content">
-    <div class="modal-float">
+    <div class="modal-float clear">
         <div class="modal-float-margin">
             <#include "module-tests-unlinked-failed-jobs.ftl"></div>
         </div>
     </div>
-    <div class="modal-float">
+    <div/>
+    <div class="modal-float clear">
         <div class="modal-float-margin">
             <#include "module-tests-linked-failed-jobs.ftl">
         </div>
     </div>
-    <div class="modal-float">
+    <div class="modal-float clear">
         <div class="modal-float-margin">
             <#include "module-tests-flaky-tests.ftl">
         </div>
     </div>
-    <div class="modal-float">
+    <div/>
+    <div class="modal-float clear">
         <div class="modal-float-margin">
             <#include "module-tests-resolved-runs.ftl">
         </div>
