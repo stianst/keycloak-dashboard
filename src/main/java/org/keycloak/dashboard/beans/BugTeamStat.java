@@ -44,20 +44,20 @@ public class BugTeamStat {
                 "label:status/triage -milestone:Backlog",
                 Config.BUG_TEAM_TRIAGE_WARN, Config.BUG_TEAM_TRIAGE_ERROR));
 
-        columns.add(new Column("Backlog",
-                i -> !i.getLabels().contains("status/triage") && !i.getLabels().contains("help wanted") && i.getMilestone() != null && i.getMilestone().equals("Backlog"),
-                "-label:status/triage -label:\"help wanted\" milestone:Backlog",
-                Config.BUG_TEAM_OPEN_WARN, Config.BUG_TEAM_OPEN_ERROR));
-
         columns.add(new Column("Triage Backlog",
                 i -> i.getLabels().contains("status/triage") && i.getMilestone() != null && i.getMilestone().equals("Backlog"),
                 "label:status/triage milestone:Backlog",
                 Config.BUG_TEAM_BACKLOG_TRIAGE_WARN, Config.BUG_TEAM_BACKLOG_TRIAGE_ERROR));
 
+        columns.add(new Column("Backlog",
+                i -> !i.getLabels().contains("status/triage") && !i.getLabels().contains("help wanted") && i.getMilestone() != null && i.getMilestone().equals("Backlog"),
+                "-label:status/triage -label:\"help wanted\" milestone:Backlog",
+                -1, -1));
+
         columns.add(new Column("Help Wanted",
                 i -> i.getLabels().contains("help wanted"),
                 "label:\"help wanted\"",
-                Config.BUG_TEAM_OPEN_WARN, Config.BUG_TEAM_OPEN_ERROR));
+                -1, -1));
     }
 
     public String getTitle() {

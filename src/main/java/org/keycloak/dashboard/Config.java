@@ -51,13 +51,13 @@ public class Config {
 
     public static final int BUG_TEAM_NEXT_WARN = 1;
     public static final int BUG_TEAM_NEXT_ERROR = 10;
-    public static final int BUG_TEAM_OPEN_WARN = 1;
-    public static final int BUG_TEAM_OPEN_ERROR = 10;
-    public static final int BUG_TEAM_TRIAGE_WARN = 1;
-    public static final int BUG_TEAM_TRIAGE_ERROR = 10;
+    public static final int BUG_TEAM_OPEN_WARN = 5;
+    public static final int BUG_TEAM_OPEN_ERROR = 25;
+    public static final int BUG_TEAM_TRIAGE_WARN = 5;
+    public static final int BUG_TEAM_TRIAGE_ERROR = 25;
     public static final int BUG_TEAM_BACKLOG_WARN = 10;
     public static final int BUG_TEAM_BACKLOG_ERROR = 50;
-    public static final int BUG_TEAM_BACKLOG_TRIAGE_WARN = 10;
+    public static final int BUG_TEAM_BACKLOG_TRIAGE_WARN = 1;
     public static final int BUG_TEAM_BACKLOG_TRIAGE_ERROR = 50;
 
     public static final int PR_WAIT_TIME_MAX_SLOW = 10;
