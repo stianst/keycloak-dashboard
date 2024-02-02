@@ -4,7 +4,6 @@ import org.keycloak.dashboard.Config;
 import org.keycloak.dashboard.rep.GitHubData;
 import org.keycloak.dashboard.rep.GitHubIssue;
 import org.keycloak.dashboard.util.DateUtil;
-import org.kohsuke.github.GHException;
 import org.kohsuke.github.GHLabel;
 import org.kohsuke.github.GHPerson;
 import org.kohsuke.github.GHRepository;
@@ -12,11 +11,8 @@ import org.kohsuke.github.GitHub;
 import org.kohsuke.github.GitHubBuilder;
 
 import java.io.IOException;
-import java.util.Calendar;
-import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Set;
 import java.util.stream.Collectors;
 
 public class GitHubLoader {
@@ -88,15 +84,15 @@ public class GitHubLoader {
 
     private List<GitHubIssue> loadIssues() throws IOException {
         List<String> queries = new LinkedList<>();
-        queries.add("repo:keycloak/keycloak is:issue is:open label:kind/bug");
+        queries.add("repo:keycloak/keycloak is:issue is:open");
         for (String month : DateUtil.monthStrings(Config.MAX_HISTORY)) {
-            queries.add("repo:keycloak/keycloak is:issue is:closed label:kind/bug closed:" + month);
+            queries.add("repo:keycloak/keycloak is:issue is:closed closed:" + month);
         }
         return issuesLoader.loadIssues(queries.toArray(new String[0]));
     }
 
     private List<GitHubIssue> updateIssues(List<GitHubIssue> issues) throws IOException {
-        return issuesLoader.updateIssues(issues, "repo:keycloak/keycloak is:issue label:kind/bug");
+        return issuesLoader.updateIssues(issues, "repo:keycloak/keycloak is:issue");
     }
 
     private List<GitHubIssue> loadPRs() throws IOException {
@@ -114,7 +110,7 @@ public class GitHubLoader {
 
     private int queryIssuesWithPr() throws IOException {
         System.out.print("Fetching bugs with PRs: ");
-        int totalCount = gitHub.searchIssues().q("repo:keycloak/keycloak is:issue is:open label:kind/bug linked:pr").list().withPageSize(1).getTotalCount();
+        int totalCount = gitHub.searchIssues().q("repo:keycloak/keycloak is:issue is:open linked:pr").list().withPageSize(1).getTotalCount();
         System.out.println(".");
         return totalCount;
     }

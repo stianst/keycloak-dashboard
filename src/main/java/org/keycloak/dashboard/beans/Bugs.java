@@ -25,7 +25,7 @@ public class Bugs {
     private List<FlakyTest> flakyTests;
 
     public Bugs(GitHubData data, Teams teams) {
-        List<GitHubIssue> issues = data.getIssues();
+        List<GitHubIssue> issues = data.getIssues().stream().filter(i -> i.getLabels().contains("kind/bug")).collect(Collectors.toList());
 
         nextRelease = issues.stream().filter(i -> i.isOpen() && i.getMilestone() != null && i.getMilestone().endsWith(".0.0")).map(i -> i.getMilestone()).sorted().findFirst().get();
 
