@@ -67,16 +67,16 @@ public class Bugs {
         stats.add(new BugStat("Old without comments", oldWithoutComments, Config.BUG_OLD_NO_COMMENT_WARN, Config.BUG_OLD_NO_COMMENT_ERROR, "is:issue is:open label:kind/bug comments:0 updated:<=" + DateUtil.MINUS_6_MONTHS_STRING));
 
         stats.add(new BugStat("Last 7 days",
-                createdLast7Days, 0, createdLast7Days > closedLast7Days ? 1 : 999, "label:kind/bug created:>=" + DateUtil.MINUS_7_DAYS_STRING,
-                closedLast7Days, 0, createdLast7Days > closedLast7Days ? 1 : 999, "is:closed label:kind/bug closed:>=" + DateUtil.MINUS_7_DAYS_STRING));
+                createdLast7Days, -1, createdLast7Days > closedLast7Days ? 1 : Integer.MAX_VALUE, "label:kind/bug created:>=" + DateUtil.MINUS_7_DAYS_STRING,
+                closedLast7Days, -1, createdLast7Days > closedLast7Days ? 1 : Integer.MAX_VALUE, "is:closed label:kind/bug closed:>=" + DateUtil.MINUS_7_DAYS_STRING));
 
         stats.add(new BugStat("Last 30 days",
-                createdLast30Days, 0, createdLast30Days > closedLast30Days ? 1 : 999, "label:kind/bug created:>=" + DateUtil.MINUS_30_DAYS_STRING,
-                closedLast30Days, 0, createdLast30Days > closedLast30Days ? 1 : 999, "is:closed label:kind/bug closed:>=" + DateUtil.MINUS_30_DAYS_STRING));
+                createdLast30Days, -1, createdLast30Days > closedLast30Days ? 1 : Integer.MAX_VALUE, "label:kind/bug created:>=" + DateUtil.MINUS_30_DAYS_STRING,
+                closedLast30Days, -1, createdLast30Days > closedLast30Days ? 1 : Integer.MAX_VALUE, "is:closed label:kind/bug closed:>=" + DateUtil.MINUS_30_DAYS_STRING));
 
         stats.add(new BugStat("Last 90 days",
-                createdLast90Days, 0, createdLast90Days > closedLast90Days ? 1 : 999, "label:kind/bug created:>=" + DateUtil.MINUS_90_DAYS_STRING,
-                closedLast90Days, 0, createdLast90Days > closedLast90Days ? 1 : 999, "is:closed label:kind/bug closed:>=" + DateUtil.MINUS_90_DAYS_STRING));
+                createdLast90Days, -1, createdLast90Days > closedLast90Days ? 1 : Integer.MAX_VALUE, "label:kind/bug created:>=" + DateUtil.MINUS_90_DAYS_STRING,
+                closedLast90Days, -1, createdLast90Days > closedLast90Days ? 1 : Integer.MAX_VALUE, "is:closed label:kind/bug closed:>=" + DateUtil.MINUS_90_DAYS_STRING));
 
         issues.stream().filter(i -> i.getMilestone() != null)
                 .collect(Collectors.groupingBy(GitHubIssue::getMilestone, Collectors.toList())).entrySet().stream()
