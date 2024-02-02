@@ -27,8 +27,6 @@ public class LoadGitHubData {
             data = gitHubLoader.load();
         }
 
-        data.setUpdatedDate(new Date());
-
         objectMapper.writerWithDefaultPrettyPrinter().writeValue(dataFile, data);
 
         System.out.println("Created data: " + dataFile.toURI());

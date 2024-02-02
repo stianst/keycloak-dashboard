@@ -11,6 +11,8 @@ import org.kohsuke.github.GitHub;
 import org.kohsuke.github.GitHubBuilder;
 
 import java.io.IOException;
+import java.util.Arrays;
+import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -40,23 +42,43 @@ public class GitHubLoader {
         data.setPrs(loadPRs());
         data.setIssuesWithPr(queryIssuesWithPr());
         data.setPullRequestWaits(workflowRuntimeLoader.load());
+
+        data.setUpdatedDate(new Date());
+
+        System.out.println("Created data.json");
+
         return data;
     }
 
     public GitHubData update(GitHubData data) throws Exception {
-        data.setAreas(queryAreas());
+        List<String> update = System.getProperty("update") != null ? Arrays.stream(System.getProperty("update").split(",")).toList() : null;
 
-        // GitHub Action token doesn't have access to list team members, maintained manually in team-members.yml for now
-        // data.setKeycloakDevelopers(queryDevTeam());
+        if (update == null || update.contains("areas")) {
+            data.setAreas(queryAreas());
+        }
 
-        data.setIssues(updateIssues(data.getIssues()));
-        data.setPrs(updatePRs(data.getPrs()));
-        data.setIssuesWithPr(queryIssuesWithPr());
+        if (update == null || update.contains("issues")) {
+            data.setIssues(updateIssues(data.getIssues()));
+        }
 
-        if (data.getPullRequestWaits() == null || data.getPullRequestWaits().isEmpty()) {
-            data.setPullRequestWaits(workflowRuntimeLoader.load());
+        if (update == null || update.contains("prs")) {
+            data.setPrs(updatePRs(data.getPrs()));
+            data.setIssuesWithPr(queryIssuesWithPr());
+        }
+
+        if (update == null || update.contains("prs-wait")) {
+            if (data.getPullRequestWaits() == null || data.getPullRequestWaits().isEmpty()) {
+                data.setPullRequestWaits(workflowRuntimeLoader.load());
+            } else {
+                data.setPullRequestWaits(workflowRuntimeLoader.update(data.getPullRequestWaits()));
+            }
+        }
+
+        if (update == null) {
+            System.out.println("Updated data.json");
+            data.setUpdatedDate(new Date());
         } else {
-            data.setPullRequestWaits(workflowRuntimeLoader.update(data.getPullRequestWaits()));
+            System.out.println("Partially updated data.json");
         }
 
         return data;

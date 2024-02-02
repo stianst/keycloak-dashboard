@@ -11,6 +11,12 @@ mvn clean install exec:java -Pgithub
 
 One thing to remember is GitHub rate-limits API requests, so updating the data to frequently can temporarily block you.
 
+It's also possible to do a partial update:
+```
+mvn clean install exec:java -Pgithub -Dupdate=areas|issues|prs|prs-wait
+```
+
+
 Generally when contributing you should not include the updates to `data.json`, as this is updated every 6 hours by
 a GitHub Action.
 

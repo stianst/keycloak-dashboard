@@ -53,9 +53,6 @@ public class GitHubIssuesLoader {
     private List<GitHubIssue> updateIssues(boolean pr, List<GitHubIssue> issues, String query) throws IOException {
         java.util.Date mostRecent = issues.stream().map(GitHubIssue::getUpdatedAt).max(java.util.Date::compareTo).get();
 
-        // Look one day before most recent to accommodate for GH search not always being fresh
-        mostRecent = new Date(mostRecent.getTime() - 24 * 60 * 60 * 1000);
-
         System.out.print("Fetching updated " + (pr ? "prs" : "issues") + " since " + DateUtil.toString(mostRecent) + ": ");
         List<GitHubIssue> updates = query(query + " updated:>=" + DateUtil.toString(mostRecent));
         System.out.println();
