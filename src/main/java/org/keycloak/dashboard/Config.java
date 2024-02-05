@@ -8,7 +8,7 @@ public class Config {
 
     public static final boolean PUBLISH = System.getProperties().containsKey("publish");
 
-    public static final int MAX_HISTORY = 12 * 3;
+    public static final int MAX_HISTORY = 6;
     public static final int MAX_HISTORY_WORKFLOWS = 90;
 
     public static final Date EXPIRATION_OLD_ISSUES = DateUtil.minusMonths(MAX_HISTORY);

@@ -101,7 +101,6 @@ public class LogFailedParser {
             FailedRun failedRun = runItr.next();
             failedRun.setResolvedBy(resolvedIssues.getResolved(failedRun));
             if (failedRun.getResolvedBy() != null && failedRun.getResolvedBy().isResolved()) {
-                System.out.println("Found resolved run: " + failedRun.getRunId());
                 runItr.remove();
                 resolvedRuns.add(failedRun);
             } else if (!failedRun.getFailedJobs().isEmpty()) {
@@ -113,13 +112,11 @@ public class LogFailedParser {
                     if (job.getResolvedBy() != null && job.getResolvedBy().isResolved()) {
                         resolvedJobs.add(job);
                         jobItr.remove();
-                        System.out.println("Found resolved job: " + failedRun.getRunId() + "/" + job.getName());
                     }
                 }
 
                 if (failedRun.getFailedJobs().isEmpty()) {
                     failedRun.setFailedJobs(resolvedJobs);
-                    System.out.println("Marking run as fully resolved: " + failedRun.getRunId());
                     resolvedRuns.add(failedRun);
                     runItr.remove();
                 }
