@@ -1,6 +1,8 @@
 package org.keycloak.dashboard.gh;
 
 import org.keycloak.dashboard.Config;
+import org.keycloak.dashboard.FailedJobsLoader;
+import org.keycloak.dashboard.RetriedPrsLoader;
 import org.keycloak.dashboard.rep.GitHubData;
 import org.keycloak.dashboard.rep.GitHubIssue;
 import org.keycloak.dashboard.util.DateUtil;
@@ -24,11 +26,16 @@ public class GitHubLoader {
     private GitHubIssuesLoader issuesLoader;
 
     private WorkflowRuntimeLoader workflowRuntimeLoader;
+    private FailedJobsLoader failedJobsLoader;
+    private final RetriedPrsLoader retriedPrsLoader;
 
     public GitHubLoader() throws IOException {
         gitHub = GitHubBuilder.fromEnvironment().withJwtToken(TokenUtil.token()).build();
+        GitHubCli ghCli = new GitHubCli();
         issuesLoader = new GitHubIssuesLoader(gitHub);
         workflowRuntimeLoader = new WorkflowRuntimeLoader();
+        failedJobsLoader = new FailedJobsLoader(gitHub, ghCli);
+        retriedPrsLoader = new RetriedPrsLoader(gitHub, ghCli);
     }
 
     public GitHubData load() throws Exception {
@@ -47,11 +54,14 @@ public class GitHubLoader {
 
         System.out.println("Created data.json");
 
+        failedJobsLoader.load();
+        retriedPrsLoader.load();
+
         return data;
     }
 
     public GitHubData update(GitHubData data) throws Exception {
-        List<String> update = System.getProperty("update") != null ? Arrays.stream(System.getProperty("update").split(",")).toList() : null;
+        List<String> update = System.getProperty("update") != null && !System.getProperty("update").equals("*") ? Arrays.stream(System.getProperty("update").split(",")).toList() : null;
 
         if (update == null || update.contains("areas")) {
             data.setAreas(queryAreas());
@@ -74,11 +84,12 @@ public class GitHubLoader {
             }
         }
 
-        if (update == null) {
-            System.out.println("Updated data.json");
-            data.setUpdatedDate(new Date());
-        } else {
-            System.out.println("Partially updated data.json");
+        if (update == null || update.contains("failed-jobs")) {
+            failedJobsLoader.load();
+        }
+
+        if (update == null || update.contains("retried-prs")) {
+            retriedPrsLoader.load();
         }
 
         return data;

@@ -28,8 +28,6 @@ public class LoadGitHubData {
         }
 
         objectMapper.writerWithDefaultPrettyPrinter().writeValue(dataFile, data);
-
-        System.out.println("Created data: " + dataFile.toURI());
     }
 
 }
