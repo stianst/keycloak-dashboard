@@ -61,7 +61,7 @@ public class GitHubLoader {
     }
 
     public GitHubData update(GitHubData data) throws Exception {
-        List<String> update = System.getProperty("update") != null && !System.getProperty("update").equals("*") ? Arrays.stream(System.getProperty("update").split(",")).toList() : null;
+        List<String> update = System.getProperty("update") != null && !System.getProperty("update").equals("all") ? Arrays.stream(System.getProperty("update").split(",")).toList() : null;
 
         if (update == null || update.contains("areas")) {
             data.setAreas(queryAreas());
