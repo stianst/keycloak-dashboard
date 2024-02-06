@@ -13,7 +13,7 @@ One thing to remember is GitHub rate-limits API requests, so updating the data t
 
 It's also possible to do a partial update:
 ```
-mvn clean install exec:java -Pgithub -Dupdate=areas|issues|prs|prs-wait
+mvn clean install exec:java -Pgithub -Dupdate=all|areas|issues|prs|prs-wait|failed-jobs|retried-prs
 ```
 
 

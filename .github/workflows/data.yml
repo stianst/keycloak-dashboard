@@ -43,7 +43,7 @@ jobs:
           GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          ./update-data.sh -Dupdate=${{ github.event.inputs.category }}
+          ./update-data.sh ${{ github.event.inputs.category }}
           if ( ! git diff --exit-code &>/dev/null ); then 
             git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git config --global user.name "github-actions[bot]"
