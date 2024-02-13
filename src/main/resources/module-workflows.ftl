@@ -15,7 +15,7 @@
             <#list workflowStatus.branches as branch>
             <#if workflow.branchStatus[branch]??>
                 <td class="count center <#if workflow.branchStatus[branch].conclusion == "success">success</#if> <#if workflow.branchStatus[branch].conclusion == "failure">error</#if>">
-                    <a href="#">${workflow.branchStatus[branch].conclusion}</a>
+                    <a href="https://github.com/${workflow.branchStatus[branch].repository.fullName}/actions/runs/${workflow.branchStatus[branch].id?c}">${workflow.branchStatus[branch].conclusion}</a>
                 </td>
             <#else><td></td>
             </#if>

@@ -18,6 +18,8 @@ public class GHWorkflowRun {
     @JsonProperty("run_attempt")
     private int runAttempt;
 
+    private Repository repository;
+
     public Long getId() {
         return id;
     }
@@ -81,4 +83,28 @@ public class GHWorkflowRun {
     public void setRunAttempt(int runAttempt) {
         this.runAttempt = runAttempt;
     }
+
+    public Repository getRepository() {
+        return repository;
+    }
+
+    public void setRepository(Repository repository) {
+        this.repository = repository;
+    }
+
+    @JsonIgnoreProperties(ignoreUnknown = true)
+    public static class Repository {
+
+        @JsonProperty("full_name")
+        private String fullName;
+
+        public String getFullName() {
+            return fullName;
+        }
+
+        public void setFullName(String fullName) {
+            this.fullName = fullName;
+        }
+    }
+
 }
