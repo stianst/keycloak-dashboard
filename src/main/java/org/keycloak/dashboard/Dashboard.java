@@ -5,12 +5,12 @@ import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
 import freemarker.template.TemplateException;
 import org.keycloak.dashboard.beans.Bugs;
 import org.keycloak.dashboard.beans.PR;
+import org.keycloak.dashboard.beans.WorkflowStatus;
 import org.keycloak.dashboard.beans.WorkflowWaitTimes;
-import org.keycloak.dashboard.beans.Workflows;
 import org.keycloak.dashboard.ci.LogFailedParser;
 import org.keycloak.dashboard.ci.ResolvedIssues;
-import org.keycloak.dashboard.rep.TeamMembers;
 import org.keycloak.dashboard.rep.GitHubData;
+import org.keycloak.dashboard.rep.TeamMembers;
 import org.keycloak.dashboard.rep.Teams;
 import org.keycloak.dashboard.util.FreeMarker;
 
@@ -39,7 +39,6 @@ public class Dashboard {
         Teams teams = yamlMapper.readValue(new URL("https://raw.githubusercontent.com/keycloak/keycloak/main/.github/teams.yml"), Teams.class);
         TeamMembers teamMembers = yamlMapper.readValue(new File("team-members.yml"), TeamMembers.class);
 
-        Workflows workflows = new Workflows();
         PR pr = new PR(data);
         Bugs bugs = new Bugs(data, teams);
 
@@ -52,7 +51,7 @@ public class Dashboard {
 
         attributes.put("publish", Config.PUBLISH);
         attributes.put("updatedDate", data.getUpdatedDate());
-        attributes.put("workflows", workflows.getWorkflows());
+        attributes.put("workflowStatus", new WorkflowStatus());
         attributes.put("prStats", pr.getStats());
         attributes.put("bugStats", bugs.getStats());
         attributes.put("bugAreaStats", bugs.getAreaStats());

@@ -31,12 +31,6 @@ public class RetriedPrsLoader {
     private final GitHub gh;
     private final GitHubCli ghCli;
 
-    public static void main(String[] args) throws IOException, InterruptedException {
-
-        GitHub gitHub = GitHubBuilder.fromEnvironment().withJwtToken(TokenUtil.token()).build();
-        new RetriedPrsLoader(gitHub, new GitHubCli()).load();
-    }
-
     public RetriedPrsLoader(GitHub gh, GitHubCli ghCli) {
         this.gh = gh;
         this.ghCli = ghCli;

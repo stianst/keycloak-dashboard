@@ -1,0 +1,133 @@
+package org.keycloak.dashboard.beans;
+
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import org.keycloak.dashboard.gh.GHWorkflowRun;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+import java.util.Optional;
+
+public class WorkflowStatus {
+
+    private List<String> branches;
+
+    private List<Workflow> workflows;
+
+    public static void main(String[] args) {
+        List<String> l = new LinkedList<>();
+        l.add("release/22.0");
+        l.add("main");
+        l.add("release/24.0");
+        l.add("next");
+        l.add("quarkus-next");
+        l.add("release/23.0");
+
+        l.sort((o1, o2) -> {
+            if (o1.equals("main")) {
+                return -1000;
+            } else if (o2.equals("main")) {
+                return 1000;
+            }
+
+            if (o1.startsWith("release/")) {
+                if (o2.startsWith("release/")) {
+                    return o2.compareTo(o1);
+                } else {
+                    return -1000;
+                }
+            }
+
+            if (o2.startsWith("release/")) {
+                return 1000;
+            }
+
+            else return o1.compareTo(o2);
+        });
+
+        for (String s : l) {
+            System.out.println(s);
+        }
+    }
+
+    public WorkflowStatus() throws IOException {
+        ObjectMapper objectMapper = new ObjectMapper();
+        List<GHWorkflowRun> runs = objectMapper.readValue(new File("workflow-status.json"), new TypeReference<>() {});
+
+        branches = runs.stream().map(GHWorkflowRun::getHeadBranch).distinct().sorted(new BranchComparator()).toList();
+
+        workflows = new LinkedList<>();
+
+        for (GHWorkflowRun run : runs) {
+            Optional<Workflow> f = workflows.stream().filter(w -> w.getName().equals(run.getName())).findFirst();
+            Workflow w;
+            if (f.isPresent()) {
+                w = f.get();
+            } else {
+                w = new Workflow(run.getName());
+                workflows.add(w);
+            }
+
+            w.getBranchStatus().put(run.getHeadBranch(), run);
+        }
+
+        workflows.sort(Comparator.comparing(Workflow::getName));
+    }
+
+    public List<String> getBranches() {
+        return branches;
+    }
+
+    public List<Workflow> getWorkflows() {
+        return workflows;
+    }
+
+    public static final class Workflow {
+
+        private String name;
+        private Map<String, GHWorkflowRun> branchStatus = new HashMap<>();
+
+        public Workflow(String name) {
+            this.name = name;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public Map<String, GHWorkflowRun> getBranchStatus() {
+            return branchStatus;
+        }
+    }
+
+    private class BranchComparator implements Comparator<String> {
+        @Override
+        public int compare(String o1, String o2) {
+            if (o1.equals("main")) {
+                return -1000;
+            } else if (o2.equals("main")) {
+                return 1000;
+            }
+
+            if (o1.startsWith("release/")) {
+                if (o2.startsWith("release/")) {
+                    return o2.compareTo(o1);
+                } else {
+                    return -1000;
+                }
+            }
+
+            if (o2.startsWith("release/")) {
+                return 1000;
+            }
+
+            else return o1.compareTo(o2);
+        }
+    }
+
+}

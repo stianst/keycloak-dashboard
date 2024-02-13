@@ -37,7 +37,7 @@ public class GitHubCli {
         cmdarray.add("GET");
         cmdarray.add("--cache");
         cmdarray.add("1h");
-        cmdarray.add("repos/keycloak/keycloak/" + endpoint);
+        cmdarray.add(endpoint.startsWith("repos/") ? endpoint : ("repos/keycloak/keycloak/" + endpoint));
         cmdarray.addAll(Arrays.asList(args));
 
         File output = new File("ghcli-out.log");

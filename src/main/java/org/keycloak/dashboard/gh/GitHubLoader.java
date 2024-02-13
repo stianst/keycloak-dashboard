@@ -3,6 +3,7 @@ package org.keycloak.dashboard.gh;
 import org.keycloak.dashboard.Config;
 import org.keycloak.dashboard.FailedJobsLoader;
 import org.keycloak.dashboard.RetriedPrsLoader;
+import org.keycloak.dashboard.WorkflowStatusLoader;
 import org.keycloak.dashboard.rep.GitHubData;
 import org.keycloak.dashboard.rep.GitHubIssue;
 import org.keycloak.dashboard.util.DateUtil;
@@ -29,6 +30,8 @@ public class GitHubLoader {
     private FailedJobsLoader failedJobsLoader;
     private final RetriedPrsLoader retriedPrsLoader;
 
+    private final WorkflowStatusLoader workflowStatusLoader;
+
     public GitHubLoader() throws IOException {
         gitHub = GitHubBuilder.fromEnvironment().withJwtToken(TokenUtil.token()).build();
         GitHubCli ghCli = new GitHubCli();
@@ -36,6 +39,7 @@ public class GitHubLoader {
         workflowRuntimeLoader = new WorkflowRuntimeLoader();
         failedJobsLoader = new FailedJobsLoader(gitHub, ghCli);
         retriedPrsLoader = new RetriedPrsLoader(gitHub, ghCli);
+        workflowStatusLoader = new WorkflowStatusLoader(ghCli);
     }
 
     public GitHubData load() throws Exception {
@@ -56,6 +60,7 @@ public class GitHubLoader {
 
         failedJobsLoader.load();
         retriedPrsLoader.load();
+        workflowStatusLoader.load();
 
         return data;
     }
@@ -90,6 +95,10 @@ public class GitHubLoader {
 
         if (update == null || update.contains("retried-prs")) {
             retriedPrsLoader.load();
+        }
+
+        if (update == null || update.contains("workflow-status")) {
+            workflowStatusLoader.load();
         }
 
         return data;
