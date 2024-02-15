@@ -63,7 +63,7 @@ public class GitHubIssuesLoader {
                 .collect(Collectors.toList());
         issues.addAll(updates);
 
-        return issues.stream().filter(i -> i.getLabels().contains("kind/bug")).collect(Collectors.toList());
+        return issues;
     }
 
     private List<GitHubIssue> query(String q) throws IOException {

@@ -134,7 +134,8 @@ public class GitHubLoader {
     }
 
     private List<GitHubIssue> updateIssues(List<GitHubIssue> issues) throws IOException {
-        return issuesLoader.updateIssues(issues, "repo:keycloak/keycloak is:issue");
+        List<GitHubIssue> updateIssues = issuesLoader.updateIssues(issues, "repo:keycloak/keycloak is:issue");
+        return updateIssues.stream().filter(i -> i.getLabels().contains("kind/bug")).collect(Collectors.toList());
     }
 
     private List<GitHubIssue> loadPRs() throws IOException {
