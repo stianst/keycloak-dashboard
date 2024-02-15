@@ -31,7 +31,7 @@ public class FailedJobsLoader {
         System.out.print("Fetching failed-jobs: ");
 
         String from = DateUtil.minusDaysString(DAYS);
-        String to = DateUtil.monthString(new Date());
+        String to = DateUtil.toString(new Date());
 
         File logsDir = new File("logs");
 

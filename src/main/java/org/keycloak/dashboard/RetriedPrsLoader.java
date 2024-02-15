@@ -40,7 +40,7 @@ public class RetriedPrsLoader {
         System.out.print("Fetching retried-prs: ");
 
         String from = DateUtil.minusDaysString(DAYS);
-        String to = DateUtil.monthString(new Date());
+        String to = DateUtil.toString(new Date());
 
         File logsDir = new File("logs");
 
