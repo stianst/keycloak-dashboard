@@ -6,7 +6,9 @@ import org.keycloak.dashboard.rep.GitHubIssue;
 import org.keycloak.dashboard.rep.Teams;
 import org.keycloak.dashboard.util.DateUtil;
 
+import java.util.Collections;
 import java.util.Comparator;
+import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
@@ -148,18 +150,43 @@ public class Bugs {
         List<BugTeamStat> teamStats = new LinkedList<>();
         for (Map.Entry<String, List<GitHubIssue>> e : teamIssues.entrySet()) {
             String teamName = e.getKey().replaceFirst("team/", "");
+            List<String> subTeams = getSubTeams(teams, teamName);
             String teamQuery;
             if (teamName.equals("no-team")) {
                 teamQuery = "is:issue is:open label:kind/bug -label:" + teams.keySet().stream().collect(Collectors.joining(","));
             } else {
                 teamQuery = "is:issue is:open label:kind/bug label:team/" + teamName;
+
+                if (!subTeams.isEmpty()) {
+                    for (String t : subTeams) {
+                        teamQuery += " -label:team/" + t;
+                    }
+                }
             }
-            teamStats.add(new BugTeamStat(teamName, teamQuery, e.getValue(), nextRelease));
+
+            List<GitHubIssue> l = e.getValue();
+            if (!subTeams.isEmpty()) {
+                l = l.stream().filter(i -> !i.getTeams().stream().anyMatch(t -> subTeams.contains(t.replaceFirst("team/", "")))).toList();
+            }
+
+            teamStats.add(new BugTeamStat(teamName, teamQuery, l, nextRelease));
         }
 
         teamStats.sort(Comparator.comparing(BugTeamStat::getTitle));
 
         return teamStats;
+    }
+
+    private List<String> getSubTeams(Teams teams, String teamName) {
+        if (teamName.endsWith("-shared")) {
+            return teams.keySet().stream()
+                .filter(s -> s.startsWith("team/" + teamName.substring(0, teamName.length() - "shared".length())))
+                .filter(s -> !s.equals("team/" + teamName))
+                .map(s -> s.replaceFirst("team/", ""))
+                .toList();
+        } else {
+            return Collections.emptyList();
+        }
     }
 
     public String getNextRelease() {
