@@ -101,6 +101,10 @@ public class GitHubLoader {
             workflowStatusLoader.load();
         }
 
+        if (update == null) {
+            data.setUpdatedDate(new Date());
+        }
+
         return data;
     }
 

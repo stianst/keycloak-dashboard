@@ -3,6 +3,7 @@ package org.keycloak.dashboard.beans;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.keycloak.dashboard.gh.GHWorkflowRun;
+import org.keycloak.dashboard.util.GHQuery;
 
 import java.io.File;
 import java.io.IOException;
@@ -69,7 +70,7 @@ public class WorkflowStatus {
             if (f.isPresent()) {
                 w = f.get();
             } else {
-                w = new Workflow(run.getName());
+                w = new Workflow(run.getName(), run.getPath());
                 workflows.add(w);
             }
 
@@ -89,20 +90,35 @@ public class WorkflowStatus {
 
     public static final class Workflow {
 
-        private String name;
-        private Map<String, GHWorkflowRun> branchStatus = new HashMap<>();
+        private final String name;
+        private final String path;
+        private final Map<String, GHWorkflowRun> branchStatus = new HashMap<>();
 
-        public Workflow(String name) {
+        public Workflow(String name, String path) {
             this.name = name;
+            this.path = path;
         }
 
         public String getName() {
             return name;
         }
 
+        public String getFile() {
+            return path.substring(path.lastIndexOf('/') + 1);
+        }
+
         public Map<String, GHWorkflowRun> getBranchStatus() {
             return branchStatus;
         }
+
+        public String getBranchUrl(String branch) {
+            GHWorkflowRun run = branchStatus.get(branch);
+            if (run == null) {
+                return null;
+            }
+            return "https://github.com/" + run.getRepository().getFullName() + "/actions/workflows/" + getFile() + "?query=" + GHQuery.encode("branch:" + branch);
+        }
+
     }
 
     private class BranchComparator implements Comparator<String> {

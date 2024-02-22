@@ -17,6 +17,7 @@ public class GHWorkflowRun {
     private String event;
     @JsonProperty("run_attempt")
     private int runAttempt;
+    private String path;
 
     private Repository repository;
 
@@ -82,6 +83,14 @@ public class GHWorkflowRun {
 
     public void setRunAttempt(int runAttempt) {
         this.runAttempt = runAttempt;
+    }
+
+    public String getPath() {
+        return path;
+    }
+
+    public void setPath(String path) {
+        this.path = path;
     }
 
     public Repository getRepository() {
