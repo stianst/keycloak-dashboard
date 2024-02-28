@@ -16,7 +16,7 @@ public class PR {
         List<GitHubIssue> prs = data.getPrs();
 
         int open = (int) prs.stream().filter(i -> i.isOpen()).count();
-        int priority = (int) prs.stream().filter(i -> i.isOpen() && i.hasLabel("priority/important", "priority/critical")).count();
+        int priority = (int) prs.stream().filter(i -> i.isOpen() && i.hasLabel("priority/important", "priority/blocker")).count();
 
         int olderThan6Months = (int) prs.stream().filter(i -> i.isOpen() && i.getCreatedAt().before(DateUtil.MINUS_6_MONTHS)).count();
         int olderThan12Months = (int) prs.stream().filter(i -> i.isOpen() && i.getCreatedAt().before(DateUtil.MINUS_12_MONTHS)).count();
@@ -32,7 +32,7 @@ public class PR {
         stats = new LinkedList<>();
 
         stats.add(new PRStat("Open", open, Config.PR_OPEN_WARN, Config.PR_OPEN_ERROR, "is:open"));
-        stats.add(new PRStat("Priority", priority, Config.PR_PRIORITY_WARN, Config.PR_PRIORITY_ERROR, "is:open label:priority/important,priority/critical"));
+        stats.add(new PRStat("Priority", priority, Config.PR_PRIORITY_WARN, Config.PR_PRIORITY_ERROR, "is:open label:priority/important,priority/blocker"));
 
         stats.add(new PRStat("Older than 6 months", olderThan6Months, Config.PR_OLD_6_WARN, Config.PR_OLD_6_ERROR, "is:open created:<=" + DateUtil.MINUS_6_MONTHS_STRING));
         stats.add(new PRStat("Older than 12 months", olderThan12Months, Config.PR_OLD_12_WARN, Config.PR_OLD_12_ERROR, "is:open created:<=" + DateUtil.MINUS_12_MONTHS_STRING));

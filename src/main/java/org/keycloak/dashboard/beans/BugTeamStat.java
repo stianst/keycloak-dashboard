@@ -34,20 +34,40 @@ public class BugTeamStat {
                 "milestone:" + nextRelease,
                 Config.BUG_TEAM_NEXT_WARN, Config.BUG_TEAM_NEXT_ERROR));
 
-        columns.add(new Column("Open",
-                i -> !i.getLabels().contains("status/triage") && (i.getMilestone() == null || !i.getMilestone().equals("Backlog")),
-                "-label:status/triage -milestone:Backlog",
-                Config.BUG_TEAM_OPEN_WARN, Config.BUG_TEAM_OPEN_ERROR));
-
         columns.add(new Column("Triage",
                 i -> i.getLabels().contains("status/triage") && (i.getMilestone() == null || !i.getMilestone().equals("Backlog")),
                 "label:status/triage -milestone:Backlog",
                 Config.BUG_TEAM_TRIAGE_WARN, Config.BUG_TEAM_TRIAGE_ERROR));
 
+        columns.add(new Column("Criticial",
+                i -> !i.getLabels().contains("status/triage") && (i.getLabels().contains("priority/blocker")),
+                "-label:status/triage label:priority/blocker",
+                -1, 1));
+
+        columns.add(new Column("Important",
+                i -> !i.getLabels().contains("status/triage") && (i.getLabels().contains("priority/important")),
+                "-label:status/triage label:priority/important",
+                Config.BUG_PRIORITY_WARN, Config.BUG_PRIORITY_ERROR));
+
+        columns.add(new Column("Normal",
+                i -> !i.getLabels().contains("status/triage") && (i.getLabels().contains("priority/normal")),
+                "-label:status/triage label:priority/normal",
+                Config.BUG_OPEN_WARN, Config.BUG_OPEN_ERROR));
+
+        columns.add(new Column("Low",
+                i -> !i.getLabels().contains("status/triage") && (i.getLabels().contains("priority/low")),
+                "-label:status/triage label:priority/low",
+                Config.BUG_OPEN_WARN, Config.BUG_OPEN_ERROR));
+
         columns.add(new Column("Triage Backlog",
                 i -> i.getLabels().contains("status/triage") && i.getMilestone() != null && i.getMilestone().equals("Backlog"),
                 "label:status/triage milestone:Backlog",
                 Config.BUG_TEAM_BACKLOG_TRIAGE_WARN, Config.BUG_TEAM_BACKLOG_TRIAGE_ERROR));
+
+        columns.add(new Column("No priority",
+                i -> !i.getLabels().contains("status/triage") && (!"Backlog".equals(i.getMilestone()) && i.getLabels().stream().noneMatch(l -> l.startsWith("priority/"))),
+                "-label:status/triage,priority/blocker,priority/important,priority/normal,priority/low -milestone:Backlog",
+                Config.BUG_TEAM_OPEN_WARN, Config.BUG_TEAM_OPEN_ERROR));
 
         columns.add(new Column("Backlog",
                 i -> !i.getLabels().contains("status/triage") && !i.getLabels().contains("help wanted") && i.getMilestone() != null && i.getMilestone().equals("Backlog"),

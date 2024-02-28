@@ -35,7 +35,7 @@ public class Bugs {
         int open = (int) issues.stream().filter(i -> i.isOpen() && !i.isTriage()).count();
         int missingAreaLabel = (int) issues.stream().filter(i -> i.isOpen() && i.getAreas().isEmpty()).count();
         int oldWithoutComments = (int) issues.stream().filter(i -> i.isOpen() && i.getUpdatedAt().before(DateUtil.MINUS_6_MONTHS) && i.getCommentsCount() == 0).count();
-        int priority = (int) issues.stream().filter(i -> i.isOpen() && i.hasLabel("priority/important", "priority/critical")).count();
+        int priority = (int) issues.stream().filter(i -> i.isOpen() && i.hasLabel("priority/important", "priority/blocker")).count();
         int weakness = (int) issues.stream().filter(i -> i.isOpen() && i.hasLabel("kind/weakness")).count();
 
         int createdLast7Days = (int) issues.stream().filter(i -> i.getCreatedAt().after(DateUtil.MINUS_7_DAYS)).count();
@@ -61,7 +61,7 @@ public class Bugs {
 
         stats.add(new BugStat("Total", open, Config.BUG_OPEN_WARN, Config.BUG_OPEN_ERROR, "is:open label:kind/bug -label:status/triage"));
 
-        stats.add(new BugStat("Priority", priority, Config.BUG_PRIORITY_WARN, Config.BUG_PRIORITY_ERROR, "is:open label:kind/bug label:priority/important,priority/critical"));
+        stats.add(new BugStat("Priority", priority, Config.BUG_PRIORITY_WARN, Config.BUG_PRIORITY_ERROR, "is:open label:kind/bug label:priority/important,priority/blocker"));
 
         stats.add(new BugStat("Weakness", weakness, Config.BUG_PRIORITY_WARN, Config.BUG_PRIORITY_ERROR, "is:open label:kind/bug label:kind/weakness"));
 
