@@ -4,7 +4,9 @@ import org.keycloak.dashboard.Config;
 import org.keycloak.dashboard.rep.GitHubData;
 import org.keycloak.dashboard.rep.GitHubIssue;
 import org.keycloak.dashboard.rep.Teams;
+import org.keycloak.dashboard.util.Css;
 import org.keycloak.dashboard.util.DateUtil;
+import org.keycloak.dashboard.util.GHQuery;
 
 import java.util.Collections;
 import java.util.Comparator;
@@ -13,10 +15,12 @@ import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 public class Bugs {
 
+    private final List<GitHubIssue> issues;
     private String nextRelease;
 
     private List<BugStat> stats;
@@ -27,16 +31,9 @@ public class Bugs {
     private List<FlakyTest> flakyTests;
 
     public Bugs(GitHubData data, Teams teams) {
-        List<GitHubIssue> issues = data.getIssues().stream().filter(i -> i.getLabels().contains("kind/bug")).collect(Collectors.toList());
+        issues = data.getIssues().stream().filter(i -> i.getLabels().contains("kind/bug")).collect(Collectors.toList());
 
         nextRelease = issues.stream().filter(i -> i.isOpen() && i.getMilestone() != null && i.getMilestone().endsWith(".0.0")).map(i -> i.getMilestone()).sorted().findFirst().get();
-
-        int nonTriaged = (int) issues.stream().filter(i -> i.isOpen() && i.isTriage()).count();
-        int open = (int) issues.stream().filter(i -> i.isOpen() && !i.isTriage()).count();
-        int missingAreaLabel = (int) issues.stream().filter(i -> i.isOpen() && i.getAreas().isEmpty()).count();
-        int oldWithoutComments = (int) issues.stream().filter(i -> i.isOpen() && i.getUpdatedAt().before(DateUtil.MINUS_6_MONTHS) && i.getCommentsCount() == 0).count();
-        int priority = (int) issues.stream().filter(i -> i.isOpen() && i.hasLabel("priority/important", "priority/blocker")).count();
-        int weakness = (int) issues.stream().filter(i -> i.isOpen() && i.hasLabel("kind/weakness")).count();
 
         int createdLast7Days = (int) issues.stream().filter(i -> i.getCreatedAt().after(DateUtil.MINUS_7_DAYS)).count();
         int closedLast7Days = (int) issues.stream().filter(i -> i.getClosedAt() != null && i.getClosedAt().after(DateUtil.MINUS_7_DAYS)).count();
@@ -59,17 +56,15 @@ public class Bugs {
 
         stats.add(new BugStat("With PR", data.getIssuesWithPr(), Config.BUG_PR_WARN, Config.BUG_PR_ERROR, "is:open label:kind/bug linked:pr"));
 
-        stats.add(new BugStat("Total", open, Config.BUG_OPEN_WARN, Config.BUG_OPEN_ERROR, "is:open label:kind/bug -label:status/triage"));
+        stats.add(new BugStat("Open", i -> i.isOpen() && !i.isTriage(), Config.BUG_OPEN_WARN, Config.BUG_OPEN_ERROR, "is:open label:kind/bug -label:status/triage"));
+        stats.add(new BugStat("Triage", i -> i.isOpen() && i.isTriage(), Config.BUG_TRIAGE_WARN, Config.BUG_TRIAGE_ERROR, "is:open label:kind/bug label:status/triage"));
 
-        stats.add(new BugStat("Priority", priority, Config.BUG_PRIORITY_WARN, Config.BUG_PRIORITY_ERROR, "is:open label:kind/bug label:priority/important,priority/blocker"));
+        stats.add(new BugStat("Weakness", i -> i.isOpen() && i.hasLabel("kind/weakness"), Config.BUG_PRIORITY_WARN, Config.BUG_PRIORITY_ERROR, "is:open label:kind/bug label:kind/weakness"));
 
-        stats.add(new BugStat("Weakness", weakness, Config.BUG_PRIORITY_WARN, Config.BUG_PRIORITY_ERROR, "is:open label:kind/bug label:kind/weakness"));
-
-        stats.add(new BugStat("Non-triaged", nonTriaged, Config.BUG_TRIAGE_WARN, Config.BUG_TRIAGE_ERROR, "is:open label:kind/bug label:status/triage"));
-
-        stats.add(new BugStat("Missing area", missingAreaLabel, Config.BUG_AREA_MISSING_WARN, Config.BUG_AREA_MISSING_ERROR, "is:open label:kind/bug " + data.getAreas().stream().map(s -> "-label:" + s).collect(Collectors.joining(" "))));
-
-        stats.add(new BugStat("Old without comments", oldWithoutComments, Config.BUG_OLD_NO_COMMENT_WARN, Config.BUG_OLD_NO_COMMENT_ERROR, "is:issue is:open label:kind/bug comments:0 updated:<=" + DateUtil.MINUS_6_MONTHS_STRING));
+        stats.add(new BugStat("Critical", i -> i.isOpen() && i.hasLabel("priority/critical"), Config.BUG_PRIORITY_WARN, Config.BUG_PRIORITY_ERROR, "is:open label:kind/bug label:priority/critical"));
+        stats.add(new BugStat("Important", i -> i.isOpen() && i.hasLabel("priority/important"), Config.BUG_PRIORITY_WARN, Config.BUG_PRIORITY_ERROR, "is:open label:kind/bug label:priority/important"));
+        stats.add(new BugStat("Normal", i -> i.isOpen() && i.hasLabel("priority/normal"), Config.BUG_PRIORITY_WARN, Config.BUG_PRIORITY_ERROR, "is:open label:kind/bug label:priority/normal"));
+        stats.add(new BugStat("Low", i -> i.isOpen() && i.hasLabel("priority/low"), Config.BUG_PRIORITY_WARN, Config.BUG_PRIORITY_ERROR, "is:open label:kind/bug label:priority/low"));
 
         stats.add(new BugStat("Last 7 days",
                 createdLast7Days, -1, createdLast7Days > closedLast7Days ? 1 : Integer.MAX_VALUE, "label:kind/bug created:>=" + DateUtil.MINUS_7_DAYS_STRING,
@@ -95,6 +90,10 @@ public class Bugs {
                                         closedCount, -1, -1, "is:closed label:kind/bug milestone:" + e.getKey()));
                             }
                         });
+
+        stats.add(new BugStat("Missing area", i -> i.isOpen() && i.getAreas().isEmpty(), -1, 1, "is:open label:kind/bug " + data.getAreas().stream().map(s -> "-label:" + s).collect(Collectors.joining(" "))));
+        stats.add(new BugStat("Missing priority", i -> i.isOpen() && !i.getLabels().stream().anyMatch(l -> l.startsWith("priority/")), -1, 1, "is:open label:kind/bug -label:priority/critical,priority/important,priority/normal,priority/low"));
+        stats.add(new BugStat("Missing team", i -> i.isOpen() && !i.getLabels().stream().anyMatch(l -> l.startsWith("team/")), -1, 1, "is:open label:kind/bug -label:" + teams.keySet().stream().collect(Collectors.joining(","))));
     }
 
     private List<BugAreaStat> convertToAreaStats(List<GitHubIssue> issues) {
@@ -207,5 +206,79 @@ public class Bugs {
 
     public List<FlakyTest> getFlakyTests() {
         return flakyTests;
+    }
+
+    public class BugStat {
+
+        private String title;
+        private Integer openCount;
+        private Integer openWarnCount;
+        private int openErrorCount;
+        private String openGhLink;
+        private Integer closedCount;
+        private Integer closedWarnCount;
+        private int closedErrorCount;
+        private String closedGhLink;
+
+        public BugStat(String title, Predicate<GitHubIssue> predicate, int openWarnCount, int openErrorCount, String openQuery) {
+            this.title = title;
+            this.openCount = (int) issues.stream().filter(predicate).count();
+            this.openWarnCount = openWarnCount;
+            this.openErrorCount = openErrorCount;
+            this.openGhLink = getQueryGhLink(openQuery);
+        }
+
+        public BugStat(String title, int openCount, int openWarnCount, int openErrorCount, String openQuery) {
+            this.title = title;
+            this.openCount = openCount;
+            this.openWarnCount = openWarnCount;
+            this.openErrorCount = openErrorCount;
+            this.openGhLink = getQueryGhLink(openQuery);
+        }
+
+        public BugStat(String title, int openCount, int openWarnCount, int openErrorCount, String openQuery, int closedCount, int closedWarnCount, int closedErrorCount, String closedQuery) {
+            this.title = title;
+            this.openCount = openCount;
+            this.openWarnCount = openWarnCount;
+            this.openErrorCount = openErrorCount;
+            this.closedCount = closedCount;
+            this.closedWarnCount = closedWarnCount;
+            this.openGhLink = getQueryGhLink(openQuery);
+            this.closedErrorCount = closedErrorCount;
+            this.closedGhLink = getQueryGhLink(closedQuery);
+        }
+
+        private String getQueryGhLink(String query) {
+            query = GHQuery.encode("is:issue" + (query != null ? " " + query : ""));
+            return "https://github.com/keycloak/keycloak/issues?q=" + query;
+        }
+
+        public String getTitle() {
+            return title;
+        }
+
+        public Integer getOpenCount() {
+            return openCount;
+        }
+
+        public Integer getClosedCount() {
+            return closedCount;
+        }
+
+        public String getOpenGhLink() {
+            return openGhLink;
+        }
+
+        public String getClosedGhLink() {
+            return closedGhLink;
+        }
+
+        public String getOpenCssClasses() {
+            return Css.getCountClass(openCount, openWarnCount, openErrorCount);
+        }
+
+        public String getClosedCssClasses() {
+            return Css.getCountClass(closedCount, closedWarnCount, closedErrorCount);
+        }
     }
 }
