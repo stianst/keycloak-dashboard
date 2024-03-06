@@ -1,16 +1,14 @@
 package org.keycloak.dashboard.beans;
 
 import org.keycloak.dashboard.Config;
+import org.keycloak.dashboard.beans.filters.IssueFilterBuilder;
 import org.keycloak.dashboard.rep.GitHubIssue;
 import org.keycloak.dashboard.util.Css;
 import org.keycloak.dashboard.util.GHQuery;
 
-import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Set;
 import java.util.function.Predicate;
-import java.util.stream.Collectors;
 
 public class BugTeamStat {
     private static final String ISSUES_LINK = "https://github.com/keycloak/keycloak/issues";
@@ -30,53 +28,43 @@ public class BugTeamStat {
         this.nextRelease = nextRelease;
 
         columns.add(new Column(nextRelease,
-                i -> nextRelease.equals(i.getMilestone()),
-                "milestone:" + nextRelease,
+                IssueFilterBuilder.create().milestone(nextRelease),
                 Config.BUG_TEAM_NEXT_WARN, Config.BUG_TEAM_NEXT_ERROR));
 
         columns.add(new Column("Triage",
-                i -> i.getLabels().contains("status/triage") && (i.getMilestone() == null || !i.getMilestone().equals("Backlog")),
-                "label:status/triage -milestone:Backlog",
+                IssueFilterBuilder.create().triage(true).backlog(false),
                 Config.BUG_TEAM_TRIAGE_WARN, Config.BUG_TEAM_TRIAGE_ERROR));
 
         columns.add(new Column("Criticial",
-                i -> !i.getLabels().contains("status/triage") && (i.getLabels().contains("priority/blocker")),
-                "-label:status/triage label:priority/blocker",
+                IssueFilterBuilder.create().triage(false).priority("critical"),
                 -1, 1));
 
         columns.add(new Column("Important",
-                i -> !i.getLabels().contains("status/triage") && (i.getLabels().contains("priority/important")),
-                "-label:status/triage label:priority/important",
+                IssueFilterBuilder.create().triage(false).priority("important"),
                 Config.BUG_PRIORITY_WARN, Config.BUG_PRIORITY_ERROR));
 
         columns.add(new Column("Normal",
-                i -> !i.getLabels().contains("status/triage") && (i.getLabels().contains("priority/normal")),
-                "-label:status/triage label:priority/normal",
+                IssueFilterBuilder.create().triage(false).priority("normal"),
                 Config.BUG_OPEN_WARN, Config.BUG_OPEN_ERROR));
 
         columns.add(new Column("Low",
-                i -> !i.getLabels().contains("status/triage") && (i.getLabels().contains("priority/low")),
-                "-label:status/triage label:priority/low",
+                IssueFilterBuilder.create().triage(false).priority("low"),
                 Config.BUG_OPEN_WARN, Config.BUG_OPEN_ERROR));
 
         columns.add(new Column("<p>Cleanup<p><p>Triage backlog</p>",
-                i -> i.getLabels().contains("status/triage") && i.getMilestone() != null && i.getMilestone().equals("Backlog"),
-                "label:status/triage milestone:Backlog",
+                IssueFilterBuilder.create().triage(true).backlog(true),
                 -1, 1));
 
         columns.add(new Column("<p>Cleanup</p><p>Missing priority and not in backlog</p>",
-                i -> !i.getLabels().contains("status/triage") && (!"Backlog".equals(i.getMilestone()) && i.getLabels().stream().noneMatch(l -> l.equals("status/missing-information") || l.startsWith("priority/"))),
-                "-label:status/triage,priority/blocker,priority/important,priority/normal,priority/low,status/missing-information -milestone:Backlog",
+                IssueFilterBuilder.create().triage(false).hasPriority(false).missingInformation(false).backlog(false),
                 -1, 1));
 
         columns.add(new Column("<p>Cleanup</p><p>Backlog and not help wanted</p>",
-                i -> !i.getLabels().contains("status/triage") && !i.getLabels().contains("help wanted") && "Backlog".equals(i.getMilestone()),
-                "-label:status/triage -label:\"help wanted\" milestone:Backlog",
+                IssueFilterBuilder.create().triage(false).helpWanted(false).backlog(true),
                 -1, 1));
 
         columns.add(new Column("<p>Cleanup</p><p>Backlog with help wanted</p>",
-                i -> i.getLabels().contains("help wanted") && "Backlog".equals(i.getMilestone()),
-                "label:\"help wanted\" milestone:backlog",
+                IssueFilterBuilder.create().backlog(true).helpWanted(true),
                 -1, 1));
     }
 
@@ -106,6 +94,14 @@ public class BugTeamStat {
         int warnCount;
 
         int errorCount;
+
+        public Column(String label, IssueFilterBuilder issueFilterBuilder, int warnCount, int errorCount) {
+            this.label = label;
+            this.link = getLink(issueFilterBuilder.toGhQuery());
+            this.count = getFilteredCount(issueFilterBuilder.toPredicates());
+            this.warnCount = warnCount;
+            this.errorCount = errorCount;
+        }
 
         public Column(String label, Predicate<GitHubIssue> predicate, String query, int warnCount, int errorCount) {
             this.label = label;
@@ -140,4 +136,5 @@ public class BugTeamStat {
     private int getFilteredCount(Predicate<GitHubIssue> predicate) {
         return (int) openIssues.stream().filter(predicate).count();
     }
+
 }
