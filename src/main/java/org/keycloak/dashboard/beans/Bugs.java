@@ -61,7 +61,7 @@ public class Bugs {
 
         stats.add(new BugStat("Weakness", i -> i.isOpen() && i.hasLabel("kind/weakness"), Config.BUG_PRIORITY_WARN, Config.BUG_PRIORITY_ERROR, "is:open label:kind/bug label:kind/weakness"));
 
-        stats.add(new BugStat("Critical", i -> i.isOpen() && i.hasLabel("priority/critical"), Config.BUG_PRIORITY_WARN, Config.BUG_PRIORITY_ERROR, "is:open label:kind/bug label:priority/critical"));
+        stats.add(new BugStat("Blocker", i -> i.isOpen() && i.hasLabel("priority/blocker"), Config.BUG_PRIORITY_WARN, Config.BUG_PRIORITY_ERROR, "is:open label:kind/bug label:priority/blocker"));
         stats.add(new BugStat("Important", i -> i.isOpen() && i.hasLabel("priority/important"), Config.BUG_PRIORITY_WARN, Config.BUG_PRIORITY_ERROR, "is:open label:kind/bug label:priority/important"));
         stats.add(new BugStat("Normal", i -> i.isOpen() && i.hasLabel("priority/normal"), Config.BUG_PRIORITY_WARN, Config.BUG_PRIORITY_ERROR, "is:open label:kind/bug label:priority/normal"));
         stats.add(new BugStat("Low", i -> i.isOpen() && i.hasLabel("priority/low"), Config.BUG_PRIORITY_WARN, Config.BUG_PRIORITY_ERROR, "is:open label:kind/bug label:priority/low"));

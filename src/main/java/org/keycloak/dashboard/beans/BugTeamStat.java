@@ -35,8 +35,8 @@ public class BugTeamStat {
                 IssueFilterBuilder.create().triage(true).backlog(false),
                 Config.BUG_TEAM_TRIAGE_WARN, Config.BUG_TEAM_TRIAGE_ERROR));
 
-        columns.add(new Column("Criticial",
-                IssueFilterBuilder.create().triage(false).priority("critical"),
+        columns.add(new Column("Blocker",
+                IssueFilterBuilder.create().triage(false).priority("blocker"),
                 -1, 1));
 
         columns.add(new Column("Important",
