@@ -59,24 +59,24 @@ public class BugTeamStat {
                 "-label:status/triage label:priority/low",
                 Config.BUG_OPEN_WARN, Config.BUG_OPEN_ERROR));
 
-        columns.add(new Column("Triage Backlog",
+        columns.add(new Column("<p>Cleanup<p><p>Triage backlog</p>",
                 i -> i.getLabels().contains("status/triage") && i.getMilestone() != null && i.getMilestone().equals("Backlog"),
                 "label:status/triage milestone:Backlog",
                 -1, 1));
 
-        columns.add(new Column("No priority",
+        columns.add(new Column("<p>Cleanup</p><p>Missing priority and not in backlog</p>",
                 i -> !i.getLabels().contains("status/triage") && (!"Backlog".equals(i.getMilestone()) && i.getLabels().stream().noneMatch(l -> l.equals("status/missing-information") || l.startsWith("priority/"))),
                 "-label:status/triage,priority/blocker,priority/important,priority/normal,priority/low,status/missing-information -milestone:Backlog",
                 -1, 1));
 
-        columns.add(new Column("Backlog",
-                i -> !i.getLabels().contains("status/triage") && !i.getLabels().contains("help wanted") && i.getMilestone() != null && i.getMilestone().equals("Backlog"),
+        columns.add(new Column("<p>Cleanup</p><p>Backlog and not help wanted</p>",
+                i -> !i.getLabels().contains("status/triage") && !i.getLabels().contains("help wanted") && "Backlog".equals(i.getMilestone()),
                 "-label:status/triage -label:\"help wanted\" milestone:Backlog",
                 -1, 1));
 
-        columns.add(new Column("Help Wanted",
-                i -> i.getLabels().contains("help wanted"),
-                "label:\"help wanted\"",
+        columns.add(new Column("<p>Cleanup</p><p>Backlog with help wanted</p>",
+                i -> i.getLabels().contains("help wanted") && "Backlog".equals(i.getMilestone()),
+                "label:\"help wanted\" milestone:backlog",
                 -1, 1));
     }
 
