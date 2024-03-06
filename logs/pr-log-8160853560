@@ -1,0 +1,868 @@
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:48.3933936Z ##[group]Run ./mvnw install -DskipTests -Pbuild-app-servers -f testsuite/integration-arquillian/servers/app-server/pom.xml
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:48.3935032Z [36;1m./mvnw install -DskipTests -Pbuild-app-servers -f testsuite/integration-arquillian/servers/app-server/pom.xml[0m
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:48.3984680Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:48.3985111Z env:
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:48.3985473Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:48.3985952Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:48.3986350Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:48.3986893Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.10-7/x64
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:48.3987521Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.10-7/x64
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:48.3988006Z ##[endgroup]
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:49.9588499Z [INFO] Loading cache configuration from /home/runner/work/keycloak/keycloak/.mvn/maven-build-cache-config.xml
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:49.9722582Z [INFO] Scanning for projects...
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:50.1894972Z [INFO] ------------------------------------------------------------------------
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:50.1895815Z [INFO] Reactor Build Order:
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:50.1898337Z [INFO] 
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:50.1899357Z [INFO] App Server                                                         [pom]
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:50.1900535Z [INFO] App Server - SPI                                                   [jar]
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:50.1904052Z [INFO] App Server - JBoss                                                 [pom]
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:50.1909785Z [INFO] App Server - Wildfly                                               [jar]
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:50.1915636Z [INFO] App Server - Karaf                                                 [pom]
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:50.1917139Z [INFO] App Server - Tomcat                                                [pom]
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:50.1918591Z [INFO] App Server - Undertow                                              [jar]
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:50.1920039Z [INFO] App Server - Jetty Parent                                          [pom]
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:50.1986250Z [INFO] 
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:50.1987978Z [INFO] --< org.keycloak.testsuite:integration-arquillian-servers-app-server >--
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:50.1990056Z [INFO] Building App Server 999.0.0-SNAPSHOT                               [1/8]
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:50.1991173Z [INFO]   from pom.xml
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:50.1993009Z [INFO] --------------------------------[ pom ]---------------------------------
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:50.2625412Z [INFO] 
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:50.2627193Z [INFO] --- enforcer:3.0.0-M3:enforce (enforce-java-version) @ integration-arquillian-servers-app-server ---
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:50.4486556Z [INFO] 
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:50.4488336Z [INFO] --- enforcer:3.0.0-M3:enforce (enforce-maven-version) @ integration-arquillian-servers-app-server ---
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:50.4502191Z [INFO] 
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:50.4503425Z [INFO] --- enforcer:3.0.0-M3:enforce (enforce-maven) @ integration-arquillian-servers-app-server ---
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:50.4510901Z [INFO] 
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:50.4512206Z [INFO] --- buildnumber:1.4:create (get-scm-revision) @ integration-arquillian-servers-app-server ---
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:50.7003108Z [INFO] Executing: /bin/sh -c cd '/home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/servers/app-server' && 'git' 'rev-parse' '--verify' 'HEAD'
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:50.7005701Z [INFO] Working directory: /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/servers/app-server
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:50.7192490Z [INFO] Storing buildNumber: 4f80b18905f7339802de41bf6fb62604d3f9112f at timestamp: 1709662370684
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:50.7247073Z [WARNING] Cannot get the branch information from the git repository: 
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:50.7248447Z Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:50.7249238Z 
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:50.7250934Z [INFO] Executing: /bin/sh -c cd '/home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/servers/app-server' && 'git' 'rev-parse' '--verify' 'HEAD'
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:50.7253813Z [INFO] Working directory: /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/servers/app-server
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:50.7349167Z [INFO] Storing buildScmBranch: UNKNOWN
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:50.7350126Z [INFO] 
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:50.7351405Z [INFO] --- source:3.1.0:jar-no-fork (attach-sources) @ integration-arquillian-servers-app-server ---
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:50.8382996Z [INFO] 
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:50.8384642Z [INFO] --- install:2.5.2:install (default-install) @ integration-arquillian-servers-app-server ---
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:50.8756783Z [INFO] Installing /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/servers/app-server/pom.xml to /home/runner/.m2/repository/org/keycloak/testsuite/integration-arquillian-servers-app-server/999.0.0-SNAPSHOT/integration-arquillian-servers-app-server-999.0.0-SNAPSHOT.pom
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:50.9071983Z [INFO] 
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:50.9073465Z [INFO] --< org.keycloak.testsuite:integration-arquillian-servers-app-server-spi >--
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:50.9075115Z [INFO] Building App Server - SPI 999.0.0-SNAPSHOT                         [2/8]
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:50.9076230Z [INFO]   from app-server-spi/pom.xml
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:50.9077208Z [INFO] --------------------------------[ jar ]---------------------------------
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:50.9810283Z [INFO] Artifact org.jboss.arquillian:arquillian-build:pom:1.8.0.Final is present in the local repository, but cached from a remote repository ID that is unavailable in current build context, verifying that is downloadable from [central (https://repo.maven.apache.org/maven2, default, releases)]
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:50.9826956Z [INFO] Artifact org.jboss.arquillian:arquillian-build:pom:1.8.0.Final is present in the local repository, but cached from a remote repository ID that is unavailable in current build context, verifying that is downloadable from [central (https://repo.maven.apache.org/maven2, default, releases)]
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.1568882Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jboss/arquillian/arquillian-build/1.8.0.Final/arquillian-build-1.8.0.Final.pom
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.3252248Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jboss/arquillian/arquillian-build/1.8.0.Final/arquillian-build-1.8.0.Final.pom (0 B at 0 B/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.3281356Z [INFO] Artifact org.jboss.arquillian:arquillian-parent:pom:1.8.0.Final is present in the local repository, but cached from a remote repository ID that is unavailable in current build context, verifying that is downloadable from [central (https://repo.maven.apache.org/maven2, default, releases)]
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.3285881Z [INFO] Artifact org.jboss.arquillian:arquillian-parent:pom:1.8.0.Final is present in the local repository, but cached from a remote repository ID that is unavailable in current build context, verifying that is downloadable from [central (https://repo.maven.apache.org/maven2, default, releases)]
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.3292334Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jboss/arquillian/arquillian-parent/1.8.0.Final/arquillian-parent-1.8.0.Final.pom
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.3348257Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jboss/arquillian/arquillian-parent/1.8.0.Final/arquillian-parent-1.8.0.Final.pom (0 B at 0 B/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.3362827Z [INFO] Artifact org.jboss:jboss-parent:pom:41 is present in the local repository, but cached from a remote repository ID that is unavailable in current build context, verifying that is downloadable from [central (https://repo.maven.apache.org/maven2, default, releases)]
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.3367481Z [INFO] Artifact org.jboss:jboss-parent:pom:41 is present in the local repository, but cached from a remote repository ID that is unavailable in current build context, verifying that is downloadable from [central (https://repo.maven.apache.org/maven2, default, releases)]
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.3371229Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jboss/jboss-parent/41/jboss-parent-41.pom
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.3413340Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jboss/jboss-parent/41/jboss-parent-41.pom (0 B at 0 B/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.3496740Z [INFO] Artifact org.jboss.arquillian.container:arquillian-container-spi:pom:1.8.0.Final is present in the local repository, but cached from a remote repository ID that is unavailable in current build context, verifying that is downloadable from [central (https://repo.maven.apache.org/maven2, default, releases)]
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.3502472Z [INFO] Artifact org.jboss.arquillian.container:arquillian-container-spi:pom:1.8.0.Final is present in the local repository, but cached from a remote repository ID that is unavailable in current build context, verifying that is downloadable from [central (https://repo.maven.apache.org/maven2, default, releases)]
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.3507054Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jboss/arquillian/container/arquillian-container-spi/1.8.0.Final/arquillian-container-spi-1.8.0.Final.pom
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.3553075Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jboss/arquillian/container/arquillian-container-spi/1.8.0.Final/arquillian-container-spi-1.8.0.Final.pom (0 B at 0 B/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.3587417Z [INFO] Artifact org.jboss.arquillian.core:arquillian-core-spi:pom:1.8.0.Final is present in the local repository, but cached from a remote repository ID that is unavailable in current build context, verifying that is downloadable from [central (https://repo.maven.apache.org/maven2, default, releases)]
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.3592606Z [INFO] Artifact org.jboss.arquillian.core:arquillian-core-spi:pom:1.8.0.Final is present in the local repository, but cached from a remote repository ID that is unavailable in current build context, verifying that is downloadable from [central (https://repo.maven.apache.org/maven2, default, releases)]
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.3597377Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jboss/arquillian/core/arquillian-core-spi/1.8.0.Final/arquillian-core-spi-1.8.0.Final.pom
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.3640630Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jboss/arquillian/core/arquillian-core-spi/1.8.0.Final/arquillian-core-spi-1.8.0.Final.pom (0 B at 0 B/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.3674202Z [INFO] Artifact org.jboss.arquillian.core:arquillian-core-api:pom:1.8.0.Final is present in the local repository, but cached from a remote repository ID that is unavailable in current build context, verifying that is downloadable from [central (https://repo.maven.apache.org/maven2, default, releases)]
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.3679533Z [INFO] Artifact org.jboss.arquillian.core:arquillian-core-api:pom:1.8.0.Final is present in the local repository, but cached from a remote repository ID that is unavailable in current build context, verifying that is downloadable from [central (https://repo.maven.apache.org/maven2, default, releases)]
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.3684119Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jboss/arquillian/core/arquillian-core-api/1.8.0.Final/arquillian-core-api-1.8.0.Final.pom
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.3728069Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jboss/arquillian/core/arquillian-core-api/1.8.0.Final/arquillian-core-api-1.8.0.Final.pom (0 B at 0 B/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.3760544Z [INFO] Artifact org.jboss.arquillian.config:arquillian-config-api:pom:1.8.0.Final is present in the local repository, but cached from a remote repository ID that is unavailable in current build context, verifying that is downloadable from [central (https://repo.maven.apache.org/maven2, default, releases)]
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.3766313Z [INFO] Artifact org.jboss.arquillian.config:arquillian-config-api:pom:1.8.0.Final is present in the local repository, but cached from a remote repository ID that is unavailable in current build context, verifying that is downloadable from [central (https://repo.maven.apache.org/maven2, default, releases)]
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.3770970Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jboss/arquillian/config/arquillian-config-api/1.8.0.Final/arquillian-config-api-1.8.0.Final.pom
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.3816145Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jboss/arquillian/config/arquillian-config-api/1.8.0.Final/arquillian-config-api-1.8.0.Final.pom (0 B at 0 B/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.3851479Z [INFO] Artifact org.jboss.shrinkwrap.descriptors:shrinkwrap-descriptors-api-base:pom:2.0.0 is present in the local repository, but cached from a remote repository ID that is unavailable in current build context, verifying that is downloadable from [central (https://repo.maven.apache.org/maven2, default, releases)]
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.3857175Z [INFO] Artifact org.jboss.shrinkwrap.descriptors:shrinkwrap-descriptors-api-base:pom:2.0.0 is present in the local repository, but cached from a remote repository ID that is unavailable in current build context, verifying that is downloadable from [central (https://repo.maven.apache.org/maven2, default, releases)]
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.3861885Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jboss/shrinkwrap/descriptors/shrinkwrap-descriptors-api-base/2.0.0/shrinkwrap-descriptors-api-base-2.0.0.pom
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.3959032Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jboss/shrinkwrap/descriptors/shrinkwrap-descriptors-api-base/2.0.0/shrinkwrap-descriptors-api-base-2.0.0.pom (0 B at 0 B/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.3977586Z [INFO] Artifact org.jboss.shrinkwrap.descriptors:shrinkwrap-descriptors-parent:pom:2.0.0 is present in the local repository, but cached from a remote repository ID that is unavailable in current build context, verifying that is downloadable from [central (https://repo.maven.apache.org/maven2, default, releases)]
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.3983347Z [INFO] Artifact org.jboss.shrinkwrap.descriptors:shrinkwrap-descriptors-parent:pom:2.0.0 is present in the local repository, but cached from a remote repository ID that is unavailable in current build context, verifying that is downloadable from [central (https://repo.maven.apache.org/maven2, default, releases)]
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.3988556Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jboss/shrinkwrap/descriptors/shrinkwrap-descriptors-parent/2.0.0/shrinkwrap-descriptors-parent-2.0.0.pom
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.4033755Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jboss/shrinkwrap/descriptors/shrinkwrap-descriptors-parent/2.0.0/shrinkwrap-descriptors-parent-2.0.0.pom (0 B at 0 B/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.4057996Z [INFO] Artifact org.jboss:jboss-parent:pom:16 is present in the local repository, but cached from a remote repository ID that is unavailable in current build context, verifying that is downloadable from [central (https://repo.maven.apache.org/maven2, default, releases), jboss-public-repository (https://repository.jboss.org/nexus/content/groups/public, default, releases+snapshots)]
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.4070933Z [INFO] Artifact org.jboss:jboss-parent:pom:16 is present in the local repository, but cached from a remote repository ID that is unavailable in current build context, verifying that is downloadable from [central (https://repo.maven.apache.org/maven2, default, releases), jboss-public-repository (https://repository.jboss.org/nexus/content/groups/public, default, releases+snapshots)]
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.4081501Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jboss/jboss-parent/16/jboss-parent-16.pom
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.4135814Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jboss/jboss-parent/16/jboss-parent-16.pom (0 B at 0 B/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.4173240Z [INFO] Artifact org.jboss.arquillian.config:arquillian-config-impl-base:pom:1.8.0.Final is present in the local repository, but cached from a remote repository ID that is unavailable in current build context, verifying that is downloadable from [central (https://repo.maven.apache.org/maven2, default, releases)]
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.4183476Z [INFO] Artifact org.jboss.arquillian.config:arquillian-config-impl-base:pom:1.8.0.Final is present in the local repository, but cached from a remote repository ID that is unavailable in current build context, verifying that is downloadable from [central (https://repo.maven.apache.org/maven2, default, releases)]
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.4194126Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jboss/arquillian/config/arquillian-config-impl-base/1.8.0.Final/arquillian-config-impl-base-1.8.0.Final.pom
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.4258533Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jboss/arquillian/config/arquillian-config-impl-base/1.8.0.Final/arquillian-config-impl-base-1.8.0.Final.pom (0 B at 0 B/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.4296411Z [INFO] Artifact org.jboss.arquillian.config:arquillian-config-spi:pom:1.8.0.Final is present in the local repository, but cached from a remote repository ID that is unavailable in current build context, verifying that is downloadable from [central (https://repo.maven.apache.org/maven2, default, releases)]
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.4306210Z [INFO] Artifact org.jboss.arquillian.config:arquillian-config-spi:pom:1.8.0.Final is present in the local repository, but cached from a remote repository ID that is unavailable in current build context, verifying that is downloadable from [central (https://repo.maven.apache.org/maven2, default, releases)]
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.4317090Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jboss/arquillian/config/arquillian-config-spi/1.8.0.Final/arquillian-config-spi-1.8.0.Final.pom
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.4368692Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jboss/arquillian/config/arquillian-config-spi/1.8.0.Final/arquillian-config-spi-1.8.0.Final.pom (0 B at 0 B/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.4404053Z [INFO] Artifact org.jboss.shrinkwrap.descriptors:shrinkwrap-descriptors-spi:pom:2.0.0 is present in the local repository, but cached from a remote repository ID that is unavailable in current build context, verifying that is downloadable from [central (https://repo.maven.apache.org/maven2, default, releases)]
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.4413924Z [INFO] Artifact org.jboss.shrinkwrap.descriptors:shrinkwrap-descriptors-spi:pom:2.0.0 is present in the local repository, but cached from a remote repository ID that is unavailable in current build context, verifying that is downloadable from [central (https://repo.maven.apache.org/maven2, default, releases)]
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.4425522Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jboss/shrinkwrap/descriptors/shrinkwrap-descriptors-spi/2.0.0/shrinkwrap-descriptors-spi-2.0.0.pom
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.4501478Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jboss/shrinkwrap/descriptors/shrinkwrap-descriptors-spi/2.0.0/shrinkwrap-descriptors-spi-2.0.0.pom (0 B at 0 B/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.4561685Z [INFO] Artifact org.jboss.arquillian.container:arquillian-container-test-api:pom:1.8.0.Final is present in the local repository, but cached from a remote repository ID that is unavailable in current build context, verifying that is downloadable from [central (https://repo.maven.apache.org/maven2, default, releases)]
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.4572026Z [INFO] Artifact org.jboss.arquillian.container:arquillian-container-test-api:pom:1.8.0.Final is present in the local repository, but cached from a remote repository ID that is unavailable in current build context, verifying that is downloadable from [central (https://repo.maven.apache.org/maven2, default, releases)]
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.4583798Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jboss/arquillian/container/arquillian-container-test-api/1.8.0.Final/arquillian-container-test-api-1.8.0.Final.pom
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.4633699Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jboss/arquillian/container/arquillian-container-test-api/1.8.0.Final/arquillian-container-test-api-1.8.0.Final.pom (0 B at 0 B/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.4671287Z [INFO] Artifact org.jboss.arquillian.container:arquillian-container-test-spi:pom:1.8.0.Final is present in the local repository, but cached from a remote repository ID that is unavailable in current build context, verifying that is downloadable from [central (https://repo.maven.apache.org/maven2, default, releases)]
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.4681399Z [INFO] Artifact org.jboss.arquillian.container:arquillian-container-test-spi:pom:1.8.0.Final is present in the local repository, but cached from a remote repository ID that is unavailable in current build context, verifying that is downloadable from [central (https://repo.maven.apache.org/maven2, default, releases)]
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.4693656Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jboss/arquillian/container/arquillian-container-test-spi/1.8.0.Final/arquillian-container-test-spi-1.8.0.Final.pom
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.4737524Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jboss/arquillian/container/arquillian-container-test-spi/1.8.0.Final/arquillian-container-test-spi-1.8.0.Final.pom (0 B at 0 B/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.4767311Z [INFO] Artifact org.jboss.arquillian.test:arquillian-test-spi:pom:1.8.0.Final is present in the local repository, but cached from a remote repository ID that is unavailable in current build context, verifying that is downloadable from [central (https://repo.maven.apache.org/maven2, default, releases)]
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.4772875Z [INFO] Artifact org.jboss.arquillian.test:arquillian-test-spi:pom:1.8.0.Final is present in the local repository, but cached from a remote repository ID that is unavailable in current build context, verifying that is downloadable from [central (https://repo.maven.apache.org/maven2, default, releases)]
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.4777273Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jboss/arquillian/test/arquillian-test-spi/1.8.0.Final/arquillian-test-spi-1.8.0.Final.pom
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.4818744Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jboss/arquillian/test/arquillian-test-spi/1.8.0.Final/arquillian-test-spi-1.8.0.Final.pom (0 B at 0 B/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.4847548Z [INFO] Artifact org.jboss.arquillian.test:arquillian-test-api:pom:1.8.0.Final is present in the local repository, but cached from a remote repository ID that is unavailable in current build context, verifying that is downloadable from [central (https://repo.maven.apache.org/maven2, default, releases)]
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.4853000Z [INFO] Artifact org.jboss.arquillian.test:arquillian-test-api:pom:1.8.0.Final is present in the local repository, but cached from a remote repository ID that is unavailable in current build context, verifying that is downloadable from [central (https://repo.maven.apache.org/maven2, default, releases)]
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.4857151Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jboss/arquillian/test/arquillian-test-api/1.8.0.Final/arquillian-test-api-1.8.0.Final.pom
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.4896618Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jboss/arquillian/test/arquillian-test-api/1.8.0.Final/arquillian-test-api-1.8.0.Final.pom (0 B at 0 B/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.4928272Z [INFO] Artifact org.jboss.arquillian.container:arquillian-container-test-impl-base:pom:1.8.0.Final is present in the local repository, but cached from a remote repository ID that is unavailable in current build context, verifying that is downloadable from [central (https://repo.maven.apache.org/maven2, default, releases)]
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.4934114Z [INFO] Artifact org.jboss.arquillian.container:arquillian-container-test-impl-base:pom:1.8.0.Final is present in the local repository, but cached from a remote repository ID that is unavailable in current build context, verifying that is downloadable from [central (https://repo.maven.apache.org/maven2, default, releases)]
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.4938955Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jboss/arquillian/container/arquillian-container-test-impl-base/1.8.0.Final/arquillian-container-test-impl-base-1.8.0.Final.pom
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.5017829Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jboss/arquillian/container/arquillian-container-test-impl-base/1.8.0.Final/arquillian-container-test-impl-base-1.8.0.Final.pom (0 B at 0 B/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.5076773Z [INFO] 
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.5078750Z [INFO] --- enforcer:3.0.0-M3:enforce (enforce-java-version) @ integration-arquillian-servers-app-server-spi ---
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.5101791Z [INFO] 
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.5103887Z [INFO] --- enforcer:3.0.0-M3:enforce (enforce-maven-version) @ integration-arquillian-servers-app-server-spi ---
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.5112538Z [INFO] 
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.5114387Z [INFO] --- enforcer:3.0.0-M3:enforce (enforce-maven) @ integration-arquillian-servers-app-server-spi ---
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.5123732Z [INFO] 
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.5125773Z [INFO] --- buildnumber:1.4:create (get-scm-revision) @ integration-arquillian-servers-app-server-spi ---
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.5144197Z [INFO] 
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.5146224Z [INFO] --- resources:3.0.1:resources (default-resources) @ integration-arquillian-servers-app-server-spi ---
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.5885964Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.5888488Z [INFO] skip non existing resourceDirectory /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/servers/app-server/app-server-spi/src/main/resources
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.5890508Z [INFO] 
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.5891862Z [INFO] --- compiler:3.8.1:compile (default-compile) @ integration-arquillian-servers-app-server-spi ---
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.6510139Z [INFO] Changes detected - recompiling the module!
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:51.6540078Z [INFO] Compiling 2 source files to /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/servers/app-server/app-server-spi/target/classes
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:52.1146077Z [INFO] 
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:52.1147590Z [INFO] --- resources:3.0.1:testResources (default-testResources) @ integration-arquillian-servers-app-server-spi ---
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:52.1188882Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:52.1191345Z [INFO] skip non existing resourceDirectory /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/servers/app-server/app-server-spi/src/test/resources
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:52.1193000Z [INFO] 
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:52.1194075Z [INFO] --- compiler:3.8.1:testCompile (default-testCompile) @ integration-arquillian-servers-app-server-spi ---
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:52.1228144Z [INFO] No sources to compile
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:52.1229453Z [INFO] 
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:52.1230886Z [INFO] --- surefire:3.0.0-M7:test (default-test) @ integration-arquillian-servers-app-server-spi ---
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:52.2403161Z [INFO] Tests are skipped.
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:52.2404233Z [INFO] 
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:52.2405665Z [INFO] --- jar:3.1.2:jar (default-jar) @ integration-arquillian-servers-app-server-spi ---
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:52.3621893Z [INFO] Building jar: /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/servers/app-server/app-server-spi/target/integration-arquillian-servers-app-server-spi-999.0.0-SNAPSHOT.jar
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:52.3904723Z [INFO] 
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:52.3906607Z [INFO] --- source:3.1.0:jar-no-fork (attach-sources) @ integration-arquillian-servers-app-server-spi ---
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:52.4157862Z [INFO] Building jar: /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/servers/app-server/app-server-spi/target/integration-arquillian-servers-app-server-spi-999.0.0-SNAPSHOT-sources.jar
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:52.4424127Z [INFO] 
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:52.4425775Z [INFO] --- install:2.5.2:install (default-install) @ integration-arquillian-servers-app-server-spi ---
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:52.4465173Z [INFO] Installing /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/servers/app-server/app-server-spi/target/integration-arquillian-servers-app-server-spi-999.0.0-SNAPSHOT.jar to /home/runner/.m2/repository/org/keycloak/testsuite/integration-arquillian-servers-app-server-spi/999.0.0-SNAPSHOT/integration-arquillian-servers-app-server-spi-999.0.0-SNAPSHOT.jar
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:52.4473759Z [INFO] Installing /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/servers/app-server/app-server-spi/pom.xml to /home/runner/.m2/repository/org/keycloak/testsuite/integration-arquillian-servers-app-server-spi/999.0.0-SNAPSHOT/integration-arquillian-servers-app-server-spi-999.0.0-SNAPSHOT.pom
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:52.4524065Z [INFO] Installing /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/servers/app-server/app-server-spi/target/integration-arquillian-servers-app-server-spi-999.0.0-SNAPSHOT-sources.jar to /home/runner/.m2/repository/org/keycloak/testsuite/integration-arquillian-servers-app-server-spi/999.0.0-SNAPSHOT/integration-arquillian-servers-app-server-spi-999.0.0-SNAPSHOT-sources.jar
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:52.4574313Z [INFO] 
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:52.4575718Z [INFO] --< org.keycloak.testsuite:integration-arquillian-servers-app-server-jboss >--
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:52.4577502Z [INFO] Building App Server - JBoss 999.0.0-SNAPSHOT                       [3/8]
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:52.4578797Z [INFO]   from jboss/pom.xml
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:52.4580001Z [INFO] --------------------------------[ pom ]---------------------------------
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:52.4656342Z [INFO] 
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:52.4658003Z [INFO] --- enforcer:3.0.0-M3:enforce (enforce-java-version) @ integration-arquillian-servers-app-server-jboss ---
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:52.4669684Z [INFO] 
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:52.4671201Z [INFO] --- enforcer:3.0.0-M3:enforce (enforce-maven-version) @ integration-arquillian-servers-app-server-jboss ---
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:52.4675673Z [INFO] 
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:52.4677066Z [INFO] --- enforcer:3.0.0-M3:enforce (enforce-maven) @ integration-arquillian-servers-app-server-jboss ---
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:52.4681119Z [INFO] 
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:52.4682521Z [INFO] --- buildnumber:1.4:create (get-scm-revision) @ integration-arquillian-servers-app-server-jboss ---
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:52.4691081Z [INFO] 
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:52.4692413Z [INFO] --- source:3.1.0:jar-no-fork (attach-sources) @ integration-arquillian-servers-app-server-jboss ---
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:52.4700696Z [INFO] 
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:52.4702026Z [INFO] --- install:2.5.2:install (default-install) @ integration-arquillian-servers-app-server-jboss ---
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:52.4710574Z [INFO] Installing /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/servers/app-server/jboss/pom.xml to /home/runner/.m2/repository/org/keycloak/testsuite/integration-arquillian-servers-app-server-jboss/999.0.0-SNAPSHOT/integration-arquillian-servers-app-server-jboss-999.0.0-SNAPSHOT.pom
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:52.4790554Z [INFO] 
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:52.4791915Z [INFO] --< org.keycloak.testsuite:integration-arquillian-servers-app-server-wildfly >--
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:52.4793555Z [INFO] Building App Server - Wildfly 999.0.0-SNAPSHOT                     [4/8]
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:52.4794708Z [INFO]   from jboss/wildfly/pom.xml
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:52.4795834Z [INFO] --------------------------------[ jar ]---------------------------------
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:52.5270933Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/wildfly/arquillian/wildfly-arquillian-container-managed/3.0.1.Final/wildfly-arquillian-container-managed-3.0.1.Final.pom
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:52.5431994Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/wildfly/arquillian/wildfly-arquillian-container-managed/3.0.1.Final/wildfly-arquillian-container-managed-3.0.1.Final.pom (6.4 kB at 355 kB/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:52.5453199Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/wildfly/arquillian/wildfly-arquillian-parent/3.0.1.Final/wildfly-arquillian-parent-3.0.1.Final.pom
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:52.5554740Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/wildfly/arquillian/wildfly-arquillian-parent/3.0.1.Final/wildfly-arquillian-parent-3.0.1.Final.pom (23 kB at 2.1 MB/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:52.5601165Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/wildfly/core/wildfly-core-parent/13.0.0.Final/wildfly-core-parent-13.0.0.Final.pom
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:52.5859363Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/wildfly/core/wildfly-core-parent/13.0.0.Final/wildfly-core-parent-13.0.0.Final.pom (123 kB at 4.7 MB/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:52.5925842Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/wildfly/arquillian/wildfly-arquillian-common/3.0.1.Final/wildfly-arquillian-common-3.0.1.Final.pom
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:52.5978753Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/wildfly/arquillian/wildfly-arquillian-common/3.0.1.Final/wildfly-arquillian-common-3.0.1.Final.pom (3.4 kB at 684 kB/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:52.6015260Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jboss/arquillian/testenricher/arquillian-testenricher-cdi/1.8.0.Final/arquillian-testenricher-cdi-1.8.0.Final.pom
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:52.6083560Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jboss/arquillian/testenricher/arquillian-testenricher-cdi/1.8.0.Final/arquillian-testenricher-cdi-1.8.0.Final.pom (3.7 kB at 531 kB/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:52.6123121Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jboss/arquillian/testenricher/arquillian-testenricher-ejb/1.8.0.Final/arquillian-testenricher-ejb-1.8.0.Final.pom
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:52.6182445Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jboss/arquillian/testenricher/arquillian-testenricher-ejb/1.8.0.Final/arquillian-testenricher-ejb-1.8.0.Final.pom (4.8 kB at 795 kB/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:52.6216843Z [INFO] Artifact org.jboss.arquillian.testenricher:arquillian-testenricher-initialcontext:pom:1.8.0.Final is present in the local repository, but cached from a remote repository ID that is unavailable in current build context, verifying that is downloadable from [central (https://repo.maven.apache.org/maven2, default, releases), jboss-public-repository (https://repository.jboss.org/nexus/content/groups/public/, default, releases+snapshots)]
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:52.6224893Z [INFO] Artifact org.jboss.arquillian.testenricher:arquillian-testenricher-initialcontext:pom:1.8.0.Final is present in the local repository, but cached from a remote repository ID that is unavailable in current build context, verifying that is downloadable from [central (https://repo.maven.apache.org/maven2, default, releases), jboss-public-repository (https://repository.jboss.org/nexus/content/groups/public/, default, releases+snapshots)]
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:52.6231339Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jboss/arquillian/testenricher/arquillian-testenricher-initialcontext/1.8.0.Final/arquillian-testenricher-initialcontext-1.8.0.Final.pom
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:52.6289617Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jboss/arquillian/testenricher/arquillian-testenricher-initialcontext/1.8.0.Final/arquillian-testenricher-initialcontext-1.8.0.Final.pom (0 B at 0 B/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:52.6317930Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jboss/arquillian/testenricher/arquillian-testenricher-resource/1.8.0.Final/arquillian-testenricher-resource-1.8.0.Final.pom
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:52.6371024Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jboss/arquillian/testenricher/arquillian-testenricher-resource/1.8.0.Final/arquillian-testenricher-resource-1.8.0.Final.pom (1.9 kB at 373 kB/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:52.6404670Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/wildfly/arquillian/wildfly-arquillian-testenricher-msc/3.0.1.Final/wildfly-arquillian-testenricher-msc-3.0.1.Final.pom
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:52.6461245Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/wildfly/arquillian/wildfly-arquillian-testenricher-msc/3.0.1.Final/wildfly-arquillian-testenricher-msc-3.0.1.Final.pom (2.0 kB at 396 kB/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:52.8806583Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/wildfly/core/wildfly-controller-client/13.0.0.Final/wildfly-controller-client-13.0.0.Final.pom
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:52.8867543Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/wildfly/core/wildfly-controller-client/13.0.0.Final/wildfly-controller-client-13.0.0.Final.pom (3.5 kB at 590 kB/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:52.8924327Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/wildfly/core/wildfly-protocol/13.0.0.Final/wildfly-protocol-13.0.0.Final.pom
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:52.8997485Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/wildfly/core/wildfly-protocol/13.0.0.Final/wildfly-protocol-13.0.0.Final.pom (3.8 kB at 541 kB/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:52.9036408Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jboss/modules/jboss-modules/1.10.2.Final/jboss-modules-1.10.2.Final.pom
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:52.9099639Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jboss/modules/jboss-modules/1.10.2.Final/jboss-modules-1.10.2.Final.pom (13 kB at 2.1 MB/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:52.9130000Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jboss/remoting/jboss-remoting/5.0.19.Final/jboss-remoting-5.0.19.Final.pom
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:52.9203513Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jboss/remoting/jboss-remoting/5.0.19.Final/jboss-remoting-5.0.19.Final.pom (14 kB at 2.0 MB/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:53.0182565Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jboss/xnio/xnio-api/3.8.2.Final/xnio-api-3.8.2.Final.pom
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:53.0249668Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jboss/xnio/xnio-api/3.8.2.Final/xnio-api-3.8.2.Final.pom (8.8 kB at 1.3 MB/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:53.0267037Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jboss/xnio/xnio-all/3.8.2.Final/xnio-all-3.8.2.Final.pom
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:53.0318132Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jboss/xnio/xnio-all/3.8.2.Final/xnio-all-3.8.2.Final.pom (6.9 kB at 1.4 MB/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:53.0347109Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jboss/xnio/xnio-nio/3.8.2.Final/xnio-nio-3.8.2.Final.pom
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:53.0403749Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jboss/xnio/xnio-nio/3.8.2.Final/xnio-nio-3.8.2.Final.pom (8.2 kB at 1.4 MB/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:53.0432801Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/wildfly/core/wildfly-launcher/13.0.0.Final/wildfly-launcher-13.0.0.Final.pom
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:53.0504781Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/wildfly/core/wildfly-launcher/13.0.0.Final/wildfly-launcher-13.0.0.Final.pom (5.2 kB at 740 kB/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:53.0543732Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/wildfly/plugins/wildfly-plugin-core/2.0.2.Final/wildfly-plugin-core-2.0.2.Final.pom
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:53.0606475Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/wildfly/plugins/wildfly-plugin-core/2.0.2.Final/wildfly-plugin-core-2.0.2.Final.pom (6.3 kB at 1.1 MB/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:53.0627228Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/wildfly/plugins/wildfly-maven-plugin-parent/2.0.2.Final/wildfly-maven-plugin-parent-2.0.2.Final.pom
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:53.0694256Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/wildfly/plugins/wildfly-maven-plugin-parent/2.0.2.Final/wildfly-maven-plugin-parent-2.0.2.Final.pom (15 kB at 2.2 MB/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:53.0732239Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/wildfly/core/wildfly-controller-client/6.0.2.Final/wildfly-controller-client-6.0.2.Final.pom
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:53.0874067Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/wildfly/core/wildfly-controller-client/6.0.2.Final/wildfly-controller-client-6.0.2.Final.pom (3.5 kB at 236 kB/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:53.0893632Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/wildfly/core/wildfly-core-parent/6.0.2.Final/wildfly-core-parent-6.0.2.Final.pom
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:53.1007258Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/wildfly/core/wildfly-core-parent/6.0.2.Final/wildfly-core-parent-6.0.2.Final.pom (91 kB at 8.3 MB/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:53.1062572Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/wildfly/core/wildfly-protocol/6.0.2.Final/wildfly-protocol-6.0.2.Final.pom
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:53.1110611Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/wildfly/core/wildfly-protocol/6.0.2.Final/wildfly-protocol-6.0.2.Final.pom (3.8 kB at 758 kB/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:53.1140426Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jboss/modules/jboss-modules/1.8.6.Final/jboss-modules-1.8.6.Final.pom
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:53.1244786Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jboss/modules/jboss-modules/1.8.6.Final/jboss-modules-1.8.6.Final.pom (12 kB at 1.1 MB/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:53.1276499Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jboss/remoting/jboss-remoting/5.0.8.Final/jboss-remoting-5.0.8.Final.pom
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:53.1366982Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jboss/remoting/jboss-remoting/5.0.8.Final/jboss-remoting-5.0.8.Final.pom (14 kB at 1.6 MB/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:53.1398389Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jboss/xnio/xnio-api/3.5.3.Final/xnio-api-3.5.3.Final.pom
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:53.1460250Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jboss/xnio/xnio-api/3.5.3.Final/xnio-api-3.5.3.Final.pom (8.5 kB at 1.4 MB/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:53.1477264Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jboss/xnio/xnio-all/3.5.3.Final/xnio-all-3.5.3.Final.pom
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:53.1528437Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jboss/xnio/xnio-all/3.5.3.Final/xnio-all-3.5.3.Final.pom (6.6 kB at 1.3 MB/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:53.1665108Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jboss/xnio/xnio-api/3.6.5.Final/xnio-api-3.6.5.Final.pom
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:53.1714912Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jboss/xnio/xnio-api/3.6.5.Final/xnio-api-3.6.5.Final.pom (8.7 kB at 1.7 MB/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:53.1733584Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jboss/xnio/xnio-all/3.6.5.Final/xnio-all-3.6.5.Final.pom
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:53.1778119Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jboss/xnio/xnio-all/3.6.5.Final/xnio-all-3.6.5.Final.pom (6.9 kB at 1.7 MB/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:53.1900358Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jboss/xnio/xnio-nio/3.6.5.Final/xnio-nio-3.6.5.Final.pom
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:53.1961010Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jboss/xnio/xnio-nio/3.6.5.Final/xnio-nio-3.6.5.Final.pom (7.9 kB at 1.3 MB/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:53.1992218Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jboss/shrinkwrap/descriptors/shrinkwrap-descriptors-impl-base/2.0.0/shrinkwrap-descriptors-impl-base-2.0.0.pom
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:53.2042121Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jboss/shrinkwrap/descriptors/shrinkwrap-descriptors-impl-base/2.0.0/shrinkwrap-descriptors-impl-base-2.0.0.pom (2.5 kB at 507 kB/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:53.2066370Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/wildfly/arquillian/wildfly-arquillian-protocol-jmx/3.0.1.Final/wildfly-arquillian-protocol-jmx-3.0.1.Final.pom
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:53.2115158Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/wildfly/arquillian/wildfly-arquillian-protocol-jmx/3.0.1.Final/wildfly-arquillian-protocol-jmx-3.0.1.Final.pom (2.4 kB at 477 kB/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:53.2146518Z [INFO] Artifact org.jboss.arquillian.protocol:arquillian-protocol-jmx:pom:1.8.0.Final is present in the local repository, but cached from a remote repository ID that is unavailable in current build context, verifying that is downloadable from [central (https://repo.maven.apache.org/maven2, default, releases), jboss-public-repository (https://repository.jboss.org/nexus/content/groups/public/, default, releases+snapshots)]
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:53.2154195Z [INFO] Artifact org.jboss.arquillian.protocol:arquillian-protocol-jmx:pom:1.8.0.Final is present in the local repository, but cached from a remote repository ID that is unavailable in current build context, verifying that is downloadable from [central (https://repo.maven.apache.org/maven2, default, releases), jboss-public-repository (https://repository.jboss.org/nexus/content/groups/public/, default, releases+snapshots)]
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:53.2159259Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jboss/arquillian/protocol/arquillian-protocol-jmx/1.8.0.Final/arquillian-protocol-jmx-1.8.0.Final.pom
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:53.2192436Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jboss/arquillian/protocol/arquillian-protocol-jmx/1.8.0.Final/arquillian-protocol-jmx-1.8.0.Final.pom (0 B at 0 B/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:53.2219704Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/wildfly/core/wildfly-jmx/13.0.0.Final/wildfly-jmx-13.0.0.Final.pom
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:53.2273205Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/wildfly/core/wildfly-jmx/13.0.0.Final/wildfly-jmx-13.0.0.Final.pom (4.6 kB at 766 kB/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:53.2475533Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jboss/remotingjmx/remoting-jmx/3.0.4.Final/remoting-jmx-3.0.4.Final.pom
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:53.2543164Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jboss/remotingjmx/remoting-jmx/3.0.4.Final/remoting-jmx-3.0.4.Final.pom (10 kB at 1.5 MB/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:53.2741900Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/wildfly/core/wildfly-remoting/13.0.0.Final/wildfly-remoting-13.0.0.Final.pom
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:53.2805804Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/wildfly/core/wildfly-remoting/13.0.0.Final/wildfly-remoting-13.0.0.Final.pom (4.3 kB at 610 kB/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:53.2823787Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/wildfly/core/wildfly-remoting-parent/13.0.0.Final/wildfly-remoting-parent-13.0.0.Final.pom
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:53.2874459Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/wildfly/core/wildfly-remoting-parent/13.0.0.Final/wildfly-remoting-parent-13.0.0.Final.pom (1.8 kB at 352 kB/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:53.2908560Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/wildfly/core/wildfly-domain-management/13.0.0.Final/wildfly-domain-management-13.0.0.Final.pom
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:53.2960711Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/wildfly/core/wildfly-domain-management/13.0.0.Final/wildfly-domain-management-13.0.0.Final.pom (4.6 kB at 927 kB/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:53.2995009Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/picketbox/picketbox/5.0.3.Final-redhat-00006/picketbox-5.0.3.Final-redhat-00006.pom
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:53.3048194Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/picketbox/picketbox/5.0.3.Final-redhat-00006/picketbox-5.0.3.Final-redhat-00006.pom
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:53.6486653Z [INFO] Downloading from jboss-enterprise-maven-repository: https://maven.repository.redhat.com/ga/org/picketbox/picketbox/5.0.3.Final-redhat-00006/picketbox-5.0.3.Final-redhat-00006.pom
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:53.7458079Z [INFO] Downloaded from jboss-enterprise-maven-repository: https://maven.repository.redhat.com/ga/org/picketbox/picketbox/5.0.3.Final-redhat-00006/picketbox-5.0.3.Final-redhat-00006.pom (3.1 kB at 32 kB/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:53.7477960Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/picketbox/picketbox-parent/5.0.3.Final-redhat-00006/picketbox-parent-5.0.3.Final-redhat-00006.pom
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:53.7537895Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/picketbox/picketbox-parent/5.0.3.Final-redhat-00006/picketbox-parent-5.0.3.Final-redhat-00006.pom
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:53.8232514Z [INFO] Downloading from jboss-enterprise-maven-repository: https://maven.repository.redhat.com/ga/org/picketbox/picketbox-parent/5.0.3.Final-redhat-00006/picketbox-parent-5.0.3.Final-redhat-00006.pom
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:53.8610044Z [INFO] Downloaded from jboss-enterprise-maven-repository: https://maven.repository.redhat.com/ga/org/picketbox/picketbox-parent/5.0.3.Final-redhat-00006/picketbox-parent-5.0.3.Final-redhat-00006.pom (16 kB at 413 kB/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:53.8623485Z [INFO] Artifact org.jboss:jboss-parent:pom:24.0.0.redhat-1 is present in the local repository, but cached from a remote repository ID that is unavailable in current build context, verifying that is downloadable from [central (https://repo.maven.apache.org/maven2, default, releases), jboss-public-repository (https://repository.jboss.org/nexus/content/groups/public/, default, releases+snapshots), jboss-public-repository-group (https://repository.jboss.org/nexus/content/groups/public/, default, releases+snapshots), jboss-enterprise-maven-repository (https://maven.repository.redhat.com/ga/, default, releases)]
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:53.8629759Z [INFO] Artifact org.jboss:jboss-parent:pom:24.0.0.redhat-1 is present in the local repository, but cached from a remote repository ID that is unavailable in current build context, verifying that is downloadable from [central (https://repo.maven.apache.org/maven2, default, releases), jboss-public-repository (https://repository.jboss.org/nexus/content/groups/public/, default, releases+snapshots), jboss-public-repository-group (https://repository.jboss.org/nexus/content/groups/public/, default, releases+snapshots), jboss-enterprise-maven-repository (https://maven.repository.redhat.com/ga/, default, releases)]
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:53.8638043Z [INFO] Downloading from jboss-enterprise-maven-repository: https://maven.repository.redhat.com/ga/org/jboss/jboss-parent/24.0.0.redhat-1/jboss-parent-24.0.0.redhat-1.pom
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:53.8943148Z [INFO] Downloaded from jboss-enterprise-maven-repository: https://maven.repository.redhat.com/ga/org/jboss/jboss-parent/24.0.0.redhat-1/jboss-parent-24.0.0.redhat-1.pom (0 B at 0 B/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:53.9018161Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/wildfly/core/wildfly-core-security/13.0.0.Final/wildfly-core-security-13.0.0.Final.pom
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:53.9084005Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/wildfly/core/wildfly-core-security/13.0.0.Final/wildfly-core-security-13.0.0.Final.pom (2.7 kB at 379 kB/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:53.9102466Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/wildfly/core/wildfly-core-security-parent/13.0.0.Final/wildfly-core-security-parent-13.0.0.Final.pom
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:53.9261744Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/wildfly/core/wildfly-core-security-parent/13.0.0.Final/wildfly-core-security-parent-13.0.0.Final.pom (1.8 kB at 110 kB/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:53.9299049Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/wildfly/core/wildfly-core-security-api/13.0.0.Final/wildfly-core-security-api-13.0.0.Final.pom
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:53.9353900Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/wildfly/core/wildfly-core-security-api/13.0.0.Final/wildfly-core-security-api-13.0.0.Final.pom (1.8 kB at 299 kB/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:53.9390130Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/wildfly/core/wildfly-io/13.0.0.Final/wildfly-io-13.0.0.Final.pom
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:53.9452619Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/wildfly/core/wildfly-io/13.0.0.Final/wildfly-io-13.0.0.Final.pom (3.0 kB at 496 kB/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:53.9470037Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/wildfly/core/wildfly-io-bom/13.0.0.Final/wildfly-io-bom-13.0.0.Final.pom
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:53.9519712Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/wildfly/core/wildfly-io-bom/13.0.0.Final/wildfly-io-bom-13.0.0.Final.pom (1.8 kB at 367 kB/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:53.9610440Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/wildfly/core/wildfly-network/13.0.0.Final/wildfly-network-13.0.0.Final.pom
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:53.9665503Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/wildfly/core/wildfly-network/13.0.0.Final/wildfly-network-13.0.0.Final.pom (3.2 kB at 536 kB/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:54.6105981Z [INFO] Artifact org.jboss.arquillian.protocol:arquillian-protocol-jmx:jar:1.8.0.Final is present in the local repository, but cached from a remote repository ID that is unavailable in current build context, verifying that is downloadable from [central (https://repo.maven.apache.org/maven2, default, releases), jboss-public-repository (https://repository.jboss.org/nexus/content/groups/public/, default, releases+snapshots)]
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:54.6578018Z [INFO] Artifact org.jboss.arquillian.protocol:arquillian-protocol-jmx:jar:1.8.0.Final is present in the local repository, but cached from a remote repository ID that is unavailable in current build context, verifying that is downloadable from [central (https://repo.maven.apache.org/maven2, default, releases), jboss-public-repository (https://repository.jboss.org/nexus/content/groups/public/, default, releases+snapshots)]
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:54.6810691Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/wildfly/arquillian/wildfly-arquillian-container-managed/3.0.1.Final/wildfly-arquillian-container-managed-3.0.1.Final.jar
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:54.6869936Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/wildfly/arquillian/wildfly-arquillian-container-managed/3.0.1.Final/wildfly-arquillian-container-managed-3.0.1.Final.jar (11 kB at 1.8 MB/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:54.6882062Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jboss/arquillian/testenricher/arquillian-testenricher-cdi/1.8.0.Final/arquillian-testenricher-cdi-1.8.0.Final.jar
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:54.6887180Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jboss/arquillian/testenricher/arquillian-testenricher-ejb/1.8.0.Final/arquillian-testenricher-ejb-1.8.0.Final.jar
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:54.6900394Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/wildfly/arquillian/wildfly-arquillian-common/3.0.1.Final/wildfly-arquillian-common-3.0.1.Final.jar
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:54.6953988Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jboss/arquillian/testenricher/arquillian-testenricher-resource/1.8.0.Final/arquillian-testenricher-resource-1.8.0.Final.jar
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:54.6961480Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/wildfly/arquillian/wildfly-arquillian-testenricher-msc/3.0.1.Final/wildfly-arquillian-testenricher-msc-3.0.1.Final.jar
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:54.6975427Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jboss/arquillian/testenricher/arquillian-testenricher-ejb/1.8.0.Final/arquillian-testenricher-ejb-1.8.0.Final.jar (21 kB at 2.1 MB/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:54.6979237Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/wildfly/core/wildfly-controller-client/13.0.0.Final/wildfly-controller-client-13.0.0.Final.jar
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:54.7021123Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/wildfly/arquillian/wildfly-arquillian-testenricher-msc/3.0.1.Final/wildfly-arquillian-testenricher-msc-3.0.1.Final.jar (10 kB at 943 kB/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:54.7071485Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/wildfly/core/wildfly-protocol/13.0.0.Final/wildfly-protocol-13.0.0.Final.jar
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:54.7082824Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jboss/arquillian/testenricher/arquillian-testenricher-cdi/1.8.0.Final/arquillian-testenricher-cdi-1.8.0.Final.jar (28 kB at 1.4 MB/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:54.7086465Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/wildfly/plugins/wildfly-plugin-core/2.0.2.Final/wildfly-plugin-core-2.0.2.Final.jar
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:54.7112478Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/wildfly/arquillian/wildfly-arquillian-common/3.0.1.Final/wildfly-arquillian-common-3.0.1.Final.jar (81 kB at 3.4 MB/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:54.7116239Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jboss/shrinkwrap/descriptors/shrinkwrap-descriptors-impl-base/2.0.0/shrinkwrap-descriptors-impl-base-2.0.0.jar
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:54.7173867Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/wildfly/core/wildfly-protocol/13.0.0.Final/wildfly-protocol-13.0.0.Final.jar (94 kB at 3.6 MB/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:54.7177383Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/wildfly/arquillian/wildfly-arquillian-protocol-jmx/3.0.1.Final/wildfly-arquillian-protocol-jmx-3.0.1.Final.jar
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:54.7237166Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jboss/shrinkwrap/descriptors/shrinkwrap-descriptors-impl-base/2.0.0/shrinkwrap-descriptors-impl-base-2.0.0.jar (74 kB at 2.3 MB/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:54.7242125Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/wildfly/plugins/wildfly-plugin-core/2.0.2.Final/wildfly-plugin-core-2.0.2.Final.jar (46 kB at 1.4 MB/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:54.7245565Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jboss/arquillian/protocol/arquillian-protocol-jmx/1.8.0.Final/arquillian-protocol-jmx-1.8.0.Final.jar
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:54.7248627Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/wildfly/core/wildfly-jmx/13.0.0.Final/wildfly-jmx-13.0.0.Final.jar
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:54.7307889Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jboss/arquillian/testenricher/arquillian-testenricher-resource/1.8.0.Final/arquillian-testenricher-resource-1.8.0.Final.jar (20 kB at 481 kB/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:54.7311507Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/wildfly/core/wildfly-remoting/13.0.0.Final/wildfly-remoting-13.0.0.Final.jar
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:54.7319014Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/wildfly/arquillian/wildfly-arquillian-protocol-jmx/3.0.1.Final/wildfly-arquillian-protocol-jmx-3.0.1.Final.jar (48 kB at 1.2 MB/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:54.7322746Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/wildfly/core/wildfly-domain-management/13.0.0.Final/wildfly-domain-management-13.0.0.Final.jar
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:54.7352097Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jboss/arquillian/protocol/arquillian-protocol-jmx/1.8.0.Final/arquillian-protocol-jmx-1.8.0.Final.jar (0 B at 0 B/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:54.7355541Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/picketbox/picketbox/5.0.3.Final-redhat-00006/picketbox-5.0.3.Final-redhat-00006.jar
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:54.7408230Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/wildfly/core/wildfly-io/13.0.0.Final/wildfly-io-13.0.0.Final.jar
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:54.7423365Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/wildfly/core/wildfly-controller-client/13.0.0.Final/wildfly-controller-client-13.0.0.Final.jar (216 kB at 4.1 MB/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:54.7426584Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jboss/xnio/xnio-api/3.8.2.Final/xnio-api-3.8.2.Final.jar
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:54.7530325Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/wildfly/core/wildfly-io/13.0.0.Final/wildfly-io-13.0.0.Final.jar (84 kB at 1.4 MB/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:54.7541557Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jboss/xnio/xnio-nio/3.8.2.Final/xnio-nio-3.8.2.Final.jar
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:54.7551908Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/wildfly/core/wildfly-jmx/13.0.0.Final/wildfly-jmx-13.0.0.Final.jar (231 kB at 3.6 MB/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:54.7555011Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jboss/marshalling/jboss-marshalling/2.0.9.Final/jboss-marshalling-2.0.9.Final.jar
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:54.7583708Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/wildfly/core/wildfly-remoting/13.0.0.Final/wildfly-remoting-13.0.0.Final.jar (212 kB at 3.2 MB/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:54.7631693Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jboss/marshalling/jboss-marshalling-river/2.0.9.Final/jboss-marshalling-river-2.0.9.Final.jar
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:54.7665275Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jboss/xnio/xnio-nio/3.8.2.Final/xnio-nio-3.8.2.Final.jar (112 kB at 1.5 MB/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:54.7668021Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jboss/remoting/jboss-remoting/5.0.19.Final/jboss-remoting-5.0.19.Final.jar
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:54.7746697Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jboss/marshalling/jboss-marshalling-river/2.0.9.Final/jboss-marshalling-river-2.0.9.Final.jar (86 kB at 1.0 MB/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:54.7750201Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/wildfly/core/wildfly-launcher/13.0.0.Final/wildfly-launcher-13.0.0.Final.jar
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:54.8005007Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jboss/marshalling/jboss-marshalling/2.0.9.Final/jboss-marshalling-2.0.9.Final.jar (223 kB at 2.0 MB/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:54.8025551Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/wildfly/core/wildfly-launcher/13.0.0.Final/wildfly-launcher-13.0.0.Final.jar (50 kB at 450 kB/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:54.8179806Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jboss/xnio/xnio-api/3.8.2.Final/xnio-api-3.8.2.Final.jar (588 kB at 4.7 MB/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:54.8188171Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jboss/remoting/jboss-remoting/5.0.19.Final/jboss-remoting-5.0.19.Final.jar (327 kB at 2.6 MB/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:54.8266091Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/wildfly/core/wildfly-domain-management/13.0.0.Final/wildfly-domain-management-13.0.0.Final.jar (942 kB at 6.9 MB/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:54.8387290Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/picketbox/picketbox/5.0.3.Final-redhat-00006/picketbox-5.0.3.Final-redhat-00006.jar
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:55.0129611Z [INFO] Downloading from jboss-enterprise-maven-repository: https://maven.repository.redhat.com/ga/org/picketbox/picketbox/5.0.3.Final-redhat-00006/picketbox-5.0.3.Final-redhat-00006.jar
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:55.1095005Z [INFO] Downloaded from jboss-enterprise-maven-repository: https://maven.repository.redhat.com/ga/org/picketbox/picketbox/5.0.3.Final-redhat-00006/picketbox-5.0.3.Final-redhat-00006.jar (962 kB at 9.9 MB/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:55.1140721Z [INFO] 
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:55.1142392Z [INFO] --- enforcer:3.0.0-M3:enforce (enforce-java-version) @ integration-arquillian-servers-app-server-wildfly ---
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:55.1158148Z [INFO] 
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:55.1159749Z [INFO] --- enforcer:3.0.0-M3:enforce (enforce-maven-version) @ integration-arquillian-servers-app-server-wildfly ---
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:55.1163892Z [INFO] 
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:55.1165507Z [INFO] --- enforcer:3.0.0-M3:enforce (enforce-maven) @ integration-arquillian-servers-app-server-wildfly ---
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:55.1169155Z [INFO] 
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:55.1170370Z [INFO] --- enforcer:3.0.0-M3:enforce (default) @ integration-arquillian-servers-app-server-wildfly ---
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:55.1180506Z [INFO] 
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:55.1181960Z [INFO] --- buildnumber:1.4:create (get-scm-revision) @ integration-arquillian-servers-app-server-wildfly ---
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:55.1190309Z [INFO] 
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:55.1191811Z [INFO] --- dependency:3.1.2:unpack (unpack-jboss-distribution) @ integration-arquillian-servers-app-server-wildfly ---
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:55.3762615Z [INFO] Configured Artifact: org.wildfly:wildfly-dist:23.0.2.Final:zip
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:55.3802771Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/wildfly/wildfly-dist/23.0.2.Final/wildfly-dist-23.0.2.Final.pom
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:55.3951898Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/wildfly/wildfly-dist/23.0.2.Final/wildfly-dist-23.0.2.Final.pom (12 kB at 822 kB/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:55.4090636Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/wildfly/wildfly-dist/23.0.2.Final/wildfly-dist-23.0.2.Final.zip
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:57.4065563Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/wildfly/wildfly-dist/23.0.2.Final/wildfly-dist-23.0.2.Final.zip (212 MB at 106 MB/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:12:57.4086221Z [INFO] Unpacking /home/runner/.m2/repository/org/wildfly/wildfly-dist/23.0.2.Final/wildfly-dist-23.0.2.Final.zip to /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/servers/app-server/jboss/wildfly/target/containers with includes "" and excludes ""
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:00.6313971Z [INFO] 
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:00.6315290Z [INFO] --- dependency:3.1.2:unpack (unpack-oidc-adapter) @ integration-arquillian-servers-app-server-wildfly ---
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:00.6329471Z [INFO] Configured Artifact: org.keycloak:keycloak-wildfly-adapter-dist:999.0.0-SNAPSHOT:zip
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:00.6390894Z [INFO] Unpacking /home/runner/.m2/repository/org/keycloak/keycloak-wildfly-adapter-dist/999.0.0-SNAPSHOT/keycloak-wildfly-adapter-dist-999.0.0-SNAPSHOT.zip to /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/servers/app-server/jboss/wildfly/target/containers/wildfly-23.0.2.Final with includes "" and excludes ""
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:00.6698734Z [INFO] 
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:00.6700588Z [INFO] --- dependency:3.1.2:unpack (unpack-saml-adapter) @ integration-arquillian-servers-app-server-wildfly ---
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:00.6709725Z [INFO] Configured Artifact: org.keycloak:keycloak-saml-wildfly-adapter-dist:999.0.0-SNAPSHOT:zip
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:00.6761467Z [INFO] Unpacking /home/runner/.m2/repository/org/keycloak/keycloak-saml-wildfly-adapter-dist/999.0.0-SNAPSHOT/keycloak-saml-wildfly-adapter-dist-999.0.0-SNAPSHOT.zip to /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/servers/app-server/jboss/wildfly/target/containers/wildfly-23.0.2.Final with includes "" and excludes ""
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:00.7126955Z [INFO] 
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:00.7128814Z [INFO] --- resources:3.0.1:resources (default-resources) @ integration-arquillian-servers-app-server-wildfly ---
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:00.7140441Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:00.7166198Z [INFO] Copying 2 resources
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:00.7297846Z [INFO] 
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:00.7299396Z [INFO] --- xml:1.0.1:transform (io-worker-threads) @ integration-arquillian-servers-app-server-wildfly ---
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:00.9422933Z [INFO] Transforming file: /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/servers/app-server/jboss/wildfly/target/containers/wildfly-23.0.2.Final/standalone/configuration/standalone-ha.xml
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:01.0582562Z [INFO] Transforming file: /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/servers/app-server/jboss/wildfly/target/containers/wildfly-23.0.2.Final/standalone/configuration/standalone.xml
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:01.0784116Z [INFO] Transformed 2 file(s).
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:01.0785504Z [INFO] 
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:01.0787218Z [INFO] --- resources:3.0.1:copy-resources (enable-jboss-mgmt-admin) @ integration-arquillian-servers-app-server-wildfly ---
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:01.0829977Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:01.0837452Z [INFO] Copying 1 resource
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:01.0843729Z [INFO] 
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:01.0845184Z [INFO] --- resources:3.0.1:copy-resources (copy-keystore) @ integration-arquillian-servers-app-server-wildfly ---
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:01.0862339Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:01.0865945Z [INFO] Copying 2 resources
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:01.0874111Z [INFO] 
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:01.0875607Z [INFO] --- exec:3.0.0:exec (add-adapter-log-level-standalone) @ integration-arquillian-servers-app-server-wildfly ---
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:01.0941909Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/apache/maven/shared/maven-artifact-transfer/0.10.1/maven-artifact-transfer-0.10.1.pom
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:01.1472779Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-artifact-transfer/0.10.1/maven-artifact-transfer-0.10.1.pom
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:01.1544202Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-artifact-transfer/0.10.1/maven-artifact-transfer-0.10.1.pom (11 kB at 1.4 MB/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:01.1637017Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/apache/maven/shared/maven-artifact-transfer/0.10.1/maven-artifact-transfer-0.10.1.jar
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:01.2265966Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-artifact-transfer/0.10.1/maven-artifact-transfer-0.10.1.jar
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:01.2315021Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-artifact-transfer/0.10.1/maven-artifact-transfer-0.10.1.jar (128 kB at 26 MB/s)
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:03.7399876Z {"outcome" => "success"}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:03.7597642Z {"outcome" => "success"}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:03.7762360Z {"outcome" => "success"}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:03.7918238Z {"outcome" => "success"}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:03.8049918Z {
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:03.8051311Z     "outcome" => "success",
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:03.8052485Z     "response-headers" => {"warnings" => [{
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:03.8055698Z         "warning" => "WFLYCTL0449: Operation change-log-level against the resource at address /subsystem=logging/console-handler=CONSOLE is deprecated, and it might be removed in future version. See the the output of the read-operation-description operation to learn more about the deprecation.",
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:03.8058397Z         "level" => "WARNING",
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:03.8059333Z         "operation" => {
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:03.8060089Z             "address" => [
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:03.8060651Z                 ("subsystem" => "logging"),
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:03.8061428Z                 ("console-handler" => "CONSOLE")
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:03.8062013Z             ],
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:03.8062557Z             "operation" => "change-log-level"
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:03.8063121Z         }
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:03.8063469Z     }]}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:03.8063805Z }
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:03.8867023Z [INFO] 
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:03.8868881Z [INFO] --- exec:3.0.0:exec (add-adapter-log-level-standalone-ha) @ integration-arquillian-servers-app-server-wildfly ---
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:06.4477221Z {"outcome" => "success"}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:06.4733388Z {"outcome" => "success"}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:06.4980684Z {"outcome" => "success"}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:06.5170053Z {"outcome" => "success"}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:06.5332967Z {
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:06.5333840Z     "outcome" => "success",
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:06.5334950Z     "response-headers" => {"warnings" => [{
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:06.5337805Z         "warning" => "WFLYCTL0449: Operation change-log-level against the resource at address /subsystem=logging/console-handler=CONSOLE is deprecated, and it might be removed in future version. See the the output of the read-operation-description operation to learn more about the deprecation.",
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:06.5340671Z         "level" => "WARNING",
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:06.5341204Z         "operation" => {
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:06.5341691Z             "address" => [
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:06.5342249Z                 ("subsystem" => "logging"),
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:06.5343060Z                 ("console-handler" => "CONSOLE")
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:06.5343708Z             ],
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:06.5344298Z             "operation" => "change-log-level"
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:06.5344983Z         }
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:06.5345358Z     }]}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:06.5345722Z }
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:06.5951141Z [INFO] 
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:06.5954651Z [INFO] --- exec:3.0.0:exec (adapter-elytron-install-offline-standalone) @ integration-arquillian-servers-app-server-wildfly ---
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:09.0469823Z {"outcome" => "success"}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:09.0722412Z {"outcome" => "success"}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:09.2557432Z {"outcome" => "success"}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:09.2766749Z {"outcome" => "success"}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:09.2930821Z {"outcome" => "success"}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:09.3093132Z {"outcome" => "success"}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:09.3253706Z {"outcome" => "success"}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:09.3414915Z {"outcome" => "success"}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:09.3613225Z {"outcome" => "success"}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:09.3797672Z {"outcome" => "success"}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:09.5038749Z [INFO] 
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:09.5044328Z [INFO] --- exec:3.0.0:exec (adapter-elytron-install-offline-standalone-ha) @ integration-arquillian-servers-app-server-wildfly ---
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:12.1007919Z {"outcome" => "success"}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:12.1228594Z {"outcome" => "success"}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:12.2778608Z {"outcome" => "success"}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:12.2988439Z {"outcome" => "success"}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:12.3156721Z {"outcome" => "success"}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:12.3314235Z {"outcome" => "success"}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:12.3464999Z {"outcome" => "success"}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:12.3611282Z {"outcome" => "success"}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:12.3775657Z {"outcome" => "success"}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:12.3967974Z {"outcome" => "success"}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:12.5133439Z [INFO] 
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:12.5134889Z [INFO] --- exec:3.0.0:exec (adapter-elytron-install-saml-offline-standalone) @ integration-arquillian-servers-app-server-wildfly ---
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:15.0767181Z {"outcome" => "success"}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:15.1134460Z {"outcome" => "success"}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:15.1623681Z {"outcome" => "success"}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:15.1666424Z Keycloak Security Domain already installed. Trying to install Keycloak SAML Realm.
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:15.1849177Z {
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:15.1849998Z     "outcome" => "success",
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:15.1851106Z     "response-headers" => {
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:15.1852070Z         "operation-requires-reload" => true,
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:15.1853231Z         "process-state" => "reload-required"
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:15.1854087Z     }
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:15.1854511Z }
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:15.2014304Z {
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:15.2015178Z     "outcome" => "success",
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:15.2016349Z     "response-headers" => {"process-state" => "reload-required"}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:15.2017152Z }
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:15.2164054Z {
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:15.2164768Z     "outcome" => "success",
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:15.2165946Z     "response-headers" => {"process-state" => "reload-required"}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:15.2167046Z }
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:15.2182585Z Keycloak HTTP Mechanism Factory already installed. Trying to install Keycloak SAML HTTP Mechanism Factory.
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:15.2327342Z {
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:15.2328072Z     "outcome" => "success",
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:15.2329090Z     "response-headers" => {
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:15.2330161Z         "operation-requires-reload" => true,
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:15.2331283Z         "process-state" => "reload-required"
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:15.2331905Z     }
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:15.2332235Z }
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:15.2360766Z Keycloak HTTP Authentication Factory already installed. Trying to install Keycloak SAML Mechanism Configuration
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:15.2494643Z {
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:15.2495109Z     "outcome" => "success",
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:15.2496082Z     "response-headers" => {
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:15.2499859Z         "operation-requires-reload" => true,
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:15.2501195Z         "process-state" => "reload-required"
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:15.2502070Z     }
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:15.2502693Z }
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:15.2642565Z The batch executed successfully
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:15.2648605Z process-state: reload-required 
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:15.3258688Z [INFO] 
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:15.3260030Z [INFO] --- exec:3.0.0:exec (adapter-elytron-install-saml-offline-standalone-ha) @ integration-arquillian-servers-app-server-wildfly ---
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:17.9777162Z {"outcome" => "success"}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:18.0089600Z {"outcome" => "success"}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:18.0379042Z {"outcome" => "success"}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:18.0418072Z Keycloak Security Domain already installed. Trying to install Keycloak SAML Realm.
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:18.0618771Z {
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:18.0619691Z     "outcome" => "success",
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:18.0620883Z     "response-headers" => {
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:18.0621830Z         "operation-requires-reload" => true,
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:18.0623089Z         "process-state" => "reload-required"
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:18.0623948Z     }
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:18.0624773Z }
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:18.0791120Z {
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:18.0792026Z     "outcome" => "success",
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:18.0793285Z     "response-headers" => {"process-state" => "reload-required"}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:18.0794238Z }
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:18.0955944Z {
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:18.0958552Z     "outcome" => "success",
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:18.0959742Z     "response-headers" => {"process-state" => "reload-required"}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:18.0960466Z }
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:18.0976100Z Keycloak HTTP Mechanism Factory already installed. Trying to install Keycloak SAML HTTP Mechanism Factory.
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:18.1120525Z {
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:18.1121499Z     "outcome" => "success",
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:18.1123043Z     "response-headers" => {
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:18.1123994Z         "operation-requires-reload" => true,
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:18.1125019Z         "process-state" => "reload-required"
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:18.1125847Z     }
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:18.1126546Z }
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:18.1148559Z Keycloak HTTP Authentication Factory already installed. Trying to install Keycloak SAML Mechanism Configuration
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:18.1291391Z {
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:18.1291878Z     "outcome" => "success",
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:18.1292648Z     "response-headers" => {
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:18.1293269Z         "operation-requires-reload" => true,
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:18.1293985Z         "process-state" => "reload-required"
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:18.1294561Z     }
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:18.1294941Z }
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:18.1454687Z The batch executed successfully
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:18.1461185Z process-state: reload-required 
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:18.2354343Z [INFO] 
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:18.2356131Z [INFO] --- exec:3.0.0:exec (adapter-install-offline-standalone) @ integration-arquillian-servers-app-server-wildfly ---
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:18.2368672Z [INFO] skipping execute as per configuration
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:18.2369646Z [INFO] 
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:18.2370990Z [INFO] --- exec:3.0.0:exec (adapter-install-offline-standalone-ha) @ integration-arquillian-servers-app-server-wildfly ---
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:18.2377151Z [INFO] skipping execute as per configuration
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:18.2377771Z [INFO] 
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:18.2379131Z [INFO] --- exec:3.0.0:exec (adapter-install-saml-offline-standalone) @ integration-arquillian-servers-app-server-wildfly ---
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:18.2383783Z [INFO] skipping execute as per configuration
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:18.2384425Z [INFO] 
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:18.2385719Z [INFO] --- exec:3.0.0:exec (adapter-install-saml-offline-standalone-ha) @ integration-arquillian-servers-app-server-wildfly ---
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:18.2393030Z [INFO] skipping execute as per configuration
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:18.2393719Z [INFO] 
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:18.2394825Z [INFO] --- exec:3.0.0:exec (enable-java-17) @ integration-arquillian-servers-app-server-wildfly ---
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:18.2402780Z [INFO] skipping execute as per configuration
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:18.2403471Z [INFO] 
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:18.2404785Z [INFO] --- exec:3.0.0:exec (enable-java-17-ha) @ integration-arquillian-servers-app-server-wildfly ---
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:18.2413293Z [INFO] skipping execute as per configuration
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:18.2413977Z [INFO] 
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:18.2415170Z [INFO] --- compiler:3.8.1:compile (default-compile) @ integration-arquillian-servers-app-server-wildfly ---
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:18.2465345Z [INFO] Changes detected - recompiling the module!
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:18.2477601Z [INFO] Compiling 3 source files to /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/servers/app-server/jboss/wildfly/target/classes
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:18.8097504Z [INFO] 
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:18.8099060Z [INFO] --- resources:3.0.1:copy-resources (copy-configs-cluster) @ integration-arquillian-servers-app-server-wildfly ---
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:18.8115351Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:18.8154491Z [INFO] Copying 72 resources
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:18.8362807Z [INFO] 
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:18.8365462Z [INFO] --- resources:3.0.1:copy-resources (copy-configs-secured-deployments) @ integration-arquillian-servers-app-server-wildfly ---
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:18.8375386Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:18.8396973Z [INFO] Copying 72 resources
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:18.8599483Z [INFO] 
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:18.8601603Z [INFO] --- resources:3.0.1:copy-resources (copy-configs-crossdc) @ integration-arquillian-servers-app-server-wildfly ---
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:18.8613640Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:18.8632892Z [INFO] Copying 72 resources
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:18.8825394Z [INFO] 
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:18.8826991Z [INFO] --- exec:3.0.0:exec (add-secured-deployments) @ integration-arquillian-servers-app-server-wildfly ---
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:21.4611927Z {"outcome" => "success"}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:21.4958775Z {"outcome" => "success"}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:21.5332669Z {"outcome" => "success"}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:21.5474322Z {"outcome" => "success"}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:21.5913945Z [INFO] 
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:21.5915090Z [INFO] --- exec:3.0.0:exec (configure-cluster-config) @ integration-arquillian-servers-app-server-wildfly ---
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:24.2169545Z {"outcome" => "success"}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:24.2479864Z {"outcome" => "success"}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:24.2685687Z {"outcome" => "success"}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:24.2928449Z {"outcome" => "success"}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:24.3108570Z {"outcome" => "success"}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:24.3258580Z {"outcome" => "success"}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:24.3419974Z {"outcome" => "success"}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:24.3547933Z {"outcome" => "success"}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:24.3678093Z {"outcome" => "success"}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:24.3791313Z {"outcome" => "success"}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:24.3911621Z {"outcome" => "success"}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:24.4028605Z {"outcome" => "success"}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:24.4195478Z {"outcome" => "success"}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:24.4301516Z {"outcome" => "success"}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:24.4404831Z {"outcome" => "success"}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:24.4555995Z {"outcome" => "success"}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:24.6012000Z [INFO] 
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:24.6014677Z [INFO] --- exec:3.0.0:exec (configure-crossdc-config) @ integration-arquillian-servers-app-server-wildfly ---
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:27.3202445Z {"outcome" => "success"}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:27.3500865Z {"outcome" => "success"}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:27.3682520Z {"outcome" => "success"}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:27.3894663Z {"outcome" => "success"}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:27.4059604Z {"outcome" => "success"}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:27.4208609Z {"outcome" => "success"}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:27.4369323Z {"outcome" => "success"}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:27.4518491Z {"outcome" => "success"}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:27.4658935Z {"outcome" => "success"}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:27.4804307Z {"outcome" => "success"}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:27.4929773Z {"outcome" => "success"}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:27.5175112Z {"outcome" => "success"}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:27.5302614Z {"outcome" => "success"}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:27.5434413Z {"outcome" => "success"}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:27.5614564Z {"outcome" => "success"}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:27.5807907Z {"outcome" => "success"}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:27.5951004Z {"outcome" => "success"}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:27.6158588Z {"outcome" => "success"}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:27.6293667Z {"outcome" => "success"}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:27.6420851Z {"outcome" => "success"}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:27.6578348Z {"outcome" => "success"}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:27.6755971Z {"outcome" => "success"}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:27.6891942Z {"outcome" => "success"}
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:27.8124224Z [INFO] 
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:27.8125947Z [INFO] --- resources:3.0.1:testResources (default-testResources) @ integration-arquillian-servers-app-server-wildfly ---
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:27.8138318Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:27.8140352Z [INFO] skip non existing resourceDirectory /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/servers/app-server/jboss/wildfly/src/test/resources
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:27.8141846Z [INFO] 
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:27.8143009Z [INFO] --- compiler:3.8.1:testCompile (default-testCompile) @ integration-arquillian-servers-app-server-wildfly ---
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:27.8153677Z [INFO] No sources to compile
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:27.8163627Z [INFO] 
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:27.8165074Z [INFO] --- surefire:3.0.0-M7:test (default-test) @ integration-arquillian-servers-app-server-wildfly ---
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:27.8175380Z [INFO] Tests are skipped.
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:27.8176419Z [INFO] 
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:27.8177867Z [INFO] --- jar:3.1.2:jar (default-jar) @ integration-arquillian-servers-app-server-wildfly ---
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:27.8214846Z [INFO] Building jar: /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/servers/app-server/jboss/wildfly/target/integration-arquillian-servers-app-server-wildfly-999.0.0-SNAPSHOT.jar
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:27.8261437Z [INFO] 
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:27.8263059Z [INFO] --- source:3.1.0:jar-no-fork (attach-sources) @ integration-arquillian-servers-app-server-wildfly ---
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:27.8352679Z [INFO] Building jar: /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/servers/app-server/jboss/wildfly/target/integration-arquillian-servers-app-server-wildfly-999.0.0-SNAPSHOT-sources.jar
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:27.8579277Z [INFO] 
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:27.8580947Z [INFO] --- assembly:3.1.1:single (create-zip) @ integration-arquillian-servers-app-server-wildfly ---
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:27.9917248Z [INFO] Reading assembly descriptor: /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/servers/app-server/jboss/assembly.xml
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:28.6938063Z [INFO] Building zip: /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/servers/app-server/jboss/wildfly/target/integration-arquillian-servers-app-server-wildfly-999.0.0-SNAPSHOT.zip
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:29.9779263Z [41.536s][warning][gc,alloc] pool-7-thread-2: Retried waiting for GCLocker too often allocating 2500002 words
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:30.1218326Z [INFO] ------------------------------------------------------------------------
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:30.1219759Z [INFO] Reactor Summary for App Server 999.0.0-SNAPSHOT:
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:30.1220485Z [INFO] 
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:30.1221108Z [INFO] App Server ......................................... SUCCESS [  0.708 s]
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:30.1222308Z [INFO] App Server - SPI ................................... SUCCESS [  1.551 s]
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:30.1223509Z [INFO] App Server - JBoss ................................. SUCCESS [  0.021 s]
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:30.1224709Z [INFO] App Server - Wildfly ............................... FAILURE [ 37.640 s]
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:30.1225821Z [INFO] App Server - Karaf ................................. SKIPPED
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:30.1226837Z [INFO] App Server - Tomcat ................................ SKIPPED
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:30.1227873Z [INFO] App Server - Undertow .............................. SKIPPED
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:30.1228917Z [INFO] App Server - Jetty Parent .......................... SKIPPED
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:30.1229936Z [INFO] ------------------------------------------------------------------------
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:30.1230645Z [INFO] BUILD FAILURE
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:30.1231347Z [INFO] ------------------------------------------------------------------------
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:30.1232519Z [INFO] Total time:  40.171 s
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:30.1233146Z [INFO] Finished at: 2024-03-05T18:13:30Z
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:30.1233982Z [INFO] ------------------------------------------------------------------------
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:30.1237243Z [ERROR] Failed to execute goal org.apache.maven.plugins:maven-assembly-plugin:3.1.1:single (create-zip) on project integration-arquillian-servers-app-server-wildfly: Failed to create assembly: Error creating assembly archive wildfly: Problem creating zip: Execution exception: Java heap space -> [Help 1]
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:30.1239985Z [ERROR] 
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:30.1240803Z [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:30.1245733Z [ERROR] Re-run Maven using the -X switch to enable full debug logging.
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:30.1246635Z [ERROR] 
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:30.1247557Z [ERROR] For more information about the errors and possible solutions, please read the following articles:
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:30.1249131Z [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:30.1250117Z [ERROR] 
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:30.1250931Z [ERROR] After correcting the problems, you can resume the build with the command
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:30.1252329Z [ERROR]   mvn <args> -rf :integration-arquillian-servers-app-server-wildfly
+FIPS IT (non-strict)	Build app servers	2024-03-05T18:13:30.3143695Z ##[error]Process completed with exit code 1.
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3398530Z Prepare all required actions
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3506352Z ##[group]Run ./.github/actions/status-check
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3506917Z with:
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3511451Z   jobs: {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "conditional": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	      "ci": "true",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	      "ci-sssd": "false",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	      "ci-store": "true",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	      "ci-store-matrix": "[\"postgres\",\"mysql\",\"oracle\",\"mssql\",\"mariadb\"]"
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    }
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "build": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "unit-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "base-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "adapter-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "quarkus-unit-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "quarkus-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "jdk-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "store-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "store-model-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "clustering-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "fips-unit-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "fips-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "failure",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "account-console-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "forms-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "webauthn-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "sssd-unit-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "skipped",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "migration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  }
+Status Check - Keycloak CI	Run /./.github/actions/status-check	}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3516552Z env:
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3517123Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3517651Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3518153Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3518713Z ##[endgroup]
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3812923Z ##[group]Run JOBS='{
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3813518Z [36;1mJOBS='{[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3814004Z [36;1m  "conditional": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3814408Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3814783Z [36;1m    "outputs": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3815277Z [36;1m      "ci": "true",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3815658Z [36;1m      "ci-sssd": "false",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3816083Z [36;1m      "ci-store": "true",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3816782Z [36;1m      "ci-store-matrix": "[\"postgres\",\"mysql\",\"oracle\",\"mssql\",\"mariadb\"]"[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3817385Z [36;1m    }[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3817720Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3818068Z [36;1m  "build": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3818433Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3818850Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3819240Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3819578Z [36;1m  "unit-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3820004Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3820434Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3820786Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3821150Z [36;1m  "base-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3821617Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3822018Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3822388Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3822777Z [36;1m  "adapter-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3823229Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3823634Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3824036Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3824389Z [36;1m  "quarkus-unit-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3824853Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3825282Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3825652Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3826076Z [36;1m  "quarkus-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3826942Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3827363Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3827721Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3828382Z [36;1m  "jdk-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3828821Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3829486Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3830143Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3830739Z [36;1m  "store-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3831376Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3832107Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3832901Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3833619Z [36;1m  "store-model-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3834303Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3834929Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3835524Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3836114Z [36;1m  "clustering-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3836935Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3837544Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3838091Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3838667Z [36;1m  "fips-unit-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3839255Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3839998Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3840578Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3840998Z [36;1m  "fips-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3841638Z [36;1m    "result": "failure",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3842128Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3842454Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3842923Z [36;1m  "account-console-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3843421Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3843780Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3844200Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3844601Z [36;1m  "forms-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3844994Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3845448Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3845841Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3846162Z [36;1m  "webauthn-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3846675Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3847098Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3847415Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3848101Z [36;1m  "sssd-unit-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3848539Z [36;1m    "result": "skipped",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3848935Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3849329Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3849687Z [36;1m  "migration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3850076Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3850504Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3850856Z [36;1m  }[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3851162Z [36;1m}'[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3851520Z [36;1m[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3851831Z [36;1mecho "Job status:"[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3852317Z [36;1mecho $JOBS | jq -r 'to_entries[] | " - \(.key): \(.value.result)"'[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3852928Z [36;1m[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3853382Z [36;1mfor i in $(echo $JOBS | jq -r 'to_entries[] | .value.result'); do[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3854057Z [36;1m  if [ "$i" != "success" ] && [ "$i" != "skipped" ]; then[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3854623Z [36;1m    echo ""[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3855005Z [36;1m    echo "Status check not okay!"[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3855449Z [36;1m    exit 1[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3855809Z [36;1m  fi[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3856124Z [36;1mdone[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3906280Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3906832Z env:
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3907426Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3908018Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3908499Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.3909066Z ##[endgroup]
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.4046753Z Job status:
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.4287493Z  - conditional: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.4288914Z  - build: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.4289713Z  - unit-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.4290163Z  - base-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.4290734Z  - adapter-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.4291410Z  - quarkus-unit-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.4291854Z  - quarkus-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.4292394Z  - jdk-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.4292823Z  - store-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.4293263Z  - store-model-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.4293799Z  - clustering-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.4294240Z  - fips-unit-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.4294667Z  - fips-integration-tests: failure
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.4295281Z  - account-console-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.4295760Z  - forms-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.4296529Z  - webauthn-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.4297408Z  - sssd-unit-tests: skipped
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.4298034Z  - migration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.4515736Z 
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.4516148Z Status check not okay!
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-03-05T19:03:18.4532063Z ##[error]Process completed with exit code 1.
