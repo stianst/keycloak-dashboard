@@ -65,8 +65,8 @@ public class BugTeamStat {
                 -1, 1));
 
         columns.add(new Column("No priority",
-                i -> !i.getLabels().contains("status/triage") && (!"Backlog".equals(i.getMilestone()) && i.getLabels().stream().noneMatch(l -> l.startsWith("priority/"))),
-                "-label:status/triage,priority/blocker,priority/important,priority/normal,priority/low -milestone:Backlog",
+                i -> !i.getLabels().contains("status/triage") && (!"Backlog".equals(i.getMilestone()) && i.getLabels().stream().noneMatch(l -> l.equals("status/missing-information") || l.startsWith("priority/"))),
+                "-label:status/triage,priority/blocker,priority/important,priority/normal,priority/low,status/missing-information -milestone:Backlog",
                 -1, 1));
 
         columns.add(new Column("Backlog",
