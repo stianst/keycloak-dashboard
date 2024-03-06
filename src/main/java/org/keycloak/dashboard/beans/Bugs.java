@@ -92,7 +92,7 @@ public class Bugs {
                         });
 
         stats.add(new BugStat("Missing area", i -> i.isOpen() && i.getAreas().isEmpty(), -1, 1, "is:open label:kind/bug " + data.getAreas().stream().map(s -> "-label:" + s).collect(Collectors.joining(" "))));
-        stats.add(new BugStat("Missing priority", i -> i.isOpen() && !i.getLabels().stream().anyMatch(l -> l.startsWith("priority/")), -1, 1, "is:open label:kind/bug -label:priority/critical,priority/important,priority/normal,priority/low"));
+        stats.add(new BugStat("Missing priority", i -> i.isOpen() && !i.getLabels().stream().anyMatch(l -> l.equals("status/missing-information") || l.startsWith("priority/")), -1, 1, "is:open label:kind/bug -label:priority/critical,priority/important,priority/normal,priority/low,status/missing-information"));
         stats.add(new BugStat("Missing team", i -> i.isOpen() && !i.getLabels().stream().anyMatch(l -> l.startsWith("team/")), -1, 1, "is:open label:kind/bug -label:" + teams.keySet().stream().collect(Collectors.joining(","))));
     }
 
