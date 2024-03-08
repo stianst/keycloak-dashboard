@@ -19,7 +19,7 @@ class HasPriorityFilter implements IssueFilter {
 
     @Override
     public String ghQuery() {
-        return (include ? "" : "-") + "label:priority/critical,priority/important,priority/normal,priority/low";
+        return (include ? "" : "-") + "label:priority/blocker,priority/important,priority/normal,priority/low";
     }
 
 }
