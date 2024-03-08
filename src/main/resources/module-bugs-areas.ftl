@@ -8,8 +8,8 @@
             <th class="center">${nextRelease}</th>
             <th class="center">Open</th>
             <th class="center">Triage</th>
-            <th class="center">Backlog</th>
-            <th class="center">Triage Backlog</th>
+            <th class="center"><p>Cleanup</p><p>Backlog</p></th>
+            <th class="center"><p>Cleanup</p>Triage Backlog</p></th>
         </tr>
         <#list bugAreaStats as bugAreaStat>
         <tr>
