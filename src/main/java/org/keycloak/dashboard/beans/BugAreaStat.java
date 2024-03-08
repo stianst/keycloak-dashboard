@@ -94,20 +94,20 @@ public class BugAreaStat {
     }
 
     public String getNextCssClasses() {
-        return Css.getCountClass(nextRelease, Config.BUG_AREA_NEXT_WARN, Config.BUG_AREA_NEXT_ERROR);
+        return Css.getCountClass(nextRelease, Config.getBugsAreaWarn("Milestone"), Config.getBugsAreaError("Milestone"));
     }
     public String getOpenCssClasses() {
-        return Css.getCountClass(open, Config.BUG_AREA_OPEN_WARN, Config.BUG_AREA_OPEN_ERROR);
+        return Css.getCountClass(open, Config.getBugsAreaWarn("Open"), Config.getBugsAreaError("Open"));
     }
 
     public String getTriageCssClasses() {
-        return Css.getCountClass(triage, Config.BUG_AREA_TRIAGE_WARN, Config.BUG_AREA_TRIAGE_ERROR);
+        return Css.getCountClass(triage, Config.getBugsAreaWarn("Triage"), Config.getBugsAreaError("Triage"));
     }
 
     public String getBacklogTriageCssClasses() {
-        return Css.getCountClass(backlogTriage, Config.BUG_AREA_BACKLOG_TRIAGE_WARN, Config.BUG_AREA_BACKLOG_TRIAGE_ERROR);
+        return Css.getCountClass(backlogTriage, -1, 1);
     }
     public String getBacklogCssClasses() {
-        return Css.getCountClass(backlog, Config.BUG_AREA_BACKLOG_WARN, Config.BUG_AREA_BACKLOG_ERROR);
+        return Css.getCountClass(backlog, -1, 1);
     }
 }

@@ -27,29 +27,23 @@ public class BugTeamStat {
         this.openIssues = openIssues;
         this.nextRelease = nextRelease;
 
-        columns.add(new Column(nextRelease,
-                IssueFilterBuilder.create().milestone(nextRelease),
-                Config.BUG_TEAM_NEXT_WARN, Config.BUG_TEAM_NEXT_ERROR));
+        columns.add(new Column(nextRelease, "Milestone",
+                IssueFilterBuilder.create().milestone(nextRelease)));
 
         columns.add(new Column("Triage",
-                IssueFilterBuilder.create().triage(true).backlog(false),
-                Config.BUG_TEAM_TRIAGE_WARN, Config.BUG_TEAM_TRIAGE_ERROR));
+                IssueFilterBuilder.create().triage(true).backlog(false)));
 
         columns.add(new Column("Blocker",
-                IssueFilterBuilder.create().triage(false).priority("blocker"),
-                -1, 1));
+                IssueFilterBuilder.create().triage(false).priority("blocker")));
 
         columns.add(new Column("Important",
-                IssueFilterBuilder.create().triage(false).priority("important"),
-                Config.BUG_PRIORITY_WARN, Config.BUG_PRIORITY_ERROR));
+                IssueFilterBuilder.create().triage(false).priority("important")));
 
         columns.add(new Column("Normal",
-                IssueFilterBuilder.create().triage(false).priority("normal"),
-                Config.BUG_OPEN_WARN, Config.BUG_OPEN_ERROR));
+                IssueFilterBuilder.create().triage(false).priority("normal")));
 
         columns.add(new Column("Low",
-                IssueFilterBuilder.create().triage(false).priority("low"),
-                Config.BUG_OPEN_WARN, Config.BUG_OPEN_ERROR));
+                IssueFilterBuilder.create().triage(false).priority("low")));
 
         columns.add(new Column("<p>Cleanup<p><p>Triage backlog</p>",
                 IssueFilterBuilder.create().triage(true).backlog(true),
@@ -103,12 +97,20 @@ public class BugTeamStat {
             this.errorCount = errorCount;
         }
 
-        public Column(String label, Predicate<GitHubIssue> predicate, String query, int warnCount, int errorCount) {
+        public Column(String label, IssueFilterBuilder issueFilterBuilder) {
             this.label = label;
-            this.link = getLink(query);
-            this.count = getFilteredCount(predicate);
-            this.warnCount = warnCount;
-            this.errorCount = errorCount;
+            this.link = getLink(issueFilterBuilder.toGhQuery());
+            this.count = getFilteredCount(issueFilterBuilder.toPredicates());
+            this.warnCount = Config.getBugsTeamWarn(label);
+            this.errorCount = Config.getBugsTeamError(label);
+        }
+
+        public Column(String label, String warnErrorLabel, IssueFilterBuilder issueFilterBuilder) {
+            this.label = label;
+            this.link = getLink(issueFilterBuilder.toGhQuery());
+            this.count = getFilteredCount(issueFilterBuilder.toPredicates());
+            this.warnCount = Config.getBugsTeamWarn(warnErrorLabel);
+            this.errorCount = Config.getBugsTeamError(warnErrorLabel);
         }
 
         public String getLabel() {

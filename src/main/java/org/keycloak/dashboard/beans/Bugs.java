@@ -10,7 +10,6 @@ import org.keycloak.dashboard.util.GHQuery;
 
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
@@ -54,17 +53,17 @@ public class Bugs {
 
         stats = new LinkedList<>();
 
-        stats.add(new BugStat("With PR", data.getIssuesWithPr(), Config.BUG_PR_WARN, Config.BUG_PR_ERROR, "is:open label:kind/bug linked:pr"));
+        stats.add(new BugStat("With PR", data.getIssuesWithPr(), "is:open label:kind/bug linked:pr"));
 
-        stats.add(new BugStat("Open", i -> i.isOpen() && !i.isTriage(), Config.BUG_OPEN_WARN, Config.BUG_OPEN_ERROR, "is:open label:kind/bug -label:status/triage"));
-        stats.add(new BugStat("Triage", i -> i.isOpen() && i.isTriage(), Config.BUG_TRIAGE_WARN, Config.BUG_TRIAGE_ERROR, "is:open label:kind/bug label:status/triage"));
+        stats.add(new BugStat("Open", i -> i.isOpen() && !i.isTriage(), "is:open label:kind/bug -label:status/triage"));
+        stats.add(new BugStat("Triage", i -> i.isOpen() && i.isTriage(), "is:open label:kind/bug label:status/triage"));
 
-        stats.add(new BugStat("Weakness", i -> i.isOpen() && i.hasLabel("kind/weakness"), Config.BUG_PRIORITY_WARN, Config.BUG_PRIORITY_ERROR, "is:open label:kind/bug label:kind/weakness"));
+        stats.add(new BugStat("Weakness", i -> i.isOpen() && i.hasLabel("kind/weakness"), "is:open label:kind/bug label:kind/weakness"));
 
-        stats.add(new BugStat("Blocker", i -> i.isOpen() && i.hasLabel("priority/blocker"), Config.BUG_PRIORITY_WARN, Config.BUG_PRIORITY_ERROR, "is:open label:kind/bug label:priority/blocker"));
-        stats.add(new BugStat("Important", i -> i.isOpen() && i.hasLabel("priority/important"), Config.BUG_PRIORITY_WARN, Config.BUG_PRIORITY_ERROR, "is:open label:kind/bug label:priority/important"));
-        stats.add(new BugStat("Normal", i -> i.isOpen() && i.hasLabel("priority/normal"), Config.BUG_PRIORITY_WARN, Config.BUG_PRIORITY_ERROR, "is:open label:kind/bug label:priority/normal"));
-        stats.add(new BugStat("Low", i -> i.isOpen() && i.hasLabel("priority/low"), Config.BUG_PRIORITY_WARN, Config.BUG_PRIORITY_ERROR, "is:open label:kind/bug label:priority/low"));
+        stats.add(new BugStat("Blocker", i -> i.isOpen() && i.hasLabel("priority/blocker"), "is:open label:kind/bug label:priority/blocker"));
+        stats.add(new BugStat("Important", i -> i.isOpen() && i.hasLabel("priority/important"), "is:open label:kind/bug label:priority/important"));
+        stats.add(new BugStat("Normal", i -> i.isOpen() && i.hasLabel("priority/normal"), "is:open label:kind/bug label:priority/normal"));
+        stats.add(new BugStat("Low", i -> i.isOpen() && i.hasLabel("priority/low"), "is:open label:kind/bug label:priority/low"));
 
         stats.add(new BugStat("Last 7 days",
                 createdLast7Days, -1, createdLast7Days > closedLast7Days ? 1 : Integer.MAX_VALUE, "label:kind/bug created:>=" + DateUtil.MINUS_7_DAYS_STRING,
@@ -85,16 +84,16 @@ public class Bugs {
                             int openCount = (int) e.getValue().stream().filter(i -> i.isOpen()).count();
                             int closedCount = (int) e.getValue().stream().filter(i -> !i.isOpen()).count();
                             if (openCount > 0) {
-                                stats.add(new BugStat("Milestone: " + e.getKey(),
-                                        openCount, 1, 10, "is:open label:kind/bug milestone:" + e.getKey(),
-                                        closedCount, -1, -1, "is:closed label:kind/bug milestone:" + e.getKey()));
+                                stats.add(new BugStat("Milestone: " + e.getKey(), "Milestone",
+                                        openCount, "is:open label:kind/bug milestone:" + e.getKey(),
+                                        closedCount, "is:closed label:kind/bug milestone:" + e.getKey()));
                             }
                         });
 
-        stats.add(new BugStat("Missing area", i -> i.isOpen() && i.getAreas().isEmpty(), -1, 1, "is:open label:kind/bug " + data.getAreas().stream().map(s -> "-label:" + s).collect(Collectors.joining(" "))));
-        stats.add(new BugStat("Missing priority", i -> i.isOpen() && !i.getLabels().stream().anyMatch(l -> l.equals("status/missing-information") || l.startsWith("priority/")), -1, 1, "is:open label:kind/bug -label:priority/critical,priority/important,priority/normal,priority/low,status/missing-information"));
-        stats.add(new BugStat("Missing team", i -> i.isOpen() && !i.getLabels().stream().anyMatch(l -> l.startsWith("team/")), -1, 1, "is:open label:kind/bug -label:" + teams.keySet().stream().collect(Collectors.joining(","))));
-        stats.add(new BugStat("Missing information", i -> i.isOpen() && i.getLabels().stream().anyMatch(l -> l.equals("status/missing-information")), -1, -1, "is:open label:kind/bug label:status/missing-information"));
+        stats.add(new BugStat("Missing Area", i -> i.isOpen() && i.getAreas().isEmpty(), "is:open label:kind/bug " + data.getAreas().stream().map(s -> "-label:" + s).collect(Collectors.joining(" "))));
+        stats.add(new BugStat("Missing Priority", i -> i.isOpen() && !i.getLabels().stream().anyMatch(l -> l.equals("status/missing-information") || l.startsWith("priority/")), "is:open label:kind/bug -label:priority/critical,priority/important,priority/normal,priority/low,status/missing-information"));
+        stats.add(new BugStat("Missing Team", i -> i.isOpen() && !i.getLabels().stream().anyMatch(l -> l.startsWith("team/")), "is:open label:kind/bug -label:" + teams.keySet().stream().collect(Collectors.joining(","))));
+        stats.add(new BugStat("Missing Information", i -> i.isOpen() && i.getLabels().stream().anyMatch(l -> l.equals("status/missing-information")), "is:open label:kind/bug label:status/missing-information"));
     }
 
     private List<BugAreaStat> convertToAreaStats(List<GitHubIssue> issues) {
@@ -229,11 +228,19 @@ public class Bugs {
             this.openGhLink = getQueryGhLink(openQuery);
         }
 
-        public BugStat(String title, int openCount, int openWarnCount, int openErrorCount, String openQuery) {
+        public BugStat(String title, Predicate<GitHubIssue> predicate, String openQuery) {
+            this.title = title;
+            this.openCount = (int) issues.stream().filter(predicate).count();
+            this.openWarnCount = Config.getBugsWarn(title);
+            this.openErrorCount = Config.getBugsError(title);
+            this.openGhLink = getQueryGhLink(openQuery);
+        }
+
+        public BugStat(String title, int openCount, String openQuery) {
             this.title = title;
             this.openCount = openCount;
-            this.openWarnCount = openWarnCount;
-            this.openErrorCount = openErrorCount;
+            this.openWarnCount = Config.getBugsWarn(title);
+            this.openErrorCount = Config.getBugsError(title);
             this.openGhLink = getQueryGhLink(openQuery);
         }
 
@@ -246,6 +253,18 @@ public class Bugs {
             this.closedWarnCount = closedWarnCount;
             this.openGhLink = getQueryGhLink(openQuery);
             this.closedErrorCount = closedErrorCount;
+            this.closedGhLink = getQueryGhLink(closedQuery);
+        }
+
+        public BugStat(String title, String warnErrorTitle, int openCount, String openQuery, int closedCount, String closedQuery) {
+            this.title = title;
+            this.openCount = openCount;
+            this.openWarnCount = Config.getBugsWarn(warnErrorTitle);
+            this.openErrorCount = Config.getBugsError(warnErrorTitle);
+            this.closedCount = closedCount;
+            this.closedWarnCount = -1;
+            this.openGhLink = getQueryGhLink(openQuery);
+            this.closedErrorCount = -1;
             this.closedGhLink = getQueryGhLink(closedQuery);
         }
 

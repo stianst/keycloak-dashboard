@@ -2,9 +2,13 @@ package org.keycloak.dashboard;
 
 import org.keycloak.dashboard.util.DateUtil;
 
+import java.io.IOException;
 import java.util.Date;
+import java.util.Properties;
 
 public class Config {
+
+    private static final Properties CONFIG = loadProperties();
 
     public static final boolean PUBLISH = System.getProperties().containsKey("publish");
 
@@ -24,43 +28,50 @@ public class Config {
     public static final int PR_OLD_12_ERROR = 10;
     public static final int PR_OLD_18_WARN = 1;
     public static final int PR_OLD_18_ERROR = 1;
-
-    public static final int BUG_OPEN_WARN = 100;
-    public static final int BUG_OPEN_ERROR = 200;
-    public static final int BUG_PRIORITY_WARN = 10;
-    public static final int BUG_PRIORITY_ERROR = 50;
-    public static final int BUG_PR_WARN = 20;
-    public static final int BUG_PR_ERROR = 50;
-    public static final int BUG_TRIAGE_WARN = 50;
-    public static final int BUG_TRIAGE_ERROR = 100;
-    public static final int BUG_OLD_NO_COMMENT_WARN = 10;
-    public static final int BUG_OLD_NO_COMMENT_ERROR = 50;
-    public static final int BUG_AREA_MISSING_WARN = 1;
-    public static final int BUG_AREA_MISSING_ERROR = 10;
-
-    public static final int BUG_AREA_NEXT_WARN = 1;
-    public static final int BUG_AREA_NEXT_ERROR = 5;
-    public static final int BUG_AREA_OPEN_WARN = 1;
-    public static final int BUG_AREA_OPEN_ERROR = 10;
-    public static final int BUG_AREA_TRIAGE_WARN = 1;
-    public static final int BUG_AREA_TRIAGE_ERROR = 10;
-    public static final int BUG_AREA_BACKLOG_WARN = 10;
-    public static final int BUG_AREA_BACKLOG_ERROR = 50;
-    public static final int BUG_AREA_BACKLOG_TRIAGE_WARN = 10;
-    public static final int BUG_AREA_BACKLOG_TRIAGE_ERROR = 50;
-
-    public static final int BUG_TEAM_NEXT_WARN = 1;
-    public static final int BUG_TEAM_NEXT_ERROR = 10;
-    public static final int BUG_TEAM_OPEN_WARN = 5;
-    public static final int BUG_TEAM_OPEN_ERROR = 25;
-    public static final int BUG_TEAM_TRIAGE_WARN = 5;
-    public static final int BUG_TEAM_TRIAGE_ERROR = 25;
-    public static final int BUG_TEAM_BACKLOG_WARN = 10;
-    public static final int BUG_TEAM_BACKLOG_ERROR = 50;
-    public static final int BUG_TEAM_BACKLOG_TRIAGE_WARN = 1;
-    public static final int BUG_TEAM_BACKLOG_TRIAGE_ERROR = 50;
-
     public static final int PR_WAIT_TIME_MAX_SLOW = 10;
     public static final int PR_WAIT_TIME_SLOW_THRESHOLD = 90;
+
+    public static int getBugsWarn(String title) {
+        return getInt("bugs." + title.replaceAll(" ", "") + ".warn");
+    }
+
+    public static int getBugsError(String title) {
+        return getInt("bugs." + title.replaceAll(" ", "") + ".error");
+    }
+
+    public static int getBugsTeamWarn(String title) {
+        return getInt("bugs.team." + title.replaceAll(" ", "") + ".warn");
+    }
+
+    public static int getBugsTeamError(String title) {
+        return getInt("bugs.team." + title.replaceAll(" ", "") + ".error");
+    }
+
+    public static int getBugsAreaWarn(String title) {
+        return getInt("bugs.area." + title.replaceAll(" ", "") + ".warn");
+    }
+
+    public static int getBugsAreaError(String title) {
+        return getInt("bugs.area." + title.replaceAll(" ", "") + ".error");
+    }
+
+    public static int getInt(String key) {
+        String value = CONFIG.getProperty(key);
+        if (value == null) {
+            throw new RuntimeException(key + " not found");
+        }
+        return Integer.parseInt(value);
+    }
+
+
+    static Properties loadProperties() {
+        Properties properties = new Properties();
+        try {
+            properties.load(Config.class.getResourceAsStream("/config.properties"));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        return properties;
+    }
 
 }
