@@ -45,6 +45,10 @@ public class BugTeamStat {
         columns.add(new Column("Low",
                 IssueFilterBuilder.create().triage(false).priority("low")));
 
+        columns.add(new Column("<p>Cleanup</p><p>No priority</p></p>",
+                IssueFilterBuilder.create().triage(false).hasPriority(false).missingInformation(false),
+                -1, 1));
+
         columns.add(new Column("<p>Cleanup</p><p>Backlog and not help wanted</p>",
                 IssueFilterBuilder.create().triage(false).helpWanted(false).backlog(true),
                 -1, 1));
