@@ -102,10 +102,13 @@ public class Bugs {
         Set<String> allAreas = issues.stream().map(GitHubIssue::getLabels).flatMap(List::stream).filter(l -> l.startsWith("area/")).collect(Collectors.toSet());
         for (String area : allAreas) {
             FilteredIssues areaIssues = filteredIssues.clone().area(area);
-            areaStats.add(new BugAreaStat(area, areaIssues, nextRelease));
+            int openCount = areaIssues.count();
+            if (areaIssues.count() > 0) {
+                areaStats.add(new BugAreaStat(area, areaIssues, openCount, nextRelease));
+            }
         }
 
-        areaStats.sort(Comparator.comparing(BugAreaStat::getArea));
+        areaStats.sort(Comparator.comparing(BugAreaStat::getOpenCount).reversed());
 
         return areaStats;
     }

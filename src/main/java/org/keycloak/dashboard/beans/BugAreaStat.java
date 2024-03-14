@@ -12,12 +12,14 @@ public class BugAreaStat {
 
     private List<BugStat> columns = new LinkedList<>();
 
+    int openCount;
     String area;
     private final FilteredIssues issues;
 
-    public BugAreaStat(String area, FilteredIssues issues, String nextRelease) {
+    public BugAreaStat(String area, FilteredIssues issues, int openCount, String nextRelease) {
         this.area = area;
         this.issues = issues;
+        this.openCount = openCount;
 
         columns.add(BugStat.area(nextRelease)
                 .issues(issues.clone().milestone(nextRelease))
@@ -37,8 +39,10 @@ public class BugAreaStat {
 
         columns.add(BugStat.area("Low")
                 .issues(issues.clone().triage(false).priority("low")));
+    }
 
-
+    public int getOpenCount() {
+        return openCount;
     }
 
     public String getTitle() {
