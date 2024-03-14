@@ -1,6 +1,7 @@
 package org.keycloak.dashboard.beans;
 
 import org.keycloak.dashboard.Config;
+import org.keycloak.dashboard.beans.filters.FilteredIssues;
 import org.keycloak.dashboard.rep.GitHubData;
 import org.keycloak.dashboard.rep.GitHubIssue;
 import org.keycloak.dashboard.rep.Teams;
@@ -14,6 +15,7 @@ import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
@@ -42,9 +44,7 @@ public class Bugs {
         int closedLast90Days = (int) issues.stream().filter(i -> i.getClosedAt() != null && i.getClosedAt().after(DateUtil.MINUS_90_DAYS)).count();
 
         flakyTests = issues.stream()
-                .filter(i -> i.hasLabel("flaky-test") && i.isOpen() && i.getTitle().startsWith("Flaky test:")).map(f -> new FlakyTest(f))
-                .filter(i -> !(i.getPackage().startsWith("org.keycloak.testsuite.model") && "Backlog".equals(i.getMilestone())))
-                .filter(i -> !(i.getPackage().equals("org.keycloak.testsuite.ui.account2") && "Backlog".equals(i.getMilestone())))
+                .filter(i -> i.hasLabel("flaky-test") && i.isOpen() && i.getTitle().startsWith("Flaky test:")).map(FlakyTest::new)
                 .sorted(Comparator.comparing(FlakyTest::getUpdatedAt).reversed())
                 .collect(Collectors.toList());
 
@@ -97,78 +97,28 @@ public class Bugs {
     }
 
     private List<BugAreaStat> convertToAreaStats(List<GitHubIssue> issues) {
-        Map<String, BugAreaStat> areas = new LinkedHashMap<>();
-        for (GitHubIssue i : issues) {
-            if (i.isOpen()) {
-                for (String a : i.getAreas()) {
-                    BugAreaStat areaStat = areas.computeIfAbsent(a, s -> new BugAreaStat(a, nextRelease));
-                    if (nextRelease.equals(i.getMilestone())) {
-                        areaStat.nextRelease++;
-                    } else if ("Backlog".equals(i.getMilestone())) {
-                        if (i.isTriage()) {
-                            areaStat.backlogTriage++;
-                        } else {
-                            areaStat.backlog++;
-                        }
-                    } else {
-                        if (i.isTriage()) {
-                            areaStat.triage++;
-                        } else {
-                            areaStat.open++;
-                        }
-                    }
-                }
-            }
+        FilteredIssues filteredIssues = FilteredIssues.create(issues).openBug();
+        List<BugAreaStat> areaStats = new LinkedList<>();
+        Set<String> allAreas = issues.stream().map(GitHubIssue::getLabels).flatMap(List::stream).filter(l -> l.startsWith("area/")).collect(Collectors.toSet());
+        for (String area : allAreas) {
+            FilteredIssues areaIssues = filteredIssues.clone().area(area);
+            areaStats.add(new BugAreaStat(area, areaIssues, nextRelease));
         }
-        return areas.values().stream().sorted(Comparator.comparingInt(BugAreaStat::getTotal).reversed()).collect(Collectors.toList());
+
+        areaStats.sort(Comparator.comparing(BugAreaStat::getArea));
+
+        return areaStats;
     }
 
     private List<BugTeamStat> convertToTeamStats(List<GitHubIssue> issues, Teams teams) {
-        Map<String, List<GitHubIssue>> teamIssues = new LinkedHashMap<>();
-        for (String teamLabel : teams.keySet()) {
-            teamIssues.put(teamLabel, new LinkedList<>());
-        }
-
-        if (!teamIssues.containsKey("no-team")) {
-            teamIssues.put("no-team", new LinkedList<>());
-        }
-
-        for (GitHubIssue i : issues) {
-            if (i.isOpen()) {
-                List<List<GitHubIssue>> addToTeams = teamIssues.entrySet().stream().filter(e -> i.getTeams().contains(e.getKey())).map(Map.Entry::getValue).collect(Collectors.toList());
-                if (addToTeams.isEmpty()) {
-                    addToTeams.add(teamIssues.get("no-team"));
-                }
-
-                for (List<GitHubIssue> s : addToTeams) {
-                    s.add(i);
-                }
-            }
-        }
-
+        FilteredIssues filteredIssues = FilteredIssues.create(issues).openBug();
         List<BugTeamStat> teamStats = new LinkedList<>();
-        for (Map.Entry<String, List<GitHubIssue>> e : teamIssues.entrySet()) {
-            String teamName = e.getKey().replaceFirst("team/", "");
-            List<String> subTeams = getSubTeams(teams, teamName);
-            String teamQuery;
-            if (teamName.equals("no-team")) {
-                teamQuery = "is:issue is:open label:kind/bug -label:" + teams.keySet().stream().collect(Collectors.joining(","));
-            } else {
-                teamQuery = "is:issue is:open label:kind/bug label:team/" + teamName;
 
-                if (!subTeams.isEmpty()) {
-                    for (String t : subTeams) {
-                        teamQuery += " -label:team/" + t;
-                    }
-                }
+        for (String team : teams.keySet()) {
+            if (!team.equals("no-team")) {
+                FilteredIssues teamIssues = filteredIssues.clone().team(team).excludeAssignedToSubTeam(team, teams);
+                teamStats.add(new BugTeamStat(team, teamIssues, nextRelease));
             }
-
-            List<GitHubIssue> l = e.getValue();
-            if (!subTeams.isEmpty()) {
-                l = l.stream().filter(i -> !i.getTeams().stream().anyMatch(t -> subTeams.contains(t.replaceFirst("team/", "")))).toList();
-            }
-
-            teamStats.add(new BugTeamStat(teamName, teamQuery, l, nextRelease));
         }
 
         teamStats.sort(Comparator.comparing(BugTeamStat::getTitle));
