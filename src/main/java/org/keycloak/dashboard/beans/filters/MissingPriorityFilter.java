@@ -4,16 +4,15 @@ import org.keycloak.dashboard.rep.GitHubIssue;
 
 import java.util.function.Predicate;
 
-class OpenBugFilter implements IssueFilter {
+class MissingPriorityFilter implements IssueFilter {
 
     @Override
     public Predicate<GitHubIssue> predicate() {
-        return gitHubIssue -> gitHubIssue.isOpen() && gitHubIssue.hasLabel("kind/bug");
+        return gitHubIssue -> gitHubIssue.getLabels().stream().noneMatch(l -> l.startsWith("priority/"));
     }
 
     @Override
     public String ghQuery() {
-        return "is:open is:issue label:kind/bug";
+        return "-label:priority/blocker,priority/important,priority/normal,priority/low";
     }
-
 }

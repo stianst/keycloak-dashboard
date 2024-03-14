@@ -4,6 +4,7 @@ import org.keycloak.dashboard.rep.GitHubIssue;
 import org.keycloak.dashboard.rep.Teams;
 import org.keycloak.dashboard.util.GHQuery;
 
+import java.util.Date;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.List;
@@ -26,6 +27,21 @@ public class FilteredIssues {
 
     public FilteredIssues openBug() {
         filters.add(new OpenBugFilter());
+        return this;
+    }
+
+    public FilteredIssues closedBug() {
+        filters.add(new ClosedBugFilter());
+        return this;
+    }
+
+    public FilteredIssues createdAfter(Date date) {
+        filters.add(new CreatedAfterFilter(date));
+        return this;
+    }
+
+    public FilteredIssues closedAfter(Date date) {
+        filters.add(new ClosedAfterFilter(date));
         return this;
     }
 
@@ -59,6 +75,12 @@ public class FilteredIssues {
         return this;
     }
 
+
+    public FilteredIssues label(String label) {
+        filters.add(new LabelFilter(label, true));
+        return this;
+    }
+
     public FilteredIssues hasPriority(boolean include) {
         filters.add(new HasPriorityFilter(include));
         return this;
@@ -71,6 +93,21 @@ public class FilteredIssues {
 
     public FilteredIssues missingInformation(boolean include) {
         filters.add(new MissingInformationFilter(include));
+        return this;
+    }
+
+    public FilteredIssues missingTeam(Teams teams) {
+        filters.add(new MissingTeamFilter(teams));
+        return this;
+    }
+
+    public FilteredIssues missingArea(List<String> areas) {
+        filters.add(new MissingAreaFilter(areas));
+        return this;
+    }
+
+    public FilteredIssues missingPriority() {
+        filters.add(new MissingPriorityFilter());
         return this;
     }
 

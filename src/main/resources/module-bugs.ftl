@@ -10,8 +10,8 @@
             </tr>
             <#list bugStats as bugStat>
             <tr>
-                <td class="title"><a href="${bugStat.openGhLink}">${bugStat.title}</a></td>
-                <td class="count ${bugStat.openCssClasses} center"><a href="${bugStat.openGhLink}">${bugStat.openCount}</a></td>
+                <td class="title"><a href="${bugStat.ghLink}">${bugStat.label}</a></td>
+                <td class="count ${bugStat.cssClasses} center"><a href="${bugStat.ghLink}">${bugStat.count}</a></td>
                 <#if bugStat.closedCount?has_content>
                 <td class="count ${bugStat.closedCssClasses} center"><a href="${bugStat.closedGhLink}">${bugStat.closedCount}</a></td>
                 <#else>

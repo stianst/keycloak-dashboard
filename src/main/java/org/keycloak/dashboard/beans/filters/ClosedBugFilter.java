@@ -4,16 +4,16 @@ import org.keycloak.dashboard.rep.GitHubIssue;
 
 import java.util.function.Predicate;
 
-class OpenBugFilter implements IssueFilter {
+class ClosedBugFilter implements IssueFilter {
 
     @Override
     public Predicate<GitHubIssue> predicate() {
-        return gitHubIssue -> gitHubIssue.isOpen() && gitHubIssue.hasLabel("kind/bug");
+        return gitHubIssue -> !gitHubIssue.isOpen() && gitHubIssue.hasLabel("kind/bug");
     }
 
     @Override
     public String ghQuery() {
-        return "is:open is:issue label:kind/bug";
+        return "is:closed is:issue label:kind/bug";
     }
 
 }

@@ -3,16 +3,25 @@ package org.keycloak.dashboard.beans;
 import org.keycloak.dashboard.Config;
 import org.keycloak.dashboard.beans.filters.FilteredIssues;
 import org.keycloak.dashboard.util.Css;
+import org.keycloak.dashboard.util.GHQuery;
 
 public class BugStat {
 
     private String label;
     private final BugStatType type;
     FilteredIssues filteredIssues;
+    FilteredIssues closedFilteredIssues;
     private String warnLabel;
     private Integer warnCount;
     private Integer errorCount;
+    private int count;
+    private String query;
 
+    boolean errorIfClosedLessThanOpened;
+
+    public static BugStat global(String label) {
+        return new BugStat(label, BugStatType.GLOBAL);
+    }
     public static BugStat team(String label) {
         return new BugStat(label, BugStatType.TEAM);
     }
@@ -26,8 +35,24 @@ public class BugStat {
         return this;
     }
 
+    public BugStat closedIssues(FilteredIssues filteredIssues) {
+        this.closedFilteredIssues = filteredIssues;
+        return this;
+    }
+
+    public BugStat issues(int count, String query) {
+        this.count = count;
+        this.query = query;
+        return this;
+    }
+
     public BugStat warnErrorKey(String warnErrorKey) {
         this.warnLabel = warnErrorKey;
+        return this;
+    }
+
+    public BugStat errorIfClosedLessThanOpened() {
+        this.errorIfClosedLessThanOpened = true;
         return this;
     }
 
@@ -46,14 +71,32 @@ public class BugStat {
     }
 
     public String getGhLink() {
-        return filteredIssues.ghLink();
+        if (filteredIssues != null) {
+            return filteredIssues.ghLink();
+        } else {
+            return FilteredIssues.ISSUES_LINK + "?q=" + GHQuery.encode(query);
+        }
+    }
+    public String getClosedGhLink() {
+        return closedFilteredIssues.ghLink();
     }
 
     public int getCount() {
-        return filteredIssues.count();
+        return filteredIssues != null ? filteredIssues.count() : count;
+    }
+
+    public Integer getClosedCount() {
+        return closedFilteredIssues != null ? closedFilteredIssues.count() : null;
     }
 
     public String getCssClasses() {
+        if (errorIfClosedLessThanOpened) {
+            int opened = getCount();
+            int closed = getClosedCount();
+            return Css.getCountClass(closed < opened ? 1 : 0, -1, 1);
+        }
+
+
         String warnLabel = this.warnLabel != null ? this.warnLabel : label;
         Integer warnCount = this.warnCount;
         Integer errorCount = this.errorCount;
@@ -74,7 +117,17 @@ public class BugStat {
             };
         }
 
-        return Css.getCountClass(filteredIssues.count(), warnCount, errorCount);
+        return Css.getCountClass(getCount(), warnCount, errorCount);
+    }
+
+    public String getClosedCssClasses() {
+        if (errorIfClosedLessThanOpened) {
+            int opened = getCount();
+            int closed = getClosedCount();
+            return Css.getCountClass(closed < opened ? 1 : 0, -1, 1);
+        }
+
+        return Css.getCountClass(getClosedCount(), -1, -1);
     }
 
     private BugStat(String label, BugStatType type) {
