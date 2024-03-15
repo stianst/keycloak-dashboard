@@ -26,7 +26,7 @@ public class BugAreaStat {
                 .warnErrorKey("Milestone"));
 
         columns.add(BugStat.area("Triage")
-                .issues(issues.clone().triage(true).backlog(false)));
+                .issues(issues.clone().triage(true)));
 
         columns.add(BugStat.area("Blocker")
                 .issues(issues.clone().triage(false).priority("blocker")));

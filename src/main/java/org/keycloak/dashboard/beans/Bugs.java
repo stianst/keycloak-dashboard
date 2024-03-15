@@ -92,7 +92,7 @@ public class Bugs {
         stats.add(BugStat.global("Missing Area")
                 .issues(filteredIssues.clone().openBug().missingArea(data.getAreas()).missingInformation(false)));
         stats.add(BugStat.global("Missing Priority")
-                .issues(filteredIssues.clone().openBug().missingPriority().missingInformation(false)));
+                .issues(filteredIssues.clone().openBug().triage(false).missingPriority().missingInformation(false)));
         stats.add(BugStat.global("Missing Team")
                 .issues(filteredIssues.clone().openBug().missingTeam(teams)));
         stats.add(BugStat.global("Missing Information")

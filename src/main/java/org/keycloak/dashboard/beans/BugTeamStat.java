@@ -21,7 +21,7 @@ public class BugTeamStat {
                 .warnErrorKey("Milestone"));
 
         columns.add(BugStat.team("Triage")
-                .issues(issues.clone().triage(true).backlog(false)));
+                .issues(issues.clone().triage(true)));
 
         columns.add(BugStat.team("Blocker")
                 .issues(issues.clone().triage(false).priority("blocker")));
@@ -34,14 +34,6 @@ public class BugTeamStat {
 
         columns.add(BugStat.team("Low")
                 .issues(issues.clone().triage(false).priority("low")));
-
-        columns.add(BugStat.team("<p>Cleanup</p><p>No priority</p></p>")
-                .issues(issues.clone().triage(false).hasPriority(false).missingInformation(false))
-                .warnCount(-1).errorCount(1));
-
-        columns.add(BugStat.team("<p>Cleanup</p><p>Backlog</p>")
-                .issues(issues.clone().backlog(true))
-                .warnCount(-1).errorCount(1));
     }
 
     public String getTitle() {

@@ -65,11 +65,6 @@ public class FilteredIssues {
         return this;
     }
 
-    public FilteredIssues backlog(boolean include) {
-        filters.add(new BacklogFilter(include));
-        return this;
-    }
-
     public FilteredIssues priority(String priority) {
         filters.add(new PriorityFilter(priority));
         return this;
