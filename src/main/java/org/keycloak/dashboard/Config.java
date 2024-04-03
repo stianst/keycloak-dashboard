@@ -3,7 +3,12 @@ package org.keycloak.dashboard;
 import org.keycloak.dashboard.util.DateUtil;
 
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Date;
+import java.util.LinkedList;
+import java.util.Map;
 import java.util.Properties;
 
 public class Config {
@@ -63,6 +68,9 @@ public class Config {
         return Integer.parseInt(value);
     }
 
+    public static String getConfigContents() throws IOException {
+        return new String(Config.class.getResourceAsStream("/config.properties").readAllBytes(), StandardCharsets.UTF_8);
+    }
 
     static Properties loadProperties() {
         Properties properties = new Properties();

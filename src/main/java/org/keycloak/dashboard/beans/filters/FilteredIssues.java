@@ -40,6 +40,11 @@ public class FilteredIssues {
         return this;
     }
 
+    public FilteredIssues createdBefore(Date date) {
+        filters.add(new CreatedBeforeFilter(date));
+        return this;
+    }
+
     public FilteredIssues closedAfter(Date date) {
         filters.add(new ClosedAfterFilter(date));
         return this;

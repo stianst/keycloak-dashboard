@@ -1,5 +1,6 @@
 package org.keycloak.dashboard.beans;
 
+import org.keycloak.dashboard.Config;
 import org.keycloak.dashboard.beans.filters.FilteredIssues;
 import org.keycloak.dashboard.rep.GitHubData;
 import org.keycloak.dashboard.rep.GitHubIssue;
@@ -50,12 +51,18 @@ public class Bugs {
                 .issues(filteredIssues.clone().openBug().triage(false).missingInformation(false)));
         stats.add(BugStat.global("Triage")
                 .issues(filteredIssues.clone().openBug().triage(true).missingInformation(false)));
+        stats.add(BugStat.global("Triage Overdue")
+                .issues(filteredIssues.clone().openBug().triage(true).missingInformation(false).createdBefore(DateUtil.minusdays(Config.getInt("bugs.TriageOverdue.days")))));
         stats.add(BugStat.global("Weakness")
                 .issues(filteredIssues.clone().openBug().label("kind/weakness")));
         stats.add(BugStat.global("Blocker")
                 .issues(filteredIssues.clone().openBug().priority("blocker")));
+        stats.add(BugStat.global("Blocker Overdue")
+                .issues(filteredIssues.clone().openBug().priority("blocker").createdBefore(DateUtil.minusdays(Config.getInt("bugs.BlockerOverdue.days")))));
         stats.add(BugStat.global("Important")
                 .issues(filteredIssues.clone().openBug().priority("important")));
+        stats.add(BugStat.global("Important Overdue")
+                .issues(filteredIssues.clone().openBug().priority("important").createdBefore(DateUtil.minusdays(Config.getInt("bugs.ImportantOverdue.days")))));
         stats.add(BugStat.global("Normal")
                 .issues(filteredIssues.clone().openBug().priority("normal")));
         stats.add(BugStat.global("Low")

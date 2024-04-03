@@ -18,8 +18,12 @@ import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.text.ParseException;
+import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 /**
  * Hello world!
@@ -63,6 +67,7 @@ public class Dashboard {
         attributes.put("flakyTests", bugs.getFlakyTests());
         attributes.put("nextRelease", bugs.getNextRelease());
         attributes.put("workflowWaitTimes", new WorkflowWaitTimes(data, teamMembers).getWorkFlowWaitPerMonthList());
+        attributes.put("configContents", Config.getConfigContents());
 
         File output = new File("docs/index.html");
         FreeMarker freeMarker = new FreeMarker(attributes);
@@ -71,6 +76,7 @@ public class Dashboard {
         freeMarker.template("prs.ftl", new File("docs/prs.html"));
         freeMarker.template("workflows.ftl", new File("docs/workflows.html"));
         freeMarker.template("tests.ftl", new File("docs/tests.html"));
+        freeMarker.template("config.ftl", new File("docs/config.html"));
 
         System.out.println("Created dashboard: " + output.toURI());
     }

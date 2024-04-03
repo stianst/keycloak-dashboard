@@ -21,9 +21,9 @@ public class BugAreaStat {
         this.issues = issues;
         this.openCount = openCount;
 
-        columns.add(BugStat.area(nextRelease)
-                .issues(issues.clone().milestone(nextRelease))
-                .warnErrorKey("Milestone"));
+//        columns.add(BugStat.area(nextRelease)
+//                .issues(issues.clone().milestone(nextRelease))
+//                .warnErrorKey("Milestone"));
 
         columns.add(BugStat.area("Triage")
                 .issues(issues.clone().triage(true)));
