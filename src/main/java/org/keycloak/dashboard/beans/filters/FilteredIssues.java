@@ -70,8 +70,8 @@ public class FilteredIssues {
         return this;
     }
 
-    public FilteredIssues priority(String priority) {
-        filters.add(new PriorityFilter(priority));
+    public FilteredIssues priority(String... priorities) {
+        filters.add(new PriorityFilter(priorities));
         return this;
     }
 
@@ -88,6 +88,11 @@ public class FilteredIssues {
 
     public FilteredIssues triage(boolean include) {
         filters.add(new TriageFilter(include));
+        return this;
+    }
+
+    public FilteredIssues blockedExternal(boolean include) {
+        filters.add(new BlockedExternalFilter(include));
         return this;
     }
 
