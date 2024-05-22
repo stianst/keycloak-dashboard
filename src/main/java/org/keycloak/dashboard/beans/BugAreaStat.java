@@ -1,9 +1,6 @@
 package org.keycloak.dashboard.beans;
 
-import org.keycloak.dashboard.Config;
 import org.keycloak.dashboard.beans.filters.FilteredIssues;
-import org.keycloak.dashboard.util.Css;
-import org.keycloak.dashboard.util.GHQuery;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -29,10 +26,13 @@ public class BugAreaStat {
                 .issues(issues.clone().triage(true)));
 
         columns.add(BugStat.area("Blocker")
-                .issues(issues.clone().triage(false).priority("blocker")));
+                .issues(issues.clone().triage(false).priority("blocker").blockedExternal(false)));
 
         columns.add(BugStat.area("Important")
-                .issues(issues.clone().triage(false).priority("important")));
+                .issues(issues.clone().triage(false).priority("important").blockedExternal(false)));
+
+        columns.add(BugStat.area("Blocked External")
+                .issues(issues.clone().triage(false).priority("blocker", "important").blockedExternal(true)));
 
         columns.add(BugStat.area("Normal")
                 .issues(issues.clone().triage(false).priority("normal")));
