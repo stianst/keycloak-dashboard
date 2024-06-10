@@ -1,0 +1,285 @@
+Store IT (aurora-postgres)	Create Aurora DB	2024-06-10T00:26:07.6349085Z Prepare all required actions
+Store IT (aurora-postgres)	Create Aurora DB	2024-06-10T00:26:07.6396452Z ##[group]Run ./.github/actions/aurora-create-database
+Store IT (aurora-postgres)	Create Aurora DB	2024-06-10T00:26:07.6397053Z with:
+Store IT (aurora-postgres)	Create Aurora DB	2024-06-10T00:26:07.6397355Z   name: gh-action-86101b3
+Store IT (aurora-postgres)	Create Aurora DB	2024-06-10T00:26:07.6397854Z   password: ***
+Store IT (aurora-postgres)	Create Aurora DB	2024-06-10T00:26:07.6398273Z   region: us-east-1
+Store IT (aurora-postgres)	Create Aurora DB	2024-06-10T00:26:07.6398623Z env:
+Store IT (aurora-postgres)	Create Aurora DB	2024-06-10T00:26:07.6399070Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Store IT (aurora-postgres)	Create Aurora DB	2024-06-10T00:26:07.6399697Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Store IT (aurora-postgres)	Create Aurora DB	2024-06-10T00:26:07.6400201Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Store IT (aurora-postgres)	Create Aurora DB	2024-06-10T00:26:07.6400681Z ##[endgroup]
+Store IT (aurora-postgres)	Create Aurora DB	2024-06-10T00:26:07.6583162Z ##[group]Run source ./aurora_create.sh
+Store IT (aurora-postgres)	Create Aurora DB	2024-06-10T00:26:07.6583736Z [36;1msource ./aurora_create.sh[0m
+Store IT (aurora-postgres)	Create Aurora DB	2024-06-10T00:26:07.6584290Z [36;1mecho "endpoint=${AURORA_ENDPOINT}" >> $GITHUB_OUTPUT[0m
+Store IT (aurora-postgres)	Create Aurora DB	2024-06-10T00:26:07.6642780Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Store IT (aurora-postgres)	Create Aurora DB	2024-06-10T00:26:07.6643360Z env:
+Store IT (aurora-postgres)	Create Aurora DB	2024-06-10T00:26:07.6643896Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Store IT (aurora-postgres)	Create Aurora DB	2024-06-10T00:26:07.6644619Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Store IT (aurora-postgres)	Create Aurora DB	2024-06-10T00:26:07.6645176Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Store IT (aurora-postgres)	Create Aurora DB	2024-06-10T00:26:07.6645719Z   AURORA_CLUSTER: gh-action-86101b3
+Store IT (aurora-postgres)	Create Aurora DB	2024-06-10T00:26:07.6646239Z   AURORA_PASSWORD: ***
+Store IT (aurora-postgres)	Create Aurora DB	2024-06-10T00:26:07.6646700Z   AURORA_REGION: us-east-1
+Store IT (aurora-postgres)	Create Aurora DB	2024-06-10T00:26:07.6647085Z ##[endgroup]
+Store IT (aurora-postgres)	Create Aurora DB	2024-06-10T00:26:51.4863647Z Aurora instances 'gh-action-86101b3-instance-1	gh-action-86101b3-instance-2' already exist in the 'us-east-1' region
+Store IT (aurora-postgres)	Create Aurora DB	2024-06-10T00:26:51.4880244Z ##[error]Process completed with exit code 1.
+Store IT (aurora-postgres)	Delete Aurora EC2 Instance	2024-06-10T00:26:52.2268530Z ##[group]Run export CLUSTER_NAME=
+Store IT (aurora-postgres)	Delete Aurora EC2 Instance	2024-06-10T00:26:52.2269047Z [36;1mexport CLUSTER_NAME=[0m
+Store IT (aurora-postgres)	Delete Aurora EC2 Instance	2024-06-10T00:26:52.2269469Z [36;1m./aws_ec2.sh delete us-east-1[0m
+Store IT (aurora-postgres)	Delete Aurora EC2 Instance	2024-06-10T00:26:52.2328206Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Store IT (aurora-postgres)	Delete Aurora EC2 Instance	2024-06-10T00:26:52.2329018Z env:
+Store IT (aurora-postgres)	Delete Aurora EC2 Instance	2024-06-10T00:26:52.2329492Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Store IT (aurora-postgres)	Delete Aurora EC2 Instance	2024-06-10T00:26:52.2330090Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Store IT (aurora-postgres)	Delete Aurora EC2 Instance	2024-06-10T00:26:52.2330662Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Store IT (aurora-postgres)	Delete Aurora EC2 Instance	2024-06-10T00:26:52.2331163Z ##[endgroup]
+Store IT (aurora-postgres)	Delete Aurora EC2 Instance	2024-06-10T00:26:56.3769992Z [WARNING]: No inventory was parsed, only implicit localhost is available
+Store IT (aurora-postgres)	Delete Aurora EC2 Instance	2024-06-10T00:26:56.4720307Z [WARNING]: provided hosts list is empty, only localhost is available. Note that
+Store IT (aurora-postgres)	Delete Aurora EC2 Instance	2024-06-10T00:26:56.4721885Z the implicit localhost does not match 'all'
+Store IT (aurora-postgres)	Delete Aurora EC2 Instance	2024-06-10T00:26:57.2192633Z Using /home/runner/work/keycloak/keycloak/.github/scripts/ansible/ansible.cfg as config file
+Store IT (aurora-postgres)	Delete Aurora EC2 Instance	2024-06-10T00:26:57.2193853Z 
+Store IT (aurora-postgres)	Delete Aurora EC2 Instance	2024-06-10T00:26:57.2194406Z PLAY [localhost] ***************************************************************
+Store IT (aurora-postgres)	Delete Aurora EC2 Instance	2024-06-10T00:26:57.2194955Z 
+Store IT (aurora-postgres)	Delete Aurora EC2 Instance	2024-06-10T00:26:57.2195290Z TASK [Gathering Facts] *********************************************************
+Store IT (aurora-postgres)	Delete Aurora EC2 Instance	2024-06-10T00:26:59.0734886Z ok: [localhost]
+Store IT (aurora-postgres)	Delete Aurora EC2 Instance	2024-06-10T00:26:59.0735421Z 
+Store IT (aurora-postgres)	Delete Aurora EC2 Instance	2024-06-10T00:26:59.0736084Z TASK [aws_ec2 : debug] *********************************************************
+Store IT (aurora-postgres)	Delete Aurora EC2 Instance	2024-06-10T00:26:59.1003272Z ok: [localhost] => {
+Store IT (aurora-postgres)	Delete Aurora EC2 Instance	2024-06-10T00:26:59.1004146Z     "cluster_identifier": "runner"
+Store IT (aurora-postgres)	Delete Aurora EC2 Instance	2024-06-10T00:26:59.1004948Z }
+Store IT (aurora-postgres)	Delete Aurora EC2 Instance	2024-06-10T00:26:59.1005435Z 
+Store IT (aurora-postgres)	Delete Aurora EC2 Instance	2024-06-10T00:26:59.1005949Z TASK [aws_ec2 : debug] *********************************************************
+Store IT (aurora-postgres)	Delete Aurora EC2 Instance	2024-06-10T00:26:59.1162782Z ok: [localhost] => {
+Store IT (aurora-postgres)	Delete Aurora EC2 Instance	2024-06-10T00:26:59.1164346Z     "region": "us-east-1"
+Store IT (aurora-postgres)	Delete Aurora EC2 Instance	2024-06-10T00:26:59.1165264Z }
+Store IT (aurora-postgres)	Delete Aurora EC2 Instance	2024-06-10T00:26:59.1165583Z 
+Store IT (aurora-postgres)	Delete Aurora EC2 Instance	2024-06-10T00:26:59.1166266Z TASK [aws_ec2 : debug] *********************************************************
+Store IT (aurora-postgres)	Delete Aurora EC2 Instance	2024-06-10T00:26:59.1330880Z ok: [localhost] => {
+Store IT (aurora-postgres)	Delete Aurora EC2 Instance	2024-06-10T00:26:59.1331580Z     "cluster_name": "keycloak_runner"
+Store IT (aurora-postgres)	Delete Aurora EC2 Instance	2024-06-10T00:26:59.1332261Z }
+Store IT (aurora-postgres)	Delete Aurora EC2 Instance	2024-06-10T00:26:59.1332594Z 
+Store IT (aurora-postgres)	Delete Aurora EC2 Instance	2024-06-10T00:26:59.1333081Z TASK [aws_ec2 : include_tasks] *************************************************
+Store IT (aurora-postgres)	Delete Aurora EC2 Instance	2024-06-10T00:26:59.1458482Z skipping: [localhost] => {"changed": false, "false_condition": "operation == \"create\"", "skip_reason": "Conditional result was False"}
+Store IT (aurora-postgres)	Delete Aurora EC2 Instance	2024-06-10T00:26:59.1459600Z 
+Store IT (aurora-postgres)	Delete Aurora EC2 Instance	2024-06-10T00:26:59.1460222Z TASK [aws_ec2 : include_tasks] *************************************************
+Store IT (aurora-postgres)	Delete Aurora EC2 Instance	2024-06-10T00:26:59.1586262Z skipping: [localhost] => {"changed": false, "false_condition": "operation == \"start\" or operation == \"stop\"", "skip_reason": "Conditional result was False"}
+Store IT (aurora-postgres)	Delete Aurora EC2 Instance	2024-06-10T00:26:59.1587583Z 
+Store IT (aurora-postgres)	Delete Aurora EC2 Instance	2024-06-10T00:26:59.1588087Z TASK [aws_ec2 : include_tasks] *************************************************
+Store IT (aurora-postgres)	Delete Aurora EC2 Instance	2024-06-10T00:26:59.2904125Z included: /home/runner/work/keycloak/keycloak/.github/scripts/ansible/roles/aws_ec2/tasks/delete-resources.yml for localhost
+Store IT (aurora-postgres)	Delete Aurora EC2 Instance	2024-06-10T00:26:59.2905475Z 
+Store IT (aurora-postgres)	Delete Aurora EC2 Instance	2024-06-10T00:26:59.2905955Z TASK [aws_ec2 : Delete EC2 instances] ******************************************
+Store IT (aurora-postgres)	Delete Aurora EC2 Instance	2024-06-10T00:26:59.7290933Z fatal: [localhost]: FAILED! => {"changed": false, "msg": "Failed to import the required Python library (botocore and boto3) on fv-az1445-662's Python /opt/pipx/venvs/ansible-core/bin/python. Please read the module documentation and install it in the appropriate location. If the required library is installed, but Ansible is using the wrong Python interpreter, please consult the documentation on ansible_python_interpreter"}
+Store IT (aurora-postgres)	Delete Aurora EC2 Instance	2024-06-10T00:26:59.7293043Z 
+Store IT (aurora-postgres)	Delete Aurora EC2 Instance	2024-06-10T00:26:59.7293316Z PLAY RECAP *********************************************************************
+Store IT (aurora-postgres)	Delete Aurora EC2 Instance	2024-06-10T00:26:59.7294539Z localhost                  : ok=5    changed=0    unreachable=0    failed=1    skipped=2    rescued=0    ignored=0   
+Store IT (aurora-postgres)	Delete Aurora EC2 Instance	2024-06-10T00:26:59.7295410Z 
+Store IT (aurora-postgres)	Delete Aurora EC2 Instance	2024-06-10T00:26:59.7691883Z ##[error]Process completed with exit code 2.
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6434504Z Prepare all required actions
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6524292Z ##[group]Run ./.github/actions/status-check
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6524778Z with:
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6529721Z   jobs: {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "conditional": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	      "ci": "true",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	      "ci-quarkus": "true",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	      "ci-sssd": "true",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	      "ci-store": "true",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	      "ci-store-matrix": "[\"postgres\",\"mysql\",\"oracle\",\"mssql\",\"mariadb\",\"aurora-postgres\"]",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	      "ci-webauthn": "true"
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    }
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "build": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "unit-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "base-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "adapter-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "quarkus-unit-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "quarkus-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "jdk-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "store-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "failure",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "persistent-sessions-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "store-model-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "clustering-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "fips-unit-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "fips-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "forms-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "webauthn-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "sssd-unit-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "migration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  }
+Status Check - Keycloak CI	Run /./.github/actions/status-check	}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6535138Z env:
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6535586Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6536142Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6536671Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6537153Z ##[endgroup]
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6785564Z ##[group]Run JOBS='{
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6786221Z [36;1mJOBS='{[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6786603Z [36;1m  "conditional": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6787096Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6787470Z [36;1m    "outputs": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6787838Z [36;1m      "ci": "true",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6788317Z [36;1m      "ci-quarkus": "true",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6788730Z [36;1m      "ci-sssd": "true",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6789127Z [36;1m      "ci-store": "true",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6789914Z [36;1m      "ci-store-matrix": "[\"postgres\",\"mysql\",\"oracle\",\"mssql\",\"mariadb\",\"aurora-postgres\"]",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6790635Z [36;1m      "ci-webauthn": "true"[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6791002Z [36;1m    }[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6791397Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6791688Z [36;1m  "build": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6792061Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6792531Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6792881Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6793182Z [36;1m  "unit-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6793619Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6794010Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6794335Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6794739Z [36;1m  "base-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6795161Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6795533Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6795939Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6796307Z [36;1m  "adapter-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6796713Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6797158Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6797855Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6798259Z [36;1m  "quarkus-unit-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6798771Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6799181Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6799491Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6800211Z [36;1m  "quarkus-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6800676Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6801029Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6801458Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6801799Z [36;1m  "jdk-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6802178Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6802634Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6802980Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6803287Z [36;1m  "store-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6803783Z [36;1m    "result": "failure",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6804172Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6804660Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6805099Z [36;1m  "persistent-sessions-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6805532Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6805894Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6806305Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6806628Z [36;1m  "store-model-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6807009Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6807450Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6807973Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6808338Z [36;1m  "clustering-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6808869Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6809253Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6809578Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6810042Z [36;1m  "fips-unit-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6810451Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6810829Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6811202Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6811569Z [36;1m  "fips-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6811988Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6812390Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6812752Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6813089Z [36;1m  "forms-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6813631Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6814032Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6814374Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6814758Z [36;1m  "webauthn-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6815210Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6815593Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6815988Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6816316Z [36;1m  "sssd-unit-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6816702Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6817140Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6817485Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6817805Z [36;1m  "migration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6818238Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6818619Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6818963Z [36;1m  }[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6819301Z [36;1m}'[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6819605Z [36;1m[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6819936Z [36;1mecho "Job status:"[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6820490Z [36;1mecho $JOBS | jq -r 'to_entries[] | " - \(.key): \(.value.result)"'[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6821039Z [36;1m[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6821501Z [36;1mfor i in $(echo $JOBS | jq -r 'to_entries[] | .value.result'); do[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6822168Z [36;1m  if [ "$i" != "success" ] && [ "$i" != "skipped" ]; then[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6822665Z [36;1m    echo ""[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6823058Z [36;1m    echo "Status check not okay!"[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6823508Z [36;1m    exit 1[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6823835Z [36;1m  fi[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6824154Z [36;1mdone[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6900977Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6901560Z env:
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6902114Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6902676Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6903178Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.6903700Z ##[endgroup]
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.7048299Z Job status:
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.7268520Z  - conditional: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.7269453Z  - build: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.7270067Z  - unit-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.7270621Z  - base-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.7271163Z  - adapter-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.7271601Z  - quarkus-unit-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.7272118Z  - quarkus-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.7272597Z  - jdk-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.7273044Z  - store-integration-tests: failure
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.7273582Z  - persistent-sessions-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.7274056Z  - store-model-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.7274698Z  - clustering-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.7275283Z  - fips-unit-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.7275712Z  - fips-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.7276128Z  - forms-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.7276810Z  - webauthn-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.7277579Z  - sssd-unit-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.7278218Z  - migration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.7479413Z 
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.7479706Z Status check not okay!
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-06-10T01:20:19.7493046Z ##[error]Process completed with exit code 1.
