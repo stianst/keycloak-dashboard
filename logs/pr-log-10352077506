@@ -1,0 +1,575 @@
+Clustering IT	Run cluster tests	2024-08-12T12:59:33.0108895Z ##[group]Run ./mvnw test -Dsurefire.rerunFailingTestsCount=2 -Pauth-server-cluster-quarkus,db-postgres "-Dwebdriver.chrome.driver=$CHROMEWEBDRIVER/chromedriver" -Dsession.cache.owners=2 -Dtest=**.cluster.** -pl testsuite/integration-arquillian/tests/base 2>&1 | misc/log/trimmer.sh
+Clustering IT	Run cluster tests	2024-08-12T12:59:33.0111613Z [36;1m./mvnw test -Dsurefire.rerunFailingTestsCount=2 -Pauth-server-cluster-quarkus,db-postgres "-Dwebdriver.chrome.driver=$CHROMEWEBDRIVER/chromedriver" -Dsession.cache.owners=2 -Dtest=**.cluster.** -pl testsuite/integration-arquillian/tests/base 2>&1 | misc/log/trimmer.sh[0m
+Clustering IT	Run cluster tests	2024-08-12T12:59:33.0177304Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Clustering IT	Run cluster tests	2024-08-12T12:59:33.0177831Z env:
+Clustering IT	Run cluster tests	2024-08-12T12:59:33.0178422Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Clustering IT	Run cluster tests	2024-08-12T12:59:33.0179002Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Clustering IT	Run cluster tests	2024-08-12T12:59:33.0179503Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Clustering IT	Run cluster tests	2024-08-12T12:59:33.0180077Z   MAVEN_OPTS: -Xmx1024m
+Clustering IT	Run cluster tests	2024-08-12T12:59:33.0180723Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.4-7/x64
+Clustering IT	Run cluster tests	2024-08-12T12:59:33.0181494Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.4-7/x64
+Clustering IT	Run cluster tests	2024-08-12T12:59:33.0182085Z ##[endgroup]
+Clustering IT	Run cluster tests	2024-08-12T12:59:35.3497832Z -- [INFO] Loading cache configuration from /home/runner/work/keycloak/keycloak/.mvn/maven-build-cache-config.xml
+Clustering IT	Run cluster tests	2024-08-12T12:59:35.3608638Z -- [INFO] Scanning for projects...
+Clustering IT	Run cluster tests	2024-08-12T12:59:36.1885434Z -- [INFO] 
+Clustering IT	Run cluster tests	2024-08-12T12:59:36.1886822Z -- [INFO] ------< org.keycloak.testsuite:integration-arquillian-tests-base >------
+Clustering IT	Run cluster tests	2024-08-12T12:59:36.1888169Z -- [INFO] Building Base TestSuite 999.0.0-SNAPSHOT
+Clustering IT	Run cluster tests	2024-08-12T12:59:36.1889088Z -- [INFO]   from pom.xml
+Clustering IT	Run cluster tests	2024-08-12T12:59:36.1890459Z -- [INFO] --------------------------------[ jar ]---------------------------------
+Clustering IT	Run cluster tests	2024-08-12T12:59:36.2528593Z -- [WARNING] Parameter 'overWriteIfNewer' is unknown for plugin 'maven-resources-plugin:3.0.1:copy-resources (example-realms)'
+Clustering IT	Run cluster tests	2024-08-12T12:59:36.8514736Z -- [INFO] Artifact org.jboss:jboss-parent:pom:34 is present in the local repository, but cached from a remote repository ID that is unavailable in current build context, verifying that is downloadable from [central (https://repo.maven.apache.org/maven2, default, releases), public-jboss (https://repository.jboss.org/nexus/content/groups/public-jboss/, default, releases+snapshots)]
+Clustering IT	Run cluster tests	2024-08-12T12:59:36.8536694Z -- [INFO] Artifact org.jboss:jboss-parent:pom:34 is present in the local repository, but cached from a remote repository ID that is unavailable in current build context, verifying that is downloadable from [central (https://repo.maven.apache.org/maven2, default, releases), public-jboss (https://repository.jboss.org/nexus/content/groups/public-jboss/, default, releases+snapshots)]
+Clustering IT	Run cluster tests	2024-08-12T12:59:37.6681081Z -- [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jboss/jboss-parent/34/jboss-parent-34.pom
+Clustering IT	Run cluster tests	2024-08-12T12:59:38.1884042Z -- [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jboss/jboss-parent/34/jboss-parent-34.pom (0 B at 0 B/s)
+Clustering IT	Run cluster tests	2024-08-12T12:59:38.2439560Z -- [INFO] Artifact org.jboss:jboss-parent:pom:36 is present in the local repository, but cached from a remote repository ID that is unavailable in current build context, verifying that is downloadable from [central (https://repo.maven.apache.org/maven2, default, releases)]
+Clustering IT	Run cluster tests	2024-08-12T12:59:38.2444749Z -- [INFO] Artifact org.jboss:jboss-parent:pom:36 is present in the local repository, but cached from a remote repository ID that is unavailable in current build context, verifying that is downloadable from [central (https://repo.maven.apache.org/maven2, default, releases)]
+Clustering IT	Run cluster tests	2024-08-12T12:59:38.2456534Z -- [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jboss/jboss-parent/36/jboss-parent-36.pom
+Clustering IT	Run cluster tests	2024-08-12T12:59:38.2492243Z -- [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jboss/jboss-parent/36/jboss-parent-36.pom (0 B at 0 B/s)
+Clustering IT	Run cluster tests	2024-08-12T12:59:38.8189017Z -- [INFO] Artifact org.jboss:jboss-parent:pom:44 is present in the local repository, but cached from a remote repository ID that is unavailable in current build context, verifying that is downloadable from [central (https://repo.maven.apache.org/maven2, default, releases)]
+Clustering IT	Run cluster tests	2024-08-12T12:59:38.8202243Z -- [INFO] Artifact org.jboss:jboss-parent:pom:44 is present in the local repository, but cached from a remote repository ID that is unavailable in current build context, verifying that is downloadable from [central (https://repo.maven.apache.org/maven2, default, releases)]
+Clustering IT	Run cluster tests	2024-08-12T12:59:38.8210840Z -- [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jboss/jboss-parent/44/jboss-parent-44.pom
+Clustering IT	Run cluster tests	2024-08-12T12:59:38.8275387Z -- [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jboss/jboss-parent/44/jboss-parent-44.pom (0 B at 0 B/s)
+Clustering IT	Run cluster tests	2024-08-12T12:59:39.3454084Z -- [INFO] 
+Clustering IT	Run cluster tests	2024-08-12T12:59:39.3457082Z -- [INFO] --- enforcer:3.0.0-M3:enforce (enforce-java-version) @ integration-arquillian-tests-base ---
+Clustering IT	Run cluster tests	2024-08-12T12:59:39.4906811Z -- [INFO] 
+Clustering IT	Run cluster tests	2024-08-12T12:59:39.4910999Z -- [INFO] --- enforcer:3.0.0-M3:enforce (enforce-maven-version) @ integration-arquillian-tests-base ---
+Clustering IT	Run cluster tests	2024-08-12T12:59:39.4929793Z -- [INFO] 
+Clustering IT	Run cluster tests	2024-08-12T12:59:39.4933915Z -- [INFO] --- enforcer:3.0.0-M3:enforce (enforce-maven) @ integration-arquillian-tests-base ---
+Clustering IT	Run cluster tests	2024-08-12T12:59:39.4952819Z -- [INFO] 
+Clustering IT	Run cluster tests	2024-08-12T12:59:39.4957656Z -- [INFO] --- buildnumber:1.4:create (get-scm-revision) @ integration-arquillian-tests-base ---
+Clustering IT	Run cluster tests	2024-08-12T12:59:39.6767095Z -- [INFO] Executing: /bin/sh -c cd '/home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base' && 'git' 'rev-parse' '--verify' 'HEAD'
+Clustering IT	Run cluster tests	2024-08-12T12:59:39.6769752Z -- [INFO] Working directory: /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base
+Clustering IT	Run cluster tests	2024-08-12T12:59:39.7181162Z -- [INFO] Storing buildNumber: 50fde8d90fc4f5f7606540116ccb23f10530dd94 at timestamp: 1723467579658
+Clustering IT	Run cluster tests	2024-08-12T12:59:39.7234845Z -- [WARNING] Cannot get the branch information from the git repository: 
+Clustering IT	Run cluster tests	2024-08-12T12:59:39.7236389Z -- Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
+Clustering IT	Run cluster tests	2024-08-12T12:59:39.7238317Z -- 
+Clustering IT	Run cluster tests	2024-08-12T12:59:39.7240072Z -- [INFO] Executing: /bin/sh -c cd '/home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base' && 'git' 'rev-parse' '--verify' 'HEAD'
+Clustering IT	Run cluster tests	2024-08-12T12:59:39.7242433Z -- [INFO] Working directory: /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base
+Clustering IT	Run cluster tests	2024-08-12T12:59:39.7273845Z -- [INFO] Storing buildScmBranch: UNKNOWN
+Clustering IT	Run cluster tests	2024-08-12T12:59:39.7275090Z -- [INFO] 
+Clustering IT	Run cluster tests	2024-08-12T12:59:39.7277859Z -- [INFO] --- resources:3.0.1:copy-resources (copy-truststore) @ integration-arquillian-tests-base ---
+Clustering IT	Run cluster tests	2024-08-12T12:59:39.7801051Z -- [INFO] Using 'UTF-8' encoding to copy filtered resources.
+Clustering IT	Run cluster tests	2024-08-12T12:59:39.7913479Z -- [INFO] Copying 3 resources
+Clustering IT	Run cluster tests	2024-08-12T12:59:39.7975769Z -- [INFO] 
+Clustering IT	Run cluster tests	2024-08-12T12:59:39.7977442Z -- [INFO] --- resources:3.0.1:copy-resources (copy-common-dependencies) @ integration-arquillian-tests-base ---
+Clustering IT	Run cluster tests	2024-08-12T12:59:39.8076684Z -- [INFO] Using 'UTF-8' encoding to copy filtered resources.
+Clustering IT	Run cluster tests	2024-08-12T12:59:39.8077991Z -- [INFO] Copying 13 resources
+Clustering IT	Run cluster tests	2024-08-12T12:59:39.8108358Z -- [INFO] 
+Clustering IT	Run cluster tests	2024-08-12T12:59:39.8109669Z -- [INFO] --- resources:3.0.1:resources (default-resources) @ integration-arquillian-tests-base ---
+Clustering IT	Run cluster tests	2024-08-12T12:59:39.8135032Z -- [INFO] Using 'UTF-8' encoding to copy filtered resources.
+Clustering IT	Run cluster tests	2024-08-12T12:59:39.8138681Z -- [INFO] Copying 2 resources
+Clustering IT	Run cluster tests	2024-08-12T12:59:39.8148961Z -- [INFO] 
+Clustering IT	Run cluster tests	2024-08-12T12:59:39.8150359Z -- [INFO] --- resources:3.0.1:copy-resources (copy-admin-user-json-file) @ integration-arquillian-tests-base ---
+Clustering IT	Run cluster tests	2024-08-12T12:59:39.8162534Z -- [INFO] Using 'UTF-8' encoding to copy filtered resources.
+Clustering IT	Run cluster tests	2024-08-12T12:59:39.8235599Z -- [INFO] Copying 1 resource
+Clustering IT	Run cluster tests	2024-08-12T12:59:39.8294961Z -- [INFO] 
+Clustering IT	Run cluster tests	2024-08-12T12:59:39.8297465Z -- [INFO] --- xml:1.0.1:transform (arquillian-default-protocol) @ integration-arquillian-tests-base ---
+Clustering IT	Run cluster tests	2024-08-12T12:59:40.6725341Z -- [INFO] Transforming file: /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/resources/arquillian.xml
+Clustering IT	Run cluster tests	2024-08-12T12:59:40.8436962Z -- [INFO] Transformed 1 file(s).
+Clustering IT	Run cluster tests	2024-08-12T12:59:40.8438025Z -- [INFO] 
+Clustering IT	Run cluster tests	2024-08-12T12:59:40.8439128Z -- [INFO] --- compiler:3.8.1:compile (default-compile) @ integration-arquillian-tests-base ---
+Clustering IT	Run cluster tests	2024-08-12T12:59:41.0079631Z -- [INFO] Changes detected - recompiling the module!
+Clustering IT	Run cluster tests	2024-08-12T12:59:41.0127884Z -- [INFO] Compiling 369 source files to /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/target/classes
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8260334Z -- [INFO] Annotation processing is enabled because one or more processors were found
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8265175Z --   on the class path. A future release of javac may disable annotation processing
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8267123Z --   unless at least one processor is specified by name (-processor), or a search
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8283965Z --   path is specified (--processor-path, --processor-module-path), or annotation
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8286419Z --   processing is enabled explicitly (-proc:only, -proc:full).
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8287370Z --   Use -Xlint:-options to suppress this message.
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8288229Z --   Use -proc:none to disable annotation processing.
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8290810Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/updaters/ServerResourceUpdater.java:[89,20] unchecked cast
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8293029Z --   required: T
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8293956Z --   found:    org.keycloak.testsuite.updaters.ServerResourceUpdater<T,Res,Rep>
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8296850Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/updaters/ServerResourceUpdater.java:[103,20] unchecked cast
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8300387Z --   required: T
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8301351Z --   found:    org.keycloak.testsuite.updaters.ServerResourceUpdater<T,Res,Rep>
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8304109Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/updaters/ServerResourceUpdater.java:[140,52] unchecked conversion
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8306895Z --   required: java.util.Set<V>
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8307535Z --   found:    java.util.Set
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8309838Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/updaters/ServerResourceUpdater.java:[141,51] unchecked conversion
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8312067Z --   required: java.util.Set<V>
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8313190Z --   found:    java.util.Set
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8316370Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/page/AbstractPatternFlyAlert.java:[71,96] unchecked method invocation: method until in class org.openqa.selenium.support.ui.FluentWait is applied to given types
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8319675Z --   required: java.util.function.Function<? super T,V>
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8320710Z --   found:    org.openqa.selenium.support.ui.ExpectedCondition
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8323288Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/page/AbstractPatternFlyAlert.java:[71,97] unchecked conversion
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8327393Z --   required: java.util.function.Function<? super T,V>
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8328409Z --   found:    org.openqa.selenium.support.ui.ExpectedCondition
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8331420Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/ModelTestExecutor.java:[51,33] TestResult() in org.jboss.arquillian.test.spi.TestResult has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8360843Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/ModelTestExecutor.java:[59,23] setStatus(org.jboss.arquillian.test.spi.TestResult.Status) in org.jboss.arquillian.test.spi.TestResult has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8366927Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/ModelTestExecutor.java:[61,23] setStatus(org.jboss.arquillian.test.spi.TestResult.Status) in org.jboss.arquillian.test.spi.TestResult has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8371503Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/ModelTestExecutor.java:[70,109] unchecked cast
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8374245Z --   required: org.jboss.arquillian.core.api.InstanceProducer<org.jboss.arquillian.test.spi.TestResult>
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8375803Z --   found:    java.lang.Object
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8378162Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/util/javascript/XMLHttpRequest.java:[75,67] unchecked cast
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8380624Z --   required: java.util.Map<java.lang.String,java.lang.Object>
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8381514Z --   found:    java.lang.Object
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8384901Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/util/javascript/JavascriptTestExecutor.java:[40,35] setScriptTimeout(long,java.util.concurrent.TimeUnit) in org.openqa.selenium.WebDriver.Timeouts has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8390659Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/updaters/Creator.java:[63,16] unchecked call to Creator(java.lang.String,T,java.lang.Runnable) as a member of the raw type org.keycloak.testsuite.updaters.Creator
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8395305Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/updaters/Creator.java:[63,16] unchecked conversion
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8398077Z --   required: org.keycloak.testsuite.updaters.Creator<org.keycloak.admin.client.resource.RealmResource>
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8399881Z --   found:    org.keycloak.testsuite.updaters.Creator
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8403325Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/updaters/Creator.java:[72,20] unchecked call to Creator(java.lang.String,T,java.lang.Runnable) as a member of the raw type org.keycloak.testsuite.updaters.Creator
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8407750Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/updaters/Creator.java:[72,20] unchecked conversion
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8410403Z --   required: org.keycloak.testsuite.updaters.Creator<org.keycloak.admin.client.resource.GroupResource>
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8411844Z --   found:    org.keycloak.testsuite.updaters.Creator
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8415100Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/updaters/Creator.java:[82,20] unchecked call to Creator(java.lang.String,T,java.lang.Runnable) as a member of the raw type org.keycloak.testsuite.updaters.Creator
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8419891Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/updaters/Creator.java:[82,20] unchecked conversion
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8422456Z --   required: org.keycloak.testsuite.updaters.Creator<org.keycloak.admin.client.resource.ClientResource>
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8423859Z --   found:    org.keycloak.testsuite.updaters.Creator
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8427179Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/updaters/Creator.java:[92,20] unchecked call to Creator(java.lang.String,T,java.lang.Runnable) as a member of the raw type org.keycloak.testsuite.updaters.Creator
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8431961Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/updaters/Creator.java:[92,20] unchecked conversion
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8434577Z --   required: org.keycloak.testsuite.updaters.Creator<org.keycloak.admin.client.resource.UserResource>
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8435952Z --   found:    org.keycloak.testsuite.updaters.Creator
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8439234Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/updaters/Creator.java:[102,20] unchecked call to Creator(java.lang.String,T,java.lang.Runnable) as a member of the raw type org.keycloak.testsuite.updaters.Creator
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8443723Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/updaters/Creator.java:[102,20] unchecked conversion
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8446433Z --   required: org.keycloak.testsuite.updaters.Creator<org.keycloak.admin.client.resource.ComponentResource>
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8447888Z --   found:    org.keycloak.testsuite.updaters.Creator
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8451211Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/updaters/Creator.java:[122,20] unchecked call to Creator(java.lang.String,T,java.lang.Runnable) as a member of the raw type org.keycloak.testsuite.updaters.Creator
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8455929Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/updaters/Creator.java:[122,20] unchecked conversion
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8458765Z --   required: org.keycloak.testsuite.updaters.Creator<org.keycloak.admin.client.resource.IdentityProviderResource>
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8460304Z --   found:    org.keycloak.testsuite.updaters.Creator
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8463734Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/updaters/Creator.java:[134,20] unchecked call to Creator(java.lang.String,T,java.lang.Runnable) as a member of the raw type org.keycloak.testsuite.updaters.Creator
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8468621Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/updaters/Creator.java:[134,20] unchecked conversion
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8471475Z --   required: org.keycloak.testsuite.updaters.Creator<org.keycloak.admin.client.resource.IdentityProviderResource>
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8472975Z --   found:    org.keycloak.testsuite.updaters.Creator
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8476276Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/containers/SecurityActions.java:[54,16] java.security.AccessController in java.security has been deprecated and marked for removal
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8481721Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/containers/SecurityActions.java:[148,20] java.security.AccessController in java.security has been deprecated and marked for removal
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8487234Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/containers/SecurityActions.java:[182,13] java.security.AccessController in java.security has been deprecated and marked for removal
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8492411Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/containers/SecurityActions.java:[221,39] isAccessible() in java.lang.reflect.AccessibleObject has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8497953Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/containers/SecurityActions.java:[213,48] java.security.AccessController in java.security has been deprecated and marked for removal
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8503583Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/containers/SecurityActions.java:[245,40] isAccessible() in java.lang.reflect.AccessibleObject has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8508843Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/containers/SecurityActions.java:[237,50] java.security.AccessController in java.security has been deprecated and marked for removal
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8514346Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/containers/SecurityActions.java:[261,28] java.security.AccessController in java.security has been deprecated and marked for removal
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8519973Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/drone/KeycloakDronePostSetup.java:[89,35] implicitlyWait(long,java.util.concurrent.TimeUnit) in org.openqa.selenium.WebDriver.Timeouts has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8525792Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/drone/KeycloakDronePostSetup.java:[90,35] pageLoadTimeout(long,java.util.concurrent.TimeUnit) in org.openqa.selenium.WebDriver.Timeouts has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8531670Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/drone/KeycloakWebDriverConfigurator.java:[56,89] getBrowser() in org.jboss.arquillian.drone.webdriver.configuration.WebDriverConfiguration has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8537823Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/drone/KeycloakWebDriverConfigurator.java:[67,26] getBrowser() in org.jboss.arquillian.drone.webdriver.configuration.WebDriverConfiguration has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8544176Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/CrossDCTestEnricher.java:[430,46] unchecked method invocation: method isAnnotationPresent in class java.lang.Class is applied to given types
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8547770Z --   required: java.lang.Class<? extends java.lang.annotation.Annotation>
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8548856Z --   found:    java.lang.Class
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8551398Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/CrossDCTestEnricher.java:[430,47] unchecked conversion
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8554107Z --   required: java.lang.Class<? extends java.lang.annotation.Annotation>
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8555100Z --   found:    java.lang.Class
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8558518Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/AuthServerTestEnricher.java:[320,33] WildcardFileFilter(java.lang.String) in org.apache.commons.io.filefilter.WildcardFileFilter has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8563660Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/util/matchers/SamlStatusResponseTypeMatcher.java:[26,31] unchecked conversion
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8566442Z --   required: java.util.List<org.hamcrest.Matcher<java.net.URI>>
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8567408Z --   found:    java.util.ArrayList
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8570930Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/KeycloakArquillianExtension.java:[63,61] org.keycloak.testsuite.arquillian.DeploymentArchiveProcessor in org.keycloak.testsuite.arquillian has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8574597Z -- [INFO] 
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8576030Z -- [INFO] --- resources:3.0.1:copy-resources (example-realms) @ integration-arquillian-tests-base ---
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8577309Z -- [INFO] Skipping the execution.
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8577934Z -- [INFO] 
+Clustering IT	Run cluster tests	2024-08-12T12:59:46.8579008Z -- [INFO] --- dependency:3.1.2:unpack (unpack-undertow-server) @ integration-arquillian-tests-base ---
+Clustering IT	Run cluster tests	2024-08-12T12:59:47.2250776Z -- [INFO] Skipping plugin execution
+Clustering IT	Run cluster tests	2024-08-12T12:59:47.2255414Z -- [INFO] 
+Clustering IT	Run cluster tests	2024-08-12T12:59:47.2257188Z -- [INFO] --- dependency:3.1.2:unpack (unpack-quarkus-server) @ integration-arquillian-tests-base ---
+Clustering IT	Run cluster tests	2024-08-12T12:59:47.2270953Z -- [INFO] Configured Artifact: org.keycloak.testsuite:integration-arquillian-servers-auth-server-quarkus:999.0.0-SNAPSHOT:zip
+Clustering IT	Run cluster tests	2024-08-12T12:59:47.2500898Z -- [INFO] Unpacking /home/runner/.m2/repository/org/keycloak/testsuite/integration-arquillian-servers-auth-server-quarkus/999.0.0-SNAPSHOT/integration-arquillian-servers-auth-server-quarkus-999.0.0-SNAPSHOT.zip to /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/target/containers with includes "" and excludes ""
+Clustering IT	Run cluster tests	2024-08-12T12:59:49.2210366Z -- [INFO] 
+Clustering IT	Run cluster tests	2024-08-12T12:59:49.2212145Z -- [INFO] --- dependency:3.1.2:unpack (unpack-app-server) @ integration-arquillian-tests-base ---
+Clustering IT	Run cluster tests	2024-08-12T12:59:49.2228876Z -- [INFO] Skipping plugin execution
+Clustering IT	Run cluster tests	2024-08-12T12:59:49.2231129Z -- [INFO] 
+Clustering IT	Run cluster tests	2024-08-12T12:59:49.2233686Z -- [INFO] --- dependency:3.1.2:unpack (unpack-client-cli-dist) @ integration-arquillian-tests-base ---
+Clustering IT	Run cluster tests	2024-08-12T12:59:49.2247513Z -- [INFO] Configured Artifact: org.keycloak:keycloak-client-cli-dist:999.0.0-SNAPSHOT:zip
+Clustering IT	Run cluster tests	2024-08-12T12:59:49.2343912Z -- [INFO] Unpacking /home/runner/.m2/repository/org/keycloak/keycloak-client-cli-dist/999.0.0-SNAPSHOT/keycloak-client-cli-dist-999.0.0-SNAPSHOT.zip to /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/target/containers with includes "" and excludes ""
+Clustering IT	Run cluster tests	2024-08-12T12:59:49.4043617Z -- [INFO] 
+Clustering IT	Run cluster tests	2024-08-12T12:59:49.4045645Z -- [INFO] --- dependency:3.1.2:copy-dependencies (copy-testsuite-providers-to-base-testsuite) @ integration-arquillian-tests-base ---
+Clustering IT	Run cluster tests	2024-08-12T12:59:49.4158748Z -- [INFO] Copying integration-arquillian-testsuite-providers-999.0.0-SNAPSHOT.jar to /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/target/lib/integration-arquillian-testsuite-providers-999.0.0-SNAPSHOT.jar
+Clustering IT	Run cluster tests	2024-08-12T12:59:49.4351696Z -- [INFO] 
+Clustering IT	Run cluster tests	2024-08-12T12:59:49.4353433Z -- [INFO] --- resources:3.0.1:testResources (default-testResources) @ integration-arquillian-tests-base ---
+Clustering IT	Run cluster tests	2024-08-12T12:59:49.4381022Z -- [INFO] Using 'UTF-8' encoding to copy filtered resources.
+Clustering IT	Run cluster tests	2024-08-12T12:59:49.4457026Z -- [INFO] Copying 42 resources
+Clustering IT	Run cluster tests	2024-08-12T12:59:49.7659744Z -- [INFO] Copying 241 resources
+Clustering IT	Run cluster tests	2024-08-12T12:59:49.8132018Z -- [INFO] 
+Clustering IT	Run cluster tests	2024-08-12T12:59:49.8134015Z -- [INFO] --- antrun:1.8:run (clean-second-cache-server-arquillian-bug-workaround) @ integration-arquillian-tests-base ---
+Clustering IT	Run cluster tests	2024-08-12T12:59:49.8351336Z -- [INFO] Skipping Antrun execution
+Clustering IT	Run cluster tests	2024-08-12T12:59:49.8352683Z -- [INFO] 
+Clustering IT	Run cluster tests	2024-08-12T12:59:49.8354212Z -- [INFO] --- compiler:3.8.1:testCompile (default-testCompile) @ integration-arquillian-tests-base ---
+Clustering IT	Run cluster tests	2024-08-12T12:59:49.8773890Z -- [INFO] Changes detected - recompiling the module!
+Clustering IT	Run cluster tests	2024-08-12T12:59:49.8781633Z -- [INFO] Compiling 802 source files to /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/target/test-classes
+Clustering IT	Run cluster tests	2024-08-12T13:00:03.9528103Z -- [INFO] Annotation processing is enabled because one or more processors were found
+Clustering IT	Run cluster tests	2024-08-12T13:00:03.9529711Z --   on the class path. A future release of javac may disable annotation processing
+Clustering IT	Run cluster tests	2024-08-12T13:00:03.9531096Z --   unless at least one processor is specified by name (-processor), or a search
+Clustering IT	Run cluster tests	2024-08-12T13:00:03.9532908Z --   path is specified (--processor-path, --processor-module-path), or annotation
+Clustering IT	Run cluster tests	2024-08-12T13:00:03.9534107Z --   processing is enabled explicitly (-proc:only, -proc:full).
+Clustering IT	Run cluster tests	2024-08-12T13:00:03.9535117Z --   Use -Xlint:-options to suppress this message.
+Clustering IT	Run cluster tests	2024-08-12T13:00:03.9536448Z --   Use -proc:none to disable annotation processing.
+Clustering IT	Run cluster tests	2024-08-12T13:00:03.9610760Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oid4vc/issuance/signing/JWTVCIssuerWellKnownProviderTest.java:[39,30] junit.framework.Assert in junit.framework has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:03.9617062Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oid4vc/issuance/signing/JWTVCIssuerWellKnownProviderTest.java:[39,30] junit.framework.Assert in junit.framework has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:03.9622619Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oid4vc/issuance/signing/JWTVCIssuerWellKnownProviderTest.java:[39,30] junit.framework.Assert in junit.framework has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:03.9627186Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/util/AssertAdminEvents.java:[221,97] unchecked cast
+Clustering IT	Run cluster tests	2024-08-12T13:00:03.9629807Z --   required: java.util.List<org.keycloak.representations.idm.RoleRepresentation>
+Clustering IT	Run cluster tests	2024-08-12T13:00:03.9630955Z --   found:    java.lang.Object
+Clustering IT	Run cluster tests	2024-08-12T13:00:03.9634123Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/BrokerRunOnServerUtil.java:[63,46] getIdentityProviderByAlias(java.lang.String) in org.keycloak.models.RealmModel has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:03.9682028Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/BrokerRunOnServerUtil.java:[65,18] updateIdentityProvider(org.keycloak.models.IdentityProviderModel) in org.keycloak.models.RealmModel has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:03.9688369Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/BrokerRunOnServerUtil.java:[73,46] getIdentityProviderByAlias(java.lang.String) in org.keycloak.models.RealmModel has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:03.9693984Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/BrokerRunOnServerUtil.java:[75,18] updateIdentityProvider(org.keycloak.models.IdentityProviderModel) in org.keycloak.models.RealmModel has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:03.9808193Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/BrokerRunOnServerUtil.java:[126,49] getIdentityProviderByAlias(java.lang.String) in org.keycloak.models.RealmModel has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:03.9852484Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/BrokerRunOnServerUtil.java:[128,21] updateIdentityProvider(org.keycloak.models.IdentityProviderModel) in org.keycloak.models.RealmModel has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:03.9858140Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/BrokerRunOnServerUtil.java:[168,49] getIdentityProviderByAlias(java.lang.String) in org.keycloak.models.RealmModel has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:03.9863735Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/BrokerRunOnServerUtil.java:[170,21] updateIdentityProvider(org.keycloak.models.IdentityProviderModel) in org.keycloak.models.RealmModel has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:03.9869935Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/BrokerRunOnServerUtil.java:[187,45] removeExpired(org.keycloak.models.RealmModel) in org.keycloak.sessions.AuthenticationSessionProvider has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:03.9875873Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/AbstractAdvancedBrokerTest.java:[302,35] pageLoadTimeout(long,java.util.concurrent.TimeUnit) in org.openqa.selenium.WebDriver.Timeouts has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:03.9880720Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/client/ClientSecretRotationTest.java:[760,59] unchecked conversion
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0017529Z --   required: java.util.Map<java.lang.String,java.lang.String>
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0018571Z --   found:    java.util.Map
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0021685Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oidc/flows/AbstractOIDCResponseTypeTest.java:[92,73] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0027138Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oidc/flows/AbstractOIDCResponseTypeTest.java:[107,73] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0032172Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oidc/flows/AbstractOIDCResponseTypeTest.java:[251,69] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0037987Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/client/policies/AbstractClientPoliciesTest.java:[573,42] org.apache.http.impl.client.DefaultHttpClient in org.apache.http.impl.client has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0043619Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/client/policies/AbstractClientPoliciesTest.java:[695,59] unchecked conversion
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0046386Z --   required: java.util.Map<java.lang.String,java.lang.String>
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0047314Z --   found:    java.util.Map
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0049939Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/client/policies/AbstractClientPoliciesTest.java:[753,55] unchecked conversion
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0052669Z --   required: java.util.Map<java.lang.String,java.lang.String>
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0053592Z --   found:    java.util.Map
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0056373Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/client/policies/AbstractClientPoliciesTest.java:[1088,104] unchecked cast
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0059244Z --   required: java.util.Collection<java.lang.String>
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0060061Z --   found:    java.util.List
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0063143Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/client/policies/AbstractClientPoliciesTest.java:[1514,38] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0069339Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/client/policies/AbstractClientPoliciesTest.java:[1519,45] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0074767Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/client/policies/AbstractClientPoliciesTest.java:[1528,47] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0080539Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/client/policies/AbstractClientPoliciesTest.java:[1529,54] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0085731Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/SocialLoginTest.java:[243,14] getIdentityProvidersStream() in org.keycloak.models.RealmModel has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0090012Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/saml/BrokerTest.java:[340,63] unchecked conversion
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0092698Z --   required: org.keycloak.saml.BaseSAML2BindingBuilder<org.keycloak.saml.BaseSAML2BindingBuilder>
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0094115Z --   found:    org.keycloak.saml.BaseSAML2BindingBuilder
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0097666Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/authz/admin/AbstractAuthorizationTest.java:[134,25] defaultRoles(java.lang.String...) in org.keycloak.testsuite.util.ClientBuilder has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0103103Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/util/UserBuilder.java:[159,12] setTotp(java.lang.Boolean) in org.keycloak.representations.idm.UserRepresentation has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0108160Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/util/UserBuilder.java:[176,12] setTotp(java.lang.Boolean) in org.keycloak.representations.idm.UserRepresentation has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0113055Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/OfflineTokenTest.java:[273,67] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0118098Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/OfflineTokenTest.java:[347,31] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0122817Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/OfflineTokenTest.java:[361,83] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0127543Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/OfflineTokenTest.java:[364,83] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0132276Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/OfflineTokenTest.java:[382,31] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0137186Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/OfflineTokenTest.java:[396,112] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0260977Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/OfflineTokenTest.java:[402,57] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0266012Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/OfflineTokenTest.java:[412,66] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0271295Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/OfflineTokenTest.java:[435,31] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0276190Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/OfflineTokenTest.java:[445,83] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0281028Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/OfflineTokenTest.java:[457,32] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0285880Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/OfflineTokenTest.java:[465,83] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0290747Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/OfflineTokenTest.java:[466,87] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0295839Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/OfflineTokenTest.java:[561,31] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0300951Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/OfflineTokenTest.java:[683,111] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0306061Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/OfflineTokenTest.java:[711,55] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0311404Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/OfflineTokenTest.java:[720,37] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0316317Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/OfflineTokenTest.java:[720,70] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0321246Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/OfflineTokenTest.java:[972,31] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0326157Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/OfflineTokenTest.java:[982,83] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0331060Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/OfflineTokenTest.java:[994,32] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0336277Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/OfflineTokenTest.java:[1002,83] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0341250Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/OfflineTokenTest.java:[1003,87] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0346602Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/OfflineTokenTest.java:[1044,31] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0351821Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/cluster/AbstractInvalidationClusterTest.java:[179,41] unchecked method invocation: method sort in class java.util.Collections is applied to given types
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0354860Z --   required: java.util.List<T>
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0355498Z --   found:    java.util.List
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0358026Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/cluster/AbstractInvalidationClusterTest.java:[179,42] unchecked conversion
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0360446Z --   required: java.util.List<T>
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0361091Z --   found:    java.util.List
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0364160Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/adapter/servlet/SAMLServletAdapterTest.java:[1822,69] getSameSiteLegacyName() in org.keycloak.cookie.CookieType has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0369421Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/adapter/servlet/SAMLServletAdapterTest.java:[1824,72] getSameSiteLegacyName() in org.keycloak.cookie.CookieType has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0424094Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oidc/OIDCAdvancedRequestParamsTest.java:[406,39] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0429336Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oidc/OIDCAdvancedRequestParamsTest.java:[406,69] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0435261Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oidc/OIDCAdvancedRequestParamsTest.java:[1445,58] getKeysForUse(org.keycloak.jose.jwk.JSONWebKeySet,org.keycloak.jose.jwk.JWK.Use) in org.keycloak.util.JWKSUtils has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0441162Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oidc/OIDCAdvancedRequestParamsTest.java:[1532,58] getKeysForUse(org.keycloak.jose.jwk.JSONWebKeySet,org.keycloak.jose.jwk.JWK.Use) in org.keycloak.util.JWKSUtils has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0446843Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/util/FlowUtil.java:[206,42] getIdentityProviderByAlias(java.lang.String) in org.keycloak.models.RealmModel has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0452007Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/util/FlowUtil.java:[208,14] updateIdentityProvider(org.keycloak.models.IdentityProviderModel) in org.keycloak.models.RealmModel has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0457746Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/authz/admin/GenericPolicyManagementTest.java:[147,25] unchecked call to ArrayList(java.util.Collection<? extends E>) as a member of the raw type java.util.ArrayList
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0464062Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/adapter/AbstractAdapterClusteredTest.java:[102,23] ProxyHandler(io.undertow.server.handlers.proxy.ProxyClient,int,io.undertow.server.HttpHandler) in io.undertow.server.handlers.proxy.ProxyHandler has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0470406Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/federation/storage/ClientStorageTest.java:[469,31] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0475580Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/federation/storage/ClientStorageTest.java:[483,83] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0480736Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/federation/storage/ClientStorageTest.java:[486,83] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0485873Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/federation/storage/ClientStorageTest.java:[516,111] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0491052Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/federation/storage/ClientStorageTest.java:[519,65] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0620725Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/composites/CompositeRoleTest.java:[119,17] defaultRoles(java.lang.String...) in org.keycloak.testsuite.util.ClientBuilder has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0625308Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/composites/CompositeRoleTest.java:[139,17] defaultRoles(java.lang.String...) in org.keycloak.testsuite.util.ClientBuilder has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0630368Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/forms/LevelOfAssuranceFlowTest.java:[666,91] STORE_IN_USER_SESSION in org.keycloak.authentication.authenticators.conditional.ConditionalLoaAuthenticator has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0696984Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/forms/LevelOfAssuranceFlowTest.java:[678,91] STORE_IN_USER_SESSION in org.keycloak.authentication.authenticators.conditional.ConditionalLoaAuthenticator has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0702640Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/forms/LevelOfAssuranceFlowTest.java:[690,91] STORE_IN_USER_SESSION in org.keycloak.authentication.authenticators.conditional.ConditionalLoaAuthenticator has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0707874Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/cluster/AuthenticationSessionFailoverClusterTest.java:[117,90] getSameSiteLegacyName() in org.keycloak.cookie.CookieType has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0712628Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/federation/kerberos/AbstractKerberosTest.java:[224,16] unchecked call to put(K,V) as a member of the raw type java.util.Hashtable
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0717199Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/federation/kerberos/AbstractKerberosTest.java:[225,16] unchecked call to put(K,V) as a member of the raw type java.util.Hashtable
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0722325Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/federation/kerberos/AbstractKerberosTest.java:[228,20] unchecked call to put(K,V) as a member of the raw type java.util.Hashtable
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0726907Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/federation/kerberos/AbstractKerberosTest.java:[229,20] unchecked call to put(K,V) as a member of the raw type java.util.Hashtable
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0731555Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/KcOidcBrokerTransientSessionsTest.java:[632,71] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0737207Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/AbstractClientAuthSignedJWTTest.java:[348,41] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0741915Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/AbstractClientAuthSignedJWTTest.java:[416,37] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0746600Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/AbstractClientAuthSignedJWTTest.java:[576,37] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0751472Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/AbstractClientAuthSignedJWTTest.java:[713,42] org.apache.http.impl.client.DefaultHttpClient in org.apache.http.impl.client has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0757057Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/admin/PermissionsTest.java:[381,35] testLDAPConnection(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) in org.keycloak.admin.client.resource.RealmResource has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0768663Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/admin/PermissionsTest.java:[668,83] unchecked method invocation: method createMapper in interface org.keycloak.admin.client.resource.ProtocolMappersResource is applied to given types
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0772304Z --   required: java.util.List<org.keycloak.representations.idm.ProtocolMapperRepresentation>
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0773419Z --   found:    java.util.List
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0775854Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/admin/PermissionsTest.java:[668,95] unchecked conversion
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0778615Z --   required: java.util.List<org.keycloak.representations.idm.ProtocolMapperRepresentation>
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0779751Z --   found:    java.util.List
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0836634Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/admin/PermissionsTest.java:[1814,64] getRealmLocalizationTexts(java.lang.String,java.lang.Boolean) in org.keycloak.admin.client.resource.RealmLocalizationResource has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0842790Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oidc/AuthenticationMethodReferenceTest.java:[481,43] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0847532Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oidc/AuthenticationMethodReferenceTest.java:[528,69] unchecked cast
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0850415Z --   required: java.util.List<java.lang.String>
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0851124Z --   found:    java.lang.Object
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0854353Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/authz/admin/AbstractPolicyManagementTest.java:[74,25] defaultRoles(java.lang.String...) in org.keycloak.testsuite.util.ClientBuilder has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0860081Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/admin/concurrency/ConcurrentLoginTest.java:[443,40] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0864638Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/crossdc/AbstractAdminCrossDCTest.java:[97,50] unchecked cast
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0866805Z --   required: T
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0867325Z --   found:    java.lang.Comparable
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0869613Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/crossdc/AbstractAdminCrossDCTest.java:[101,54] unchecked cast
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0871756Z --   required: T
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0872294Z --   found:    java.lang.Comparable
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0937670Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/crossdc/SessionExpirationCrossDCTest.java:[577,80] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0943242Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/crossdc/SessionExpirationCrossDCTest.java:[607,80] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0949008Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/organization/admin/OrganizationInvitationLinkTest.java:[220,35] pageLoadTimeout(long,java.util.concurrent.TimeUnit) in org.openqa.selenium.WebDriver.Timeouts has been deprecated
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0955135Z -- [INFO] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/organization/broker/OrganizationIdentityProviderTest.java: Some input files additionally use or override a deprecated API.
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0959991Z -- [INFO] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/admin/event/EventConfigTest.java: Some input files additionally use unchecked or unsafe operations.
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0962443Z -- [INFO] 
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.0963631Z -- [INFO] --- shrinkwrap-resolver:3.2.1:propagate-execution-context (default) @ integration-arquillian-tests-base ---
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.1762725Z -- [INFO] 
+Clustering IT	Run cluster tests	2024-08-12T13:00:04.1763921Z -- [INFO] --- docker:0.40.3:start (start-db-container) @ integration-arquillian-tests-base ---
+Clustering IT	Run cluster tests	2024-08-12T13:00:17.4997261Z -- [ERROR] DOCKER> Error occurred during container startup, shutting down...
+Clustering IT	Run cluster tests	2024-08-12T13:00:17.5000696Z -- [ERROR] DOCKER> I/O Error [Unable to pull 'postgres:16' : {"message":"Head \"https://registry-1.docker.io/v2/library/postgres/manifests/16\": received unexpected HTTP status: 502 Bad Gateway"} (Internal Server Error: 500)]
+Clustering IT	Run cluster tests	2024-08-12T13:00:17.5013909Z -- [INFO] ------------------------------------------------------------------------
+Clustering IT	Run cluster tests	2024-08-12T13:00:17.5014754Z -- [INFO] BUILD FAILURE
+Clustering IT	Run cluster tests	2024-08-12T13:00:17.5015771Z -- [INFO] ------------------------------------------------------------------------
+Clustering IT	Run cluster tests	2024-08-12T13:00:17.5016671Z -- [INFO] Total time:  42.168 s
+Clustering IT	Run cluster tests	2024-08-12T13:00:17.5019690Z -- [INFO] Finished at: 2024-08-12T13:00:17Z
+Clustering IT	Run cluster tests	2024-08-12T13:00:17.5020717Z -- [INFO] ------------------------------------------------------------------------
+Clustering IT	Run cluster tests	2024-08-12T13:00:17.5032890Z -- [ERROR] Failed to execute goal io.fabric8:docker-maven-plugin:0.40.3:start (start-db-container) on project integration-arquillian-tests-base: I/O Error: Unable to pull 'postgres:16' : {"message":"Head \"https://registry-1.docker.io/v2/library/postgres/manifests/16\": received unexpected HTTP status: 502 Bad Gateway"} (Internal Server Error: 500) -> [Help 1]
+Clustering IT	Run cluster tests	2024-08-12T13:00:17.5036461Z -- [ERROR] 
+Clustering IT	Run cluster tests	2024-08-12T13:00:17.5037711Z -- [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+Clustering IT	Run cluster tests	2024-08-12T13:00:17.5039374Z -- [ERROR] Re-run Maven using the -X switch to enable full debug logging.
+Clustering IT	Run cluster tests	2024-08-12T13:00:17.5040386Z -- [ERROR] 
+Clustering IT	Run cluster tests	2024-08-12T13:00:17.5041543Z -- [ERROR] For more information about the errors and possible solutions, please read the following articles:
+Clustering IT	Run cluster tests	2024-08-12T13:00:17.5043252Z -- [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
+Clustering IT	Run cluster tests	2024-08-12T13:00:17.5402849Z ##[error]Process completed with exit code 1.
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3121434Z Prepare all required actions
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3215045Z ##[group]Run ./.github/actions/status-check
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3215660Z with:
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3220400Z   jobs: {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "conditional": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	      "ci": "true",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	      "ci-aurora": "false",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	      "ci-quarkus": "false",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	      "ci-sssd": "false",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	      "ci-store": "false",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	      "ci-test-poc": "false",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	      "ci-webauthn": "true"
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    }
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "build": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "unit-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "base-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "adapter-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "quarkus-unit-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "skipped",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "quarkus-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "jdk-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "store-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "persistent-sessions-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "skipped",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "store-model-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "skipped",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "clustering-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "failure",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "fips-unit-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "fips-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "forms-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "webauthn-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "sssd-unit-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "skipped",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "migration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "external-infinispan-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "skipped",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "test-poc": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "skipped",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  }
+Status Check - Keycloak CI	Run /./.github/actions/status-check	}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3226116Z env:
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3226533Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3227260Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3227798Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3228236Z ##[endgroup]
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3486143Z ##[group]Run JOBS='{
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3486805Z [36;1mJOBS='{[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3487282Z [36;1m  "conditional": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3487685Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3488062Z [36;1m    "outputs": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3488518Z [36;1m      "ci": "true",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3488904Z [36;1m      "ci-aurora": "false",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3489283Z [36;1m      "ci-quarkus": "false",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3489883Z [36;1m      "ci-sssd": "false",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3490293Z [36;1m      "ci-store": "false",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3490673Z [36;1m      "ci-test-poc": "false",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3491173Z [36;1m      "ci-webauthn": "true"[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3491569Z [36;1m    }[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3491848Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3492262Z [36;1m  "build": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3492634Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3493008Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3493428Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3493750Z [36;1m  "unit-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3494097Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3494622Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3494975Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3495302Z [36;1m  "base-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3495790Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3496185Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3496754Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3497189Z [36;1m  "adapter-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3497653Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3498006Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3498415Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3498764Z [36;1m  "quarkus-unit-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3499203Z [36;1m    "result": "skipped",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3499898Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3500255Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3500572Z [36;1m  "quarkus-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3501095Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3501491Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3501805Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3502221Z [36;1m  "jdk-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3502878Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3503243Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3503686Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3504193Z [36;1m  "store-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3504641Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3505071Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3505428Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3505797Z [36;1m  "persistent-sessions-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3506265Z [36;1m    "result": "skipped",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3506661Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3507035Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3507393Z [36;1m  "store-model-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3507791Z [36;1m    "result": "skipped",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3508197Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3508574Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3509013Z [36;1m  "clustering-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3509487Z [36;1m    "result": "failure",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3509899Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3510252Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3510596Z [36;1m  "fips-unit-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3511012Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3511428Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3511775Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3512145Z [36;1m  "fips-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3512587Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3512970Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3513355Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3513786Z [36;1m  "forms-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3514215Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3514629Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3515000Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3515351Z [36;1m  "webauthn-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3515814Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3516216Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3516576Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3516929Z [36;1m  "sssd-unit-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3517345Z [36;1m    "result": "skipped",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3517764Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3518201Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3518556Z [36;1m  "migration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3518943Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3519410Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3519730Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3520077Z [36;1m  "external-infinispan-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3520588Z [36;1m    "result": "skipped",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3520950Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3521298Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3521696Z [36;1m  "test-poc": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3522028Z [36;1m    "result": "skipped",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3522429Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3522914Z [36;1m  }[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3523183Z [36;1m}'[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3523503Z [36;1m[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3523879Z [36;1mecho "Job status:"[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3524384Z [36;1mecho $JOBS | jq -r 'to_entries[] | " - \(.key): \(.value.result)"'[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3525128Z [36;1m[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3525645Z [36;1mfor i in $(echo $JOBS | jq -r 'to_entries[] | .value.result'); do[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3526269Z [36;1m  if [ "$i" != "success" ] && [ "$i" != "skipped" ]; then[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3526798Z [36;1m    echo ""[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3527245Z [36;1m    echo "Status check not okay!"[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3527650Z [36;1m    exit 1[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3528153Z [36;1m  fi[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3528605Z [36;1mdone[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3712695Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3713415Z env:
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3713844Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3714434Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3714999Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3715463Z ##[endgroup]
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.3868627Z Job status:
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.4094584Z  - conditional: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.4095252Z  - build: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.4095820Z  - unit-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.4096366Z  - base-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.4096853Z  - adapter-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.4097285Z  - quarkus-unit-tests: skipped
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.4097817Z  - quarkus-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.4098280Z  - jdk-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.4098689Z  - store-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.4099258Z  - persistent-sessions-tests: skipped
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.4099720Z  - store-model-tests: skipped
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.4100168Z  - clustering-integration-tests: failure
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.4100717Z  - fips-unit-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.4101136Z  - fips-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.4101581Z  - forms-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.4102110Z  - webauthn-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.4102863Z  - sssd-unit-tests: skipped
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.4103530Z  - migration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.4104394Z  - external-infinispan-tests: skipped
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.4105118Z  - test-poc: skipped
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.4312872Z 
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.4313307Z Status check not okay!
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-08-12T13:59:42.4328635Z ##[error]Process completed with exit code 1.
