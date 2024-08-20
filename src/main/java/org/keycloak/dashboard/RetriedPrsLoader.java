@@ -52,7 +52,7 @@ public class RetriedPrsLoader {
             if (r.getRunAttempt() > 1) {
                 GHRunAttempt ghRunAttempt = ghCli.apiGet(GHRunAttempt.class, "actions/runs/" + r.getId() + "/attempts/" + (r.getRunAttempt() - 1) + "?exclude_pull_requests=true").get(0);
 
-                if (ghRunAttempt.getConclusion().equals("failure")) {
+                if ("failure".equals(ghRunAttempt.getConclusion())) {
                     retriedPrIds.add(ghRunAttempt.getId());
 
                     File jobsFile = new File(logsDir, "pr-jobs-" + r.getId());
