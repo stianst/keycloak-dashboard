@@ -1,0 +1,97 @@
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:50:22.9606048Z ##[group]Run EC2_CLUSTER_NAME=keycloak_776a491
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:50:22.9606636Z [36;1mEC2_CLUSTER_NAME=keycloak_776a491[0m
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:50:22.9607005Z [36;1mAWS_REGION=us-east-1[0m
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:50:22.9607699Z [36;1mPROPS=' -Dkeycloak.connectionsJpa.jdbcParameters=\"?ssl=true&sslmode=verify-ca&sslrootcert=/opt/keycloak/aws.pem\"'[0m
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:50:22.9608397Z [36;1m[0m
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:50:22.9609420Z [36;1mPROPS+=" -Dauth.server.db.host=gh-action-776a491-10517582039-1.cluster-ctdxeb4izrnc.us-east-1.rds.amazonaws.com -Dkeycloak.connectionsJpa.***"[0m
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:50:22.9610973Z [36;1mPROPS+=" -Djdbc.mvn.groupId=software.amazon.jdbc -Djdbc.mvn.artifactId=aws-advanced-jdbc-wrapper -Djdbc.mvn.version=2.3.1 -Djdbc.driver.tmp.dir=target/unpacked/keycloak-24.0.4/providers"[0m
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:50:22.9611957Z [36;1m[0m
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:50:22.9612201Z [36;1mcd .github/scripts/ansible[0m
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:50:22.9614187Z [36;1m./mvn_ec2_runner.sh ${AWS_REGION} ${EC2_CLUSTER_NAME} "clean install -B -Dsurefire.rerunFailingTestsCount=2 -Pauth-server-quarkus -Pdb-aurora-postgres -Pauth-server-migration $PROPS -Dtest=MigrationTest -Dmigration.mode=auto -Dmigrated.auth.server.version=24.0.4 -Dmigration.import.file.name=migration-realm-24.0.4.json -Dauth.server.ssl.required=false -f testsuite/integration-arquillian/pom.xml 2>&1 | misc/log/trimmer.sh"[0m
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:50:22.9616140Z [36;1m[0m
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:50:22.9616627Z [36;1m# Copy returned surefire-report directories to workspace root to ensure they're discovered[0m
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:50:22.9617238Z [36;1mresults=(files/keycloak/results/*)[0m
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:50:22.9617607Z [36;1mrsync -a $results/* ../../../[0m
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:50:22.9617922Z [36;1m[0m
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:50:22.9618144Z [36;1mrm -rf $results[0m
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:50:22.9681047Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:50:22.9681463Z env:
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:50:22.9681816Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:50:22.9682285Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:50:22.9682679Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:50:22.9683075Z   old-version: 24.0.4
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:50:22.9683329Z ##[endgroup]
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:50:22.9808156Z mvn_params="clean install -B -Dsurefire.rerunFailingTestsCount=2 -Pauth-server-quarkus -Pdb-aurora-postgres -Pauth-server-migration  -Dkeycloak.connectionsJpa.jdbcParameters=\"?ssl=true&sslmode=verify-ca&sslrootcert=/opt/keycloak/aws.pem\" -Dauth.server.db.host=gh-action-776a491-10517582039-1.cluster-ctdxeb4izrnc.us-east-1.rds.amazonaws.com -Dkeycloak.connectionsJpa.*** -Djdbc.mvn.groupId=software.amazon.jdbc -Djdbc.mvn.artifactId=aws-advanced-jdbc-wrapper -Djdbc.mvn.version=2.3.1 -Djdbc.driver.tmp.dir=target/unpacked/keycloak-24.0.4/providers -Dtest=MigrationTest -Dmigration.mode=auto -Dmigrated.auth.server.version=24.0.4 -Dmigration.import.file.name=migration-realm-24.0.4.json -Dauth.server.ssl.required=false -f testsuite/integration-arquillian/pom.xml 2>&1 | misc/log/trimmer.sh"
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:50:23.3495154Z 
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:50:23.3496080Z PLAY [keycloak] ****************************************************************
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:50:23.3496869Z 
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:50:23.3497345Z TASK [Gathering Facts] *********************************************************
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:50:25.0731658Z ok: [3.81.163.224]
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:50:25.0731960Z 
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:50:25.0732374Z TASK [mvn_ec2_runner : include_tasks] ******************************************
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:50:25.0945424Z included: /home/runner/work/keycloak/keycloak/.github/scripts/ansible/roles/mvn_ec2_runner/tasks/run.yml for 3.81.163.224
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:50:25.0946590Z 
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:50:25.0946996Z TASK [mvn_ec2_runner : debug] **************************************************
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:50:25.1094574Z ok: [3.81.163.224] => {
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:50:25.1095162Z     "msg": "Variable `mvn_params` must be set."
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:50:25.1095766Z }
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:50:25.1095966Z 
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:50:25.1096367Z TASK [mvn_ec2_runner : set_fact] ***********************************************
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:50:25.1318811Z ok: [3.81.163.224]
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:50:25.1319350Z 
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:50:25.1319763Z TASK [mvn_ec2_runner : debug] **************************************************
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:50:25.1461674Z ok: [3.81.163.224] => {
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:50:25.1462357Z     "local_results_dir": "files/keycloak/results/20240823005025"
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:50:25.1463048Z }
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:50:25.1463242Z 
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:50:25.1463693Z TASK [mvn_ec2_runner : Cleanup Previous Runs] **********************************
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:50:26.0770983Z fatal: [3.81.163.224]: FAILED! => {"changed": true, "cmd": "killall java\n", "delta": "0:00:00.009020", "end": "2024-08-23 00:50:25.965791", "msg": "non-zero return code", "rc": 1, "start": "2024-08-23 00:50:25.956771", "stderr": "java: no process found", "stderr_lines": ["java: no process found"], "stdout": "", "stdout_lines": []}
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:50:26.0773252Z ...ignoring
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:50:26.0773484Z 
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:50:26.0773931Z TASK [mvn_ec2_runner : Run mvn command on the remote hosts] ********************
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:59:06.1584069Z ASYNC POLL on 3.81.163.224: jid=j364743925282.25079 started=1 finished=0
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:59:06.1585688Z ASYNC POLL on 3.81.163.224: jid=j364743925282.25079 started=1 finished=0
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:59:06.1586656Z ASYNC POLL on 3.81.163.224: jid=j364743925282.25079 started=1 finished=0
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:59:06.1587741Z ASYNC POLL on 3.81.163.224: jid=j364743925282.25079 started=1 finished=0
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:59:06.1588831Z ASYNC POLL on 3.81.163.224: jid=j364743925282.25079 started=1 finished=0
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:59:06.1589904Z ASYNC POLL on 3.81.163.224: jid=j364743925282.25079 started=1 finished=0
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:59:06.1590961Z ASYNC POLL on 3.81.163.224: jid=j364743925282.25079 started=1 finished=0
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:59:06.1591996Z ASYNC POLL on 3.81.163.224: jid=j364743925282.25079 started=1 finished=0
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:59:06.1593380Z ASYNC POLL on 3.81.163.224: jid=j364743925282.25079 started=1 finished=0
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:59:06.1594413Z ASYNC POLL on 3.81.163.224: jid=j364743925282.25079 started=1 finished=0
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:59:06.1595423Z ASYNC POLL on 3.81.163.224: jid=j364743925282.25079 started=1 finished=0
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:59:06.1596437Z ASYNC POLL on 3.81.163.224: jid=j364743925282.25079 started=1 finished=0
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:59:06.1597451Z ASYNC POLL on 3.81.163.224: jid=j364743925282.25079 started=1 finished=0
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:59:06.1598463Z ASYNC POLL on 3.81.163.224: jid=j364743925282.25079 started=1 finished=0
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:59:06.1599469Z ASYNC POLL on 3.81.163.224: jid=j364743925282.25079 started=1 finished=0
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:59:06.1600479Z ASYNC POLL on 3.81.163.224: jid=j364743925282.25079 started=1 finished=0
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:59:06.1601474Z ASYNC POLL on 3.81.163.224: jid=j364743925282.25079 started=1 finished=0
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:59:06.1602475Z ASYNC POLL on 3.81.163.224: jid=j364743925282.25079 started=1 finished=0
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:59:06.1603500Z ASYNC POLL on 3.81.163.224: jid=j364743925282.25079 started=1 finished=0
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:59:06.1604518Z ASYNC POLL on 3.81.163.224: jid=j364743925282.25079 started=1 finished=0
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:59:06.1605551Z ASYNC POLL on 3.81.163.224: jid=j364743925282.25079 started=1 finished=0
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:59:06.1606579Z ASYNC POLL on 3.81.163.224: jid=j364743925282.25079 started=1 finished=0
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:59:06.1607558Z ASYNC POLL on 3.81.163.224: jid=j364743925282.25079 started=1 finished=0
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:59:06.1608962Z ASYNC POLL on 3.81.163.224: jid=j364743925282.25079 started=1 finished=0
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:59:06.1609995Z ASYNC POLL on 3.81.163.224: jid=j364743925282.25079 started=1 finished=0
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:59:06.1611023Z ASYNC POLL on 3.81.163.224: jid=j364743925282.25079 started=1 finished=0
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:59:06.1612006Z ASYNC POLL on 3.81.163.224: jid=j364743925282.25079 started=1 finished=0
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:59:06.1612840Z ASYNC POLL on 3.81.163.224: jid=j364743925282.25079 started=1 finished=0
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:59:06.1613824Z ASYNC POLL on 3.81.163.224: jid=j364743925282.25079 started=1 finished=0
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:59:06.1614820Z ASYNC POLL on 3.81.163.224: jid=j364743925282.25079 started=1 finished=0
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:59:06.1616154Z ASYNC POLL on 3.81.163.224: jid=j364743925282.25079 started=1 finished=0
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:59:06.1617340Z ASYNC POLL on 3.81.163.224: jid=j364743925282.25079 started=1 finished=0
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:59:06.1618381Z ASYNC POLL on 3.81.163.224: jid=j364743925282.25079 started=1 finished=0
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:59:06.1619394Z ASYNC POLL on 3.81.163.224: jid=j364743925282.25079 started=1 finished=0
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:59:06.1620390Z ASYNC POLL on 3.81.163.224: jid=j364743925282.25079 started=1 finished=0
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:59:06.1621414Z ASYNC POLL on 3.81.163.224: jid=j364743925282.25079 started=1 finished=0
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:59:06.1622416Z ASYNC POLL on 3.81.163.224: jid=j364743925282.25079 started=1 finished=0
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:59:06.1623365Z ASYNC POLL on 3.81.163.224: jid=j364743925282.25079 started=1 finished=0
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:59:06.1624267Z ASYNC POLL on 3.81.163.224: jid=j364743925282.25079 started=1 finished=0
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:59:06.1625157Z ASYNC POLL on 3.81.163.224: jid=j364743925282.25079 started=1 finished=0
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:59:06.1626058Z ASYNC POLL on 3.81.163.224: jid=j364743925282.25079 started=1 finished=0
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:59:06.1626976Z ASYNC POLL on 3.81.163.224: jid=j364743925282.25079 started=1 finished=0
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:59:06.1627875Z ASYNC POLL on 3.81.163.224: jid=j364743925282.25079 started=1 finished=0
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:59:06.1628791Z ASYNC POLL on 3.81.163.224: jid=j364743925282.25079 started=1 finished=0
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:59:06.1629685Z ASYNC POLL on 3.81.163.224: jid=j364743925282.25079 started=1 finished=0
+AuroraDB IT	Run Aurora migration tests on EC2	2024-08-23T00:59:06.1630478Z ASYNC FAILED on 3.81.163.224: jid=j364743925282.25079
