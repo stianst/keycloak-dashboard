@@ -38,6 +38,14 @@ public class WorkflowStatusLoader {
 
         System.out.print(".");
 
+        list.addAll(ghCli.apiGet(GHWorkflowRuns.class, "repos/keycloak/keycloak-quickstarts/actions/runs",
+                "-F", "status=completed",
+                "-F", "created=>=" + DateUtil.minusDaysString(3),
+                "--paginate",
+                "-F", "-event=dynamic"));
+
+        System.out.print(".");
+
         list.addAll(ghCli.apiGet(GHWorkflowRuns.class, "repos/keycloak-rel/keycloak-rel/actions/runs",
                 "-F", "status=completed",
                 "-F", "created=>=" + DateUtil.minusDaysString(3),
@@ -45,6 +53,7 @@ public class WorkflowStatusLoader {
 
         List<GHWorkflowRun> workflowRuns = GHWorkflowRuns.combine(list).getWorkflowRuns().stream()
                 .filter(r -> !r.getEvent().equals("pull_request") && !r.getEvent().equals("pull_request_target"))
+                .filter(r -> !r.getEvent().equals("dynamic"))
                 .filter(distinctByWorkflowAndBranch()).toList();
 
         ObjectMapper objectMapper = new ObjectMapper();

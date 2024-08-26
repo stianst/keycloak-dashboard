@@ -11,7 +11,7 @@
         </tr>
         <#list workflowStatus.workflows as workflow>
         <tr>
-            <td>${workflow.name}</td>
+            <td><a href="${workflow.workflowUrl}">${workflow.repository} / ${workflow.name}</a></td>
             <#list workflowStatus.branches as branch>
             <#if workflow.branchStatus[branch]??>
                 <td class="count center <#if workflow.branchStatus[branch].conclusion == "success">success</#if> <#if workflow.branchStatus[branch].conclusion == "failure">error</#if>">

@@ -70,7 +70,7 @@ public class WorkflowStatus {
             if (f.isPresent()) {
                 w = f.get();
             } else {
-                w = new Workflow(run.getName(), run.getPath());
+                w = new Workflow(run.getRepository().getFullName(), run.getName(), run.getPath());
                 workflows.add(w);
             }
 
@@ -90,13 +90,19 @@ public class WorkflowStatus {
 
     public static final class Workflow {
 
+        private final String repository;
         private final String name;
         private final String path;
         private final Map<String, GHWorkflowRun> branchStatus = new HashMap<>();
 
-        public Workflow(String name, String path) {
+        public Workflow(String repository, String name, String path) {
+            this.repository = repository;
             this.name = name;
             this.path = path;
+        }
+
+        public String getRepository() {
+            return repository.substring(repository.lastIndexOf('/') + 1);
         }
 
         public String getName() {
@@ -117,6 +123,10 @@ public class WorkflowStatus {
                 return null;
             }
             return "https://github.com/" + run.getRepository().getFullName() + "/actions/workflows/" + getFile() + "?query=" + GHQuery.encode("branch:" + branch);
+        }
+
+        public String getWorkflowUrl() {
+            return "https://github.com/" + repository + "/actions/workflows/" + getFile();
         }
 
     }
