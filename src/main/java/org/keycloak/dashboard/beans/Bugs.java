@@ -33,7 +33,7 @@ public class Bugs {
 
         flakyTests = issues.stream()
                 .filter(i -> i.hasLabel("flaky-test") && i.isOpen() && i.getTitle().startsWith("Flaky test:")).map(FlakyTest::new)
-                .sorted(Comparator.comparing(FlakyTest::getUpdatedAt).reversed())
+                .sorted(Comparator.comparing(FlakyTest::getCount).reversed())
                 .collect(Collectors.toList());
 
         stats = convertToBugStat(issues, data, teams);

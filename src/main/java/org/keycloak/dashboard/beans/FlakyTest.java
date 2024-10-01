@@ -1,9 +1,12 @@
 package org.keycloak.dashboard.beans;
 
 import org.keycloak.dashboard.rep.GitHubIssue;
+import org.keycloak.dashboard.util.DateUtil;
 
+import java.time.Duration;
 import java.util.Date;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
@@ -27,6 +30,57 @@ public class FlakyTest {
     public String getTestClass() {
         String testClass = getTitle();
         return testClass.substring(testClass.lastIndexOf('.') + 1).split("#")[0];
+    }
+
+    public List<String> getTeams() {
+        return issue.getLabels().stream().filter(l -> l.startsWith("team/")).map(l -> l.substring("team/".length())).toList();
+    }
+
+    public String getStatus() {
+        if (issue.getLabels().contains("status/triage")) {
+            return "triage";
+        }
+        return issue.getLabels().stream().filter(l -> l.startsWith("priority/")).map(l -> l.substring("priority/".length())).collect(Collectors.joining(", "));
+    }
+
+    public String getCountClass() {
+        int c = getCount();
+        if (c < 10) {
+            return "blank";
+        } else if (c < 50) {
+            return "warn";
+        } else {
+            return "error";
+        }
+    }
+
+    public String getCreatedAtClass() {
+        Date d = getCreatedAt();
+        if (d.before(DateUtil.minusdays(60))) {
+            return "error";
+        } else if (d.before(DateUtil.minusdays(30))) {
+            return "warn";
+        } else {
+            return "blank";
+        }
+    }
+
+    public String getUpdatedAtClass() {
+        Date d = getUpdatedAt();
+        if (d.after(DateUtil.minusdays(1))) {
+            return "error";
+        } else if (d.after(DateUtil.minusdays(7))) {
+            return "warn";
+        } else {
+            return "blank";
+        }
+    }
+
+    public int weight() {
+        int c = getCount();
+        long daysSinceUpdated = TimeUnit.DAYS.convert(System.currentTimeMillis() - getUpdatedAt().getTime(), TimeUnit.MILLISECONDS);
+        System.out.println(c + "\t" + daysSinceUpdated);
+        return 0;
     }
 
     public List<String> getLabels() {

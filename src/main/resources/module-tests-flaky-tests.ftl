@@ -8,8 +8,8 @@
             <th>Package</th>
             <th>Class</th>
             <th>Method</th>
-            <th>Milestone</th>
-            <th>Labels</th>
+            <th>Team</th>
+            <th>Status</th>
             <th>Created</th>
             <th>Updated</th>
             <th class="center">Count</th>
@@ -19,11 +19,11 @@
             <td><a href="https://github.com/keycloak/keycloak/issues/${flakyTest.number?string.computer}">${flakyTest.package}</a></td>
             <td><a href="https://github.com/keycloak/keycloak/issues/${flakyTest.number?string.computer}">${flakyTest.testClass}</a></td>
             <td><a href="https://github.com/keycloak/keycloak/issues/${flakyTest.number?string.computer}">${flakyTest.testMethod}</a></td>
-            <td>${flakyTest.milestone!}</td>
-            <td>${flakyTest.labels?join(", ")}</td>
-            <td>${flakyTest.createdAt?date}</td>
-            <td>${flakyTest.updatedAt?date}</td>
-            <td class="center">${flakyTest.count}</td>
+            <td>${flakyTest.teams?join(", ")}</td>
+            <td>${flakyTest.status}</td>
+            <td class="${flakyTest.createdAtClass}">${flakyTest.createdAt?date}</td>
+            <td class="${flakyTest.updatedAtClass}">${flakyTest.updatedAt?date}</td>
+            <td class="count ${flakyTest.countClass} center">${flakyTest.count}</td>
         </tr>
         </#list>
     </table>
