@@ -5,6 +5,19 @@
 <div class="body">
     <table>
         <tr>
+            <#list flakyTestCountsByTeam?keys as team>
+            <th>${team}</th>
+            </#list>
+        </tr>
+        <tr>
+            <#list flakyTestCountsByTeam?values as count>
+            <td>${count}</td>
+            </#list>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
             <th>Package</th>
             <th>Class</th>
             <th>Method</th>

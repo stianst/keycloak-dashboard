@@ -65,6 +65,7 @@ public class Dashboard {
         attributes.put("failedJobs", logFailedParser.getUnlinkedFailedJobs());
         attributes.put("linkedFailedJobs", logFailedParser.getLinkedFailedJobs());
         attributes.put("flakyTests", bugs.getFlakyTests());
+        attributes.put("flakyTestCountsByTeam", bugs.getFlakyTestCountsByTeam());
         attributes.put("nextRelease", bugs.getNextRelease());
         attributes.put("workflowWaitTimes", new WorkflowWaitTimes(data, teamMembers).getWorkFlowWaitPerMonthList());
         attributes.put("configContents", Config.getConfigContents());

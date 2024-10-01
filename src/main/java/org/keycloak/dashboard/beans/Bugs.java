@@ -7,11 +7,7 @@ import org.keycloak.dashboard.rep.GitHubIssue;
 import org.keycloak.dashboard.rep.Teams;
 import org.keycloak.dashboard.util.DateUtil;
 
-import java.util.Comparator;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class Bugs {
@@ -26,6 +22,8 @@ public class Bugs {
 
     private List<FlakyTest> flakyTests;
 
+    private Map<String, Integer> flakyTestCountsByTeam;
+
     public Bugs(GitHubData data, Teams teams) {
         issues = data.getIssues().stream().filter(i -> i.getLabels().contains("kind/bug")).collect(Collectors.toList());
 
@@ -36,9 +34,26 @@ public class Bugs {
                 .sorted(Comparator.comparing(FlakyTest::getCount).reversed())
                 .collect(Collectors.toList());
 
+        flakyTestCountsByTeam = convertToTeamCount(flakyTests, teams);
+
         stats = convertToBugStat(issues, data, teams);
         areaStats = convertToAreaStats(issues);
         teamStats = convertToTeamStats(issues, teams);
+    }
+
+    private Map<String, Integer> convertToTeamCount(List<FlakyTest> flakyTests, Teams teams) {
+        Map<String, Integer> counts = new TreeMap<>();
+        for (String team : teams.keySet()) {
+            if (!team.equals("no-team")) {
+                counts.put(team.substring("team/".length()), 0);
+            }
+        }
+        for (FlakyTest f : flakyTests) {
+            for (String t : f.getTeams()) {
+                counts.put(t, counts.get(t) + 1);
+            }
+        }
+        return counts;
     }
 
     private List<BugStat> convertToBugStat(List<GitHubIssue> issues, GitHubData data, Teams teams) {
@@ -163,4 +178,7 @@ public class Bugs {
         return flakyTests;
     }
 
+    public Map<String, Integer> getFlakyTestCountsByTeam() {
+        return flakyTestCountsByTeam;
+    }
 }

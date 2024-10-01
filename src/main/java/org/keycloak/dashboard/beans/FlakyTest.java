@@ -76,13 +76,6 @@ public class FlakyTest {
         }
     }
 
-    public int weight() {
-        int c = getCount();
-        long daysSinceUpdated = TimeUnit.DAYS.convert(System.currentTimeMillis() - getUpdatedAt().getTime(), TimeUnit.MILLISECONDS);
-        System.out.println(c + "\t" + daysSinceUpdated);
-        return 0;
-    }
-
     public List<String> getLabels() {
         return issue.getLabels().stream()
                 .filter(Predicate.isEqual("area/ci").negate())
