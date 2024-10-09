@@ -1,0 +1,1036 @@
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:05.9787362Z ##[group]Run TESTS=`testsuite/integration-arquillian/tests/base/testsuites/suite.sh webauthn`
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:05.9788247Z [36;1mTESTS=`testsuite/integration-arquillian/tests/base/testsuites/suite.sh webauthn`[0m
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:05.9788830Z [36;1mecho "Tests: $TESTS"[0m
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:05.9790279Z [36;1m./mvnw test -Dsurefire.rerunFailingTestsCount=2 -Pauth-server-quarkus -Dtest=$TESTS -Dbrowser=firefox "-Dwebdriver.chrome.driver=$CHROMEWEBDRIVER/chromedriver" "-Dwebdriver.gecko.driver=$GECKOWEBDRIVER/geckodriver" -pl testsuite/integration-arquillian/tests/base 2>&1 | misc/log/trimmer.sh[0m
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:05.9815379Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:05.9815809Z env:
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:05.9816163Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:05.9816851Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:05.9817250Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:05.9817791Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.4-7/x64
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:05.9818447Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.4-7/x64
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:05.9818931Z ##[endgroup]
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:05.9941571Z Tests: org.keycloak.testsuite.webauthn.**
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:08.2924605Z -- [INFO] Loading cache configuration from /home/runner/work/keycloak/keycloak/.mvn/maven-build-cache-config.xml
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:08.3070108Z -- [INFO] Scanning for projects...
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:09.1691667Z -- [INFO] 
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:09.1693574Z -- [INFO] ------< org.keycloak.testsuite:integration-arquillian-tests-base >------
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:09.1707844Z -- [INFO] Building Base TestSuite 999.0.0-SNAPSHOT
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:09.1708880Z -- [INFO]   from pom.xml
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:09.1709909Z -- [INFO] --------------------------------[ jar ]---------------------------------
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:09.2284319Z -- [WARNING] Parameter 'overWriteIfNewer' is unknown for plugin 'maven-resources-plugin:3.0.1:copy-resources (example-realms)'
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:10.4697130Z -- [INFO] Artifact org.jboss:jboss-parent:pom:44 is present in the local repository, but cached from a remote repository ID that is unavailable in current build context, verifying that is downloadable from [central (https://repo.maven.apache.org/maven2, default, releases)]
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:10.4717681Z -- [INFO] Artifact org.jboss:jboss-parent:pom:44 is present in the local repository, but cached from a remote repository ID that is unavailable in current build context, verifying that is downloadable from [central (https://repo.maven.apache.org/maven2, default, releases)]
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:10.7281604Z -- [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jboss/jboss-parent/44/jboss-parent-44.pom
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:11.0006674Z -- [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jboss/jboss-parent/44/jboss-parent-44.pom (0 B at 0 B/s)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:11.6320814Z -- [INFO] 
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:11.6321603Z -- [INFO] --- enforcer:3.0.0-M3:enforce (enforce-java-version) @ integration-arquillian-tests-base ---
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:11.7713890Z -- [INFO] 
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:11.7715209Z -- [INFO] --- enforcer:3.0.0-M3:enforce (enforce-maven-version) @ integration-arquillian-tests-base ---
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:11.7724372Z -- [INFO] 
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:11.7732942Z -- [INFO] --- enforcer:3.0.0-M3:enforce (enforce-maven) @ integration-arquillian-tests-base ---
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:11.7738043Z -- [INFO] 
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:11.7742128Z -- [INFO] --- buildnumber:1.4:create (get-scm-revision) @ integration-arquillian-tests-base ---
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:11.9521661Z -- [INFO] Executing: /bin/sh -c cd '/home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base' && 'git' 'rev-parse' '--verify' 'HEAD'
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:11.9526343Z -- [INFO] Working directory: /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:11.9748915Z -- [INFO] Storing buildNumber: 6387af131ce44f4a80e52c9fd33243bc03e62eb6 at timestamp: 1728376811933
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:11.9785884Z -- [WARNING] Cannot get the branch information from the git repository: 
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:11.9787741Z -- Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:11.9794485Z -- 
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:11.9813845Z -- [INFO] Executing: /bin/sh -c cd '/home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base' && 'git' 'rev-parse' '--verify' 'HEAD'
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:11.9822324Z -- [INFO] Working directory: /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:11.9878513Z -- [INFO] Storing buildScmBranch: UNKNOWN
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:11.9879192Z -- [INFO] 
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:11.9880257Z -- [INFO] --- resources:3.0.1:copy-resources (copy-truststore) @ integration-arquillian-tests-base ---
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:12.0769100Z -- [INFO] Using 'UTF-8' encoding to copy filtered resources.
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:12.0848397Z -- [INFO] Copying 3 resources
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:12.0905348Z -- [INFO] 
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:12.0910449Z -- [INFO] --- resources:3.0.1:copy-resources (copy-common-dependencies) @ integration-arquillian-tests-base ---
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:12.0939377Z -- [INFO] Using 'UTF-8' encoding to copy filtered resources.
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:12.1008789Z -- [INFO] Copying 13 resources
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:12.1057256Z -- [INFO] 
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:12.1069635Z -- [INFO] --- resources:3.0.1:resources (default-resources) @ integration-arquillian-tests-base ---
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:12.1084209Z -- [INFO] Using 'UTF-8' encoding to copy filtered resources.
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:12.1089524Z -- [INFO] Copying 2 resources
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:12.1099789Z -- [INFO] 
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:12.1108329Z -- [INFO] --- resources:3.0.1:copy-resources (copy-admin-user-json-file) @ integration-arquillian-tests-base ---
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:12.1130828Z -- [INFO] Using 'UTF-8' encoding to copy filtered resources.
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:12.1190768Z -- [INFO] Copying 1 resource
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:12.1259175Z -- [INFO] 
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:12.1278166Z -- [INFO] --- xml:1.0.1:transform (arquillian-default-protocol) @ integration-arquillian-tests-base ---
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:13.1126997Z -- [INFO] Transforming file: /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/resources/arquillian.xml
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:13.2716321Z -- [INFO] Transformed 1 file(s).
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:13.2720773Z -- [INFO] 
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:13.2722344Z -- [INFO] --- compiler:3.8.1:compile (default-compile) @ integration-arquillian-tests-base ---
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:13.4439607Z -- [INFO] Changes detected - recompiling the module!
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:13.4477487Z -- [INFO] Compiling 370 source files to /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/target/classes
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:18.9468573Z -- [INFO] Annotation processing is enabled because one or more processors were found
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:18.9472935Z --   on the class path. A future release of javac may disable annotation processing
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:18.9494708Z --   unless at least one processor is specified by name (-processor), or a search
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:18.9501392Z --   path is specified (--processor-path, --processor-module-path), or annotation
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:18.9502977Z --   processing is enabled explicitly (-proc:only, -proc:full).
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:18.9504296Z --   Use -Xlint:-options to suppress this message.
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:18.9505334Z --   Use -proc:none to disable annotation processing.
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:18.9508532Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/updaters/ServerResourceUpdater.java:[89,20] unchecked cast
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:18.9513646Z --   required: T
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:18.9516000Z --   found:    org.keycloak.testsuite.updaters.ServerResourceUpdater<T,Res,Rep>
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:18.9524986Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/updaters/ServerResourceUpdater.java:[103,20] unchecked cast
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:18.9527463Z --   required: T
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:18.9528942Z --   found:    org.keycloak.testsuite.updaters.ServerResourceUpdater<T,Res,Rep>
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:18.9549422Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/updaters/ServerResourceUpdater.java:[140,52] unchecked conversion
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:18.9551657Z --   required: java.util.Set<V>
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:18.9554233Z --   found:    java.util.Set
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:18.9558397Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/updaters/ServerResourceUpdater.java:[141,51] unchecked conversion
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:18.9580640Z --   required: java.util.Set<V>
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:18.9625176Z --   found:    java.util.Set
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:18.9628832Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/page/AbstractPatternFlyAlert.java:[71,96] unchecked method invocation: method until in class org.openqa.selenium.support.ui.FluentWait is applied to given types
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:18.9632871Z --   required: java.util.function.Function<? super T,V>
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:18.9634037Z --   found:    org.openqa.selenium.support.ui.ExpectedCondition
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:18.9637091Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/page/AbstractPatternFlyAlert.java:[71,97] unchecked conversion
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:18.9692473Z --   required: java.util.function.Function<? super T,V>
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:18.9694064Z --   found:    org.openqa.selenium.support.ui.ExpectedCondition
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:18.9697763Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/ModelTestExecutor.java:[51,33] TestResult() in org.jboss.arquillian.test.spi.TestResult has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:18.9703369Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/ModelTestExecutor.java:[59,23] setStatus(org.jboss.arquillian.test.spi.TestResult.Status) in org.jboss.arquillian.test.spi.TestResult has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:18.9709400Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/ModelTestExecutor.java:[61,23] setStatus(org.jboss.arquillian.test.spi.TestResult.Status) in org.jboss.arquillian.test.spi.TestResult has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:18.9716153Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/ModelTestExecutor.java:[70,109] unchecked cast
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:18.9718983Z --   required: org.jboss.arquillian.core.api.InstanceProducer<org.jboss.arquillian.test.spi.TestResult>
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:18.9720234Z --   found:    java.lang.Object
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:18.9722434Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/util/javascript/XMLHttpRequest.java:[75,67] unchecked cast
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:18.9724809Z --   required: java.util.Map<java.lang.String,java.lang.Object>
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:18.9725666Z --   found:    java.lang.Object
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:18.9762656Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/util/javascript/JavascriptTestExecutor.java:[40,35] setScriptTimeout(long,java.util.concurrent.TimeUnit) in org.openqa.selenium.WebDriver.Timeouts has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:18.9768560Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/updaters/Creator.java:[63,16] unchecked call to Creator(java.lang.String,T,java.lang.Runnable) as a member of the raw type org.keycloak.testsuite.updaters.Creator
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:18.9772944Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/updaters/Creator.java:[63,16] unchecked conversion
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:18.9775958Z --   required: org.keycloak.testsuite.updaters.Creator<org.keycloak.admin.client.resource.RealmResource>
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:18.9777647Z --   found:    org.keycloak.testsuite.updaters.Creator
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:18.9781052Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/updaters/Creator.java:[72,20] unchecked call to Creator(java.lang.String,T,java.lang.Runnable) as a member of the raw type org.keycloak.testsuite.updaters.Creator
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:18.9785550Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/updaters/Creator.java:[72,20] unchecked conversion
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:18.9788420Z --   required: org.keycloak.testsuite.updaters.Creator<org.keycloak.admin.client.resource.GroupResource>
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:18.9789787Z --   found:    org.keycloak.testsuite.updaters.Creator
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:18.9793079Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/updaters/Creator.java:[82,20] unchecked call to Creator(java.lang.String,T,java.lang.Runnable) as a member of the raw type org.keycloak.testsuite.updaters.Creator
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:18.9797441Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/updaters/Creator.java:[82,20] unchecked conversion
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:18.9799643Z --   required: org.keycloak.testsuite.updaters.Creator<org.keycloak.admin.client.resource.ClientResource>
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:18.9800704Z --   found:    org.keycloak.testsuite.updaters.Creator
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:18.9803400Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/updaters/Creator.java:[92,20] unchecked call to Creator(java.lang.String,T,java.lang.Runnable) as a member of the raw type org.keycloak.testsuite.updaters.Creator
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:18.9807982Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/updaters/Creator.java:[92,20] unchecked conversion
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:18.9810709Z --   required: org.keycloak.testsuite.updaters.Creator<org.keycloak.admin.client.resource.UserResource>
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:18.9812130Z --   found:    org.keycloak.testsuite.updaters.Creator
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:18.9815589Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/updaters/Creator.java:[102,20] unchecked call to Creator(java.lang.String,T,java.lang.Runnable) as a member of the raw type org.keycloak.testsuite.updaters.Creator
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:18.9877094Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/updaters/Creator.java:[102,20] unchecked conversion
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:18.9879973Z --   required: org.keycloak.testsuite.updaters.Creator<org.keycloak.admin.client.resource.ComponentResource>
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:18.9881435Z --   found:    org.keycloak.testsuite.updaters.Creator
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:18.9885137Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/updaters/Creator.java:[122,20] unchecked call to Creator(java.lang.String,T,java.lang.Runnable) as a member of the raw type org.keycloak.testsuite.updaters.Creator
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:18.9889994Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/updaters/Creator.java:[122,20] unchecked conversion
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:18.9892881Z --   required: org.keycloak.testsuite.updaters.Creator<org.keycloak.admin.client.resource.IdentityProviderResource>
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:18.9894346Z --   found:    org.keycloak.testsuite.updaters.Creator
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:18.9898120Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/updaters/Creator.java:[134,20] unchecked call to Creator(java.lang.String,T,java.lang.Runnable) as a member of the raw type org.keycloak.testsuite.updaters.Creator
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:18.9902694Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/updaters/Creator.java:[134,20] unchecked conversion
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:18.9905501Z --   required: org.keycloak.testsuite.updaters.Creator<org.keycloak.admin.client.resource.IdentityProviderResource>
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:18.9907177Z --   found:    org.keycloak.testsuite.updaters.Creator
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:18.9910424Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/containers/SecurityActions.java:[54,16] java.security.AccessController in java.security has been deprecated and marked for removal
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:18.9915782Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/containers/SecurityActions.java:[148,20] java.security.AccessController in java.security has been deprecated and marked for removal
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:18.9921609Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/containers/SecurityActions.java:[182,13] java.security.AccessController in java.security has been deprecated and marked for removal
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:18.9927004Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/containers/SecurityActions.java:[221,39] isAccessible() in java.lang.reflect.AccessibleObject has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:18.9932308Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/containers/SecurityActions.java:[213,48] java.security.AccessController in java.security has been deprecated and marked for removal
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:18.9937678Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/containers/SecurityActions.java:[245,40] isAccessible() in java.lang.reflect.AccessibleObject has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:18.9942846Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/containers/SecurityActions.java:[237,50] java.security.AccessController in java.security has been deprecated and marked for removal
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:18.9948293Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/containers/SecurityActions.java:[261,28] java.security.AccessController in java.security has been deprecated and marked for removal
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:18.9953613Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/drone/KeycloakDronePostSetup.java:[89,35] implicitlyWait(long,java.util.concurrent.TimeUnit) in org.openqa.selenium.WebDriver.Timeouts has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:18.9959698Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/drone/KeycloakDronePostSetup.java:[90,35] pageLoadTimeout(long,java.util.concurrent.TimeUnit) in org.openqa.selenium.WebDriver.Timeouts has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:18.9965273Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/drone/KeycloakWebDriverConfigurator.java:[56,89] getBrowser() in org.jboss.arquillian.drone.webdriver.configuration.WebDriverConfiguration has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:18.9971599Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/drone/KeycloakWebDriverConfigurator.java:[67,26] getBrowser() in org.jboss.arquillian.drone.webdriver.configuration.WebDriverConfiguration has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:18.9977809Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/util/AdminClientUtil.java:[167,66] org.jboss.resteasy.client.jaxrs.engines.ClientHttpEngineBuilder43 in org.jboss.resteasy.client.jaxrs.engines has been deprecated and marked for removal
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:18.9983994Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/util/AdminClientUtil.java:[167,66] org.jboss.resteasy.client.jaxrs.engines.ClientHttpEngineBuilder43 in org.jboss.resteasy.client.jaxrs.engines has been deprecated and marked for removal
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:18.9990469Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/util/AdminClientUtil.java:[167,66] org.jboss.resteasy.client.jaxrs.engines.ClientHttpEngineBuilder43 in org.jboss.resteasy.client.jaxrs.engines has been deprecated and marked for removal
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:18.9996604Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/CrossDCTestEnricher.java:[430,46] unchecked method invocation: method isAnnotationPresent in class java.lang.Class is applied to given types
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:18.9999924Z --   required: java.lang.Class<? extends java.lang.annotation.Annotation>
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:19.0000889Z --   found:    java.lang.Class
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:19.0003239Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/CrossDCTestEnricher.java:[430,47] unchecked conversion
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:19.0005817Z --   required: java.lang.Class<? extends java.lang.annotation.Annotation>
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:19.0007029Z --   found:    java.lang.Class
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:19.0010356Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/AuthServerTestEnricher.java:[320,33] WildcardFileFilter(java.lang.String) in org.apache.commons.io.filefilter.WildcardFileFilter has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:19.0015438Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/util/matchers/SamlStatusResponseTypeMatcher.java:[26,31] unchecked conversion
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:19.0018386Z --   required: java.util.List<org.hamcrest.Matcher<java.net.URI>>
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:19.0019320Z --   found:    java.util.ArrayList
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:19.0022818Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/KeycloakArquillianExtension.java:[63,61] org.keycloak.testsuite.arquillian.DeploymentArchiveProcessor in org.keycloak.testsuite.arquillian has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:19.0026027Z -- [INFO] 
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:19.0027334Z -- [INFO] --- resources:3.0.1:copy-resources (example-realms) @ integration-arquillian-tests-base ---
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:19.0028861Z -- [INFO] Skipping the execution.
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:19.0029502Z -- [INFO] 
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:19.0030560Z -- [INFO] --- dependency:3.1.2:unpack (unpack-undertow-server) @ integration-arquillian-tests-base ---
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:19.2736995Z -- [INFO] Skipping plugin execution
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:19.2737975Z -- [INFO] 
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:19.2756821Z -- [INFO] --- dependency:3.1.2:unpack (unpack-quarkus-server) @ integration-arquillian-tests-base ---
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:19.2773465Z -- [INFO] Configured Artifact: org.keycloak.testsuite:integration-arquillian-servers-auth-server-quarkus:999.0.0-SNAPSHOT:zip
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:19.2963054Z -- [INFO] Unpacking /home/runner/.m2/repository/org/keycloak/testsuite/integration-arquillian-servers-auth-server-quarkus/999.0.0-SNAPSHOT/integration-arquillian-servers-auth-server-quarkus-999.0.0-SNAPSHOT.zip to /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/target/containers with includes "" and excludes ""
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:20.5685679Z -- [INFO] 
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:20.5687421Z -- [INFO] --- dependency:3.1.2:unpack (unpack-app-server) @ integration-arquillian-tests-base ---
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:20.5707072Z -- [INFO] Skipping plugin execution
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:20.5708059Z -- [INFO] 
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:20.5710291Z -- [INFO] --- dependency:3.1.2:unpack (unpack-client-cli-dist) @ integration-arquillian-tests-base ---
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:20.5716067Z -- [INFO] Configured Artifact: org.keycloak:keycloak-client-cli-dist:999.0.0-SNAPSHOT:zip
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:20.5789851Z -- [INFO] Unpacking /home/runner/.m2/repository/org/keycloak/keycloak-client-cli-dist/999.0.0-SNAPSHOT/keycloak-client-cli-dist-999.0.0-SNAPSHOT.zip to /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/target/containers with includes "" and excludes ""
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:20.6703501Z -- [INFO] 
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:20.6713534Z -- [INFO] --- dependency:3.1.2:copy-dependencies (copy-testsuite-providers-to-base-testsuite) @ integration-arquillian-tests-base ---
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:20.6832416Z -- [INFO] Copying integration-arquillian-testsuite-providers-999.0.0-SNAPSHOT.jar to /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/target/lib/integration-arquillian-testsuite-providers-999.0.0-SNAPSHOT.jar
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:20.6962401Z -- [INFO] 
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:20.6978196Z -- [INFO] --- resources:3.0.1:testResources (default-testResources) @ integration-arquillian-tests-base ---
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:20.6981452Z -- [INFO] Using 'UTF-8' encoding to copy filtered resources.
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:20.7020431Z -- [INFO] Copying 24 resources
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:21.0744797Z -- [INFO] Copying 225 resources
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:21.1194941Z -- [INFO] 
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:21.1196106Z -- [INFO] --- antrun:1.8:run (clean-second-cache-server-arquillian-bug-workaround) @ integration-arquillian-tests-base ---
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:21.1436702Z -- [INFO] Skipping Antrun execution
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:21.1437795Z -- [INFO] 
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:21.1439951Z -- [INFO] --- compiler:3.8.1:testCompile (default-testCompile) @ integration-arquillian-tests-base ---
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:21.1793941Z -- [INFO] Changes detected - recompiling the module!
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:21.1832438Z -- [INFO] Compiling 795 source files to /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/target/test-classes
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6208340Z -- [INFO] Annotation processing is enabled because one or more processors were found
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6213816Z --   on the class path. A future release of javac may disable annotation processing
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6268277Z --   unless at least one processor is specified by name (-processor), or a search
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6270196Z --   path is specified (--processor-path, --processor-module-path), or annotation
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6277301Z --   processing is enabled explicitly (-proc:only, -proc:full).
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6278862Z --   Use -Xlint:-options to suppress this message.
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6280591Z --   Use -proc:none to disable annotation processing.
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6289331Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oid4vc/issuance/signing/JWTVCIssuerWellKnownProviderTest.java:[39,30] junit.framework.Assert in junit.framework has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6295415Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oid4vc/issuance/signing/JWTVCIssuerWellKnownProviderTest.java:[39,30] junit.framework.Assert in junit.framework has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6301231Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oid4vc/issuance/signing/JWTVCIssuerWellKnownProviderTest.java:[39,30] junit.framework.Assert in junit.framework has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6324298Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/util/AssertAdminEvents.java:[223,97] unchecked cast
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6327767Z --   required: java.util.List<org.keycloak.representations.idm.RoleRepresentation>
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6329240Z --   found:    java.lang.Object
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6333032Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/BrokerRunOnServerUtil.java:[187,45] removeExpired(org.keycloak.models.RealmModel) in org.keycloak.sessions.AuthenticationSessionProvider has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6344554Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/AbstractAdvancedBrokerTest.java:[303,35] pageLoadTimeout(long,java.util.concurrent.TimeUnit) in org.openqa.selenium.WebDriver.Timeouts has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6350201Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/client/ClientSecretRotationTest.java:[760,59] unchecked conversion
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6353322Z --   required: java.util.Map<java.lang.String,java.lang.String>
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6354448Z --   found:    java.util.Map
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6357931Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oidc/flows/AbstractOIDCResponseTypeTest.java:[92,73] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6363775Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oidc/flows/AbstractOIDCResponseTypeTest.java:[107,73] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6371233Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oidc/flows/AbstractOIDCResponseTypeTest.java:[251,69] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6377168Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/client/policies/AbstractClientPoliciesTest.java:[573,42] org.apache.http.impl.client.DefaultHttpClient in org.apache.http.impl.client has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6382268Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/client/policies/AbstractClientPoliciesTest.java:[695,59] unchecked conversion
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6385003Z --   required: java.util.Map<java.lang.String,java.lang.String>
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6385847Z --   found:    java.util.Map
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6388719Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/client/policies/AbstractClientPoliciesTest.java:[753,55] unchecked conversion
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6391607Z --   required: java.util.Map<java.lang.String,java.lang.String>
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6392446Z --   found:    java.util.Map
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6395097Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/client/policies/AbstractClientPoliciesTest.java:[1088,104] unchecked cast
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6397762Z --   required: java.util.Collection<java.lang.String>
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6398511Z --   found:    java.util.List
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6401759Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/client/policies/AbstractClientPoliciesTest.java:[1514,38] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6407754Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/client/policies/AbstractClientPoliciesTest.java:[1519,45] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6413358Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/client/policies/AbstractClientPoliciesTest.java:[1528,47] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6419037Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/client/policies/AbstractClientPoliciesTest.java:[1529,54] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6423621Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/saml/BrokerTest.java:[340,63] unchecked conversion
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6426242Z --   required: org.keycloak.saml.BaseSAML2BindingBuilder<org.keycloak.saml.BaseSAML2BindingBuilder>
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6427775Z --   found:    org.keycloak.saml.BaseSAML2BindingBuilder
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6430951Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/OfflineTokenTest.java:[275,67] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6435964Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/OfflineTokenTest.java:[349,31] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6441152Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/OfflineTokenTest.java:[363,83] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6446186Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/OfflineTokenTest.java:[366,83] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6451316Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/OfflineTokenTest.java:[384,31] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6456305Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/OfflineTokenTest.java:[398,112] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6461451Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/OfflineTokenTest.java:[404,57] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6466832Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/OfflineTokenTest.java:[414,66] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6471791Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/OfflineTokenTest.java:[437,31] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6476880Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/OfflineTokenTest.java:[447,83] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6482017Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/OfflineTokenTest.java:[459,32] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6487074Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/OfflineTokenTest.java:[467,83] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6491965Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/OfflineTokenTest.java:[468,87] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6497033Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/OfflineTokenTest.java:[563,31] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6501962Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/OfflineTokenTest.java:[685,111] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6507186Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/OfflineTokenTest.java:[713,55] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6512110Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/OfflineTokenTest.java:[722,37] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6517428Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/OfflineTokenTest.java:[722,70] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6522503Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/OfflineTokenTest.java:[974,31] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6527745Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/OfflineTokenTest.java:[984,83] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6532819Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/OfflineTokenTest.java:[996,32] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6538100Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/OfflineTokenTest.java:[1004,83] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6543539Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/OfflineTokenTest.java:[1005,87] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6548771Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/OfflineTokenTest.java:[1046,31] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6554238Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/authz/admin/AbstractAuthorizationTest.java:[134,25] defaultRoles(java.lang.String...) in org.keycloak.testsuite.util.ClientBuilder has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6560240Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/util/UserBuilder.java:[159,12] setTotp(java.lang.Boolean) in org.keycloak.representations.idm.UserRepresentation has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6565539Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/util/UserBuilder.java:[176,12] setTotp(java.lang.Boolean) in org.keycloak.representations.idm.UserRepresentation has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6571283Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/cluster/AbstractInvalidationClusterTest.java:[179,41] unchecked method invocation: method sort in class java.util.Collections is applied to given types
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6574271Z --   required: java.util.List<T>
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6574887Z --   found:    java.util.List
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6577680Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/cluster/AbstractInvalidationClusterTest.java:[179,42] unchecked conversion
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6580043Z --   required: java.util.List<T>
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6580644Z --   found:    java.util.List
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6583812Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oidc/OIDCAdvancedRequestParamsTest.java:[406,39] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6589287Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oidc/OIDCAdvancedRequestParamsTest.java:[406,69] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6595167Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oidc/OIDCAdvancedRequestParamsTest.java:[1445,58] getKeysForUse(org.keycloak.jose.jwk.JSONWebKeySet,org.keycloak.jose.jwk.JWK.Use) in org.keycloak.util.JWKSUtils has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6601929Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oidc/OIDCAdvancedRequestParamsTest.java:[1532,58] getKeysForUse(org.keycloak.jose.jwk.JSONWebKeySet,org.keycloak.jose.jwk.JWK.Use) in org.keycloak.util.JWKSUtils has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6608180Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/actions/RequiredActionMultipleActionsTest.java:[91,90] UPDATE_PASSWORD in org.keycloak.events.EventType has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6613908Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/authz/admin/GenericPolicyManagementTest.java:[147,25] unchecked call to ArrayList(java.util.Collection<? extends E>) as a member of the raw type java.util.ArrayList
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6620093Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/migration/AbstractMigrationTest.java:[1356,69] LEGACY_HIDE_ON_LOGIN_ATTR in org.keycloak.models.IdentityProviderModel has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6625296Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/account/AccountRestServiceTest.java:[884,32] REMOVE_TOTP in org.keycloak.events.EventType has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6631725Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/adapter/AbstractAdapterClusteredTest.java:[102,23] ProxyHandler(io.undertow.server.handlers.proxy.ProxyClient,int,io.undertow.server.HttpHandler) in io.undertow.server.handlers.proxy.ProxyHandler has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6638378Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/federation/storage/ClientStorageTest.java:[469,31] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6643793Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/federation/storage/ClientStorageTest.java:[483,83] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6649544Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/federation/storage/ClientStorageTest.java:[486,83] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6655022Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/federation/storage/ClientStorageTest.java:[516,111] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6660702Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/federation/storage/ClientStorageTest.java:[519,65] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6666271Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/composites/CompositeRoleTest.java:[119,17] defaultRoles(java.lang.String...) in org.keycloak.testsuite.util.ClientBuilder has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6671984Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/composites/CompositeRoleTest.java:[139,17] defaultRoles(java.lang.String...) in org.keycloak.testsuite.util.ClientBuilder has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6677676Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/actions/AppInitiatedActionDeleteCredentialTest.java:[110,32] REMOVE_TOTP in org.keycloak.events.EventType has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6683066Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/actions/AppInitiatedActionDeleteCredentialTest.java:[244,32] REMOVE_TOTP in org.keycloak.events.EventType has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6689083Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/forms/LevelOfAssuranceFlowTest.java:[666,91] STORE_IN_USER_SESSION in org.keycloak.authentication.authenticators.conditional.ConditionalLoaAuthenticator has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6695366Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/forms/LevelOfAssuranceFlowTest.java:[678,91] STORE_IN_USER_SESSION in org.keycloak.authentication.authenticators.conditional.ConditionalLoaAuthenticator has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6702113Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/forms/LevelOfAssuranceFlowTest.java:[690,91] STORE_IN_USER_SESSION in org.keycloak.authentication.authenticators.conditional.ConditionalLoaAuthenticator has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6707896Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/forms/LevelOfAssuranceFlowTest.java:[757,46] UPDATE_TOTP in org.keycloak.events.EventType has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6713137Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/forms/LevelOfAssuranceFlowTest.java:[807,46] UPDATE_TOTP in org.keycloak.events.EventType has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6718344Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/forms/LevelOfAssuranceFlowTest.java:[823,46] REMOVE_TOTP in org.keycloak.events.EventType has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6723352Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/forms/LevelOfAssuranceFlowTest.java:[847,50] REMOVE_TOTP in org.keycloak.events.EventType has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6728611Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/forms/LevelOfAssuranceFlowTest.java:[857,50] UPDATE_TOTP in org.keycloak.events.EventType has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6733879Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/federation/kerberos/AbstractKerberosTest.java:[224,16] unchecked call to put(K,V) as a member of the raw type java.util.Hashtable
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6739471Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/federation/kerberos/AbstractKerberosTest.java:[225,16] unchecked call to put(K,V) as a member of the raw type java.util.Hashtable
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6744815Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/federation/kerberos/AbstractKerberosTest.java:[228,20] unchecked call to put(K,V) as a member of the raw type java.util.Hashtable
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6750302Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/federation/kerberos/AbstractKerberosTest.java:[229,20] unchecked call to put(K,V) as a member of the raw type java.util.Hashtable
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6756611Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/federation/kerberos/AbstractKerberosTest.java:[281,9] org.jboss.resteasy.client.jaxrs.engines.ApacheHttpClient43Engine in org.jboss.resteasy.client.jaxrs.engines has been deprecated and marked for removal
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6763489Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/federation/kerberos/AbstractKerberosTest.java:[281,47] org.jboss.resteasy.client.jaxrs.engines.ApacheHttpClient43Engine in org.jboss.resteasy.client.jaxrs.engines has been deprecated and marked for removal
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6769736Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/AbstractClientAuthSignedJWTTest.java:[348,41] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6775232Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/AbstractClientAuthSignedJWTTest.java:[416,37] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6781016Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/AbstractClientAuthSignedJWTTest.java:[576,37] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6786770Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/AbstractClientAuthSignedJWTTest.java:[713,42] org.apache.http.impl.client.DefaultHttpClient in org.apache.http.impl.client has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6792604Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/KcOidcBrokerTransientSessionsTest.java:[632,71] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6799355Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/admin/PermissionsTest.java:[381,35] testLDAPConnection(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) in org.keycloak.admin.client.resource.RealmResource has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6806291Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/admin/PermissionsTest.java:[668,83] unchecked method invocation: method createMapper in interface org.keycloak.admin.client.resource.ProtocolMappersResource is applied to given types
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6810285Z --   required: java.util.List<org.keycloak.representations.idm.ProtocolMapperRepresentation>
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6811400Z --   found:    java.util.List
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6813743Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/admin/PermissionsTest.java:[668,95] unchecked conversion
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6816615Z --   required: java.util.List<org.keycloak.representations.idm.ProtocolMapperRepresentation>
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6817780Z --   found:    java.util.List
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6821491Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/admin/PermissionsTest.java:[1814,64] getRealmLocalizationTexts(java.lang.String,java.lang.Boolean) in org.keycloak.admin.client.resource.RealmLocalizationResource has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6827527Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oidc/AuthenticationMethodReferenceTest.java:[481,43] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6832429Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oidc/AuthenticationMethodReferenceTest.java:[528,69] unchecked cast
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6834839Z --   required: java.util.List<java.lang.String>
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6835531Z --   found:    java.lang.Object
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6838860Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/admin/concurrency/ConcurrentLoginTest.java:[443,40] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6843522Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/crossdc/AbstractAdminCrossDCTest.java:[97,50] unchecked cast
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6845670Z --   required: T
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6846178Z --   found:    java.lang.Comparable
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6848854Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/crossdc/AbstractAdminCrossDCTest.java:[101,54] unchecked cast
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6851298Z --   required: T
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6851823Z --   found:    java.lang.Comparable
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6855303Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/authz/admin/AbstractPolicyManagementTest.java:[74,25] defaultRoles(java.lang.String...) in org.keycloak.testsuite.util.ClientBuilder has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6861009Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/crossdc/SessionExpirationCrossDCTest.java:[577,80] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6866820Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/crossdc/SessionExpirationCrossDCTest.java:[607,80] getSessionState() in org.keycloak.representations.IDToken has been deprecated
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6872933Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/admin/event/EventConfigTest.java:[59,37] unchecked method invocation: method setEventsListeners in class org.keycloak.representations.idm.RealmEventsConfigRepresentation is applied to given types
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6876534Z --   required: java.util.List<java.lang.String>
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6877347Z --   found:    java.util.List
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6879871Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/admin/event/EventConfigTest.java:[59,49] unchecked conversion
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6882172Z --   required: java.util.List<java.lang.String>
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6882871Z --   found:    java.util.List
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6886845Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/admin/event/EventConfigTest.java:[87,39] unchecked method invocation: method setEnabledEventTypes in class org.keycloak.representations.idm.RealmEventsConfigRepresentation is applied to given types
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6890509Z --   required: java.util.List<java.lang.String>
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6891227Z --   found:    java.util.List
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6894757Z -- [INFO] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/oauth/ClientAuthSecretSignedJWTTest.java: Some input files additionally use or override a deprecated API.
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6901623Z -- [INFO] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/i18n/LoginPageTest.java: /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/i18n/LoginPageTest.java uses or overrides a deprecated API that is marked for removal.
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6908097Z -- [INFO] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/admin/event/EventConfigTest.java: Some input files additionally use unchecked or unsafe operations.
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6910715Z -- [INFO] 
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.6911991Z -- [INFO] --- shrinkwrap-resolver:3.2.1:propagate-execution-context (default) @ integration-arquillian-tests-base ---
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.7744921Z -- [INFO] 
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.7746084Z -- [INFO] --- docker:0.40.3:start (start-db-container) @ integration-arquillian-tests-base ---
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.9703512Z -- [INFO] 
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:33.9712802Z -- [INFO] --- surefire:3.0.0-M7:test (default-test) @ integration-arquillian-tests-base ---
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:34.0815504Z -- [INFO] Using auto detected provider org.apache.maven.surefire.junit4.JUnit4Provider
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:34.1775116Z -- [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/apache/maven/surefire/surefire-junit4/3.0.0-M7/surefire-junit4-3.0.0-M7.jar
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:34.4810624Z -- [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit4/3.0.0-M7/surefire-junit4-3.0.0-M7.jar
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:34.5062362Z -- [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit4/3.0.0-M7/surefire-junit4-3.0.0-M7.jar (18 kB at 705 kB/s)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:34.5078903Z -- [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/apache/maven/surefire/surefire-junit4/3.0.0-M7/surefire-junit4-3.0.0-M7.pom
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:34.5403761Z -- [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit4/3.0.0-M7/surefire-junit4-3.0.0-M7.pom
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:34.5462436Z -- [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit4/3.0.0-M7/surefire-junit4-3.0.0-M7.pom (2.9 kB at 486 kB/s)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:34.5480229Z -- [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/apache/maven/surefire/surefire-providers/3.0.0-M7/surefire-providers-3.0.0-M7.pom
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:34.5941887Z -- [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-providers/3.0.0-M7/surefire-providers-3.0.0-M7.pom
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:34.5989364Z -- [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-providers/3.0.0-M7/surefire-providers-3.0.0-M7.pom (2.5 kB at 507 kB/s)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:34.6087176Z -- [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/junit/junit/4.0/junit-4.0.pom
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:34.6474478Z -- [INFO] Downloading from central: https://repo.maven.apache.org/maven2/junit/junit/4.0/junit-4.0.pom
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:34.6518007Z -- [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/junit/junit/4.0/junit-4.0.pom (210 B at 42 kB/s)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:34.6539845Z -- [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/apache/maven/surefire/common-junit4/3.0.0-M7/common-junit4-3.0.0-M7.pom
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:34.6868426Z -- [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-junit4/3.0.0-M7/common-junit4-3.0.0-M7.pom
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:34.6919912Z -- [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-junit4/3.0.0-M7/common-junit4-3.0.0-M7.pom (3.0 kB at 600 kB/s)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:34.6998953Z -- [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/apache/maven/surefire/common-junit3/3.0.0-M7/common-junit3-3.0.0-M7.pom
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:34.7343252Z -- [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-junit3/3.0.0-M7/common-junit3-3.0.0-M7.pom
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:34.7394627Z -- [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-junit3/3.0.0-M7/common-junit3-3.0.0-M7.pom (2.7 kB at 530 kB/s)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:34.7485439Z -- [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/apache/maven/surefire/common-java5/3.0.0-M7/common-java5-3.0.0-M7.pom
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:34.7805951Z -- [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-java5/3.0.0-M7/common-java5-3.0.0-M7.pom
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:34.7848305Z -- [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-java5/3.0.0-M7/common-java5-3.0.0-M7.pom (2.7 kB at 539 kB/s)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:34.7943013Z -- [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/hamcrest/hamcrest-library/1.3/hamcrest-library-1.3.pom
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:34.8471407Z -- [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/hamcrest/hamcrest-library/1.3/hamcrest-library-1.3.pom
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:34.8512204Z -- [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/hamcrest/hamcrest-library/1.3/hamcrest-library-1.3.pom (820 B at 205 kB/s)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:34.8568057Z -- [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/assertj/assertj-core/3.22.0/assertj-core-3.22.0.pom
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:34.8932605Z -- [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/assertj/assertj-core/3.22.0/assertj-core-3.22.0.pom
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:34.8985719Z -- [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/assertj/assertj-core/3.22.0/assertj-core-3.22.0.pom (31 kB at 5.1 MB/s)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:34.9008015Z -- [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/assertj/assertj-parent-pom/2.2.14/assertj-parent-pom-2.2.14.pom
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:34.9376153Z -- [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/assertj/assertj-parent-pom/2.2.14/assertj-parent-pom-2.2.14.pom
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:34.9437343Z -- [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/assertj/assertj-parent-pom/2.2.14/assertj-parent-pom-2.2.14.pom (25 kB at 3.5 MB/s)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:34.9465968Z -- [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/junit/junit-bom/5.8.2/junit-bom-5.8.2.pom
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:34.9854436Z -- [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.8.2/junit-bom-5.8.2.pom
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:34.9901366Z -- [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.8.2/junit-bom-5.8.2.pom (5.6 kB at 1.1 MB/s)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:34.9935193Z -- [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/junit/junit-bom/5.8.0/junit-bom-5.8.0.pom
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:35.0354206Z -- [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.8.0/junit-bom-5.8.0.pom
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:35.0407050Z -- [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.8.0/junit-bom-5.8.0.pom (5.6 kB at 1.1 MB/s)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:35.0431388Z -- [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/apache/maven/surefire/common-junit4/3.0.0-M7/common-junit4-3.0.0-M7.jar
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:35.0434962Z -- [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/apache/maven/surefire/common-java5/3.0.0-M7/common-java5-3.0.0-M7.jar
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:35.0438534Z -- [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/apache/maven/surefire/common-junit3/3.0.0-M7/common-junit3-3.0.0-M7.jar
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:35.0537551Z -- [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-junit4/3.0.0-M7/common-junit4-3.0.0-M7.jar
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:35.0650699Z -- [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-junit4/3.0.0-M7/common-junit4-3.0.0-M7.jar (26 kB at 2.6 MB/s)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:35.0658322Z -- [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-java5/3.0.0-M7/common-java5-3.0.0-M7.jar
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:35.0737904Z -- [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-java5/3.0.0-M7/common-java5-3.0.0-M7.jar (17 kB at 1.9 MB/s)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:35.1449612Z -- [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-junit3/3.0.0-M7/common-junit3-3.0.0-M7.jar
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:35.1492238Z -- [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-junit3/3.0.0-M7/common-junit3-3.0.0-M7.jar (12 kB at 2.9 MB/s)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:35.1588487Z -- [INFO] 
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:35.1589172Z -- [INFO] -------------------------------------------------------
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:35.1591758Z -- [INFO]  T E S T S
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:35.1592805Z -- [INFO] -------------------------------------------------------
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:36.0494107Z -- 08:40:36,038 INFO  [org.keycloak.testsuite.util.NonIDERunListener] Setting keycloak.logging.level to off. Keycloak server logging will be disabled
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:40:36.0512480Z [INFO] Running org.keycloak.testsuite.webauthn.AppInitiatedActionWebAuthnTest
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:41:33.7368682Z [WARNING] Tests run: 3, Failures: 0, Errors: 0, Skipped: 2, Time elapsed: 57.633 s - in org.keycloak.testsuite.webauthn.AppInitiatedActionWebAuthnTest
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:41:33.7377020Z [INFO] Running org.keycloak.testsuite.webauthn.VirtualAuthenticatorsManagerTest
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:41:38.5265264Z [WARNING] Tests run: 4, Failures: 0, Errors: 0, Skipped: 4, Time elapsed: 4.772 s - in org.keycloak.testsuite.webauthn.VirtualAuthenticatorsManagerTest
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:41:38.5270113Z [INFO] Running org.keycloak.testsuite.webauthn.WebAuthnFeatureTest
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:41:45.6708356Z [INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.132 s - in org.keycloak.testsuite.webauthn.WebAuthnFeatureTest
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:41:45.6710555Z [INFO] Running org.keycloak.testsuite.webauthn.WebAuthnIdlessTest
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:41:48.2767044Z [WARNING] Tests run: 4, Failures: 0, Errors: 0, Skipped: 4, Time elapsed: 2.589 s - in org.keycloak.testsuite.webauthn.WebAuthnIdlessTest
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:41:48.2768782Z [INFO] Running org.keycloak.testsuite.webauthn.WebAuthnPropertyTest
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:41:50.6613851Z [WARNING] Tests run: 4, Failures: 0, Errors: 0, Skipped: 4, Time elapsed: 2.371 s - in org.keycloak.testsuite.webauthn.WebAuthnPropertyTest
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:41:50.6619687Z [INFO] Running org.keycloak.testsuite.webauthn.WebAuthnRegisterAndLoginTest
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:41:56.7782166Z [WARNING] Tests run: 3, Failures: 0, Errors: 0, Skipped: 2, Time elapsed: 6.102 s - in org.keycloak.testsuite.webauthn.WebAuthnRegisterAndLoginTest
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:41:56.7787674Z [INFO] Running org.keycloak.testsuite.webauthn.WebAuthnTransportsTest
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:41:59.1317153Z [WARNING] Tests run: 4, Failures: 0, Errors: 0, Skipped: 4, Time elapsed: 2.34 s - in org.keycloak.testsuite.webauthn.WebAuthnTransportsTest
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:41:59.1321994Z [INFO] Running org.keycloak.testsuite.webauthn.account.WebAuthnErrorTest
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:06.7136229Z [WARNING] Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 7.568 s - in org.keycloak.testsuite.webauthn.account.WebAuthnErrorTest
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:06.7139517Z [INFO] Running org.keycloak.testsuite.webauthn.account.WebAuthnSigningInTest
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6339168Z --------- org.keycloak.testsuite.webauthn.account.WebAuthnSigningInTest output start ---------
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6442787Z WebAuthnSigningInTest ++ 08:42:06,698 INFO  [org.keycloak.testsuite.arquillian.AppServerTestEnricher] 
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6445241Z WebAuthnSigningInTest ++ 
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6446325Z WebAuthnSigningInTest ++ TEST CONTEXT: org.keycloak.testsuite.webauthn.account.WebAuthnSigningInTest
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6464666Z WebAuthnSigningInTest ++ 
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6468958Z WebAuthnSigningInTest ++ 08:42:06,699 INFO  [org.keycloak.testsuite.webauthn.account.WebAuthnSigningInTest] [WebAuthnSigningInTest] multipleSecurityKeys() STARTED
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6470941Z WebAuthnSigningInTest ++ 1728376926709	geckodriver	INFO	Listening on 127.0.0.1:26803
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6532438Z WebAuthnSigningInTest ++ 1728376926714	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... gins" "http://127.0.0.1:1892/,http://localhost:1892/,http://[::1]:1892/" "-no-remote" "-profile" "/tmp/rust_mozprofile1X4Jju"
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6535368Z WebAuthnSigningInTest ++ *** You are running in headless mode.
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6537492Z WebAuthnSigningInTest ++ console.warn: services.settings: Ignoring preference override of remote settings server
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6539537Z WebAuthnSigningInTest ++ console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6541364Z WebAuthnSigningInTest ++ [GFX1-]: glxtest: Unable to open a connection to the X server
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6542574Z WebAuthnSigningInTest ++ 1728376926951	Marionette	INFO	Marionette enabled
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6543723Z WebAuthnSigningInTest ++ 1728376927030	Marionette	INFO	Listening on port 33373
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6545129Z WebAuthnSigningInTest ++ WebDriver BiDi listening on ws://127.0.0.1:1892
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6546028Z WebAuthnSigningInTest ++ Read port: 33373
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6547379Z WebAuthnSigningInTest ++ 1728376927187	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6549105Z WebAuthnSigningInTest ++ [GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6550218Z WebAuthnSigningInTest ++ console.error: ({})
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6551622Z WebAuthnSigningInTest ++ 08:42:08,159 INFO  [org.keycloak.testsuite.drone.KeycloakDronePostSetup] Detected browser: firefox 130.0.1
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6553908Z WebAuthnSigningInTest ++ 08:42:08,159 INFO  [org.keycloak.testsuite.drone.KeycloakDronePostSetup] Configuring driver settings. implicitWait=2000, pageLoadTimeout=10000
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6556117Z WebAuthnSigningInTest ++ 08:42:08,273 DEBUG [org.keycloak.testsuite.webauthn.account.WebAuthnSigningInTest] loading test realms
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6562291Z WebAuthnSigningInTest ++ 08:42:08,274 INFO  [org.keycloak.testsuite.webauthn.account.WebAuthnSigningInTest] importing test realms
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6564458Z WebAuthnSigningInTest ++ 08:42:08,274 DEBUG [org.keycloak.testsuite.webauthn.account.WebAuthnSigningInTest] Modifying login theme to keycloak.v2
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6567051Z WebAuthnSigningInTest ++ 08:42:08,274 DEBUG [org.keycloak.testsuite.webauthn.account.WebAuthnSigningInTest] --importing realm: test
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6568816Z WebAuthnSigningInTest ++ 08:42:09,042 INFO  [org.keycloak.testsuite.util.URLUtils] starting navigation
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6570365Z WebAuthnSigningInTest ++ 08:42:09,045 INFO  [org.keycloak.testsuite.util.URLUtils] current URL:  about:blank
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6572284Z WebAuthnSigningInTest ++ 08:42:09,045 INFO  [org.keycloak.testsuite.util.URLUtils] navigating to https://localhost:8543/auth/realms/master/testing/blank
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6574537Z WebAuthnSigningInTest ++ 08:42:09,646 INFO  [org.keycloak.testsuite.util.URLUtils] new current URL:  https://localhost:8543/auth/realms/master/testing/blank
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6576649Z WebAuthnSigningInTest ++ 08:42:09,647 INFO  [org.keycloak.testsuite.util.URLUtils] navigation complete
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6578729Z WebAuthnSigningInTest ++ 08:42:09,647 INFO  [org.keycloak.testsuite.webauthn.account.WebAuthnSigningInTest] deleting cookies in 'master' realm
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6580736Z WebAuthnSigningInTest ++ 08:42:09,703 DEBUG [org.keycloak.testsuite.webauthn.account.WebAuthnSigningInTest] creating test user
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6582500Z WebAuthnSigningInTest ++ 08:42:09,883 INFO  [org.keycloak.testsuite.util.URLUtils] starting navigation
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6584427Z WebAuthnSigningInTest ++ 08:42:09,886 INFO  [org.keycloak.testsuite.util.URLUtils] current URL:  https://localhost:8543/auth/realms/master/testing/blank
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6587342Z WebAuthnSigningInTest ++ 08:42:09,886 INFO  [org.keycloak.testsuite.util.URLUtils] navigating to https://localhost:8543/auth/realms/test/account/account-security/signing-in
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6589926Z WebAuthnSigningInTest ++ 1728376930088	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6592575Z WebAuthnSigningInTest ++ 08:42:10,569 INFO  [org.keycloak.testsuite.util.URLUtils] new current URL:  https://localhost:8543/auth/realms/test/account/account-security/signing-in
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6595252Z WebAuthnSigningInTest ++ 08:42:10,569 INFO  [org.keycloak.testsuite.util.URLUtils] navigation complete
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6597587Z WebAuthnSigningInTest ++ 08:42:10,594 ERROR [org.keycloak.testsuite.webauthn.account.WebAuthnSigningInTest] [WebAuthnSigningInTest] multipleSecurityKeys() FAILED
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6600151Z WebAuthnSigningInTest ++ 08:42:10,595 INFO  [org.keycloak.testsuite.webauthn.account.WebAuthnSigningInTest] [WebAuthnSigningInTest] multipleSecurityKeys() FINISHED
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6601849Z WebAuthnSigningInTest ++ 
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6602378Z WebAuthnSigningInTest ++ 
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6604364Z WebAuthnSigningInTest ++ 08:42:10,595 INFO  [org.keycloak.testsuite.webauthn.account.WebAuthnSigningInTest] [WebAuthnSigningInTest] notDisplayAvailableAuthenticatorsPasswordless() STARTED
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6607626Z WebAuthnSigningInTest ++ 08:42:10,597 INFO  [org.keycloak.testsuite.webauthn.account.WebAuthnSigningInTest] [WebAuthnSigningInTest] notDisplayAvailableAuthenticatorsPasswordless() FINISHED
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6609475Z WebAuthnSigningInTest ++ 
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6609995Z WebAuthnSigningInTest ++ 
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6611535Z WebAuthnSigningInTest ++ 08:42:10,597 INFO  [org.keycloak.testsuite.webauthn.account.WebAuthnSigningInTest] [WebAuthnSigningInTest] twoFactorWebAuthnTest() STARTED
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6614143Z WebAuthnSigningInTest ++ 08:42:10,599 INFO  [org.keycloak.testsuite.webauthn.account.WebAuthnSigningInTest] [WebAuthnSigningInTest] twoFactorWebAuthnTest() FINISHED
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6615715Z WebAuthnSigningInTest ++ 
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6616241Z WebAuthnSigningInTest ++ 
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6618049Z WebAuthnSigningInTest ++ 08:42:10,600 INFO  [org.keycloak.testsuite.webauthn.account.WebAuthnSigningInTest] [WebAuthnSigningInTest] displayAvailableAuthenticators() STARTED
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6620814Z WebAuthnSigningInTest ++ 08:42:10,601 INFO  [org.keycloak.testsuite.webauthn.account.WebAuthnSigningInTest] [WebAuthnSigningInTest] displayAvailableAuthenticators() FINISHED
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6622511Z WebAuthnSigningInTest ++ 
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6623029Z WebAuthnSigningInTest ++ 
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6624522Z WebAuthnSigningInTest ++ 08:42:10,602 INFO  [org.keycloak.testsuite.webauthn.account.WebAuthnSigningInTest] [WebAuthnSigningInTest] cancelRegistration() STARTED
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6626745Z WebAuthnSigningInTest ++ 08:42:10,692 INFO  [org.keycloak.testsuite.util.URLUtils] starting navigation
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6629199Z WebAuthnSigningInTest ++ 08:42:10,695 INFO  [org.keycloak.testsuite.util.URLUtils] current URL:  https://localhost:8543/auth/realms/test/account/account-security/signing-in
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6631669Z WebAuthnSigningInTest ++ 08:42:10,695 INFO  [org.keycloak.testsuite.util.URLUtils] navigating to https://localhost:8543/auth/realms/master/testing/blank
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6633976Z WebAuthnSigningInTest ++ 08:42:11,233 INFO  [org.keycloak.testsuite.util.URLUtils] new current URL:  https://localhost:8543/auth/realms/master/testing/blank
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6635879Z WebAuthnSigningInTest ++ 08:42:11,233 INFO  [org.keycloak.testsuite.util.URLUtils] navigation complete
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6638218Z WebAuthnSigningInTest ++ 08:42:11,233 INFO  [org.keycloak.testsuite.webauthn.account.WebAuthnSigningInTest] deleting cookies in 'master' realm
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6640431Z WebAuthnSigningInTest ++ 08:42:11,339 DEBUG [org.keycloak.testsuite.webauthn.account.WebAuthnSigningInTest] creating test user
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6642210Z WebAuthnSigningInTest ++ 08:42:11,504 INFO  [org.keycloak.testsuite.util.URLUtils] starting navigation
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6644143Z WebAuthnSigningInTest ++ 08:42:11,506 INFO  [org.keycloak.testsuite.util.URLUtils] current URL:  https://localhost:8543/auth/realms/master/testing/blank
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6647015Z WebAuthnSigningInTest ++ 08:42:11,506 INFO  [org.keycloak.testsuite.util.URLUtils] navigating to https://localhost:8543/auth/realms/test/account/account-security/signing-in
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6649859Z WebAuthnSigningInTest ++ 1728376931641	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6655825Z WebAuthnSigningInTest ++ 08:42:12,635 INFO  [org.keycloak.testsuite.util.URLUtils] new current URL:  https://localhost:8543/auth/realms/test/protocol/openid-connect/auth?client_id=account-console&redirect_uri=https%3A%2F%2Flocalhost%3A8543%2Fauth%2Frealms%2Ftest%2Faccount%2Faccount-security%2Fsigning-in&state=05c4c3ba-2d91-4a6a-ac2b-3ca35aad577c&response_mode=query&response_type=code&scope=openid&nonce=4b924f10-ee89-489c-b54d-ef899fb287d5&code_challenge=k5SY2EqEKDOo7ojZq9ldrJoeWlYz52h1yo99wTJO52w&code_challenge_method=S256
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6661239Z WebAuthnSigningInTest ++ 08:42:12,635 INFO  [org.keycloak.testsuite.util.URLUtils] navigation complete
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6662953Z WebAuthnSigningInTest ++ console.warn: LoginRecipes: "Falling back to a synchronous message for: https://localhost:8543."
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6664816Z WebAuthnSigningInTest ++ console.warn: LoginRecipes: "Falling back to a synchronous message for: https://localhost:8543."
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6667221Z WebAuthnSigningInTest ++ 1728376933369	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6669608Z WebAuthnSigningInTest ++ 1728376936215	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6671805Z WebAuthnSigningInTest ++ 08:42:17,222 INFO  [org.keycloak.testsuite.webauthn.account.WebAuthnSigningInTest] calling all TestCleanup
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6674209Z WebAuthnSigningInTest ++ 08:42:17,230 INFO  [org.keycloak.testsuite.webauthn.account.WebAuthnSigningInTest] [WebAuthnSigningInTest] cancelRegistration() FINISHED
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6675790Z WebAuthnSigningInTest ++ 
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6676287Z WebAuthnSigningInTest ++ 
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6678106Z WebAuthnSigningInTest ++ 08:42:17,230 INFO  [org.keycloak.testsuite.webauthn.account.WebAuthnSigningInTest] [WebAuthnSigningInTest] createWebAuthnSameUserLabel() STARTED
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6680761Z WebAuthnSigningInTest ++ 08:42:17,232 INFO  [org.keycloak.testsuite.webauthn.account.WebAuthnSigningInTest] [WebAuthnSigningInTest] createWebAuthnSameUserLabel() FINISHED
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6682399Z WebAuthnSigningInTest ++ 
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6682888Z WebAuthnSigningInTest ++ 
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6684515Z WebAuthnSigningInTest ++ 08:42:17,232 INFO  [org.keycloak.testsuite.webauthn.account.WebAuthnSigningInTest] [WebAuthnSigningInTest] cancelPasswordlessRegistration() STARTED
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6686871Z WebAuthnSigningInTest ++ 08:42:17,339 INFO  [org.keycloak.testsuite.util.URLUtils] starting navigation
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6689251Z WebAuthnSigningInTest ++ 08:42:17,342 INFO  [org.keycloak.testsuite.util.URLUtils] current URL:  https://localhost:8543/auth/realms/test/account/account-security/signing-in
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6691780Z WebAuthnSigningInTest ++ 08:42:17,342 INFO  [org.keycloak.testsuite.util.URLUtils] navigating to https://localhost:8543/auth/realms/master/testing/blank
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6694180Z WebAuthnSigningInTest ++ 08:42:17,883 INFO  [org.keycloak.testsuite.util.URLUtils] new current URL:  https://localhost:8543/auth/realms/master/testing/blank
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6696151Z WebAuthnSigningInTest ++ 08:42:17,883 INFO  [org.keycloak.testsuite.util.URLUtils] navigation complete
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6698392Z WebAuthnSigningInTest ++ 08:42:17,883 INFO  [org.keycloak.testsuite.webauthn.account.WebAuthnSigningInTest] deleting cookies in 'master' realm
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6700562Z WebAuthnSigningInTest ++ 08:42:17,944 DEBUG [org.keycloak.testsuite.webauthn.account.WebAuthnSigningInTest] creating test user
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6702377Z WebAuthnSigningInTest ++ 08:42:18,112 INFO  [org.keycloak.testsuite.util.URLUtils] starting navigation
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6704298Z WebAuthnSigningInTest ++ 08:42:18,115 INFO  [org.keycloak.testsuite.util.URLUtils] current URL:  https://localhost:8543/auth/realms/master/testing/blank
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6709041Z WebAuthnSigningInTest ++ 08:42:18,115 INFO  [org.keycloak.testsuite.util.URLUtils] navigating to https://localhost:8543/auth/realms/test/account/account-security/signing-in
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6711746Z WebAuthnSigningInTest ++ 1728376938242	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6717820Z WebAuthnSigningInTest ++ 08:42:19,235 INFO  [org.keycloak.testsuite.util.URLUtils] new current URL:  https://localhost:8543/auth/realms/test/protocol/openid-connect/auth?client_id=account-console&redirect_uri=https%3A%2F%2Flocalhost%3A8543%2Fauth%2Frealms%2Ftest%2Faccount%2Faccount-security%2Fsigning-in&state=d29e08f7-d934-4f4b-952e-8d45c1fdb901&response_mode=query&response_type=code&scope=openid&nonce=4231ec17-c581-436f-be25-760495cb8846&code_challenge=EO8t7v6PyD5cdoehi7j5tujrVQWtM8uNVUNZp_cOARM&code_challenge_method=S256
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6722938Z WebAuthnSigningInTest ++ 08:42:19,235 INFO  [org.keycloak.testsuite.util.URLUtils] navigation complete
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6724707Z WebAuthnSigningInTest ++ console.warn: LoginRecipes: "Falling back to a synchronous message for: https://localhost:8543."
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6727164Z WebAuthnSigningInTest ++ 1728376939942	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6729593Z WebAuthnSigningInTest ++ 1728376942704	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6731795Z WebAuthnSigningInTest ++ 08:42:23,702 INFO  [org.keycloak.testsuite.webauthn.account.WebAuthnSigningInTest] calling all TestCleanup
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6734224Z WebAuthnSigningInTest ++ 08:42:23,710 INFO  [org.keycloak.testsuite.webauthn.account.WebAuthnSigningInTest] [WebAuthnSigningInTest] cancelPasswordlessRegistration() FINISHED
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6735877Z WebAuthnSigningInTest ++ 
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6736547Z WebAuthnSigningInTest ++ 
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6738113Z WebAuthnSigningInTest ++ 08:42:23,710 INFO  [org.keycloak.testsuite.webauthn.account.WebAuthnSigningInTest] [WebAuthnSigningInTest] userAuthenticatorTimeLocale() STARTED
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6740844Z WebAuthnSigningInTest ++ 08:42:23,712 INFO  [org.keycloak.testsuite.webauthn.account.WebAuthnSigningInTest] [WebAuthnSigningInTest] userAuthenticatorTimeLocale() FINISHED
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6742515Z WebAuthnSigningInTest ++ 
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6743021Z WebAuthnSigningInTest ++ 
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6744588Z WebAuthnSigningInTest ++ 08:42:23,713 WARN  [org.keycloak.testsuite.webauthn.account.WebAuthnSigningInTest] [WebAuthnSigningInTest] checkAuthenticatorTimeLocale() IGNORED
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6746225Z WebAuthnSigningInTest ++ 
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6746947Z WebAuthnSigningInTest ++ 
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6748606Z WebAuthnSigningInTest ++ 08:42:23,713 INFO  [org.keycloak.testsuite.webauthn.account.WebAuthnSigningInTest] [WebAuthnSigningInTest] availableAuthenticatorsAfterRemove() STARTED
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6751447Z WebAuthnSigningInTest ++ 08:42:23,716 INFO  [org.keycloak.testsuite.webauthn.account.WebAuthnSigningInTest] [WebAuthnSigningInTest] availableAuthenticatorsAfterRemove() FINISHED
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6753171Z WebAuthnSigningInTest ++ 
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6753656Z WebAuthnSigningInTest ++ 
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6755094Z WebAuthnSigningInTest ++ 08:42:23,716 INFO  [org.keycloak.testsuite.webauthn.account.WebAuthnSigningInTest] [WebAuthnSigningInTest] categoriesTest() STARTED
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6757328Z WebAuthnSigningInTest ++ 08:42:23,819 INFO  [org.keycloak.testsuite.util.URLUtils] starting navigation
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6759734Z WebAuthnSigningInTest ++ 08:42:23,821 INFO  [org.keycloak.testsuite.util.URLUtils] current URL:  https://localhost:8543/auth/realms/test/account/account-security/signing-in
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6762194Z WebAuthnSigningInTest ++ 08:42:23,821 INFO  [org.keycloak.testsuite.util.URLUtils] navigating to https://localhost:8543/auth/realms/master/testing/blank
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6764690Z WebAuthnSigningInTest ++ 08:42:24,372 INFO  [org.keycloak.testsuite.util.URLUtils] new current URL:  https://localhost:8543/auth/realms/master/testing/blank
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6766742Z WebAuthnSigningInTest ++ 08:42:24,372 INFO  [org.keycloak.testsuite.util.URLUtils] navigation complete
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6768808Z WebAuthnSigningInTest ++ 08:42:24,372 INFO  [org.keycloak.testsuite.webauthn.account.WebAuthnSigningInTest] deleting cookies in 'master' realm
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6770951Z WebAuthnSigningInTest ++ 08:42:24,429 DEBUG [org.keycloak.testsuite.webauthn.account.WebAuthnSigningInTest] creating test user
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6772982Z WebAuthnSigningInTest ++ 08:42:24,588 INFO  [org.keycloak.testsuite.util.URLUtils] starting navigation
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6774866Z WebAuthnSigningInTest ++ 08:42:24,590 INFO  [org.keycloak.testsuite.util.URLUtils] current URL:  https://localhost:8543/auth/realms/master/testing/blank
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6777768Z WebAuthnSigningInTest ++ 08:42:24,590 INFO  [org.keycloak.testsuite.util.URLUtils] navigating to https://localhost:8543/auth/realms/test/account/account-security/signing-in
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6780404Z WebAuthnSigningInTest ++ 1728376944672	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6786321Z WebAuthnSigningInTest ++ 08:42:25,667 INFO  [org.keycloak.testsuite.util.URLUtils] new current URL:  https://localhost:8543/auth/realms/test/protocol/openid-connect/auth?client_id=account-console&redirect_uri=https%3A%2F%2Flocalhost%3A8543%2Fauth%2Frealms%2Ftest%2Faccount%2Faccount-security%2Fsigning-in&state=2d74be3f-e015-44c6-afab-1ee31bd288d8&response_mode=query&response_type=code&scope=openid&nonce=258b2a5f-e237-4eea-8683-9a7ca982b54b&code_challenge=zuBjoEYBijUTAjpIqCWe6FrE1_RI0rsqlkidq2zYKrY&code_challenge_method=S256
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6794896Z WebAuthnSigningInTest ++ 08:42:25,667 INFO  [org.keycloak.testsuite.util.URLUtils] navigation complete
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6796831Z WebAuthnSigningInTest ++ console.warn: LoginRecipes: "Falling back to a synchronous message for: https://localhost:8543."
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6799068Z WebAuthnSigningInTest ++ 1728376946329	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6801456Z WebAuthnSigningInTest ++ 1728376948148	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6803876Z WebAuthnSigningInTest ++ 1728376948331	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6806056Z WebAuthnSigningInTest ++ 08:42:28,632 INFO  [org.keycloak.testsuite.webauthn.account.WebAuthnSigningInTest] calling all TestCleanup
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6808540Z WebAuthnSigningInTest ++ 08:42:28,633 INFO  [org.keycloak.testsuite.webauthn.account.WebAuthnSigningInTest] [WebAuthnSigningInTest] categoriesTest() FINISHED
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6810077Z WebAuthnSigningInTest ++ 
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6810602Z WebAuthnSigningInTest ++ 
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6812168Z WebAuthnSigningInTest ++ 08:42:28,633 INFO  [org.keycloak.testsuite.webauthn.account.WebAuthnSigningInTest] [WebAuthnSigningInTest] passwordlessWebAuthnTest() STARTED
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6814815Z WebAuthnSigningInTest ++ 08:42:28,634 INFO  [org.keycloak.testsuite.webauthn.account.WebAuthnSigningInTest] [WebAuthnSigningInTest] passwordlessWebAuthnTest() FINISHED
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6816682Z WebAuthnSigningInTest ++ 
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6817216Z WebAuthnSigningInTest ++ 
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6818698Z WebAuthnSigningInTest ++ 08:42:28,635 INFO  [org.keycloak.testsuite.webauthn.account.WebAuthnSigningInTest] [WebAuthnSigningInTest] setUpLinksTest() STARTED
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6820960Z WebAuthnSigningInTest ++ 08:42:28,726 DEBUG [org.keycloak.testsuite.webauthn.account.WebAuthnSigningInTest] loading test realms
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6823197Z WebAuthnSigningInTest ++ 08:42:28,726 INFO  [org.keycloak.testsuite.webauthn.account.WebAuthnSigningInTest] importing test realms
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6825389Z WebAuthnSigningInTest ++ 08:42:28,726 DEBUG [org.keycloak.testsuite.webauthn.account.WebAuthnSigningInTest] Modifying login theme to keycloak.v2
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6828363Z WebAuthnSigningInTest ++ 08:42:28,726 DEBUG [org.keycloak.testsuite.webauthn.account.WebAuthnSigningInTest] --importing realm: test
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6830824Z WebAuthnSigningInTest ++ 08:42:28,999 DEBUG [org.keycloak.testsuite.webauthn.account.WebAuthnSigningInTest] realm already existed on server, re-importing
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6832969Z WebAuthnSigningInTest ++ 08:42:29,665 INFO  [org.keycloak.testsuite.util.URLUtils] starting navigation
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6835302Z WebAuthnSigningInTest ++ 08:42:29,667 INFO  [org.keycloak.testsuite.util.URLUtils] current URL:  https://localhost:8543/auth/realms/test/account/account-security/signing-in
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6837951Z WebAuthnSigningInTest ++ 08:42:29,667 INFO  [org.keycloak.testsuite.util.URLUtils] navigating to https://localhost:8543/auth/realms/master/testing/blank
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6840288Z WebAuthnSigningInTest ++ 08:42:30,223 INFO  [org.keycloak.testsuite.util.URLUtils] new current URL:  https://localhost:8543/auth/realms/master/testing/blank
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6842272Z WebAuthnSigningInTest ++ 08:42:30,223 INFO  [org.keycloak.testsuite.util.URLUtils] navigation complete
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6844510Z WebAuthnSigningInTest ++ 08:42:30,223 INFO  [org.keycloak.testsuite.webauthn.account.WebAuthnSigningInTest] deleting cookies in 'master' realm
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6846939Z WebAuthnSigningInTest ++ 08:42:30,283 DEBUG [org.keycloak.testsuite.webauthn.account.WebAuthnSigningInTest] creating test user
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6848813Z WebAuthnSigningInTest ++ 08:42:30,458 INFO  [org.keycloak.testsuite.util.URLUtils] starting navigation
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6850839Z WebAuthnSigningInTest ++ 08:42:30,461 INFO  [org.keycloak.testsuite.util.URLUtils] current URL:  https://localhost:8543/auth/realms/master/testing/blank
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6853688Z WebAuthnSigningInTest ++ 08:42:30,461 INFO  [org.keycloak.testsuite.util.URLUtils] navigating to https://localhost:8543/auth/realms/test/account/account-security/signing-in
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6856798Z WebAuthnSigningInTest ++ 1728376950607	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6863077Z WebAuthnSigningInTest ++ 08:42:31,583 INFO  [org.keycloak.testsuite.util.URLUtils] new current URL:  https://localhost:8543/auth/realms/test/protocol/openid-connect/auth?client_id=account-console&redirect_uri=https%3A%2F%2Flocalhost%3A8543%2Fauth%2Frealms%2Ftest%2Faccount%2Faccount-security%2Fsigning-in&state=14c21a6f-562d-4071-aff6-c2dbb20925a4&response_mode=query&response_type=code&scope=openid&nonce=1ab35a93-ceee-446d-888d-b8bd688a247c&code_challenge=PjmCJtu021ChWYKXDl_sCUU0kriNdFlTsvKWn9fWSsI&code_challenge_method=S256
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6868349Z WebAuthnSigningInTest ++ 08:42:31,583 INFO  [org.keycloak.testsuite.util.URLUtils] navigation complete
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6870163Z WebAuthnSigningInTest ++ console.warn: LoginRecipes: "Falling back to a synchronous message for: https://localhost:8543."
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6872476Z WebAuthnSigningInTest ++ 1728376952310	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6875058Z WebAuthnSigningInTest ++ 1728376954015	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6877769Z WebAuthnSigningInTest ++ 1728376954186	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6880267Z WebAuthnSigningInTest ++ 1728376960756	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6883058Z WebAuthnSigningInTest ++ 1728376960921	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6885313Z WebAuthnSigningInTest ++ 08:42:47,273 INFO  [org.keycloak.testsuite.webauthn.account.WebAuthnSigningInTest] calling all TestCleanup
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6887916Z WebAuthnSigningInTest ++ 08:42:47,281 INFO  [org.keycloak.testsuite.webauthn.account.WebAuthnSigningInTest] [WebAuthnSigningInTest] setUpLinksTest() FINISHED
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6889528Z WebAuthnSigningInTest ++ 
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6890056Z WebAuthnSigningInTest ++ 
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6891441Z WebAuthnSigningInTest ++ 08:42:47,281 INFO  [org.keycloak.testsuite.arquillian.AuthServerTestEnricher] removing test realms after test class
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6893832Z WebAuthnSigningInTest ++ 08:42:47,532 INFO  [org.keycloak.testsuite.arquillian.AuthServerTestEnricher] removed realms: test, 
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6895530Z WebAuthnSigningInTest ++ 1728376967536	Marionette	INFO	Stopped listening on port 33373
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6897272Z WebAuthnSigningInTest ++ 08:42:48,174 INFO  [org.keycloak.testsuite.arquillian.AppServerTestEnricher] 
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6898439Z WebAuthnSigningInTest ++ 
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6899544Z WebAuthnSigningInTest ++ TEST CONTEXT: org.keycloak.testsuite.webauthn.account.WebAuthnSigningInTest
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6900721Z WebAuthnSigningInTest ++ 
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6902320Z WebAuthnSigningInTest ++ 08:42:48,174 INFO  [org.keycloak.testsuite.webauthn.account.WebAuthnSigningInTest] [WebAuthnSigningInTest] multipleSecurityKeys() STARTED
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6904301Z WebAuthnSigningInTest ++ 1728376968181	geckodriver	INFO	Listening on 127.0.0.1:23694
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6907898Z WebAuthnSigningInTest ++ 1728376968185	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... s" "http://127.0.0.1:25612/,http://localhost:25612/,http://[::1]:25612/" "-no-remote" "-profile" "/tmp/rust_mozprofileqsgm7p"
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6910652Z WebAuthnSigningInTest ++ *** You are running in headless mode.
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6912064Z WebAuthnSigningInTest ++ console.warn: services.settings: Ignoring preference override of remote settings server
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6913947Z WebAuthnSigningInTest ++ console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6915717Z WebAuthnSigningInTest ++ [GFX1-]: glxtest: Unable to open a connection to the X server
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6917209Z WebAuthnSigningInTest ++ 1728376968418	Marionette	INFO	Marionette enabled
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6918364Z WebAuthnSigningInTest ++ 1728376968499	Marionette	INFO	Listening on port 42205
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6919485Z WebAuthnSigningInTest ++ WebDriver BiDi listening on ws://127.0.0.1:25612
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6920347Z WebAuthnSigningInTest ++ Read port: 42205
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6921500Z WebAuthnSigningInTest ++ 1728376968662	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6923223Z WebAuthnSigningInTest ++ [GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6924296Z WebAuthnSigningInTest ++ console.error: ({})
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6925749Z WebAuthnSigningInTest ++ 08:42:49,582 INFO  [org.keycloak.testsuite.drone.KeycloakDronePostSetup] Detected browser: firefox 130.0.1
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6928393Z WebAuthnSigningInTest ++ 08:42:49,582 INFO  [org.keycloak.testsuite.drone.KeycloakDronePostSetup] Configuring driver settings. implicitWait=2000, pageLoadTimeout=10000
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6930827Z WebAuthnSigningInTest ++ 08:42:49,722 DEBUG [org.keycloak.testsuite.webauthn.account.WebAuthnSigningInTest] loading test realms
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6933019Z WebAuthnSigningInTest ++ 08:42:49,722 INFO  [org.keycloak.testsuite.webauthn.account.WebAuthnSigningInTest] importing test realms
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6935323Z WebAuthnSigningInTest ++ 08:42:49,722 DEBUG [org.keycloak.testsuite.webauthn.account.WebAuthnSigningInTest] Modifying login theme to keycloak.v2
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6938421Z WebAuthnSigningInTest ++ 08:42:49,722 DEBUG [org.keycloak.testsuite.webauthn.account.WebAuthnSigningInTest] --importing realm: test
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6940351Z WebAuthnSigningInTest ++ 08:42:50,546 INFO  [org.keycloak.testsuite.util.URLUtils] starting navigation
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6942016Z WebAuthnSigningInTest ++ 08:42:50,549 INFO  [org.keycloak.testsuite.util.URLUtils] current URL:  about:blank
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6944076Z WebAuthnSigningInTest ++ 08:42:50,549 INFO  [org.keycloak.testsuite.util.URLUtils] navigating to https://localhost:8543/auth/realms/master/testing/blank
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6946944Z WebAuthnSigningInTest ++ 08:42:51,135 INFO  [org.keycloak.testsuite.util.URLUtils] new current URL:  https://localhost:8543/auth/realms/master/testing/blank
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6948974Z WebAuthnSigningInTest ++ 08:42:51,135 INFO  [org.keycloak.testsuite.util.URLUtils] navigation complete
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6951209Z WebAuthnSigningInTest ++ 08:42:51,135 INFO  [org.keycloak.testsuite.webauthn.account.WebAuthnSigningInTest] deleting cookies in 'master' realm
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6953442Z WebAuthnSigningInTest ++ 08:42:51,177 DEBUG [org.keycloak.testsuite.webauthn.account.WebAuthnSigningInTest] creating test user
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6955303Z WebAuthnSigningInTest ++ 08:42:51,337 INFO  [org.keycloak.testsuite.util.URLUtils] starting navigation
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6957425Z WebAuthnSigningInTest ++ 08:42:51,339 INFO  [org.keycloak.testsuite.util.URLUtils] current URL:  https://localhost:8543/auth/realms/master/testing/blank
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6960221Z WebAuthnSigningInTest ++ 08:42:51,339 INFO  [org.keycloak.testsuite.util.URLUtils] navigating to https://localhost:8543/auth/realms/test/account/account-security/signing-in
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6962901Z WebAuthnSigningInTest ++ 1728376971508	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6968912Z WebAuthnSigningInTest ++ 08:42:52,504 INFO  [org.keycloak.testsuite.util.URLUtils] new current URL:  https://localhost:8543/auth/realms/test/protocol/openid-connect/auth?client_id=account-console&redirect_uri=https%3A%2F%2Flocalhost%3A8543%2Fauth%2Frealms%2Ftest%2Faccount%2Faccount-security%2Fsigning-in&state=010b2d3d-eb3e-46cb-a872-6a2b5826b81f&response_mode=query&response_type=code&scope=openid&nonce=8b085ffa-511e-41ec-bdbc-1f75d65253dd&code_challenge=cuhDWNxgqv68diRdxhk3t3P7cK3Gqcl4nckEAkuXXPg&code_challenge_method=S256
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6973884Z WebAuthnSigningInTest ++ 08:42:52,504 INFO  [org.keycloak.testsuite.util.URLUtils] navigation complete
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6975829Z WebAuthnSigningInTest ++ console.warn: LoginRecipes: "Falling back to a synchronous message for: https://localhost:8543."
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6977917Z WebAuthnSigningInTest ++ console.warn: LoginRecipes: "Falling back to a synchronous message for: https://localhost:8543."
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6980262Z WebAuthnSigningInTest ++ 1728376973218	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6982707Z WebAuthnSigningInTest ++ 08:42:54,728 INFO  [org.keycloak.testsuite.webauthn.account.WebAuthnSigningInTest] [WebAuthnSigningInTest] multipleSecurityKeys() FINISHED
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6984275Z WebAuthnSigningInTest ++ 
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6984779Z WebAuthnSigningInTest ++ 
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6986054Z WebAuthnSigningInTest ++ 08:42:54,728 INFO  [org.keycloak.testsuite.arquillian.AuthServerTestEnricher] removing test realms after test class
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6988306Z WebAuthnSigningInTest ++ 08:42:54,953 INFO  [org.keycloak.testsuite.arquillian.AuthServerTestEnricher] removed realms: test, 
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6989936Z WebAuthnSigningInTest ++ 1728376974958	Marionette	INFO	Stopped listening on port 42205
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6990729Z 
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6991563Z --------- org.keycloak.testsuite.webauthn.account.WebAuthnSigningInTest output end  ---------
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6993925Z [ERROR] Tests run: 14, Failures: 1, Errors: 0, Skipped: 9, Time elapsed: 48.891 s <<< FAILURE! - in org.keycloak.testsuite.webauthn.account.WebAuthnSigningInTest
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6996809Z -- [ERROR] org.keycloak.testsuite.webauthn.account.WebAuthnSigningInTest.multipleSecurityKeys  Time elapsed: 3.866 s  <<< FAILURE!
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.6999449Z -- java.lang.AssertionError: Expected OIDCLogin but was Account Management (https://localhost:8543/auth/realms/test/account/account-security/signing-in)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7001194Z -- 	at org.junit.Assert.fail(Assert.java:89)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7002051Z -- 	at org.junit.Assert.assertTrue(Assert.java:42)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7003565Z -- 	at org.keycloak.testsuite.page.AbstractPage.assertCurrent(AbstractPage.java:109)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7005421Z -- 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7007211Z -- 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7008813Z -- 	at org.jboss.arquillian.graphene.proxy.GrapheneProxyHandler.invokeReal(GrapheneProxyHandler.java:143)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7010897Z -- 	at org.jboss.arquillian.graphene.proxy.GrapheneContextualHandler$1.invoke(GrapheneContextualHandler.java:180)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7013007Z -- 	at org.jboss.arquillian.graphene.proxy.GrapheneContextualHandler$2.call(GrapheneContextualHandler.java:252)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7014959Z -- 	at org.jboss.arquillian.graphene.context.BrowserActions.performAction(BrowserActions.java:62)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7017146Z -- 	at org.jboss.arquillian.graphene.proxy.GrapheneContextualHandler.invoke(GrapheneContextualHandler.java:248)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7019250Z -- 	at org.jboss.arquillian.graphene.proxy.GrapheneProxyHandler.intercept(GrapheneProxyHandler.java:106)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7021237Z -- 	at org.jboss.arquillian.graphene.proxy.GrapheneProxyHandler.intercept(GrapheneProxyHandler.java:81)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7023312Z -- 	at org.jboss.arquillian.graphene.proxy.GrapheneContextualHandler.intercept(GrapheneContextualHandler.java:92)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7025254Z -- 	at org.keycloak.testsuite.auth.page.login.OIDCLogin_ByGraphene.assertCurrent(Unknown Source)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7027682Z -- 	at org.keycloak.testsuite.webauthn.account.AbstractWebAuthnAccountTest.loginToAccount(AbstractWebAuthnAccountTest.java:161)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7030238Z -- 	at org.keycloak.testsuite.webauthn.account.AbstractWebAuthnAccountTest.navigateBeforeTest(AbstractWebAuthnAccountTest.java:110)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7032617Z -- 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7034180Z -- 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7035548Z -- 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7037387Z -- 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7039128Z -- 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7040791Z -- 	at org.junit.internal.runners.statements.RunBefores.invokeMethod(RunBefores.java:33)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7042393Z -- 	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7044040Z -- 	at org.jboss.arquillian.junit.Arquillian$StatementLifecycleExecutor.invoke(Arquillian.java:372)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7046735Z -- 	at org.jboss.arquillian.container.test.impl.execution.ClientBeforeAfterLifecycleEventExecuter.execute(ClientBeforeAfterLifecycleEventExecuter.java:88)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7049927Z -- 	at org.jboss.arquillian.container.test.impl.execution.ClientBeforeAfterLifecycleEventExecuter.on(ClientBeforeAfterLifecycleEventExecuter.java:66)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7052428Z -- 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7053991Z -- 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7055539Z -- 	at org.jboss.arquillian.core.impl.ObserverImpl.invoke(ObserverImpl.java:86)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7057380Z -- 	at org.jboss.arquillian.core.impl.EventContextImpl.invokeObservers(EventContextImpl.java:103)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7059113Z -- 	at org.jboss.arquillian.core.impl.EventContextImpl.proceed(EventContextImpl.java:90)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7061244Z -- 	at org.jboss.arquillian.container.test.impl.client.ContainerEventController.createContext(ContainerEventController.java:128)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7063870Z -- 	at org.jboss.arquillian.container.test.impl.client.ContainerEventController.createBeforeContext(ContainerEventController.java:114)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7067234Z -- 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7068852Z -- 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7070163Z -- 	at org.jboss.arquillian.core.impl.ObserverImpl.invoke(ObserverImpl.java:86)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7071740Z -- 	at org.jboss.arquillian.core.impl.EventContextImpl.proceed(EventContextImpl.java:95)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7073621Z -- 	at org.jboss.arquillian.test.impl.TestContextHandler.createTestContext(TestContextHandler.java:116)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7075642Z -- 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7077407Z -- 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7078712Z -- 	at org.jboss.arquillian.core.impl.ObserverImpl.invoke(ObserverImpl.java:86)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7080266Z -- 	at org.jboss.arquillian.core.impl.EventContextImpl.proceed(EventContextImpl.java:95)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7082087Z -- 	at org.jboss.arquillian.test.impl.TestContextHandler.createClassContext(TestContextHandler.java:83)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7084052Z -- 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7085564Z -- 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7086998Z -- 	at org.jboss.arquillian.core.impl.ObserverImpl.invoke(ObserverImpl.java:86)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7088520Z -- 	at org.jboss.arquillian.core.impl.EventContextImpl.proceed(EventContextImpl.java:95)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7090266Z -- 	at org.jboss.arquillian.test.impl.TestContextHandler.createSuiteContext(TestContextHandler.java:69)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7092195Z -- 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7093751Z -- 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7095036Z -- 	at org.jboss.arquillian.core.impl.ObserverImpl.invoke(ObserverImpl.java:86)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7096755Z -- 	at org.jboss.arquillian.core.impl.EventContextImpl.proceed(EventContextImpl.java:95)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7098262Z -- 	at org.jboss.arquillian.core.impl.ManagerImpl.fire(ManagerImpl.java:133)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7099443Z -- 	at org.jboss.arquillian.core.impl.ManagerImpl.fire(ManagerImpl.java:105)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7101032Z -- 	at org.jboss.arquillian.test.impl.EventTestRunnerAdaptor.before(EventTestRunnerAdaptor.java:115)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7102676Z -- 	at org.jboss.arquillian.junit.Arquillian$4.evaluate(Arquillian.java:194)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7104088Z -- 	at org.jboss.arquillian.junit.Arquillian.multiExecute(Arquillian.java:344)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7105476Z -- 	at org.jboss.arquillian.junit.Arquillian.access$200(Arquillian.java:48)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7107079Z -- 	at org.jboss.arquillian.junit.Arquillian$5.evaluate(Arquillian.java:209)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7108441Z -- 	at org.jboss.arquillian.junit.Arquillian$7$1.invoke(Arquillian.java:273)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7110730Z -- 	at org.jboss.arquillian.container.test.impl.execution.ClientBeforeAfterLifecycleEventExecuter.execute(ClientBeforeAfterLifecycleEventExecuter.java:88)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7113725Z -- 	at org.jboss.arquillian.container.test.impl.execution.ClientBeforeAfterLifecycleEventExecuter.on(ClientBeforeAfterLifecycleEventExecuter.java:66)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7116742Z -- 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7118326Z -- 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7119632Z -- 	at org.jboss.arquillian.core.impl.ObserverImpl.invoke(ObserverImpl.java:86)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7121263Z -- 	at org.jboss.arquillian.core.impl.EventContextImpl.invokeObservers(EventContextImpl.java:103)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7123006Z -- 	at org.jboss.arquillian.core.impl.EventContextImpl.proceed(EventContextImpl.java:90)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7125322Z -- 	at org.jboss.arquillian.container.test.impl.client.ContainerEventController.createContext(ContainerEventController.java:128)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7128157Z -- 	at org.jboss.arquillian.container.test.impl.client.ContainerEventController.createBeforeContext(ContainerEventController.java:114)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7130552Z -- 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7132148Z -- 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7133484Z -- 	at org.jboss.arquillian.core.impl.ObserverImpl.invoke(ObserverImpl.java:86)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7135068Z -- 	at org.jboss.arquillian.core.impl.EventContextImpl.proceed(EventContextImpl.java:95)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7137135Z -- 	at org.jboss.arquillian.test.impl.TestContextHandler.createTestContext(TestContextHandler.java:116)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7139252Z -- 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7140867Z -- 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7142185Z -- 	at org.jboss.arquillian.core.impl.ObserverImpl.invoke(ObserverImpl.java:86)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7143747Z -- 	at org.jboss.arquillian.core.impl.EventContextImpl.proceed(EventContextImpl.java:95)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7145480Z -- 	at org.jboss.arquillian.test.impl.TestContextHandler.createClassContext(TestContextHandler.java:83)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7147669Z -- 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7149368Z -- 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7150739Z -- 	at org.jboss.arquillian.core.impl.ObserverImpl.invoke(ObserverImpl.java:86)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7152316Z -- 	at org.jboss.arquillian.core.impl.EventContextImpl.proceed(EventContextImpl.java:95)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7154137Z -- 	at org.jboss.arquillian.test.impl.TestContextHandler.createSuiteContext(TestContextHandler.java:69)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7156141Z -- 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7158173Z -- 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7159502Z -- 	at org.jboss.arquillian.core.impl.ObserverImpl.invoke(ObserverImpl.java:86)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7161060Z -- 	at org.jboss.arquillian.core.impl.EventContextImpl.proceed(EventContextImpl.java:95)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7162555Z -- 	at org.jboss.arquillian.core.impl.ManagerImpl.fire(ManagerImpl.java:133)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7163929Z -- 	at org.jboss.arquillian.core.impl.ManagerImpl.fire(ManagerImpl.java:105)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7165753Z -- 	at org.jboss.arquillian.test.impl.EventTestRunnerAdaptor.fireCustomLifecycle(EventTestRunnerAdaptor.java:159)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7168052Z -- 	at org.jboss.arquillian.junit.Arquillian$7.evaluate(Arquillian.java:267)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7169739Z -- 	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7171195Z -- 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7173146Z -- 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7175507Z -- 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7178097Z -- 	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7179345Z -- 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7180811Z -- 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7182242Z -- 	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7183506Z -- 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7184789Z -- 	at org.jboss.arquillian.junit.Arquillian$2.evaluate(Arquillian.java:160)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7186312Z -- 	at org.jboss.arquillian.junit.Arquillian.multiExecute(Arquillian.java:344)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7188452Z -- 	at org.jboss.arquillian.junit.Arquillian.access$200(Arquillian.java:48)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7190361Z -- 	at org.jboss.arquillian.junit.Arquillian$3.evaluate(Arquillian.java:171)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7191713Z -- 	at org.junit.rules.ExternalResource$1.evaluate(ExternalResource.java:54)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7192907Z -- 	at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7194533Z -- 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7195950Z -- 	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7197613Z -- 	at org.jboss.arquillian.junit.Arquillian.run(Arquillian.java:109)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7199307Z -- 	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:377)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7201415Z -- 	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:284)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7203540Z -- 	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:248)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7205350Z -- 	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:167)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7207354Z -- 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:456)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7209176Z -- 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7211008Z -- 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7212746Z -- 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7213831Z -- 
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:42:55.7214787Z [INFO] Running org.keycloak.testsuite.webauthn.account.WebAuthnTransportLocaleTest
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:43:03.0263116Z [WARNING] Tests run: 5, Failures: 0, Errors: 0, Skipped: 5, Time elapsed: 7.374 s - in org.keycloak.testsuite.webauthn.account.WebAuthnTransportLocaleTest
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:43:03.0269477Z [INFO] Running org.keycloak.testsuite.webauthn.passwordless.AppInitiatedActionPwdLessTest
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:43:18.0291460Z [WARNING] Tests run: 3, Failures: 0, Errors: 0, Skipped: 2, Time elapsed: 14.994 s - in org.keycloak.testsuite.webauthn.passwordless.AppInitiatedActionPwdLessTest
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:43:18.0293586Z [INFO] Running org.keycloak.testsuite.webauthn.passwordless.WebAuthnPwdLessPropertyTest
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:43:20.3686297Z [WARNING] Tests run: 4, Failures: 0, Errors: 0, Skipped: 4, Time elapsed: 2.329 s - in org.keycloak.testsuite.webauthn.passwordless.WebAuthnPwdLessPropertyTest
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:43:20.3688683Z [INFO] Running org.keycloak.testsuite.webauthn.registration.AttestationConveyanceRegisterTest
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:43:22.4841409Z [WARNING] Tests run: 4, Failures: 0, Errors: 0, Skipped: 4, Time elapsed: 2.105 s - in org.keycloak.testsuite.webauthn.registration.AttestationConveyanceRegisterTest
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:43:22.4845085Z [INFO] Running org.keycloak.testsuite.webauthn.registration.AuthAttachmentRegisterTest
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:43:24.7765168Z [WARNING] Tests run: 4, Failures: 0, Errors: 0, Skipped: 4, Time elapsed: 2.278 s - in org.keycloak.testsuite.webauthn.registration.AuthAttachmentRegisterTest
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:43:24.7767782Z [INFO] Running org.keycloak.testsuite.webauthn.registration.PolicyJsInjectionTest
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:43:34.5437594Z [WARNING] Tests run: 7, Failures: 0, Errors: 0, Skipped: 6, Time elapsed: 9.672 s - in org.keycloak.testsuite.webauthn.registration.PolicyJsInjectionTest
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:43:34.5443836Z [INFO] Running org.keycloak.testsuite.webauthn.registration.PubKeySignRegisterTest
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:43:36.9614142Z [WARNING] Tests run: 6, Failures: 0, Errors: 0, Skipped: 6, Time elapsed: 2.405 s - in org.keycloak.testsuite.webauthn.registration.PubKeySignRegisterTest
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:43:36.9618086Z [INFO] Running org.keycloak.testsuite.webauthn.registration.ResidentKeyRegisterTest
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:43:39.2602649Z [WARNING] Tests run: 4, Failures: 0, Errors: 0, Skipped: 4, Time elapsed: 2.284 s - in org.keycloak.testsuite.webauthn.registration.ResidentKeyRegisterTest
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:43:39.2607461Z [INFO] Running org.keycloak.testsuite.webauthn.registration.UserVerificationRegisterTest
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:43:41.7951058Z [WARNING] Tests run: 9, Failures: 0, Errors: 0, Skipped: 9, Time elapsed: 2.524 s - in org.keycloak.testsuite.webauthn.registration.UserVerificationRegisterTest
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:43:41.7953588Z [INFO] Running org.keycloak.testsuite.webauthn.registration.WebAuthnOtherSettingsTest
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:43:46.4795795Z [WARNING] Tests run: 4, Failures: 0, Errors: 0, Skipped: 3, Time elapsed: 4.672 s - in org.keycloak.testsuite.webauthn.registration.WebAuthnOtherSettingsTest
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:43:46.4798190Z [INFO] Running org.keycloak.testsuite.webauthn.registration.passwordless.PwdLessAttestationRegTest
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:43:48.6795817Z [WARNING] Tests run: 4, Failures: 0, Errors: 0, Skipped: 4, Time elapsed: 2.188 s - in org.keycloak.testsuite.webauthn.registration.passwordless.PwdLessAttestationRegTest
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:43:48.6798526Z [INFO] Running org.keycloak.testsuite.webauthn.registration.passwordless.PwdLessAuthAttachmentRegTest
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:43:50.9430059Z [WARNING] Tests run: 4, Failures: 0, Errors: 0, Skipped: 4, Time elapsed: 2.252 s - in org.keycloak.testsuite.webauthn.registration.passwordless.PwdLessAuthAttachmentRegTest
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:43:50.9432469Z [INFO] Running org.keycloak.testsuite.webauthn.registration.passwordless.PwdLessOtherSettingsTest
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:43:55.6528376Z [WARNING] Tests run: 4, Failures: 0, Errors: 0, Skipped: 3, Time elapsed: 4.695 s - in org.keycloak.testsuite.webauthn.registration.passwordless.PwdLessOtherSettingsTest
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:43:55.6530931Z [INFO] Running org.keycloak.testsuite.webauthn.registration.passwordless.PwdLessPolicyJsInjectionTest
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:44:05.0322402Z [WARNING] Tests run: 7, Failures: 0, Errors: 0, Skipped: 6, Time elapsed: 9.369 s - in org.keycloak.testsuite.webauthn.registration.passwordless.PwdLessPolicyJsInjectionTest
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:44:05.0323988Z [INFO] Running org.keycloak.testsuite.webauthn.registration.passwordless.PwdLessPubKeySignRegTest
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:44:07.4489518Z [WARNING] Tests run: 6, Failures: 0, Errors: 0, Skipped: 6, Time elapsed: 2.403 s - in org.keycloak.testsuite.webauthn.registration.passwordless.PwdLessPubKeySignRegTest
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:44:07.4493133Z [INFO] Running org.keycloak.testsuite.webauthn.registration.passwordless.PwdLessResidentKeyRegTest
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:44:09.7214128Z [WARNING] Tests run: 4, Failures: 0, Errors: 0, Skipped: 4, Time elapsed: 2.261 s - in org.keycloak.testsuite.webauthn.registration.passwordless.PwdLessResidentKeyRegTest
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:44:09.7218240Z [INFO] Running org.keycloak.testsuite.webauthn.registration.passwordless.PwdLessUserVerRegTest
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:44:12.2120564Z [WARNING] Tests run: 9, Failures: 0, Errors: 0, Skipped: 9, Time elapsed: 2.48 s - in org.keycloak.testsuite.webauthn.registration.passwordless.PwdLessUserVerRegTest
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:44:12.5520191Z -- [INFO] 
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:44:12.5520748Z -- [INFO] Results:
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:44:12.5525566Z -- [INFO] 
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:44:12.5525972Z -- [ERROR] Failures: 
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:44:12.5527176Z -- [ERROR] org.keycloak.testsuite.webauthn.account.WebAuthnSigningInTest.multipleSecurityKeys
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:44:12.5530198Z -- [ERROR]   Run 1: WebAuthnSigningInTest>AbstractWebAuthnAccountTest.navigateBeforeTest:110->AbstractWebAuthnAccountTest.loginToAccount:161 Expected OIDCLogin but was Account Management (https://localhost:8543/auth/realms/test/account/account-security/signing-in)
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:44:12.5533207Z -- [INFO]   Run 2: PASS
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:44:12.5533707Z -- [INFO] 
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:44:12.5534088Z -- [INFO] 
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:44:12.5534732Z -- [ERROR] Tests run: 126, Failures: 1, Errors: 0, Skipped: 112
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:44:12.5535482Z -- [INFO] 
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:44:12.5558205Z -- [INFO] ------------------------------------------------------------------------
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:44:12.5559369Z -- [INFO] BUILD FAILURE
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:44:12.5560511Z -- [INFO] ------------------------------------------------------------------------
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:44:12.5571478Z -- [INFO] Total time:  04:04 min
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:44:12.5579554Z -- [INFO] Finished at: 2024-10-08T08:44:12Z
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:44:12.5580457Z -- [INFO] ------------------------------------------------------------------------
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:44:12.5585158Z -- [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.0.0-M7:test (default-test) on project integration-arquillian-tests-base: There are test failures.
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:44:12.5586907Z -- [ERROR] 
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:44:12.5587914Z -- [ERROR] Please refer to /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/target/surefire-reports for the individual test results.
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:44:12.5589383Z -- [ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:44:12.5590017Z -- [ERROR] -> [Help 1]
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:44:12.5590286Z -- [ERROR] 
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:44:12.5590761Z -- [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:44:12.5591657Z -- [ERROR] Re-run Maven using the -X switch to enable full debug logging.
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:44:12.5592140Z -- [ERROR] 
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:44:12.5592734Z -- [ERROR] For more information about the errors and possible solutions, please read the following articles:
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:44:12.5593723Z -- [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+WebAuthn IT (firefox)	Run WebAuthn IT	2024-10-08T08:44:12.6075553Z ##[error]Process completed with exit code 1.
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.5999873Z Prepare all required actions
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6093014Z ##[group]Run ./.github/actions/status-check
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6093736Z with:
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6098946Z   jobs: {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "conditional": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	      "ci": "true",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	      "ci-aurora": "false",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	      "ci-quarkus": "false",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	      "ci-sssd": "false",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	      "ci-store": "false",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	      "ci-test-poc": "false",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	      "ci-webauthn": "true"
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    }
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "build": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "unit-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "base-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "adapter-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "quarkus-unit-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "skipped",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "quarkus-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "jdk-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "store-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "volatile-sessions-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "skipped",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "store-model-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "skipped",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "clustering-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "fips-unit-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "fips-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "forms-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "webauthn-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "failure",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "sssd-unit-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "skipped",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "migration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "external-infinispan-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "skipped",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "test-poc": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "skipped",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  }
+Status Check - Keycloak CI	Run /./.github/actions/status-check	}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6104650Z env:
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6105136Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6105823Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6106297Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6106831Z ##[endgroup]
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6365452Z ##[group]Run JOBS='{
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6366412Z [36;1mJOBS='{[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6366788Z [36;1m  "conditional": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6367203Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6367648Z [36;1m    "outputs": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6368023Z [36;1m      "ci": "true",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6368426Z [36;1m      "ci-aurora": "false",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6368862Z [36;1m      "ci-quarkus": "false",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6369313Z [36;1m      "ci-sssd": "false",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6369721Z [36;1m      "ci-store": "false",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6370150Z [36;1m      "ci-test-poc": "false",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6370597Z [36;1m      "ci-webauthn": "true"[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6370998Z [36;1m    }[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6371324Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6371657Z [36;1m  "build": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6372030Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6372449Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6372836Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6373155Z [36;1m  "unit-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6373540Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6373966Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6374316Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6374674Z [36;1m  "base-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6375118Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6375632Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6376027Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6376382Z [36;1m  "adapter-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6376829Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6377264Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6377630Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6377966Z [36;1m  "quarkus-unit-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6378413Z [36;1m    "result": "skipped",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6379047Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6379425Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6379804Z [36;1m  "quarkus-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6380388Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6380802Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6381172Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6381521Z [36;1m  "jdk-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6381966Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6382367Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6382734Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6383092Z [36;1m  "store-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6383606Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6383975Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6384326Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6384714Z [36;1m  "volatile-sessions-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6385122Z [36;1m    "result": "skipped",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6385625Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6386049Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6386358Z [36;1m  "store-model-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6386754Z [36;1m    "result": "skipped",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6387212Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6387523Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6387886Z [36;1m  "clustering-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6388390Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6388741Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6389088Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6389474Z [36;1m  "fips-unit-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6389826Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6390206Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6390610Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6390910Z [36;1m  "fips-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6391338Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6391787Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6392103Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6392449Z [36;1m  "forms-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6392956Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6393309Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6393696Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6394092Z [36;1m  "webauthn-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6394502Z [36;1m    "result": "failure",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6394913Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6395311Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6395797Z [36;1m  "sssd-unit-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6396184Z [36;1m    "result": "skipped",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6396629Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6396980Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6397287Z [36;1m  "migration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6397719Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6398127Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6398446Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6398841Z [36;1m  "external-infinispan-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6399303Z [36;1m    "result": "skipped",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6399665Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6400062Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6400402Z [36;1m  "test-poc": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6400739Z [36;1m    "result": "skipped",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6401179Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6401546Z [36;1m  }[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6401867Z [36;1m}'[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6402218Z [36;1m[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6402544Z [36;1mecho "Job status:"[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6403041Z [36;1mecho $JOBS | jq -r 'to_entries[] | " - \(.key): \(.value.result)"'[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6403632Z [36;1m[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6404093Z [36;1mfor i in $(echo $JOBS | jq -r 'to_entries[] | .value.result'); do[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6404700Z [36;1m  if [ "$i" != "success" ] && [ "$i" != "skipped" ]; then[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6405267Z [36;1m    echo ""[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6405759Z [36;1m    echo "Status check not okay!"[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6406157Z [36;1m    exit 1[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6406556Z [36;1m  fi[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6407018Z [36;1mdone[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6434888Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6435855Z env:
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6436378Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6436955Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6437456Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6437960Z ##[endgroup]
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.6556070Z Job status:
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.7348696Z  - conditional: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.7349585Z  - build: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.7350422Z  - unit-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.7351346Z  - base-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.7352471Z  - adapter-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.7353176Z  - quarkus-unit-tests: skipped
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.7353787Z  - quarkus-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.7354440Z  - jdk-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.7355070Z  - store-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.7356090Z  - volatile-sessions-tests: skipped
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.7357162Z  - store-model-tests: skipped
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.7358245Z  - clustering-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.7359441Z  - fips-unit-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.7360278Z  - fips-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.7360967Z  - forms-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.7361651Z  - webauthn-integration-tests: failure
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.7362276Z  - sssd-unit-tests: skipped
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.7362842Z  - migration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.7363444Z  - external-infinispan-tests: skipped
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.7364053Z  - test-poc: skipped
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.7563232Z 
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.7563496Z Status check not okay!
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-08T09:15:43.7582330Z ##[error]Process completed with exit code 1.
