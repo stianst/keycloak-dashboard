@@ -20,9 +20,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintStream;
-import java.util.Date;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class RetriedPrsLoader {
@@ -44,7 +42,11 @@ public class RetriedPrsLoader {
 
         File logsDir = new File("logs");
 
-        GHWorkflowRuns runs = GHWorkflowRuns.combine(ghCli.apiGet(GHWorkflowRuns.class, "actions/workflows/ci.yml/runs", "--paginate", "-f", "status=success", "-f", "event=pull_request", "-f", "created=" + from + ".." + to, "-f", "per_page=10"));
+        List<GHWorkflowRuns> l = new LinkedList<>();
+        l.addAll(ghCli.apiGet(GHWorkflowRuns.class, "actions/workflows/ci.yml/runs", "--paginate", "-f", "status=success", "-f", "event=pull_request", "-f", "created=" + from + ".." + to, "-f", "per_page=10"));
+        l.addAll(ghCli.apiGet(GHWorkflowRuns.class, "actions/workflows/js-ci.yml/runs", "--paginate", "-f", "status=success", "-f", "event=pull_request", "-f", "created=" + from + ".." + to, "-f", "per_page=10"));
+
+        GHWorkflowRuns runs = GHWorkflowRuns.combine(l);
 
         Set<String> retriedPrIds = new HashSet<>();
 

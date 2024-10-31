@@ -13,6 +13,8 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.util.Date;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -35,7 +37,11 @@ public class FailedJobsLoader {
 
         File logsDir = new File("logs");
 
-        GHWorkflowRuns runs = GHWorkflowRuns.combine(ghCli.apiGet(GHWorkflowRuns.class, "actions/workflows/ci.yml/runs", "--paginate", "-f", "status=failure", "-f", "branch=main", "-f", "created=" + from + ".." + to));
+        List<GHWorkflowRuns> l = new LinkedList<>();
+        l.addAll(ghCli.apiGet(GHWorkflowRuns.class, "actions/workflows/ci.yml/runs", "--paginate", "-f", "status=failure", "-f", "branch=main", "-f", "created=" + from + ".." + to));
+        l.addAll(ghCli.apiGet(GHWorkflowRuns.class, "actions/workflows/js-ci.yml/runs", "--paginate", "-f", "status=failure", "-f", "branch=main", "-f", "created=" + from + ".." + to));
+
+        GHWorkflowRuns runs = GHWorkflowRuns.combine(l);
 
         for (GHWorkflowRun r : runs.getWorkflowRuns()) {
             if (!r.getEvent().equals("pull_request")) {
