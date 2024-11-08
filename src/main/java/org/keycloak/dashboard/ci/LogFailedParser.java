@@ -31,6 +31,7 @@ public class LogFailedParser {
         IGNORED_JOBS.add("Set check conclusion");
         IGNORED_JOBS.add("Status Check - Keycloak CI");
         IGNORED_JOBS.add("Status Check - Keycloak JavaScript CI");
+        IGNORED_JOBS.add("Status Check - Keycloak Operator CI");
     };
 
     private List<FailedRun> failedRuns = new LinkedList<>();
