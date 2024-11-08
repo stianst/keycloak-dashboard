@@ -8,6 +8,7 @@ public class FailedRun {
 
     private String runId;
 
+    private String workflow;
     private Date date;
 
     private String event;
@@ -22,6 +23,14 @@ public class FailedRun {
 
     public String getRunId() {
         return runId;
+    }
+
+    public String getWorkflow() {
+        return workflow;
+    }
+
+    public void setWorkflow(String workflow) {
+        this.workflow = workflow;
     }
 
     public Date getDate() {

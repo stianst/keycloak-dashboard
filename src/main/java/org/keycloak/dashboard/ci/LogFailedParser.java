@@ -138,14 +138,16 @@ public class LogFailedParser {
 
         String[] header = br.readLine().substring(2).split(" ");
 
-        String jsonDate = header[0];
+        String workflow = header[0];
+        failedRun.setWorkflow(workflow);
+        String jsonDate = header[1];
         Date date = DateUtil.fromJson(jsonDate);
         failedRun.setDate(date);
 
-        String event = header.length > 1 ? header[1] : null;
+        String event = header.length > 2 ? header[2] : null;
         failedRun.setEvent(event);
 
-        String attempt = header.length > 2 ? header[2] : null;
+        String attempt = header.length > 3 ? header[3] : null;
         failedRun.setAttempt(attempt);
 
         for (String l = br.readLine(); l != null; l = br.readLine()) {
@@ -159,7 +161,9 @@ public class LogFailedParser {
 
         for (FailedJob job : jobs) {
             if (job.getConclusion() == JobConclusion.FAILURE) {
-                if (job.getName().equals("Store Model Tests")) {
+                if (job.getFailedRun().getWorkflow().equals("js-ci.yml")) {
+                    failedRun.add(parseJsTest(job, logFile));
+                } else if (job.getName().equals("Store Model Tests")) {
                     failedRun.addAll(parseModelTest(failedRun, job, logFile));
                 } else {
                     failedRun.add(parseTest(job, logFile));
@@ -208,6 +212,26 @@ public class LogFailedParser {
         return job;
     }
 
+    private FailedJob parseJsTest(FailedJob job, File logFile) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(logFile)));
+        List<String> errorLines = new LinkedList<>();
+        for (String l = br.readLine(); l != null; l = br.readLine()) {
+            if (l.startsWith(job.getName()) && l.contains("✖") && !l.matches(".*of .* failed.*")) {
+                l = l.substring(l.indexOf("✖") + 1);
+                errorLines.add("* " + l.split("\\[0m")[1]);
+            } else if (l.startsWith(job.getName()) && l.contains("[error]")) {
+                errorLines.add(l);
+            }
+        }
+        if (!errorLines.isEmpty()) {
+            job.addErrorLog("Failed:");
+            for (String e : errorLines) {
+                job.addErrorLog(e);
+            }
+        }
+
+        return job;
+    }
 
     private List<FailedJob> parseModelTest(FailedRun failedRun, FailedJob job, File logFile) throws IOException {
         List<FailedJob> failedJobs = new LinkedList<>();

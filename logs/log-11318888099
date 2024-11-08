@@ -1,128 +1,128 @@
-AuroraDB IT	Create EC2 runner instance	2024-10-14T00:32:43.4343264Z ##[group]Run AWS_REGION=us-east-1
-AuroraDB IT	Create EC2 runner instance	2024-10-14T00:32:43.4343665Z [36;1mAWS_REGION=us-east-1[0m
-AuroraDB IT	Create EC2 runner instance	2024-10-14T00:32:43.4344111Z [36;1mEC2_CLUSTER_NAME=keycloak_$(git rev-parse --short HEAD)[0m
-AuroraDB IT	Create EC2 runner instance	2024-10-14T00:32:43.4344671Z [36;1mecho "ec2_cluster=${EC2_CLUSTER_NAME}" >> $GITHUB_OUTPUT[0m
-AuroraDB IT	Create EC2 runner instance	2024-10-14T00:32:43.4345090Z [36;1m[0m
-AuroraDB IT	Create EC2 runner instance	2024-10-14T00:32:43.4345464Z [36;1mgit archive --format=zip --output /tmp/keycloak.zip $GITHUB_REF[0m
-AuroraDB IT	Create EC2 runner instance	2024-10-14T00:32:43.4345971Z [36;1mzip -u /tmp/keycloak.zip aws.pem[0m
-AuroraDB IT	Create EC2 runner instance	2024-10-14T00:32:43.4346303Z [36;1m[0m
-AuroraDB IT	Create EC2 runner instance	2024-10-14T00:32:43.4346541Z [36;1mcd .github/scripts/ansible[0m
-AuroraDB IT	Create EC2 runner instance	2024-10-14T00:32:43.4346877Z [36;1m./aws_ec2.sh requirements[0m
-AuroraDB IT	Create EC2 runner instance	2024-10-14T00:32:43.4347293Z [36;1m./aws_ec2.sh create ${AWS_REGION} ${EC2_CLUSTER_NAME}[0m
-AuroraDB IT	Create EC2 runner instance	2024-10-14T00:32:43.4347909Z [36;1m./keycloak_ec2_installer.sh ${AWS_REGION} ${EC2_CLUSTER_NAME} /tmp/keycloak.zip[0m
-AuroraDB IT	Create EC2 runner instance	2024-10-14T00:32:43.4348697Z [36;1m./mvn_ec2_runner.sh ${AWS_REGION} ${EC2_CLUSTER_NAME} "clean install -B -DskipTests -Pdistribution"[0m
-AuroraDB IT	Create EC2 runner instance	2024-10-14T00:32:43.4350126Z [36;1m./mvn_ec2_runner.sh ${AWS_REGION} ${EC2_CLUSTER_NAME} "clean install -B -DskipTests -pl testsuite/integration-arquillian/servers/auth-server/quarkus -Pauth-server-quarkus -Pdb-aurora-postgres -Dmaven.build.cache.enabled=true"[0m
-AuroraDB IT	Create EC2 runner instance	2024-10-14T00:32:43.4398612Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
-AuroraDB IT	Create EC2 runner instance	2024-10-14T00:32:43.4399038Z env:
-AuroraDB IT	Create EC2 runner instance	2024-10-14T00:32:43.4399405Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
-AuroraDB IT	Create EC2 runner instance	2024-10-14T00:32:43.4399877Z   SUREFIRE_RERUN_FAILING_COUNT: 2
-AuroraDB IT	Create EC2 runner instance	2024-10-14T00:32:43.4400395Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
-AuroraDB IT	Create EC2 runner instance	2024-10-14T00:32:43.4400799Z ##[endgroup]
-AuroraDB IT	Create EC2 runner instance	2024-10-14T00:32:45.8614222Z   adding: aws.pem (deflated 37%)
-AuroraDB IT	Create EC2 runner instance	2024-10-14T00:32:53.1711206Z Starting galaxy collection install process
-AuroraDB IT	Create EC2 runner instance	2024-10-14T00:32:53.1711998Z Process install dependency map
-AuroraDB IT	Create EC2 runner instance	2024-10-14T00:32:53.1712528Z Starting collection install process
-AuroraDB IT	Create EC2 runner instance	2024-10-14T00:32:53.1715194Z Downloading https://galaxy.ansible.com/api/v3/plugin/ansible/content/published/collections/artifacts/amazon-aws-6.0.0.tar.gz to /home/runner/.ansible/tmp/ansible-local-2847blyp8lds/tmpnq7hbj2u/amazon-aws-6.0.0-r70dohwm
-AuroraDB IT	Create EC2 runner instance	2024-10-14T00:32:53.1718074Z Installing 'amazon.aws:6.0.0' to '/home/runner/.ansible/collections/ansible_collections/amazon/aws'
-AuroraDB IT	Create EC2 runner instance	2024-10-14T00:32:53.1719073Z amazon.aws:6.0.0 was installed successfully
-AuroraDB IT	Create EC2 runner instance	2024-10-14T00:32:53.5404739Z error: externally-managed-environment
-AuroraDB IT	Create EC2 runner instance	2024-10-14T00:32:53.5405381Z 
-AuroraDB IT	Create EC2 runner instance	2024-10-14T00:32:53.5406291Z × This environment is externally managed
-AuroraDB IT	Create EC2 runner instance	2024-10-14T00:32:53.5407621Z ╰─> To install Python packages system-wide, try apt install
-AuroraDB IT	Create EC2 runner instance	2024-10-14T00:32:53.5408827Z     python3-xyz, where xyz is the package you are trying to
-AuroraDB IT	Create EC2 runner instance	2024-10-14T00:32:53.5409654Z     install.
-AuroraDB IT	Create EC2 runner instance	2024-10-14T00:32:53.5410104Z     
-AuroraDB IT	Create EC2 runner instance	2024-10-14T00:32:53.5411192Z     If you wish to install a non-Debian-packaged Python package,
-AuroraDB IT	Create EC2 runner instance	2024-10-14T00:32:53.5412535Z     create a virtual environment using python3 -m venv path/to/venv.
-AuroraDB IT	Create EC2 runner instance	2024-10-14T00:32:53.5413736Z     Then use path/to/venv/bin/python and path/to/venv/bin/pip. Make
-AuroraDB IT	Create EC2 runner instance	2024-10-14T00:32:53.5414840Z     sure you have python3-full installed.
-AuroraDB IT	Create EC2 runner instance	2024-10-14T00:32:53.5415532Z     
-AuroraDB IT	Create EC2 runner instance	2024-10-14T00:32:53.5416258Z     If you wish to install a non-Debian packaged Python application,
-AuroraDB IT	Create EC2 runner instance	2024-10-14T00:32:53.5417192Z     it may be easiest to use pipx install xyz, which will manage a
-AuroraDB IT	Create EC2 runner instance	2024-10-14T00:32:53.5418126Z     virtual environment for you. Make sure you have pipx installed.
-AuroraDB IT	Create EC2 runner instance	2024-10-14T00:32:53.5418705Z     
-AuroraDB IT	Create EC2 runner instance	2024-10-14T00:32:53.5419053Z     See /usr/share/doc/python3.12/README.venv for more information.
-AuroraDB IT	Create EC2 runner instance	2024-10-14T00:32:53.5419420Z 
-AuroraDB IT	Create EC2 runner instance	2024-10-14T00:32:53.5420714Z note: If you believe this is a mistake, please contact your Python installation or OS distribution provider. You can override this, at the risk of breaking your Python installation or OS, by passing --break-system-packages.
-AuroraDB IT	Create EC2 runner instance	2024-10-14T00:32:53.5421918Z hint: See PEP 668 for the detailed specification.
-AuroraDB IT	Create EC2 runner instance	2024-10-14T00:32:53.5779652Z ##[error]Process completed with exit code 1.
-AuroraDB IT	Delete EC2 Instance	2024-10-14T00:32:55.2884244Z ##[group]Run ./aws_ec2.sh delete us-east-1 keycloak_98a6dde
-AuroraDB IT	Delete EC2 Instance	2024-10-14T00:32:55.2884775Z [36;1m./aws_ec2.sh delete us-east-1 keycloak_98a6dde[0m
-AuroraDB IT	Delete EC2 Instance	2024-10-14T00:32:55.2933068Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
-AuroraDB IT	Delete EC2 Instance	2024-10-14T00:32:55.2933488Z env:
-AuroraDB IT	Delete EC2 Instance	2024-10-14T00:32:55.2933849Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
-AuroraDB IT	Delete EC2 Instance	2024-10-14T00:32:55.2934316Z   SUREFIRE_RERUN_FAILING_COUNT: 2
-AuroraDB IT	Delete EC2 Instance	2024-10-14T00:32:55.2934705Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
-AuroraDB IT	Delete EC2 Instance	2024-10-14T00:32:55.2935110Z ##[endgroup]
-AuroraDB IT	Delete EC2 Instance	2024-10-14T00:32:55.6882340Z [WARNING]: No inventory was parsed, only implicit localhost is available
-AuroraDB IT	Delete EC2 Instance	2024-10-14T00:32:55.6964301Z [WARNING]: provided hosts list is empty, only localhost is available. Note that
-AuroraDB IT	Delete EC2 Instance	2024-10-14T00:32:55.6965712Z the implicit localhost does not match 'all'
-AuroraDB IT	Delete EC2 Instance	2024-10-14T00:32:55.9543603Z Using /home/runner/work/keycloak/keycloak/.github/scripts/ansible/ansible.cfg as config file
-AuroraDB IT	Delete EC2 Instance	2024-10-14T00:32:55.9544548Z 
-AuroraDB IT	Delete EC2 Instance	2024-10-14T00:32:55.9545660Z PLAY [localhost] ***************************************************************
-AuroraDB IT	Delete EC2 Instance	2024-10-14T00:32:55.9546324Z 
-AuroraDB IT	Delete EC2 Instance	2024-10-14T00:32:55.9546715Z TASK [Gathering Facts] *********************************************************
-AuroraDB IT	Delete EC2 Instance	2024-10-14T00:32:57.1315528Z ok: [localhost]
-AuroraDB IT	Delete EC2 Instance	2024-10-14T00:32:57.1316035Z 
-AuroraDB IT	Delete EC2 Instance	2024-10-14T00:32:57.1316398Z TASK [aws_ec2 : debug] *********************************************************
-AuroraDB IT	Delete EC2 Instance	2024-10-14T00:32:57.1543672Z ok: [localhost] => {
-AuroraDB IT	Delete EC2 Instance	2024-10-14T00:32:57.1544381Z     "cluster_identifier": "runner"
-AuroraDB IT	Delete EC2 Instance	2024-10-14T00:32:57.1544927Z }
-AuroraDB IT	Delete EC2 Instance	2024-10-14T00:32:57.1545125Z 
-AuroraDB IT	Delete EC2 Instance	2024-10-14T00:32:57.1545502Z TASK [aws_ec2 : debug] *********************************************************
-AuroraDB IT	Delete EC2 Instance	2024-10-14T00:32:57.1777850Z ok: [localhost] => {
-AuroraDB IT	Delete EC2 Instance	2024-10-14T00:32:57.1778625Z     "region": "us-east-1"
-AuroraDB IT	Delete EC2 Instance	2024-10-14T00:32:57.1779086Z }
-AuroraDB IT	Delete EC2 Instance	2024-10-14T00:32:57.1779284Z 
-AuroraDB IT	Delete EC2 Instance	2024-10-14T00:32:57.1779646Z TASK [aws_ec2 : debug] *********************************************************
-AuroraDB IT	Delete EC2 Instance	2024-10-14T00:32:57.1905907Z ok: [localhost] => {
-AuroraDB IT	Delete EC2 Instance	2024-10-14T00:32:57.1906487Z     "cluster_name": "keycloak_98a6dde"
-AuroraDB IT	Delete EC2 Instance	2024-10-14T00:32:57.1907037Z }
-AuroraDB IT	Delete EC2 Instance	2024-10-14T00:32:57.1907234Z 
-AuroraDB IT	Delete EC2 Instance	2024-10-14T00:32:57.1907647Z TASK [aws_ec2 : include_tasks] *************************************************
-AuroraDB IT	Delete EC2 Instance	2024-10-14T00:32:57.2018486Z skipping: [localhost] => {"changed": false, "false_condition": "operation == \"create\"", "skip_reason": "Conditional result was False"}
-AuroraDB IT	Delete EC2 Instance	2024-10-14T00:32:57.2019557Z 
-AuroraDB IT	Delete EC2 Instance	2024-10-14T00:32:57.2019975Z TASK [aws_ec2 : include_tasks] *************************************************
-AuroraDB IT	Delete EC2 Instance	2024-10-14T00:32:57.2140633Z skipping: [localhost] => {"changed": false, "false_condition": "operation == \"start\" or operation == \"stop\"", "skip_reason": "Conditional result was False"}
-AuroraDB IT	Delete EC2 Instance	2024-10-14T00:32:57.2141870Z 
-AuroraDB IT	Delete EC2 Instance	2024-10-14T00:32:57.2142290Z TASK [aws_ec2 : include_tasks] *************************************************
-AuroraDB IT	Delete EC2 Instance	2024-10-14T00:32:57.2344154Z included: /home/runner/work/keycloak/keycloak/.github/scripts/ansible/roles/aws_ec2/tasks/delete-resources.yml for localhost
-AuroraDB IT	Delete EC2 Instance	2024-10-14T00:32:57.2345372Z 
-AuroraDB IT	Delete EC2 Instance	2024-10-14T00:32:57.2345812Z TASK [aws_ec2 : Delete EC2 instances] ******************************************
-AuroraDB IT	Delete EC2 Instance	2024-10-14T00:32:57.5437784Z fatal: [localhost]: FAILED! => {"changed": false, "msg": "Failed to import the required Python library (botocore and boto3) on fv-az1915-957's Python /opt/pipx/venvs/ansible-core/bin/python. Please read the module documentation and install it in the appropriate location. If the required library is installed, but Ansible is using the wrong Python interpreter, please consult the documentation on ansible_python_interpreter"}
-AuroraDB IT	Delete EC2 Instance	2024-10-14T00:32:57.5440856Z 
-AuroraDB IT	Delete EC2 Instance	2024-10-14T00:32:57.5441074Z PLAY RECAP *********************************************************************
-AuroraDB IT	Delete EC2 Instance	2024-10-14T00:32:57.5441745Z localhost                  : ok=5    changed=0    unreachable=0    failed=1    skipped=2    rescued=0    ignored=0   
-AuroraDB IT	Delete EC2 Instance	2024-10-14T00:32:57.5442211Z 
-AuroraDB IT	Delete EC2 Instance	2024-10-14T00:32:57.5849869Z ##[error]Process completed with exit code 2.
-FIPS IT (non-strict)	Build adapter distributions	2024-10-14T00:24:56.0619375Z ##[group]Run ./mvnw install -DskipTests -f distribution/pom.xml
-FIPS IT (non-strict)	Build adapter distributions	2024-10-14T00:24:56.0620265Z [36;1m./mvnw install -DskipTests -f distribution/pom.xml[0m
-FIPS IT (non-strict)	Build adapter distributions	2024-10-14T00:24:56.0669931Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
-FIPS IT (non-strict)	Build adapter distributions	2024-10-14T00:24:56.0670379Z env:
-FIPS IT (non-strict)	Build adapter distributions	2024-10-14T00:24:56.0670752Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
-FIPS IT (non-strict)	Build adapter distributions	2024-10-14T00:24:56.0671245Z   SUREFIRE_RERUN_FAILING_COUNT: 2
-FIPS IT (non-strict)	Build adapter distributions	2024-10-14T00:24:56.0671651Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
-FIPS IT (non-strict)	Build adapter distributions	2024-10-14T00:24:56.0672205Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.4-7/x64
-FIPS IT (non-strict)	Build adapter distributions	2024-10-14T00:24:56.0672843Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.4-7/x64
-FIPS IT (non-strict)	Build adapter distributions	2024-10-14T00:24:56.0673338Z ##[endgroup]
-FIPS IT (non-strict)	Build adapter distributions	2024-10-14T00:24:56.1554586Z wget: Failed to fetch https://repo.maven.apache.org/maven2/org/apache/maven/apache-maven/3.9.8/apache-maven-3.9.8-bin.zip
-FIPS IT (non-strict)	Build adapter distributions	2024-10-14T00:24:56.1578340Z ##[error]Process completed with exit code 1.
-FIPS IT (strict)	Build adapter distributions	2024-10-14T00:24:59.0112568Z ##[group]Run ./mvnw install -DskipTests -f distribution/pom.xml
-FIPS IT (strict)	Build adapter distributions	2024-10-14T00:24:59.0113227Z [36;1m./mvnw install -DskipTests -f distribution/pom.xml[0m
-FIPS IT (strict)	Build adapter distributions	2024-10-14T00:24:59.0174650Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
-FIPS IT (strict)	Build adapter distributions	2024-10-14T00:24:59.0175090Z env:
-FIPS IT (strict)	Build adapter distributions	2024-10-14T00:24:59.0175456Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
-FIPS IT (strict)	Build adapter distributions	2024-10-14T00:24:59.0175958Z   SUREFIRE_RERUN_FAILING_COUNT: 2
-FIPS IT (strict)	Build adapter distributions	2024-10-14T00:24:59.0176368Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
-FIPS IT (strict)	Build adapter distributions	2024-10-14T00:24:59.0176922Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.4-7/x64
-FIPS IT (strict)	Build adapter distributions	2024-10-14T00:24:59.0177553Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.4-7/x64
-FIPS IT (strict)	Build adapter distributions	2024-10-14T00:24:59.0178030Z ##[endgroup]
-FIPS IT (strict)	Build adapter distributions	2024-10-14T00:24:59.1027423Z wget: Failed to fetch https://repo.maven.apache.org/maven2/org/apache/maven/apache-maven/3.9.8/apache-maven-3.9.8-bin.zip
-FIPS IT (strict)	Build adapter distributions	2024-10-14T00:24:59.1050126Z ##[error]Process completed with exit code 1.
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.1623574Z Prepare all required actions
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.1710428Z ##[group]Run ./.github/actions/status-check
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.1711019Z with:
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.1715709Z   jobs: {
+AuroraDB IT	Create EC2 runner instance	2024-10-14T06:39:20.7196005Z ##[group]Run AWS_REGION=us-east-1
+AuroraDB IT	Create EC2 runner instance	2024-10-14T06:39:20.7196401Z [36;1mAWS_REGION=us-east-1[0m
+AuroraDB IT	Create EC2 runner instance	2024-10-14T06:39:20.7196840Z [36;1mEC2_CLUSTER_NAME=keycloak_$(git rev-parse --short HEAD)[0m
+AuroraDB IT	Create EC2 runner instance	2024-10-14T06:39:20.7197393Z [36;1mecho "ec2_cluster=${EC2_CLUSTER_NAME}" >> $GITHUB_OUTPUT[0m
+AuroraDB IT	Create EC2 runner instance	2024-10-14T06:39:20.7197814Z [36;1m[0m
+AuroraDB IT	Create EC2 runner instance	2024-10-14T06:39:20.7198191Z [36;1mgit archive --format=zip --output /tmp/keycloak.zip $GITHUB_REF[0m
+AuroraDB IT	Create EC2 runner instance	2024-10-14T06:39:20.7198689Z [36;1mzip -u /tmp/keycloak.zip aws.pem[0m
+AuroraDB IT	Create EC2 runner instance	2024-10-14T06:39:20.7199024Z [36;1m[0m
+AuroraDB IT	Create EC2 runner instance	2024-10-14T06:39:20.7199265Z [36;1mcd .github/scripts/ansible[0m
+AuroraDB IT	Create EC2 runner instance	2024-10-14T06:39:20.7199601Z [36;1m./aws_ec2.sh requirements[0m
+AuroraDB IT	Create EC2 runner instance	2024-10-14T06:39:20.7200022Z [36;1m./aws_ec2.sh create ${AWS_REGION} ${EC2_CLUSTER_NAME}[0m
+AuroraDB IT	Create EC2 runner instance	2024-10-14T06:39:20.7200639Z [36;1m./keycloak_ec2_installer.sh ${AWS_REGION} ${EC2_CLUSTER_NAME} /tmp/keycloak.zip[0m
+AuroraDB IT	Create EC2 runner instance	2024-10-14T06:39:20.7201416Z [36;1m./mvn_ec2_runner.sh ${AWS_REGION} ${EC2_CLUSTER_NAME} "clean install -B -DskipTests -Pdistribution"[0m
+AuroraDB IT	Create EC2 runner instance	2024-10-14T06:39:20.7203038Z [36;1m./mvn_ec2_runner.sh ${AWS_REGION} ${EC2_CLUSTER_NAME} "clean install -B -DskipTests -pl testsuite/integration-arquillian/servers/auth-server/quarkus -Pauth-server-quarkus -Pdb-aurora-postgres -Dmaven.build.cache.enabled=true"[0m
+AuroraDB IT	Create EC2 runner instance	2024-10-14T06:39:20.7252075Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+AuroraDB IT	Create EC2 runner instance	2024-10-14T06:39:20.7252510Z env:
+AuroraDB IT	Create EC2 runner instance	2024-10-14T06:39:20.7252869Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+AuroraDB IT	Create EC2 runner instance	2024-10-14T06:39:20.7253345Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+AuroraDB IT	Create EC2 runner instance	2024-10-14T06:39:20.7253739Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+AuroraDB IT	Create EC2 runner instance	2024-10-14T06:39:20.7254127Z ##[endgroup]
+AuroraDB IT	Create EC2 runner instance	2024-10-14T06:39:23.1597087Z   adding: aws.pem (deflated 37%)
+AuroraDB IT	Create EC2 runner instance	2024-10-14T06:39:32.8111693Z Starting galaxy collection install process
+AuroraDB IT	Create EC2 runner instance	2024-10-14T06:39:32.8112690Z Process install dependency map
+AuroraDB IT	Create EC2 runner instance	2024-10-14T06:39:32.8113211Z Starting collection install process
+AuroraDB IT	Create EC2 runner instance	2024-10-14T06:39:32.8115699Z Downloading https://galaxy.ansible.com/api/v3/plugin/ansible/content/published/collections/artifacts/amazon-aws-6.0.0.tar.gz to /home/runner/.ansible/tmp/ansible-local-2883r35wy5gc/tmpopjsp8c5/amazon-aws-6.0.0-529kjr5q
+AuroraDB IT	Create EC2 runner instance	2024-10-14T06:39:32.8118647Z Installing 'amazon.aws:6.0.0' to '/home/runner/.ansible/collections/ansible_collections/amazon/aws'
+AuroraDB IT	Create EC2 runner instance	2024-10-14T06:39:32.8119628Z amazon.aws:6.0.0 was installed successfully
+AuroraDB IT	Create EC2 runner instance	2024-10-14T06:39:33.3058115Z error: externally-managed-environment
+AuroraDB IT	Create EC2 runner instance	2024-10-14T06:39:33.3058784Z 
+AuroraDB IT	Create EC2 runner instance	2024-10-14T06:39:33.3059503Z × This environment is externally managed
+AuroraDB IT	Create EC2 runner instance	2024-10-14T06:39:33.3060761Z ╰─> To install Python packages system-wide, try apt install
+AuroraDB IT	Create EC2 runner instance	2024-10-14T06:39:33.3062252Z     python3-xyz, where xyz is the package you are trying to
+AuroraDB IT	Create EC2 runner instance	2024-10-14T06:39:33.3063125Z     install.
+AuroraDB IT	Create EC2 runner instance	2024-10-14T06:39:33.3063565Z     
+AuroraDB IT	Create EC2 runner instance	2024-10-14T06:39:33.3064249Z     If you wish to install a non-Debian-packaged Python package,
+AuroraDB IT	Create EC2 runner instance	2024-10-14T06:39:33.3065358Z     create a virtual environment using python3 -m venv path/to/venv.
+AuroraDB IT	Create EC2 runner instance	2024-10-14T06:39:33.3066391Z     Then use path/to/venv/bin/python and path/to/venv/bin/pip. Make
+AuroraDB IT	Create EC2 runner instance	2024-10-14T06:39:33.3067358Z     sure you have python3-full installed.
+AuroraDB IT	Create EC2 runner instance	2024-10-14T06:39:33.3067963Z     
+AuroraDB IT	Create EC2 runner instance	2024-10-14T06:39:33.3068652Z     If you wish to install a non-Debian packaged Python application,
+AuroraDB IT	Create EC2 runner instance	2024-10-14T06:39:33.3069301Z     it may be easiest to use pipx install xyz, which will manage a
+AuroraDB IT	Create EC2 runner instance	2024-10-14T06:39:33.3069933Z     virtual environment for you. Make sure you have pipx installed.
+AuroraDB IT	Create EC2 runner instance	2024-10-14T06:39:33.3070426Z     
+AuroraDB IT	Create EC2 runner instance	2024-10-14T06:39:33.3070811Z     See /usr/share/doc/python3.12/README.venv for more information.
+AuroraDB IT	Create EC2 runner instance	2024-10-14T06:39:33.3071211Z 
+AuroraDB IT	Create EC2 runner instance	2024-10-14T06:39:33.3072655Z note: If you believe this is a mistake, please contact your Python installation or OS distribution provider. You can override this, at the risk of breaking your Python installation or OS, by passing --break-system-packages.
+AuroraDB IT	Create EC2 runner instance	2024-10-14T06:39:33.3074010Z hint: See PEP 668 for the detailed specification.
+AuroraDB IT	Create EC2 runner instance	2024-10-14T06:39:33.3613056Z ##[error]Process completed with exit code 1.
+AuroraDB IT	Delete EC2 Instance	2024-10-14T06:39:35.1047332Z ##[group]Run ./aws_ec2.sh delete us-east-1 keycloak_98a6dde
+AuroraDB IT	Delete EC2 Instance	2024-10-14T06:39:35.1047884Z [36;1m./aws_ec2.sh delete us-east-1 keycloak_98a6dde[0m
+AuroraDB IT	Delete EC2 Instance	2024-10-14T06:39:35.1096572Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+AuroraDB IT	Delete EC2 Instance	2024-10-14T06:39:35.1097000Z env:
+AuroraDB IT	Delete EC2 Instance	2024-10-14T06:39:35.1097350Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+AuroraDB IT	Delete EC2 Instance	2024-10-14T06:39:35.1097820Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+AuroraDB IT	Delete EC2 Instance	2024-10-14T06:39:35.1098211Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+AuroraDB IT	Delete EC2 Instance	2024-10-14T06:39:35.1098617Z ##[endgroup]
+AuroraDB IT	Delete EC2 Instance	2024-10-14T06:39:35.5159913Z [WARNING]: No inventory was parsed, only implicit localhost is available
+AuroraDB IT	Delete EC2 Instance	2024-10-14T06:39:35.5251189Z [WARNING]: provided hosts list is empty, only localhost is available. Note that
+AuroraDB IT	Delete EC2 Instance	2024-10-14T06:39:35.5253029Z the implicit localhost does not match 'all'
+AuroraDB IT	Delete EC2 Instance	2024-10-14T06:39:35.8298657Z Using /home/runner/work/keycloak/keycloak/.github/scripts/ansible/ansible.cfg as config file
+AuroraDB IT	Delete EC2 Instance	2024-10-14T06:39:35.8299468Z 
+AuroraDB IT	Delete EC2 Instance	2024-10-14T06:39:35.8299779Z PLAY [localhost] ***************************************************************
+AuroraDB IT	Delete EC2 Instance	2024-10-14T06:39:35.8300458Z 
+AuroraDB IT	Delete EC2 Instance	2024-10-14T06:39:35.8300807Z TASK [Gathering Facts] *********************************************************
+AuroraDB IT	Delete EC2 Instance	2024-10-14T06:39:37.0931996Z ok: [localhost]
+AuroraDB IT	Delete EC2 Instance	2024-10-14T06:39:37.0932467Z 
+AuroraDB IT	Delete EC2 Instance	2024-10-14T06:39:37.0932958Z TASK [aws_ec2 : debug] *********************************************************
+AuroraDB IT	Delete EC2 Instance	2024-10-14T06:39:37.1174087Z ok: [localhost] => {
+AuroraDB IT	Delete EC2 Instance	2024-10-14T06:39:37.1174724Z     "cluster_identifier": "runner"
+AuroraDB IT	Delete EC2 Instance	2024-10-14T06:39:37.1175335Z }
+AuroraDB IT	Delete EC2 Instance	2024-10-14T06:39:37.1175553Z 
+AuroraDB IT	Delete EC2 Instance	2024-10-14T06:39:37.1175935Z TASK [aws_ec2 : debug] *********************************************************
+AuroraDB IT	Delete EC2 Instance	2024-10-14T06:39:37.1442926Z ok: [localhost] => {
+AuroraDB IT	Delete EC2 Instance	2024-10-14T06:39:37.1443917Z     "region": "us-east-1"
+AuroraDB IT	Delete EC2 Instance	2024-10-14T06:39:37.1444487Z }
+AuroraDB IT	Delete EC2 Instance	2024-10-14T06:39:37.1444736Z 
+AuroraDB IT	Delete EC2 Instance	2024-10-14T06:39:37.1445190Z TASK [aws_ec2 : debug] *********************************************************
+AuroraDB IT	Delete EC2 Instance	2024-10-14T06:39:37.1592895Z ok: [localhost] => {
+AuroraDB IT	Delete EC2 Instance	2024-10-14T06:39:37.1593543Z     "cluster_name": "keycloak_98a6dde"
+AuroraDB IT	Delete EC2 Instance	2024-10-14T06:39:37.1594076Z }
+AuroraDB IT	Delete EC2 Instance	2024-10-14T06:39:37.1594260Z 
+AuroraDB IT	Delete EC2 Instance	2024-10-14T06:39:37.1594658Z TASK [aws_ec2 : include_tasks] *************************************************
+AuroraDB IT	Delete EC2 Instance	2024-10-14T06:39:37.1710147Z skipping: [localhost] => {"changed": false, "false_condition": "operation == \"create\"", "skip_reason": "Conditional result was False"}
+AuroraDB IT	Delete EC2 Instance	2024-10-14T06:39:37.1711230Z 
+AuroraDB IT	Delete EC2 Instance	2024-10-14T06:39:37.1711638Z TASK [aws_ec2 : include_tasks] *************************************************
+AuroraDB IT	Delete EC2 Instance	2024-10-14T06:39:37.1829459Z skipping: [localhost] => {"changed": false, "false_condition": "operation == \"start\" or operation == \"stop\"", "skip_reason": "Conditional result was False"}
+AuroraDB IT	Delete EC2 Instance	2024-10-14T06:39:37.1830702Z 
+AuroraDB IT	Delete EC2 Instance	2024-10-14T06:39:37.1831103Z TASK [aws_ec2 : include_tasks] *************************************************
+AuroraDB IT	Delete EC2 Instance	2024-10-14T06:39:37.2043702Z included: /home/runner/work/keycloak/keycloak/.github/scripts/ansible/roles/aws_ec2/tasks/delete-resources.yml for localhost
+AuroraDB IT	Delete EC2 Instance	2024-10-14T06:39:37.2044918Z 
+AuroraDB IT	Delete EC2 Instance	2024-10-14T06:39:37.2045338Z TASK [aws_ec2 : Delete EC2 instances] ******************************************
+AuroraDB IT	Delete EC2 Instance	2024-10-14T06:39:37.5384792Z fatal: [localhost]: FAILED! => {"changed": false, "msg": "Failed to import the required Python library (botocore and boto3) on fv-az1048-215's Python /opt/pipx/venvs/ansible-core/bin/python. Please read the module documentation and install it in the appropriate location. If the required library is installed, but Ansible is using the wrong Python interpreter, please consult the documentation on ansible_python_interpreter"}
+AuroraDB IT	Delete EC2 Instance	2024-10-14T06:39:37.5386738Z 
+AuroraDB IT	Delete EC2 Instance	2024-10-14T06:39:37.5386950Z PLAY RECAP *********************************************************************
+AuroraDB IT	Delete EC2 Instance	2024-10-14T06:39:37.5387635Z localhost                  : ok=5    changed=0    unreachable=0    failed=1    skipped=2    rescued=0    ignored=0   
+AuroraDB IT	Delete EC2 Instance	2024-10-14T06:39:37.5388432Z 
+AuroraDB IT	Delete EC2 Instance	2024-10-14T06:39:37.5872071Z ##[error]Process completed with exit code 2.
+FIPS IT (non-strict)	Build adapter distributions	2024-10-14T06:26:44.9385646Z ##[group]Run ./mvnw install -DskipTests -f distribution/pom.xml
+FIPS IT (non-strict)	Build adapter distributions	2024-10-14T06:26:44.9386270Z [36;1m./mvnw install -DskipTests -f distribution/pom.xml[0m
+FIPS IT (non-strict)	Build adapter distributions	2024-10-14T06:26:44.9434752Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+FIPS IT (non-strict)	Build adapter distributions	2024-10-14T06:26:44.9435359Z env:
+FIPS IT (non-strict)	Build adapter distributions	2024-10-14T06:26:44.9435739Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+FIPS IT (non-strict)	Build adapter distributions	2024-10-14T06:26:44.9436231Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+FIPS IT (non-strict)	Build adapter distributions	2024-10-14T06:26:44.9436634Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+FIPS IT (non-strict)	Build adapter distributions	2024-10-14T06:26:44.9437198Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.4-7/x64
+FIPS IT (non-strict)	Build adapter distributions	2024-10-14T06:26:44.9437841Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.4-7/x64
+FIPS IT (non-strict)	Build adapter distributions	2024-10-14T06:26:44.9438324Z ##[endgroup]
+FIPS IT (non-strict)	Build adapter distributions	2024-10-14T06:26:44.9963606Z wget: Failed to fetch https://repo.maven.apache.org/maven2/org/apache/maven/apache-maven/3.9.8/apache-maven-3.9.8-bin.zip
+FIPS IT (non-strict)	Build adapter distributions	2024-10-14T06:26:44.9986772Z ##[error]Process completed with exit code 1.
+FIPS IT (strict)	Build adapter distributions	2024-10-14T06:26:19.9345428Z ##[group]Run ./mvnw install -DskipTests -f distribution/pom.xml
+FIPS IT (strict)	Build adapter distributions	2024-10-14T06:26:19.9346032Z [36;1m./mvnw install -DskipTests -f distribution/pom.xml[0m
+FIPS IT (strict)	Build adapter distributions	2024-10-14T06:26:19.9394185Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+FIPS IT (strict)	Build adapter distributions	2024-10-14T06:26:19.9394615Z env:
+FIPS IT (strict)	Build adapter distributions	2024-10-14T06:26:19.9394980Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+FIPS IT (strict)	Build adapter distributions	2024-10-14T06:26:19.9395459Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+FIPS IT (strict)	Build adapter distributions	2024-10-14T06:26:19.9395863Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+FIPS IT (strict)	Build adapter distributions	2024-10-14T06:26:19.9396412Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.4-7/x64
+FIPS IT (strict)	Build adapter distributions	2024-10-14T06:26:19.9397286Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.4-7/x64
+FIPS IT (strict)	Build adapter distributions	2024-10-14T06:26:19.9397785Z ##[endgroup]
+FIPS IT (strict)	Build adapter distributions	2024-10-14T06:26:19.9828591Z wget: Failed to fetch https://repo.maven.apache.org/maven2/org/apache/maven/apache-maven/3.9.8/apache-maven-3.9.8-bin.zip
+FIPS IT (strict)	Build adapter distributions	2024-10-14T06:26:19.9851743Z ##[error]Process completed with exit code 1.
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9111999Z Prepare all required actions
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9199980Z ##[group]Run ./.github/actions/status-check
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9200481Z with:
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9205188Z   jobs: {
 Status Check - Keycloak CI	Run /./.github/actions/status-check	  "conditional": {
 Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
 Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {
@@ -212,140 +212,140 @@ Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "su
 Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
 Status Check - Keycloak CI	Run /./.github/actions/status-check	  }
 Status Check - Keycloak CI	Run /./.github/actions/status-check	}
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.1721343Z env:
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.1721768Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.1722409Z   SUREFIRE_RERUN_FAILING_COUNT: 2
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.1722905Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.1723336Z ##[endgroup]
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2069152Z ##[group]Run JOBS='{
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2069712Z [36;1mJOBS='{[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2069982Z [36;1m  "conditional": {[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2070285Z [36;1m    "result": "success",[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2070590Z [36;1m    "outputs": {[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2070867Z [36;1m      "ci": "true",[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2071162Z [36;1m      "ci-aurora": "true",[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2071472Z [36;1m      "ci-quarkus": "true",[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2071788Z [36;1m      "ci-sssd": "true",[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2072095Z [36;1m      "ci-store": "true",[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2072404Z [36;1m      "ci-test-poc": "true",[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2072728Z [36;1m      "ci-webauthn": "true"[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2073025Z [36;1m    }[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2073237Z [36;1m  },[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2073458Z [36;1m  "build": {[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2073721Z [36;1m    "result": "success",[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2074009Z [36;1m    "outputs": {}[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2074271Z [36;1m  },[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2074495Z [36;1m  "unit-tests": {[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2074756Z [36;1m    "result": "success",[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2075048Z [36;1m    "outputs": {}[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2075304Z [36;1m  },[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2075550Z [36;1m  "base-integration-tests": {[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2075878Z [36;1m    "result": "success",[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2076173Z [36;1m    "outputs": {}[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2076421Z [36;1m  },[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2076681Z [36;1m  "adapter-integration-tests": {[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2077022Z [36;1m    "result": "success",[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2077305Z [36;1m    "outputs": {}[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2077558Z [36;1m  },[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2077786Z [36;1m  "quarkus-unit-tests": {[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2078083Z [36;1m    "result": "success",[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2078603Z [36;1m    "outputs": {}[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2078853Z [36;1m  },[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2079097Z [36;1m  "quarkus-integration-tests": {[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2079763Z [36;1m    "result": "success",[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2080074Z [36;1m    "outputs": {}[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2080321Z [36;1m  },[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2080560Z [36;1m  "jdk-integration-tests": {[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2080880Z [36;1m    "result": "success",[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2081170Z [36;1m    "outputs": {}[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2081430Z [36;1m  },[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2081679Z [36;1m  "store-integration-tests": {[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2082176Z [36;1m    "result": "success",[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2082481Z [36;1m    "outputs": {}[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2082743Z [36;1m  },[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2082991Z [36;1m  "volatile-sessions-tests": {[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2083323Z [36;1m    "result": "success",[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2083612Z [36;1m    "outputs": {}[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2083865Z [36;1m  },[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2084107Z [36;1m  "store-model-tests": {[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2084430Z [36;1m    "result": "success",[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2084730Z [36;1m    "outputs": {}[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2084977Z [36;1m  },[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2085246Z [36;1m  "clustering-integration-tests": {[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2085594Z [36;1m    "result": "success",[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2085877Z [36;1m    "outputs": {}[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2086124Z [36;1m  },[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2086346Z [36;1m  "fips-unit-tests": {[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2086632Z [36;1m    "result": "success",[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2086914Z [36;1m    "outputs": {}[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2087169Z [36;1m  },[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2087405Z [36;1m  "fips-integration-tests": {[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2087721Z [36;1m    "result": "failure",[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2088003Z [36;1m    "outputs": {}[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2088248Z [36;1m  },[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2088487Z [36;1m  "forms-integration-tests": {[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2088817Z [36;1m    "result": "success",[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2089105Z [36;1m    "outputs": {}[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2089574Z [36;1m  },[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2090000Z [36;1m  "webauthn-integration-tests": {[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2090423Z [36;1m    "result": "success",[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2090917Z [36;1m    "outputs": {}[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2091338Z [36;1m  },[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2091662Z [36;1m  "sssd-unit-tests": {[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2091984Z [36;1m    "result": "success",[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2092332Z [36;1m    "outputs": {}[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2092599Z [36;1m  },[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2092841Z [36;1m  "migration-tests": {[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2093134Z [36;1m    "result": "success",[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2093424Z [36;1m    "outputs": {}[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2093675Z [36;1m  },[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2093976Z [36;1m  "external-infinispan-tests": {[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2094402Z [36;1m    "result": "success",[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2094758Z [36;1m    "outputs": {}[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2095006Z [36;1m  },[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2095231Z [36;1m  "test-poc": {[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2095498Z [36;1m    "result": "success",[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2095783Z [36;1m    "outputs": {}[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2096030Z [36;1m  }[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2096236Z [36;1m}'[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2096439Z [36;1m[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2096656Z [36;1mecho "Job status:"[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2097085Z [36;1mecho $JOBS | jq -r 'to_entries[] | " - \(.key): \(.value.result)"'[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2097532Z [36;1m[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2097886Z [36;1mfor i in $(echo $JOBS | jq -r 'to_entries[] | .value.result'); do[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2098435Z [36;1m  if [ "$i" != "success" ] && [ "$i" != "skipped" ]; then[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2098821Z [36;1m    echo ""[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2099102Z [36;1m    echo "Status check not okay!"[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2099556Z [36;1m    exit 1[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2099779Z [36;1m  fi[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2100198Z [36;1mdone[0m
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2223679Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2224122Z env:
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2224484Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2224945Z   SUREFIRE_RERUN_FAILING_COUNT: 2
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2225326Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2225713Z ##[endgroup]
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2363130Z Job status:
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2399499Z  - conditional: success
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2400054Z  - build: success
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2400513Z  - unit-tests: success
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2401307Z  - base-integration-tests: success
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2401718Z  - adapter-integration-tests: success
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2402329Z  - quarkus-unit-tests: success
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2402922Z  - quarkus-integration-tests: success
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2403518Z  - jdk-integration-tests: success
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2404177Z  - store-integration-tests: success
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2404870Z  - volatile-sessions-tests: success
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2405531Z  - store-model-tests: success
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2406186Z  - clustering-integration-tests: success
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2406841Z  - fips-unit-tests: success
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2407401Z  - fips-integration-tests: failure
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2408007Z  - forms-integration-tests: success
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2408589Z  - webauthn-integration-tests: success
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2408957Z  - sssd-unit-tests: success
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2409447Z  - migration-tests: success
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2409894Z  - external-infinispan-tests: success
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2410268Z  - test-poc: success
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2437097Z 
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2437627Z Status check not okay!
-Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T01:29:08.2455033Z ##[error]Process completed with exit code 1.
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9210972Z env:
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9211477Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9212010Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9212523Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9213049Z ##[endgroup]
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9466935Z ##[group]Run JOBS='{
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9467560Z [36;1mJOBS='{[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9467938Z [36;1m  "conditional": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9468337Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9468817Z [36;1m    "outputs": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9469215Z [36;1m      "ci": "true",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9469797Z [36;1m      "ci-aurora": "true",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9470322Z [36;1m      "ci-quarkus": "true",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9470757Z [36;1m      "ci-sssd": "true",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9471154Z [36;1m      "ci-store": "true",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9561985Z [36;1m      "ci-test-poc": "true",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9562393Z [36;1m      "ci-webauthn": "true"[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9562717Z [36;1m    }[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9562945Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9563179Z [36;1m  "build": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9563466Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9563771Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9564039Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9564277Z [36;1m  "unit-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9564550Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9564851Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9565113Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9565369Z [36;1m  "base-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9565709Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9566012Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9566265Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9566534Z [36;1m  "adapter-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9566892Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9567191Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9567454Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9567694Z [36;1m  "quarkus-unit-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9568002Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9568564Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9568829Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9569092Z [36;1m  "quarkus-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9569617Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9569982Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9570240Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9570487Z [36;1m  "jdk-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9570814Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9571115Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9571381Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9571638Z [36;1m  "store-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9572125Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9572432Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9572697Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9572948Z [36;1m  "volatile-sessions-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9573282Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9573576Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9573830Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9574077Z [36;1m  "store-model-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9574464Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9574758Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9575006Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9575281Z [36;1m  "clustering-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9575644Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9575939Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9576199Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9576435Z [36;1m  "fips-unit-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9576735Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9577042Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9577309Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9577560Z [36;1m  "fips-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9577892Z [36;1m    "result": "failure",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9578191Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9578447Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9578699Z [36;1m  "forms-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9579040Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9579458Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9579720Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9579981Z [36;1m  "webauthn-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9580327Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9580624Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9580883Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9581109Z [36;1m  "sssd-unit-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9581411Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9581702Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9581954Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9582186Z [36;1m  "migration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9582480Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9582775Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9583025Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9583282Z [36;1m  "external-infinispan-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9583630Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9583920Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9584177Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9584407Z [36;1m  "test-poc": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9584686Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9584985Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9585247Z [36;1m  }[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9585463Z [36;1m}'[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9585680Z [36;1m[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9585941Z [36;1mecho "Job status:"[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9586374Z [36;1mecho $JOBS | jq -r 'to_entries[] | " - \(.key): \(.value.result)"'[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9586823Z [36;1m[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9587175Z [36;1mfor i in $(echo $JOBS | jq -r 'to_entries[] | .value.result'); do[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9587721Z [36;1m  if [ "$i" != "success" ] && [ "$i" != "skipped" ]; then[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9588123Z [36;1m    echo ""[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9588420Z [36;1m    echo "Status check not okay!"[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9588751Z [36;1m    exit 1[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9588994Z [36;1m  fi[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9589472Z [36;1mdone[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9732027Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9732523Z env:
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9732901Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9733402Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9733814Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9734228Z ##[endgroup]
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9872238Z Job status:
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9919825Z  - conditional: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9920408Z  - build: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9920928Z  - unit-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9926041Z  - base-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9926783Z  - adapter-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9927437Z  - quarkus-unit-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9928046Z  - quarkus-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9928692Z  - jdk-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9932946Z  - store-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9933735Z  - volatile-sessions-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9934357Z  - store-model-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9934973Z  - clustering-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9935611Z  - fips-unit-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9936170Z  - fips-integration-tests: failure
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9936771Z  - forms-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9937164Z  - webauthn-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9937530Z  - sssd-unit-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9937845Z  - migration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9938186Z  - external-infinispan-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9938543Z  - test-poc: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9958473Z 
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9958709Z Status check not okay!
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2024-10-14T06:27:02.9972039Z ##[error]Process completed with exit code 1.

@@ -51,7 +51,9 @@ public class FailedJobsLoader {
                 if (!jobsFile.isFile()) {
                     PrintStream jobsOutput = new PrintStream(new FileOutputStream(jobsFile));
 
-                    jobsOutput.println("# " + r.getCreatedAt() + " " + r.getEvent());
+                    String workflow = r.getPath().substring(r.getPath().lastIndexOf('/') + 1);
+
+                    jobsOutput.println("# " + workflow + " " + r.getCreatedAt() + " " + r.getEvent() + " " + (r.getRunAttempt() - 1));
 
                     PagedIterable<GHWorkflowJob> ghWorkflowJobs = gh.getRepository("keycloak/keycloak").getWorkflowRun(r.getId()).listAllJobs();
 

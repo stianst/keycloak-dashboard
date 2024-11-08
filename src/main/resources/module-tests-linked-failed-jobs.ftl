@@ -12,6 +12,7 @@
     <table>
         <tr>
             <th>Date</th>
+            <th>Workflow</th>
             <th>Run</th>
             <th>Event</th>
             <th>Job</th>
@@ -31,6 +32,7 @@
         <#list linkedFailedJobs[jobName] as job>
         <tr>
             <td>${job.failedRun.date?date}</td>
+            <td>${job.failedRun.workflow}</td>
             <td><a href="https://github.com/keycloak/keycloak/actions/runs/${job.failedRun.runId}<#if job.failedRun.attempt?has_content>/attempts/${job.failedRun.attempt}</#if>">${job.failedRun.runId}</a></td>
             <td>${job.failedRun.event!}</td>
             <td>${job.name}</td>
