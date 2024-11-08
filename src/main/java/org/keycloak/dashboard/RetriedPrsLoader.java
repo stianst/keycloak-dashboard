@@ -45,6 +45,7 @@ public class RetriedPrsLoader {
         List<GHWorkflowRuns> l = new LinkedList<>();
         l.addAll(ghCli.apiGet(GHWorkflowRuns.class, "actions/workflows/ci.yml/runs", "--paginate", "-f", "status=success", "-f", "event=pull_request", "-f", "created=" + from + ".." + to, "-f", "per_page=10"));
         l.addAll(ghCli.apiGet(GHWorkflowRuns.class, "actions/workflows/js-ci.yml/runs", "--paginate", "-f", "status=success", "-f", "event=pull_request", "-f", "created=" + from + ".." + to, "-f", "per_page=10"));
+        l.addAll(ghCli.apiGet(GHWorkflowRuns.class, "actions/workflows/operator-ci.yml/runs", "--paginate", "-f", "status=success", "-f", "event=pull_request", "-f", "created=" + from + ".." + to, "-f", "per_page=10"));
 
         GHWorkflowRuns runs = GHWorkflowRuns.combine(l);
 
