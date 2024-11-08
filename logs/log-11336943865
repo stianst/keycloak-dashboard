@@ -1,0 +1,230 @@
+Test local	Build Keycloak Docker images	2024-10-15T00:36:04.1844445Z ##[group]Run eval $(minikube -p minikube docker-env)
+Test local	Build Keycloak Docker images	2024-10-15T00:36:04.1845355Z [36;1meval $(minikube -p minikube docker-env)[0m
+Test local	Build Keycloak Docker images	2024-10-15T00:36:04.1846109Z [36;1m(cd quarkus/container && docker build --build-arg KEYCLOAK_DIST=$(ls keycloak-*.tar.gz) . -t keycloak:0.0.1-10aca5)[0m
+Test local	Build Keycloak Docker images	2024-10-15T00:36:04.1847073Z [36;1m(cd operator && ./scripts/build-testing-docker-images.sh 0.0.1-10aca5 keycloak custom-keycloak)[0m
+Test local	Build Keycloak Docker images	2024-10-15T00:36:04.1896777Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Test local	Build Keycloak Docker images	2024-10-15T00:36:04.1897181Z env:
+Test local	Build Keycloak Docker images	2024-10-15T00:36:04.1897515Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Test local	Build Keycloak Docker images	2024-10-15T00:36:04.1897955Z   MINIKUBE_VERSION: v1.32.0
+Test local	Build Keycloak Docker images	2024-10-15T00:36:04.1898243Z   KUBERNETES_VERSION: v1.27.10
+Test local	Build Keycloak Docker images	2024-10-15T00:36:04.1898520Z   MINIKUBE_MEMORY: 4096
+Test local	Build Keycloak Docker images	2024-10-15T00:36:04.1898777Z   version_local: 0.0.1-10aca5
+Test local	Build Keycloak Docker images	2024-10-15T00:36:04.1899184Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.4-7/x64
+Test local	Build Keycloak Docker images	2024-10-15T00:36:04.1899773Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.4-7/x64
+Test local	Build Keycloak Docker images	2024-10-15T00:36:04.1900282Z   MINIKUBE_HOME: /home/runner/work/_temp
+Test local	Build Keycloak Docker images	2024-10-15T00:36:04.1900598Z ##[endgroup]
+Test local	Build Keycloak Docker images	2024-10-15T00:36:04.8496111Z #0 building with "default" instance using docker driver
+Test local	Build Keycloak Docker images	2024-10-15T00:36:04.8496792Z 
+Test local	Build Keycloak Docker images	2024-10-15T00:36:04.8497010Z #1 [internal] load .dockerignore
+Test local	Build Keycloak Docker images	2024-10-15T00:36:04.8497536Z #1 transferring context: 2B done
+Test local	Build Keycloak Docker images	2024-10-15T00:36:04.8498030Z #1 DONE 0.0s
+Test local	Build Keycloak Docker images	2024-10-15T00:36:04.8498184Z 
+Test local	Build Keycloak Docker images	2024-10-15T00:36:04.8498340Z #2 [internal] load build definition from Dockerfile
+Test local	Build Keycloak Docker images	2024-10-15T00:36:04.8498853Z #2 transferring dockerfile: 2.72kB done
+Test local	Build Keycloak Docker images	2024-10-15T00:36:04.8499164Z #2 DONE 0.0s
+Test local	Build Keycloak Docker images	2024-10-15T00:36:04.8499322Z 
+Test local	Build Keycloak Docker images	2024-10-15T00:36:04.8499718Z #3 [internal] load metadata for registry.access.redhat.com/ubi9:latest
+Test local	Build Keycloak Docker images	2024-10-15T00:36:14.7496000Z #3 ...
+Test local	Build Keycloak Docker images	2024-10-15T00:36:14.7496320Z 
+Test local	Build Keycloak Docker images	2024-10-15T00:36:14.7496959Z #4 [internal] load metadata for registry.access.redhat.com/ubi9-micro:latest
+Test local	Build Keycloak Docker images	2024-10-15T00:36:42.7757476Z #4 ...
+Test local	Build Keycloak Docker images	2024-10-15T00:36:42.7760799Z 
+Test local	Build Keycloak Docker images	2024-10-15T00:36:42.7761355Z #3 [internal] load metadata for registry.access.redhat.com/ubi9:latest
+Test local	Build Keycloak Docker images	2024-10-15T00:36:42.7762812Z #3 ERROR: pulling from host registry.access.redhat.com failed with status code [manifests latest]: 502 Bad Gateway
+Test local	Build Keycloak Docker images	2024-10-15T00:36:42.8346053Z 
+Test local	Build Keycloak Docker images	2024-10-15T00:36:42.8346891Z #4 [internal] load metadata for registry.access.redhat.com/ubi9-micro:latest
+Test local	Build Keycloak Docker images	2024-10-15T00:36:42.8350363Z #4 CANCELED
+Test local	Build Keycloak Docker images	2024-10-15T00:36:42.8351317Z ------
+Test local	Build Keycloak Docker images	2024-10-15T00:36:42.8351946Z  > [internal] load metadata for registry.access.redhat.com/ubi9:latest:
+Test local	Build Keycloak Docker images	2024-10-15T00:36:42.8352720Z ------
+Test local	Build Keycloak Docker images	2024-10-15T00:36:42.8355122Z Dockerfile:1
+Test local	Build Keycloak Docker images	2024-10-15T00:36:42.8355627Z --------------------
+Test local	Build Keycloak Docker images	2024-10-15T00:36:42.8356337Z    1 | >>> FROM registry.access.redhat.com/ubi9 AS ubi-micro-build
+Test local	Build Keycloak Docker images	2024-10-15T00:36:42.8357087Z    2 |     
+Test local	Build Keycloak Docker images	2024-10-15T00:36:42.8357673Z    3 |     ENV KEYCLOAK_VERSION 999.0.0-SNAPSHOT
+Test local	Build Keycloak Docker images	2024-10-15T00:36:42.8358298Z --------------------
+Test local	Build Keycloak Docker images	2024-10-15T00:36:42.8359638Z ERROR: failed to solve: registry.access.redhat.com/ubi9: pulling from host registry.access.redhat.com failed with status code [manifests latest]: 502 Bad Gateway
+Test local	Build Keycloak Docker images	2024-10-15T00:36:42.8405878Z ##[error]Process completed with exit code 1.
+Test remote	Build Keycloak Docker images	2024-10-15T00:37:27.2699495Z ##[group]Run eval $(minikube -p minikube docker-env)
+Test remote	Build Keycloak Docker images	2024-10-15T00:37:27.2700025Z [36;1meval $(minikube -p minikube docker-env)[0m
+Test remote	Build Keycloak Docker images	2024-10-15T00:37:27.2700765Z [36;1m(cd quarkus/container && docker build --build-arg KEYCLOAK_DIST=$(ls keycloak-*.tar.gz) . -t keycloak:0.0.1-10aca5)[0m
+Test remote	Build Keycloak Docker images	2024-10-15T00:37:27.2701712Z [36;1m(cd operator && ./scripts/build-testing-docker-images.sh 0.0.1-10aca5 keycloak custom-keycloak)[0m
+Test remote	Build Keycloak Docker images	2024-10-15T00:37:27.2750729Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Test remote	Build Keycloak Docker images	2024-10-15T00:37:27.2751131Z env:
+Test remote	Build Keycloak Docker images	2024-10-15T00:37:27.2751467Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Test remote	Build Keycloak Docker images	2024-10-15T00:37:27.2751907Z   MINIKUBE_VERSION: v1.32.0
+Test remote	Build Keycloak Docker images	2024-10-15T00:37:27.2752188Z   KUBERNETES_VERSION: v1.27.10
+Test remote	Build Keycloak Docker images	2024-10-15T00:37:27.2752483Z   MINIKUBE_MEMORY: 4096
+Test remote	Build Keycloak Docker images	2024-10-15T00:37:27.2752740Z   version_remote: 0.0.1-10aca5
+Test remote	Build Keycloak Docker images	2024-10-15T00:37:27.2753186Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.4-7/x64
+Test remote	Build Keycloak Docker images	2024-10-15T00:37:27.2753971Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.4-7/x64
+Test remote	Build Keycloak Docker images	2024-10-15T00:37:27.2754493Z   MINIKUBE_HOME: /home/runner/work/_temp
+Test remote	Build Keycloak Docker images	2024-10-15T00:37:27.2754808Z ##[endgroup]
+Test remote	Build Keycloak Docker images	2024-10-15T00:37:28.0527018Z #0 building with "default" instance using docker driver
+Test remote	Build Keycloak Docker images	2024-10-15T00:37:28.0527459Z 
+Test remote	Build Keycloak Docker images	2024-10-15T00:37:28.0527638Z #1 [internal] load build definition from Dockerfile
+Test remote	Build Keycloak Docker images	2024-10-15T00:37:28.0528058Z #1 transferring dockerfile: 2.72kB done
+Test remote	Build Keycloak Docker images	2024-10-15T00:37:28.0528389Z #1 DONE 0.0s
+Test remote	Build Keycloak Docker images	2024-10-15T00:37:28.0528536Z 
+Test remote	Build Keycloak Docker images	2024-10-15T00:37:28.0528642Z #2 [internal] load .dockerignore
+Test remote	Build Keycloak Docker images	2024-10-15T00:37:28.0528956Z #2 transferring context: 2B done
+Test remote	Build Keycloak Docker images	2024-10-15T00:37:28.0529436Z #2 DONE 0.0s
+Test remote	Build Keycloak Docker images	2024-10-15T00:37:28.0529582Z 
+Test remote	Build Keycloak Docker images	2024-10-15T00:37:28.0529829Z #3 [internal] load metadata for registry.access.redhat.com/ubi9:latest
+Test remote	Build Keycloak Docker images	2024-10-15T00:37:28.4376012Z #3 ...
+Test remote	Build Keycloak Docker images	2024-10-15T00:37:28.4376949Z 
+Test remote	Build Keycloak Docker images	2024-10-15T00:37:28.4378142Z #4 [internal] load metadata for registry.access.redhat.com/ubi9-micro:latest
+Test remote	Build Keycloak Docker images	2024-10-15T00:37:28.4379743Z #4 ERROR: pulling from host registry.access.redhat.com failed with status code [manifests latest]: 502 Bad Gateway
+Test remote	Build Keycloak Docker images	2024-10-15T00:37:28.4678125Z 
+Test remote	Build Keycloak Docker images	2024-10-15T00:37:28.4680401Z #3 [internal] load metadata for registry.access.redhat.com/ubi9:latest
+Test remote	Build Keycloak Docker images	2024-10-15T00:37:28.4681168Z #3 CANCELED
+Test remote	Build Keycloak Docker images	2024-10-15T00:37:28.4681622Z ------
+Test remote	Build Keycloak Docker images	2024-10-15T00:37:28.4682375Z  > [internal] load metadata for registry.access.redhat.com/ubi9-micro:latest:
+Test remote	Build Keycloak Docker images	2024-10-15T00:37:28.4683525Z ------
+Test remote	Build Keycloak Docker images	2024-10-15T00:37:28.4693333Z Dockerfile:22
+Test remote	Build Keycloak Docker images	2024-10-15T00:37:28.4695292Z --------------------
+Test remote	Build Keycloak Docker images	2024-10-15T00:37:28.4696283Z   20 |     RUN bash /tmp/ubi-null.sh java-21-openjdk-headless glibc-langpack-en findutils
+Test remote	Build Keycloak Docker images	2024-10-15T00:37:28.4697162Z   21 |     
+Test remote	Build Keycloak Docker images	2024-10-15T00:37:28.4697737Z   22 | >>> FROM registry.access.redhat.com/ubi9-micro
+Test remote	Build Keycloak Docker images	2024-10-15T00:37:28.4698413Z   23 |     ENV LANG en_US.UTF-8
+Test remote	Build Keycloak Docker images	2024-10-15T00:37:28.4698865Z   24 |     
+Test remote	Build Keycloak Docker images	2024-10-15T00:37:28.4699433Z --------------------
+Test remote	Build Keycloak Docker images	2024-10-15T00:37:28.4700391Z ERROR: failed to solve: registry.access.redhat.com/ubi9-micro: pulling from host registry.access.redhat.com failed with status code [manifests latest]: 502 Bad Gateway
+Test remote	Build Keycloak Docker images	2024-10-15T00:37:28.4742413Z ##[error]Process completed with exit code 1.
+Test OLM installation	Arrange OLM test installation	2024-10-15T00:41:23.4650435Z ##[group]Run eval $(minikube -p minikube docker-env)
+Test OLM installation	Arrange OLM test installation	2024-10-15T00:41:23.4651295Z [36;1meval $(minikube -p minikube docker-env)[0m
+Test OLM installation	Arrange OLM test installation	2024-10-15T00:41:23.4652090Z [36;1m./scripts/olm-testing.sh ${GITHUB_SHA::6}[0m
+Test OLM installation	Arrange OLM test installation	2024-10-15T00:41:23.4701010Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Test OLM installation	Arrange OLM test installation	2024-10-15T00:41:23.4701432Z env:
+Test OLM installation	Arrange OLM test installation	2024-10-15T00:41:23.4701781Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Test OLM installation	Arrange OLM test installation	2024-10-15T00:41:23.4702229Z   MINIKUBE_VERSION: v1.32.0
+Test OLM installation	Arrange OLM test installation	2024-10-15T00:41:23.4702533Z   KUBERNETES_VERSION: v1.27.10
+Test OLM installation	Arrange OLM test installation	2024-10-15T00:41:23.4702830Z   MINIKUBE_MEMORY: 4096
+Test OLM installation	Arrange OLM test installation	2024-10-15T00:41:23.4703237Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.4-7/x64
+Test OLM installation	Arrange OLM test installation	2024-10-15T00:41:23.4703856Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.4-7/x64
+Test OLM installation	Arrange OLM test installation	2024-10-15T00:41:23.4704354Z   MINIKUBE_HOME: /home/runner/work/_temp
+Test OLM installation	Arrange OLM test installation	2024-10-15T00:41:23.4704675Z ##[endgroup]
+Test OLM installation	Arrange OLM test installation	2024-10-15T00:41:23.7160681Z + UUID=10aca5
+Test OLM installation	Arrange OLM test installation	2024-10-15T00:41:23.7161403Z + INSTALL_NAMESPACE=default
+Test OLM installation	Arrange OLM test installation	2024-10-15T00:41:23.7163540Z + TARGET_NAMESPACES=default
+Test OLM installation	Arrange OLM test installation	2024-10-15T00:41:23.7166401Z +++ dirname -- ./scripts/olm-testing.sh
+Test OLM installation	Arrange OLM test installation	2024-10-15T00:41:23.7176904Z ++ cd -- ./scripts
+Test OLM installation	Arrange OLM test installation	2024-10-15T00:41:23.7177590Z ++ pwd
+Test OLM installation	Arrange OLM test installation	2024-10-15T00:41:23.7180202Z + SCRIPT_DIR=/home/runner/work/keycloak/keycloak/operator/scripts
+Test OLM installation	Arrange OLM test installation	2024-10-15T00:41:23.7180984Z + VERSION=86400000.0.0
+Test OLM installation	Arrange OLM test installation	2024-10-15T00:41:23.7183379Z + cd /home/runner/work/keycloak/keycloak/operator/scripts/../../quarkus/container
+Test OLM installation	Arrange OLM test installation	2024-10-15T00:41:23.7186669Z ++ ls keycloak-999.0.0-SNAPSHOT.tar.gz
+Test OLM installation	Arrange OLM test installation	2024-10-15T00:41:23.7199858Z + docker build --build-arg KEYCLOAK_DIST=keycloak-999.0.0-SNAPSHOT.tar.gz . -t ttl.sh/10aca5keycloak:86400000.0.0
+Test OLM installation	Arrange OLM test installation	2024-10-15T00:41:24.0859738Z #0 building with "default" instance using docker driver
+Test OLM installation	Arrange OLM test installation	2024-10-15T00:41:24.0860322Z 
+Test OLM installation	Arrange OLM test installation	2024-10-15T00:41:24.0860604Z #1 [internal] load build definition from Dockerfile
+Test OLM installation	Arrange OLM test installation	2024-10-15T00:41:24.0864393Z #1 transferring dockerfile: 2.72kB done
+Test OLM installation	Arrange OLM test installation	2024-10-15T00:41:24.0865166Z #1 DONE 0.0s
+Test OLM installation	Arrange OLM test installation	2024-10-15T00:41:24.0865426Z 
+Test OLM installation	Arrange OLM test installation	2024-10-15T00:41:24.0865647Z #2 [internal] load .dockerignore
+Test OLM installation	Arrange OLM test installation	2024-10-15T00:41:24.0866190Z #2 transferring context: 2B done
+Test OLM installation	Arrange OLM test installation	2024-10-15T00:41:24.0866706Z #2 DONE 0.0s
+Test OLM installation	Arrange OLM test installation	2024-10-15T00:41:24.0866941Z 
+Test OLM installation	Arrange OLM test installation	2024-10-15T00:41:24.0867675Z #3 [internal] load metadata for registry.access.redhat.com/ubi9-micro:latest
+Test OLM installation	Arrange OLM test installation	2024-10-15T00:41:24.0939913Z #3 ERROR: pulling from host registry.access.redhat.com failed with status code [manifests latest]: 503 Service Unavailable
+Test OLM installation	Arrange OLM test installation	2024-10-15T00:41:24.0943410Z 
+Test OLM installation	Arrange OLM test installation	2024-10-15T00:41:24.0944029Z #4 [internal] load metadata for registry.access.redhat.com/ubi9:latest
+Test OLM installation	Arrange OLM test installation	2024-10-15T00:41:24.1250052Z #4 CANCELED
+Test OLM installation	Arrange OLM test installation	2024-10-15T00:41:24.1251267Z ------
+Test OLM installation	Arrange OLM test installation	2024-10-15T00:41:24.1252206Z  > [internal] load metadata for registry.access.redhat.com/ubi9-micro:latest:
+Test OLM installation	Arrange OLM test installation	2024-10-15T00:41:24.1253184Z ------
+Test OLM installation	Arrange OLM test installation	2024-10-15T00:41:24.1261277Z Dockerfile:22
+Test OLM installation	Arrange OLM test installation	2024-10-15T00:41:24.1261938Z --------------------
+Test OLM installation	Arrange OLM test installation	2024-10-15T00:41:24.1262871Z   20 |     RUN bash /tmp/ubi-null.sh java-21-openjdk-headless glibc-langpack-en findutils
+Test OLM installation	Arrange OLM test installation	2024-10-15T00:41:24.1263779Z   21 |     
+Test OLM installation	Arrange OLM test installation	2024-10-15T00:41:24.1264348Z   22 | >>> FROM registry.access.redhat.com/ubi9-micro
+Test OLM installation	Arrange OLM test installation	2024-10-15T00:41:24.1265045Z   23 |     ENV LANG en_US.UTF-8
+Test OLM installation	Arrange OLM test installation	2024-10-15T00:41:24.1265524Z   24 |     
+Test OLM installation	Arrange OLM test installation	2024-10-15T00:41:24.1265913Z --------------------
+Test OLM installation	Arrange OLM test installation	2024-10-15T00:41:24.1267587Z ERROR: failed to solve: registry.access.redhat.com/ubi9-micro: pulling from host registry.access.redhat.com failed with status code [manifests latest]: 503 Service Unavailable
+Test OLM installation	Arrange OLM test installation	2024-10-15T00:41:24.1322919Z ##[error]Process completed with exit code 1.
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-10-15T00:41:35.7981085Z Prepare all required actions
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-10-15T00:41:35.8067974Z ##[group]Run ./.github/actions/status-check
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-10-15T00:41:35.8068463Z with:
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-10-15T00:41:35.8069701Z   jobs: {
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	  "conditional": {
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	    "outputs": {
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	      "operator": "true"
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	    }
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	  "build": {
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	  "test-local": {
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	    "result": "failure",
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	  "test-remote": {
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	    "result": "failure",
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	  "test-olm": {
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	    "result": "failure",
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	  }
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	}
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-10-15T00:41:35.8070934Z env:
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-10-15T00:41:35.8071376Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-10-15T00:41:35.8072365Z   MINIKUBE_VERSION: v1.32.0
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-10-15T00:41:35.8072734Z   KUBERNETES_VERSION: v1.27.10
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-10-15T00:41:35.8073120Z   MINIKUBE_MEMORY: 4096
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-10-15T00:41:35.8073576Z ##[endgroup]
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-10-15T00:41:35.8327656Z ##[group]Run JOBS='{
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-10-15T00:41:35.8328139Z [36;1mJOBS='{[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-10-15T00:41:35.8328547Z [36;1m  "conditional": {[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-10-15T00:41:35.8329188Z [36;1m    "result": "success",[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-10-15T00:41:35.8329602Z [36;1m    "outputs": {[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-10-15T00:41:35.8330107Z [36;1m      "operator": "true"[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-10-15T00:41:35.8330518Z [36;1m    }[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-10-15T00:41:35.8330853Z [36;1m  },[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-10-15T00:41:35.8331253Z [36;1m  "build": {[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-10-15T00:41:35.8331595Z [36;1m    "result": "success",[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-10-15T00:41:35.8332014Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-10-15T00:41:35.8332454Z [36;1m  },[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-10-15T00:41:35.8332752Z [36;1m  "test-local": {[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-10-15T00:41:35.8333138Z [36;1m    "result": "failure",[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-10-15T00:41:35.8333617Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-10-15T00:41:35.8333938Z [36;1m  },[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-10-15T00:41:35.8334278Z [36;1m  "test-remote": {[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-10-15T00:41:35.8334730Z [36;1m    "result": "failure",[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-10-15T00:41:35.8335092Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-10-15T00:41:35.8335465Z [36;1m  },[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-10-15T00:41:35.8424892Z [36;1m  "test-olm": {[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-10-15T00:41:35.8425490Z [36;1m    "result": "failure",[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-10-15T00:41:35.8425996Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-10-15T00:41:35.8426440Z [36;1m  }[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-10-15T00:41:35.8427091Z [36;1m}'[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-10-15T00:41:35.8427468Z [36;1m[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-10-15T00:41:35.8427887Z [36;1mecho "Job status:"[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-10-15T00:41:35.8428726Z [36;1mecho $JOBS | jq -r 'to_entries[] | " - \(.key): \(.value.result)"'[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-10-15T00:41:35.8429541Z [36;1m[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-10-15T00:41:35.8430178Z [36;1mfor i in $(echo $JOBS | jq -r 'to_entries[] | .value.result'); do[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-10-15T00:41:35.8431194Z [36;1m  if [ "$i" != "success" ] && [ "$i" != "skipped" ]; then[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-10-15T00:41:35.8431984Z [36;1m    echo ""[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-10-15T00:41:35.8432491Z [36;1m    echo "Status check not okay!"[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-10-15T00:41:35.8433119Z [36;1m    exit 1[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-10-15T00:41:35.8433578Z [36;1m  fi[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-10-15T00:41:35.8433987Z [36;1mdone[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-10-15T00:41:35.8556281Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-10-15T00:41:35.8556753Z env:
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-10-15T00:41:35.8557379Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-10-15T00:41:35.8557842Z   MINIKUBE_VERSION: v1.32.0
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-10-15T00:41:35.8558141Z   KUBERNETES_VERSION: v1.27.10
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-10-15T00:41:35.8558429Z   MINIKUBE_MEMORY: 4096
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-10-15T00:41:35.8558685Z ##[endgroup]
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-10-15T00:41:35.8696054Z Job status:
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-10-15T00:41:35.8738754Z  - conditional: success
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-10-15T00:41:35.8739246Z  - build: success
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-10-15T00:41:35.8739578Z  - test-local: failure
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-10-15T00:41:35.8740646Z  - test-remote: failure
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-10-15T00:41:35.8741158Z  - test-olm: failure
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-10-15T00:41:35.8773510Z 
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-10-15T00:41:35.8773906Z Status check not okay!
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-10-15T00:41:35.8786661Z ##[error]Process completed with exit code 1.
