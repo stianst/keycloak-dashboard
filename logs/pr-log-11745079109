@@ -1,0 +1,140 @@
+Test OLM installation	Arrange OLM test installation	2024-11-08T15:48:12.7787158Z ##[group]Run eval $(minikube -p minikube docker-env)
+Test OLM installation	Arrange OLM test installation	2024-11-08T15:48:12.7788078Z [36;1meval $(minikube -p minikube docker-env)[0m
+Test OLM installation	Arrange OLM test installation	2024-11-08T15:48:12.7788913Z [36;1m./scripts/olm-testing.sh ${GITHUB_SHA::6}[0m
+Test OLM installation	Arrange OLM test installation	2024-11-08T15:48:12.7885069Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Test OLM installation	Arrange OLM test installation	2024-11-08T15:48:12.7885839Z env:
+Test OLM installation	Arrange OLM test installation	2024-11-08T15:48:12.7886496Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Test OLM installation	Arrange OLM test installation	2024-11-08T15:48:12.7887344Z   MINIKUBE_VERSION: v1.32.0
+Test OLM installation	Arrange OLM test installation	2024-11-08T15:48:12.7887863Z   KUBERNETES_VERSION: v1.27.10
+Test OLM installation	Arrange OLM test installation	2024-11-08T15:48:12.7888429Z   MINIKUBE_MEMORY: 4096
+Test OLM installation	Arrange OLM test installation	2024-11-08T15:48:12.7889239Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.5-11/x64
+Test OLM installation	Arrange OLM test installation	2024-11-08T15:48:12.7890347Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.5-11/x64
+Test OLM installation	Arrange OLM test installation	2024-11-08T15:48:12.7891272Z   MINIKUBE_HOME: /home/runner/work/_temp
+Test OLM installation	Arrange OLM test installation	2024-11-08T15:48:12.7891853Z ##[endgroup]
+Test OLM installation	Arrange OLM test installation	2024-11-08T15:48:13.2611215Z + UUID=761c9a
+Test OLM installation	Arrange OLM test installation	2024-11-08T15:48:13.2612275Z + INSTALL_NAMESPACE=default
+Test OLM installation	Arrange OLM test installation	2024-11-08T15:48:13.2613136Z + TARGET_NAMESPACES=default
+Test OLM installation	Arrange OLM test installation	2024-11-08T15:48:13.2742271Z +++ dirname -- ./scripts/olm-testing.sh
+Test OLM installation	Arrange OLM test installation	2024-11-08T15:48:13.2824153Z ++ cd -- ./scripts
+Test OLM installation	Arrange OLM test installation	2024-11-08T15:48:13.2824988Z ++ pwd
+Test OLM installation	Arrange OLM test installation	2024-11-08T15:48:13.2863021Z + SCRIPT_DIR=/home/runner/work/keycloak/keycloak/operator/scripts
+Test OLM installation	Arrange OLM test installation	2024-11-08T15:48:13.2863833Z + VERSION=86400000.0.0
+Test OLM installation	Arrange OLM test installation	2024-11-08T15:48:13.2868591Z + cd /home/runner/work/keycloak/keycloak/operator/scripts/../../quarkus/container
+Test OLM installation	Arrange OLM test installation	2024-11-08T15:48:13.2942208Z ++ ls keycloak-999.0.0-SNAPSHOT.tar.gz
+Test OLM installation	Arrange OLM test installation	2024-11-08T15:48:13.3050026Z + docker build --build-arg KEYCLOAK_DIST=keycloak-999.0.0-SNAPSHOT.tar.gz . -t ttl.sh/761c9akeycloak:86400000.0.0
+Test OLM installation	Arrange OLM test installation	2024-11-08T15:48:14.0319103Z #0 building with "default" instance using docker driver
+Test OLM installation	Arrange OLM test installation	2024-11-08T15:48:14.0319745Z 
+Test OLM installation	Arrange OLM test installation	2024-11-08T15:48:14.0319956Z #1 [internal] load .dockerignore
+Test OLM installation	Arrange OLM test installation	2024-11-08T15:48:14.0323771Z #1 transferring context: 2B done
+Test OLM installation	Arrange OLM test installation	2024-11-08T15:48:14.0324362Z #1 DONE 0.0s
+Test OLM installation	Arrange OLM test installation	2024-11-08T15:48:14.0324642Z 
+Test OLM installation	Arrange OLM test installation	2024-11-08T15:48:14.0324917Z #2 [internal] load build definition from Dockerfile
+Test OLM installation	Arrange OLM test installation	2024-11-08T15:48:14.0325616Z #2 transferring dockerfile: 2.72kB done
+Test OLM installation	Arrange OLM test installation	2024-11-08T15:48:14.0326154Z #2 DONE 0.0s
+Test OLM installation	Arrange OLM test installation	2024-11-08T15:48:14.0326373Z 
+Test OLM installation	Arrange OLM test installation	2024-11-08T15:48:14.0330297Z #3 [internal] load metadata for registry.access.redhat.com/ubi9:latest
+Test OLM installation	Arrange OLM test installation	2024-11-08T15:48:14.1445264Z #3 ...
+Test OLM installation	Arrange OLM test installation	2024-11-08T15:48:14.1445603Z 
+Test OLM installation	Arrange OLM test installation	2024-11-08T15:48:14.1446374Z #4 [internal] load metadata for registry.access.redhat.com/ubi9-micro:latest
+Test OLM installation	Arrange OLM test installation	2024-11-08T15:48:14.1447935Z #4 ERROR: failed to copy: httpReadSeeker: failed open: unexpected status code https://registry.access.redhat.com/v2/ubi9-micro/manifests/sha256:7f376b75faf8ea546f28f8529c37d24adcde33dca4103f4897ae19a43d58192b: 502 Bad Gateway
+Test OLM installation	Arrange OLM test installation	2024-11-08T15:48:14.1543252Z 
+Test OLM installation	Arrange OLM test installation	2024-11-08T15:48:14.1543938Z #3 [internal] load metadata for registry.access.redhat.com/ubi9:latest
+Test OLM installation	Arrange OLM test installation	2024-11-08T15:48:14.1545435Z #3 CANCELED
+Test OLM installation	Arrange OLM test installation	2024-11-08T15:48:14.1546277Z ------
+Test OLM installation	Arrange OLM test installation	2024-11-08T15:48:14.1547127Z  > [internal] load metadata for registry.access.redhat.com/ubi9-micro:latest:
+Test OLM installation	Arrange OLM test installation	2024-11-08T15:48:14.1548424Z ------
+Test OLM installation	Arrange OLM test installation	2024-11-08T15:48:14.1570115Z Dockerfile:22
+Test OLM installation	Arrange OLM test installation	2024-11-08T15:48:14.1570657Z --------------------
+Test OLM installation	Arrange OLM test installation	2024-11-08T15:48:14.1571590Z   20 |     RUN bash /tmp/ubi-null.sh java-21-openjdk-headless glibc-langpack-en findutils
+Test OLM installation	Arrange OLM test installation	2024-11-08T15:48:14.1572158Z   21 |     
+Test OLM installation	Arrange OLM test installation	2024-11-08T15:48:14.1572528Z   22 | >>> FROM registry.access.redhat.com/ubi9-micro
+Test OLM installation	Arrange OLM test installation	2024-11-08T15:48:14.1572945Z   23 |     ENV LANG en_US.UTF-8
+Test OLM installation	Arrange OLM test installation	2024-11-08T15:48:14.1573227Z   24 |     
+Test OLM installation	Arrange OLM test installation	2024-11-08T15:48:14.1573460Z --------------------
+Test OLM installation	Arrange OLM test installation	2024-11-08T15:48:14.1574947Z ERROR: failed to solve: registry.access.redhat.com/ubi9-micro: failed to copy: httpReadSeeker: failed open: unexpected status code https://registry.access.redhat.com/v2/ubi9-micro/manifests/sha256:7f376b75faf8ea546f28f8529c37d24adcde33dca4103f4897ae19a43d58192b: 502 Bad Gateway
+Test OLM installation	Arrange OLM test installation	2024-11-08T15:48:14.1622563Z ##[error]Process completed with exit code 1.
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-11-08T16:21:33.4065183Z Prepare all required actions
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-11-08T16:21:33.4156418Z ##[group]Run ./.github/actions/status-check
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-11-08T16:21:33.4156861Z with:
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-11-08T16:21:33.4158011Z   jobs: {
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	  "conditional": {
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	    "outputs": {
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	      "operator": "true"
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	    }
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	  "build": {
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	  "test-local": {
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	  "test-remote": {
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	  "test-olm": {
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	    "result": "failure",
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	  }
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	}
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-11-08T16:21:33.4159312Z env:
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-11-08T16:21:33.4159775Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-11-08T16:21:33.4160313Z   MINIKUBE_VERSION: v1.32.0
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-11-08T16:21:33.4160803Z   KUBERNETES_VERSION: v1.27.10
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-11-08T16:21:33.4161167Z   MINIKUBE_MEMORY: 4096
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-11-08T16:21:33.4161466Z ##[endgroup]
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-11-08T16:21:33.4413603Z ##[group]Run JOBS='{
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-11-08T16:21:33.4414084Z [36;1mJOBS='{[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-11-08T16:21:33.4414665Z [36;1m  "conditional": {[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-11-08T16:21:33.4415168Z [36;1m    "result": "success",[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-11-08T16:21:33.4415569Z [36;1m    "outputs": {[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-11-08T16:21:33.4416014Z [36;1m      "operator": "true"[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-11-08T16:21:33.4416407Z [36;1m    }[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-11-08T16:21:33.4416738Z [36;1m  },[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-11-08T16:21:33.4417086Z [36;1m  "build": {[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-11-08T16:21:33.4417443Z [36;1m    "result": "success",[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-11-08T16:21:33.4417860Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-11-08T16:21:33.4418253Z [36;1m  },[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-11-08T16:21:33.4418596Z [36;1m  "test-local": {[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-11-08T16:21:33.4419037Z [36;1m    "result": "success",[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-11-08T16:21:33.4419463Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-11-08T16:21:33.4419834Z [36;1m  },[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-11-08T16:21:33.4420357Z [36;1m  "test-remote": {[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-11-08T16:21:33.4420790Z [36;1m    "result": "success",[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-11-08T16:21:33.4421207Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-11-08T16:21:33.4421566Z [36;1m  },[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-11-08T16:21:33.4421921Z [36;1m  "test-olm": {[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-11-08T16:21:33.4422315Z [36;1m    "result": "failure",[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-11-08T16:21:33.4422709Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-11-08T16:21:33.4423106Z [36;1m  }[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-11-08T16:21:33.4423425Z [36;1m}'[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-11-08T16:21:33.4423725Z [36;1m[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-11-08T16:21:33.4424064Z [36;1mecho "Job status:"[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-11-08T16:21:33.4424671Z [36;1mecho $JOBS | jq -r 'to_entries[] | " - \(.key): \(.value.result)"'[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-11-08T16:21:33.4425215Z [36;1m[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-11-08T16:21:33.4425730Z [36;1mfor i in $(echo $JOBS | jq -r 'to_entries[] | .value.result'); do[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-11-08T16:21:33.4426410Z [36;1m  if [ "$i" != "success" ] && [ "$i" != "skipped" ]; then[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-11-08T16:21:33.4426911Z [36;1m    echo ""[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-11-08T16:21:33.4427343Z [36;1m    echo "Status check not okay!"[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-11-08T16:21:33.4427773Z [36;1m    exit 1[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-11-08T16:21:33.4428114Z [36;1m  fi[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-11-08T16:21:33.4428473Z [36;1mdone[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-11-08T16:21:33.4524425Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-11-08T16:21:33.4524988Z env:
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-11-08T16:21:33.4525474Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-11-08T16:21:33.4526120Z   MINIKUBE_VERSION: v1.32.0
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-11-08T16:21:33.4526498Z   KUBERNETES_VERSION: v1.27.10
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-11-08T16:21:33.4526980Z   MINIKUBE_MEMORY: 4096
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-11-08T16:21:33.4527408Z ##[endgroup]
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-11-08T16:21:33.4670882Z Job status:
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-11-08T16:21:33.4879828Z  - conditional: success
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-11-08T16:21:33.4880651Z  - build: success
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-11-08T16:21:33.4881248Z  - test-local: success
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-11-08T16:21:33.4881709Z  - test-remote: success
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-11-08T16:21:33.4882437Z  - test-olm: failure
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-11-08T16:21:33.5088712Z 
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-11-08T16:21:33.5089011Z Status check not okay!
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2024-11-08T16:21:33.5102899Z ##[error]Process completed with exit code 1.
