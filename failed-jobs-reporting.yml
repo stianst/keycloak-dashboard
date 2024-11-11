@@ -65,6 +65,7 @@ issues:
   - "11494153764/*" # Error 500 when pulling postgres:16 image
   - "11484696824/*" # Unable to find image 'registry.access.redhat.com/ubi8/ubi:latest' locally
   - "11509735637/*" # GHA glitch
+  - "11745079109/*" # OLM: Error 500 getting image from RH registry
 - id: "keycloak-js-adapter-jar"
   description: "Could not extract/download archive: '/home/runner/.m2/repository/com/github/eirslett/node/18.16.0/node-18.16.0-linux-x64.tar.gz'"
   resolution: "ignored"
@@ -745,6 +746,7 @@ issues:
   issue: 34391
   resolves:
     - "11675036541/*"
+    - "11760560961/*"
 - id: "initial-ui-cleanup"
   description: "Initial cleanup of UI test failures"
   resolution: "ignored"
@@ -785,3 +787,8 @@ issues:
   resolves:
     - "11598174547/*"
     - "11336943865/*"
+- id: "base-it-KerberosLdapCrossRealmTrustTest"
+  description: "KerberosLdapCrossRealmTrustTest.test03SpnegoLoginUsernamePassword"
+  issue: 34824
+  resolves:
+    - "11739678377/*"
