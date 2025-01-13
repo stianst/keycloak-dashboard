@@ -5,6 +5,7 @@ import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
 import freemarker.template.TemplateException;
 import org.keycloak.dashboard.beans.Bugs;
 import org.keycloak.dashboard.beans.PR;
+import org.keycloak.dashboard.beans.Stars;
 import org.keycloak.dashboard.beans.WorkflowStatus;
 import org.keycloak.dashboard.beans.WorkflowWaitTimes;
 import org.keycloak.dashboard.ci.LogFailedParser;
@@ -69,6 +70,7 @@ public class Dashboard {
         attributes.put("nextRelease", bugs.getNextRelease());
         attributes.put("workflowWaitTimes", new WorkflowWaitTimes(data, teamMembers).getWorkFlowWaitPerMonthList());
         attributes.put("configContents", Config.getConfigContents());
+        attributes.put("stars", new Stars());
 
         File output = new File("docs/index.html");
         FreeMarker freeMarker = new FreeMarker(attributes);
@@ -78,6 +80,7 @@ public class Dashboard {
         freeMarker.template("workflows.ftl", new File("docs/workflows.html"));
         freeMarker.template("tests.ftl", new File("docs/tests.html"));
         freeMarker.template("config.ftl", new File("docs/config.html"));
+        freeMarker.template("stars.ftl", new File("docs/stars.html"));
 
         System.out.println("Created dashboard: " + output.toURI());
     }

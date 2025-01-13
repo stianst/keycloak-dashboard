@@ -1,7 +1,5 @@
 package org.keycloak.dashboard.util;
 
-import org.keycloak.dashboard.Config;
-
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
@@ -19,6 +17,7 @@ public class DateUtil {
     private static final DateTimeFormatter DATE_STRING_FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd", Locale.ENGLISH);
 
     private static final SimpleDateFormat TO_MONTH_STRING_FORMATTER = new SimpleDateFormat("yyyy-MM", Locale.ENGLISH);
+    private static final SimpleDateFormat TO_YEAR_STRING_FORMATTER = new SimpleDateFormat("yyyy", Locale.ENGLISH);
 
     private static final SimpleDateFormat TO_DATE_STRING_FORMATTER = new SimpleDateFormat("yyyy-MM-dd");
 
@@ -68,6 +67,10 @@ public class DateUtil {
 
     public static String monthString(Date date) {
         return TO_MONTH_STRING_FORMATTER.format(date);
+    }
+
+    public static String yearString(Date date) {
+        return TO_YEAR_STRING_FORMATTER.format(date);
     }
 
     public static String toString(java.util.Date date) {
