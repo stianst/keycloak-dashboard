@@ -1,0 +1,336 @@
+AuroraDB IT	Create Aurora DB	2025-01-22T00:18:46.1782912Z Prepare all required actions
+AuroraDB IT	Create Aurora DB	2025-01-22T00:18:46.1818586Z ##[group]Run ./.github/actions/aurora-create-database
+AuroraDB IT	Create Aurora DB	2025-01-22T00:18:46.1818893Z with:
+AuroraDB IT	Create Aurora DB	2025-01-22T00:18:46.1819088Z   name: gh-action-0641645-12898410987-1
+AuroraDB IT	Create Aurora DB	2025-01-22T00:18:46.1819468Z   password: ***
+AuroraDB IT	Create Aurora DB	2025-01-22T00:18:46.1819666Z   region: us-east-1
+AuroraDB IT	Create Aurora DB	2025-01-22T00:18:46.1819847Z env:
+AuroraDB IT	Create Aurora DB	2025-01-22T00:18:46.1820108Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+AuroraDB IT	Create Aurora DB	2025-01-22T00:18:46.1820460Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+AuroraDB IT	Create Aurora DB	2025-01-22T00:18:46.1820748Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+AuroraDB IT	Create Aurora DB	2025-01-22T00:18:46.1821032Z ##[endgroup]
+AuroraDB IT	Create Aurora DB	2025-01-22T00:18:46.1834680Z ##[group]Run source ./aurora_create.sh
+AuroraDB IT	Create Aurora DB	2025-01-22T00:18:46.1835187Z [36;1msource ./aurora_create.sh[0m
+AuroraDB IT	Create Aurora DB	2025-01-22T00:18:46.1835627Z [36;1mecho "endpoint=${AURORA_ENDPOINT}" >> $GITHUB_OUTPUT[0m
+AuroraDB IT	Create Aurora DB	2025-01-22T00:18:46.1863343Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+AuroraDB IT	Create Aurora DB	2025-01-22T00:18:46.1863658Z env:
+AuroraDB IT	Create Aurora DB	2025-01-22T00:18:46.1863926Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+AuroraDB IT	Create Aurora DB	2025-01-22T00:18:46.1864299Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+AuroraDB IT	Create Aurora DB	2025-01-22T00:18:46.1864598Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+AuroraDB IT	Create Aurora DB	2025-01-22T00:18:46.1865122Z   AURORA_CLUSTER: gh-action-0641645-12898410987-1
+AuroraDB IT	Create Aurora DB	2025-01-22T00:18:46.1865461Z   AURORA_PASSWORD: ***
+AuroraDB IT	Create Aurora DB	2025-01-22T00:18:46.1865673Z   AURORA_REGION: us-east-1
+AuroraDB IT	Create Aurora DB	2025-01-22T00:18:46.1865874Z ##[endgroup]
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:29.6938378Z {
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:29.6939076Z     "AssociationId": "rtbassoc-07fad99ce4e3e501c",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:29.6939582Z     "AssociationState": {
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:29.6939943Z         "State": "associated"
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:29.6940272Z     }
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:29.6940512Z }
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:30.9000449Z {
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:30.9001023Z     "AssociationId": "rtbassoc-0d10833aae4ec48dd",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:30.9001598Z     "AssociationState": {
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:30.9002058Z         "State": "associated"
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:30.9002479Z     }
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:30.9002792Z }
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:32.5709846Z {
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:32.5710253Z     "DBSubnetGroup": {
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:32.5710803Z         "DBSubnetGroupName": "gh-action-0641645-12898410987-1-subnet-group",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:32.5711472Z         "DBSubnetGroupDescription": "Aurora DB Subnet Group",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:32.5711944Z         "VpcId": "vpc-013987632236555fa",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:32.5712330Z         "SubnetGroupStatus": "Complete",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:32.5712709Z         "Subnets": [
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:32.5712991Z             {
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:32.5713313Z                 "SubnetIdentifier": "subnet-0d1d7a7d894a449d8",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:32.5713766Z                 "SubnetAvailabilityZone": {
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:32.5714154Z                     "Name": "us-east-1a"
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:32.5714505Z                 },
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:32.5714806Z                 "SubnetOutpost": {},
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:32.5715386Z                 "SubnetStatus": "Active"
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:32.5715752Z             },
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:32.5716033Z             {
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:32.5716383Z                 "SubnetIdentifier": "subnet-0cd2a98bd58459d5c",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:32.5716858Z                 "SubnetAvailabilityZone": {
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:32.5717650Z                     "Name": "us-east-1b"
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:32.5718006Z                 },
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:32.5718299Z                 "SubnetOutpost": {},
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:32.5718671Z                 "SubnetStatus": "Active"
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:32.5719021Z             }
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:32.5719301Z         ],
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:32.5719913Z         "DBSubnetGroupArn": "arn:aws:rds:us-east-1:606671647913:subgrp:gh-action-0641645-12898410987-1-subnet-group",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:32.5720656Z         "SupportedNetworkTypes": [
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:32.5721017Z             "IPV4"
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:32.5721312Z         ]
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:32.5721580Z     }
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:32.5721850Z }
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:37.4597335Z {
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:37.4597742Z     "Return": true
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:37.4598046Z }
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:40.0560249Z {
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:40.0560741Z     "Return": true,
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:40.0561815Z     "SecurityGroupRules": [
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:40.0562307Z         {
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:40.0562801Z             "SecurityGroupRuleId": "sgr-0521fbfb08d95a26a",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:40.0563432Z             "GroupId": "sg-0dafd93e3facedf32",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:40.0564115Z             "GroupOwnerId": "606671647913",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:40.0564623Z             "IsEgress": false,
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:40.0565360Z             "IpProtocol": "tcp",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:40.0565853Z             "FromPort": 5432,
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:40.0566322Z             "ToPort": 5432,
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:40.0566790Z             "CidrIpv4": "0.0.0.0/0",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:40.0567742Z             "SecurityGroupRuleArn": "arn:aws:ec2:us-east-1:606671647913:security-group-rule/sgr-0521fbfb08d95a26a"
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:40.0568446Z         }
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:40.0568702Z     ]
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:40.0568949Z }
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:42.4023133Z {
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:42.4023617Z     "DBCluster": {
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:42.4024033Z         "AllocatedStorage": 1,
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:42.4024554Z         "AvailabilityZones": [
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:42.4025298Z             "us-east-1b",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:42.4025729Z             "us-east-1a",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:42.4026120Z             "us-east-1c"
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:42.4026473Z         ],
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:42.4026859Z         "BackupRetentionPeriod": 1,
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:42.4027386Z         "DatabaseName": "keycloak",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:42.4028039Z         "DBClusterIdentifier": "gh-action-0641645-12898410987-1",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:42.4028563Z         "DBClusterParameterGroup": "default.aurora-postgresql16",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:42.4029074Z         "DBSubnetGroup": "gh-action-0641645-12898410987-1-subnet-group",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:42.4029477Z         "Status": "creating",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:42.4029989Z         "Endpoint": "gh-action-0641645-12898410987-1.cluster-ctdxeb4izrnc.us-east-1.rds.amazonaws.com",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:42.4030823Z         "ReaderEndpoint": "gh-action-0641645-12898410987-1.cluster-ro-ctdxeb4izrnc.us-east-1.rds.amazonaws.com",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:42.4031405Z         "MultiAZ": false,
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:42.4031677Z         "Engine": "aurora-postgresql",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:42.4031968Z         "EngineVersion": "16.1",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:42.4032183Z         "Port": 5432,
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:42.4032388Z         "MasterUsername": "keycloak",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:42.4032652Z         "PreferredBackupWindow": "04:42-05:12",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:42.4032967Z         "PreferredMaintenanceWindow": "mon:06:29-mon:06:59",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:42.4033278Z         "ReadReplicaIdentifiers": [],
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:42.4033529Z         "DBClusterMembers": [],
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:42.4033756Z         "VpcSecurityGroups": [
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:42.4033971Z             {
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:42.4034190Z                 "VpcSecurityGroupId": "sg-0dafd93e3facedf32",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:42.4034475Z                 "Status": "active"
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:42.4034687Z             }
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:42.4035067Z         ],
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:42.4035289Z         "HostedZoneId": "Z2R2ITUGPM61AM",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:42.4035580Z         "StorageEncrypted": false,
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:42.4035930Z         "DbClusterResourceId": "cluster-FRFIYFR22XTAOSYLJSMXUT5KCY",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:42.4036768Z         "DBClusterArn": "arn:aws:rds:us-east-1:606671647913:cluster:gh-action-0641645-12898410987-1",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:42.4037160Z         "AssociatedRoles": [],
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:42.4037413Z         "IAMDatabaseAuthenticationEnabled": false,
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:42.4037731Z         "ClusterCreateTime": "2025-01-22T00:19:41.829000+00:00",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:42.4038028Z         "EngineMode": "provisioned",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:42.4038278Z         "DeletionProtection": false,
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:42.4038521Z         "HttpEndpointEnabled": false,
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:42.4038766Z         "CopyTagsToSnapshot": false,
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:42.4039006Z         "CrossAccountClone": false,
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:42.4039250Z         "DomainMemberships": [],
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:42.4039481Z         "TagList": [
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:42.4039667Z             {
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:42.4039998Z                 "Key": "keepalive",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:42.4040218Z                 "Value": ""
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:42.4040417Z             }
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:42.4040575Z         ],
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:42.4040758Z         "AutoMinorVersionUpgrade": true,
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:42.4041060Z         "DatabaseInsightsMode": "standard",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:42.4041315Z         "NetworkType": "IPV4",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:42.4041619Z         "EngineLifecycleSupport": "open-source-rds-extended-support"
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:42.4041927Z     }
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:42.4042079Z }
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3265709Z {
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3266115Z     "DBInstance": {
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3266601Z         "DBInstanceIdentifier": "gh-action-0641645-12898410987-1-instance-1",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3267080Z         "DBInstanceClass": "db.t4g.large",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3267425Z         "Engine": "aurora-postgresql",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3267754Z         "DBInstanceStatus": "creating",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3268079Z         "MasterUsername": "keycloak",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3268419Z         "DBName": "keycloak",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3268690Z         "AllocatedStorage": 1,
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3268961Z         "PreferredBackupWindow": "04:42-05:12",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3269248Z         "BackupRetentionPeriod": 1,
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3269506Z         "DBSecurityGroups": [],
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3269745Z         "VpcSecurityGroups": [
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3269969Z             {
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3270195Z                 "VpcSecurityGroupId": "sg-0dafd93e3facedf32",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3270492Z                 "Status": "active"
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3270719Z             }
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3270896Z         ],
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3271080Z         "DBParameterGroups": [
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3271301Z             {
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3271556Z                 "DBParameterGroupName": "default.aurora-postgresql16",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3271906Z                 "ParameterApplyStatus": "in-sync"
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3272168Z             }
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3272339Z         ],
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3272536Z         "AvailabilityZone": "us-east-1a",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3272800Z         "DBSubnetGroup": {
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3273129Z             "DBSubnetGroupName": "gh-action-0641645-12898410987-1-subnet-group",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3273551Z             "DBSubnetGroupDescription": "Aurora DB Subnet Group",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3274261Z             "VpcId": "vpc-013987632236555fa",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3274661Z             "SubnetGroupStatus": "Complete",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3275221Z             "Subnets": [
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3275513Z                 {
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3275849Z                     "SubnetIdentifier": "subnet-0d1d7a7d894a449d8",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3276300Z                     "SubnetAvailabilityZone": {
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3276737Z                         "Name": "us-east-1a"
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3277133Z                     },
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3277491Z                     "SubnetOutpost": {},
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3277911Z                     "SubnetStatus": "Active"
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3278346Z                 },
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3278742Z                 {
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3279592Z                     "SubnetIdentifier": "subnet-0cd2a98bd58459d5c",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3280120Z                     "SubnetAvailabilityZone": {
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3280571Z                         "Name": "us-east-1b"
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3281071Z                     },
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3281415Z                     "SubnetOutpost": {},
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3281842Z                     "SubnetStatus": "Active"
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3282253Z                 }
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3282556Z             ]
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3282851Z         },
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3283239Z         "PreferredMaintenanceWindow": "sun:05:30-sun:06:00",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3283780Z         "PendingModifiedValues": {},
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3284208Z         "MultiAZ": false,
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3284597Z         "EngineVersion": "16.1",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3285184Z         "AutoMinorVersionUpgrade": true,
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3285984Z         "ReadReplicaDBInstanceIdentifiers": [],
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3286500Z         "LicenseModel": "postgresql-license",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3287000Z         "OptionGroupMemberships": [
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3287408Z             {
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3287803Z                 "OptionGroupName": "default:aurora-postgresql-16",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3288311Z                 "Status": "in-sync"
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3288694Z             }
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3288969Z         ],
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3289268Z         "PubliclyAccessible": true,
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3289680Z         "StorageType": "aurora",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3290070Z         "DbInstancePort": 0,
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3290591Z         "DBClusterIdentifier": "gh-action-0641645-12898410987-1",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3291210Z         "StorageEncrypted": false,
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3291689Z         "DbiResourceId": "db-37TE4TC3HUE3BQ3PTOHD4IWUEU",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3292259Z         "CACertificateIdentifier": "rds-ca-rsa2048-g1",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3292778Z         "DomainMemberships": [],
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3293188Z         "CopyTagsToSnapshot": false,
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3293627Z         "MonitoringInterval": 0,
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3294024Z         "PromotionTier": 1,
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3294710Z         "DBInstanceArn": "arn:aws:rds:us-east-1:606671647913:db:gh-action-0641645-12898410987-1-instance-1",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3295739Z         "IAMDatabaseAuthenticationEnabled": false,
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3296248Z         "DatabaseInsightsMode": "standard",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3296725Z         "PerformanceInsightsEnabled": false,
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3297182Z         "DeletionProtection": false,
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3297680Z         "AssociatedRoles": [],
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3298149Z         "TagList": [],
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3298558Z         "CustomerOwnedIpEnabled": false,
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3299021Z         "BackupTarget": "region",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3299442Z         "NetworkType": "IPV4",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3299854Z         "StorageThroughput": 0,
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3300272Z         "CertificateDetails": {
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3300701Z             "CAIdentifier": "rds-ca-rsa2048-g1"
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3301153Z         },
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3301476Z         "DedicatedLogVolume": false,
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3301977Z         "EngineLifecycleSupport": "open-source-rds-extended-support"
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3302308Z     }
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:44.3302464Z }
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4486907Z {
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4487336Z     "DBInstance": {
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4487694Z         "DBInstanceIdentifier": "gh-action-0641645-12898410987-1-instance-2",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4488080Z         "DBInstanceClass": "db.t4g.large",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4488346Z         "Engine": "aurora-postgresql",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4488607Z         "DBInstanceStatus": "creating",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4488861Z         "MasterUsername": "keycloak",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4489094Z         "DBName": "keycloak",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4489313Z         "AllocatedStorage": 1,
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4489554Z         "PreferredBackupWindow": "04:42-05:12",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4489854Z         "BackupRetentionPeriod": 1,
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4490445Z         "DBSecurityGroups": [],
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4490672Z         "VpcSecurityGroups": [
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4490924Z             {
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4491171Z                 "VpcSecurityGroupId": "sg-0dafd93e3facedf32",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4491444Z                 "Status": "active"
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4491658Z             }
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4491816Z         ],
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4491978Z         "DBParameterGroups": [
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4492179Z             {
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4492420Z                 "DBParameterGroupName": "default.aurora-postgresql16",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4492760Z                 "ParameterApplyStatus": "in-sync"
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4493007Z             }
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4493165Z         ],
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4493344Z         "AvailabilityZone": "us-east-1b",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4493591Z         "DBSubnetGroup": {
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4494058Z             "DBSubnetGroupName": "gh-action-0641645-12898410987-1-subnet-group",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4494454Z             "DBSubnetGroupDescription": "Aurora DB Subnet Group",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4494755Z             "VpcId": "vpc-013987632236555fa",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4495379Z             "SubnetGroupStatus": "Complete",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4495623Z             "Subnets": [
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4495812Z                 {
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4496038Z                     "SubnetIdentifier": "subnet-0d1d7a7d894a449d8",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4496335Z                     "SubnetAvailabilityZone": {
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4496592Z                         "Name": "us-east-1a"
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4496824Z                     },
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4497022Z                     "SubnetOutpost": {},
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4497266Z                     "SubnetStatus": "Active"
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4497491Z                 },
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4497659Z                 {
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4497877Z                     "SubnetIdentifier": "subnet-0cd2a98bd58459d5c",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4498170Z                     "SubnetAvailabilityZone": {
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4498434Z                         "Name": "us-east-1b"
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4498667Z                     },
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4498870Z                     "SubnetOutpost": {},
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4499113Z                     "SubnetStatus": "Active"
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4499342Z                 }
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4499508Z             ]
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4499666Z         },
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4499879Z         "PreferredMaintenanceWindow": "fri:03:46-fri:04:16",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4500176Z         "PendingModifiedValues": {},
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4500412Z         "MultiAZ": false,
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4500617Z         "EngineVersion": "16.1",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4500853Z         "AutoMinorVersionUpgrade": true,
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4501125Z         "ReadReplicaDBInstanceIdentifiers": [],
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4501407Z         "LicenseModel": "postgresql-license",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4501677Z         "OptionGroupMemberships": [
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4501901Z             {
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4502144Z                 "OptionGroupName": "default:aurora-postgresql-16",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4502436Z                 "Status": "in-sync"
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4502649Z             }
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4502805Z         ],
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4502980Z         "PubliclyAccessible": true,
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4503211Z         "StorageType": "aurora",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4503433Z         "DbInstancePort": 0,
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4503714Z         "DBClusterIdentifier": "gh-action-0641645-12898410987-1",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4504020Z         "StorageEncrypted": false,
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4504293Z         "DbiResourceId": "db-ZXVEFUB5VNEHTVT4OFZG4QPROA",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4504614Z         "CACertificateIdentifier": "rds-ca-rsa2048-g1",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4505088Z         "DomainMemberships": [],
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4505326Z         "CopyTagsToSnapshot": false,
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4505563Z         "MonitoringInterval": 0,
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4505785Z         "PromotionTier": 1,
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4506315Z         "DBInstanceArn": "arn:aws:rds:us-east-1:606671647913:db:gh-action-0641645-12898410987-1-instance-2",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4506762Z         "IAMDatabaseAuthenticationEnabled": false,
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4507047Z         "DatabaseInsightsMode": "standard",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4507317Z         "PerformanceInsightsEnabled": false,
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4507575Z         "DeletionProtection": false,
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4507809Z         "AssociatedRoles": [],
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4508017Z         "TagList": [],
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4508226Z         "CustomerOwnedIpEnabled": false,
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4508470Z         "BackupTarget": "region",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4508697Z         "NetworkType": "IPV4",
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4508923Z         "StorageThroughput": 0,
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4509144Z         "CertificateDetails": {
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4509378Z             "CAIdentifier": "rds-ca-rsa2048-g1"
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4509738Z         },
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4509912Z         "DedicatedLogVolume": false,
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4510233Z         "EngineLifecycleSupport": "open-source-rds-extended-support"
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4510549Z     }
+AuroraDB IT	Create Aurora DB	2025-01-22T00:19:46.4510698Z }
+AuroraDB IT	Create Aurora DB	2025-01-22T00:49:29.8358144Z 
+AuroraDB IT	Create Aurora DB	2025-01-22T00:49:29.8358801Z Waiter DBInstanceAvailable failed: Max attempts exceeded
+AuroraDB IT	Create Aurora DB	2025-01-22T00:49:29.9064554Z ##[error]Process completed with exit code 255.
+AuroraDB IT	Delete EC2 Instance	2025-01-22T00:49:31.8204105Z ##[group]Run source .venv/bin/activate
+AuroraDB IT	Delete EC2 Instance	2025-01-22T00:49:31.8204646Z [36;1msource .venv/bin/activate[0m
+AuroraDB IT	Delete EC2 Instance	2025-01-22T00:49:31.8205548Z [36;1m./aws_ec2.sh delete us-east-1 [0m
+AuroraDB IT	Delete EC2 Instance	2025-01-22T00:49:31.8244440Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+AuroraDB IT	Delete EC2 Instance	2025-01-22T00:49:31.8245158Z env:
+AuroraDB IT	Delete EC2 Instance	2025-01-22T00:49:31.8245621Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+AuroraDB IT	Delete EC2 Instance	2025-01-22T00:49:31.8246242Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+AuroraDB IT	Delete EC2 Instance	2025-01-22T00:49:31.8246857Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+AuroraDB IT	Delete EC2 Instance	2025-01-22T00:49:31.8247381Z ##[endgroup]
+AuroraDB IT	Delete EC2 Instance	2025-01-22T00:49:31.8298114Z /home/runner/work/_temp/1b200d20-6570-4e31-bd8b-361ff67e5f79.sh: line 1: .venv/bin/activate: No such file or directory
+AuroraDB IT	Delete EC2 Instance	2025-01-22T00:49:31.8301382Z ##[error]Process completed with exit code 1.
