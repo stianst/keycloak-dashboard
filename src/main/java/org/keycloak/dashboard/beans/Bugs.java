@@ -13,12 +13,14 @@ import java.util.stream.Collectors;
 public class Bugs {
 
     private final List<GitHubIssue> issues;
+    private final List<String> activeStreams;
     private String nextRelease;
 
     private List<BugStat> stats;
 
     private List<BugAreaStat> areaStats;
     private List<BugTeamStat> teamStats;
+    private final List<BugTeamBackportStat> teamBackportStats;
 
     private List<FlakyTest> flakyTests;
 
@@ -30,6 +32,8 @@ public class Bugs {
         issues.stream().filter(i -> i.isOpen() && i.getMilestone() != null && i.getMilestone().endsWith(".0.0"))
                 .map(i -> i.getMilestone()).sorted().findFirst().ifPresent(s -> nextRelease = s);
 
+        activeStreams = data.getBranches().stream().filter(b -> b.startsWith("release/") || b.equals("main")).map(l -> l.replace("release/", "")).sorted(Comparator.reverseOrder()).collect(Collectors.toList());
+
         flakyTests = issues.stream()
                 .filter(i -> i.hasLabel("flaky-test") && i.isOpen() && i.getTitle().startsWith("Flaky test:")).map(FlakyTest::new)
                 .sorted(Comparator.comparing(FlakyTest::getUpdatedAt).reversed())
@@ -40,6 +44,7 @@ public class Bugs {
         stats = convertToBugStat(issues, data, teams);
         areaStats = convertToAreaStats(issues);
         teamStats = convertToTeamStats(issues, teams);
+        teamBackportStats = convertToTeamBackportStats(issues, teams);
     }
 
     private Map<String, Integer> convertToTeamCount(List<FlakyTest> flakyTests, Teams teams) {
@@ -114,6 +119,13 @@ public class Bugs {
                     }
                 });
 
+        activeStreams.forEach(l -> {
+            FilteredIssues openIssues = filteredIssues.clone().openBug().label("backport/" + l);
+            if (openIssues.count() > 0) {
+                stats.add(BugStat.global(l.replace("backport/", "Backport: ")).warnErrorKey("Backports").issues(openIssues).closedIssues(filteredIssues.clone().closedBug().label(l)));
+            }
+        });
+
         stats.add(BugStat.global("Missing Area")
                 .issues(filteredIssues.clone().openBug().missingArea(data.getAreas()).missingInformation(false)));
         stats.add(BugStat.global("Missing Priority")
@@ -159,6 +171,22 @@ public class Bugs {
         return teamStats;
     }
 
+    private List<BugTeamBackportStat> convertToTeamBackportStats(List<GitHubIssue> issues, Teams teams) {
+        FilteredIssues filteredIssues = FilteredIssues.create(issues).openBug();
+        List<BugTeamBackportStat> teamStats = new LinkedList<>();
+
+        for (String team : teams.keySet()) {
+            if (!team.equals("no-team")) {
+                FilteredIssues teamIssues = filteredIssues.clone().team(team).excludeAssignedToSubTeam(team, teams);
+                teamStats.add(new BugTeamBackportStat(team, teamIssues, activeStreams));
+            }
+        }
+
+        teamStats.sort(Comparator.comparing(BugTeamBackportStat::getTitle));
+
+        return teamStats;
+    }
+
     public String getNextRelease() {
         return nextRelease;
     }
@@ -173,6 +201,10 @@ public class Bugs {
 
     public List<BugTeamStat> getTeamStats() {
         return teamStats;
+    }
+
+    public List<BugTeamBackportStat> getTeamBackportStats() {
+        return teamBackportStats;
     }
 
     public List<FlakyTest> getFlakyTests() {

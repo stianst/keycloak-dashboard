@@ -7,6 +7,7 @@ import org.keycloak.dashboard.WorkflowStatusLoader;
 import org.keycloak.dashboard.rep.GitHubData;
 import org.keycloak.dashboard.rep.GitHubIssue;
 import org.keycloak.dashboard.util.DateUtil;
+import org.kohsuke.github.GHBranch;
 import org.kohsuke.github.GHLabel;
 import org.kohsuke.github.GHPerson;
 import org.kohsuke.github.GHRepository;
@@ -53,6 +54,7 @@ public class GitHubLoader {
         data.setPrs(loadPRs());
         data.setIssuesWithPr(queryIssuesWithPr());
         data.setPullRequestWaits(workflowRuntimeLoader.load());
+        data.setBranches(listBranches());
 
         data.setUpdatedDate(new Date());
 
@@ -63,6 +65,10 @@ public class GitHubLoader {
         workflowStatusLoader.load();
 
         return data;
+    }
+
+    private List<String> listBranches() throws IOException {
+        return gitHub.getRepository("keycloak/keycloak").getBranches().values().stream().map(GHBranch::getName).toList();
     }
 
     public GitHubData update(GitHubData data) throws Exception {
@@ -99,6 +105,10 @@ public class GitHubLoader {
 
         if (update == null || update.contains("workflow-status")) {
             workflowStatusLoader.load();
+        }
+
+        if (update == null || update.contains("branches")) {
+            data.setBranches(listBranches());
         }
 
         if (update == null) {

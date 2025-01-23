@@ -54,12 +54,6 @@ public class Stars {
 
             months.add(monthEntry);
         }
-
-        for (MonthEntry m : months) {
-            System.out.println(m.getMonth() + "\t" + m.getLapsed()  + "\t" + m.addedStars + "\t" + m.targetAddedStars + "\t" + m.totalStars + "\t" + m.targetTotalStars);
-        }
-
-        System.out.println("Result: " + (c));
     }
 
     public List<MonthEntry> getMonths() {

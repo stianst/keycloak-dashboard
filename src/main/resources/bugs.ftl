@@ -7,6 +7,7 @@
     </div>
     <div class="modal-float">
         <div class="modal-float-margin"><#include "module-bugs-teams.ftl"></div>
+        <div class="modal-float-margin"><#include "module-bugs-backports.ftl"></div>
     </div>
     <div class="modal-float">
         <div class="modal-float-margin"><#include "module-bugs-areas.ftl"></div>

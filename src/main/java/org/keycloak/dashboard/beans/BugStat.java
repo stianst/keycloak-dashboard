@@ -93,7 +93,7 @@ public class BugStat {
         if (errorIfClosedLessThanOpened) {
             int opened = getCount();
             int closed = getClosedCount();
-            return Css.getCountClass(closed < opened ? 1 : 0, -1, 1);
+            return Css.getCountClass(closed < opened ? 1 : 0, -1, 1, false);
         }
 
 
@@ -117,17 +117,17 @@ public class BugStat {
             };
         }
 
-        return Css.getCountClass(getCount(), warnCount, errorCount);
+        return Css.getCountClass(getCount(), warnCount, errorCount, true);
     }
 
     public String getClosedCssClasses() {
         if (errorIfClosedLessThanOpened) {
             int opened = getCount();
             int closed = getClosedCount();
-            return Css.getCountClass(closed < opened ? 1 : 0, -1, 1);
+            return Css.getCountClass(closed < opened ? 1 : 0, -1, 1, true);
         }
 
-        return Css.getCountClass(getClosedCount(), -1, -1);
+        return Css.getCountClass(getClosedCount(), -1, -1, true);
     }
 
     private BugStat(String label, BugStatType type) {

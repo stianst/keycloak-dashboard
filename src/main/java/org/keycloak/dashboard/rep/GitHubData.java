@@ -18,6 +18,8 @@ public class GitHubData {
     public List<GitHubIssue> prs;
     @JsonProperty
     public List<PullRequestWait> pullRequestWaits;
+    @JsonProperty
+    public List<String> branches;
 
     @JsonIgnore
     public List<String> keycloakDevelopers;
@@ -70,5 +72,13 @@ public class GitHubData {
 
     public void setPullRequestWaits(List<PullRequestWait> pullRequestWaits) {
         this.pullRequestWaits = pullRequestWaits;
+    }
+
+    public List<String> getBranches() {
+        return branches;
+    }
+
+    public void setBranches(List<String> branches) {
+        this.branches = branches;
     }
 }

@@ -63,9 +63,9 @@ public class PRStat {
     }
 
     public String getOpenCssClasses() {
-        return Css.getCountClass(openCount, openWarnCount, openErrorCount);
+        return Css.getCountClass(openCount, openWarnCount, openErrorCount, true);
     }
     public String getClosedCssClasses() {
-        return Css.getCountClass(closedCount, closedWarnCount, closedErrorCount);
+        return Css.getCountClass(closedCount, closedWarnCount, closedErrorCount, true);
     }
 }
