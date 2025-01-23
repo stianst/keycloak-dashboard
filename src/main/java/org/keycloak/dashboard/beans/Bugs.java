@@ -120,10 +120,8 @@ public class Bugs {
                 });
 
         activeStreams.forEach(l -> {
-            FilteredIssues openIssues = filteredIssues.clone().openBug().label("backport/" + l);
-            if (openIssues.count() > 0) {
-                stats.add(BugStat.global(l.replace("backport/", "Backport: ")).warnErrorKey("Backports").issues(openIssues).closedIssues(filteredIssues.clone().closedBug().label(l)));
-            }
+            FilteredIssues openIssues = filteredIssues.clone().label("backport/" + l);
+            stats.add(BugStat.global("Backport: " + l).warnErrorKey("Backports").issues(openIssues).closedIssues(filteredIssues.clone().closedBug().label(l)));
         });
 
         stats.add(BugStat.global("Missing Area")
@@ -172,7 +170,7 @@ public class Bugs {
     }
 
     private List<BugTeamBackportStat> convertToTeamBackportStats(List<GitHubIssue> issues, Teams teams) {
-        FilteredIssues filteredIssues = FilteredIssues.create(issues).openBug();
+        FilteredIssues filteredIssues = FilteredIssues.create(issues);
         List<BugTeamBackportStat> teamStats = new LinkedList<>();
 
         for (String team : teams.keySet()) {
