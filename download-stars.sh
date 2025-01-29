@@ -5,9 +5,10 @@ PAGES=$( gh api -X GET -F per_page=100 /repos/keycloak/keycloak/stargazers -i | 
 
 echo "Total pages: $PAGES"
 
+rm -f /tmp/ghstars
+
 if [ -f stars ]; then
-    CURRENT_NUM=$( cat stars | wc -l )
-    CURRENT_PAGE=$(( $CURRENT_NUM / 100 ))
+    CURRENT_PAGE=$( cat stars | cut -d ',' -f 1 | sort -n -r | uniq | head -n 1 )
     cat stars | grep -v "^$PAGES," > /tmp/ghstars
 else
     CURRENT_PAGE=1
