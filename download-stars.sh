@@ -9,7 +9,7 @@ rm -f /tmp/ghstars
 
 if [ -f stars ]; then
     CURRENT_PAGE=$( cat stars | cut -d ',' -f 1 | sort -n -r | uniq | head -n 1 )
-    cat stars | grep -v "^$PAGES," > /tmp/ghstars
+    cat stars | grep -v "^$CURRENT_PAGE," > /tmp/ghstars
 else
     CURRENT_PAGE=1
 fi
