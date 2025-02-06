@@ -1,0 +1,800 @@
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:24.0298561Z ##[group]Run docker run --rm --workdir /github/workspace -e "SUREFIRE_RERUN_FAILING_COUNT" -v "/home/runner/work/keycloak/keycloak":"/github/workspace" -v "$HOME/.m2":"/root/.m2" registry.access.redhat.com/ubi8/ubi:latest .github/scripts/run-fips-it.sh strict
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:24.0301604Z [36;1mdocker run --rm --workdir /github/workspace -e "SUREFIRE_RERUN_FAILING_COUNT" -v "/home/runner/work/keycloak/keycloak":"/github/workspace" -v "$HOME/.m2":"/root/.m2" registry.access.redhat.com/ubi8/ubi:latest .github/scripts/run-fips-it.sh strict[0m
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:24.0333346Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:24.0333684Z env:
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:24.0333959Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:24.0334308Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:24.0334601Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:24.0335031Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.6-7/x64
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:24.0335527Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.6-7/x64
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:24.0335874Z ##[endgroup]
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:24.1098162Z Unable to find image 'registry.access.redhat.com/ubi8/ubi:latest' locally
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:24.5118096Z latest: Pulling from ubi8/ubi
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:24.6931956Z 79c20e727b94: Pulling fs layer
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:25.5001939Z 79c20e727b94: Verifying Checksum
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:25.5002675Z 79c20e727b94: Download complete
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:28.5357016Z 79c20e727b94: Pull complete
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:28.5395841Z Digest: sha256:881aaf5fa0d1f85925a1b9668a1fc7f850a11ca30fd3e37ea194db4edff892a5
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:28.5408182Z Status: Downloaded newer image for registry.access.redhat.com/ubi8/ubi:latest
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:31.3202490Z + dnf install -y java-21-openjdk-devel
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:31.7519379Z Updating Subscription Management repositories.
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:31.7521742Z Unable to read consumer identity
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:31.7552398Z 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:31.7553165Z This system is not registered with an entitlement server. You can use subscription-manager to register.
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:31.7553891Z 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:31.8665825Z Red Hat Universal Base Image 8 (RPMs) - BaseOS   10 MB/s | 723 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.0606424Z Red Hat Universal Base Image 8 (RPMs) - AppStre  41 MB/s | 3.4 MB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.6611887Z Red Hat Universal Base Image 8 (RPMs) - CodeRea 2.8 MB/s | 186 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9306556Z Dependencies resolved.
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9382485Z =================================================================================================
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9383345Z  Package                     Arch    Version                          Repository             Size
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9384174Z =================================================================================================
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9384799Z Installing:
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9385497Z  java-21-openjdk-devel       x86_64  1:21.0.6.0.7-1.el8               ubi-8-appstream-rpms  5.2 M
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9386352Z Installing dependencies:
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9387371Z  adwaita-cursor-theme        noarch  3.28.0-3.el8                     ubi-8-appstream-rpms  647 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9388377Z  adwaita-icon-theme          noarch  3.28.0-3.el8                     ubi-8-appstream-rpms   11 M
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9388983Z  alsa-lib                    x86_64  1.2.10-2.el8                     ubi-8-appstream-rpms  501 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9389525Z  at-spi2-atk                 x86_64  2.26.2-1.el8                     ubi-8-appstream-rpms   89 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9390093Z  at-spi2-core                x86_64  2.28.0-1.el8                     ubi-8-appstream-rpms  169 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9390605Z  atk                         x86_64  2.28.1-1.el8                     ubi-8-appstream-rpms  272 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9391125Z  avahi-libs                  x86_64  0.7-27.el8_10.1                  ubi-8-baseos-rpms      62 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9391664Z  cairo                       x86_64  1.15.12-6.el8                    ubi-8-appstream-rpms  719 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9392473Z  cairo-gobject               x86_64  1.15.12-6.el8                    ubi-8-appstream-rpms   33 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9392923Z  colord-libs                 x86_64  1.4.2-1.el8                      ubi-8-appstream-rpms  236 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9393386Z  copy-jdk-configs            noarch  4.0-2.el8                        ubi-8-appstream-rpms   31 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9393835Z  cups-libs                   x86_64  1:2.2.6-62.el8_10                ubi-8-baseos-rpms     438 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9394299Z  dejavu-fonts-common         noarch  2.35-7.el8                       ubi-8-baseos-rpms      74 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9394808Z  dejavu-sans-mono-fonts      noarch  2.35-7.el8                       ubi-8-baseos-rpms     447 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9395274Z  fontconfig                  x86_64  2.13.1-4.el8                     ubi-8-baseos-rpms     274 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9395763Z  fontpackages-filesystem     noarch  1.44-22.el8                      ubi-8-baseos-rpms      16 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9396244Z  freetype                    x86_64  2.9.1-9.el8                      ubi-8-baseos-rpms     394 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9396652Z  fribidi                     x86_64  1.0.4-9.el8                      ubi-8-appstream-rpms   89 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9397216Z  gdk-pixbuf2                 x86_64  2.36.12-6.el8_10                 ubi-8-baseos-rpms     466 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9397819Z  gdk-pixbuf2-modules         x86_64  2.36.12-6.el8_10                 ubi-8-appstream-rpms  109 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9398301Z  glib-networking             x86_64  2.56.1-1.1.el8                   ubi-8-baseos-rpms     155 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9398745Z  graphite2                   x86_64  1.3.10-10.el8                    ubi-8-appstream-rpms  122 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9399229Z  gsettings-desktop-schemas   x86_64  3.32.0-6.el8                     ubi-8-baseos-rpms     633 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9399926Z  gtk-update-icon-cache       x86_64  3.22.30-12.el8_10                ubi-8-appstream-rpms   32 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9400394Z  harfbuzz                    x86_64  1.7.5-4.el8                      ubi-8-appstream-rpms  296 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9400848Z  hicolor-icon-theme          noarch  0.17-2.el8                       ubi-8-appstream-rpms   48 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9401316Z  jasper-libs                 x86_64  2.0.14-6.el8_10                  ubi-8-appstream-rpms  167 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9401764Z  java-21-openjdk             x86_64  1:21.0.6.0.7-1.el8               ubi-8-appstream-rpms  418 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9402252Z  java-21-openjdk-headless    x86_64  1:21.0.6.0.7-1.el8               ubi-8-appstream-rpms   50 M
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9402812Z  javapackages-filesystem     noarch  5.3.0-1.module+el8+2447+6f56d9a6 ubi-8-appstream-rpms   30 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9403325Z  jbigkit-libs                x86_64  2.1-14.el8                       ubi-8-appstream-rpms   55 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9403767Z  lcms2                       x86_64  2.9-2.el8                        ubi-8-appstream-rpms  165 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9404159Z  libX11                      x86_64  1.6.8-9.el8_10                   ubi-8-appstream-rpms  612 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9404579Z  libX11-common               noarch  1.6.8-9.el8_10                   ubi-8-appstream-rpms  159 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9405000Z  libXau                      x86_64  1.0.9-3.el8                      ubi-8-appstream-rpms   37 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9405416Z  libXcomposite               x86_64  0.4.4-14.el8                     ubi-8-appstream-rpms   29 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9405843Z  libXcursor                  x86_64  1.1.15-3.el8                     ubi-8-appstream-rpms   36 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9406259Z  libXdamage                  x86_64  1.1.4-14.el8                     ubi-8-appstream-rpms   27 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9406668Z  libXext                     x86_64  1.3.4-1.el8                      ubi-8-appstream-rpms   45 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9407076Z  libXfixes                   x86_64  5.0.3-7.el8                      ubi-8-appstream-rpms   25 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9407753Z  libXft                      x86_64  2.3.3-1.el8                      ubi-8-appstream-rpms   67 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9408150Z  libXi                       x86_64  1.7.10-1.el8                     ubi-8-appstream-rpms   49 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9408583Z  libXinerama                 x86_64  1.1.4-1.el8                      ubi-8-appstream-rpms   16 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9409012Z  libXrandr                   x86_64  1.5.2-1.el8                      ubi-8-appstream-rpms   34 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9409432Z  libXrender                  x86_64  0.9.10-7.el8                     ubi-8-appstream-rpms   33 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9409843Z  libXtst                     x86_64  1.2.3-7.el8                      ubi-8-appstream-rpms   22 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9410251Z  libdatrie                   x86_64  0.2.9-7.el8                      ubi-8-appstream-rpms   33 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9410675Z  libepoxy                    x86_64  1.5.8-1.el8                      ubi-8-appstream-rpms  225 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9411099Z  libfontenc                  x86_64  1.1.3-8.el8                      ubi-8-appstream-rpms   37 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9411511Z  libgusb                     x86_64  0.3.0-1.el8                      ubi-8-baseos-rpms      49 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9411930Z  libjpeg-turbo               x86_64  1.5.3-12.el8                     ubi-8-appstream-rpms  157 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9412364Z  libmodman                   x86_64  2.0.1-17.el8                     ubi-8-baseos-rpms      36 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9412777Z  libpkgconf                  x86_64  1.4.2-1.el8                      ubi-8-baseos-rpms      35 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9413183Z  libpng                      x86_64  2:1.6.34-5.el8                   ubi-8-baseos-rpms     126 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9413590Z  libproxy                    x86_64  0.4.15-5.5.el8_10                ubi-8-baseos-rpms      73 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9414620Z  libsoup                     x86_64  2.62.3-7.el8_10                  ubi-8-baseos-rpms     426 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9416182Z  libthai                     x86_64  0.1.27-2.el8                     ubi-8-appstream-rpms  203 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9416963Z  libtiff                     x86_64  4.0.9-33.el8_10                  ubi-8-appstream-rpms  190 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9418008Z  libwayland-client           x86_64  1.21.0-1.el8                     ubi-8-appstream-rpms   41 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9418735Z  libwayland-cursor           x86_64  1.21.0-1.el8                     ubi-8-appstream-rpms   26 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9419191Z  libwayland-egl              x86_64  1.21.0-1.el8                     ubi-8-appstream-rpms   20 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9419613Z  libxcb                      x86_64  1.13.1-1.el8                     ubi-8-appstream-rpms  229 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9420040Z  libxkbcommon                x86_64  0.9.1-1.el8                      ubi-8-appstream-rpms  116 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9420499Z  lksctp-tools                x86_64  1.0.18-3.el8                     ubi-8-baseos-rpms     100 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9420903Z  lua                         x86_64  5.3.4-12.el8                     ubi-8-appstream-rpms  192 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9421276Z  nspr                        x86_64  4.35.0-1.el8_8                   ubi-8-appstream-rpms  143 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9421650Z  nss                         x86_64  3.101.0-11.el8_8                 ubi-8-appstream-rpms  766 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9422054Z  nss-softokn                 x86_64  3.101.0-11.el8_8                 ubi-8-appstream-rpms  532 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9422512Z  nss-softokn-freebl          x86_64  3.101.0-11.el8_8                 ubi-8-appstream-rpms  392 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9422962Z  nss-sysinit                 x86_64  3.101.0-11.el8_8                 ubi-8-appstream-rpms   77 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9423403Z  nss-util                    x86_64  3.101.0-11.el8_8                 ubi-8-appstream-rpms  143 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9424182Z  pango                       x86_64  1.42.4-8.el8                     ubi-8-appstream-rpms  297 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9425271Z  pixman                      x86_64  0.38.4-4.el8                     ubi-8-appstream-rpms  258 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9425707Z  pkgconf                     x86_64  1.4.2-1.el8                      ubi-8-baseos-rpms      38 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9426133Z  pkgconf-m4                  noarch  1.4.2-1.el8                      ubi-8-baseos-rpms      17 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9426593Z  pkgconf-pkg-config          x86_64  1.4.2-1.el8                      ubi-8-baseos-rpms      15 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9427014Z  rest                        x86_64  0.8.1-2.el8                      ubi-8-appstream-rpms   71 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9427574Z  shared-mime-info            x86_64  1.9-4.el8                        ubi-8-baseos-rpms     329 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9428005Z  ttmkfdir                    x86_64  3.0.9-54.el8                     ubi-8-appstream-rpms   62 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9428461Z  tzdata-java                 noarch  2024b-4.el8                      ubi-8-appstream-rpms  186 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9428938Z  xkeyboard-config            noarch  2.28-1.el8                       ubi-8-appstream-rpms  782 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9429415Z  xorg-x11-font-utils         x86_64  1:7.5-41.el8                     ubi-8-appstream-rpms  104 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9429893Z  xorg-x11-fonts-Type1        noarch  7.5-19.el8                       ubi-8-appstream-rpms  522 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9430276Z Installing weak dependencies:
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9430659Z  abattis-cantarell-fonts     noarch  0.0.25-6.el8                     ubi-8-appstream-rpms  156 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9431118Z  dconf                       x86_64  0.28.0-4.el8                     ubi-8-appstream-rpms  108 k
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9431501Z  gtk3                        x86_64  3.22.30-12.el8_10                ubi-8-appstream-rpms  4.5 M
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9431820Z Enabling module streams:
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9432139Z  javapackages-runtime                201801                                                      
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9432562Z 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9432649Z Transaction Summary
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9432866Z =================================================================================================
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9433129Z Install  87 Packages
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9433253Z 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9433349Z Total download size: 87 M
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9433561Z Installed size: 312 M
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9433762Z Downloading Packages:
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9857386Z (1/87): dejavu-fonts-common-2.35-7.el8.noarch.r 2.0 MB/s |  74 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9874672Z (2/87): avahi-libs-0.7-27.el8_10.1.x86_64.rpm   1.6 MB/s |  62 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9936807Z (3/87): cups-libs-2.2.6-62.el8_10.x86_64.rpm    9.7 MB/s | 438 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:32.9992053Z (4/87): fontconfig-2.13.1-4.el8.x86_64.rpm       23 MB/s | 274 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.0015632Z (5/87): dejavu-sans-mono-fonts-2.35-7.el8.noarc  28 MB/s | 447 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.0023217Z (6/87): fontpackages-filesystem-1.44-22.el8.noa 1.9 MB/s |  16 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.0091879Z (7/87): freetype-2.9.1-9.el8.x86_64.rpm          40 MB/s | 394 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.0113061Z (8/87): glib-networking-2.56.1-1.1.el8.x86_64.r  18 MB/s | 155 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.0148530Z (9/87): gdk-pixbuf2-2.36.12-6.el8_10.x86_64.rpm  38 MB/s | 466 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.0168295Z (10/87): libgusb-0.3.0-1.el8.x86_64.rpm         9.5 MB/s |  49 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.0217464Z (11/87): gsettings-desktop-schemas-3.32.0-6.el8  51 MB/s | 633 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.0229702Z (12/87): libmodman-2.0.1-17.el8.x86_64.rpm      4.6 MB/s |  36 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.0243320Z (13/87): libpkgconf-1.4.2-1.el8.x86_64.rpm      4.7 MB/s |  35 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.0278117Z (14/87): libpng-1.6.34-5.el8.x86_64.rpm          22 MB/s | 126 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.0295382Z (15/87): libproxy-0.4.15-5.5.el8_10.x86_64.rpm   12 MB/s |  73 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.0337257Z (16/87): libsoup-2.62.3-7.el8_10.x86_64.rpm      46 MB/s | 426 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.0352840Z (17/87): pkgconf-1.4.2-1.el8.x86_64.rpm         6.8 MB/s |  38 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.0366895Z (18/87): lksctp-tools-1.0.18-3.el8.x86_64.rpm    11 MB/s | 100 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.0386505Z (19/87): pkgconf-m4-1.4.2-1.el8.noarch.rpm      3.7 MB/s |  17 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.0401877Z (20/87): pkgconf-pkg-config-1.4.2-1.el8.x86_64. 3.3 MB/s |  15 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.0439190Z (21/87): shared-mime-info-1.9-4.el8.x86_64.rpm   47 MB/s | 329 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.0476134Z (22/87): abattis-cantarell-fonts-0.0.25-6.el8.n  18 MB/s | 156 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.0540152Z (23/87): adwaita-cursor-theme-3.28.0-3.el8.noar  48 MB/s | 647 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.0559752Z (24/87): at-spi2-atk-2.26.2-1.el8.x86_64.rpm     11 MB/s |  89 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.0616666Z (25/87): at-spi2-core-2.28.0-1.el8.x86_64.rpm    22 MB/s | 169 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.0647945Z (26/87): atk-2.28.1-1.el8.x86_64.rpm             31 MB/s | 272 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.0701226Z (27/87): cairo-gobject-1.15.12-6.el8.x86_64.rpm 6.6 MB/s |  33 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.0756705Z (28/87): cairo-1.15.12-6.el8.x86_64.rpm          52 MB/s | 719 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.0789187Z (29/87): colord-libs-1.4.2-1.el8.x86_64.rpm      28 MB/s | 236 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.0812924Z (30/87): copy-jdk-configs-4.0-2.el8.noarch.rpm  5.9 MB/s |  31 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.0850772Z (31/87): dconf-0.28.0-4.el8.x86_64.rpm           18 MB/s | 108 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.0876146Z (32/87): graphite2-1.3.10-10.el8.x86_64.rpm      19 MB/s | 122 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.0901078Z (33/87): hicolor-icon-theme-0.17-2.el8.noarch.r  10 MB/s |  48 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.0929858Z (34/87): javapackages-filesystem-5.3.0-1.module 6.0 MB/s |  30 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.0955948Z (35/87): jbigkit-libs-2.1-14.el8.x86_64.rpm      10 MB/s |  55 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.0995357Z (36/87): lcms2-2.9-2.el8.x86_64.rpm              26 MB/s | 165 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.1010602Z (37/87): libXau-1.0.9-3.el8.x86_64.rpm          7.2 MB/s |  37 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.1044943Z (38/87): libXcomposite-0.4.4-14.el8.x86_64.rpm  6.3 MB/s |  29 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.1064504Z (39/87): libXcursor-1.1.15-3.el8.x86_64.rpm     7.0 MB/s |  36 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.1093900Z (40/87): libXdamage-1.1.4-14.el8.x86_64.rpm     5.7 MB/s |  27 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.1118928Z (41/87): libXext-1.3.4-1.el8.x86_64.rpm         8.8 MB/s |  45 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.1143040Z (42/87): libXfixes-5.0.3-7.el8.x86_64.rpm       5.3 MB/s |  25 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.1175562Z (43/87): libXft-2.3.3-1.el8.x86_64.rpm           12 MB/s |  67 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.1196272Z (44/87): libXi-1.7.10-1.el8.x86_64.rpm          9.6 MB/s |  49 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.1226639Z (45/87): libXinerama-1.1.4-1.el8.x86_64.rpm     3.2 MB/s |  16 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.1257674Z (46/87): libXrandr-1.5.2-1.el8.x86_64.rpm       6.6 MB/s |  34 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.1276412Z (47/87): libXrender-0.9.10-7.el8.x86_64.rpm     7.0 MB/s |  33 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.1297739Z (48/87): libXtst-1.2.3-7.el8.x86_64.rpm         4.8 MB/s |  22 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.1325327Z (49/87): libdatrie-0.2.9-7.el8.x86_64.rpm       7.2 MB/s |  33 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.1375079Z (50/87): libepoxy-1.5.8-1.el8.x86_64.rpm         30 MB/s | 225 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.1391349Z (51/87): libfontenc-1.1.3-8.el8.x86_64.rpm      5.9 MB/s |  37 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.1447274Z (52/87): libjpeg-turbo-1.5.3-12.el8.x86_64.rpm   23 MB/s | 157 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.1481758Z (53/87): libthai-0.1.27-2.el8.x86_64.rpm         23 MB/s | 203 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.1525784Z (54/87): libxcb-1.13.1-1.el8.x86_64.rpm          30 MB/s | 229 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.1551401Z (55/87): libxkbcommon-0.9.1-1.el8.x86_64.rpm     17 MB/s | 116 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.1598690Z (56/87): lua-5.3.4-12.el8.x86_64.rpm             28 MB/s | 192 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.1634639Z (57/87): pango-1.42.4-8.el8.x86_64.rpm           37 MB/s | 297 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.1687954Z (58/87): ttmkfdir-3.0.9-54.el8.x86_64.rpm        13 MB/s |  62 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.1704376Z (59/87): rest-0.8.1-2.el8.x86_64.rpm            6.7 MB/s |  71 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.1993485Z (60/87): adwaita-icon-theme-3.28.0-3.el8.noarch  74 MB/s |  11 MB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.2013679Z (61/87): xorg-x11-font-utils-7.5-41.el8.x86_64. 3.3 MB/s | 104 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.2070023Z (62/87): xkeyboard-config-2.28-1.el8.noarch.rpm  20 MB/s | 782 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.2112403Z (63/87): alsa-lib-1.2.10-2.el8.x86_64.rpm        51 MB/s | 501 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.2127958Z (64/87): fribidi-1.0.4-9.el8.x86_64.rpm          16 MB/s |  89 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.2181037Z (65/87): gdk-pixbuf2-modules-2.36.12-6.el8_10.x  17 MB/s | 109 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.2208962Z (66/87): xorg-x11-fonts-Type1-7.5-19.el8.noarch  24 MB/s | 522 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.2234907Z (67/87): harfbuzz-1.7.5-4.el8.x86_64.rpm         28 MB/s | 296 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.2248160Z (68/87): libwayland-client-1.21.0-1.el8.x86_64. 6.3 MB/s |  41 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.2263081Z (69/87): libwayland-cursor-1.21.0-1.el8.x86_64. 5.0 MB/s |  26 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.2285343Z (70/87): libwayland-egl-1.21.0-1.el8.x86_64.rpm 4.1 MB/s |  20 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.2309170Z (71/87): nspr-4.35.0-1.el8_8.x86_64.rpm          24 MB/s | 143 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.2331670Z (72/87): gtk-update-icon-cache-3.22.30-12.el8_1 7.3 MB/s |  32 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.2356089Z (73/87): pixman-0.38.4-4.el8.x86_64.rpm          28 MB/s | 258 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.2393227Z (74/87): jasper-libs-2.0.14-6.el8_10.x86_64.rpm  28 MB/s | 167 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.2460624Z (75/87): java-21-openjdk-21.0.6.0.7-1.el8.x86_6  41 MB/s | 418 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.3045590Z (76/87): gtk3-3.22.30-12.el8_10.x86_64.rpm       61 MB/s | 4.5 MB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.3173227Z (77/87): libX11-1.6.8-9.el8_10.x86_64.rpm        49 MB/s | 612 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.3327594Z (78/87): java-21-openjdk-devel-21.0.6.0.7-1.el8  56 MB/s | 5.2 MB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.3352583Z (79/87): libX11-common-1.6.8-9.el8_10.noarch.rp 8.8 MB/s | 159 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.3480577Z (80/87): nss-3.101.0-11.el8_8.x86_64.rpm         60 MB/s | 766 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.3516652Z (81/87): libtiff-4.0.9-33.el8_10.x86_64.rpm      10 MB/s | 190 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.3585438Z (82/87): nss-softokn-3.101.0-11.el8_8.x86_64.rp  52 MB/s | 532 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.3645471Z (83/87): nss-softokn-freebl-3.101.0-11.el8_8.x8  31 MB/s | 392 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.3663358Z (84/87): nss-sysinit-3.101.0-11.el8_8.x86_64.rp  10 MB/s |  77 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.3714876Z (85/87): nss-util-3.101.0-11.el8_8.x86_64.rpm    21 MB/s | 143 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.3738607Z (86/87): tzdata-java-2024b-4.el8.noarch.rpm      25 MB/s | 186 kB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.6067572Z (87/87): java-21-openjdk-headless-21.0.6.0.7-1. 140 MB/s |  50 MB     00:00    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.6098751Z --------------------------------------------------------------------------------
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:33.6100320Z Total                                           130 MB/s |  87 MB     00:00     
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:35.3786580Z Running transaction check
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:35.4247577Z Transaction check succeeded.
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:35.4248491Z Running transaction test
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:35.6378057Z Transaction test succeeded.
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:35.6389994Z Running transaction
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:35.9694314Z   Running scriptlet: copy-jdk-configs-4.0-2.el8.noarch                      1/1 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:36.0021669Z   Running scriptlet: java-21-openjdk-headless-1:21.0.6.0.7-1.el8.x86_64     1/1 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:36.0348524Z   Preparing        :                                                        1/1 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:36.0391952Z   Installing       : nspr-4.35.0-1.el8_8.x86_64                            1/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:36.0646270Z   Running scriptlet: nspr-4.35.0-1.el8_8.x86_64                            1/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:36.0943819Z   Installing       : libpng-2:1.6.34-5.el8.x86_64                          2/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:36.1057540Z   Installing       : freetype-2.9.1-9.el8.x86_64                           3/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:36.1223829Z   Installing       : nss-util-3.101.0-11.el8_8.x86_64                      4/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:36.1273669Z   Installing       : libjpeg-turbo-1.5.3-12.el8.x86_64                     5/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:36.1486753Z   Installing       : fontpackages-filesystem-1.44-22.el8.noarch            6/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:36.1558176Z   Installing       : pixman-0.38.4-4.el8.x86_64                            7/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:36.1886545Z   Installing       : libwayland-client-1.21.0-1.el8.x86_64                 8/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:36.1946100Z   Installing       : atk-2.28.1-1.el8.x86_64                               9/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:36.2039938Z   Installing       : libwayland-cursor-1.21.0-1.el8.x86_64                10/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:36.2385129Z   Installing       : dejavu-fonts-common-2.35-7.el8.noarch                11/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:36.2712146Z   Installing       : dejavu-sans-mono-fonts-2.35-7.el8.noarch             12/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:36.2784518Z   Installing       : fontconfig-2.13.1-4.el8.x86_64                       13/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:37.3129284Z   Running scriptlet: fontconfig-2.13.1-4.el8.x86_64                       13/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:37.3702559Z   Installing       : abattis-cantarell-fonts-0.0.25-6.el8.noarch          14/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:37.3882212Z   Installing       : gsettings-desktop-schemas-3.32.0-6.el8.x86_64        15/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:37.4176299Z   Installing       : jasper-libs-2.0.14-6.el8_10.x86_64                   16/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:37.4630444Z   Installing       : nss-softokn-freebl-3.101.0-11.el8_8.x86_64           17/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:37.5199783Z   Installing       : nss-softokn-3.101.0-11.el8_8.x86_64                  18/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:37.5292782Z   Installing       : nss-3.101.0-11.el8_8.x86_64                          19/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:37.5376241Z   Installing       : nss-sysinit-3.101.0-11.el8_8.x86_64                  20/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:37.5909283Z   Installing       : ttmkfdir-3.0.9-54.el8.x86_64                         21/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:37.6456122Z   Installing       : tzdata-java-2024b-4.el8.noarch                       22/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:37.6545812Z   Installing       : libX11-common-1.6.8-9.el8_10.noarch                  23/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:37.6674943Z   Installing       : libwayland-egl-1.21.0-1.el8.x86_64                   24/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:37.7174890Z   Installing       : fribidi-1.0.4-9.el8.x86_64                           25/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:37.7260481Z   Installing       : alsa-lib-1.2.10-2.el8.x86_64                         26/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:37.8435514Z   Running scriptlet: alsa-lib-1.2.10-2.el8.x86_64                         26/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:37.8592367Z   Installing       : xkeyboard-config-2.28-1.el8.noarch                   27/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:37.8809820Z   Installing       : libxkbcommon-0.9.1-1.el8.x86_64                      28/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:37.8859712Z   Installing       : lua-5.3.4-12.el8.x86_64                              29/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:37.8917683Z   Installing       : copy-jdk-configs-4.0-2.el8.noarch                    30/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:37.9165626Z   Installing       : libfontenc-1.1.3-8.el8.x86_64                        31/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:37.9230108Z   Installing       : libepoxy-1.5.8-1.el8.x86_64                          32/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:37.9261135Z   Installing       : libdatrie-0.2.9-7.el8.x86_64                         33/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:37.9555565Z   Running scriptlet: libdatrie-0.2.9-7.el8.x86_64                         33/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:37.9592225Z   Installing       : libthai-0.1.27-2.el8.x86_64                          34/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:37.9745410Z   Running scriptlet: libthai-0.1.27-2.el8.x86_64                          34/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:38.0084708Z   Installing       : libXau-1.0.9-3.el8.x86_64                            35/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:38.0542023Z   Installing       : libxcb-1.13.1-1.el8.x86_64                           36/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:38.0614099Z   Installing       : libX11-1.6.8-9.el8_10.x86_64                         37/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:38.0691953Z   Installing       : libXext-1.3.4-1.el8.x86_64                           38/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:38.1217014Z   Installing       : libXrender-0.9.10-7.el8.x86_64                       39/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:38.1300912Z   Installing       : cairo-1.15.12-6.el8.x86_64                           40/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:38.1360690Z   Installing       : libXi-1.7.10-1.el8.x86_64                            41/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:38.1410872Z   Installing       : libXfixes-5.0.3-7.el8.x86_64                         42/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:38.1474425Z   Installing       : libXtst-1.2.3-7.el8.x86_64                           43/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:38.1656343Z   Installing       : libXcomposite-0.4.4-14.el8.x86_64                    44/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:38.1699509Z   Installing       : at-spi2-core-2.28.0-1.el8.x86_64                     45/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:38.1911761Z   Running scriptlet: at-spi2-core-2.28.0-1.el8.x86_64                     45/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:38.1947365Z   Installing       : at-spi2-atk-2.26.2-1.el8.x86_64                      46/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:38.2098269Z   Running scriptlet: at-spi2-atk-2.26.2-1.el8.x86_64                      46/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:38.2159661Z   Installing       : libXcursor-1.1.15-3.el8.x86_64                       47/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:38.2212388Z   Installing       : libXdamage-1.1.4-14.el8.x86_64                       48/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:38.2295655Z   Installing       : cairo-gobject-1.15.12-6.el8.x86_64                   49/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:38.2360681Z   Installing       : libXft-2.3.3-1.el8.x86_64                            50/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:38.2415027Z   Installing       : libXrandr-1.5.2-1.el8.x86_64                         51/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:38.2572222Z   Installing       : libXinerama-1.1.4-1.el8.x86_64                       52/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:38.2610176Z   Installing       : lcms2-2.9-2.el8.x86_64                               53/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:38.2789923Z   Running scriptlet: lcms2-2.9-2.el8.x86_64                               53/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:38.2825448Z   Installing       : jbigkit-libs-2.1-14.el8.x86_64                       54/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:38.3086633Z   Running scriptlet: jbigkit-libs-2.1-14.el8.x86_64                       54/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:38.3166594Z   Installing       : libtiff-4.0.9-33.el8_10.x86_64                       55/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:38.3564277Z   Installing       : javapackages-filesystem-5.3.0-1.module+el8+2447+6f   56/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:38.3742151Z   Installing       : hicolor-icon-theme-0.17-2.el8.noarch                 57/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:38.3998373Z   Installing       : graphite2-1.3.10-10.el8.x86_64                       58/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:38.4037404Z   Installing       : harfbuzz-1.7.5-4.el8.x86_64                          59/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:38.4399121Z   Running scriptlet: harfbuzz-1.7.5-4.el8.x86_64                          59/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:38.4457731Z   Installing       : pango-1.42.4-8.el8.x86_64                            60/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:38.4711399Z   Running scriptlet: pango-1.42.4-8.el8.x86_64                            60/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:38.5834560Z   Installing       : dconf-0.28.0-4.el8.x86_64                            61/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:39.8193951Z   Installing       : adwaita-cursor-theme-3.28.0-3.el8.noarch             62/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:39.8777545Z   Installing       : adwaita-icon-theme-3.28.0-3.el8.noarch               63/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:39.8813383Z   Installing       : shared-mime-info-1.9-4.el8.x86_64                    64/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:39.9278609Z   Running scriptlet: shared-mime-info-1.9-4.el8.x86_64                    64/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:39.9335448Z   Installing       : gdk-pixbuf2-2.36.12-6.el8_10.x86_64                  65/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:39.9601348Z   Running scriptlet: gdk-pixbuf2-2.36.12-6.el8_10.x86_64                  65/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:39.9676977Z   Installing       : gdk-pixbuf2-modules-2.36.12-6.el8_10.x86_64          66/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:39.9723807Z   Installing       : gtk-update-icon-cache-3.22.30-12.el8_10.x86_64       67/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:39.9858964Z   Installing       : pkgconf-m4-1.4.2-1.el8.noarch                        68/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:39.9889491Z   Installing       : lksctp-tools-1.0.18-3.el8.x86_64                     69/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:40.0055142Z   Running scriptlet: lksctp-tools-1.0.18-3.el8.x86_64                     69/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:40.0131547Z   Installing       : libpkgconf-1.4.2-1.el8.x86_64                        70/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:40.0176231Z   Installing       : pkgconf-1.4.2-1.el8.x86_64                           71/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:40.0340662Z   Installing       : pkgconf-pkg-config-1.4.2-1.el8.x86_64                72/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:40.0739859Z   Installing       : xorg-x11-font-utils-1:7.5-41.el8.x86_64              73/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:40.0770901Z   Installing       : xorg-x11-fonts-Type1-7.5-19.el8.noarch               74/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:40.1298430Z   Running scriptlet: xorg-x11-fonts-Type1-7.5-19.el8.noarch               74/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:40.1334510Z   Installing       : libmodman-2.0.1-17.el8.x86_64                        75/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:40.1528786Z   Running scriptlet: libmodman-2.0.1-17.el8.x86_64                        75/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:40.1565795Z   Installing       : libproxy-0.4.15-5.5.el8_10.x86_64                    76/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:40.1830637Z   Running scriptlet: libproxy-0.4.15-5.5.el8_10.x86_64                    76/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:40.2206737Z   Installing       : glib-networking-2.56.1-1.1.el8.x86_64                77/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:40.2334719Z   Installing       : libsoup-2.62.3-7.el8_10.x86_64                       78/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:40.2373402Z   Installing       : rest-0.8.1-2.el8.x86_64                              79/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:40.2547508Z   Running scriptlet: rest-0.8.1-2.el8.x86_64                              79/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:40.2782818Z   Installing       : libgusb-0.3.0-1.el8.x86_64                           80/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:40.2893004Z   Installing       : colord-libs-1.4.2-1.el8.x86_64                       81/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:40.3191666Z   Installing       : avahi-libs-0.7-27.el8_10.1.x86_64                    82/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:44.2286254Z   Installing       : cups-libs-1:2.2.6-62.el8_10.x86_64                   83/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:44.2382278Z   Installing       : java-21-openjdk-headless-1:21.0.6.0.7-1.el8.x86_64   84/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:44.5812801Z   Running scriptlet: java-21-openjdk-headless-1:21.0.6.0.7-1.el8.x86_64   84/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:44.6187751Z   Installing       : gtk3-3.22.30-12.el8_10.x86_64                        85/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:44.6220712Z   Installing       : java-21-openjdk-1:21.0.6.0.7-1.el8.x86_64            86/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:45.0069957Z   Running scriptlet: java-21-openjdk-1:21.0.6.0.7-1.el8.x86_64            86/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:45.0124668Z   Installing       : java-21-openjdk-devel-1:21.0.6.0.7-1.el8.x86_64      87/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:45.0210875Z   Running scriptlet: java-21-openjdk-devel-1:21.0.6.0.7-1.el8.x86_64      87/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:45.1208236Z   Running scriptlet: nss-3.101.0-11.el8_8.x86_64                          87/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:45.1286815Z   Running scriptlet: copy-jdk-configs-4.0-2.el8.noarch                    87/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:45.2362010Z   Running scriptlet: dconf-0.28.0-4.el8.x86_64                            87/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:45.2473993Z   Running scriptlet: java-21-openjdk-headless-1:21.0.6.0.7-1.el8.x86_64   87/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:45.3621442Z   Running scriptlet: java-21-openjdk-1:21.0.6.0.7-1.el8.x86_64            87/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:45.7207468Z   Running scriptlet: java-21-openjdk-devel-1:21.0.6.0.7-1.el8.x86_64      87/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:45.7419861Z   Running scriptlet: fontconfig-2.13.1-4.el8.x86_64                       87/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:45.8601807Z   Running scriptlet: hicolor-icon-theme-0.17-2.el8.noarch                 87/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.0294377Z   Running scriptlet: adwaita-icon-theme-3.28.0-3.el8.noarch               87/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.8305345Z   Running scriptlet: shared-mime-info-1.9-4.el8.x86_64                    87/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9776087Z   Running scriptlet: gdk-pixbuf2-2.36.12-6.el8_10.x86_64                  87/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9777383Z   Verifying        : avahi-libs-0.7-27.el8_10.1.x86_64                     1/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9778314Z   Verifying        : cups-libs-1:2.2.6-62.el8_10.x86_64                    2/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9779268Z   Verifying        : dejavu-fonts-common-2.35-7.el8.noarch                 3/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9780239Z   Verifying        : dejavu-sans-mono-fonts-2.35-7.el8.noarch              4/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9781236Z   Verifying        : fontconfig-2.13.1-4.el8.x86_64                        5/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9782227Z   Verifying        : fontpackages-filesystem-1.44-22.el8.noarch            6/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9783743Z   Verifying        : freetype-2.9.1-9.el8.x86_64                           7/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9784682Z   Verifying        : gdk-pixbuf2-2.36.12-6.el8_10.x86_64                   8/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9785449Z   Verifying        : glib-networking-2.56.1-1.1.el8.x86_64                 9/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9786237Z   Verifying        : gsettings-desktop-schemas-3.32.0-6.el8.x86_64        10/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9786998Z   Verifying        : libgusb-0.3.0-1.el8.x86_64                           11/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9787977Z   Verifying        : libmodman-2.0.1-17.el8.x86_64                        12/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9788703Z   Verifying        : libpkgconf-1.4.2-1.el8.x86_64                        13/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9789406Z   Verifying        : libpng-2:1.6.34-5.el8.x86_64                         14/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9790108Z   Verifying        : libproxy-0.4.15-5.5.el8_10.x86_64                    15/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9790816Z   Verifying        : libsoup-2.62.3-7.el8_10.x86_64                       16/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9791541Z   Verifying        : lksctp-tools-1.0.18-3.el8.x86_64                     17/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9792271Z   Verifying        : pkgconf-1.4.2-1.el8.x86_64                           18/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9793269Z   Verifying        : pkgconf-m4-1.4.2-1.el8.noarch                        19/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9794052Z   Verifying        : pkgconf-pkg-config-1.4.2-1.el8.x86_64                20/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9794823Z   Verifying        : shared-mime-info-1.9-4.el8.x86_64                    21/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9795631Z   Verifying        : abattis-cantarell-fonts-0.0.25-6.el8.noarch          22/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9796446Z   Verifying        : adwaita-cursor-theme-3.28.0-3.el8.noarch             23/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9797408Z   Verifying        : adwaita-icon-theme-3.28.0-3.el8.noarch               24/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9798174Z   Verifying        : at-spi2-atk-2.26.2-1.el8.x86_64                      25/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9798915Z   Verifying        : at-spi2-core-2.28.0-1.el8.x86_64                     26/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9800031Z   Verifying        : atk-2.28.1-1.el8.x86_64                              27/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9800726Z   Verifying        : cairo-1.15.12-6.el8.x86_64                           28/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9801437Z   Verifying        : cairo-gobject-1.15.12-6.el8.x86_64                   29/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9802181Z   Verifying        : colord-libs-1.4.2-1.el8.x86_64                       30/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9808436Z   Verifying        : copy-jdk-configs-4.0-2.el8.noarch                    31/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9809389Z   Verifying        : dconf-0.28.0-4.el8.x86_64                            32/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9810365Z   Verifying        : graphite2-1.3.10-10.el8.x86_64                       33/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9812101Z   Verifying        : hicolor-icon-theme-0.17-2.el8.noarch                 34/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9813013Z   Verifying        : javapackages-filesystem-5.3.0-1.module+el8+2447+6f   35/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9813868Z   Verifying        : jbigkit-libs-2.1-14.el8.x86_64                       36/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9814633Z   Verifying        : lcms2-2.9-2.el8.x86_64                               37/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9815373Z   Verifying        : libXau-1.0.9-3.el8.x86_64                            38/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9816123Z   Verifying        : libXcomposite-0.4.4-14.el8.x86_64                    39/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9816883Z   Verifying        : libXcursor-1.1.15-3.el8.x86_64                       40/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9817793Z   Verifying        : libXdamage-1.1.4-14.el8.x86_64                       41/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9818533Z   Verifying        : libXext-1.3.4-1.el8.x86_64                           42/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9819263Z   Verifying        : libXfixes-5.0.3-7.el8.x86_64                         43/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9820289Z   Verifying        : libXft-2.3.3-1.el8.x86_64                            44/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9821038Z   Verifying        : libXi-1.7.10-1.el8.x86_64                            45/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9822040Z   Verifying        : libXinerama-1.1.4-1.el8.x86_64                       46/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9822801Z   Verifying        : libXrandr-1.5.2-1.el8.x86_64                         47/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9823552Z   Verifying        : libXrender-0.9.10-7.el8.x86_64                       48/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9824284Z   Verifying        : libXtst-1.2.3-7.el8.x86_64                           49/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9825016Z   Verifying        : libdatrie-0.2.9-7.el8.x86_64                         50/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9825740Z   Verifying        : libepoxy-1.5.8-1.el8.x86_64                          51/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9826487Z   Verifying        : libfontenc-1.1.3-8.el8.x86_64                        52/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9827390Z   Verifying        : libjpeg-turbo-1.5.3-12.el8.x86_64                    53/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9828185Z   Verifying        : libthai-0.1.27-2.el8.x86_64                          54/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9828914Z   Verifying        : libxcb-1.13.1-1.el8.x86_64                           55/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9829644Z   Verifying        : libxkbcommon-0.9.1-1.el8.x86_64                      56/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9830358Z   Verifying        : lua-5.3.4-12.el8.x86_64                              57/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9831049Z   Verifying        : pango-1.42.4-8.el8.x86_64                            58/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9831741Z   Verifying        : rest-0.8.1-2.el8.x86_64                              59/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9832451Z   Verifying        : ttmkfdir-3.0.9-54.el8.x86_64                         60/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9833224Z   Verifying        : xkeyboard-config-2.28-1.el8.noarch                   61/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9833984Z   Verifying        : xorg-x11-font-utils-1:7.5-41.el8.x86_64              62/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9834759Z   Verifying        : xorg-x11-fonts-Type1-7.5-19.el8.noarch               63/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9835757Z   Verifying        : alsa-lib-1.2.10-2.el8.x86_64                         64/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9836464Z   Verifying        : fribidi-1.0.4-9.el8.x86_64                           65/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9837330Z   Verifying        : gdk-pixbuf2-modules-2.36.12-6.el8_10.x86_64          66/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9838088Z   Verifying        : harfbuzz-1.7.5-4.el8.x86_64                          67/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9838823Z   Verifying        : libwayland-client-1.21.0-1.el8.x86_64                68/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9839627Z   Verifying        : libwayland-cursor-1.21.0-1.el8.x86_64                69/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9840404Z   Verifying        : libwayland-egl-1.21.0-1.el8.x86_64                   70/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9841100Z   Verifying        : nspr-4.35.0-1.el8_8.x86_64                           71/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9841788Z   Verifying        : pixman-0.38.4-4.el8.x86_64                           72/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9842545Z   Verifying        : gtk-update-icon-cache-3.22.30-12.el8_10.x86_64       73/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9843212Z   Verifying        : gtk3-3.22.30-12.el8_10.x86_64                        74/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9843931Z   Verifying        : jasper-libs-2.0.14-6.el8_10.x86_64                   75/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9844650Z   Verifying        : java-21-openjdk-1:21.0.6.0.7-1.el8.x86_64            76/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9845386Z   Verifying        : java-21-openjdk-devel-1:21.0.6.0.7-1.el8.x86_64      77/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9845891Z   Verifying        : java-21-openjdk-headless-1:21.0.6.0.7-1.el8.x86_64   78/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9846307Z   Verifying        : libX11-1.6.8-9.el8_10.x86_64                         79/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9846714Z   Verifying        : libX11-common-1.6.8-9.el8_10.noarch                  80/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9847287Z   Verifying        : libtiff-4.0.9-33.el8_10.x86_64                       81/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9847864Z   Verifying        : nss-3.101.0-11.el8_8.x86_64                          82/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9848272Z   Verifying        : nss-softokn-3.101.0-11.el8_8.x86_64                  83/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9848694Z   Verifying        : nss-softokn-freebl-3.101.0-11.el8_8.x86_64           84/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9849111Z   Verifying        : nss-sysinit-3.101.0-11.el8_8.x86_64                  85/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:46.9849514Z   Verifying        : nss-util-3.101.0-11.el8_8.x86_64                     86/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.0733880Z   Verifying        : tzdata-java-2024b-4.el8.noarch                       87/87 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.0734635Z Installed products updated.
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1286227Z 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1286856Z Installed:
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1287768Z   abattis-cantarell-fonts-0.0.25-6.el8.noarch                                   
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1288641Z   adwaita-cursor-theme-3.28.0-3.el8.noarch                                      
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1289514Z   adwaita-icon-theme-3.28.0-3.el8.noarch                                        
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1290253Z   alsa-lib-1.2.10-2.el8.x86_64                                                  
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1290915Z   at-spi2-atk-2.26.2-1.el8.x86_64                                               
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1291625Z   at-spi2-core-2.28.0-1.el8.x86_64                                              
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1292315Z   atk-2.28.1-1.el8.x86_64                                                       
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1292972Z   avahi-libs-0.7-27.el8_10.1.x86_64                                             
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1293622Z   cairo-1.15.12-6.el8.x86_64                                                    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1294309Z   cairo-gobject-1.15.12-6.el8.x86_64                                            
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1295122Z   colord-libs-1.4.2-1.el8.x86_64                                                
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1295888Z   copy-jdk-configs-4.0-2.el8.noarch                                             
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1297005Z   cups-libs-1:2.2.6-62.el8_10.x86_64                                            
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1297980Z   dconf-0.28.0-4.el8.x86_64                                                     
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1298760Z   dejavu-fonts-common-2.35-7.el8.noarch                                         
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1299603Z   dejavu-sans-mono-fonts-2.35-7.el8.noarch                                      
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1300371Z   fontconfig-2.13.1-4.el8.x86_64                                                
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1301203Z   fontpackages-filesystem-1.44-22.el8.noarch                                    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1301982Z   freetype-2.9.1-9.el8.x86_64                                                   
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1302629Z   fribidi-1.0.4-9.el8.x86_64                                                    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1303316Z   gdk-pixbuf2-2.36.12-6.el8_10.x86_64                                           
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1304119Z   gdk-pixbuf2-modules-2.36.12-6.el8_10.x86_64                                   
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1304902Z   glib-networking-2.56.1-1.1.el8.x86_64                                         
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1305614Z   graphite2-1.3.10-10.el8.x86_64                                                
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1306369Z   gsettings-desktop-schemas-3.32.0-6.el8.x86_64                                 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1307376Z   gtk-update-icon-cache-3.22.30-12.el8_10.x86_64                                
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1308068Z   gtk3-3.22.30-12.el8_10.x86_64                                                 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1308692Z   harfbuzz-1.7.5-4.el8.x86_64                                                   
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1309395Z   hicolor-icon-theme-0.17-2.el8.noarch                                          
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1310117Z   jasper-libs-2.0.14-6.el8_10.x86_64                                            
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1311039Z   java-21-openjdk-1:21.0.6.0.7-1.el8.x86_64                                     
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1311751Z   java-21-openjdk-devel-1:21.0.6.0.7-1.el8.x86_64                               
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1312494Z   java-21-openjdk-headless-1:21.0.6.0.7-1.el8.x86_64                            
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1313342Z   javapackages-filesystem-5.3.0-1.module+el8+2447+6f56d9a6.noarch               
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1314149Z   jbigkit-libs-2.1-14.el8.x86_64                                                
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1314784Z   lcms2-2.9-2.el8.x86_64                                                        
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1315389Z   libX11-1.6.8-9.el8_10.x86_64                                                  
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1316042Z   libX11-common-1.6.8-9.el8_10.noarch                                           
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1316710Z   libXau-1.0.9-3.el8.x86_64                                                     
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1317574Z   libXcomposite-0.4.4-14.el8.x86_64                                             
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1318334Z   libXcursor-1.1.15-3.el8.x86_64                                                
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1319069Z   libXdamage-1.1.4-14.el8.x86_64                                                
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1319739Z   libXext-1.3.4-1.el8.x86_64                                                    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1320396Z   libXfixes-5.0.3-7.el8.x86_64                                                  
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1321045Z   libXft-2.3.3-1.el8.x86_64                                                     
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1321701Z   libXi-1.7.10-1.el8.x86_64                                                     
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1322427Z   libXinerama-1.1.4-1.el8.x86_64                                                
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1323115Z   libXrandr-1.5.2-1.el8.x86_64                                                  
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1323801Z   libXrender-0.9.10-7.el8.x86_64                                                
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1324704Z   libXtst-1.2.3-7.el8.x86_64                                                    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1325406Z   libdatrie-0.2.9-7.el8.x86_64                                                  
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1326084Z   libepoxy-1.5.8-1.el8.x86_64                                                   
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1326805Z   libfontenc-1.1.3-8.el8.x86_64                                                 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1327713Z   libgusb-0.3.0-1.el8.x86_64                                                    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1328429Z   libjpeg-turbo-1.5.3-12.el8.x86_64                                             
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1329179Z   libmodman-2.0.1-17.el8.x86_64                                                 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1329865Z   libpkgconf-1.4.2-1.el8.x86_64                                                 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1330557Z   libpng-2:1.6.34-5.el8.x86_64                                                  
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1331278Z   libproxy-0.4.15-5.5.el8_10.x86_64                                             
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1331987Z   libsoup-2.62.3-7.el8_10.x86_64                                                
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1332688Z   libthai-0.1.27-2.el8.x86_64                                                   
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1333356Z   libtiff-4.0.9-33.el8_10.x86_64                                                
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1334050Z   libwayland-client-1.21.0-1.el8.x86_64                                         
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1334835Z   libwayland-cursor-1.21.0-1.el8.x86_64                                         
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1335630Z   libwayland-egl-1.21.0-1.el8.x86_64                                            
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1336345Z   libxcb-1.13.1-1.el8.x86_64                                                    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1337070Z   libxkbcommon-0.9.1-1.el8.x86_64                                               
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1338286Z   lksctp-tools-1.0.18-3.el8.x86_64                                              
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1339001Z   lua-5.3.4-12.el8.x86_64                                                       
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1339608Z   nspr-4.35.0-1.el8_8.x86_64                                                    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1340247Z   nss-3.101.0-11.el8_8.x86_64                                                   
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1340947Z   nss-softokn-3.101.0-11.el8_8.x86_64                                           
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1341723Z   nss-softokn-freebl-3.101.0-11.el8_8.x86_64                                    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1342513Z   nss-sysinit-3.101.0-11.el8_8.x86_64                                           
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1343212Z   nss-util-3.101.0-11.el8_8.x86_64                                              
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1343927Z   pango-1.42.4-8.el8.x86_64                                                     
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1344618Z   pixman-0.38.4-4.el8.x86_64                                                    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1345297Z   pkgconf-1.4.2-1.el8.x86_64                                                    
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1346030Z   pkgconf-m4-1.4.2-1.el8.noarch                                                 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1346788Z   pkgconf-pkg-config-1.4.2-1.el8.x86_64                                         
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1347723Z   rest-0.8.1-2.el8.x86_64                                                       
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1348423Z   shared-mime-info-1.9-4.el8.x86_64                                             
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1349115Z   ttmkfdir-3.0.9-54.el8.x86_64                                                  
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1349805Z   tzdata-java-2024b-4.el8.noarch                                                
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1350585Z   xkeyboard-config-2.28-1.el8.noarch                                            
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1351406Z   xorg-x11-font-utils-1:7.5-41.el8.x86_64                                       
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1352452Z   xorg-x11-fonts-Type1-7.5-19.el8.noarch                                        
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1352977Z 
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.1353110Z Complete!
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.2162269Z + fips-mode-setup --enable --no-bootcfg
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.3073940Z Setting system policy to FIPS
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.3074547Z Note: System-wide crypto policies are applied on application start-up.
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.3075028Z It is recommended to restart the system for the change of policies
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.3075384Z to fully take place.
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.3175043Z The grubby command is missing, please configure the bootloader manually.
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.3179681Z FIPS mode will be enabled.
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.3180386Z Now you need to configure the bootloader to add kernel options "fips=1"
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.3180990Z and reboot the system for the setting to take effect.
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.3183374Z + fips-mode-setup --is-enabled
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.3268834Z + '[' 0 -ne 0 ']'
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.3269274Z + STRICT_OPTIONS=
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.3269654Z + '[' strict = strict ']'
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.3270917Z + STRICT_OPTIONS='-Dauth.server.fips.mode=strict -Dauth.server.supported.keystore.types=BCFKS -Dauth.server.keystore.type=bcfks -Dauth.server.supported.rsa.key.sizes=2048,4096'
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.3273200Z + echo 'STRICT_OPTIONS: -Dauth.server.fips.mode=strict -Dauth.server.supported.keystore.types=BCFKS -Dauth.server.keystore.type=bcfks -Dauth.server.supported.rsa.key.sizes=2048,4096'
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.3274766Z ++ testsuite/integration-arquillian/tests/base/testsuites/suite.sh fips
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.3276293Z STRICT_OPTIONS: -Dauth.server.fips.mode=strict -Dauth.server.supported.keystore.types=BCFKS -Dauth.server.keystore.type=bcfks -Dauth.server.supported.rsa.key.sizes=2048,4096
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.4738980Z + TESTS='LoginTest,LoginTotpTest,PasswordHashingTest,ClientAuthSignedJWTTest,CredentialsTest,JavaKeystoreKeyProviderTest,ServerInfoTest,UserFederationLdapConnectionTest,LDAPUserLoginTest,org.keycloak.testsuite.x509.**,MutualTLSClientTest,FAPI1Test,FAPICIBATest,KcRegTest,KcRegCreateTest,KcAdmTest,KcAdmCreateTest,SAMLServletAdapterTest,SamlSignatureTest,KcOidcBrokerJWEEcdhEsA128KwP256A128CbcHs256Test,KcOidcBrokerJWEEcdhEsA128KwP256A128GcmTest,KcOidcBrokerJWEEcdhEsA192KwP384A192CbcHs384Test,KcOidcBrokerJWEEcdhEsA192KwP384A192GcmTest,KcOidcBrokerJWEEcdhEsA256KwP521A256CbcHs512Test,KcOidcBrokerJWEEcdhEsA256KwP521A256GcmTest,KcOidcBrokerJWEEcdhEsP384A192CbcHs384Test,KcOidcBrokerJWEEcdhEsP384A192GcmTest,KcOidcBrokerJWETest,KcOidcBrokerJWEUserInfoJustEncryptedTest,KcSamlBrokerTest,KcSamlFirstBrokerLoginTest,KcSamlEncryptedIdTest,KcSamlSignedBrokerTest,KcSamlSpDescriptorTest,KerberosLdapTest,TrustStoreEmailTest'
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.4755880Z + echo 'Tests: LoginTest,LoginTotpTest,PasswordHashingTest,ClientAuthSignedJWTTest,CredentialsTest,JavaKeystoreKeyProviderTest,ServerInfoTest,UserFederationLdapConnectionTest,LDAPUserLoginTest,org.keycloak.testsuite.x509.**,MutualTLSClientTest,FAPI1Test,FAPICIBATest,KcRegTest,KcRegCreateTest,KcAdmTest,KcAdmCreateTest,SAMLServletAdapterTest,SamlSignatureTest,KcOidcBrokerJWEEcdhEsA128KwP256A128CbcHs256Test,KcOidcBrokerJWEEcdhEsA128KwP256A128GcmTest,KcOidcBrokerJWEEcdhEsA192KwP384A192CbcHs384Test,KcOidcBrokerJWEEcdhEsA192KwP384A192GcmTest,KcOidcBrokerJWEEcdhEsA256KwP521A256CbcHs512Test,KcOidcBrokerJWEEcdhEsA256KwP521A256GcmTest,KcOidcBrokerJWEEcdhEsP384A192CbcHs384Test,KcOidcBrokerJWEEcdhEsP384A192GcmTest,KcOidcBrokerJWETest,KcOidcBrokerJWEUserInfoJustEncryptedTest,KcSamlBrokerTest,KcSamlFirstBrokerLoginTest,KcSamlEncryptedIdTest,KcSamlSignedBrokerTest,KcSamlSpDescriptorTest,KerberosLdapTest,TrustStoreEmailTest'
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.4764603Z + export JAVA_HOME=/etc/alternatives/java_sdk_21
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.4764922Z + JAVA_HOME=/etc/alternatives/java_sdk_21
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.4765192Z + set -o pipefail
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.4765449Z + ./mvnw install -DskipTests -f distribution/pom.xml
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.4774048Z Tests: LoginTest,LoginTotpTest,PasswordHashingTest,ClientAuthSignedJWTTest,CredentialsTest,JavaKeystoreKeyProviderTest,ServerInfoTest,UserFederationLdapConnectionTest,LDAPUserLoginTest,org.keycloak.testsuite.x509.**,MutualTLSClientTest,FAPI1Test,FAPICIBATest,KcRegTest,KcRegCreateTest,KcAdmTest,KcAdmCreateTest,SAMLServletAdapterTest,SamlSignatureTest,KcOidcBrokerJWEEcdhEsA128KwP256A128CbcHs256Test,KcOidcBrokerJWEEcdhEsA128KwP256A128GcmTest,KcOidcBrokerJWEEcdhEsA192KwP384A192CbcHs384Test,KcOidcBrokerJWEEcdhEsA192KwP384A192GcmTest,KcOidcBrokerJWEEcdhEsA256KwP521A256CbcHs512Test,KcOidcBrokerJWEEcdhEsA256KwP521A256GcmTest,KcOidcBrokerJWEEcdhEsP384A192CbcHs384Test,KcOidcBrokerJWEEcdhEsP384A192GcmTest,KcOidcBrokerJWETest,KcOidcBrokerJWEUserInfoJustEncryptedTest,KcSamlBrokerTest,KcSamlFirstBrokerLoginTest,KcSamlEncryptedIdTest,KcSamlSignedBrokerTest,KcSamlSpDescriptorTest,KerberosLdapTest,TrustStoreEmailTest
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.5690480Z curl: Failed to fetch https://repo.maven.apache.org/maven2/org/apache/maven/apache-maven/3.9.8/apache-maven-3.9.8-bin.tar.gz
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.5708361Z + '[' 1 -ne 0 ']'
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:47.5708749Z + exit 1
+FIPS IT (strict)	Run base tests	2025-02-05T00:30:48.5340504Z ##[error]Process completed with exit code 1.
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2278055Z Prepare all required actions
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2348968Z ##[group]Run ./.github/actions/status-check
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2349306Z with:
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2353187Z   jobs: {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "conditional": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	      "ci": "true",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	      "ci-aurora": "false",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	      "ci-quarkus": "false",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	      "ci-sssd": "false",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	      "ci-store": "false",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	      "ci-webauthn": "true"
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    }
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "build": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "unit-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "base-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "adapter-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "adapter-integration-tests-strict-cookies": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "quarkus-unit-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "skipped",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "quarkus-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "jdk-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "store-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "volatile-sessions-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "skipped",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "store-model-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "skipped",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "clustering-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "fips-unit-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "fips-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "failure",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "forms-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "webauthn-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "sssd-unit-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "skipped",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "migration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "external-infinispan-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "skipped",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "test-framework": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "base-new-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  }
+Status Check - Keycloak CI	Run /./.github/actions/status-check	}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2357645Z env:
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2357947Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2358333Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2358670Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2358992Z ##[endgroup]
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2548232Z ##[group]Run JOBS='{
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2548620Z [36;1mJOBS='{[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2548865Z [36;1m  "conditional": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2549130Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2549411Z [36;1m    "outputs": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2549662Z [36;1m      "ci": "true",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2549937Z [36;1m      "ci-aurora": "false",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2550218Z [36;1m      "ci-quarkus": "false",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2550501Z [36;1m      "ci-sssd": "false",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2550764Z [36;1m      "ci-store": "false",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2551031Z [36;1m      "ci-webauthn": "true"[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2551287Z [36;1m    }[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2551491Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2551703Z [36;1m  "build": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2551933Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2552189Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2552419Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2552631Z [36;1m  "unit-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2552872Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2553132Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2553368Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2553585Z [36;1m  "base-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2553867Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2554319Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2554546Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2554772Z [36;1m  "adapter-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2555060Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2555315Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2555546Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2555843Z [36;1m  "adapter-integration-tests-strict-cookies": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2556531Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2556793Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2557024Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2557236Z [36;1m  "quarkus-unit-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2557504Z [36;1m    "result": "skipped",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2557752Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2557978Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2558202Z [36;1m  "quarkus-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2558487Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2558733Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2558978Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2559199Z [36;1m  "jdk-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2559485Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2559745Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2559978Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2560194Z [36;1m  "store-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2560479Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2560739Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2560974Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2561197Z [36;1m  "volatile-sessions-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2561480Z [36;1m    "result": "skipped",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2561729Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2561961Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2562171Z [36;1m  "store-model-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2562424Z [36;1m    "result": "skipped",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2562676Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2562905Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2563139Z [36;1m  "clustering-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2563431Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2563685Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2563908Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2564120Z [36;1m  "fips-unit-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2564379Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2564621Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2564856Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2565082Z [36;1m  "fips-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2565355Z [36;1m    "result": "failure",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2565609Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2565838Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2566260Z [36;1m  "forms-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2566555Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2566816Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2567038Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2567270Z [36;1m  "webauthn-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2567565Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2567811Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2568042Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2568254Z [36;1m  "sssd-unit-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2568505Z [36;1m    "result": "skipped",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2568761Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2568989Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2569194Z [36;1m  "migration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2569454Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2569704Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2569929Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2570159Z [36;1m  "external-infinispan-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2570443Z [36;1m    "result": "skipped",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2570687Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2570913Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2571122Z [36;1m  "test-framework": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2571367Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2571613Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2571987Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2572212Z [36;1m  "base-new-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2572502Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2572749Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2572981Z [36;1m  }[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2573178Z [36;1m}'[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2573382Z [36;1m[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2573596Z [36;1mecho "Job status:"[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2574061Z [36;1mecho $JOBS | jq -r 'to_entries[] | " - \(.key): \(.value.result)"'[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2574407Z [36;1m[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2574682Z [36;1mfor i in $(echo $JOBS | jq -r 'to_entries[] | .value.result'); do[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2575075Z [36;1m  if [ "$i" != "success" ] && [ "$i" != "skipped" ]; then[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2575417Z [36;1m    echo ""[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2575650Z [36;1m    echo "Status check not okay!"[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2575920Z [36;1m    exit 1[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2576282Z [36;1m  fi[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2576493Z [36;1mdone[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2609390Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2609782Z env:
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2610080Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2610451Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2610774Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2611117Z ##[endgroup]
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2679327Z Job status:
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2720414Z  - conditional: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2720733Z  - build: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2720976Z  - unit-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2721248Z  - base-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2721542Z  - adapter-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2721908Z  - adapter-integration-tests-strict-cookies: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2722259Z  - quarkus-unit-tests: skipped
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2722542Z  - quarkus-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2722852Z  - jdk-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2723162Z  - store-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2723452Z  - volatile-sessions-tests: skipped
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2723741Z  - store-model-tests: skipped
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2724026Z  - clustering-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2724323Z  - fips-unit-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2724592Z  - fips-integration-tests: failure
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2724889Z  - forms-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2725177Z  - webauthn-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2725462Z  - sssd-unit-tests: skipped
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2725717Z  - migration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2726134Z  - external-infinispan-tests: skipped
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2726587Z  - test-framework: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2726999Z  - base-new-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2755858Z 
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2756239Z Status check not okay!
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-02-05T01:07:46.2768768Z ##[error]Process completed with exit code 1.
