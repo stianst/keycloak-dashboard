@@ -1,0 +1,1169 @@
+Base IT (2)	Run base tests	2025-03-03T00:25:12.3770935Z ##[group]Run TESTS=`testsuite/integration-arquillian/tests/base/testsuites/base-suite.sh 2`
+Base IT (2)	Run base tests	2025-03-03T00:25:12.3771602Z [36;1mTESTS=`testsuite/integration-arquillian/tests/base/testsuites/base-suite.sh 2`[0m
+Base IT (2)	Run base tests	2025-03-03T00:25:12.3772268Z [36;1mecho "Tests: $TESTS"[0m
+Base IT (2)	Run base tests	2025-03-03T00:25:12.3773236Z [36;1m./mvnw test -Dsurefire.rerunFailingTestsCount=2 -Pauth-server-quarkus -Dtest=$TESTS -pl testsuite/integration-arquillian/tests/base 2>&1 | misc/log/trimmer.sh[0m
+Base IT (2)	Run base tests	2025-03-03T00:25:12.3820708Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Base IT (2)	Run base tests	2025-03-03T00:25:12.3821027Z env:
+Base IT (2)	Run base tests	2025-03-03T00:25:12.3821297Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Base IT (2)	Run base tests	2025-03-03T00:25:12.3821634Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Base IT (2)	Run base tests	2025-03-03T00:25:12.3822141Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Base IT (2)	Run base tests	2025-03-03T00:25:12.3822539Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.6-7/x64
+Base IT (2)	Run base tests	2025-03-03T00:25:12.3822979Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.6-7/x64
+Base IT (2)	Run base tests	2025-03-03T00:25:12.3823363Z ##[endgroup]
+Base IT (2)	Run base tests	2025-03-03T00:25:12.6707627Z Tests: org.keycloak.testsuite.broker.**
+Base IT (2)	Run base tests	2025-03-03T00:25:18.3140386Z -- [INFO] Loading cache configuration from /home/runner/work/keycloak/keycloak/.mvn/maven-build-cache-config.xml
+Base IT (2)	Run base tests	2025-03-03T00:25:18.3222681Z -- [INFO] Scanning for projects...
+Base IT (2)	Run base tests	2025-03-03T00:25:19.1734346Z -- [WARNING] 
+Base IT (2)	Run base tests	2025-03-03T00:25:19.1736608Z -- [WARNING] Some problems were encountered while building the effective model for org.keycloak.testframework:keycloak-test-framework-bom:pom:999.0.0-SNAPSHOT
+Base IT (2)	Run base tests	2025-03-03T00:25:19.1739250Z -- [WARNING] 'dependencyManagement.dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.keycloak.testframework:keycloak-test-framework-oauth:jar -> duplicate declaration of version ${project.version} @ line 84, column 25
+Base IT (2)	Run base tests	2025-03-03T00:25:19.1741346Z -- [WARNING] 
+Base IT (2)	Run base tests	2025-03-03T00:25:19.1742427Z -- [WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+Base IT (2)	Run base tests	2025-03-03T00:25:19.1743367Z -- [WARNING] 
+Base IT (2)	Run base tests	2025-03-03T00:25:19.1744370Z -- [WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+Base IT (2)	Run base tests	2025-03-03T00:25:19.1745466Z -- [WARNING] 
+Base IT (2)	Run base tests	2025-03-03T00:25:19.1919164Z -- [INFO] 
+Base IT (2)	Run base tests	2025-03-03T00:25:19.1920046Z -- [INFO] ------< org.keycloak.testsuite:integration-arquillian-tests-base >------
+Base IT (2)	Run base tests	2025-03-03T00:25:19.1921065Z -- [INFO] Building Base TestSuite 999.0.0-SNAPSHOT
+Base IT (2)	Run base tests	2025-03-03T00:25:19.1921931Z -- [INFO]   from pom.xml
+Base IT (2)	Run base tests	2025-03-03T00:25:19.1922605Z -- [INFO] --------------------------------[ jar ]---------------------------------
+Base IT (2)	Run base tests	2025-03-03T00:25:19.2537033Z -- [WARNING] Parameter 'overWriteIfNewer' is unknown for plugin 'maven-resources-plugin:3.0.1:copy-resources (example-realms)'
+Base IT (2)	Run base tests	2025-03-03T00:25:20.5852671Z -- [INFO] Artifact org.jboss:jboss-parent:pom:44 is present in the local repository, but cached from a remote repository ID that is unavailable in current build context, verifying that is downloadable from [central (https://repo.maven.apache.org/maven2, default, releases)]
+Base IT (2)	Run base tests	2025-03-03T00:25:20.5862094Z -- [INFO] Artifact org.jboss:jboss-parent:pom:44 is present in the local repository, but cached from a remote repository ID that is unavailable in current build context, verifying that is downloadable from [central (https://repo.maven.apache.org/maven2, default, releases)]
+Base IT (2)	Run base tests	2025-03-03T00:25:21.1863247Z -- [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jboss/jboss-parent/44/jboss-parent-44.pom
+Base IT (2)	Run base tests	2025-03-03T00:25:21.6985284Z -- [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jboss/jboss-parent/44/jboss-parent-44.pom (0 B at 0 B/s)
+Base IT (2)	Run base tests	2025-03-03T00:25:22.3319012Z -- [INFO] 
+Base IT (2)	Run base tests	2025-03-03T00:25:22.3326060Z -- [INFO] --- enforcer:3.0.0-M3:enforce (enforce-java-version) @ integration-arquillian-tests-base ---
+Base IT (2)	Run base tests	2025-03-03T00:25:22.4892787Z -- [INFO] 
+Base IT (2)	Run base tests	2025-03-03T00:25:22.4894165Z -- [INFO] --- enforcer:3.0.0-M3:enforce (enforce-maven-version) @ integration-arquillian-tests-base ---
+Base IT (2)	Run base tests	2025-03-03T00:25:22.4906478Z -- [INFO] 
+Base IT (2)	Run base tests	2025-03-03T00:25:22.4912092Z -- [INFO] --- enforcer:3.0.0-M3:enforce (enforce-maven) @ integration-arquillian-tests-base ---
+Base IT (2)	Run base tests	2025-03-03T00:25:22.4920890Z -- [INFO] 
+Base IT (2)	Run base tests	2025-03-03T00:25:22.4925168Z -- [INFO] --- buildnumber:1.4:create (get-scm-revision) @ integration-arquillian-tests-base ---
+Base IT (2)	Run base tests	2025-03-03T00:25:22.6804789Z -- [INFO] Executing: /bin/sh -c cd '/home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base' && 'git' 'rev-parse' '--verify' 'HEAD'
+Base IT (2)	Run base tests	2025-03-03T00:25:22.6817717Z -- [INFO] Working directory: /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base
+Base IT (2)	Run base tests	2025-03-03T00:25:22.7269162Z -- [INFO] Storing buildNumber: cc4a413db0fc3bf090e381ea4585bbed4561be8e at timestamp: 1740961522663
+Base IT (2)	Run base tests	2025-03-03T00:25:22.7329854Z -- [INFO] Storing buildScmBranch: main
+Base IT (2)	Run base tests	2025-03-03T00:25:22.7330496Z -- [INFO] 
+Base IT (2)	Run base tests	2025-03-03T00:25:22.7331263Z -- [INFO] --- resources:3.0.1:copy-resources (copy-truststore) @ integration-arquillian-tests-base ---
+Base IT (2)	Run base tests	2025-03-03T00:25:22.7953585Z -- [INFO] Using 'UTF-8' encoding to copy filtered resources.
+Base IT (2)	Run base tests	2025-03-03T00:25:22.8083728Z -- [INFO] Copying 3 resources
+Base IT (2)	Run base tests	2025-03-03T00:25:22.8138693Z -- [INFO] 
+Base IT (2)	Run base tests	2025-03-03T00:25:22.8151468Z -- [INFO] --- resources:3.0.1:copy-resources (copy-common-dependencies) @ integration-arquillian-tests-base ---
+Base IT (2)	Run base tests	2025-03-03T00:25:22.8215131Z -- [INFO] Using 'UTF-8' encoding to copy filtered resources.
+Base IT (2)	Run base tests	2025-03-03T00:25:22.8222946Z -- [INFO] Copying 13 resources
+Base IT (2)	Run base tests	2025-03-03T00:25:22.8285011Z -- [INFO] 
+Base IT (2)	Run base tests	2025-03-03T00:25:22.8286257Z -- [INFO] --- resources:3.0.1:resources (default-resources) @ integration-arquillian-tests-base ---
+Base IT (2)	Run base tests	2025-03-03T00:25:22.8287510Z -- [INFO] Using 'UTF-8' encoding to copy filtered resources.
+Base IT (2)	Run base tests	2025-03-03T00:25:22.8288547Z -- [INFO] Copying 2 resources
+Base IT (2)	Run base tests	2025-03-03T00:25:22.8352490Z -- [INFO] 
+Base IT (2)	Run base tests	2025-03-03T00:25:22.8353436Z -- [INFO] --- resources:3.0.1:copy-resources (copy-admin-user-json-file) @ integration-arquillian-tests-base ---
+Base IT (2)	Run base tests	2025-03-03T00:25:22.8354668Z -- [INFO] Using 'UTF-8' encoding to copy filtered resources.
+Base IT (2)	Run base tests	2025-03-03T00:25:22.8372120Z -- [INFO] Copying 1 resource
+Base IT (2)	Run base tests	2025-03-03T00:25:22.8445497Z -- [INFO] 
+Base IT (2)	Run base tests	2025-03-03T00:25:22.8451298Z -- [INFO] --- xml:1.0.1:transform (arquillian-default-protocol) @ integration-arquillian-tests-base ---
+Base IT (2)	Run base tests	2025-03-03T00:25:23.6539846Z -- [INFO] Transforming file: /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/resources/arquillian.xml
+Base IT (2)	Run base tests	2025-03-03T00:25:23.8009125Z -- [INFO] Transformed 1 file(s).
+Base IT (2)	Run base tests	2025-03-03T00:25:23.8009772Z -- [INFO] 
+Base IT (2)	Run base tests	2025-03-03T00:25:23.8010484Z -- [INFO] --- compiler:3.8.1:compile (default-compile) @ integration-arquillian-tests-base ---
+Base IT (2)	Run base tests	2025-03-03T00:25:23.9459060Z -- [INFO] Changes detected - recompiling the module!
+Base IT (2)	Run base tests	2025-03-03T00:25:23.9499104Z -- [INFO] Compiling 351 source files to /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/target/classes
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0167627Z -- [INFO] Annotation processing is enabled because one or more processors were found
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0169087Z --   on the class path. A future release of javac may disable annotation processing
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0170466Z --   unless at least one processor is specified by name (-processor), or a search
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0171669Z --   path is specified (--processor-path, --processor-module-path), or annotation
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0173079Z --   processing is enabled explicitly (-proc:only, -proc:full).
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0174221Z --   Use -Xlint:-options to suppress this message.
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0175269Z --   Use -proc:none to disable annotation processing.
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0177835Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/adapter/page/SAMLServlet.java:[38,43] org.keycloak.testsuite.page.AbstractPageWithInjectedUrl in org.keycloak.testsuite.page has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0208716Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/adapter/page/SAMLServlet.java:[38,43] org.keycloak.testsuite.page.AbstractPageWithInjectedUrl in org.keycloak.testsuite.page has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0234150Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/adapter/page/SAMLServlet.java:[38,43] org.keycloak.testsuite.page.AbstractPageWithInjectedUrl in org.keycloak.testsuite.page has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0260949Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/util/DroneUtils.java:[80,24] org.keycloak.testsuite.page.AbstractPage in org.keycloak.testsuite.page has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0314874Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/util/DroneUtils.java:[85,21] org.keycloak.testsuite.page.AbstractPage in org.keycloak.testsuite.page has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0318504Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/util/DroneUtils.java:[85,42] org.keycloak.testsuite.page.AbstractPage in org.keycloak.testsuite.page has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0322434Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/util/SamlClientBuilder.java:[253,41] org.keycloak.testsuite.page.AbstractPage in org.keycloak.testsuite.page has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0326047Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/util/SamlClientBuilder.java:[253,41] org.keycloak.testsuite.page.AbstractPage in org.keycloak.testsuite.page has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0329785Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/util/SamlClientBuilder.java:[253,41] org.keycloak.testsuite.page.AbstractPage in org.keycloak.testsuite.page has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0333545Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/util/UIUtils.java:[157,9] org.keycloak.testsuite.page.AbstractPatternFlyAlert in org.keycloak.testsuite.page has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0337025Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/util/oauth/OAuthClient.java:[359,32] deprecated item is not annotated with @Deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0340724Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/auth/page/AuthServerContextRoot.java:[33,44] org.keycloak.testsuite.page.AbstractPageWithInjectedUrl in org.keycloak.testsuite.page has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0435332Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/auth/page/AuthServerContextRoot.java:[33,44] org.keycloak.testsuite.page.AbstractPageWithInjectedUrl in org.keycloak.testsuite.page has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0439347Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/auth/page/AuthServerContextRoot.java:[33,44] org.keycloak.testsuite.page.AbstractPageWithInjectedUrl in org.keycloak.testsuite.page has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0443533Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/auth/page/login/Login.java:[50,13] org.keycloak.testsuite.auth.page.login.LoginForm in org.keycloak.testsuite.auth.page.login has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0447571Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/auth/page/login/Login.java:[50,13] org.keycloak.testsuite.auth.page.login.LoginForm in org.keycloak.testsuite.auth.page.login has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0452146Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/auth/page/login/Login.java:[50,13] org.keycloak.testsuite.auth.page.login.LoginForm in org.keycloak.testsuite.auth.page.login has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0456387Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/auth/page/login/Login.java:[52,12] org.keycloak.testsuite.auth.page.login.LoginForm in org.keycloak.testsuite.auth.page.login has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0460247Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/auth/page/login/Login.java:[52,12] org.keycloak.testsuite.auth.page.login.LoginForm in org.keycloak.testsuite.auth.page.login has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0494394Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/auth/page/login/Login.java:[52,12] org.keycloak.testsuite.auth.page.login.LoginForm in org.keycloak.testsuite.auth.page.login has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0498233Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/auth/page/FieldsBase.java:[27,33] org.keycloak.testsuite.page.Form in org.keycloak.testsuite.page has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0501727Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/auth/page/FieldsBase.java:[27,33] org.keycloak.testsuite.page.Form in org.keycloak.testsuite.page has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0505224Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/auth/page/FieldsBase.java:[27,33] org.keycloak.testsuite.page.Form in org.keycloak.testsuite.page has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0508872Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/adapter/page/AppServerContextRoot.java:[30,43] org.keycloak.testsuite.page.AbstractPageWithInjectedUrl in org.keycloak.testsuite.page has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0512948Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/adapter/page/AppServerContextRoot.java:[30,43] org.keycloak.testsuite.page.AbstractPageWithInjectedUrl in org.keycloak.testsuite.page has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0517050Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/adapter/page/AppServerContextRoot.java:[30,43] org.keycloak.testsuite.page.AbstractPageWithInjectedUrl in org.keycloak.testsuite.page has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0521403Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/migration/MigrationContext.java:[86,54] doGrantAccessTokenRequest(java.lang.String,java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0535605Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/util/TokenUtil.java:[72,60] doGrantAccessTokenRequest(java.lang.String,java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0539591Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/ServerTestEnricherUtil.java:[72,21] securityRealm(java.lang.String) in org.wildfly.extras.creaper.commands.undertow.AddUndertowListener.HttpsBuilder has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0543955Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/AppServerTestEnricher.java:[182,49] HTTP_REMOTING in org.wildfly.extras.creaper.core.online.ManagementProtocol has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0547387Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/updaters/ServerResourceUpdater.java:[89,20] unchecked cast
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0548937Z --   required: T
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0549627Z --   found:    org.keycloak.testsuite.updaters.ServerResourceUpdater<T,Res,Rep>
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0551498Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/updaters/ServerResourceUpdater.java:[103,20] unchecked cast
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0573358Z --   required: T
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0574223Z --   found:    org.keycloak.testsuite.updaters.ServerResourceUpdater<T,Res,Rep>
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0576228Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/updaters/ServerResourceUpdater.java:[140,52] unchecked conversion
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0577908Z --   required: java.util.Set<V>
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0578509Z --   found:    java.util.Set
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0580083Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/updaters/ServerResourceUpdater.java:[141,51] unchecked conversion
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0581718Z --   required: java.util.Set<V>
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0592810Z --   found:    java.util.Set
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0595004Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/page/AbstractPatternFlyAlert.java:[72,96] unchecked method invocation: method until in class org.openqa.selenium.support.ui.FluentWait is applied to given types
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0597393Z --   required: java.util.function.Function<? super T,V>
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0598303Z --   found:    org.openqa.selenium.support.ui.ExpectedCondition
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0600095Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/page/AbstractPatternFlyAlert.java:[72,97] unchecked conversion
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0601933Z --   required: java.util.function.Function<? super T,V>
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0602953Z --   found:    org.openqa.selenium.support.ui.ExpectedCondition
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0605056Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/ModelTestExecutor.java:[51,33] TestResult() in org.jboss.arquillian.test.spi.TestResult has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0608765Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/ModelTestExecutor.java:[59,23] setStatus(org.jboss.arquillian.test.spi.TestResult.Status) in org.jboss.arquillian.test.spi.TestResult has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0612865Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/ModelTestExecutor.java:[61,23] setStatus(org.jboss.arquillian.test.spi.TestResult.Status) in org.jboss.arquillian.test.spi.TestResult has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0616195Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/ModelTestExecutor.java:[70,109] unchecked cast
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0618398Z --   required: org.jboss.arquillian.core.api.InstanceProducer<org.jboss.arquillian.test.spi.TestResult>
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0619437Z --   found:    java.lang.Object
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0621239Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/updaters/Creator.java:[63,16] unchecked call to Creator(java.lang.String,T,java.lang.Runnable) as a member of the raw type org.keycloak.testsuite.updaters.Creator
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0665316Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/updaters/Creator.java:[63,16] unchecked conversion
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0667295Z --   required: org.keycloak.testsuite.updaters.Creator<org.keycloak.admin.client.resource.RealmResource>
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0668469Z --   found:    org.keycloak.testsuite.updaters.Creator
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0670970Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/updaters/Creator.java:[72,20] unchecked call to Creator(java.lang.String,T,java.lang.Runnable) as a member of the raw type org.keycloak.testsuite.updaters.Creator
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0674354Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/updaters/Creator.java:[72,20] unchecked conversion
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0676457Z --   required: org.keycloak.testsuite.updaters.Creator<org.keycloak.admin.client.resource.GroupResource>
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0677561Z --   found:    org.keycloak.testsuite.updaters.Creator
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0679875Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/updaters/Creator.java:[82,20] unchecked call to Creator(java.lang.String,T,java.lang.Runnable) as a member of the raw type org.keycloak.testsuite.updaters.Creator
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0693428Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/updaters/Creator.java:[82,20] unchecked conversion
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0695532Z --   required: org.keycloak.testsuite.updaters.Creator<org.keycloak.admin.client.resource.ClientResource>
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0696667Z --   found:    org.keycloak.testsuite.updaters.Creator
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0699129Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/updaters/Creator.java:[92,20] unchecked call to Creator(java.lang.String,T,java.lang.Runnable) as a member of the raw type org.keycloak.testsuite.updaters.Creator
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0732656Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/updaters/Creator.java:[92,20] unchecked conversion
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0734758Z --   required: org.keycloak.testsuite.updaters.Creator<org.keycloak.admin.client.resource.UserResource>
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0735873Z --   found:    org.keycloak.testsuite.updaters.Creator
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0738025Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/updaters/Creator.java:[102,20] unchecked call to Creator(java.lang.String,T,java.lang.Runnable) as a member of the raw type org.keycloak.testsuite.updaters.Creator
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0741265Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/updaters/Creator.java:[102,20] unchecked conversion
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0743531Z --   required: org.keycloak.testsuite.updaters.Creator<org.keycloak.admin.client.resource.ComponentResource>
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0744720Z --   found:    org.keycloak.testsuite.updaters.Creator
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0747020Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/updaters/Creator.java:[122,20] unchecked call to Creator(java.lang.String,T,java.lang.Runnable) as a member of the raw type org.keycloak.testsuite.updaters.Creator
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0750049Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/updaters/Creator.java:[122,20] unchecked conversion
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0752492Z --   required: org.keycloak.testsuite.updaters.Creator<org.keycloak.admin.client.resource.IdentityProviderResource>
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0753931Z --   found:    org.keycloak.testsuite.updaters.Creator
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0756155Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/updaters/Creator.java:[134,20] unchecked call to Creator(java.lang.String,T,java.lang.Runnable) as a member of the raw type org.keycloak.testsuite.updaters.Creator
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0759042Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/updaters/Creator.java:[134,20] unchecked conversion
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0760952Z --   required: org.keycloak.testsuite.updaters.Creator<org.keycloak.admin.client.resource.IdentityProviderResource>
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0762283Z --   found:    org.keycloak.testsuite.updaters.Creator
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0764240Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/containers/SecurityActions.java:[54,16] java.security.AccessController in java.security has been deprecated and marked for removal
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0767705Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/containers/SecurityActions.java:[148,20] java.security.AccessController in java.security has been deprecated and marked for removal
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0771383Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/containers/SecurityActions.java:[182,13] java.security.AccessController in java.security has been deprecated and marked for removal
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0775114Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/containers/SecurityActions.java:[221,39] isAccessible() in java.lang.reflect.AccessibleObject has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0778626Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/containers/SecurityActions.java:[213,48] java.security.AccessController in java.security has been deprecated and marked for removal
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0781947Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/containers/SecurityActions.java:[245,40] isAccessible() in java.lang.reflect.AccessibleObject has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0785466Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/containers/SecurityActions.java:[237,50] java.security.AccessController in java.security has been deprecated and marked for removal
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0789157Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/containers/SecurityActions.java:[261,28] java.security.AccessController in java.security has been deprecated and marked for removal
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0793326Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/drone/KeycloakDronePostSetup.java:[89,35] implicitlyWait(long,java.util.concurrent.TimeUnit) in org.openqa.selenium.WebDriver.Timeouts has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0797254Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/drone/KeycloakDronePostSetup.java:[90,35] pageLoadTimeout(long,java.util.concurrent.TimeUnit) in org.openqa.selenium.WebDriver.Timeouts has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0801599Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/drone/KeycloakWebDriverConfigurator.java:[56,89] getBrowser() in org.jboss.arquillian.drone.webdriver.configuration.WebDriverConfiguration has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0806399Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/drone/KeycloakWebDriverConfigurator.java:[67,26] getBrowser() in org.jboss.arquillian.drone.webdriver.configuration.WebDriverConfiguration has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0810611Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/util/AdminClientUtil.java:[239,66] org.jboss.resteasy.client.jaxrs.engines.ClientHttpEngineBuilder43 in org.jboss.resteasy.client.jaxrs.engines has been deprecated and marked for removal
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0815095Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/util/AdminClientUtil.java:[239,66] org.jboss.resteasy.client.jaxrs.engines.ClientHttpEngineBuilder43 in org.jboss.resteasy.client.jaxrs.engines has been deprecated and marked for removal
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0819361Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/util/AdminClientUtil.java:[239,66] org.jboss.resteasy.client.jaxrs.engines.ClientHttpEngineBuilder43 in org.jboss.resteasy.client.jaxrs.engines has been deprecated and marked for removal
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0823555Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/CrossDCTestEnricher.java:[430,46] unchecked method invocation: method isAnnotationPresent in class java.lang.Class is applied to given types
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0825818Z --   required: java.lang.Class<? extends java.lang.annotation.Annotation>
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0826492Z --   found:    java.lang.Class
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0828024Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/CrossDCTestEnricher.java:[430,47] unchecked conversion
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0829793Z --   required: java.lang.Class<? extends java.lang.annotation.Annotation>
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0830448Z --   found:    java.lang.Class
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0832790Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/AuthServerTestEnricher.java:[326,33] WildcardFileFilter(java.lang.String) in org.apache.commons.io.filefilter.WildcardFileFilter has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0836181Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/util/matchers/SamlStatusResponseTypeMatcher.java:[26,31] unchecked conversion
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0838044Z --   required: java.util.List<org.hamcrest.Matcher<java.net.URI>>
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0838658Z --   found:    java.util.ArrayList
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0840990Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/arquillian/KeycloakArquillianExtension.java:[63,61] org.keycloak.testsuite.arquillian.DeploymentArchiveProcessor in org.keycloak.testsuite.arquillian has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0845222Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/adapter/page/AdapterLogoutPage.java:[32,40] org.keycloak.testsuite.page.AbstractPageWithInjectedUrl in org.keycloak.testsuite.page has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0849102Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/adapter/page/AdapterLogoutPage.java:[32,40] org.keycloak.testsuite.page.AbstractPageWithInjectedUrl in org.keycloak.testsuite.page has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0853437Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/main/java/org/keycloak/testsuite/adapter/page/AdapterLogoutPage.java:[32,40] org.keycloak.testsuite.page.AbstractPageWithInjectedUrl in org.keycloak.testsuite.page has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0855877Z -- [INFO] 
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0856574Z -- [INFO] --- resources:3.0.1:copy-resources (example-realms) @ integration-arquillian-tests-base ---
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0857404Z -- [INFO] Skipping the execution.
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0857811Z -- [INFO] 
+Base IT (2)	Run base tests	2025-03-03T00:25:29.0858472Z -- [INFO] --- dependency:3.1.2:unpack (unpack-undertow-server) @ integration-arquillian-tests-base ---
+Base IT (2)	Run base tests	2025-03-03T00:25:29.2947092Z -- [INFO] Skipping plugin execution
+Base IT (2)	Run base tests	2025-03-03T00:25:29.3012461Z -- [INFO] 
+Base IT (2)	Run base tests	2025-03-03T00:25:29.3013335Z -- [INFO] --- dependency:3.1.2:unpack (unpack-quarkus-server) @ integration-arquillian-tests-base ---
+Base IT (2)	Run base tests	2025-03-03T00:25:29.3052985Z -- [INFO] Configured Artifact: org.keycloak.testsuite:integration-arquillian-servers-auth-server-quarkus:999.0.0-SNAPSHOT:zip
+Base IT (2)	Run base tests	2025-03-03T00:25:29.3276011Z -- [INFO] Unpacking /home/runner/.m2/repository/org/keycloak/testsuite/integration-arquillian-servers-auth-server-quarkus/999.0.0-SNAPSHOT/integration-arquillian-servers-auth-server-quarkus-999.0.0-SNAPSHOT.zip to /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/target/containers with includes "" and excludes ""
+Base IT (2)	Run base tests	2025-03-03T00:25:30.6579021Z -- [INFO] 
+Base IT (2)	Run base tests	2025-03-03T00:25:30.6579776Z -- [INFO] --- dependency:3.1.2:unpack (unpack-app-server) @ integration-arquillian-tests-base ---
+Base IT (2)	Run base tests	2025-03-03T00:25:30.6599560Z -- [INFO] Skipping plugin execution
+Base IT (2)	Run base tests	2025-03-03T00:25:30.6605972Z -- [INFO] 
+Base IT (2)	Run base tests	2025-03-03T00:25:30.6606966Z -- [INFO] --- dependency:3.1.2:unpack (unpack-client-cli-dist) @ integration-arquillian-tests-base ---
+Base IT (2)	Run base tests	2025-03-03T00:25:30.6610294Z -- [INFO] Configured Artifact: org.keycloak:keycloak-client-cli-dist:999.0.0-SNAPSHOT:zip
+Base IT (2)	Run base tests	2025-03-03T00:25:30.6659281Z -- [INFO] Unpacking /home/runner/.m2/repository/org/keycloak/keycloak-client-cli-dist/999.0.0-SNAPSHOT/keycloak-client-cli-dist-999.0.0-SNAPSHOT.zip to /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/target/containers with includes "" and excludes ""
+Base IT (2)	Run base tests	2025-03-03T00:25:30.7511590Z -- [INFO] 
+Base IT (2)	Run base tests	2025-03-03T00:25:30.7516225Z -- [INFO] --- dependency:3.1.2:copy-dependencies (copy-testsuite-providers-to-base-testsuite) @ integration-arquillian-tests-base ---
+Base IT (2)	Run base tests	2025-03-03T00:25:30.7606286Z -- [INFO] Copying integration-arquillian-testsuite-providers-999.0.0-SNAPSHOT.jar to /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/target/lib/integration-arquillian-testsuite-providers-999.0.0-SNAPSHOT.jar
+Base IT (2)	Run base tests	2025-03-03T00:25:30.7685844Z -- [INFO] 
+Base IT (2)	Run base tests	2025-03-03T00:25:30.7686650Z -- [INFO] --- resources:3.0.1:testResources (default-testResources) @ integration-arquillian-tests-base ---
+Base IT (2)	Run base tests	2025-03-03T00:25:30.7715337Z -- [INFO] Using 'UTF-8' encoding to copy filtered resources.
+Base IT (2)	Run base tests	2025-03-03T00:25:30.7771199Z -- [INFO] Copying 24 resources
+Base IT (2)	Run base tests	2025-03-03T00:25:31.0368958Z -- [INFO] Copying 225 resources
+Base IT (2)	Run base tests	2025-03-03T00:25:31.0779106Z -- [INFO] 
+Base IT (2)	Run base tests	2025-03-03T00:25:31.0784021Z -- [INFO] --- antrun:1.8:run (clean-second-cache-server-arquillian-bug-workaround) @ integration-arquillian-tests-base ---
+Base IT (2)	Run base tests	2025-03-03T00:25:31.0973975Z -- [INFO] Skipping Antrun execution
+Base IT (2)	Run base tests	2025-03-03T00:25:31.0981223Z -- [INFO] 
+Base IT (2)	Run base tests	2025-03-03T00:25:31.0983923Z -- [INFO] --- compiler:3.8.1:testCompile (default-testCompile) @ integration-arquillian-tests-base ---
+Base IT (2)	Run base tests	2025-03-03T00:25:31.1314320Z -- [INFO] Changes detected - recompiling the module!
+Base IT (2)	Run base tests	2025-03-03T00:25:31.1354217Z -- [INFO] Compiling 794 source files to /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/target/test-classes
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0432600Z -- [INFO] Annotation processing is enabled because one or more processors were found
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0458630Z --   on the class path. A future release of javac may disable annotation processing
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0489477Z --   unless at least one processor is specified by name (-processor), or a search
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0490899Z --   path is specified (--processor-path, --processor-module-path), or annotation
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0492499Z --   processing is enabled explicitly (-proc:only, -proc:full).
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0493287Z --   Use -Xlint:-options to suppress this message.
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0493950Z --   Use -proc:none to disable annotation processing.
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0494785Z -- [WARNING] unknown enum constant org.infinispan.factories.scopes.Scopes.GLOBAL
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0495828Z --   reason: class file for org.infinispan.factories.scopes.Scopes not found
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0496909Z -- [WARNING] unknown enum constant org.infinispan.factories.scopes.Scopes.GLOBAL
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0497961Z -- [WARNING] unknown enum constant org.infinispan.factories.scopes.Scopes.GLOBAL
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0499110Z -- [WARNING] unknown enum constant org.infinispan.factories.scopes.Scopes.GLOBAL
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0500899Z --   reason: class file for org.infinispan.factories.scopes.Scopes not found
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0502937Z -- [WARNING] unknown enum constant org.infinispan.factories.scopes.Scopes.GLOBAL
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0504974Z -- [WARNING] unknown enum constant org.infinispan.factories.scopes.Scopes.GLOBAL
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0506459Z -- [WARNING] unknown enum constant org.infinispan.factories.scopes.Scopes.GLOBAL
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0507599Z --   reason: class file for org.infinispan.factories.scopes.Scopes not found
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0510075Z -- [WARNING] unknown enum constant org.infinispan.factories.scopes.Scopes.GLOBAL
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0513202Z -- [WARNING] unknown enum constant org.infinispan.factories.scopes.Scopes.GLOBAL
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0515446Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/forms/VerifyProfileTest.java:[816,14] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0518971Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/forms/VerifyProfileTest.java:[839,38] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0522740Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/forms/VerifyProfileTest.java:[868,14] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0526274Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/forms/VerifyProfileTest.java:[902,14] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0529767Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/forms/VerifyProfileTest.java:[928,14] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0533354Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/forms/VerifyProfileTest.java:[949,38] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0536764Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/forms/VerifyProfileTest.java:[979,38] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0540302Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/forms/VerifyProfileTest.java:[1010,14] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0630838Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/AbstractBaseBrokerTest.java:[225,14] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0635167Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/AbstractBaseBrokerTest.java:[232,14] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0638855Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/AbstractFirstBrokerLoginTest.java:[85,14] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0642790Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/AbstractFirstBrokerLoginTest.java:[111,14] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0646540Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/AbstractFirstBrokerLoginTest.java:[150,14] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0650235Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/AbstractFirstBrokerLoginTest.java:[190,14] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0660257Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/AbstractFirstBrokerLoginTest.java:[224,18] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0664352Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/AbstractFirstBrokerLoginTest.java:[268,14] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0668065Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/AbstractFirstBrokerLoginTest.java:[306,14] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0671974Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/AbstractFirstBrokerLoginTest.java:[346,14] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0675675Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/AbstractFirstBrokerLoginTest.java:[426,14] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0679406Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/AbstractFirstBrokerLoginTest.java:[478,14] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0683447Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/AbstractFirstBrokerLoginTest.java:[542,14] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0687546Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/AbstractFirstBrokerLoginTest.java:[603,14] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0691554Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/AbstractFirstBrokerLoginTest.java:[622,14] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0695505Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/AbstractFirstBrokerLoginTest.java:[646,14] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0699199Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/AbstractFirstBrokerLoginTest.java:[678,14] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0703216Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/AbstractFirstBrokerLoginTest.java:[737,14] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0706937Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/AbstractFirstBrokerLoginTest.java:[763,14] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0710667Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/AbstractFirstBrokerLoginTest.java:[796,14] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0714585Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/AbstractFirstBrokerLoginTest.java:[847,14] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0718296Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/AbstractFirstBrokerLoginTest.java:[881,14] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0722058Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/AbstractFirstBrokerLoginTest.java:[916,14] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0725718Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/AbstractFirstBrokerLoginTest.java:[952,14] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0729347Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/AbstractFirstBrokerLoginTest.java:[989,14] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0733259Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/AbstractFirstBrokerLoginTest.java:[1034,14] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0737043Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/AbstractFirstBrokerLoginTest.java:[1083,14] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0741081Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/AbstractFirstBrokerLoginTest.java:[1122,14] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0745214Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/AbstractFirstBrokerLoginTest.java:[1198,14] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0749057Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/AbstractFirstBrokerLoginTest.java:[1252,14] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0752970Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/AbstractFirstBrokerLoginTest.java:[1327,14] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0756775Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/AbstractFirstBrokerLoginTest.java:[1353,14] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0760515Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/AbstractFirstBrokerLoginTest.java:[1379,14] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0764516Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/AbstractFirstBrokerLoginTest.java:[1409,14] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0768272Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/AbstractFirstBrokerLoginTest.java:[1435,14] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0772165Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/AbstractFirstBrokerLoginTest.java:[1456,14] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0775881Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/KcOidcFirstBrokerLoginTest.java:[98,14] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0779575Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/KcOidcFirstBrokerLoginTest.java:[155,14] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0783439Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/KcOidcFirstBrokerLoginTest.java:[183,18] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0787133Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/KcOidcFirstBrokerLoginTest.java:[191,18] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0791095Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/KcOidcFirstBrokerLoginTest.java:[240,18] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0795117Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/KcOidcFirstBrokerLoginTest.java:[248,18] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0798812Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/KcOidcFirstBrokerLoginTest.java:[297,18] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0802672Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/KcOidcFirstBrokerLoginTest.java:[343,18] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0806356Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/KcOidcFirstBrokerLoginTest.java:[352,18] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0810018Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/KcOidcFirstBrokerLoginTest.java:[379,14] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0813836Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/KcOidcFirstBrokerLoginTest.java:[417,14] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0817537Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/KcOidcFirstBrokerLoginTest.java:[458,14] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0821224Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/KcOidcFirstBrokerLoginTest.java:[491,14] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0825014Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/KcOidcFirstBrokerLoginTest.java:[532,14] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0828702Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/KcOidcFirstBrokerLoginTest.java:[558,14] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0832499Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/KcOidcFirstBrokerLoginTest.java:[580,14] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0836190Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/KcOidcFirstBrokerLoginTest.java:[599,14] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0839851Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/KcOidcFirstBrokerLoginTest.java:[617,14] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0843896Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/KcOidcFirstBrokerLoginTest.java:[637,14] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0847761Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/KcOidcFirstBrokerLoginTest.java:[661,14] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0851438Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/KcOidcFirstBrokerLoginTest.java:[693,14] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0855252Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/KcOidcFirstBrokerLoginTest.java:[722,14] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0858878Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/KcOidcFirstBrokerLoginTest.java:[752,14] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0862688Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/KcOidcFirstBrokerLoginTest.java:[779,14] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0866375Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/KcOidcFirstBrokerLoginTest.java:[805,14] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0870190Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/BrokerRunOnServerUtil.java:[187,45] removeExpired(org.keycloak.models.RealmModel) in org.keycloak.sessions.AuthenticationSessionProvider has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0873367Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/util/AssertAdminEvents.java:[223,97] unchecked cast
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0874988Z --   required: java.util.List<org.keycloak.representations.idm.RoleRepresentation>
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0875690Z --   found:    java.lang.Object
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0877637Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/AbstractBrokerTest.java:[151,14] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0881372Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/AbstractAdvancedBrokerTest.java:[190,14] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0885563Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/AbstractAdvancedBrokerTest.java:[201,128] doGrantAccessTokenRequest(java.lang.String,java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0889882Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/AbstractAdvancedBrokerTest.java:[215,112] doGrantAccessTokenRequest(java.lang.String,java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0894370Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/AbstractAdvancedBrokerTest.java:[242,14] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0898410Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/AbstractAdvancedBrokerTest.java:[295,14] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0902518Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/AbstractAdvancedBrokerTest.java:[300,35] pageLoadTimeout(long,java.util.concurrent.TimeUnit) in org.openqa.selenium.WebDriver.Timeouts has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0906438Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/AbstractAdvancedBrokerTest.java:[335,14] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0910082Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/AbstractAdvancedBrokerTest.java:[449,14] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0914043Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/AbstractAdvancedBrokerTest.java:[467,14] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0917768Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/AbstractAdvancedBrokerTest.java:[492,14] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0921594Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/AbstractAdvancedBrokerTest.java:[508,14] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0925624Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/AbstractAdvancedBrokerTest.java:[520,14] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0929418Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/AbstractAdvancedBrokerTest.java:[542,18] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0933339Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/AbstractAdvancedBrokerTest.java:[552,18] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0936986Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/AbstractAdvancedBrokerTest.java:[580,18] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0940497Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/AbstractAdvancedBrokerTest.java:[598,18] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0944516Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/KcOidcBrokerTest.java:[147,14] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0948256Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/KcOidcBrokerTest.java:[165,14] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0951992Z -- [WARNING] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/KcOidcBrokerTest.java:[201,18] clientId(java.lang.String) in org.keycloak.testsuite.util.oauth.OAuthClient has been deprecated
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0955113Z -- [INFO] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/broker/KcOidcBrokerTest.java: Some input files additionally use or override a deprecated API.
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0958455Z -- [INFO] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/federation/kerberos/AbstractKerberosTest.java: Some input files additionally use or override a deprecated API that is marked for removal.
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0962095Z -- [INFO] /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/src/test/java/org/keycloak/testsuite/client/ClientSecretRotationTest.java: Some input files additionally use unchecked or unsafe operations.
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0963922Z -- [INFO] 
+Base IT (2)	Run base tests	2025-03-03T00:25:44.0964808Z -- [INFO] --- shrinkwrap-resolver:3.2.1:propagate-execution-context (default) @ integration-arquillian-tests-base ---
+Base IT (2)	Run base tests	2025-03-03T00:25:44.1976277Z -- [INFO] 
+Base IT (2)	Run base tests	2025-03-03T00:25:44.1981722Z -- [INFO] --- docker:0.40.3:start (start-db-container) @ integration-arquillian-tests-base ---
+Base IT (2)	Run base tests	2025-03-03T00:25:44.4557895Z -- [INFO] 
+Base IT (2)	Run base tests	2025-03-03T00:25:44.4600376Z -- [INFO] --- surefire:3.0.0-M7:test (default-test) @ integration-arquillian-tests-base ---
+Base IT (2)	Run base tests	2025-03-03T00:25:44.5965878Z -- [INFO] Using auto detected provider org.apache.maven.surefire.junit4.JUnit4Provider
+Base IT (2)	Run base tests	2025-03-03T00:25:44.7114104Z -- [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/apache/maven/surefire/surefire-junit4/3.0.0-M7/surefire-junit4-3.0.0-M7.jar
+Base IT (2)	Run base tests	2025-03-03T00:25:45.3247234Z -- [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit4/3.0.0-M7/surefire-junit4-3.0.0-M7.jar
+Base IT (2)	Run base tests	2025-03-03T00:25:45.3736709Z -- [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit4/3.0.0-M7/surefire-junit4-3.0.0-M7.jar (18 kB at 360 kB/s)
+Base IT (2)	Run base tests	2025-03-03T00:25:45.3749666Z -- [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/apache/maven/surefire/surefire-junit4/3.0.0-M7/surefire-junit4-3.0.0-M7.pom
+Base IT (2)	Run base tests	2025-03-03T00:25:45.4784115Z -- [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit4/3.0.0-M7/surefire-junit4-3.0.0-M7.pom
+Base IT (2)	Run base tests	2025-03-03T00:25:45.4915079Z -- [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit4/3.0.0-M7/surefire-junit4-3.0.0-M7.pom (2.9 kB at 208 kB/s)
+Base IT (2)	Run base tests	2025-03-03T00:25:45.4932518Z -- [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/apache/maven/surefire/surefire-providers/3.0.0-M7/surefire-providers-3.0.0-M7.pom
+Base IT (2)	Run base tests	2025-03-03T00:25:45.5852272Z -- [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-providers/3.0.0-M7/surefire-providers-3.0.0-M7.pom
+Base IT (2)	Run base tests	2025-03-03T00:25:45.5991266Z -- [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-providers/3.0.0-M7/surefire-providers-3.0.0-M7.pom (2.5 kB at 181 kB/s)
+Base IT (2)	Run base tests	2025-03-03T00:25:45.6608611Z -- [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/junit/junit/4.0/junit-4.0.pom
+Base IT (2)	Run base tests	2025-03-03T00:25:45.7592096Z -- [INFO] Downloading from central: https://repo.maven.apache.org/maven2/junit/junit/4.0/junit-4.0.pom
+Base IT (2)	Run base tests	2025-03-03T00:25:45.7717867Z -- [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/junit/junit/4.0/junit-4.0.pom (210 B at 18 kB/s)
+Base IT (2)	Run base tests	2025-03-03T00:25:45.7736702Z -- [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/apache/maven/surefire/common-junit4/3.0.0-M7/common-junit4-3.0.0-M7.pom
+Base IT (2)	Run base tests	2025-03-03T00:25:45.8667280Z -- [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-junit4/3.0.0-M7/common-junit4-3.0.0-M7.pom
+Base IT (2)	Run base tests	2025-03-03T00:25:45.8806680Z -- [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-junit4/3.0.0-M7/common-junit4-3.0.0-M7.pom (3.0 kB at 250 kB/s)
+Base IT (2)	Run base tests	2025-03-03T00:25:45.8962820Z -- [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/apache/maven/surefire/common-junit3/3.0.0-M7/common-junit3-3.0.0-M7.pom
+Base IT (2)	Run base tests	2025-03-03T00:25:45.9864402Z -- [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-junit3/3.0.0-M7/common-junit3-3.0.0-M7.pom
+Base IT (2)	Run base tests	2025-03-03T00:25:46.0037349Z -- [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-junit3/3.0.0-M7/common-junit3-3.0.0-M7.pom (2.7 kB at 189 kB/s)
+Base IT (2)	Run base tests	2025-03-03T00:25:46.0085499Z -- [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/apache/maven/surefire/common-java5/3.0.0-M7/common-java5-3.0.0-M7.pom
+Base IT (2)	Run base tests	2025-03-03T00:25:46.0984281Z -- [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-java5/3.0.0-M7/common-java5-3.0.0-M7.pom
+Base IT (2)	Run base tests	2025-03-03T00:25:46.1107259Z -- [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-java5/3.0.0-M7/common-java5-3.0.0-M7.pom (2.7 kB at 207 kB/s)
+Base IT (2)	Run base tests	2025-03-03T00:25:46.1202204Z -- [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/hamcrest/hamcrest-library/1.3/hamcrest-library-1.3.pom
+Base IT (2)	Run base tests	2025-03-03T00:25:46.3217791Z -- [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/hamcrest/hamcrest-library/1.3/hamcrest-library-1.3.pom
+Base IT (2)	Run base tests	2025-03-03T00:25:46.3346370Z -- [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/hamcrest/hamcrest-library/1.3/hamcrest-library-1.3.pom (820 B at 75 kB/s)
+Base IT (2)	Run base tests	2025-03-03T00:25:46.3370956Z -- [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/assertj/assertj-core/3.22.0/assertj-core-3.22.0.pom
+Base IT (2)	Run base tests	2025-03-03T00:25:46.4391484Z -- [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/assertj/assertj-core/3.22.0/assertj-core-3.22.0.pom
+Base IT (2)	Run base tests	2025-03-03T00:25:46.4552220Z -- [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/assertj/assertj-core/3.22.0/assertj-core-3.22.0.pom (31 kB at 1.9 MB/s)
+Base IT (2)	Run base tests	2025-03-03T00:25:46.4573893Z -- [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/assertj/assertj-parent-pom/2.2.14/assertj-parent-pom-2.2.14.pom
+Base IT (2)	Run base tests	2025-03-03T00:25:46.5953827Z -- [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/assertj/assertj-parent-pom/2.2.14/assertj-parent-pom-2.2.14.pom
+Base IT (2)	Run base tests	2025-03-03T00:25:46.6098713Z -- [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/assertj/assertj-parent-pom/2.2.14/assertj-parent-pom-2.2.14.pom (25 kB at 1.6 MB/s)
+Base IT (2)	Run base tests	2025-03-03T00:25:46.6145044Z -- [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/junit/junit-bom/5.8.2/junit-bom-5.8.2.pom
+Base IT (2)	Run base tests	2025-03-03T00:25:46.7119504Z -- [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.8.2/junit-bom-5.8.2.pom
+Base IT (2)	Run base tests	2025-03-03T00:25:46.7243051Z -- [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.8.2/junit-bom-5.8.2.pom (5.6 kB at 469 kB/s)
+Base IT (2)	Run base tests	2025-03-03T00:25:46.7268130Z -- [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/junit/junit-bom/5.8.0/junit-bom-5.8.0.pom
+Base IT (2)	Run base tests	2025-03-03T00:25:46.8433762Z -- [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.8.0/junit-bom-5.8.0.pom
+Base IT (2)	Run base tests	2025-03-03T00:25:46.8556751Z -- [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.8.0/junit-bom-5.8.0.pom (5.6 kB at 433 kB/s)
+Base IT (2)	Run base tests	2025-03-03T00:25:46.8588732Z -- [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/apache/maven/surefire/common-junit4/3.0.0-M7/common-junit4-3.0.0-M7.jar
+Base IT (2)	Run base tests	2025-03-03T00:25:46.8591154Z -- [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/apache/maven/surefire/common-junit3/3.0.0-M7/common-junit3-3.0.0-M7.jar
+Base IT (2)	Run base tests	2025-03-03T00:25:46.8593683Z -- [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/apache/maven/surefire/common-java5/3.0.0-M7/common-java5-3.0.0-M7.jar
+Base IT (2)	Run base tests	2025-03-03T00:25:47.0050165Z -- [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-junit4/3.0.0-M7/common-junit4-3.0.0-M7.jar
+Base IT (2)	Run base tests	2025-03-03T00:25:47.0201972Z -- [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-junit4/3.0.0-M7/common-junit4-3.0.0-M7.jar (26 kB at 1.7 MB/s)
+Base IT (2)	Run base tests	2025-03-03T00:25:47.0317321Z -- [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-junit3/3.0.0-M7/common-junit3-3.0.0-M7.jar
+Base IT (2)	Run base tests	2025-03-03T00:25:47.0436396Z -- [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-junit3/3.0.0-M7/common-junit3-3.0.0-M7.jar (12 kB at 904 kB/s)
+Base IT (2)	Run base tests	2025-03-03T00:25:47.0927206Z -- [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-java5/3.0.0-M7/common-java5-3.0.0-M7.jar
+Base IT (2)	Run base tests	2025-03-03T00:25:47.1056653Z -- [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-java5/3.0.0-M7/common-java5-3.0.0-M7.jar (17 kB at 1.3 MB/s)
+Base IT (2)	Run base tests	2025-03-03T00:25:47.1199547Z -- [INFO] 
+Base IT (2)	Run base tests	2025-03-03T00:25:47.1202998Z -- [INFO] -------------------------------------------------------
+Base IT (2)	Run base tests	2025-03-03T00:25:47.1203501Z -- [INFO]  T E S T S
+Base IT (2)	Run base tests	2025-03-03T00:25:47.1203908Z -- [INFO] -------------------------------------------------------
+Base IT (2)	Run base tests	2025-03-03T00:25:47.9973068Z -- 00:25:47,983 INFO  [org.keycloak.testsuite.util.NonIDERunListener] Setting keycloak.logging.level to off. Keycloak server logging will be disabled
+Base IT (2)	Run base tests	2025-03-03T00:25:47.9978734Z [INFO] Running org.keycloak.testsuite.broker.AccountLinkTest
+Base IT (2)	Run base tests	2025-03-03T00:26:19.4131375Z [WARNING] Tests run: 4, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 31.335 s - in org.keycloak.testsuite.broker.AccountLinkTest
+Base IT (2)	Run base tests	2025-03-03T00:26:19.4140938Z [INFO] Running org.keycloak.testsuite.broker.AttributeToRoleMapperTest
+Base IT (2)	Run base tests	2025-03-03T00:26:39.8839377Z [INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 20.457 s - in org.keycloak.testsuite.broker.AttributeToRoleMapperTest
+Base IT (2)	Run base tests	2025-03-03T00:26:39.8848711Z [INFO] Running org.keycloak.testsuite.broker.BrokerWithLegacyIdTest
+Base IT (2)	Run base tests	2025-03-03T00:26:42.2640195Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.36 s - in org.keycloak.testsuite.broker.BrokerWithLegacyIdTest
+Base IT (2)	Run base tests	2025-03-03T00:26:42.2641412Z [INFO] Running org.keycloak.testsuite.broker.ExternalKeycloakRoleToRoleMapperTest
+Base IT (2)	Run base tests	2025-03-03T00:27:01.2331162Z [INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 18.947 s - in org.keycloak.testsuite.broker.ExternalKeycloakRoleToRoleMapperTest
+Base IT (2)	Run base tests	2025-03-03T00:27:01.2335359Z [INFO] Running org.keycloak.testsuite.broker.HardcodedRoleMapperTest
+Base IT (2)	Run base tests	2025-03-03T00:27:19.4056897Z [INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 18.157 s - in org.keycloak.testsuite.broker.HardcodedRoleMapperTest
+Base IT (2)	Run base tests	2025-03-03T00:27:19.4064591Z [INFO] Running org.keycloak.testsuite.broker.HardcodedUserAttributeMapperTest
+Base IT (2)	Run base tests	2025-03-03T00:27:28.6697436Z [INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.248 s - in org.keycloak.testsuite.broker.HardcodedUserAttributeMapperTest
+Base IT (2)	Run base tests	2025-03-03T00:27:28.6703337Z [INFO] Running org.keycloak.testsuite.broker.JsonUserAttributeMapperTest
+Base IT (2)	Run base tests	2025-03-03T00:27:38.3607900Z [INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.681 s - in org.keycloak.testsuite.broker.JsonUserAttributeMapperTest
+Base IT (2)	Run base tests	2025-03-03T00:27:38.3609249Z [INFO] Running org.keycloak.testsuite.broker.KcCustomOidcBrokerTest
+Base IT (2)	Run base tests	2025-03-03T00:27:39.8006157Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.425 s - in org.keycloak.testsuite.broker.KcCustomOidcBrokerTest
+Base IT (2)	Run base tests	2025-03-03T00:27:39.8009686Z [INFO] Running org.keycloak.testsuite.broker.KcOIDCBrokerWithSignatureTest
+Base IT (2)	Run base tests	2025-03-03T00:28:05.7473061Z [INFO] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 25.926 s - in org.keycloak.testsuite.broker.KcOIDCBrokerWithSignatureTest
+Base IT (2)	Run base tests	2025-03-03T00:28:05.7478196Z [INFO] Running org.keycloak.testsuite.broker.KcOidcAccessTokenOnlyClaimsUserAttributeMapperTest
+Base IT (2)	Run base tests	2025-03-03T00:28:21.8680027Z [INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 16.108 s - in org.keycloak.testsuite.broker.KcOidcAccessTokenOnlyClaimsUserAttributeMapperTest
+Base IT (2)	Run base tests	2025-03-03T00:28:21.8683763Z [INFO] Running org.keycloak.testsuite.broker.KcOidcBrokerAcrParameterTest
+Base IT (2)	Run base tests	2025-03-03T00:28:25.3384695Z [INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.457 s - in org.keycloak.testsuite.broker.KcOidcBrokerAcrParameterTest
+Base IT (2)	Run base tests	2025-03-03T00:28:25.3386122Z [INFO] Running org.keycloak.testsuite.broker.KcOidcBrokerClientSecretBasicAuthTest
+Base IT (2)	Run base tests	2025-03-03T00:28:28.7201040Z [INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.37 s - in org.keycloak.testsuite.broker.KcOidcBrokerClientSecretBasicAuthTest
+Base IT (2)	Run base tests	2025-03-03T00:28:28.7204434Z [INFO] Running org.keycloak.testsuite.broker.KcOidcBrokerClientSecretJwtCustomSignAlgTest
+Base IT (2)	Run base tests	2025-03-03T00:28:32.4242288Z [INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.693 s - in org.keycloak.testsuite.broker.KcOidcBrokerClientSecretJwtCustomSignAlgTest
+Base IT (2)	Run base tests	2025-03-03T00:28:32.4243752Z [INFO] Running org.keycloak.testsuite.broker.KcOidcBrokerClientSecretJwtTest
+Base IT (2)	Run base tests	2025-03-03T00:28:35.9546288Z [INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.516 s - in org.keycloak.testsuite.broker.KcOidcBrokerClientSecretJwtTest
+Base IT (2)	Run base tests	2025-03-03T00:28:35.9547984Z [INFO] Running org.keycloak.testsuite.broker.KcOidcBrokerEventTest
+Base IT (2)	Run base tests	2025-03-03T00:28:42.8875010Z [INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.921 s - in org.keycloak.testsuite.broker.KcOidcBrokerEventTest
+Base IT (2)	Run base tests	2025-03-03T00:28:42.8876569Z [INFO] Running org.keycloak.testsuite.broker.KcOidcBrokerFrontendUrlTest
+Base IT (2)	Run base tests	2025-03-03T00:28:58.1883287Z --------- org.keycloak.testsuite.broker.KcOidcBrokerFrontendUrlTest output start ---------
+Base IT (2)	Run base tests	2025-03-03T00:28:58.1913001Z KcOidcBrokerFrontendUrlTest ++ 00:28:42,880 INFO  [org.keycloak.testsuite.arquillian.AppServerTestEnricher] 
+Base IT (2)	Run base tests	2025-03-03T00:28:58.1914020Z KcOidcBrokerFrontendUrlTest ++ 
+Base IT (2)	Run base tests	2025-03-03T00:28:58.1963179Z KcOidcBrokerFrontendUrlTest ++ TEST CONTEXT: org.keycloak.testsuite.broker.KcOidcBrokerFrontendUrlTest
+Base IT (2)	Run base tests	2025-03-03T00:28:58.1964138Z KcOidcBrokerFrontendUrlTest ++ 
+Base IT (2)	Run base tests	2025-03-03T00:28:58.1965456Z KcOidcBrokerFrontendUrlTest ++ 00:28:42,880 WARN  [org.keycloak.testsuite.broker.KcOidcBrokerFrontendUrlTest] [KcOidcBrokerFrontendUrlTest] loginWithExistingUser() IGNORED
+Base IT (2)	Run base tests	2025-03-03T00:28:58.1966905Z KcOidcBrokerFrontendUrlTest ++ 
+Base IT (2)	Run base tests	2025-03-03T00:28:58.1967357Z KcOidcBrokerFrontendUrlTest ++ 
+Base IT (2)	Run base tests	2025-03-03T00:28:58.1968975Z KcOidcBrokerFrontendUrlTest ++ 00:28:42,880 INFO  [org.keycloak.testsuite.broker.KcOidcBrokerFrontendUrlTest] [KcOidcBrokerFrontendUrlTest] testLogInAsUserInIDP() STARTED
+Base IT (2)	Run base tests	2025-03-03T00:28:58.1971233Z KcOidcBrokerFrontendUrlTest ++ 00:28:42,882 INFO  [org.keycloak.testsuite.arquillian.undertow.lb.SimpleUndertowLoadBalancer] Keycloak nodes: {node1=http://localhost:8180/auth}
+Base IT (2)	Run base tests	2025-03-03T00:28:58.1973907Z KcOidcBrokerFrontendUrlTest ++ Mar 03, 2025 12:28:42 AM org.jboss.arquillian.drone.webdriver.factory.HtmlUnitDriverFactory setClientOptions
+Base IT (2)	Run base tests	2025-03-03T00:28:58.1975685Z KcOidcBrokerFrontendUrlTest ++ INFO: Setting HtmlDriver web client options: {htmlunitCssEnabled=false, htmlunitHistoryPageCacheLimit=1}
+Base IT (2)	Run base tests	2025-03-03T00:28:58.1977632Z KcOidcBrokerFrontendUrlTest ++ 00:28:42,890 INFO  [org.keycloak.testsuite.drone.KeycloakDronePostSetup] Configuring driver settings. implicitWait=2000, pageLoadTimeout=10000
+Base IT (2)	Run base tests	2025-03-03T00:28:58.1979607Z KcOidcBrokerFrontendUrlTest ++ 00:28:42,890 INFO  [org.keycloak.testsuite.drone.KeycloakDronePostSetup] Check HtmlUnit driver TLS settings
+Base IT (2)	Run base tests	2025-03-03T00:28:58.1981079Z KcOidcBrokerFrontendUrlTest ++ 00:28:42,947 INFO  [io.undertow] starting server: Undertow - 2.3.2.Final
+Base IT (2)	Run base tests	2025-03-03T00:28:58.1982423Z KcOidcBrokerFrontendUrlTest ++ 00:28:58,015 INFO  [io.undertow] stopping server: Undertow - 2.3.2.Final
+Base IT (2)	Run base tests	2025-03-03T00:28:58.1984191Z KcOidcBrokerFrontendUrlTest ++ 00:28:58,024 ERROR [org.keycloak.testsuite.broker.KcOidcBrokerFrontendUrlTest] [KcOidcBrokerFrontendUrlTest] testLogInAsUserInIDP() FAILED
+Base IT (2)	Run base tests	2025-03-03T00:28:58.1986439Z KcOidcBrokerFrontendUrlTest ++ 00:28:58,024 INFO  [org.keycloak.testsuite.broker.KcOidcBrokerFrontendUrlTest] [KcOidcBrokerFrontendUrlTest] testLogInAsUserInIDP() FINISHED
+Base IT (2)	Run base tests	2025-03-03T00:28:58.1987909Z KcOidcBrokerFrontendUrlTest ++ 
+Base IT (2)	Run base tests	2025-03-03T00:28:58.1988481Z KcOidcBrokerFrontendUrlTest ++ 
+Base IT (2)	Run base tests	2025-03-03T00:28:58.1989474Z KcOidcBrokerFrontendUrlTest ++ 00:28:58,032 INFO  [org.keycloak.testsuite.arquillian.AppServerTestEnricher] 
+Base IT (2)	Run base tests	2025-03-03T00:28:58.1990492Z KcOidcBrokerFrontendUrlTest ++ 
+Base IT (2)	Run base tests	2025-03-03T00:28:58.1991445Z KcOidcBrokerFrontendUrlTest ++ TEST CONTEXT: org.keycloak.testsuite.broker.KcOidcBrokerFrontendUrlTest
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2032893Z KcOidcBrokerFrontendUrlTest ++ 
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2034241Z KcOidcBrokerFrontendUrlTest ++ 00:28:58,033 INFO  [org.keycloak.testsuite.broker.KcOidcBrokerFrontendUrlTest] [KcOidcBrokerFrontendUrlTest] testLogInAsUserInIDP() STARTED
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2036424Z KcOidcBrokerFrontendUrlTest ++ 00:28:58,033 INFO  [org.keycloak.testsuite.arquillian.undertow.lb.SimpleUndertowLoadBalancer] Keycloak nodes: {node1=http://localhost:8180/auth}
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2038399Z KcOidcBrokerFrontendUrlTest ++ Mar 03, 2025 12:28:58 AM org.jboss.arquillian.drone.webdriver.factory.HtmlUnitDriverFactory setClientOptions
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2040054Z KcOidcBrokerFrontendUrlTest ++ INFO: Setting HtmlDriver web client options: {htmlunitCssEnabled=false, htmlunitHistoryPageCacheLimit=1}
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2042081Z KcOidcBrokerFrontendUrlTest ++ 00:28:58,038 INFO  [org.keycloak.testsuite.drone.KeycloakDronePostSetup] Configuring driver settings. implicitWait=2000, pageLoadTimeout=10000
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2043959Z KcOidcBrokerFrontendUrlTest ++ 00:28:58,039 INFO  [org.keycloak.testsuite.drone.KeycloakDronePostSetup] Check HtmlUnit driver TLS settings
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2045326Z KcOidcBrokerFrontendUrlTest ++ 00:28:58,081 INFO  [io.undertow] starting server: Undertow - 2.3.2.Final
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2046408Z KcOidcBrokerFrontendUrlTest ++ 00:28:58,083 INFO  [io.undertow] stopping server: Undertow - 2.3.2.Final
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2048009Z KcOidcBrokerFrontendUrlTest ++ 00:28:58,085 ERROR [org.keycloak.testsuite.broker.KcOidcBrokerFrontendUrlTest] [KcOidcBrokerFrontendUrlTest] testLogInAsUserInIDP() FAILED
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2050115Z KcOidcBrokerFrontendUrlTest ++ 00:28:58,085 INFO  [org.keycloak.testsuite.broker.KcOidcBrokerFrontendUrlTest] [KcOidcBrokerFrontendUrlTest] testLogInAsUserInIDP() FINISHED
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2051687Z KcOidcBrokerFrontendUrlTest ++ 
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2052308Z KcOidcBrokerFrontendUrlTest ++ 
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2053152Z KcOidcBrokerFrontendUrlTest ++ 00:28:58,092 INFO  [org.keycloak.testsuite.arquillian.AppServerTestEnricher] 
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2054041Z KcOidcBrokerFrontendUrlTest ++ 
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2055103Z KcOidcBrokerFrontendUrlTest ++ TEST CONTEXT: org.keycloak.testsuite.broker.KcOidcBrokerFrontendUrlTest
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2055992Z KcOidcBrokerFrontendUrlTest ++ 
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2057202Z KcOidcBrokerFrontendUrlTest ++ 00:28:58,093 INFO  [org.keycloak.testsuite.broker.KcOidcBrokerFrontendUrlTest] [KcOidcBrokerFrontendUrlTest] testLogInAsUserInIDP() STARTED
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2059339Z KcOidcBrokerFrontendUrlTest ++ 00:28:58,093 INFO  [org.keycloak.testsuite.arquillian.undertow.lb.SimpleUndertowLoadBalancer] Keycloak nodes: {node1=http://localhost:8180/auth}
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2061308Z KcOidcBrokerFrontendUrlTest ++ Mar 03, 2025 12:28:58 AM org.jboss.arquillian.drone.webdriver.factory.HtmlUnitDriverFactory setClientOptions
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2093339Z KcOidcBrokerFrontendUrlTest ++ INFO: Setting HtmlDriver web client options: {htmlunitCssEnabled=false, htmlunitHistoryPageCacheLimit=1}
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2095202Z KcOidcBrokerFrontendUrlTest ++ 00:28:58,099 INFO  [org.keycloak.testsuite.drone.KeycloakDronePostSetup] Configuring driver settings. implicitWait=2000, pageLoadTimeout=10000
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2097052Z KcOidcBrokerFrontendUrlTest ++ 00:28:58,099 INFO  [org.keycloak.testsuite.drone.KeycloakDronePostSetup] Check HtmlUnit driver TLS settings
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2098417Z KcOidcBrokerFrontendUrlTest ++ 00:28:58,143 INFO  [io.undertow] starting server: Undertow - 2.3.2.Final
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2099488Z KcOidcBrokerFrontendUrlTest ++ 00:28:58,146 INFO  [io.undertow] stopping server: Undertow - 2.3.2.Final
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2101112Z KcOidcBrokerFrontendUrlTest ++ 00:28:58,147 ERROR [org.keycloak.testsuite.broker.KcOidcBrokerFrontendUrlTest] [KcOidcBrokerFrontendUrlTest] testLogInAsUserInIDP() FAILED
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2111504Z KcOidcBrokerFrontendUrlTest ++ 00:28:58,148 INFO  [org.keycloak.testsuite.broker.KcOidcBrokerFrontendUrlTest] [KcOidcBrokerFrontendUrlTest] testLogInAsUserInIDP() FINISHED
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2112969Z KcOidcBrokerFrontendUrlTest ++ 
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2113431Z KcOidcBrokerFrontendUrlTest ++ 
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2113700Z 
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2114159Z --------- org.keycloak.testsuite.broker.KcOidcBrokerFrontendUrlTest output end  ---------
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2115494Z [ERROR] Tests run: 4, Failures: 0, Errors: 3, Skipped: 1, Time elapsed: 15.271 s <<< FAILURE! - in org.keycloak.testsuite.broker.KcOidcBrokerFrontendUrlTest
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2117142Z -- [ERROR] org.keycloak.testsuite.broker.KcOidcBrokerFrontendUrlTest.testLogInAsUserInIDP  Time elapsed: 15.133 s  <<< ERROR!
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2119047Z -- java.lang.RuntimeException: java.lang.RuntimeException: java.lang.RuntimeException: java.net.UnknownHostException: proxy.kc.127.0.0.1.nip.io: Temporary failure in name resolution
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2120568Z -- 	at org.keycloak.testsuite.util.ReverseProxy$1.evaluate(ReverseProxy.java:42)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2121454Z -- 	at org.jboss.arquillian.junit.Arquillian$7$1.invoke(Arquillian.java:273)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2123233Z -- 	at org.jboss.arquillian.container.test.impl.execution.ClientBeforeAfterLifecycleEventExecuter.execute(ClientBeforeAfterLifecycleEventExecuter.java:88)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2125538Z -- 	at org.jboss.arquillian.container.test.impl.execution.ClientBeforeAfterLifecycleEventExecuter.on(ClientBeforeAfterLifecycleEventExecuter.java:66)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2127353Z -- 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2128421Z -- 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2129262Z -- 	at org.jboss.arquillian.core.impl.ObserverImpl.invoke(ObserverImpl.java:86)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2130350Z -- 	at org.jboss.arquillian.core.impl.EventContextImpl.invokeObservers(EventContextImpl.java:103)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2131918Z -- 	at org.jboss.arquillian.core.impl.EventContextImpl.proceed(EventContextImpl.java:90)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2133390Z -- 	at org.jboss.arquillian.container.test.impl.client.ContainerEventController.createContext(ContainerEventController.java:128)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2135562Z -- 	at org.jboss.arquillian.container.test.impl.client.ContainerEventController.createBeforeContext(ContainerEventController.java:114)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2137250Z -- 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2138319Z -- 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2139160Z -- 	at org.jboss.arquillian.core.impl.ObserverImpl.invoke(ObserverImpl.java:86)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2140191Z -- 	at org.jboss.arquillian.core.impl.EventContextImpl.proceed(EventContextImpl.java:95)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2141396Z -- 	at org.jboss.arquillian.test.impl.TestContextHandler.createTestContext(TestContextHandler.java:116)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2142848Z -- 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2143905Z -- 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2144760Z -- 	at org.jboss.arquillian.core.impl.ObserverImpl.invoke(ObserverImpl.java:86)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2145774Z -- 	at org.jboss.arquillian.core.impl.EventContextImpl.proceed(EventContextImpl.java:95)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2146992Z -- 	at org.jboss.arquillian.test.impl.TestContextHandler.createClassContext(TestContextHandler.java:83)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2148369Z -- 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2149423Z -- 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2150250Z -- 	at org.jboss.arquillian.core.impl.ObserverImpl.invoke(ObserverImpl.java:86)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2151272Z -- 	at org.jboss.arquillian.core.impl.EventContextImpl.proceed(EventContextImpl.java:95)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2152648Z -- 	at org.jboss.arquillian.test.impl.TestContextHandler.createSuiteContext(TestContextHandler.java:69)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2154035Z -- 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2155104Z -- 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2155939Z -- 	at org.jboss.arquillian.core.impl.ObserverImpl.invoke(ObserverImpl.java:86)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2156947Z -- 	at org.jboss.arquillian.core.impl.EventContextImpl.proceed(EventContextImpl.java:95)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2157948Z -- 	at org.jboss.arquillian.core.impl.ManagerImpl.fire(ManagerImpl.java:133)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2158858Z -- 	at org.jboss.arquillian.core.impl.ManagerImpl.fire(ManagerImpl.java:105)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2160079Z -- 	at org.jboss.arquillian.test.impl.EventTestRunnerAdaptor.fireCustomLifecycle(EventTestRunnerAdaptor.java:159)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2161285Z -- 	at org.jboss.arquillian.junit.Arquillian$7.evaluate(Arquillian.java:267)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2162405Z -- 	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2163350Z -- 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2164281Z -- 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2165380Z -- 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2166303Z -- 	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2167068Z -- 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2167871Z -- 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2168683Z -- 	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2169462Z -- 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2170484Z -- 	at org.jboss.arquillian.junit.Arquillian$2.evaluate(Arquillian.java:160)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2171376Z -- 	at org.jboss.arquillian.junit.Arquillian.multiExecute(Arquillian.java:344)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2172600Z -- 	at org.jboss.arquillian.junit.Arquillian.access$200(Arquillian.java:48)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2173464Z -- 	at org.jboss.arquillian.junit.Arquillian$3.evaluate(Arquillian.java:171)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2174307Z -- 	at org.junit.rules.ExternalResource$1.evaluate(ExternalResource.java:54)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2175052Z -- 	at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2175766Z -- 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2176521Z -- 	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2177276Z -- 	at org.jboss.arquillian.junit.Arquillian.run(Arquillian.java:109)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2178199Z -- 	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:377)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2179344Z -- 	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:284)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2180527Z -- 	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:248)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2181644Z -- 	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:167)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2182901Z -- 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:456)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2183991Z -- 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2184963Z -- 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2185904Z -- 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2187375Z -- Caused by: java.lang.RuntimeException: java.lang.RuntimeException: java.net.UnknownHostException: proxy.kc.127.0.0.1.nip.io: Temporary failure in name resolution
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2189239Z -- 	at org.keycloak.testsuite.arquillian.undertow.lb.SimpleUndertowLoadBalancer.start(SimpleUndertowLoadBalancer.java:121)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2190636Z -- 	at org.keycloak.testsuite.util.ReverseProxy$1.evaluate(ReverseProxy.java:38)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2191317Z -- 	... 59 more
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2192348Z -- Caused by: java.lang.RuntimeException: java.net.UnknownHostException: proxy.kc.127.0.0.1.nip.io: Temporary failure in name resolution
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2193465Z -- 	at io.undertow.Undertow.start(Undertow.java:254)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2194612Z -- 	at org.keycloak.testsuite.arquillian.undertow.lb.SimpleUndertowLoadBalancer.start(SimpleUndertowLoadBalancer.java:112)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2195680Z -- 	... 60 more
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2196359Z -- Caused by: java.net.UnknownHostException: proxy.kc.127.0.0.1.nip.io: Temporary failure in name resolution
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2197375Z -- 	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2198302Z -- 	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:52)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2199303Z -- 	at java.base/java.net.InetAddress$PlatformResolver.lookupByName(InetAddress.java:1211)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2200347Z -- 	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1828)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2201402Z -- 	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1139)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2202433Z -- 	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1818)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2203253Z -- 	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1688)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2204033Z -- 	at java.base/java.net.InetAddress.getByName(InetAddress.java:1568)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2204707Z -- 	at io.undertow.Undertow.start(Undertow.java:196)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2205174Z -- 	... 61 more
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2205461Z -- 
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2206379Z -- [ERROR] org.keycloak.testsuite.broker.KcOidcBrokerFrontendUrlTest.testLogInAsUserInIDP  Time elapsed: 0.052 s  <<< ERROR!
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2208342Z -- java.lang.RuntimeException: java.lang.RuntimeException: java.lang.RuntimeException: java.net.UnknownHostException: proxy.kc.127.0.0.1.nip.io
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2209849Z -- 	at org.keycloak.testsuite.util.ReverseProxy$1.evaluate(ReverseProxy.java:42)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2210746Z -- 	at org.jboss.arquillian.junit.Arquillian$7$1.invoke(Arquillian.java:273)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2212506Z -- 	at org.jboss.arquillian.container.test.impl.execution.ClientBeforeAfterLifecycleEventExecuter.execute(ClientBeforeAfterLifecycleEventExecuter.java:88)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2214819Z -- 	at org.jboss.arquillian.container.test.impl.execution.ClientBeforeAfterLifecycleEventExecuter.on(ClientBeforeAfterLifecycleEventExecuter.java:66)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2216655Z -- 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2217715Z -- 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2218548Z -- 	at org.jboss.arquillian.core.impl.ObserverImpl.invoke(ObserverImpl.java:86)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2219629Z -- 	at org.jboss.arquillian.core.impl.EventContextImpl.invokeObservers(EventContextImpl.java:103)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2220780Z -- 	at org.jboss.arquillian.core.impl.EventContextImpl.proceed(EventContextImpl.java:90)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2222403Z -- 	at org.jboss.arquillian.container.test.impl.client.ContainerEventController.createContext(ContainerEventController.java:128)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2224316Z -- 	at org.jboss.arquillian.container.test.impl.client.ContainerEventController.createBeforeContext(ContainerEventController.java:114)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2226170Z -- 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2227360Z -- 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2228218Z -- 	at org.jboss.arquillian.core.impl.ObserverImpl.invoke(ObserverImpl.java:86)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2229257Z -- 	at org.jboss.arquillian.core.impl.EventContextImpl.proceed(EventContextImpl.java:95)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2230475Z -- 	at org.jboss.arquillian.test.impl.TestContextHandler.createTestContext(TestContextHandler.java:116)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2231999Z -- 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2233051Z -- 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2233881Z -- 	at org.jboss.arquillian.core.impl.ObserverImpl.invoke(ObserverImpl.java:86)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2234893Z -- 	at org.jboss.arquillian.core.impl.EventContextImpl.proceed(EventContextImpl.java:95)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2236116Z -- 	at org.jboss.arquillian.test.impl.TestContextHandler.createClassContext(TestContextHandler.java:83)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2237532Z -- 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2238606Z -- 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2239438Z -- 	at org.jboss.arquillian.core.impl.ObserverImpl.invoke(ObserverImpl.java:86)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2240449Z -- 	at org.jboss.arquillian.core.impl.EventContextImpl.proceed(EventContextImpl.java:95)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2241674Z -- 	at org.jboss.arquillian.test.impl.TestContextHandler.createSuiteContext(TestContextHandler.java:69)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2243193Z -- 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2244240Z -- 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2245073Z -- 	at org.jboss.arquillian.core.impl.ObserverImpl.invoke(ObserverImpl.java:86)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2246130Z -- 	at org.jboss.arquillian.core.impl.EventContextImpl.proceed(EventContextImpl.java:95)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2247161Z -- 	at org.jboss.arquillian.core.impl.ManagerImpl.fire(ManagerImpl.java:133)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2248295Z -- 	at org.jboss.arquillian.core.impl.ManagerImpl.fire(ManagerImpl.java:105)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2249527Z -- 	at org.jboss.arquillian.test.impl.EventTestRunnerAdaptor.fireCustomLifecycle(EventTestRunnerAdaptor.java:159)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2250745Z -- 	at org.jboss.arquillian.junit.Arquillian$7.evaluate(Arquillian.java:267)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2252067Z -- 	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2253045Z -- 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2253987Z -- 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2255100Z -- 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2256006Z -- 	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2256748Z -- 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2257539Z -- 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2258350Z -- 	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2259126Z -- 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2259936Z -- 	at org.jboss.arquillian.junit.Arquillian$2.evaluate(Arquillian.java:160)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2260846Z -- 	at org.jboss.arquillian.junit.Arquillian.multiExecute(Arquillian.java:344)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2261745Z -- 	at org.jboss.arquillian.junit.Arquillian.access$200(Arquillian.java:48)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2262754Z -- 	at org.jboss.arquillian.junit.Arquillian$3.evaluate(Arquillian.java:171)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2263606Z -- 	at org.junit.rules.ExternalResource$1.evaluate(ExternalResource.java:54)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2264352Z -- 	at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2265063Z -- 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2265815Z -- 	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2266583Z -- 	at org.jboss.arquillian.junit.Arquillian.run(Arquillian.java:109)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2267514Z -- 	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:377)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2268669Z -- 	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:302)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2269875Z -- 	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:248)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2270998Z -- 	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:167)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2272264Z -- 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:456)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2273382Z -- 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2274369Z -- 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2275332Z -- 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2276568Z -- Caused by: java.lang.RuntimeException: java.lang.RuntimeException: java.net.UnknownHostException: proxy.kc.127.0.0.1.nip.io
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2278186Z -- 	at org.keycloak.testsuite.arquillian.undertow.lb.SimpleUndertowLoadBalancer.start(SimpleUndertowLoadBalancer.java:121)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2279520Z -- 	at org.keycloak.testsuite.util.ReverseProxy$1.evaluate(ReverseProxy.java:38)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2280181Z -- 	... 59 more
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2280841Z -- Caused by: java.lang.RuntimeException: java.net.UnknownHostException: proxy.kc.127.0.0.1.nip.io
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2281718Z -- 	at io.undertow.Undertow.start(Undertow.java:254)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2283014Z -- 	at org.keycloak.testsuite.arquillian.undertow.lb.SimpleUndertowLoadBalancer.start(SimpleUndertowLoadBalancer.java:112)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2284085Z -- 	... 60 more
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2284576Z -- Caused by: java.net.UnknownHostException: proxy.kc.127.0.0.1.nip.io
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2285639Z -- 	at java.base/java.net.InetAddress$CachedLookup.get(InetAddress.java:988)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2286485Z -- 	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1818)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2287318Z -- 	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1688)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2288311Z -- 	at java.base/java.net.InetAddress.getByName(InetAddress.java:1568)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2289014Z -- 	at io.undertow.Undertow.start(Undertow.java:196)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2289536Z -- 	... 61 more
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2289827Z -- 
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2290749Z -- [ERROR] org.keycloak.testsuite.broker.KcOidcBrokerFrontendUrlTest.testLogInAsUserInIDP  Time elapsed: 0.052 s  <<< ERROR!
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2292613Z -- java.lang.RuntimeException: java.lang.RuntimeException: java.lang.RuntimeException: java.net.UnknownHostException: proxy.kc.127.0.0.1.nip.io
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2293942Z -- 	at org.keycloak.testsuite.util.ReverseProxy$1.evaluate(ReverseProxy.java:42)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2294841Z -- 	at org.jboss.arquillian.junit.Arquillian$7$1.invoke(Arquillian.java:273)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2296455Z -- 	at org.jboss.arquillian.container.test.impl.execution.ClientBeforeAfterLifecycleEventExecuter.execute(ClientBeforeAfterLifecycleEventExecuter.java:88)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2298772Z -- 	at org.jboss.arquillian.container.test.impl.execution.ClientBeforeAfterLifecycleEventExecuter.on(ClientBeforeAfterLifecycleEventExecuter.java:66)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2300624Z -- 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2301688Z -- 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2302702Z -- 	at org.jboss.arquillian.core.impl.ObserverImpl.invoke(ObserverImpl.java:86)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2303838Z -- 	at org.jboss.arquillian.core.impl.EventContextImpl.invokeObservers(EventContextImpl.java:103)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2305050Z -- 	at org.jboss.arquillian.core.impl.EventContextImpl.proceed(EventContextImpl.java:90)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2306557Z -- 	at org.jboss.arquillian.container.test.impl.client.ContainerEventController.createContext(ContainerEventController.java:128)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2308486Z -- 	at org.jboss.arquillian.container.test.impl.client.ContainerEventController.createBeforeContext(ContainerEventController.java:114)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2310202Z -- 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2311286Z -- 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2312276Z -- 	at org.jboss.arquillian.core.impl.ObserverImpl.invoke(ObserverImpl.java:86)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2313307Z -- 	at org.jboss.arquillian.core.impl.EventContextImpl.proceed(EventContextImpl.java:95)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2314515Z -- 	at org.jboss.arquillian.test.impl.TestContextHandler.createTestContext(TestContextHandler.java:116)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2315882Z -- 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2316933Z -- 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2317748Z -- 	at org.jboss.arquillian.core.impl.ObserverImpl.invoke(ObserverImpl.java:86)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2318817Z -- 	at org.jboss.arquillian.core.impl.EventContextImpl.proceed(EventContextImpl.java:95)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2320052Z -- 	at org.jboss.arquillian.test.impl.TestContextHandler.createClassContext(TestContextHandler.java:83)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2321438Z -- 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2322651Z -- 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2323487Z -- 	at org.jboss.arquillian.core.impl.ObserverImpl.invoke(ObserverImpl.java:86)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2324517Z -- 	at org.jboss.arquillian.core.impl.EventContextImpl.proceed(EventContextImpl.java:95)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2325763Z -- 	at org.jboss.arquillian.test.impl.TestContextHandler.createSuiteContext(TestContextHandler.java:69)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2327354Z -- 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2328419Z -- 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2329514Z -- 	at org.jboss.arquillian.core.impl.ObserverImpl.invoke(ObserverImpl.java:86)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2330546Z -- 	at org.jboss.arquillian.core.impl.EventContextImpl.proceed(EventContextImpl.java:95)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2331556Z -- 	at org.jboss.arquillian.core.impl.ManagerImpl.fire(ManagerImpl.java:133)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2332626Z -- 	at org.jboss.arquillian.core.impl.ManagerImpl.fire(ManagerImpl.java:105)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2333867Z -- 	at org.jboss.arquillian.test.impl.EventTestRunnerAdaptor.fireCustomLifecycle(EventTestRunnerAdaptor.java:159)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2335087Z -- 	at org.jboss.arquillian.junit.Arquillian$7.evaluate(Arquillian.java:267)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2336079Z -- 	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2337029Z -- 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2337972Z -- 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2339085Z -- 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2340010Z -- 	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2340793Z -- 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2341615Z -- 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2342600Z -- 	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2343405Z -- 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2344232Z -- 	at org.jboss.arquillian.junit.Arquillian$2.evaluate(Arquillian.java:160)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2345162Z -- 	at org.jboss.arquillian.junit.Arquillian.multiExecute(Arquillian.java:344)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2346093Z -- 	at org.jboss.arquillian.junit.Arquillian.access$200(Arquillian.java:48)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2346957Z -- 	at org.jboss.arquillian.junit.Arquillian$3.evaluate(Arquillian.java:171)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2347819Z -- 	at org.junit.rules.ExternalResource$1.evaluate(ExternalResource.java:54)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2348573Z -- 	at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2349292Z -- 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2350051Z -- 	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2350801Z -- 	at org.jboss.arquillian.junit.Arquillian.run(Arquillian.java:109)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2351730Z -- 	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:377)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2353025Z -- 	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:302)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2354242Z -- 	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:248)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2355373Z -- 	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:167)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2356524Z -- 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:456)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2357671Z -- 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2358659Z -- 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2359627Z -- 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2360905Z -- Caused by: java.lang.RuntimeException: java.lang.RuntimeException: java.net.UnknownHostException: proxy.kc.127.0.0.1.nip.io
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2362692Z -- 	at org.keycloak.testsuite.arquillian.undertow.lb.SimpleUndertowLoadBalancer.start(SimpleUndertowLoadBalancer.java:121)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2364303Z -- 	at org.keycloak.testsuite.util.ReverseProxy$1.evaluate(ReverseProxy.java:38)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2364981Z -- 	... 59 more
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2365646Z -- Caused by: java.lang.RuntimeException: java.net.UnknownHostException: proxy.kc.127.0.0.1.nip.io
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2366677Z -- 	at io.undertow.Undertow.start(Undertow.java:254)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2367841Z -- 	at org.keycloak.testsuite.arquillian.undertow.lb.SimpleUndertowLoadBalancer.start(SimpleUndertowLoadBalancer.java:112)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2369043Z -- 	... 60 more
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2369541Z -- Caused by: java.net.UnknownHostException: proxy.kc.127.0.0.1.nip.io
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2370339Z -- 	at java.base/java.net.InetAddress$CachedLookup.get(InetAddress.java:988)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2371160Z -- 	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1818)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2372112Z -- 	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1688)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2372902Z -- 	at java.base/java.net.InetAddress.getByName(InetAddress.java:1568)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2373565Z -- 	at io.undertow.Undertow.start(Undertow.java:196)
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2374035Z -- 	... 61 more
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2374310Z -- 
+Base IT (2)	Run base tests	2025-03-03T00:28:58.2374854Z [INFO] Running org.keycloak.testsuite.broker.KcOidcBrokerHiddenIdpHintTest
+Base IT (2)	Run base tests	2025-03-03T00:28:59.9696672Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.741 s - in org.keycloak.testsuite.broker.KcOidcBrokerHiddenIdpHintTest
+Base IT (2)	Run base tests	2025-03-03T00:28:59.9698389Z [INFO] Running org.keycloak.testsuite.broker.KcOidcBrokerIdpHintTest
+Base IT (2)	Run base tests	2025-03-03T00:29:04.7308143Z [INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.751 s - in org.keycloak.testsuite.broker.KcOidcBrokerIdpHintTest
+Base IT (2)	Run base tests	2025-03-03T00:29:04.7309699Z [INFO] Running org.keycloak.testsuite.broker.KcOidcBrokerIdpPublicKeyMissingUseTest
+Base IT (2)	Run base tests	2025-03-03T00:29:07.6852519Z [INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.942 s - in org.keycloak.testsuite.broker.KcOidcBrokerIdpPublicKeyMissingUseTest
+Base IT (2)	Run base tests	2025-03-03T00:29:07.6854306Z [INFO] Running org.keycloak.testsuite.broker.KcOidcBrokerJWEEcdhEsA128KwP256A128CbcHs256Test
+Base IT (2)	Run base tests	2025-03-03T00:29:11.4193948Z [INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.724 s - in org.keycloak.testsuite.broker.KcOidcBrokerJWEEcdhEsA128KwP256A128CbcHs256Test
+Base IT (2)	Run base tests	2025-03-03T00:29:11.4196368Z [INFO] Running org.keycloak.testsuite.broker.KcOidcBrokerJWEEcdhEsA128KwP256A128GcmTest
+Base IT (2)	Run base tests	2025-03-03T00:29:14.9761486Z [INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.548 s - in org.keycloak.testsuite.broker.KcOidcBrokerJWEEcdhEsA128KwP256A128GcmTest
+Base IT (2)	Run base tests	2025-03-03T00:29:14.9764826Z [INFO] Running org.keycloak.testsuite.broker.KcOidcBrokerJWEEcdhEsA192KwP384A192CbcHs384Test
+Base IT (2)	Run base tests	2025-03-03T00:29:18.5095476Z [INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.519 s - in org.keycloak.testsuite.broker.KcOidcBrokerJWEEcdhEsA192KwP384A192CbcHs384Test
+Base IT (2)	Run base tests	2025-03-03T00:29:18.5097967Z [INFO] Running org.keycloak.testsuite.broker.KcOidcBrokerJWEEcdhEsA192KwP384A192GcmTest
+Base IT (2)	Run base tests	2025-03-03T00:29:21.6221656Z [INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.101 s - in org.keycloak.testsuite.broker.KcOidcBrokerJWEEcdhEsA192KwP384A192GcmTest
+Base IT (2)	Run base tests	2025-03-03T00:29:21.6232895Z [INFO] Running org.keycloak.testsuite.broker.KcOidcBrokerJWEEcdhEsA256KwP521A256CbcHs512Test
+Base IT (2)	Run base tests	2025-03-03T00:29:24.9522227Z [INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.321 s - in org.keycloak.testsuite.broker.KcOidcBrokerJWEEcdhEsA256KwP521A256CbcHs512Test
+Base IT (2)	Run base tests	2025-03-03T00:29:24.9527491Z [INFO] Running org.keycloak.testsuite.broker.KcOidcBrokerJWEEcdhEsA256KwP521A256GcmTest
+Base IT (2)	Run base tests	2025-03-03T00:29:28.3443337Z [INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.38 s - in org.keycloak.testsuite.broker.KcOidcBrokerJWEEcdhEsA256KwP521A256GcmTest
+Base IT (2)	Run base tests	2025-03-03T00:29:28.3445076Z [INFO] Running org.keycloak.testsuite.broker.KcOidcBrokerJWEEcdhEsP384A192CbcHs384Test
+Base IT (2)	Run base tests	2025-03-03T00:29:31.7170208Z [INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.361 s - in org.keycloak.testsuite.broker.KcOidcBrokerJWEEcdhEsP384A192CbcHs384Test
+Base IT (2)	Run base tests	2025-03-03T00:29:31.7173393Z [INFO] Running org.keycloak.testsuite.broker.KcOidcBrokerJWEEcdhEsP384A192GcmTest
+Base IT (2)	Run base tests	2025-03-03T00:29:35.3595482Z [INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.63 s - in org.keycloak.testsuite.broker.KcOidcBrokerJWEEcdhEsP384A192GcmTest
+Base IT (2)	Run base tests	2025-03-03T00:29:35.3604202Z [INFO] Running org.keycloak.testsuite.broker.KcOidcBrokerJWETest
+Base IT (2)	Run base tests	2025-03-03T00:29:40.2953057Z [INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.918 s - in org.keycloak.testsuite.broker.KcOidcBrokerJWETest
+Base IT (2)	Run base tests	2025-03-03T00:29:40.2954520Z [INFO] Running org.keycloak.testsuite.broker.KcOidcBrokerJWEUserInfoJustEncryptedTest
+Base IT (2)	Run base tests	2025-03-03T00:29:44.9865138Z [INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.684 s - in org.keycloak.testsuite.broker.KcOidcBrokerJWEUserInfoJustEncryptedTest
+Base IT (2)	Run base tests	2025-03-03T00:29:44.9867127Z [INFO] Running org.keycloak.testsuite.broker.KcOidcBrokerLdapTest
+Base IT (2)	Run base tests	2025-03-03T00:29:51.2079445Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.213 s - in org.keycloak.testsuite.broker.KcOidcBrokerLdapTest
+Base IT (2)	Run base tests	2025-03-03T00:29:51.2081059Z [INFO] Running org.keycloak.testsuite.broker.KcOidcBrokerLoginHintTest
+Base IT (2)	Run base tests	2025-03-03T00:29:56.3247204Z [INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.108 s - in org.keycloak.testsuite.broker.KcOidcBrokerLoginHintTest
+Base IT (2)	Run base tests	2025-03-03T00:29:56.3248530Z [INFO] Running org.keycloak.testsuite.broker.KcOidcBrokerLogoutFrontChannelTest
+Base IT (2)	Run base tests	2025-03-03T00:29:58.0434161Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.708 s - in org.keycloak.testsuite.broker.KcOidcBrokerLogoutFrontChannelTest
+Base IT (2)	Run base tests	2025-03-03T00:29:58.0435187Z [INFO] Running org.keycloak.testsuite.broker.KcOidcBrokerLogoutTest
+Base IT (2)	Run base tests	2025-03-03T00:30:11.2888989Z [INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 13.232 s - in org.keycloak.testsuite.broker.KcOidcBrokerLogoutTest
+Base IT (2)	Run base tests	2025-03-03T00:30:11.2891684Z [INFO] Running org.keycloak.testsuite.broker.KcOidcBrokerNoLoginHintTest
+Base IT (2)	Run base tests	2025-03-03T00:30:14.9174117Z [INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.619 s - in org.keycloak.testsuite.broker.KcOidcBrokerNoLoginHintTest
+Base IT (2)	Run base tests	2025-03-03T00:30:14.9177466Z [INFO] Running org.keycloak.testsuite.broker.KcOidcBrokerNonceParameterTest
+Base IT (2)	Run base tests	2025-03-03T00:30:19.6160474Z [INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.687 s - in org.keycloak.testsuite.broker.KcOidcBrokerNonceParameterTest
+Base IT (2)	Run base tests	2025-03-03T00:30:19.6162189Z [INFO] Running org.keycloak.testsuite.broker.KcOidcBrokerParameterForwardTest
+Base IT (2)	Run base tests	2025-03-03T00:30:22.3223438Z [INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.694 s - in org.keycloak.testsuite.broker.KcOidcBrokerParameterForwardTest
+Base IT (2)	Run base tests	2025-03-03T00:30:22.3224692Z [INFO] Running org.keycloak.testsuite.broker.KcOidcBrokerPassMaxAgeTest
+Base IT (2)	Run base tests	2025-03-03T00:30:27.9443169Z [WARNING] Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.61 s - in org.keycloak.testsuite.broker.KcOidcBrokerPassMaxAgeTest
+Base IT (2)	Run base tests	2025-03-03T00:30:27.9447351Z [INFO] Running org.keycloak.testsuite.broker.KcOidcBrokerPkceTest
+Base IT (2)	Run base tests	2025-03-03T00:30:31.2174382Z [INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.193 s - in org.keycloak.testsuite.broker.KcOidcBrokerPkceTest
+Base IT (2)	Run base tests	2025-03-03T00:30:31.2177736Z [INFO] Running org.keycloak.testsuite.broker.KcOidcBrokerPrivateKeyJwtClientIdRequiredTest
+Base IT (2)	Run base tests	2025-03-03T00:30:34.3773740Z [INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.148 s - in org.keycloak.testsuite.broker.KcOidcBrokerPrivateKeyJwtClientIdRequiredTest
+Base IT (2)	Run base tests	2025-03-03T00:30:34.3775449Z [INFO] Running org.keycloak.testsuite.broker.KcOidcBrokerPrivateKeyJwtCustomAudienceTest
+Base IT (2)	Run base tests	2025-03-03T00:30:38.1793391Z [INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.793 s - in org.keycloak.testsuite.broker.KcOidcBrokerPrivateKeyJwtCustomAudienceTest
+Base IT (2)	Run base tests	2025-03-03T00:30:38.1795576Z [INFO] Running org.keycloak.testsuite.broker.KcOidcBrokerPrivateKeyJwtCustomSignAlgTest
+Base IT (2)	Run base tests	2025-03-03T00:30:41.1726950Z [INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.985 s - in org.keycloak.testsuite.broker.KcOidcBrokerPrivateKeyJwtCustomSignAlgTest
+Base IT (2)	Run base tests	2025-03-03T00:30:41.1728954Z [INFO] Running org.keycloak.testsuite.broker.KcOidcBrokerPrivateKeyJwtMissingUseTest
+Base IT (2)	Run base tests	2025-03-03T00:30:43.3515324Z [INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.168 s - in org.keycloak.testsuite.broker.KcOidcBrokerPrivateKeyJwtMissingUseTest
+Base IT (2)	Run base tests	2025-03-03T00:30:43.3517098Z [INFO] Running org.keycloak.testsuite.broker.KcOidcBrokerPrivateKeyJwtTest
+Base IT (2)	Run base tests	2025-03-03T00:30:47.1087603Z [INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.749 s - in org.keycloak.testsuite.broker.KcOidcBrokerPrivateKeyJwtTest
+Base IT (2)	Run base tests	2025-03-03T00:30:47.1090096Z [INFO] Running org.keycloak.testsuite.broker.KcOidcBrokerPrivateKeyJwtUnsupportedKeyTest
+Base IT (2)	Run base tests	2025-03-03T00:30:49.6255108Z [INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.504 s - in org.keycloak.testsuite.broker.KcOidcBrokerPrivateKeyJwtUnsupportedKeyTest
+Base IT (2)	Run base tests	2025-03-03T00:30:49.6257464Z [INFO] Running org.keycloak.testsuite.broker.KcOidcBrokerPrivateKeyJwtWithX509HeadersTest
+Base IT (2)	Run base tests	2025-03-03T00:30:53.2813991Z [INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.647 s - in org.keycloak.testsuite.broker.KcOidcBrokerPrivateKeyJwtWithX509HeadersTest
+Base IT (2)	Run base tests	2025-03-03T00:30:53.2817340Z [INFO] Running org.keycloak.testsuite.broker.KcOidcBrokerPromptNoneRedirectTest
+Base IT (2)	Run base tests	2025-03-03T00:30:53.2922977Z [WARNING] Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0 s - in org.keycloak.testsuite.broker.KcOidcBrokerPromptNoneRedirectTest
+Base IT (2)	Run base tests	2025-03-03T00:30:53.2924359Z [INFO] Running org.keycloak.testsuite.broker.KcOidcBrokerPromptParameterTest
+Base IT (2)	Run base tests	2025-03-03T00:30:56.7000117Z [INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.4 s - in org.keycloak.testsuite.broker.KcOidcBrokerPromptParameterTest
+Base IT (2)	Run base tests	2025-03-03T00:30:56.7002200Z [INFO] Running org.keycloak.testsuite.broker.KcOidcBrokerStateParameterTest
+Base IT (2)	Run base tests	2025-03-03T00:31:00.9589594Z [INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.249 s - in org.keycloak.testsuite.broker.KcOidcBrokerStateParameterTest
+Base IT (2)	Run base tests	2025-03-03T00:31:00.9592398Z [INFO] Running org.keycloak.testsuite.broker.KcOidcBrokerSubMatchIntrospectionTest
+Base IT (2)	Run base tests	2025-03-03T00:31:03.9612831Z [INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.99 s - in org.keycloak.testsuite.broker.KcOidcBrokerSubMatchIntrospectionTest
+Base IT (2)	Run base tests	2025-03-03T00:31:03.9613623Z [INFO] Running org.keycloak.testsuite.broker.KcOidcBrokerTest
+Base IT (2)	Run base tests	2025-03-03T00:31:56.3670739Z [INFO] Tests run: 31, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 52.395 s - in org.keycloak.testsuite.broker.KcOidcBrokerTest
+Base IT (2)	Run base tests	2025-03-03T00:31:56.3673831Z [INFO] Running org.keycloak.testsuite.broker.KcOidcBrokerTokenExchangeFederatedTest
+Base IT (2)	Run base tests	2025-03-03T00:32:46.5380159Z [INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 50.155 s - in org.keycloak.testsuite.broker.KcOidcBrokerTokenExchangeFederatedTest
+Base IT (2)	Run base tests	2025-03-03T00:32:46.5381580Z [INFO] Running org.keycloak.testsuite.broker.KcOidcBrokerTokenExchangeV1Test
+Base IT (2)	Run base tests	2025-03-03T00:33:38.3211048Z [INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 51.761 s - in org.keycloak.testsuite.broker.KcOidcBrokerTokenExchangeV1Test
+Base IT (2)	Run base tests	2025-03-03T00:33:38.3212870Z [INFO] Running org.keycloak.testsuite.broker.KcOidcBrokerTransientSessionsTest
+Base IT (2)	Run base tests	2025-03-03T00:34:37.8901735Z [WARNING] Tests run: 29, Failures: 0, Errors: 0, Skipped: 6, Time elapsed: 59.555 s - in org.keycloak.testsuite.broker.KcOidcBrokerTransientSessionsTest
+Base IT (2)	Run base tests	2025-03-03T00:34:37.8913638Z [INFO] Running org.keycloak.testsuite.broker.KcOidcBrokerUiLocalesDisabledTest
+Base IT (2)	Run base tests	2025-03-03T00:34:41.4879891Z [INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.588 s - in org.keycloak.testsuite.broker.KcOidcBrokerUiLocalesDisabledTest
+Base IT (2)	Run base tests	2025-03-03T00:34:41.4883120Z [INFO] Running org.keycloak.testsuite.broker.KcOidcBrokerUiLocalesEnabledTest
+Base IT (2)	Run base tests	2025-03-03T00:34:44.8008066Z [INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.301 s - in org.keycloak.testsuite.broker.KcOidcBrokerUiLocalesEnabledTest
+Base IT (2)	Run base tests	2025-03-03T00:34:44.8009498Z [INFO] Running org.keycloak.testsuite.broker.KcOidcBrokerUiLocalesWithIdpHintTest
+Base IT (2)	Run base tests	2025-03-03T00:34:48.3588516Z [INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.548 s - in org.keycloak.testsuite.broker.KcOidcBrokerUiLocalesWithIdpHintTest
+Base IT (2)	Run base tests	2025-03-03T00:34:48.3592100Z [INFO] Running org.keycloak.testsuite.broker.KcOidcBrokerVaultTest
+Base IT (2)	Run base tests	2025-03-03T00:35:14.4318434Z [INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 26.058 s - in org.keycloak.testsuite.broker.KcOidcBrokerVaultTest
+Base IT (2)	Run base tests	2025-03-03T00:35:14.4319776Z [INFO] Running org.keycloak.testsuite.broker.KcOidcBrokerWithConsentTest
+Base IT (2)	Run base tests	2025-03-03T00:35:21.0653688Z [INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.621 s - in org.keycloak.testsuite.broker.KcOidcBrokerWithConsentTest
+Base IT (2)	Run base tests	2025-03-03T00:35:21.0655945Z [INFO] Running org.keycloak.testsuite.broker.KcOidcDefaultIdpTest
+Base IT (2)	Run base tests	2025-03-03T00:35:27.2964414Z [INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.216 s - in org.keycloak.testsuite.broker.KcOidcDefaultIdpTest
+Base IT (2)	Run base tests	2025-03-03T00:35:27.2966957Z [INFO] Running org.keycloak.testsuite.broker.KcOidcFirstBrokerLoginDetectExistingUserTest
+Base IT (2)	Run base tests	2025-03-03T00:35:31.5270768Z [INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.216 s - in org.keycloak.testsuite.broker.KcOidcFirstBrokerLoginDetectExistingUserTest
+Base IT (2)	Run base tests	2025-03-03T00:35:31.5273319Z [INFO] Running org.keycloak.testsuite.broker.KcOidcFirstBrokerLoginNewAuthTest
+Base IT (2)	Run base tests	2025-03-03T00:35:57.8673400Z [INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 26.328 s - in org.keycloak.testsuite.broker.KcOidcFirstBrokerLoginNewAuthTest
+Base IT (2)	Run base tests	2025-03-03T00:35:57.8682806Z [INFO] Running org.keycloak.testsuite.broker.KcOidcFirstBrokerLoginTest
+Base IT (2)	Run base tests	2025-03-03T00:39:22.3537976Z [INFO] Tests run: 57, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 204.473 s - in org.keycloak.testsuite.broker.KcOidcFirstBrokerLoginTest
+Base IT (2)	Run base tests	2025-03-03T00:39:22.3570456Z [INFO] Running org.keycloak.testsuite.broker.KcOidcMultipleTabsBrokerTest
+Base IT (2)	Run base tests	2025-03-03T00:39:27.6795099Z [INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.312 s - in org.keycloak.testsuite.broker.KcOidcMultipleTabsBrokerTest
+Base IT (2)	Run base tests	2025-03-03T00:39:27.6798226Z [INFO] Running org.keycloak.testsuite.broker.KcOidcPostBrokerLoginTest
+Base IT (2)	Run base tests	2025-03-03T00:39:36.0633169Z [INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.37 s - in org.keycloak.testsuite.broker.KcOidcPostBrokerLoginTest
+Base IT (2)	Run base tests	2025-03-03T00:39:36.0643719Z [INFO] Running org.keycloak.testsuite.broker.KcOidcUsernameTemplateMapperTest
+Base IT (2)	Run base tests	2025-03-03T00:39:41.3613063Z [INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.286 s - in org.keycloak.testsuite.broker.KcOidcUsernameTemplateMapperTest
+Base IT (2)	Run base tests	2025-03-03T00:39:41.3616708Z [INFO] Running org.keycloak.testsuite.broker.KcSamlAdvancedAttributeToGroupMapperTest
+Base IT (2)	Run base tests	2025-03-03T00:39:44.7959172Z [INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.422 s - in org.keycloak.testsuite.broker.KcSamlAdvancedAttributeToGroupMapperTest
+Base IT (2)	Run base tests	2025-03-03T00:39:44.7960884Z [INFO] Running org.keycloak.testsuite.broker.KcSamlAdvancedAttributeToRoleMapperTest
+Base IT (2)	Run base tests	2025-03-03T00:40:10.8031218Z [INFO] Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 25.997 s - in org.keycloak.testsuite.broker.KcSamlAdvancedAttributeToRoleMapperTest
+Base IT (2)	Run base tests	2025-03-03T00:40:10.8036551Z [INFO] Running org.keycloak.testsuite.broker.KcSamlAttributeConsumingServiceIndexTest
+Base IT (2)	Run base tests	2025-03-03T00:40:17.0828696Z [INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.268 s - in org.keycloak.testsuite.broker.KcSamlAttributeConsumingServiceIndexTest
+Base IT (2)	Run base tests	2025-03-03T00:40:17.0832604Z [INFO] Running org.keycloak.testsuite.broker.KcSamlBrokerAllowedClockSkewTest
+Base IT (2)	Run base tests	2025-03-03T00:40:20.8989404Z [INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.805 s - in org.keycloak.testsuite.broker.KcSamlBrokerAllowedClockSkewTest
+Base IT (2)	Run base tests	2025-03-03T00:40:20.8991356Z [INFO] Running org.keycloak.testsuite.broker.KcSamlBrokerArtifactBindingTest
+Base IT (2)	Run base tests	2025-03-03T00:40:36.8882279Z [INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 15.981 s - in org.keycloak.testsuite.broker.KcSamlBrokerArtifactBindingTest
+Base IT (2)	Run base tests	2025-03-03T00:40:36.8885825Z [INFO] Running org.keycloak.testsuite.broker.KcSamlBrokerDestinationTest
+Base IT (2)	Run base tests	2025-03-03T00:40:42.0764724Z [INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.177 s - in org.keycloak.testsuite.broker.KcSamlBrokerDestinationTest
+Base IT (2)	Run base tests	2025-03-03T00:40:42.0767322Z [INFO] Running org.keycloak.testsuite.broker.KcSamlBrokerFrontendUrlTest
+Base IT (2)	Run base tests	2025-03-03T00:40:47.4127128Z [WARNING] Tests run: 4, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.323 s - in org.keycloak.testsuite.broker.KcSamlBrokerFrontendUrlTest
+Base IT (2)	Run base tests	2025-03-03T00:40:47.4129598Z [INFO] Running org.keycloak.testsuite.broker.KcSamlBrokerLoginHintWithOptionDisabledTest
+Base IT (2)	Run base tests	2025-03-03T00:40:50.6995772Z [INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.277 s - in org.keycloak.testsuite.broker.KcSamlBrokerLoginHintWithOptionDisabledTest
+Base IT (2)	Run base tests	2025-03-03T00:40:50.6997374Z [INFO] Running org.keycloak.testsuite.broker.KcSamlBrokerLoginHintWithOptionEnabledTest
+Base IT (2)	Run base tests	2025-03-03T00:40:54.9284278Z [INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.217 s - in org.keycloak.testsuite.broker.KcSamlBrokerLoginHintWithOptionEnabledTest
+Base IT (2)	Run base tests	2025-03-03T00:40:54.9286389Z [INFO] Running org.keycloak.testsuite.broker.KcSamlBrokerSessionNotOnOrAfterTest
+Base IT (2)	Run base tests	2025-03-03T00:40:59.7473739Z [INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.808 s - in org.keycloak.testsuite.broker.KcSamlBrokerSessionNotOnOrAfterTest
+Base IT (2)	Run base tests	2025-03-03T00:40:59.7475005Z [INFO] Running org.keycloak.testsuite.broker.KcSamlBrokerTest
+Base IT (2)	Run base tests	2025-03-03T00:41:42.9985713Z [INFO] Tests run: 26, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 43.243 s - in org.keycloak.testsuite.broker.KcSamlBrokerTest
+Base IT (2)	Run base tests	2025-03-03T00:41:42.9999023Z [INFO] Running org.keycloak.testsuite.broker.KcSamlCustomEntityIdBrokerTest
+Base IT (2)	Run base tests	2025-03-03T00:41:48.3767870Z [INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.322 s - in org.keycloak.testsuite.broker.KcSamlCustomEntityIdBrokerTest
+Base IT (2)	Run base tests	2025-03-03T00:41:48.3772719Z [INFO] Running org.keycloak.testsuite.broker.KcSamlDefaultIdpTest
+Base IT (2)	Run base tests	2025-03-03T00:41:53.2245542Z [INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.837 s - in org.keycloak.testsuite.broker.KcSamlDefaultIdpTest
+Base IT (2)	Run base tests	2025-03-03T00:41:53.2246796Z [INFO] Running org.keycloak.testsuite.broker.KcSamlEncryptedAssertionTest
+Base IT (2)	Run base tests	2025-03-03T00:42:01.8549011Z [INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.619 s - in org.keycloak.testsuite.broker.KcSamlEncryptedAssertionTest
+Base IT (2)	Run base tests	2025-03-03T00:42:01.8550002Z [INFO] Running org.keycloak.testsuite.broker.KcSamlEncryptedIdTest
+Base IT (2)	Run base tests	2025-03-03T00:42:11.0829740Z [INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.217 s - in org.keycloak.testsuite.broker.KcSamlEncryptedIdTest
+Base IT (2)	Run base tests	2025-03-03T00:42:11.0833361Z [INFO] Running org.keycloak.testsuite.broker.KcSamlFirstBrokerLoginTest
+Base IT (2)	Run base tests	2025-03-03T00:44:37.1799458Z [INFO] Tests run: 35, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 146.086 s - in org.keycloak.testsuite.broker.KcSamlFirstBrokerLoginTest
+Base IT (2)	Run base tests	2025-03-03T00:44:37.1813383Z [INFO] Running org.keycloak.testsuite.broker.KcSamlForceAuthnBrokerTest
+Base IT (2)	Run base tests	2025-03-03T00:44:43.0101932Z [INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.822 s - in org.keycloak.testsuite.broker.KcSamlForceAuthnBrokerTest
+Base IT (2)	Run base tests	2025-03-03T00:44:43.0104688Z [INFO] Running org.keycloak.testsuite.broker.KcSamlIdPInitiatedSsoTest
+Base IT (2)	Run base tests	2025-03-03T00:44:45.6253863Z [INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.601 s - in org.keycloak.testsuite.broker.KcSamlIdPInitiatedSsoTest
+Base IT (2)	Run base tests	2025-03-03T00:44:45.6256200Z [INFO] Running org.keycloak.testsuite.broker.KcSamlLogoutTest
+Base IT (2)	Run base tests	2025-03-03T00:44:48.5901246Z [INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.957 s - in org.keycloak.testsuite.broker.KcSamlLogoutTest
+Base IT (2)	Run base tests	2025-03-03T00:44:48.5905054Z [INFO] Running org.keycloak.testsuite.broker.KcSamlMetadataSignedBrokerTest
+Base IT (2)	Run base tests	2025-03-03T00:44:57.4863379Z [INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.886 s - in org.keycloak.testsuite.broker.KcSamlMetadataSignedBrokerTest
+Base IT (2)	Run base tests	2025-03-03T00:44:57.4866731Z [INFO] Running org.keycloak.testsuite.broker.KcSamlMultipleAttributeToRoleMappersTest
+Base IT (2)	Run base tests	2025-03-03T00:45:09.2448462Z [INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.748 s - in org.keycloak.testsuite.broker.KcSamlMultipleAttributeToRoleMappersTest
+Base IT (2)	Run base tests	2025-03-03T00:45:09.2453547Z [INFO] Running org.keycloak.testsuite.broker.KcSamlMultipleTabsBrokerTest
+Base IT (2)	Run base tests	2025-03-03T00:45:12.5347930Z [INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.276 s - in org.keycloak.testsuite.broker.KcSamlMultipleTabsBrokerTest
+Base IT (2)	Run base tests	2025-03-03T00:45:12.5350489Z [INFO] Running org.keycloak.testsuite.broker.KcSamlRequestedAuthnContextBrokerTest
+Base IT (2)	Run base tests	2025-03-03T00:45:22.4884041Z [INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.941 s - in org.keycloak.testsuite.broker.KcSamlRequestedAuthnContextBrokerTest
+Base IT (2)	Run base tests	2025-03-03T00:45:22.4885938Z [INFO] Running org.keycloak.testsuite.broker.KcSamlSignedBrokerTest
+Base IT (2)	Run base tests	2025-03-03T00:45:53.9086495Z [INFO] Tests run: 20, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 31.409 s - in org.keycloak.testsuite.broker.KcSamlSignedBrokerTest
+Base IT (2)	Run base tests	2025-03-03T00:45:53.9099358Z [INFO] Running org.keycloak.testsuite.broker.KcSamlSignedDocumentOnlyBrokerTest
+Base IT (2)	Run base tests	2025-03-03T00:45:56.8126397Z [INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.89 s - in org.keycloak.testsuite.broker.KcSamlSignedDocumentOnlyBrokerTest
+Base IT (2)	Run base tests	2025-03-03T00:45:56.8128273Z [INFO] Running org.keycloak.testsuite.broker.KcSamlSpDescriptorTest
+Base IT (2)	Run base tests	2025-03-03T00:46:14.6201333Z [INFO] Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 17.796 s - in org.keycloak.testsuite.broker.KcSamlSpDescriptorTest
+Base IT (2)	Run base tests	2025-03-03T00:46:14.6206891Z [INFO] Running org.keycloak.testsuite.broker.KcSamlUsernameTemplateMapperTest
+Base IT (2)	Run base tests	2025-03-03T00:46:19.3768503Z [INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.746 s - in org.keycloak.testsuite.broker.KcSamlUsernameTemplateMapperTest
+Base IT (2)	Run base tests	2025-03-03T00:46:19.3772613Z [INFO] Running org.keycloak.testsuite.broker.KcSamlXPathAttributeMapperTest
+Base IT (2)	Run base tests	2025-03-03T00:46:20.7816132Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.394 s - in org.keycloak.testsuite.broker.KcSamlXPathAttributeMapperTest
+Base IT (2)	Run base tests	2025-03-03T00:46:20.7820595Z [INFO] Running org.keycloak.testsuite.broker.OidcAccessTokenOnlyClaimsUserAttributeMapperTest
+Base IT (2)	Run base tests	2025-03-03T00:46:36.5206124Z [INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 15.725 s - in org.keycloak.testsuite.broker.OidcAccessTokenOnlyClaimsUserAttributeMapperTest
+Base IT (2)	Run base tests	2025-03-03T00:46:36.5207425Z [INFO] Running org.keycloak.testsuite.broker.OidcAdvancedClaimToGroupMapperTest
+Base IT (2)	Run base tests	2025-03-03T00:47:03.2514166Z [INFO] Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 26.719 s - in org.keycloak.testsuite.broker.OidcAdvancedClaimToGroupMapperTest
+Base IT (2)	Run base tests	2025-03-03T00:47:03.2520222Z [INFO] Running org.keycloak.testsuite.broker.OidcAdvancedClaimToRoleMapperTest
+Base IT (2)	Run base tests	2025-03-03T00:47:24.3394924Z [INFO] Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 21.08 s - in org.keycloak.testsuite.broker.OidcAdvancedClaimToRoleMapperTest
+Base IT (2)	Run base tests	2025-03-03T00:47:24.3399984Z [INFO] Running org.keycloak.testsuite.broker.OidcClaimToRoleMapperTest
+Base IT (2)	Run base tests	2025-03-03T00:47:42.1461317Z [INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 17.798 s - in org.keycloak.testsuite.broker.OidcClaimToRoleMapperTest
+Base IT (2)	Run base tests	2025-03-03T00:47:42.1466021Z [INFO] Running org.keycloak.testsuite.broker.OidcClaimToUserSessionNoteMapperTest
+Base IT (2)	Run base tests	2025-03-03T00:47:46.7110264Z [INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.554 s - in org.keycloak.testsuite.broker.OidcClaimToUserSessionNoteMapperTest
+Base IT (2)	Run base tests	2025-03-03T00:47:46.7111717Z [INFO] Running org.keycloak.testsuite.broker.OidcHardcodedGroupMapperTest
+Base IT (2)	Run base tests	2025-03-03T00:48:10.7974697Z [INFO] Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 24.077 s - in org.keycloak.testsuite.broker.OidcHardcodedGroupMapperTest
+Base IT (2)	Run base tests	2025-03-03T00:48:10.7982395Z [INFO] Running org.keycloak.testsuite.broker.OidcMultipleClaimToRoleMappersTest
+Base IT (2)	Run base tests	2025-03-03T00:48:29.7572705Z [INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 18.951 s - in org.keycloak.testsuite.broker.OidcMultipleClaimToRoleMappersTest
+Base IT (2)	Run base tests	2025-03-03T00:48:29.7576571Z [INFO] Running org.keycloak.testsuite.broker.OidcUserAttributeMapperTest
+Base IT (2)	Run base tests	2025-03-03T00:48:45.5971442Z [INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 15.826 s - in org.keycloak.testsuite.broker.OidcUserAttributeMapperTest
+Base IT (2)	Run base tests	2025-03-03T00:48:45.5973816Z [INFO] Running org.keycloak.testsuite.broker.OidcUserInfoClaimToRoleMapperTest
+Base IT (2)	Run base tests	2025-03-03T00:48:55.3326904Z [INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.727 s - in org.keycloak.testsuite.broker.OidcUserInfoClaimToRoleMapperTest
+Base IT (2)	Run base tests	2025-03-03T00:48:55.3329685Z [INFO] Running org.keycloak.testsuite.broker.SamlUserAttributeMapperTest
+Base IT (2)	Run base tests	2025-03-03T00:49:11.7498913Z [INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 16.409 s - in org.keycloak.testsuite.broker.SamlUserAttributeMapperTest
+Base IT (2)	Run base tests	2025-03-03T00:49:11.7502774Z [INFO] Running org.keycloak.testsuite.broker.SocialLoginTest
+Base IT (2)	Run base tests	2025-03-03T00:49:45.8977652Z [WARNING] Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 34.135 s - in org.keycloak.testsuite.broker.SocialLoginTest
+Base IT (2)	Run base tests	2025-03-03T00:49:45.8980602Z [INFO] Running org.keycloak.testsuite.broker.UsernameTemplateMapperTest
+Base IT (2)	Run base tests	2025-03-03T00:49:51.9378131Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.023 s - in org.keycloak.testsuite.broker.UsernameTemplateMapperTest
+Base IT (2)	Run base tests	2025-03-03T00:49:52.2891542Z -- [INFO] 
+Base IT (2)	Run base tests	2025-03-03T00:49:52.2892523Z -- [INFO] Results:
+Base IT (2)	Run base tests	2025-03-03T00:49:52.2897732Z -- [INFO] 
+Base IT (2)	Run base tests	2025-03-03T00:49:52.2898024Z -- [ERROR] Errors: 
+Base IT (2)	Run base tests	2025-03-03T00:49:52.2898738Z -- [ERROR] org.keycloak.testsuite.broker.KcOidcBrokerFrontendUrlTest.testLogInAsUserInIDP
+Base IT (2)	Run base tests	2025-03-03T00:49:52.2901155Z -- [ERROR]   Run 1: KcOidcBrokerFrontendUrlTest.testLogInAsUserInIDP » Runtime java.lang.RuntimeException: java.lang.RuntimeException: java.net.UnknownHostException: proxy.kc.127.0.0.1.nip.io: Temporary failure in name resolution
+Base IT (2)	Run base tests	2025-03-03T00:49:52.2904264Z -- [ERROR]   Run 2: KcOidcBrokerFrontendUrlTest.testLogInAsUserInIDP » Runtime java.lang.RuntimeException: java.lang.RuntimeException: java.net.UnknownHostException: proxy.kc.127.0.0.1.nip.io
+Base IT (2)	Run base tests	2025-03-03T00:49:52.2908880Z -- [ERROR]   Run 3: KcOidcBrokerFrontendUrlTest.testLogInAsUserInIDP » Runtime java.lang.RuntimeException: java.lang.RuntimeException: java.net.UnknownHostException: proxy.kc.127.0.0.1.nip.io
+Base IT (2)	Run base tests	2025-03-03T00:49:52.2910245Z -- [INFO] 
+Base IT (2)	Run base tests	2025-03-03T00:49:52.2910541Z -- [INFO] 
+Base IT (2)	Run base tests	2025-03-03T00:49:52.2910974Z -- [ERROR] Tests run: 638, Failures: 0, Errors: 1, Skipped: 12
+Base IT (2)	Run base tests	2025-03-03T00:49:52.2911496Z -- [INFO] 
+Base IT (2)	Run base tests	2025-03-03T00:49:52.2928663Z -- [INFO] ------------------------------------------------------------------------
+Base IT (2)	Run base tests	2025-03-03T00:49:52.2929815Z -- [INFO] BUILD FAILURE
+Base IT (2)	Run base tests	2025-03-03T00:49:52.2930330Z -- [INFO] ------------------------------------------------------------------------
+Base IT (2)	Run base tests	2025-03-03T00:49:52.2932201Z -- [INFO] Total time:  24:34 min
+Base IT (2)	Run base tests	2025-03-03T00:49:52.2936938Z -- [INFO] Finished at: 2025-03-03T00:49:52Z
+Base IT (2)	Run base tests	2025-03-03T00:49:52.2937837Z -- [INFO] ------------------------------------------------------------------------
+Base IT (2)	Run base tests	2025-03-03T00:49:52.2946107Z -- [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.0.0-M7:test (default-test) on project integration-arquillian-tests-base: 
+Base IT (2)	Run base tests	2025-03-03T00:49:52.2947476Z -- [ERROR] 
+Base IT (2)	Run base tests	2025-03-03T00:49:52.2948700Z -- [ERROR] Please refer to /home/runner/work/keycloak/keycloak/testsuite/integration-arquillian/tests/base/target/surefire-reports for the individual test results.
+Base IT (2)	Run base tests	2025-03-03T00:49:52.2950534Z -- [ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+Base IT (2)	Run base tests	2025-03-03T00:49:52.2951633Z -- [ERROR] -> [Help 1]
+Base IT (2)	Run base tests	2025-03-03T00:49:52.2952151Z -- [ERROR] 
+Base IT (2)	Run base tests	2025-03-03T00:49:52.2952660Z -- [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+Base IT (2)	Run base tests	2025-03-03T00:49:52.2953692Z -- [ERROR] Re-run Maven using the -X switch to enable full debug logging.
+Base IT (2)	Run base tests	2025-03-03T00:49:52.2954277Z -- [ERROR] 
+Base IT (2)	Run base tests	2025-03-03T00:49:52.2955105Z -- [ERROR] For more information about the errors and possible solutions, please read the following articles:
+Base IT (2)	Run base tests	2025-03-03T00:49:52.2956196Z -- [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+Base IT (2)	Run base tests	2025-03-03T00:49:52.3199797Z ##[error]Process completed with exit code 1.
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:15.9929805Z Prepare all required actions
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:15.9997901Z ##[group]Run ./.github/actions/status-check
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:15.9998281Z with:
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0002331Z   jobs: {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "conditional": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	      "ci": "true",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	      "ci-aurora": "true",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	      "ci-quarkus": "true",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	      "ci-sssd": "true",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	      "ci-store": "true",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	      "ci-webauthn": "true"
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    }
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "build": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "unit-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "base-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "failure",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "adapter-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "adapter-integration-tests-strict-cookies": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "quarkus-unit-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "quarkus-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "jdk-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "store-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "volatile-sessions-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "store-model-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "clustering-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "fips-unit-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "fips-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "forms-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "webauthn-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "sssd-unit-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "migration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "external-infinispan-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "test-framework": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "base-new-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  }
+Status Check - Keycloak CI	Run /./.github/actions/status-check	}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0007044Z env:
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0007381Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0007769Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0008104Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0008449Z ##[endgroup]
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0109272Z ##[group]Run JOBS='{
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0109697Z [36;1mJOBS='{[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0109949Z [36;1m  "conditional": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0110236Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0110528Z [36;1m    "outputs": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0110791Z [36;1m      "ci": "true",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0111326Z [36;1m      "ci-aurora": "true",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0111646Z [36;1m      "ci-quarkus": "true",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0111933Z [36;1m      "ci-sssd": "true",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0112203Z [36;1m      "ci-store": "true",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0112483Z [36;1m      "ci-webauthn": "true"[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0112760Z [36;1m    }[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0112980Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0113195Z [36;1m  "build": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0113437Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0113708Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0113953Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0114176Z [36;1m  "unit-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0114437Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0114716Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0114960Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0115205Z [36;1m  "base-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0115513Z [36;1m    "result": "failure",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0115799Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0116057Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0116303Z [36;1m  "adapter-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0116607Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0116871Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0117118Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0117429Z [36;1m  "adapter-integration-tests-strict-cookies": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0118014Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0118282Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0118518Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0118752Z [36;1m  "quarkus-unit-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0119066Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0119335Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0119578Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0119810Z [36;1m  "quarkus-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0120103Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0120365Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0120607Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0121102Z [36;1m  "jdk-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0121385Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0121653Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0121898Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0122132Z [36;1m  "store-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0122421Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0122687Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0122923Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0123160Z [36;1m  "volatile-sessions-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0123448Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0123782Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0124027Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0124252Z [36;1m  "store-model-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0124532Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0124802Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0125047Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0125296Z [36;1m  "clustering-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0125623Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0125883Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0126134Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0126368Z [36;1m  "fips-unit-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0126641Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0126905Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0127150Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0127385Z [36;1m  "fips-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0127678Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0127945Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0128186Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0128419Z [36;1m  "forms-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0128723Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0128990Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0129233Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0129476Z [36;1m  "webauthn-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0129766Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0130031Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0130273Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0130493Z [36;1m  "sssd-unit-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0130757Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0131114Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0131351Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0131569Z [36;1m  "migration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0131848Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0132107Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0132344Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0132584Z [36;1m  "external-infinispan-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0132881Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0133180Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0133421Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0133635Z [36;1m  "test-framework": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0133901Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0134161Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0134405Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0134643Z [36;1m  "base-new-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0134933Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0135189Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0135427Z [36;1m  }[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0218759Z [36;1m}'[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0219328Z [36;1m[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0219596Z [36;1mecho "Job status:"[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0220479Z [36;1mecho $JOBS | jq -r 'to_entries[] | " - \(.key): \(.value.result)"'[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0221076Z [36;1m[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0221412Z [36;1mfor i in $(echo $JOBS | jq -r 'to_entries[] | .value.result'); do[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0221846Z [36;1m  if [ "$i" != "success" ] && [ "$i" != "skipped" ]; then[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0222174Z [36;1m    echo ""[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0222431Z [36;1m    echo "Status check not okay!"[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0222721Z [36;1m    exit 1[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0222946Z [36;1m  fi[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0223150Z [36;1mdone[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0277870Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0278322Z env:
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0278645Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0279049Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0279395Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0279764Z ##[endgroup]
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0372231Z Job status:
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0408076Z  - conditional: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0408437Z  - build: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0408697Z  - unit-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0408985Z  - base-integration-tests: failure
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0409318Z  - adapter-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0409679Z  - adapter-integration-tests-strict-cookies: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0410059Z  - quarkus-unit-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0410363Z  - quarkus-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0410685Z  - jdk-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0411279Z  - store-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0411599Z  - volatile-sessions-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0411899Z  - store-model-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0412201Z  - clustering-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0412513Z  - fips-unit-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0412795Z  - fips-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0413110Z  - forms-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0413515Z  - webauthn-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0413935Z  - sssd-unit-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0414207Z  - migration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0414529Z  - external-infinispan-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0414823Z  - test-framework: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0415221Z  - base-new-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0444521Z 
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0444817Z Status check not okay!
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-03T01:06:16.0459128Z ##[error]Process completed with exit code 1.
