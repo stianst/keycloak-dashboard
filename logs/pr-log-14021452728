@@ -1,0 +1,960 @@
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:49.1609065Z ##[group]Run KC_TEST_DATABASE=mysql KC_TEST_DATABASE_REUSE=true TESTCONTAINERS_REUSE_ENABLE=true ./mvnw package -f tests/pom.xml -Dtest=DatabaseTestSuite
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:49.1610720Z [36;1mKC_TEST_DATABASE=mysql KC_TEST_DATABASE_REUSE=true TESTCONTAINERS_REUSE_ENABLE=true ./mvnw package -f tests/pom.xml -Dtest=DatabaseTestSuite[0m
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:49.1679240Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:49.1679805Z env:
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:49.1680296Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:49.1681207Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:49.1681771Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:49.1682529Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.6-7/x64
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:49.1683377Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.6-7/x64
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:49.1684025Z ##[endgroup]
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:51.8734800Z [INFO] Loading cache configuration from /home/runner/work/keycloak/keycloak/.mvn/maven-build-cache-config.xml
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:51.8915609Z [INFO] Scanning for projects...
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:52.0511879Z [INFO] ------------------------------------------------------------------------
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:52.0512583Z [INFO] Reactor Build Order:
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:52.0513011Z [INFO] 
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:52.0513518Z [INFO] Keycloak Tests Parent                                              [pom]
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:52.0514322Z [INFO] Keycloak Testsuite Utilities                                       [jar]
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:52.0515161Z [INFO] Keycloak Testsuite Utilities Shared                                [jar]
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:52.0516013Z [INFO] Keycloak Testsuite Custom Providers                                [jar]
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:52.0516826Z [INFO] New Keycloak Base Testsuite                                        [jar]
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:52.0599319Z [INFO] 
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:52.0600365Z [INFO] --------------< org.keycloak.tests:keycloak-tests-parent >--------------
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:52.0602236Z [INFO] Building Keycloak Tests Parent 999.0.0-SNAPSHOT                    [1/5]
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:52.0602888Z [INFO]   from pom.xml
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:52.0603389Z [INFO] --------------------------------[ pom ]---------------------------------
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:52.1125700Z [INFO] 
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:52.1126474Z [INFO] --- enforcer:3.0.0-M3:enforce (enforce-java-version) @ keycloak-tests-parent ---
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:52.3274792Z [INFO] 
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:52.3279160Z [INFO] --- enforcer:3.0.0-M3:enforce (enforce-maven-version) @ keycloak-tests-parent ---
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:52.3289549Z [INFO] 
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:52.3294018Z [INFO] --- buildnumber:1.4:create (get-scm-revision) @ keycloak-tests-parent ---
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:52.5873770Z [INFO] Executing: /bin/sh -c cd '/home/runner/work/keycloak/keycloak/tests' && 'git' 'rev-parse' '--verify' 'HEAD'
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:52.5876833Z [INFO] Working directory: /home/runner/work/keycloak/keycloak/tests
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:52.6084919Z [INFO] Storing buildNumber: 7bd0d85c1cfde92c91680b42f18525bd5cd1877e at timestamp: 1742752132571
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:52.6139501Z [WARNING] Cannot get the branch information from the git repository: 
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:52.6145496Z Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:52.6146045Z 
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:52.6153640Z [INFO] Executing: /bin/sh -c cd '/home/runner/work/keycloak/keycloak/tests' && 'git' 'rev-parse' '--verify' 'HEAD'
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:52.6154729Z [INFO] Working directory: /home/runner/work/keycloak/keycloak/tests
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:52.6185199Z [INFO] Storing buildScmBranch: UNKNOWN
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:52.6187039Z [INFO] 
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:52.6187570Z [INFO] --- source:3.1.0:jar-no-fork (attach-sources) @ keycloak-tests-parent ---
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:52.7691917Z [INFO] 
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:52.7692583Z [INFO] --------------< org.keycloak.tests:keycloak-tests-utils >---------------
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:52.7693797Z [INFO] Building Keycloak Testsuite Utilities 999.0.0-SNAPSHOT             [2/5]
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:52.7695039Z [INFO]   from utils/pom.xml
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:52.7695570Z [INFO] --------------------------------[ jar ]---------------------------------
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:54.8563015Z [INFO] 
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:54.8563777Z [INFO] --- enforcer:3.0.0-M3:enforce (enforce-java-version) @ keycloak-tests-utils ---
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:54.8594411Z [INFO] 
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:54.8598282Z [INFO] --- enforcer:3.0.0-M3:enforce (enforce-maven-version) @ keycloak-tests-utils ---
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:54.8604384Z [INFO] 
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:54.8608418Z [INFO] --- buildnumber:1.4:create (get-scm-revision) @ keycloak-tests-utils ---
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:54.8624485Z [INFO] 
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:54.8626452Z [INFO] --- resources:3.2.0:resources (default-resources) @ keycloak-tests-utils ---
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:54.9534406Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:54.9543117Z [INFO] Using 'UTF-8' encoding to copy filtered properties files.
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:54.9544154Z [INFO] skip non existing resourceDirectory /home/runner/work/keycloak/keycloak/tests/utils/src/main/resources
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:54.9545073Z [INFO] 
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:54.9545614Z [INFO] --- compiler:3.8.1:compile (default-compile) @ keycloak-tests-utils ---
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:55.0366389Z [INFO] Changes detected - recompiling the module!
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:55.0383018Z [INFO] Compiling 15 source files to /home/runner/work/keycloak/keycloak/tests/utils/target/classes
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:56.8926939Z [INFO] Annotation processing is enabled because one or more processors were found
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:56.8927978Z   on the class path. A future release of javac may disable annotation processing
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:56.8928832Z   unless at least one processor is specified by name (-processor), or a search
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:56.8929717Z   path is specified (--processor-path, --processor-module-path), or annotation
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:56.8930482Z   processing is enabled explicitly (-proc:only, -proc:full).
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:56.8931275Z   Use -Xlint:-options to suppress this message.
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:56.8931890Z   Use -proc:none to disable annotation processing.
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:56.8933351Z [WARNING] /home/runner/work/keycloak/keycloak/tests/utils/src/main/java/org/keycloak/tests/utils/matchers/SamlStatusResponseTypeMatcher.java:[30,31] unchecked conversion
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:56.8934884Z   required: java.util.List<org.hamcrest.Matcher<java.net.URI>>
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:56.8935491Z   found:    java.util.ArrayList
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:56.8935889Z [INFO] 
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:56.8936458Z [INFO] --- resources:3.2.0:testResources (default-testResources) @ keycloak-tests-utils ---
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:56.8966012Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:56.8966759Z [INFO] Using 'UTF-8' encoding to copy filtered properties files.
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:56.8967778Z [INFO] skip non existing resourceDirectory /home/runner/work/keycloak/keycloak/tests/utils/src/test/resources
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:56.8968664Z [INFO] 
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:56.8969291Z [INFO] --- compiler:3.8.1:testCompile (default-testCompile) @ keycloak-tests-utils ---
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:56.9034792Z [INFO] No sources to compile
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:56.9035606Z [INFO] 
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:56.9036368Z [INFO] --- surefire:3.0.0-M7:test (default-test) @ keycloak-tests-utils ---
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:57.0126765Z [INFO] No tests to run.
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:57.0197521Z [INFO] 
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:57.0203106Z [INFO] --- jar:3.1.2:jar (default-jar) @ keycloak-tests-utils ---
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:57.1451630Z [INFO] Building jar: /home/runner/work/keycloak/keycloak/tests/utils/target/keycloak-tests-utils-999.0.0-SNAPSHOT.jar
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:57.2015195Z [INFO] 
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:57.2017353Z [INFO] --- source:3.1.0:jar-no-fork (attach-sources) @ keycloak-tests-utils ---
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:57.2561104Z [INFO] Building jar: /home/runner/work/keycloak/keycloak/tests/utils/target/keycloak-tests-utils-999.0.0-SNAPSHOT-sources.jar
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:57.2905151Z [INFO] 
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:57.2908489Z [INFO] -----------< org.keycloak.tests:keycloak-tests-utils-shared >-----------
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:57.2951655Z [INFO] Building Keycloak Testsuite Utilities Shared 999.0.0-SNAPSHOT      [3/5]
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:57.2953063Z [INFO]   from utils-shared/pom.xml
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:57.2953872Z [INFO] --------------------------------[ jar ]---------------------------------
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:57.3565024Z [INFO] 
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:57.3569362Z [INFO] --- enforcer:3.0.0-M3:enforce (enforce-java-version) @ keycloak-tests-utils-shared ---
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:57.3597487Z [INFO] 
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:57.3602294Z [INFO] --- enforcer:3.0.0-M3:enforce (enforce-maven-version) @ keycloak-tests-utils-shared ---
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:57.3606946Z [INFO] 
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:57.3611592Z [INFO] --- buildnumber:1.4:create (get-scm-revision) @ keycloak-tests-utils-shared ---
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:57.3661451Z [INFO] 
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:57.3662308Z [INFO] --- resources:3.2.0:resources (default-resources) @ keycloak-tests-utils-shared ---
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:57.3663277Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:57.3664696Z [INFO] Using 'UTF-8' encoding to copy filtered properties files.
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:57.3666090Z [INFO] skip non existing resourceDirectory /home/runner/work/keycloak/keycloak/tests/utils-shared/src/main/resources
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:57.3667195Z [INFO] 
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:57.3667854Z [INFO] --- compiler:3.8.1:compile (default-compile) @ keycloak-tests-utils-shared ---
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:57.3841100Z [INFO] Changes detected - recompiling the module!
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:57.3847692Z [INFO] Compiling 47 source files to /home/runner/work/keycloak/keycloak/tests/utils-shared/target/classes
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.0509193Z [INFO] Annotation processing is enabled because one or more processors were found
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.0510570Z   on the class path. A future release of javac may disable annotation processing
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.0511890Z   unless at least one processor is specified by name (-processor), or a search
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.0513003Z   path is specified (--processor-path, --processor-module-path), or annotation
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.0514056Z   processing is enabled explicitly (-proc:only, -proc:full).
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.0515010Z   Use -Xlint:-options to suppress this message.
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.0515696Z   Use -proc:none to disable annotation processing.
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.0516226Z [INFO] 
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.0516918Z [INFO] --- resources:3.2.0:testResources (default-testResources) @ keycloak-tests-utils-shared ---
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.0536188Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.0542630Z [INFO] Using 'UTF-8' encoding to copy filtered properties files.
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.0553584Z [INFO] skip non existing resourceDirectory /home/runner/work/keycloak/keycloak/tests/utils-shared/src/test/resources
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.0554602Z [INFO] 
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.0555309Z [INFO] --- compiler:3.8.1:testCompile (default-testCompile) @ keycloak-tests-utils-shared ---
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.0570174Z [INFO] No sources to compile
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.0572153Z [INFO] 
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.0573052Z [INFO] --- surefire:3.0.0-M7:test (default-test) @ keycloak-tests-utils-shared ---
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.0616827Z [INFO] No tests to run.
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.0622096Z [INFO] 
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.0622969Z [INFO] --- jar:3.1.2:jar (default-jar) @ keycloak-tests-utils-shared ---
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.0711898Z [INFO] Building jar: /home/runner/work/keycloak/keycloak/tests/utils-shared/target/keycloak-tests-utils-shared-999.0.0-SNAPSHOT.jar
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.0861822Z [INFO] 
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.0863872Z [INFO] --- source:3.1.0:jar-no-fork (attach-sources) @ keycloak-tests-utils-shared ---
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.1172438Z [INFO] Building jar: /home/runner/work/keycloak/keycloak/tests/utils-shared/target/keycloak-tests-utils-shared-999.0.0-SNAPSHOT-sources.jar
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.1306359Z [INFO] 
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.1307495Z [INFO] ---------< org.keycloak.tests:keycloak-tests-custom-providers >---------
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.1308647Z [INFO] Building Keycloak Testsuite Custom Providers 999.0.0-SNAPSHOT      [4/5]
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.1309531Z [INFO]   from custom-providers/pom.xml
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.1311064Z [INFO] --------------------------------[ jar ]---------------------------------
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.1445163Z [INFO] 
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.1445931Z [INFO] --- enforcer:3.0.0-M3:enforce (enforce-java-version) @ keycloak-tests-custom-providers ---
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.1466513Z [INFO] 
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.1504367Z [INFO] --- enforcer:3.0.0-M3:enforce (enforce-maven-version) @ keycloak-tests-custom-providers ---
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.1505267Z [INFO] 
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.1505914Z [INFO] --- buildnumber:1.4:create (get-scm-revision) @ keycloak-tests-custom-providers ---
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.1506660Z [INFO] 
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.1507297Z [INFO] --- resources:3.2.0:resources (default-resources) @ keycloak-tests-custom-providers ---
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.1508174Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.1509421Z [INFO] Using 'UTF-8' encoding to copy filtered properties files.
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.1521350Z [INFO] Copying 1 resource
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.1565709Z [INFO] 
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.1587340Z [INFO] --- compiler:3.8.1:compile (default-compile) @ keycloak-tests-custom-providers ---
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.1598255Z [INFO] Changes detected - recompiling the module!
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.1605198Z [INFO] Compiling 2 source files to /home/runner/work/keycloak/keycloak/tests/custom-providers/target/classes
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.2233906Z [INFO] 
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.2241198Z [INFO] --- resources:3.2.0:testResources (default-testResources) @ keycloak-tests-custom-providers ---
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.2248384Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.2250291Z [INFO] Using 'UTF-8' encoding to copy filtered properties files.
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.2252751Z [INFO] skip non existing resourceDirectory /home/runner/work/keycloak/keycloak/tests/custom-providers/src/test/resources
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.2281329Z [INFO] 
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.2282489Z [INFO] --- compiler:3.8.1:testCompile (default-testCompile) @ keycloak-tests-custom-providers ---
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.2283544Z [INFO] No sources to compile
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.2284297Z [INFO] 
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.2285067Z [INFO] --- surefire:3.0.0-M7:test (default-test) @ keycloak-tests-custom-providers ---
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.2297966Z [INFO] No tests to run.
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.2308334Z [INFO] 
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.2316004Z [INFO] --- jar:3.1.2:jar (default-jar) @ keycloak-tests-custom-providers ---
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.2352363Z [INFO] Building jar: /home/runner/work/keycloak/keycloak/tests/custom-providers/target/keycloak-tests-custom-providers-999.0.0-SNAPSHOT.jar
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.2431360Z [INFO] 
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.2435844Z [INFO] --- source:3.1.0:jar-no-fork (attach-sources) @ keycloak-tests-custom-providers ---
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.2460654Z [INFO] Building jar: /home/runner/work/keycloak/keycloak/tests/custom-providers/target/keycloak-tests-custom-providers-999.0.0-SNAPSHOT-sources.jar
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.2654574Z [INFO] 
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.2657922Z [INFO] ---------------< org.keycloak.tests:keycloak-tests-base >---------------
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.2658820Z [INFO] Building New Keycloak Base Testsuite 999.0.0-SNAPSHOT              [5/5]
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.2659466Z [INFO]   from base/pom.xml
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.2659980Z [INFO] --------------------------------[ jar ]---------------------------------
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.6886440Z [INFO] 
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.6887196Z [INFO] --- enforcer:3.0.0-M3:enforce (enforce-java-version) @ keycloak-tests-base ---
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.6903000Z [INFO] 
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.6905508Z [INFO] --- enforcer:3.0.0-M3:enforce (enforce-maven-version) @ keycloak-tests-base ---
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.6914421Z [INFO] 
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.6916637Z [INFO] --- buildnumber:1.4:create (get-scm-revision) @ keycloak-tests-base ---
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.6929588Z [INFO] 
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.6932026Z [INFO] --- resources:3.2.0:resources (default-resources) @ keycloak-tests-base ---
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.6946111Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.6948827Z [INFO] Using 'UTF-8' encoding to copy filtered properties files.
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.6951582Z [INFO] skip non existing resourceDirectory /home/runner/work/keycloak/keycloak/tests/base/src/main/resources
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.6954726Z [INFO] 
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.6957034Z [INFO] --- compiler:3.8.1:compile (default-compile) @ keycloak-tests-base ---
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.7001494Z [INFO] No sources to compile
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.7004267Z [INFO] 
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.7005228Z [INFO] --- resources:3.2.0:testResources (default-testResources) @ keycloak-tests-base ---
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.7006408Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.7012465Z [INFO] Using 'UTF-8' encoding to copy filtered properties files.
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.7013534Z [INFO] Copying 6 resources
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.7024131Z [INFO] 
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.7028217Z [INFO] --- compiler:3.8.1:testCompile (default-testCompile) @ keycloak-tests-base ---
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.7203931Z [INFO] Changes detected - recompiling the module!
+Store IT (mysql)	Run new base tests	2025-03-23T17:48:58.7214432Z [INFO] Compiling 73 source files to /home/runner/work/keycloak/keycloak/tests/base/target/test-classes
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:01.1785041Z [INFO] Annotation processing is enabled because one or more processors were found
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:01.1790014Z   on the class path. A future release of javac may disable annotation processing
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:01.1803663Z   unless at least one processor is specified by name (-processor), or a search
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:01.1807109Z   path is specified (--processor-path, --processor-module-path), or annotation
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:01.1808182Z   processing is enabled explicitly (-proc:only, -proc:full).
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:01.1811710Z   Use -Xlint:-options to suppress this message.
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:01.1812589Z   Use -proc:none to disable annotation processing.
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:01.1816523Z [WARNING] /home/runner/work/keycloak/keycloak/tests/base/src/test/java/org/keycloak/tests/admin/RealmLocalizationResourceTest.java:[77,73] getRealmLocalizationTexts(java.lang.String,java.lang.Boolean) in org.keycloak.admin.client.resource.RealmLocalizationResource has been deprecated
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:01.1819913Z [WARNING] /home/runner/work/keycloak/keycloak/tests/base/src/test/java/org/keycloak/tests/admin/client/AbstractClientScopeTest.java:[38,59] unchecked conversion
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:01.1823535Z   required: java.util.Map<java.lang.String,java.lang.String>
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:01.1824412Z   found:    java.util.Map
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:01.1827675Z [WARNING] /home/runner/work/keycloak/keycloak/tests/base/src/test/java/org/keycloak/tests/admin/InitialAccessTokenResourceTest.java:[157,45] removeExpired(org.keycloak.models.RealmModel) in org.keycloak.sessions.AuthenticationSessionProvider has been deprecated
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:01.1830064Z [INFO] 
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:01.1831824Z [INFO] --- surefire:3.0.0-M7:test (default-test) @ keycloak-tests-base ---
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:01.1944396Z [INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:01.4750491Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/apache/maven/surefire/surefire-junit-platform/3.0.0-M7/surefire-junit-platform-3.0.0-M7.jar
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:01.8454356Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit-platform/3.0.0-M7/surefire-junit-platform-3.0.0-M7.jar
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:01.8977090Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit-platform/3.0.0-M7/surefire-junit-platform-3.0.0-M7.jar (26 kB at 547 kB/s)
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:01.8979758Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/apache/maven/surefire/surefire-junit-platform/3.0.0-M7/surefire-junit-platform-3.0.0-M7.pom
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:01.9764395Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit-platform/3.0.0-M7/surefire-junit-platform-3.0.0-M7.pom
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:01.9832613Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit-platform/3.0.0-M7/surefire-junit-platform-3.0.0-M7.pom (5.3 kB at 882 kB/s)
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:01.9860582Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/apache/maven/surefire/surefire-providers/3.0.0-M7/surefire-providers-3.0.0-M7.pom
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:02.0677132Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-providers/3.0.0-M7/surefire-providers-3.0.0-M7.pom
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:02.0715178Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-providers/3.0.0-M7/surefire-providers-3.0.0-M7.pom (2.5 kB at 634 kB/s)
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:02.0834481Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/apache/maven/surefire/common-java5/3.0.0-M7/common-java5-3.0.0-M7.pom
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:02.1788937Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-java5/3.0.0-M7/common-java5-3.0.0-M7.pom
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:02.1826972Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-java5/3.0.0-M7/common-java5-3.0.0-M7.pom (2.7 kB at 674 kB/s)
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:02.1929288Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/junit/platform/junit-platform-launcher/1.3.2/junit-platform-launcher-1.3.2.pom
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:02.3082988Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-launcher/1.3.2/junit-platform-launcher-1.3.2.pom
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:02.3117181Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-launcher/1.3.2/junit-platform-launcher-1.3.2.pom (2.2 kB at 739 kB/s)
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:02.3136189Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/apiguardian/apiguardian-api/1.0.0/apiguardian-api-1.0.0.pom
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:02.3923513Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apiguardian/apiguardian-api/1.0.0/apiguardian-api-1.0.0.pom
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:02.3952232Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apiguardian/apiguardian-api/1.0.0/apiguardian-api-1.0.0.pom (1.2 kB at 584 kB/s)
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:02.3967401Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/junit/platform/junit-platform-engine/1.3.2/junit-platform-engine-1.3.2.pom
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:02.4751547Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-engine/1.3.2/junit-platform-engine-1.3.2.pom
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:02.4782106Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-engine/1.3.2/junit-platform-engine-1.3.2.pom (2.4 kB at 798 kB/s)
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:02.4797525Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/junit/platform/junit-platform-commons/1.3.2/junit-platform-commons-1.3.2.pom
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:02.5584310Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-commons/1.3.2/junit-platform-commons-1.3.2.pom
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:02.5613738Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-commons/1.3.2/junit-platform-commons-1.3.2.pom (2.0 kB at 674 kB/s)
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:02.5628371Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/opentest4j/opentest4j/1.1.1/opentest4j-1.1.1.pom
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:02.6424794Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/opentest4j/opentest4j/1.1.1/opentest4j-1.1.1.pom
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:02.6456434Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/opentest4j/opentest4j/1.1.1/opentest4j-1.1.1.pom (1.7 kB at 561 kB/s)
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:02.6470540Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/junit/jupiter/junit-jupiter-engine/5.3.2/junit-jupiter-engine-5.3.2.pom
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:02.7450212Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter-engine/5.3.2/junit-jupiter-engine-5.3.2.pom
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:02.7479285Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter-engine/5.3.2/junit-jupiter-engine-5.3.2.pom (2.4 kB at 798 kB/s)
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:02.7510033Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/junit/jupiter/junit-jupiter-api/5.3.2/junit-jupiter-api-5.3.2.pom
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:02.8308758Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter-api/5.3.2/junit-jupiter-api-5.3.2.pom
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:02.8337651Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter-api/5.3.2/junit-jupiter-api-5.3.2.pom (2.4 kB at 792 kB/s)
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:02.8364603Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/junit/jupiter/junit-jupiter-params/5.3.2/junit-jupiter-params-5.3.2.pom
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:02.9147221Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter-params/5.3.2/junit-jupiter-params-5.3.2.pom
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:02.9187606Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter-params/5.3.2/junit-jupiter-params-5.3.2.pom (2.2 kB at 550 kB/s)
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:02.9209791Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/mockito/mockito-core/2.28.2/mockito-core-2.28.2.pom
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:03.0028660Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/mockito/mockito-core/2.28.2/mockito-core-2.28.2.pom
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:03.0078084Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/mockito/mockito-core/2.28.2/mockito-core-2.28.2.pom (20 kB at 5.0 MB/s)
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:03.0096576Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/net/bytebuddy/byte-buddy/1.9.10/byte-buddy-1.9.10.pom
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:03.0877558Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy/1.9.10/byte-buddy-1.9.10.pom
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:03.0912025Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy/1.9.10/byte-buddy-1.9.10.pom (10 kB at 2.6 MB/s)
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:03.0924533Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/net/bytebuddy/byte-buddy-parent/1.9.10/byte-buddy-parent-1.9.10.pom
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:03.1699663Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy-parent/1.9.10/byte-buddy-parent-1.9.10.pom
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:03.1746886Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy-parent/1.9.10/byte-buddy-parent-1.9.10.pom (36 kB at 7.2 MB/s)
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:03.1783504Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/net/bytebuddy/byte-buddy-agent/1.9.10/byte-buddy-agent-1.9.10.pom
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:03.2582257Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy-agent/1.9.10/byte-buddy-agent-1.9.10.pom
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:03.2611804Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy-agent/1.9.10/byte-buddy-agent-1.9.10.pom (6.0 kB at 3.0 MB/s)
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:03.2669057Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/powermock/powermock-reflect/2.0.9/powermock-reflect-2.0.9.pom
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:03.3451868Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/powermock/powermock-reflect/2.0.9/powermock-reflect-2.0.9.pom
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:03.3481978Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/powermock/powermock-reflect/2.0.9/powermock-reflect-2.0.9.pom (7.9 kB at 3.9 MB/s)
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:03.3498023Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/net/bytebuddy/byte-buddy/1.10.14/byte-buddy-1.10.14.pom
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:03.4320202Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy/1.10.14/byte-buddy-1.10.14.pom
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:03.4352130Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy/1.10.14/byte-buddy-1.10.14.pom (11 kB at 2.8 MB/s)
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:03.4364822Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/net/bytebuddy/byte-buddy-parent/1.10.14/byte-buddy-parent-1.10.14.pom
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:03.5143346Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy-parent/1.10.14/byte-buddy-parent-1.10.14.pom
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:03.5182671Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy-parent/1.10.14/byte-buddy-parent-1.10.14.pom (41 kB at 10 MB/s)
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:03.5229973Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/net/bytebuddy/byte-buddy-agent/1.10.14/byte-buddy-agent-1.10.14.pom
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:03.6014513Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy-agent/1.10.14/byte-buddy-agent-1.10.14.pom
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:03.6041412Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy-agent/1.10.14/byte-buddy-agent-1.10.14.pom (9.6 kB at 4.8 MB/s)
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:03.6085764Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/hamcrest/hamcrest-library/1.3/hamcrest-library-1.3.pom
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:03.6881854Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/hamcrest/hamcrest-library/1.3/hamcrest-library-1.3.pom
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:03.6909468Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/hamcrest/hamcrest-library/1.3/hamcrest-library-1.3.pom (820 B at 273 kB/s)
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:03.6943932Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/assertj/assertj-core/3.22.0/assertj-core-3.22.0.pom
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:03.7800262Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/assertj/assertj-core/3.22.0/assertj-core-3.22.0.pom
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:03.7839577Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/assertj/assertj-core/3.22.0/assertj-core-3.22.0.pom (31 kB at 7.7 MB/s)
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:03.7859167Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/assertj/assertj-parent-pom/2.2.14/assertj-parent-pom-2.2.14.pom
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:03.8668637Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/assertj/assertj-parent-pom/2.2.14/assertj-parent-pom-2.2.14.pom
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:03.8705369Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/assertj/assertj-parent-pom/2.2.14/assertj-parent-pom-2.2.14.pom (25 kB at 6.1 MB/s)
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:03.8728913Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/junit/junit-bom/5.8.2/junit-bom-5.8.2.pom
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:03.9517348Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.8.2/junit-bom-5.8.2.pom
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:03.9551179Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.8.2/junit-bom-5.8.2.pom (5.6 kB at 1.9 MB/s)
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:03.9575162Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/junit/junit-bom/5.8.0/junit-bom-5.8.0.pom
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:04.0692865Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.8.0/junit-bom-5.8.0.pom
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:04.0720753Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.8.0/junit-bom-5.8.0.pom (5.6 kB at 2.8 MB/s)
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:04.0755234Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/apache/maven/surefire/common-java5/3.0.0-M7/common-java5-3.0.0-M7.jar
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:04.0757568Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/apiguardian/apiguardian-api/1.0.0/apiguardian-api-1.0.0.jar
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:04.0762420Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/junit/platform/junit-platform-engine/1.3.2/junit-platform-engine-1.3.2.jar
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:04.0765155Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/junit/platform/junit-platform-commons/1.3.2/junit-platform-commons-1.3.2.jar
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:04.0767552Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/junit/platform/junit-platform-launcher/1.3.2/junit-platform-launcher-1.3.2.jar
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:04.1618011Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apiguardian/apiguardian-api/1.0.0/apiguardian-api-1.0.0.jar
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:04.1697293Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apiguardian/apiguardian-api/1.0.0/apiguardian-api-1.0.0.jar (2.2 kB at 270 kB/s)
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:04.1707748Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/opentest4j/opentest4j/1.1.1/opentest4j-1.1.1.jar
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:04.1746118Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-engine/1.3.2/junit-platform-engine-1.3.2.jar
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:04.1765276Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-commons/1.3.2/junit-platform-commons-1.3.2.jar
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:04.1797827Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-java5/3.0.0-M7/common-java5-3.0.0-M7.jar
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:04.1827314Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-launcher/1.3.2/junit-platform-launcher-1.3.2.jar
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:04.1833342Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-engine/1.3.2/junit-platform-engine-1.3.2.jar (138 kB at 17 MB/s)
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:04.1892659Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-commons/1.3.2/junit-platform-commons-1.3.2.jar (78 kB at 7.1 MB/s)
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:04.1906491Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-java5/3.0.0-M7/common-java5-3.0.0-M7.jar (17 kB at 1.6 MB/s)
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:04.1924373Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-launcher/1.3.2/junit-platform-launcher-1.3.2.jar (95 kB at 9.5 MB/s)
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:04.2559709Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/opentest4j/opentest4j/1.1.1/opentest4j-1.1.1.jar
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:04.2586920Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/opentest4j/opentest4j/1.1.1/opentest4j-1.1.1.jar (7.1 kB at 2.4 MB/s)
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:04.2728865Z [INFO] 
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:04.2729686Z [INFO] -------------------------------------------------------
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:04.2730239Z [INFO]  T E S T S
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:04.2730661Z [INFO] -------------------------------------------------------
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:05.5116018Z [INFO] Running org.keycloak.tests.suites.DatabaseTestSuite
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:05.5320516Z [INFO] Running org.keycloak.tests.admin.InitialAccessTokenResourceTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:05.5622589Z 2025-03-23 17:49:05,541 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:05.5648931Z 2025-03-23 17:49:05,546 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.InitialAccessTokenResourceTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:24.2110936Z 2025-03-23 17:49:24,113 WARN  [managed.db.mysql] (docker-java-stream--708407026) 2025-03-23T17:49:24.109764Z 0 [System] [MY-015017] [Server] MySQL Server Initialization - start.
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:24.2113034Z 2025-03-23 17:49:24,113 WARN  [managed.db.mysql] (docker-java-stream--708407026) 2025-03-23T17:49:24.110946Z 0 [System] [MY-013169] [Server] /usr/sbin/mysqld (mysqld 8.4.4) initializing of server in progress as process 80
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:24.2115096Z 2025-03-23 17:49:24,114 WARN  [managed.db.mysql] (docker-java-stream--708407026) 2025-03-23T17:49:24.114654Z 0 [Warning] [MY-013907] [InnoDB] Deprecated configuration parameters innodb_log_file_size and/or innodb_log_files_in_group have been used to compute innodb_redo_log_capacity=10485760. Please use innodb_redo_log_capacity instead.
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:24.2116890Z 2025-03-23 17:49:24,116 WARN  [managed.db.mysql] (docker-java-stream--708407026) 2025-03-23T17:49:24.115799Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:24.3111903Z 2025-03-23 17:49:24,291 WARN  [managed.db.mysql] (docker-java-stream--708407026) 2025-03-23T17:49:24.291236Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:25.1119217Z 2025-03-23 17:49:25,105 WARN  [managed.db.mysql] (docker-java-stream--708407026) 2025-03-23T17:49:25.104825Z 6 [Warning] [MY-010453] [Server] root@localhost is created with an empty password ! Please consider switching off the --initialize-insecure option.
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:27.1141097Z 2025-03-23 17:49:27,051 WARN  [managed.db.mysql] (docker-java-stream--708407026) 2025-03-23T17:49:27.050941Z 0 [System] [MY-015018] [Server] MySQL Server Initialization - end.
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:27.3143731Z 2025-03-23 17:49:27,262 WARN  [managed.db.mysql] (docker-java-stream--708407026) 2025-03-23T17:49:27.090952Z 0 [System] [MY-015015] [Server] MySQL Server - start.
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:27.3145277Z 2025-03-23 17:49:27,262 WARN  [managed.db.mysql] (docker-java-stream--708407026) 2025-03-23T17:49:27.255818Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.4.4) starting as process 121
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:27.3148192Z 2025-03-23 17:49:27,263 WARN  [managed.db.mysql] (docker-java-stream--708407026) 2025-03-23T17:49:27.263680Z 0 [Warning] [MY-013907] [InnoDB] Deprecated configuration parameters innodb_log_file_size and/or innodb_log_files_in_group have been used to compute innodb_redo_log_capacity=10485760. Please use innodb_redo_log_capacity instead.
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:27.3150693Z 2025-03-23 17:49:27,265 WARN  [managed.db.mysql] (docker-java-stream--708407026) 2025-03-23T17:49:27.265279Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:27.4144397Z 2025-03-23 17:49:27,392 WARN  [managed.db.mysql] (docker-java-stream--708407026) 2025-03-23T17:49:27.392266Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:27.7148699Z 2025-03-23 17:49:27,658 WARN  [managed.db.mysql] (docker-java-stream--708407026) 2025-03-23T17:49:27.658136Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:27.7151963Z 2025-03-23 17:49:27,658 WARN  [managed.db.mysql] (docker-java-stream--708407026) 2025-03-23T17:49:27.658179Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:27.7155271Z 2025-03-23 17:49:27,660 WARN  [managed.db.mysql] (docker-java-stream--708407026) 2025-03-23T17:49:27.660472Z 0 [Warning] [MY-011810] [Server] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:27.7157731Z 2025-03-23 17:49:27,687 WARN  [managed.db.mysql] (docker-java-stream--708407026) 2025-03-23T17:49:27.686937Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Socket: /var/run/mysqld/mysqlx.sock
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:27.7160007Z 2025-03-23 17:49:27,687 WARN  [managed.db.mysql] (docker-java-stream--708407026) 2025-03-23T17:49:27.687004Z 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.4.4'  socket: '/var/run/mysqld/mysqld.sock'  port: 0  MySQL Community Server - GPL.
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:28.3155885Z 2025-03-23 17:49:28,309 WARN  [managed.db.mysql] (docker-java-stream--708407026) Warning: Unable to load '/usr/share/zoneinfo/iso3166.tab' as time zone. Skipping it.
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:28.3157962Z 2025-03-23 17:49:28,309 WARN  [managed.db.mysql] (docker-java-stream--708407026) Warning: Unable to load '/usr/share/zoneinfo/leap-seconds.list' as time zone. Skipping it.
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:28.3159890Z 2025-03-23 17:49:28,310 WARN  [managed.db.mysql] (docker-java-stream--708407026) Warning: Unable to load '/usr/share/zoneinfo/leapseconds' as time zone. Skipping it.
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:29.7170196Z 2025-03-23 17:49:29,631 WARN  [managed.db.mysql] (docker-java-stream--708407026) Warning: Unable to load '/usr/share/zoneinfo/tzdata.zi' as time zone. Skipping it.
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:29.7172008Z 2025-03-23 17:49:29,631 WARN  [managed.db.mysql] (docker-java-stream--708407026) Warning: Unable to load '/usr/share/zoneinfo/zone.tab' as time zone. Skipping it.
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:29.7173752Z 2025-03-23 17:49:29,631 WARN  [managed.db.mysql] (docker-java-stream--708407026) Warning: Unable to load '/usr/share/zoneinfo/zone1970.tab' as time zone. Skipping it.
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:29.8170641Z 2025-03-23 17:49:29,788 WARN  [managed.db.mysql] (docker-java-stream--708407026) 2025-03-23T17:49:29.788499Z 13 [System] [MY-013172] [Server] Received SHUTDOWN from user root. Shutting down mysqld (Version: 8.4.4).
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:31.1184267Z 2025-03-23 17:49:31,079 WARN  [managed.db.mysql] (docker-java-stream--708407026) 2025-03-23T17:49:31.078799Z 0 [System] [MY-010910] [Server] /usr/sbin/mysqld: Shutdown complete (mysqld 8.4.4)  MySQL Community Server - GPL.
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:31.1186210Z 2025-03-23 17:49:31,079 WARN  [managed.db.mysql] (docker-java-stream--708407026) 2025-03-23T17:49:31.078821Z 0 [System] [MY-015016] [Server] MySQL Server - end.
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:32.0194633Z 2025-03-23 17:49:31,978 WARN  [managed.db.mysql] (docker-java-stream--708407026) 2025-03-23T17:49:31.806971Z 0 [System] [MY-015015] [Server] MySQL Server - start.
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:32.0196769Z 2025-03-23 17:49:31,978 WARN  [managed.db.mysql] (docker-java-stream--708407026) 2025-03-23T17:49:31.975933Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.4.4) starting as process 1
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:32.0199693Z 2025-03-23 17:49:31,979 WARN  [managed.db.mysql] (docker-java-stream--708407026) 2025-03-23T17:49:31.979583Z 0 [Warning] [MY-013907] [InnoDB] Deprecated configuration parameters innodb_log_file_size and/or innodb_log_files_in_group have been used to compute innodb_redo_log_capacity=10485760. Please use innodb_redo_log_capacity instead.
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:32.0203086Z 2025-03-23 17:49:31,981 WARN  [managed.db.mysql] (docker-java-stream--708407026) 2025-03-23T17:49:31.981021Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:32.1195161Z 2025-03-23 17:49:32,110 WARN  [managed.db.mysql] (docker-java-stream--708407026) 2025-03-23T17:49:32.110560Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:32.4198943Z 2025-03-23 17:49:32,339 WARN  [managed.db.mysql] (docker-java-stream--708407026) 2025-03-23T17:49:32.338833Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:32.4201650Z 2025-03-23 17:49:32,339 WARN  [managed.db.mysql] (docker-java-stream--708407026) 2025-03-23T17:49:32.338867Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:32.4203610Z 2025-03-23 17:49:32,340 WARN  [managed.db.mysql] (docker-java-stream--708407026) 2025-03-23T17:49:32.340663Z 0 [Warning] [MY-011810] [Server] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:32.4205157Z 2025-03-23 17:49:32,371 WARN  [managed.db.mysql] (docker-java-stream--708407026) 2025-03-23T17:49:32.370874Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060, socket: /var/run/mysqld/mysqlx.sock
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:32.4206578Z 2025-03-23 17:49:32,371 WARN  [managed.db.mysql] (docker-java-stream--708407026) 2025-03-23T17:49:32.370975Z 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.4.4'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server - GPL.
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:48.1703274Z 2025-03-23 17:49:48,072 WARN  [managed.keycloak] (pool-2-thread-1) [liquibase.changelog.DatabaseChangeLog] (main) Due to mysql SQL limitations, modifyDataType will lose primary key/autoincrement/not null/comment settings explicitly redefined in the change. Use <sql> or <modifySql> to re-specify all configuration if this is the case
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:48.1715236Z 2025-03-23 17:49:48,073 WARN  [managed.keycloak] (pool-2-thread-1) [liquibase.changelog.DatabaseChangeLog] (main) Due to mysql SQL limitations, setNullable will lose primary key/autoincrement/not null/comment settings explicitly redefined in the change. Use <sql> or <modifySql> to re-specify all configuration if this is the case
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:48.5703018Z 2025-03-23 17:49:48,550 WARN  [managed.keycloak] (pool-2-thread-1) [liquibase.changelog.DatabaseChangeLog] (main) Due to mysql SQL limitations, modifyDataType will lose primary key/autoincrement/not null/comment settings explicitly redefined in the change. Use <sql> or <modifySql> to re-specify all configuration if this is the case
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:48.5706817Z 2025-03-23 17:49:48,551 WARN  [managed.keycloak] (pool-2-thread-1) [liquibase.changelog.DatabaseChangeLog] (main) Due to mysql SQL limitations, setNullable will lose primary key/autoincrement/not null/comment settings explicitly redefined in the change. Use <sql> or <modifySql> to re-specify all configuration if this is the case
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:48.6713362Z 2025-03-23 17:49:48,645 WARN  [managed.keycloak] (pool-2-thread-1) [liquibase.changelog.DatabaseChangeLog] (main) Due to mysql SQL limitations, modifyDataType will lose primary key/autoincrement/not null/comment settings explicitly redefined in the change. Use <sql> or <modifySql> to re-specify all configuration if this is the case
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:48.6717088Z 2025-03-23 17:49:48,646 WARN  [managed.keycloak] (pool-2-thread-1) [liquibase.changelog.DatabaseChangeLog] (main) Due to mysql SQL limitations, setNullable will lose primary key/autoincrement/not null/comment settings explicitly redefined in the change. Use <sql> or <modifySql> to re-specify all configuration if this is the case
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:59.3805965Z 2025-03-23 17:49:59,288 WARN  [managed.keycloak] (pool-2-thread-1) [liquibase.executor.jvm.JdbcExecutor] (main) NATIONAL/NCHAR/NVARCHAR implies the character set UTF8MB3, which will be replaced by UTF8MB4 in a future release. Please consider using CHAR(x) CHARACTER SET UTF8MB4 in order to be unambiguous.
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:59.3808738Z 2025-03-23 17:49:59,329 WARN  [managed.keycloak] (pool-2-thread-1) [liquibase.executor.jvm.JdbcExecutor] (main) NATIONAL/NCHAR/NVARCHAR implies the character set UTF8MB3, which will be replaced by UTF8MB4 in a future release. Please consider using CHAR(x) CHARACTER SET UTF8MB4 in order to be unambiguous.
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:59.3810734Z 2025-03-23 17:49:59,367 WARN  [managed.keycloak] (pool-2-thread-1) [liquibase.executor.jvm.JdbcExecutor] (main) NATIONAL/NCHAR/NVARCHAR implies the character set UTF8MB3, which will be replaced by UTF8MB4 in a future release. Please consider using CHAR(x) CHARACTER SET UTF8MB4 in order to be unambiguous.
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:59.4805391Z 2025-03-23 17:49:59,424 WARN  [managed.keycloak] (pool-2-thread-1) [liquibase.executor.jvm.JdbcExecutor] (main) NATIONAL/NCHAR/NVARCHAR implies the character set UTF8MB3, which will be replaced by UTF8MB4 in a future release. Please consider using CHAR(x) CHARACTER SET UTF8MB4 in order to be unambiguous.
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:59.5806804Z 2025-03-23 17:49:59,480 WARN  [managed.keycloak] (pool-2-thread-1) [liquibase.executor.jvm.JdbcExecutor] (main) NATIONAL/NCHAR/NVARCHAR implies the character set UTF8MB3, which will be replaced by UTF8MB4 in a future release. Please consider using CHAR(x) CHARACTER SET UTF8MB4 in order to be unambiguous.
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:59.5809243Z 2025-03-23 17:49:59,553 WARN  [managed.keycloak] (pool-2-thread-1) [liquibase.executor.jvm.JdbcExecutor] (main) NATIONAL/NCHAR/NVARCHAR implies the character set UTF8MB3, which will be replaced by UTF8MB4 in a future release. Please consider using CHAR(x) CHARACTER SET UTF8MB4 in order to be unambiguous.
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:59.6806564Z 2025-03-23 17:49:59,591 WARN  [managed.keycloak] (pool-2-thread-1) [liquibase.executor.jvm.JdbcExecutor] (main) NATIONAL/NCHAR/NVARCHAR implies the character set UTF8MB3, which will be replaced by UTF8MB4 in a future release. Please consider using CHAR(x) CHARACTER SET UTF8MB4 in order to be unambiguous.
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:59.6809404Z 2025-03-23 17:49:59,630 WARN  [managed.keycloak] (pool-2-thread-1) [liquibase.executor.jvm.JdbcExecutor] (main) NATIONAL/NCHAR/NVARCHAR implies the character set UTF8MB3, which will be replaced by UTF8MB4 in a future release. Please consider using CHAR(x) CHARACTER SET UTF8MB4 in order to be unambiguous.
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:59.7809417Z 2025-03-23 17:49:59,704 WARN  [managed.keycloak] (pool-2-thread-1) [liquibase.executor.jvm.JdbcExecutor] (main) NATIONAL/NCHAR/NVARCHAR implies the character set UTF8MB3, which will be replaced by UTF8MB4 in a future release. Please consider using CHAR(x) CHARACTER SET UTF8MB4 in order to be unambiguous.
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:59.7812696Z 2025-03-23 17:49:59,718 WARN  [managed.keycloak] (pool-2-thread-1) [liquibase.executor.jvm.JdbcExecutor] (main) NATIONAL/NCHAR/NVARCHAR implies the character set UTF8MB3, which will be replaced by UTF8MB4 in a future release. Please consider using CHAR(x) CHARACTER SET UTF8MB4 in order to be unambiguous.
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:59.7814908Z 2025-03-23 17:49:59,762 WARN  [managed.keycloak] (pool-2-thread-1) [liquibase.executor.jvm.JdbcExecutor] (main) NATIONAL/NCHAR/NVARCHAR implies the character set UTF8MB3, which will be replaced by UTF8MB4 in a future release. Please consider using CHAR(x) CHARACTER SET UTF8MB4 in order to be unambiguous.
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:59.8810526Z 2025-03-23 17:49:59,784 WARN  [managed.keycloak] (pool-2-thread-1) [liquibase.executor.jvm.JdbcExecutor] (main) NATIONAL/NCHAR/NVARCHAR implies the character set UTF8MB3, which will be replaced by UTF8MB4 in a future release. Please consider using CHAR(x) CHARACTER SET UTF8MB4 in order to be unambiguous.
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:59.8813777Z 2025-03-23 17:49:59,822 WARN  [managed.keycloak] (pool-2-thread-1) [liquibase.executor.jvm.JdbcExecutor] (main) NATIONAL/NCHAR/NVARCHAR implies the character set UTF8MB3, which will be replaced by UTF8MB4 in a future release. Please consider using CHAR(x) CHARACTER SET UTF8MB4 in order to be unambiguous.
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:59.8816537Z 2025-03-23 17:49:59,844 WARN  [managed.keycloak] (pool-2-thread-1) [liquibase.executor.jvm.JdbcExecutor] (main) NATIONAL/NCHAR/NVARCHAR implies the character set UTF8MB3, which will be replaced by UTF8MB4 in a future release. Please consider using CHAR(x) CHARACTER SET UTF8MB4 in order to be unambiguous.
+Store IT (mysql)	Run new base tests	2025-03-23T17:49:59.8818792Z 2025-03-23 17:49:59,865 WARN  [managed.keycloak] (pool-2-thread-1) [liquibase.executor.jvm.JdbcExecutor] (main) NATIONAL/NCHAR/NVARCHAR implies the character set UTF8MB3, which will be replaced by UTF8MB4 in a future release. Please consider using CHAR(x) CHARACTER SET UTF8MB4 in order to be unambiguous.
+Store IT (mysql)	Run new base tests	2025-03-23T17:50:00.0811898Z 2025-03-23 17:49:59,980 WARN  [managed.keycloak] (pool-2-thread-1) [liquibase.executor.jvm.JdbcExecutor] (main) NATIONAL/NCHAR/NVARCHAR implies the character set UTF8MB3, which will be replaced by UTF8MB4 in a future release. Please consider using CHAR(x) CHARACTER SET UTF8MB4 in order to be unambiguous.
+Store IT (mysql)	Run new base tests	2025-03-23T17:50:00.0815756Z 2025-03-23 17:50:00,071 WARN  [managed.keycloak] (pool-2-thread-1) [liquibase.executor.jvm.JdbcExecutor] (main) NATIONAL/NCHAR/NVARCHAR implies the character set UTF8MB3, which will be replaced by UTF8MB4 in a future release. Please consider using CHAR(x) CHARACTER SET UTF8MB4 in order to be unambiguous.
+Store IT (mysql)	Run new base tests	2025-03-23T17:50:05.5862834Z 2025-03-23 17:50:05,545 WARN  [managed.keycloak] (pool-2-thread-1) [liquibase.executor.jvm.JdbcExecutor] (main) NATIONAL/NCHAR/NVARCHAR implies the character set UTF8MB3, which will be replaced by UTF8MB4 in a future release. Please consider using CHAR(x) CHARACTER SET UTF8MB4 in order to be unambiguous.
+Store IT (mysql)	Run new base tests	2025-03-23T17:50:07.6880084Z 2025-03-23 17:50:07,684 WARN  [managed.keycloak] (pool-2-thread-1) [liquibase.executor.jvm.JdbcExecutor] (main) 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+Store IT (mysql)	Run new base tests	2025-03-23T17:50:07.7881953Z 2025-03-23 17:50:07,711 WARN  [managed.keycloak] (pool-2-thread-1) [liquibase.executor.jvm.JdbcExecutor] (main) 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+Store IT (mysql)	Run new base tests	2025-03-23T17:50:07.8882726Z 2025-03-23 17:50:07,883 WARN  [managed.keycloak] (pool-2-thread-1) [liquibase.executor.jvm.JdbcExecutor] (main) 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+Store IT (mysql)	Run new base tests	2025-03-23T17:50:07.9884329Z 2025-03-23 17:50:07,906 WARN  [managed.keycloak] (pool-2-thread-1) [liquibase.executor.jvm.JdbcExecutor] (main) 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+Store IT (mysql)	Run new base tests	2025-03-23T17:50:07.9887153Z 2025-03-23 17:50:07,923 WARN  [managed.keycloak] (pool-2-thread-1) [liquibase.executor.jvm.JdbcExecutor] (main) 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+Store IT (mysql)	Run new base tests	2025-03-23T17:50:08.0884595Z 2025-03-23 17:50:08,080 WARN  [managed.keycloak] (pool-2-thread-1) [liquibase.executor.jvm.JdbcExecutor] (main) 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+Store IT (mysql)	Run new base tests	2025-03-23T17:50:08.1886157Z 2025-03-23 17:50:08,107 WARN  [managed.keycloak] (pool-2-thread-1) [liquibase.executor.jvm.JdbcExecutor] (main) 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+Store IT (mysql)	Run new base tests	2025-03-23T17:50:08.2887322Z 2025-03-23 17:50:08,280 WARN  [managed.keycloak] (pool-2-thread-1) [liquibase.executor.jvm.JdbcExecutor] (main) 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+Store IT (mysql)	Run new base tests	2025-03-23T17:50:08.3888427Z 2025-03-23 17:50:08,304 WARN  [managed.keycloak] (pool-2-thread-1) [liquibase.executor.jvm.JdbcExecutor] (main) 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+Store IT (mysql)	Run new base tests	2025-03-23T17:50:08.3892858Z 2025-03-23 17:50:08,323 WARN  [managed.keycloak] (pool-2-thread-1) [liquibase.executor.jvm.JdbcExecutor] (main) 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+Store IT (mysql)	Run new base tests	2025-03-23T17:50:08.3895646Z 2025-03-23 17:50:08,344 WARN  [managed.keycloak] (pool-2-thread-1) [liquibase.executor.jvm.JdbcExecutor] (main) 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+Store IT (mysql)	Run new base tests	2025-03-23T17:50:08.3898816Z 2025-03-23 17:50:08,360 WARN  [managed.keycloak] (pool-2-thread-1) [liquibase.executor.jvm.JdbcExecutor] (main) 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+Store IT (mysql)	Run new base tests	2025-03-23T17:50:09.5899218Z 2025-03-23 17:50:09,525 WARN  [managed.keycloak] (pool-2-thread-1) [liquibase.executor.jvm.JdbcExecutor] (main) 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+Store IT (mysql)	Run new base tests	2025-03-23T17:50:21.1652973Z [INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 75.554 s - in org.keycloak.tests.admin.InitialAccessTokenResourceTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:50:21.1662438Z [INFO] Running org.keycloak.tests.admin.partialexport.PartialExportTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:50:21.1667657Z 2025-03-23 17:50:21,088 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mysql)	Run new base tests	2025-03-23T17:50:21.1671046Z 2025-03-23 17:50:21,089 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.partialexport.PartialExportTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:50:25.0143126Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.883 s - in org.keycloak.tests.admin.partialexport.PartialExportTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:50:25.0145186Z [INFO] Running org.keycloak.tests.admin.RoleByIdResourceTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:50:25.0146054Z 2025-03-23 17:50:24,985 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mysql)	Run new base tests	2025-03-23T17:50:25.0147078Z 2025-03-23 17:50:24,985 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.RoleByIdResourceTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:50:47.5716681Z [INFO] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 22.562 s - in org.keycloak.tests.admin.RoleByIdResourceTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:50:47.5723374Z [INFO] Running org.keycloak.tests.admin.UsersTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:50:47.5729306Z 2025-03-23 17:50:47,546 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mysql)	Run new base tests	2025-03-23T17:50:47.5735088Z 2025-03-23 17:50:47,546 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.UsersTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:04.0498013Z [INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 16.486 s - in org.keycloak.tests.admin.UsersTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:04.0499445Z [INFO] Running org.keycloak.tests.admin.TimeOffsetTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:04.0506258Z 2025-03-23 17:51:04,033 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:04.0507369Z 2025-03-23 17:51:04,033 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.TimeOffsetTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:05.7643968Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.712 s - in org.keycloak.tests.admin.TimeOffsetTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:05.7649378Z [INFO] Running org.keycloak.tests.admin.client.ClientDescriptionConverterTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:05.7651112Z 2025-03-23 17:51:05,749 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:05.7652848Z 2025-03-23 17:51:05,749 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.client.ClientDescriptionConverterTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:07.2543396Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.491 s - in org.keycloak.tests.admin.client.ClientDescriptionConverterTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:07.2549804Z [INFO] Running org.keycloak.tests.admin.authentication.ExecutionTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:07.2551336Z 2025-03-23 17:51:07,245 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:07.2552435Z 2025-03-23 17:51:07,245 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authentication.ExecutionTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:09.9426381Z [INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.668 s - in org.keycloak.tests.admin.authentication.ExecutionTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:09.9427807Z [INFO] Running org.keycloak.tests.admin.authentication.RegistrationFlowTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:09.9428750Z 2025-03-23 17:51:09,915 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:09.9429809Z 2025-03-23 17:51:09,915 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authentication.RegistrationFlowTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:11.7441953Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.808 s - in org.keycloak.tests.admin.authentication.RegistrationFlowTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:11.7447655Z [INFO] Running org.keycloak.tests.admin.client.ClientSearchJpaTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:11.7454276Z 2025-03-23 17:51:11,725 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:11.7455344Z 2025-03-23 17:51:11,726 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.client.ClientSearchJpaTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:13.6805303Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.943 s - in org.keycloak.tests.admin.client.ClientSearchJpaTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:13.6808347Z [INFO] Running org.keycloak.tests.admin.SMTPConnectionTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:13.6809620Z 2025-03-23 17:51:13,672 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:13.6811087Z 2025-03-23 17:51:13,673 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.SMTPConnectionTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:16.8033142Z 2025-03-23 17:51:16,801 ERROR [managed.keycloak] (pool-2-thread-1) 	at org.jboss.threads.EnhancedQueueExecutor$Task.doRunWith(EnhancedQueueExecutor.java:2675)
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:16.8039065Z 2025-03-23 17:51:16,801 ERROR [managed.keycloak] (pool-2-thread-1) 	at org.jboss.threads.EnhancedQueueExecutor$Task.run(EnhancedQueueExecutor.java:2654)
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:16.8041918Z 2025-03-23 17:51:16,801 ERROR [managed.keycloak] (pool-2-thread-1) 	at org.jboss.threads.EnhancedQueueExecutor.runThreadBody(EnhancedQueueExecutor.java:1627)
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:16.8046732Z 2025-03-23 17:51:16,801 ERROR [managed.keycloak] (pool-2-thread-1) 	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1594)
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:16.8048407Z 2025-03-23 17:51:16,801 ERROR [managed.keycloak] (pool-2-thread-1) 	at org.jboss.threads.DelegatingRunnable.run(DelegatingRunnable.java:11)
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:16.8049937Z 2025-03-23 17:51:16,801 ERROR [managed.keycloak] (pool-2-thread-1) 	at org.jboss.threads.ThreadLocalResettingRunnable.run(ThreadLocalResettingRunnable.java:11)
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:16.8051427Z 2025-03-23 17:51:16,801 ERROR [managed.keycloak] (pool-2-thread-1) 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:16.8703203Z 2025-03-23 17:51:16,802 ERROR [managed.keycloak] (pool-2-thread-1) 	at java.base/java.lang.Thread.run(Thread.java:1583)
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:16.8705136Z 2025-03-23 17:51:16,802 ERROR [managed.keycloak] (pool-2-thread-1) Caused by: org.keycloak.email.EmailException: Password based SMTP connect failed
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:16.8706803Z 2025-03-23 17:51:16,802 ERROR [managed.keycloak] (pool-2-thread-1) 	at org.keycloak.email.PasswordAuthEmailAuthenticator.connect(PasswordAuthEmailAuthenticator.java:17)
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:16.8708487Z 2025-03-23 17:51:16,802 ERROR [managed.keycloak] (pool-2-thread-1) 	at org.keycloak.email.DefaultEmailSenderProvider.send(DefaultEmailSenderProvider.java:84)
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:16.8709793Z 2025-03-23 17:51:16,802 ERROR [managed.keycloak] (pool-2-thread-1) 	... 18 more
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:16.8711309Z 2025-03-23 17:51:16,802 ERROR [managed.keycloak] (pool-2-thread-1) Caused by: jakarta.mail.AuthenticationFailedException: failed to connect, no password specified?
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:16.8713150Z 2025-03-23 17:51:16,802 ERROR [managed.keycloak] (pool-2-thread-1) 	at jakarta.mail.Service.connect(Service.java:376)
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:16.8714348Z 2025-03-23 17:51:16,802 ERROR [managed.keycloak] (pool-2-thread-1) 	at jakarta.mail.Service.connect(Service.java:222)
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:16.8715513Z 2025-03-23 17:51:16,802 ERROR [managed.keycloak] (pool-2-thread-1) 	at jakarta.mail.Service.connect(Service.java:243)
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:16.8717125Z 2025-03-23 17:51:16,802 ERROR [managed.keycloak] (pool-2-thread-1) 	at org.keycloak.email.PasswordAuthEmailAuthenticator.connect(PasswordAuthEmailAuthenticator.java:15)
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:16.8718497Z 2025-03-23 17:51:16,802 ERROR [managed.keycloak] (pool-2-thread-1) 	... 19 more
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:18.8007845Z [INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.116 s - in org.keycloak.tests.admin.SMTPConnectionTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:18.8013176Z [INFO] Running org.keycloak.tests.admin.event.EventConfigTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:18.8014098Z 2025-03-23 17:51:18,790 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:18.8015145Z 2025-03-23 17:51:18,790 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.event.EventConfigTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:21.1015366Z [INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.3 s - in org.keycloak.tests.admin.event.EventConfigTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:21.1017601Z [INFO] Running org.keycloak.tests.admin.AdminHeadersTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:21.1018482Z 2025-03-23 17:51:21,091 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:21.1019493Z 2025-03-23 17:51:21,091 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.AdminHeadersTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:22.7479518Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.645 s - in org.keycloak.tests.admin.AdminHeadersTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:22.7481818Z [INFO] Running org.keycloak.tests.admin.event.AdminEventTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:22.7483129Z 2025-03-23 17:51:22,737 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:22.7484262Z 2025-03-23 17:51:22,738 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.event.AdminEventTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:28.6711161Z [INFO] Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.923 s - in org.keycloak.tests.admin.event.AdminEventTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:28.6712801Z [INFO] Running org.keycloak.tests.admin.event.AdminEventAuthDetailsTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:28.6713970Z 2025-03-23 17:51:28,662 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:28.6715634Z 2025-03-23 17:51:28,662 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.event.AdminEventAuthDetailsTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:30.7831296Z [INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.107 s - in org.keycloak.tests.admin.event.AdminEventAuthDetailsTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:30.7832825Z [INFO] Running org.keycloak.tests.admin.AdminConsoleLandingPageTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:30.7833707Z 2025-03-23 17:51:30,770 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:30.7834788Z 2025-03-23 17:51:30,770 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.AdminConsoleLandingPageTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:30.8275841Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.045 s - in org.keycloak.tests.admin.AdminConsoleLandingPageTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:30.8277220Z [INFO] Running org.keycloak.tests.admin.AdminPreflightTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:30.8278135Z 2025-03-23 17:51:30,816 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:30.8279277Z 2025-03-23 17:51:30,816 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.AdminPreflightTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:30.8433778Z [INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s - in org.keycloak.tests.admin.AdminPreflightTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:30.8448742Z [INFO] Running org.keycloak.tests.admin.userprofile.UserProfileAdminTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:30.8449960Z 2025-03-23 17:51:30,827 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:30.8451285Z 2025-03-23 17:51:30,827 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.userprofile.UserProfileAdminTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:33.0782301Z [INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.239 s - in org.keycloak.tests.admin.userprofile.UserProfileAdminTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:33.0784011Z [INFO] Running org.keycloak.tests.admin.RealmLocalizationResourceTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:33.0785034Z 2025-03-23 17:51:33,068 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:33.0785911Z 2025-03-23 17:51:33,068 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.RealmLocalizationResourceTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:35.2318075Z [INFO] Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.148 s - in org.keycloak.tests.admin.RealmLocalizationResourceTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:35.2319349Z [INFO] Running org.keycloak.tests.admin.client.ClientProtocolMapperTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:35.2320092Z 2025-03-23 17:51:35,218 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:35.2321149Z 2025-03-23 17:51:35,218 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.client.ClientProtocolMapperTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:38.0566140Z [INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.822 s - in org.keycloak.tests.admin.client.ClientProtocolMapperTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:38.0567555Z [INFO] Running org.keycloak.tests.admin.client.ClientScopeProtocolMapperTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:38.0568539Z 2025-03-23 17:51:38,043 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:38.0569682Z 2025-03-23 17:51:38,043 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.client.ClientScopeProtocolMapperTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:41.7890706Z [INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.735 s - in org.keycloak.tests.admin.client.ClientScopeProtocolMapperTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:41.7893554Z [INFO] Running org.keycloak.tests.admin.group.SubGroupSearchTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:41.7894461Z 2025-03-23 17:51:41,779 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:41.7895446Z 2025-03-23 17:51:41,779 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.group.SubGroupSearchTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:43.5797830Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.79 s - in org.keycloak.tests.admin.group.SubGroupSearchTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:43.5799509Z [INFO] Running org.keycloak.tests.admin.DeclarativeUserTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:43.5800607Z 2025-03-23 17:51:43,570 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:43.5803373Z 2025-03-23 17:51:43,571 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.DeclarativeUserTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:46.3413264Z [INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.748 s - in org.keycloak.tests.admin.DeclarativeUserTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:46.3417025Z [INFO] Running org.keycloak.tests.admin.authz.fgap.FeatureDisabledTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:46.3418871Z 2025-03-23 17:51:46,320 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:46.3421042Z 2025-03-23 17:51:46,320 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authz.fgap.FeatureDisabledTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:48.5169972Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.186 s - in org.keycloak.tests.admin.authz.fgap.FeatureDisabledTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:48.5172375Z [INFO] Running org.keycloak.tests.admin.authentication.AuthenticatorConfigTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:48.5173863Z 2025-03-23 17:51:48,508 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:48.5175132Z 2025-03-23 17:51:48,508 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authentication.AuthenticatorConfigTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:51.8182565Z [INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.298 s - in org.keycloak.tests.admin.authentication.AuthenticatorConfigTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:51.8183972Z [INFO] Running org.keycloak.tests.admin.AttackDetectionResourceTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:51.8184905Z 2025-03-23 17:51:51,809 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:51.8185956Z 2025-03-23 17:51:51,809 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.AttackDetectionResourceTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:52.9307667Z 2025-03-23 17:51:52,927 WARN  [managed.keycloak] (main) [org.keycloak.events] (executor-thread-3) type="LOGIN_ERROR", realmId="default", realmName="default", clientId="test-app", userId="215e496f-db35-4e55-b6f8-9136f2e0f608", ipAddress="127.0.0.1", error="invalid_user_credentials", auth_method="openid-connect", grant_type="password", client_auth_method="client-secret", username="default"
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:52.9313847Z 2025-03-23 17:51:52,927 WARN  [managed.keycloak] (main) [org.keycloak.events] (executor-thread-3) type="LOGIN_ERROR", realmId="default", realmName="default", clientId="test-app", userId="215e496f-db35-4e55-b6f8-9136f2e0f608", ipAddress="127.0.0.1", error="invalid_user_credentials", auth_method="openid-connect", grant_type="password", client_auth_method="client-secret", username="default"
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:52.9320026Z 2025-03-23 17:51:52,927 WARN  [managed.keycloak] (main) [org.keycloak.events] (executor-thread-3) type="LOGIN_ERROR", realmId="default", realmName="default", clientId="test-app", userId="215e496f-db35-4e55-b6f8-9136f2e0f608", ipAddress="127.0.0.1", error="user_temporarily_disabled", auth_method="openid-connect", grant_type="password", client_auth_method="client-secret", username="default"
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:52.9326483Z 2025-03-23 17:51:52,927 WARN  [managed.keycloak] (main) [org.keycloak.events] (executor-thread-3) type="LOGIN_ERROR", realmId="default", realmName="default", clientId="test-app", userId="b6e49d52-cf88-4a8b-b61a-7ab661a1d42f", ipAddress="127.0.0.1", error="invalid_user_credentials", auth_method="openid-connect", grant_type="password", client_auth_method="client-secret", username="testUser2"
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:52.9329832Z 2025-03-23 17:51:52,927 WARN  [managed.keycloak] (main) [org.keycloak.events] (executor-thread-3) type="LOGIN_ERROR", realmId="default", realmName="default", clientId="test-app", userId="b6e49d52-cf88-4a8b-b61a-7ab661a1d42f", ipAddress="127.0.0.1", error="user_temporarily_disabled", auth_method="openid-connect", grant_type="password", client_auth_method="client-secret", username="testUser2"
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:52.9332317Z 2025-03-23 17:51:52,927 WARN  [managed.keycloak] (main) [org.keycloak.events] (executor-thread-3) type="LOGIN_ERROR", realmId="default", realmName="default", clientId="test-app", userId="null", ipAddress="127.0.0.1", error="user_not_found", auth_method="openid-connect", grant_type="password", client_auth_method="client-secret", username="nosuchuser"
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:52.9334007Z 2025-03-23 17:51:52,927 ERROR [testinfo] (main)     FAILED - org.keycloak.tests.admin.AttackDetectionResourceTest / test
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:53.6845244Z [ERROR] Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 1.863 s <<< FAILURE! - in org.keycloak.tests.admin.AttackDetectionResourceTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:53.6847550Z [ERROR] org.keycloak.tests.admin.AttackDetectionResourceTest.test  Time elapsed: 1.119 s  <<< FAILURE!
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:53.6849383Z org.opentest4j.AssertionFailedError: expected: <2> but was: <1>
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:53.6851754Z 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:53.6853932Z 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:53.6855532Z 	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:53.6856935Z 	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:53.6858567Z 	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:53.6859805Z 	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:53.6861526Z 	at org.keycloak.tests.admin.AttackDetectionResourceTest.assertBruteForce(AttackDetectionResourceTest.java:99)
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:53.6863318Z 	at org.keycloak.tests.admin.AttackDetectionResourceTest.test(AttackDetectionResourceTest.java:81)
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:53.6864962Z 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:53.6866219Z 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:53.6867233Z 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:53.6867885Z 
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:53.6868250Z [INFO] Running org.keycloak.tests.admin.CrossRealmPermissionsTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:53.6869131Z 2025-03-23 17:51:53,673 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:53.6869894Z 2025-03-23 17:51:53,673 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.CrossRealmPermissionsTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:57.1864261Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.503 s - in org.keycloak.tests.admin.CrossRealmPermissionsTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:57.1866220Z [INFO] Running org.keycloak.tests.admin.client.ClientScopeTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:57.1867148Z 2025-03-23 17:51:57,178 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mysql)	Run new base tests	2025-03-23T17:51:57.1867917Z 2025-03-23 17:51:57,178 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.client.ClientScopeTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:52:01.6321939Z [INFO] Tests run: 20, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.437 s - in org.keycloak.tests.admin.client.ClientScopeTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:52:01.6325410Z [INFO] Running org.keycloak.tests.admin.authentication.FlowTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:52:01.6326744Z 2025-03-23 17:52:01,617 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mysql)	Run new base tests	2025-03-23T17:52:01.6328344Z 2025-03-23 17:52:01,617 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authentication.FlowTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:52:06.3894746Z [INFO] Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.761 s - in org.keycloak.tests.admin.authentication.FlowTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:52:06.3896036Z [INFO] Running org.keycloak.tests.admin.authentication.ShiftRequiredActionTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:52:06.3896896Z 2025-03-23 17:52:06,379 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mysql)	Run new base tests	2025-03-23T17:52:06.3897723Z 2025-03-23 17:52:06,380 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authentication.ShiftRequiredActionTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:52:08.1223249Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.73 s - in org.keycloak.tests.admin.authentication.ShiftRequiredActionTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:52:08.1226702Z [INFO] Running org.keycloak.tests.admin.authentication.InitialFlowsTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:52:08.1228153Z 2025-03-23 17:52:08,111 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mysql)	Run new base tests	2025-03-23T17:52:08.1229994Z 2025-03-23 17:52:08,111 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authentication.InitialFlowsTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:52:09.6386599Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.517 s - in org.keycloak.tests.admin.authentication.InitialFlowsTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:52:09.6391246Z [INFO] Running org.keycloak.tests.admin.authentication.ProvidersTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:52:09.6392177Z 2025-03-23 17:52:09,630 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mysql)	Run new base tests	2025-03-23T17:52:09.6393517Z 2025-03-23 17:52:09,630 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authentication.ProvidersTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:52:11.3259937Z [INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.684 s - in org.keycloak.tests.admin.authentication.ProvidersTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:52:11.3261380Z [INFO] Running org.keycloak.tests.admin.AdminSignatureAlgorithmTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:52:11.3262204Z 2025-03-23 17:52:11,315 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mysql)	Run new base tests	2025-03-23T17:52:11.3263206Z 2025-03-23 17:52:11,316 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.AdminSignatureAlgorithmTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:52:11.5478106Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.223 s - in org.keycloak.tests.admin.AdminSignatureAlgorithmTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:52:11.5479962Z [INFO] Running org.keycloak.tests.admin.authentication.ShiftExecutionTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:52:11.5481256Z 2025-03-23 17:52:11,540 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mysql)	Run new base tests	2025-03-23T17:52:11.5482328Z 2025-03-23 17:52:11,540 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authentication.ShiftExecutionTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:52:13.6949424Z [INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.14 s - in org.keycloak.tests.admin.authentication.ShiftExecutionTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:52:13.6950745Z [INFO] Running org.keycloak.tests.admin.event.LoginEventsTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:52:13.6952529Z 2025-03-23 17:52:13,682 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mysql)	Run new base tests	2025-03-23T17:52:13.6954184Z 2025-03-23 17:52:13,682 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.event.LoginEventsTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:52:17.4387141Z [INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.746 s - in org.keycloak.tests.admin.event.LoginEventsTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:52:17.4403727Z [INFO] Running org.keycloak.tests.admin.event.EmailEventListenerTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:52:17.4404729Z 2025-03-23 17:52:17,430 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mysql)	Run new base tests	2025-03-23T17:52:17.4405800Z 2025-03-23 17:52:17,430 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.event.EmailEventListenerTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:52:19.2662356Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.826 s - in org.keycloak.tests.admin.event.EmailEventListenerTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:52:19.2664338Z [INFO] Running org.keycloak.tests.admin.client.ServiceAccountClientTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:52:19.2665282Z 2025-03-23 17:52:19,258 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mysql)	Run new base tests	2025-03-23T17:52:19.2666498Z 2025-03-23 17:52:19,258 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.client.ServiceAccountClientTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:52:21.4080002Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.139 s - in org.keycloak.tests.admin.client.ServiceAccountClientTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:52:21.4081576Z [INFO] Running org.keycloak.tests.admin.AuthzCleanupTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:52:21.4082420Z 2025-03-23 17:52:21,399 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mysql)	Run new base tests	2025-03-23T17:52:21.4083417Z 2025-03-23 17:52:21,399 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.AuthzCleanupTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:52:44.6624617Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 23.253 s - in org.keycloak.tests.admin.AuthzCleanupTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:52:44.6627305Z [INFO] Running org.keycloak.tests.admin.FineGrainedPermissionsUsersTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:52:44.6628277Z 2025-03-23 17:52:44,653 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mysql)	Run new base tests	2025-03-23T17:52:44.6629413Z 2025-03-23 17:52:44,653 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.FineGrainedPermissionsUsersTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:53:25.1462240Z [INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 40.477 s - in org.keycloak.tests.admin.FineGrainedPermissionsUsersTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:53:25.1464351Z [INFO] Running org.keycloak.tests.admin.ImpersonationDisabledTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:53:25.1465495Z 2025-03-23 17:53:25,131 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mysql)	Run new base tests	2025-03-23T17:53:25.1466728Z 2025-03-23 17:53:25,131 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.ImpersonationDisabledTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:53:46.9482434Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 21.793 s - in org.keycloak.tests.admin.ImpersonationDisabledTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:53:46.9489251Z [INFO] Running org.keycloak.tests.admin.ManagementPermissionsTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:53:46.9497056Z 2025-03-23 17:53:46,926 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mysql)	Run new base tests	2025-03-23T17:53:46.9498089Z 2025-03-23 17:53:46,926 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.ManagementPermissionsTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:54:10.4660014Z [INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 23.528 s - in org.keycloak.tests.admin.ManagementPermissionsTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:54:10.4661973Z [INFO] Running org.keycloak.tests.admin.SMTPConnectionVaultTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:54:10.4662844Z 2025-03-23 17:54:10,455 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mysql)	Run new base tests	2025-03-23T17:54:10.4663767Z 2025-03-23 17:54:10,456 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.SMTPConnectionVaultTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:54:34.3800175Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 23.911 s - in org.keycloak.tests.admin.SMTPConnectionVaultTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:54:34.3803763Z [INFO] Running org.keycloak.tests.admin.authentication.RequiredActionsTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:54:34.3805060Z 2025-03-23 17:54:34,368 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mysql)	Run new base tests	2025-03-23T17:54:34.3806119Z 2025-03-23 17:54:34,368 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authentication.RequiredActionsTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:54:58.0458115Z [INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 23.663 s - in org.keycloak.tests.admin.authentication.RequiredActionsTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:54:58.0459958Z [INFO] Running org.keycloak.tests.admin.authz.fgap.UserResourceTypePermissionTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:54:58.0461142Z 2025-03-23 17:54:58,033 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mysql)	Run new base tests	2025-03-23T17:54:58.0462282Z 2025-03-23 17:54:58,033 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authz.fgap.UserResourceTypePermissionTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:55:03.7753567Z 2025-03-23 17:55:03,689 WARN  [managed.keycloak] (pool-10-thread-1) [org.keycloak.common.Profile] (main) Experimental features enabled: admin-fine-grained-authz:v2
+Store IT (mysql)	Run new base tests	2025-03-23T17:55:03.7755422Z 2025-03-23 17:55:03,699 WARN  [managed.keycloak] (pool-10-thread-1) [org.keycloak.common.Profile] (main) Experimental features enabled: admin-fine-grained-authz:v2
+Store IT (mysql)	Run new base tests	2025-03-23T17:55:11.0917945Z 2025-03-23 17:55:11,074 WARN  [managed.keycloak] (pool-10-thread-1) [org.keycloak.common.Profile] (main) Experimental features enabled: admin-fine-grained-authz:v2
+Store IT (mysql)	Run new base tests	2025-03-23T17:55:11.0919857Z 2025-03-23 17:55:11,074 WARN  [managed.keycloak] (pool-10-thread-1) [org.keycloak.common.Profile] (main) Experimental features enabled: admin-fine-grained-authz:v2
+Store IT (mysql)	Run new base tests	2025-03-23T17:55:21.1128844Z 2025-03-23 17:55:21,094 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (mysql)	Run new base tests	2025-03-23T17:55:21.1139565Z 2025-03-23 17:55:21,095 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (mysql)	Run new base tests	2025-03-23T17:55:21.1143019Z 2025-03-23 17:55:21,095 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (mysql)	Run new base tests	2025-03-23T17:55:21.1157278Z 2025-03-23 17:55:21,096 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (mysql)	Run new base tests	2025-03-23T17:55:23.8810534Z [INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 25.836 s - in org.keycloak.tests.admin.authz.fgap.UserResourceTypePermissionTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:55:23.8812487Z [INFO] Running org.keycloak.tests.admin.authz.fgap.RoleResourceTypeEvaluationTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:55:23.8813724Z 2025-03-23 17:55:23,871 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mysql)	Run new base tests	2025-03-23T17:55:23.8815026Z 2025-03-23 17:55:23,871 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authz.fgap.RoleResourceTypeEvaluationTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:55:27.5945987Z [INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.704 s - in org.keycloak.tests.admin.authz.fgap.RoleResourceTypeEvaluationTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:55:27.5958988Z [INFO] Running org.keycloak.tests.admin.authz.fgap.UserResourceTypeEvaluationTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:55:27.5960508Z 2025-03-23 17:55:27,578 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mysql)	Run new base tests	2025-03-23T17:55:27.5962076Z 2025-03-23 17:55:27,578 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authz.fgap.UserResourceTypeEvaluationTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:55:32.0619655Z [INFO] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.473 s - in org.keycloak.tests.admin.authz.fgap.UserResourceTypeEvaluationTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:55:32.0624669Z [INFO] Running org.keycloak.tests.admin.authz.fgap.PermissionRESTTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:55:32.0625810Z 2025-03-23 17:55:32,053 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mysql)	Run new base tests	2025-03-23T17:55:32.0626906Z 2025-03-23 17:55:32,053 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authz.fgap.PermissionRESTTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:55:34.3472179Z [INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.284 s - in org.keycloak.tests.admin.authz.fgap.PermissionRESTTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:55:34.3474093Z [INFO] Running org.keycloak.tests.admin.authz.fgap.FeatureV2EnabledTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:55:34.3475190Z 2025-03-23 17:55:34,337 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mysql)	Run new base tests	2025-03-23T17:55:34.3476431Z 2025-03-23 17:55:34,338 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authz.fgap.FeatureV2EnabledTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:55:36.6514959Z [INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.3 s - in org.keycloak.tests.admin.authz.fgap.FeatureV2EnabledTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:55:36.6516839Z [INFO] Running org.keycloak.tests.admin.authz.fgap.GroupResourceTypeEvaluationTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:55:36.6520613Z 2025-03-23 17:55:36,639 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mysql)	Run new base tests	2025-03-23T17:55:36.6523382Z 2025-03-23 17:55:36,639 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authz.fgap.GroupResourceTypeEvaluationTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:55:40.4437051Z [INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.794 s - in org.keycloak.tests.admin.authz.fgap.GroupResourceTypeEvaluationTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:55:40.4439019Z [INFO] Running org.keycloak.tests.admin.authz.fgap.RoleResourceTypePermissionTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:55:40.4440620Z 2025-03-23 17:55:40,434 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mysql)	Run new base tests	2025-03-23T17:55:40.4442018Z 2025-03-23 17:55:40,434 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authz.fgap.RoleResourceTypePermissionTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:55:43.4807146Z [INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.031 s - in org.keycloak.tests.admin.authz.fgap.RoleResourceTypePermissionTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:55:43.4809568Z [INFO] Running org.keycloak.tests.admin.authz.fgap.UserResourceTypeFilteringTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:55:43.4810699Z 2025-03-23 17:55:43,467 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mysql)	Run new base tests	2025-03-23T17:55:43.4813748Z 2025-03-23 17:55:43,467 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authz.fgap.UserResourceTypeFilteringTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:55:49.6635281Z [INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.181 s - in org.keycloak.tests.admin.authz.fgap.UserResourceTypeFilteringTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:55:49.6640133Z [INFO] Running org.keycloak.tests.admin.authz.fgap.GroupResourceTypePermissionTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:55:49.6642085Z 2025-03-23 17:55:49,651 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mysql)	Run new base tests	2025-03-23T17:55:49.6643311Z 2025-03-23 17:55:49,651 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authz.fgap.GroupResourceTypePermissionTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:55:52.1032009Z [INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.443 s - in org.keycloak.tests.admin.authz.fgap.GroupResourceTypePermissionTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:55:52.1033697Z [INFO] Running org.keycloak.tests.admin.authz.fgap.ClientResourceTypePermissionTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:55:52.1034807Z 2025-03-23 17:55:52,095 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mysql)	Run new base tests	2025-03-23T17:55:52.1036843Z 2025-03-23 17:55:52,096 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authz.fgap.ClientResourceTypePermissionTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:55:54.8092361Z [INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.704 s - in org.keycloak.tests.admin.authz.fgap.ClientResourceTypePermissionTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:55:54.8094591Z [INFO] Running org.keycloak.tests.admin.authz.fgap.ClientResourceTypeEvaluationTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:55:54.8096251Z 2025-03-23 17:55:54,801 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mysql)	Run new base tests	2025-03-23T17:55:54.8097521Z 2025-03-23 17:55:54,801 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authz.fgap.ClientResourceTypeEvaluationTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:55:56.8695845Z 2025-03-23 17:55:56,833 WARN  [managed.keycloak] (pool-10-thread-1) [org.keycloak.events] (executor-thread-1) type="LOGOUT_ERROR", realmId="default", realmName="default", clientId="myclient", userId="null", ipAddress="127.0.0.1", error="invalid_client_credentials"
+Store IT (mysql)	Run new base tests	2025-03-23T17:55:57.6815244Z [INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.868 s - in org.keycloak.tests.admin.authz.fgap.ClientResourceTypeEvaluationTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:55:57.6817483Z [INFO] Running org.keycloak.tests.admin.authz.fgap.FeatureV1EnabledTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:55:57.6818435Z 2025-03-23 17:55:57,671 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mysql)	Run new base tests	2025-03-23T17:55:57.6819510Z 2025-03-23 17:55:57,671 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authz.fgap.FeatureV1EnabledTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:56:20.5464318Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 22.865 s - in org.keycloak.tests.admin.authz.fgap.FeatureV1EnabledTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:56:20.5467421Z [INFO] Running org.keycloak.tests.admin.client.ClientSearchTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:56:20.5468233Z 2025-03-23 17:56:20,538 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mysql)	Run new base tests	2025-03-23T17:56:20.5469475Z 2025-03-23 17:56:20,538 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.client.ClientSearchTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:56:43.3663366Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 22.818 s - in org.keycloak.tests.admin.client.ClientSearchTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:56:43.3664609Z [INFO] Running org.keycloak.tests.admin.client.DynamicClientScopeTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:56:43.3665521Z 2025-03-23 17:56:43,358 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mysql)	Run new base tests	2025-03-23T17:56:43.3666576Z 2025-03-23 17:56:43,358 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.client.DynamicClientScopeTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:56:49.1943431Z 2025-03-23 17:56:49,121 WARN  [managed.keycloak] (pool-13-thread-1) [org.keycloak.common.Profile] (main) Experimental features enabled: dynamic-scopes:v1
+Store IT (mysql)	Run new base tests	2025-03-23T17:56:49.1945925Z 2025-03-23 17:56:49,126 WARN  [managed.keycloak] (pool-13-thread-1) [org.keycloak.common.Profile] (main) Experimental features enabled: dynamic-scopes:v1
+Store IT (mysql)	Run new base tests	2025-03-23T17:56:56.8245221Z 2025-03-23 17:56:56,749 WARN  [managed.keycloak] (pool-13-thread-1) [org.keycloak.common.Profile] (main) Experimental features enabled: dynamic-scopes:v1
+Store IT (mysql)	Run new base tests	2025-03-23T17:56:56.8247252Z 2025-03-23 17:56:56,749 WARN  [managed.keycloak] (pool-13-thread-1) [org.keycloak.common.Profile] (main) Experimental features enabled: dynamic-scopes:v1
+Store IT (mysql)	Run new base tests	2025-03-23T17:57:06.8362737Z [INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 23.458 s - in org.keycloak.tests.admin.client.DynamicClientScopeTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:57:06.8364626Z [INFO] Running org.keycloak.tests.admin.client.InstallationTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:57:06.8367014Z 2025-03-23 17:57:06,818 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mysql)	Run new base tests	2025-03-23T17:57:06.8367973Z 2025-03-23 17:57:06,818 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.client.InstallationTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:57:31.5720361Z [INFO] Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 24.744 s - in org.keycloak.tests.admin.client.InstallationTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:57:31.5722462Z [INFO] Running org.keycloak.tests.admin.group.GroupSearchTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:57:31.5722992Z 2025-03-23 17:57:31,564 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mysql)	Run new base tests	2025-03-23T17:57:31.5723580Z 2025-03-23 17:57:31,564 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.group.GroupSearchTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:57:54.7992857Z [INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 23.224 s - in org.keycloak.tests.admin.group.GroupSearchTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:57:54.7994881Z [INFO] Running org.keycloak.tests.admin.metric.PasswordValidationMetricCustomTagsTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:57:54.7996863Z 2025-03-23 17:57:54,789 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mysql)	Run new base tests	2025-03-23T17:57:54.7999108Z 2025-03-23 17:57:54,790 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.metric.PasswordValidationMetricCustomTagsTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:58:18.6942715Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 23.895 s - in org.keycloak.tests.admin.metric.PasswordValidationMetricCustomTagsTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:58:18.6944185Z [INFO] Running org.keycloak.tests.admin.metric.PasswordValidationMetricTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:58:18.6945125Z 2025-03-23 17:58:18,686 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mysql)	Run new base tests	2025-03-23T17:58:18.6946185Z 2025-03-23 17:58:18,686 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.metric.PasswordValidationMetricTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:58:42.5227111Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 23.825 s - in org.keycloak.tests.admin.metric.PasswordValidationMetricTest
+Store IT (mysql)	Run new base tests	2025-03-23T17:58:42.5958678Z [INFO] Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 577.083 s - in org.keycloak.tests.suites.DatabaseTestSuite
+Store IT (mysql)	Run new base tests	2025-03-23T17:58:42.9442854Z [INFO] 
+Store IT (mysql)	Run new base tests	2025-03-23T17:58:42.9443337Z [INFO] Results:
+Store IT (mysql)	Run new base tests	2025-03-23T17:58:42.9443700Z [INFO] 
+Store IT (mysql)	Run new base tests	2025-03-23T17:58:42.9444021Z [ERROR] Failures: 
+Store IT (mysql)	Run new base tests	2025-03-23T17:58:42.9444725Z [ERROR]   AttackDetectionResourceTest.test:81->assertBruteForce:99 expected: <2> but was: <1>
+Store IT (mysql)	Run new base tests	2025-03-23T17:58:42.9445474Z [INFO] 
+Store IT (mysql)	Run new base tests	2025-03-23T17:58:42.9445894Z [ERROR] Tests run: 278, Failures: 1, Errors: 0, Skipped: 0
+Store IT (mysql)	Run new base tests	2025-03-23T17:58:42.9446425Z [INFO] 
+Store IT (mysql)	Run new base tests	2025-03-23T17:58:42.9479345Z [INFO] ------------------------------------------------------------------------
+Store IT (mysql)	Run new base tests	2025-03-23T17:58:42.9481586Z [INFO] Reactor Summary for Keycloak Tests Parent 999.0.0-SNAPSHOT:
+Store IT (mysql)	Run new base tests	2025-03-23T17:58:42.9482199Z [INFO] 
+Store IT (mysql)	Run new base tests	2025-03-23T17:58:42.9482736Z [INFO] Keycloak Tests Parent .............................. SUCCESS [  0.699 s]
+Store IT (mysql)	Run new base tests	2025-03-23T17:58:42.9484009Z [INFO] Keycloak Testsuite Utilities ....................... SUCCESS [  4.526 s]
+Store IT (mysql)	Run new base tests	2025-03-23T17:58:42.9484875Z [INFO] Keycloak Testsuite Utilities Shared ................ SUCCESS [  0.840 s]
+Store IT (mysql)	Run new base tests	2025-03-23T17:58:42.9485741Z [INFO] Keycloak Testsuite Custom Providers ................ SUCCESS [  0.135 s]
+Store IT (mysql)	Run new base tests	2025-03-23T17:58:42.9486586Z [INFO] New Keycloak Base Testsuite ........................ FAILURE [09:44 min]
+Store IT (mysql)	Run new base tests	2025-03-23T17:58:42.9487331Z [INFO] ------------------------------------------------------------------------
+Store IT (mysql)	Run new base tests	2025-03-23T17:58:42.9487915Z [INFO] BUILD FAILURE
+Store IT (mysql)	Run new base tests	2025-03-23T17:58:42.9488446Z [INFO] ------------------------------------------------------------------------
+Store IT (mysql)	Run new base tests	2025-03-23T17:58:42.9489059Z [INFO] Total time:  09:51 min
+Store IT (mysql)	Run new base tests	2025-03-23T17:58:42.9489533Z [INFO] Finished at: 2025-03-23T17:58:42Z
+Store IT (mysql)	Run new base tests	2025-03-23T17:58:42.9490107Z [INFO] ------------------------------------------------------------------------
+Store IT (mysql)	Run new base tests	2025-03-23T17:58:42.9498587Z [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.0.0-M7:test (default-test) on project keycloak-tests-base: There are test failures.
+Store IT (mysql)	Run new base tests	2025-03-23T17:58:42.9499725Z [ERROR] 
+Store IT (mysql)	Run new base tests	2025-03-23T17:58:42.9500587Z [ERROR] Please refer to /home/runner/work/keycloak/keycloak/tests/base/target/surefire-reports for the individual test results.
+Store IT (mysql)	Run new base tests	2025-03-23T17:58:42.9502035Z [ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+Store IT (mysql)	Run new base tests	2025-03-23T17:58:42.9502743Z [ERROR] -> [Help 1]
+Store IT (mysql)	Run new base tests	2025-03-23T17:58:42.9503068Z [ERROR] 
+Store IT (mysql)	Run new base tests	2025-03-23T17:58:42.9503549Z [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+Store IT (mysql)	Run new base tests	2025-03-23T17:58:42.9504355Z [ERROR] Re-run Maven using the -X switch to enable full debug logging.
+Store IT (mysql)	Run new base tests	2025-03-23T17:58:42.9504945Z [ERROR] 
+Store IT (mysql)	Run new base tests	2025-03-23T17:58:42.9505637Z [ERROR] For more information about the errors and possible solutions, please read the following articles:
+Store IT (mysql)	Run new base tests	2025-03-23T17:58:42.9506663Z [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+Store IT (mysql)	Run new base tests	2025-03-23T17:58:42.9507359Z [ERROR] 
+Store IT (mysql)	Run new base tests	2025-03-23T17:58:42.9507891Z [ERROR] After correcting the problems, you can resume the build with the command
+Store IT (mysql)	Run new base tests	2025-03-23T17:58:42.9508577Z [ERROR]   mvn <args> -rf :keycloak-tests-base
+Store IT (mysql)	Run new base tests	2025-03-23T17:58:42.9759296Z ##[error]Process completed with exit code 1.
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.4930395Z Prepare all required actions
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5001223Z ##[group]Run ./.github/actions/status-check
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5001793Z with:
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5005800Z   jobs: {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "conditional": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	      "ci": "true",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	      "ci-aurora": "false",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	      "ci-quarkus": "true",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	      "ci-sssd": "false",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	      "ci-store": "true",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	      "ci-webauthn": "true"
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    }
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "build": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "unit-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "base-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "adapter-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "adapter-integration-tests-strict-cookies": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "quarkus-unit-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "quarkus-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "jdk-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "store-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "failure",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "volatile-sessions-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "store-model-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "clustering-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "fips-unit-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "fips-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "forms-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "webauthn-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "sssd-unit-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "skipped",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "migration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "external-infinispan-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "test-framework": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "base-new-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  }
+Status Check - Keycloak CI	Run /./.github/actions/status-check	}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5010111Z env:
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5010433Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5010837Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5011180Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5011504Z ##[endgroup]
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5195168Z ##[group]Run JOBS='{
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5195566Z [36;1mJOBS='{[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5195811Z [36;1m  "conditional": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5196072Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5196349Z [36;1m    "outputs": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5196597Z [36;1m      "ci": "true",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5196848Z [36;1m      "ci-aurora": "false",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5197118Z [36;1m      "ci-quarkus": "true",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5197385Z [36;1m      "ci-sssd": "false",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5197664Z [36;1m      "ci-store": "true",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5197939Z [36;1m      "ci-webauthn": "true"[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5198202Z [36;1m    }[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5198430Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5198651Z [36;1m  "build": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5198895Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5199176Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5199413Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5199624Z [36;1m  "unit-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5199878Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5200140Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5200374Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5200613Z [36;1m  "base-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5200895Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5201156Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5201390Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5201629Z [36;1m  "adapter-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5201922Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5202179Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5202552Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5202870Z [36;1m  "adapter-integration-tests-strict-cookies": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5203444Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5203712Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5204077Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5204302Z [36;1m  "quarkus-unit-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5204577Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5204837Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5205075Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5205307Z [36;1m  "quarkus-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5205600Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5205862Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5206100Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5206326Z [36;1m  "jdk-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5206668Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5206932Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5207163Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5207400Z [36;1m  "store-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5207690Z [36;1m    "result": "failure",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5207961Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5208199Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5208432Z [36;1m  "volatile-sessions-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5208717Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5208976Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5209215Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5209431Z [36;1m  "store-model-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5209686Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5209941Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5210175Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5210421Z [36;1m  "clustering-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5210724Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5210976Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5211215Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5211439Z [36;1m  "fips-unit-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5211706Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5211960Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5212197Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5212619Z [36;1m  "fips-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5212942Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5213208Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5213446Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5213677Z [36;1m  "forms-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5213964Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5214220Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5214458Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5214694Z [36;1m  "webauthn-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5214981Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5215240Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5215475Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5215698Z [36;1m  "sssd-unit-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5215976Z [36;1m    "result": "skipped",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5216232Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5216461Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5216675Z [36;1m  "migration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5216945Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5217195Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5217426Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5217658Z [36;1m  "external-infinispan-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5217948Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5218205Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5218441Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5218651Z [36;1m  "test-framework": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5218906Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5219162Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5219398Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5219638Z [36;1m  "base-new-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5219927Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5220187Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5220425Z [36;1m  }[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5220630Z [36;1m}'[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5220844Z [36;1m[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5221058Z [36;1mecho "Job status:"[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5221556Z [36;1mecho $JOBS | jq -r 'to_entries[] | " - \(.key): \(.value.result)"'[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5222031Z [36;1m[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5222316Z [36;1mfor i in $(echo $JOBS | jq -r 'to_entries[] | .value.result'); do[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5222848Z [36;1m  if [ "$i" != "success" ] && [ "$i" != "skipped" ]; then[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5223166Z [36;1m    echo ""[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5223415Z [36;1m    echo "Status check not okay!"[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5223696Z [36;1m    exit 1[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5223919Z [36;1m  fi[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5224127Z [36;1mdone[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5275911Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5276313Z env:
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5276631Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5277011Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5277346Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5277692Z ##[endgroup]
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5363195Z Job status:
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5399235Z  - conditional: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5399583Z  - build: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5399843Z  - unit-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5400119Z  - base-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5400424Z  - adapter-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5400785Z  - adapter-integration-tests-strict-cookies: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5401149Z  - quarkus-unit-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5401444Z  - quarkus-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5401750Z  - jdk-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5402035Z  - store-integration-tests: failure
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5402334Z  - volatile-sessions-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5402886Z  - store-model-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5403237Z  - clustering-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5403562Z  - fips-unit-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5403850Z  - fips-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5404165Z  - forms-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5404470Z  - webauthn-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5404781Z  - sssd-unit-tests: skipped
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5405050Z  - migration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5405321Z  - external-infinispan-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5405617Z  - test-framework: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5405894Z  - base-new-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5434483Z 
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5434688Z Status check not okay!
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-23T18:25:26.5446419Z ##[error]Process completed with exit code 1.
