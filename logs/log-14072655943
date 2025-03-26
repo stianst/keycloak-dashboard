@@ -1,0 +1,883 @@
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:26.6784013Z ##[group]Run KC_TEST_DATABASE=oracle KC_TEST_DATABASE_REUSE=true TESTCONTAINERS_REUSE_ENABLE=true ./mvnw package -f tests/pom.xml -Dtest=DatabaseTestSuite
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:26.6786044Z [36;1mKC_TEST_DATABASE=oracle KC_TEST_DATABASE_REUSE=true TESTCONTAINERS_REUSE_ENABLE=true ./mvnw package -f tests/pom.xml -Dtest=DatabaseTestSuite[0m
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:26.6843630Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:26.6844215Z env:
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:26.6844733Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:26.6845603Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:26.6846169Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:26.6846921Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.6-7/x64
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:26.6847765Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.6-7/x64
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:26.6848426Z ##[endgroup]
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:37.6067128Z [INFO] Loading cache configuration from /home/runner/work/keycloak/keycloak/.mvn/maven-build-cache-config.xml
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:37.6241998Z [INFO] Scanning for projects...
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:37.7768320Z [INFO] ------------------------------------------------------------------------
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:37.7773366Z [INFO] Reactor Build Order:
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:37.7784708Z [INFO] 
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:37.7815851Z [INFO] Keycloak Tests Parent                                              [pom]
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:37.7816756Z [INFO] Keycloak Testsuite Utilities                                       [jar]
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:37.7817673Z [INFO] Keycloak Testsuite Utilities Shared                                [jar]
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:37.7818541Z [INFO] Keycloak Testsuite Custom Providers                                [jar]
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:37.7819400Z [INFO] New Keycloak Base Testsuite                                        [jar]
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:37.7854564Z [INFO] 
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:37.7857362Z [INFO] --------------< org.keycloak.tests:keycloak-tests-parent >--------------
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:37.7862408Z [INFO] Building Keycloak Tests Parent 999.0.0-SNAPSHOT                    [1/5]
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:37.7867543Z [INFO]   from pom.xml
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:37.7868126Z [INFO] --------------------------------[ pom ]---------------------------------
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:37.8619703Z [INFO] 
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:37.8621194Z [INFO] --- enforcer:3.0.0-M3:enforce (enforce-java-version) @ keycloak-tests-parent ---
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:38.2201293Z [INFO] 
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:38.2205167Z [INFO] --- enforcer:3.0.0-M3:enforce (enforce-maven-version) @ keycloak-tests-parent ---
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:38.2217208Z [INFO] 
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:38.2218683Z [INFO] --- buildnumber:1.4:create (get-scm-revision) @ keycloak-tests-parent ---
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:38.4810546Z [INFO] Executing: /bin/sh -c cd '/home/runner/work/keycloak/keycloak/tests' && 'git' 'rev-parse' '--verify' 'HEAD'
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:38.4813780Z [INFO] Working directory: /home/runner/work/keycloak/keycloak/tests
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:38.6413932Z [INFO] Storing buildNumber: d38f1cf42154b83de92e137afb01f9c5865d7185 at timestamp: 1742949338465
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:38.6535458Z [INFO] Storing buildScmBranch: main
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:38.6537295Z [INFO] 
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:38.6538181Z [INFO] --- source:3.1.0:jar-no-fork (attach-sources) @ keycloak-tests-parent ---
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:38.7686278Z [INFO] 
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:38.7705959Z [INFO] --------------< org.keycloak.tests:keycloak-tests-utils >---------------
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:38.7706912Z [INFO] Building Keycloak Testsuite Utilities 999.0.0-SNAPSHOT             [2/5]
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:38.7707649Z [INFO]   from utils/pom.xml
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:38.7708227Z [INFO] --------------------------------[ jar ]---------------------------------
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:41.0165214Z [INFO] 
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:41.0166408Z [INFO] --- enforcer:3.0.0-M3:enforce (enforce-java-version) @ keycloak-tests-utils ---
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:41.0201091Z [INFO] 
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:41.0235620Z [INFO] --- enforcer:3.0.0-M3:enforce (enforce-maven-version) @ keycloak-tests-utils ---
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:41.0242589Z [INFO] 
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:41.0246879Z [INFO] --- buildnumber:1.4:create (get-scm-revision) @ keycloak-tests-utils ---
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:41.0251014Z [INFO] 
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:41.0254812Z [INFO] --- resources:3.2.0:resources (default-resources) @ keycloak-tests-utils ---
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:41.1135953Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:41.1138891Z [INFO] Using 'UTF-8' encoding to copy filtered properties files.
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:41.1141196Z [INFO] skip non existing resourceDirectory /home/runner/work/keycloak/keycloak/tests/utils/src/main/resources
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:41.1147698Z [INFO] 
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:41.1148293Z [INFO] --- compiler:3.8.1:compile (default-compile) @ keycloak-tests-utils ---
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:41.2052981Z [INFO] Changes detected - recompiling the module!
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:41.2080374Z [INFO] Compiling 15 source files to /home/runner/work/keycloak/keycloak/tests/utils/target/classes
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:45.6374099Z [INFO] Annotation processing is enabled because one or more processors were found
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:45.6378244Z   on the class path. A future release of javac may disable annotation processing
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:45.6381435Z   unless at least one processor is specified by name (-processor), or a search
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:45.6384496Z   path is specified (--processor-path, --processor-module-path), or annotation
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:45.6387787Z   processing is enabled explicitly (-proc:only, -proc:full).
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:45.6390832Z   Use -Xlint:-options to suppress this message.
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:45.6391465Z   Use -proc:none to disable annotation processing.
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:45.6394201Z [WARNING] /home/runner/work/keycloak/keycloak/tests/utils/src/main/java/org/keycloak/tests/utils/matchers/SamlStatusResponseTypeMatcher.java:[30,31] unchecked conversion
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:45.6397173Z   required: java.util.List<org.hamcrest.Matcher<java.net.URI>>
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:45.6398894Z   found:    java.util.ArrayList
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:45.6400487Z [INFO] 
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:45.6402386Z [INFO] --- resources:3.2.0:testResources (default-testResources) @ keycloak-tests-utils ---
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:45.6414500Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:45.6417567Z [INFO] Using 'UTF-8' encoding to copy filtered properties files.
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:45.6418640Z [INFO] skip non existing resourceDirectory /home/runner/work/keycloak/keycloak/tests/utils/src/test/resources
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:45.6419535Z [INFO] 
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:45.6420163Z [INFO] --- compiler:3.8.1:testCompile (default-testCompile) @ keycloak-tests-utils ---
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:45.6486209Z [INFO] No sources to compile
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:45.6489404Z [INFO] 
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:45.6490494Z [INFO] --- surefire:3.0.0-M7:test (default-test) @ keycloak-tests-utils ---
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:45.7767188Z [INFO] No tests to run.
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:45.7835790Z [INFO] 
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:45.7840011Z [INFO] --- jar:3.1.2:jar (default-jar) @ keycloak-tests-utils ---
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:45.9924645Z [INFO] Building jar: /home/runner/work/keycloak/keycloak/tests/utils/target/keycloak-tests-utils-999.0.0-SNAPSHOT.jar
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:46.0643409Z [INFO] 
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:46.0648601Z [INFO] --- source:3.1.0:jar-no-fork (attach-sources) @ keycloak-tests-utils ---
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:46.1001706Z [INFO] Building jar: /home/runner/work/keycloak/keycloak/tests/utils/target/keycloak-tests-utils-999.0.0-SNAPSHOT-sources.jar
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:46.1314284Z [INFO] 
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:46.1329425Z [INFO] -----------< org.keycloak.tests:keycloak-tests-utils-shared >-----------
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:46.1330362Z [INFO] Building Keycloak Testsuite Utilities Shared 999.0.0-SNAPSHOT      [3/5]
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:46.1331085Z [INFO]   from utils-shared/pom.xml
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:46.1331693Z [INFO] --------------------------------[ jar ]---------------------------------
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:46.2009761Z [INFO] 
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:46.2010931Z [INFO] --- enforcer:3.0.0-M3:enforce (enforce-java-version) @ keycloak-tests-utils-shared ---
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:46.2027376Z [INFO] 
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:46.2031905Z [INFO] --- enforcer:3.0.0-M3:enforce (enforce-maven-version) @ keycloak-tests-utils-shared ---
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:46.2034716Z [INFO] 
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:46.2036731Z [INFO] --- buildnumber:1.4:create (get-scm-revision) @ keycloak-tests-utils-shared ---
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:46.2048411Z [INFO] 
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:46.2052624Z [INFO] --- resources:3.2.0:resources (default-resources) @ keycloak-tests-utils-shared ---
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:46.2062171Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:46.2064828Z [INFO] Using 'UTF-8' encoding to copy filtered properties files.
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:46.2067117Z [INFO] skip non existing resourceDirectory /home/runner/work/keycloak/keycloak/tests/utils-shared/src/main/resources
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:46.2075353Z [INFO] 
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:46.2076335Z [INFO] --- compiler:3.8.1:compile (default-compile) @ keycloak-tests-utils-shared ---
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:46.2191400Z [INFO] Changes detected - recompiling the module!
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:46.2225838Z [INFO] Compiling 47 source files to /home/runner/work/keycloak/keycloak/tests/utils-shared/target/classes
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:46.9125635Z [INFO] Annotation processing is enabled because one or more processors were found
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:46.9129073Z   on the class path. A future release of javac may disable annotation processing
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:46.9130017Z   unless at least one processor is specified by name (-processor), or a search
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:46.9130959Z   path is specified (--processor-path, --processor-module-path), or annotation
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:46.9131821Z   processing is enabled explicitly (-proc:only, -proc:full).
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:46.9132490Z   Use -Xlint:-options to suppress this message.
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:46.9133121Z   Use -proc:none to disable annotation processing.
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:46.9136593Z [INFO] 
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:46.9137338Z [INFO] --- resources:3.2.0:testResources (default-testResources) @ keycloak-tests-utils-shared ---
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:46.9154591Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:46.9157777Z [INFO] Using 'UTF-8' encoding to copy filtered properties files.
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:46.9159223Z [INFO] skip non existing resourceDirectory /home/runner/work/keycloak/keycloak/tests/utils-shared/src/test/resources
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:46.9160440Z [INFO] 
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:46.9164449Z [INFO] --- compiler:3.8.1:testCompile (default-testCompile) @ keycloak-tests-utils-shared ---
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:46.9179222Z [INFO] No sources to compile
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:46.9180085Z [INFO] 
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:46.9181010Z [INFO] --- surefire:3.0.0-M7:test (default-test) @ keycloak-tests-utils-shared ---
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:46.9216046Z [INFO] No tests to run.
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:46.9229609Z [INFO] 
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:46.9233862Z [INFO] --- jar:3.1.2:jar (default-jar) @ keycloak-tests-utils-shared ---
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:46.9329497Z [INFO] Building jar: /home/runner/work/keycloak/keycloak/tests/utils-shared/target/keycloak-tests-utils-shared-999.0.0-SNAPSHOT.jar
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:46.9501993Z [INFO] 
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:46.9503645Z [INFO] --- source:3.1.0:jar-no-fork (attach-sources) @ keycloak-tests-utils-shared ---
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:46.9793610Z [INFO] Building jar: /home/runner/work/keycloak/keycloak/tests/utils-shared/target/keycloak-tests-utils-shared-999.0.0-SNAPSHOT-sources.jar
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:46.9943400Z [INFO] 
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:46.9945595Z [INFO] ---------< org.keycloak.tests:keycloak-tests-custom-providers >---------
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:46.9949602Z [INFO] Building Keycloak Testsuite Custom Providers 999.0.0-SNAPSHOT      [4/5]
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:46.9952043Z [INFO]   from custom-providers/pom.xml
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:46.9955090Z [INFO] --------------------------------[ jar ]---------------------------------
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:47.0038686Z [INFO] 
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:47.0042091Z [INFO] --- enforcer:3.0.0-M3:enforce (enforce-java-version) @ keycloak-tests-custom-providers ---
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:47.0048575Z [INFO] 
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:47.0053811Z [INFO] --- enforcer:3.0.0-M3:enforce (enforce-maven-version) @ keycloak-tests-custom-providers ---
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:47.0056398Z [INFO] 
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:47.0059757Z [INFO] --- buildnumber:1.4:create (get-scm-revision) @ keycloak-tests-custom-providers ---
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:47.0074006Z [INFO] 
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:47.0076418Z [INFO] --- resources:3.2.0:resources (default-resources) @ keycloak-tests-custom-providers ---
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:47.0081306Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:47.0081987Z [INFO] Using 'UTF-8' encoding to copy filtered properties files.
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:47.0102255Z [INFO] Copying 1 resource
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:47.0136894Z [INFO] 
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:47.0159478Z [INFO] --- compiler:3.8.1:compile (default-compile) @ keycloak-tests-custom-providers ---
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:47.0170632Z [INFO] Changes detected - recompiling the module!
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:47.0181193Z [INFO] Compiling 2 source files to /home/runner/work/keycloak/keycloak/tests/custom-providers/target/classes
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:47.0667182Z [INFO] 
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:47.0691593Z [INFO] --- resources:3.2.0:testResources (default-testResources) @ keycloak-tests-custom-providers ---
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:47.0708821Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:47.0709893Z [INFO] Using 'UTF-8' encoding to copy filtered properties files.
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:47.0711435Z [INFO] skip non existing resourceDirectory /home/runner/work/keycloak/keycloak/tests/custom-providers/src/test/resources
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:47.0712616Z [INFO] 
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:47.0713506Z [INFO] --- compiler:3.8.1:testCompile (default-testCompile) @ keycloak-tests-custom-providers ---
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:47.0714588Z [INFO] No sources to compile
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:47.0715389Z [INFO] 
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:47.0716194Z [INFO] --- surefire:3.0.0-M7:test (default-test) @ keycloak-tests-custom-providers ---
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:47.0727027Z [INFO] No tests to run.
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:47.0735248Z [INFO] 
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:47.0739621Z [INFO] --- jar:3.1.2:jar (default-jar) @ keycloak-tests-custom-providers ---
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:47.0770756Z [INFO] Building jar: /home/runner/work/keycloak/keycloak/tests/custom-providers/target/keycloak-tests-custom-providers-999.0.0-SNAPSHOT.jar
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:47.1120957Z [INFO] 
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:47.1124566Z [INFO] --- source:3.1.0:jar-no-fork (attach-sources) @ keycloak-tests-custom-providers ---
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:47.1182977Z [INFO] Building jar: /home/runner/work/keycloak/keycloak/tests/custom-providers/target/keycloak-tests-custom-providers-999.0.0-SNAPSHOT-sources.jar
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:47.1247993Z [INFO] 
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:47.1248601Z [INFO] ---------------< org.keycloak.tests:keycloak-tests-base >---------------
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:47.1249460Z [INFO] Building New Keycloak Base Testsuite 999.0.0-SNAPSHOT              [5/5]
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:47.1250131Z [INFO]   from base/pom.xml
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:47.1250682Z [INFO] --------------------------------[ jar ]---------------------------------
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:47.5949308Z [INFO] 
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:47.5953963Z [INFO] --- enforcer:3.0.0-M3:enforce (enforce-java-version) @ keycloak-tests-base ---
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:47.5975924Z [INFO] 
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:47.5980799Z [INFO] --- enforcer:3.0.0-M3:enforce (enforce-maven-version) @ keycloak-tests-base ---
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:47.5991132Z [INFO] 
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:47.5993421Z [INFO] --- buildnumber:1.4:create (get-scm-revision) @ keycloak-tests-base ---
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:47.6005972Z [INFO] 
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:47.6041479Z [INFO] --- resources:3.2.0:resources (default-resources) @ keycloak-tests-base ---
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:47.6042338Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:47.6043023Z [INFO] Using 'UTF-8' encoding to copy filtered properties files.
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:47.6044060Z [INFO] skip non existing resourceDirectory /home/runner/work/keycloak/keycloak/tests/base/src/main/resources
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:47.6045096Z [INFO] 
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:47.6045648Z [INFO] --- compiler:3.8.1:compile (default-compile) @ keycloak-tests-base ---
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:47.6046348Z [INFO] No sources to compile
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:47.6046762Z [INFO] 
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:47.6050663Z [INFO] --- resources:3.2.0:testResources (default-testResources) @ keycloak-tests-base ---
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:47.6051937Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:47.6052662Z [INFO] Using 'UTF-8' encoding to copy filtered properties files.
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:47.6085550Z [INFO] Copying 6 resources
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:47.6088906Z [INFO] 
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:47.6090042Z [INFO] --- compiler:3.8.1:testCompile (default-testCompile) @ keycloak-tests-base ---
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:47.6242231Z [INFO] Changes detected - recompiling the module!
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:47.6256088Z [INFO] Compiling 75 source files to /home/runner/work/keycloak/keycloak/tests/base/target/test-classes
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:50.5881600Z [INFO] Annotation processing is enabled because one or more processors were found
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:50.5882671Z   on the class path. A future release of javac may disable annotation processing
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:50.5883589Z   unless at least one processor is specified by name (-processor), or a search
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:50.5889918Z   path is specified (--processor-path, --processor-module-path), or annotation
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:50.5890876Z   processing is enabled explicitly (-proc:only, -proc:full).
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:50.5891560Z   Use -Xlint:-options to suppress this message.
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:50.5892162Z   Use -proc:none to disable annotation processing.
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:50.5894466Z [WARNING] /home/runner/work/keycloak/keycloak/tests/base/src/test/java/org/keycloak/tests/admin/RealmLocalizationResourceTest.java:[77,73] getRealmLocalizationTexts(java.lang.String,java.lang.Boolean) in org.keycloak.admin.client.resource.RealmLocalizationResource has been deprecated
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:50.5897828Z [WARNING] /home/runner/work/keycloak/keycloak/tests/base/src/test/java/org/keycloak/tests/admin/client/AbstractClientScopeTest.java:[38,59] unchecked conversion
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:50.5899330Z   required: java.util.Map<java.lang.String,java.lang.String>
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:50.5899944Z   found:    java.util.Map
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:50.5902009Z [WARNING] /home/runner/work/keycloak/keycloak/tests/base/src/test/java/org/keycloak/tests/admin/InitialAccessTokenResourceTest.java:[157,45] removeExpired(org.keycloak.models.RealmModel) in org.keycloak.sessions.AuthenticationSessionProvider has been deprecated
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:50.5904137Z [INFO] 
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:50.5904675Z [INFO] --- surefire:3.0.0-M7:test (default-test) @ keycloak-tests-base ---
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:50.6060679Z [INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:52.6728456Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/apache/maven/surefire/surefire-junit-platform/3.0.0-M7/surefire-junit-platform-3.0.0-M7.jar
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:53.8220176Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit-platform/3.0.0-M7/surefire-junit-platform-3.0.0-M7.jar
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:53.9151138Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit-platform/3.0.0-M7/surefire-junit-platform-3.0.0-M7.jar (26 kB at 282 kB/s)
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:53.9176949Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/apache/maven/surefire/surefire-junit-platform/3.0.0-M7/surefire-junit-platform-3.0.0-M7.pom
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:54.0018374Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit-platform/3.0.0-M7/surefire-junit-platform-3.0.0-M7.pom
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:54.0205371Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit-platform/3.0.0-M7/surefire-junit-platform-3.0.0-M7.pom (5.3 kB at 278 kB/s)
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:54.0226690Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/apache/maven/surefire/surefire-providers/3.0.0-M7/surefire-providers-3.0.0-M7.pom
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:54.1583908Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-providers/3.0.0-M7/surefire-providers-3.0.0-M7.pom
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:54.1738492Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-providers/3.0.0-M7/surefire-providers-3.0.0-M7.pom (2.5 kB at 169 kB/s)
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:54.1862612Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/apache/maven/surefire/common-java5/3.0.0-M7/common-java5-3.0.0-M7.pom
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:54.2586428Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-java5/3.0.0-M7/common-java5-3.0.0-M7.pom
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:54.2732637Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-java5/3.0.0-M7/common-java5-3.0.0-M7.pom (2.7 kB at 180 kB/s)
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:54.2834094Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/junit/platform/junit-platform-launcher/1.3.2/junit-platform-launcher-1.3.2.pom
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:54.3361194Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-launcher/1.3.2/junit-platform-launcher-1.3.2.pom
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:54.3548530Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-launcher/1.3.2/junit-platform-launcher-1.3.2.pom (2.2 kB at 117 kB/s)
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:54.3568939Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/apiguardian/apiguardian-api/1.0.0/apiguardian-api-1.0.0.pom
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:54.4246750Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apiguardian/apiguardian-api/1.0.0/apiguardian-api-1.0.0.pom
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:54.4398597Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apiguardian/apiguardian-api/1.0.0/apiguardian-api-1.0.0.pom (1.2 kB at 78 kB/s)
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:54.4415612Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/junit/platform/junit-platform-engine/1.3.2/junit-platform-engine-1.3.2.pom
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:54.4977941Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-engine/1.3.2/junit-platform-engine-1.3.2.pom
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:54.5167066Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-engine/1.3.2/junit-platform-engine-1.3.2.pom (2.4 kB at 126 kB/s)
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:54.5188879Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/junit/platform/junit-platform-commons/1.3.2/junit-platform-commons-1.3.2.pom
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:54.5722734Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-commons/1.3.2/junit-platform-commons-1.3.2.pom
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:54.5865803Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-commons/1.3.2/junit-platform-commons-1.3.2.pom (2.0 kB at 135 kB/s)
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:54.5887309Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/opentest4j/opentest4j/1.1.1/opentest4j-1.1.1.pom
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:54.6450018Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/opentest4j/opentest4j/1.1.1/opentest4j-1.1.1.pom
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:54.6618295Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/opentest4j/opentest4j/1.1.1/opentest4j-1.1.1.pom (1.7 kB at 99 kB/s)
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:54.6639087Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/junit/jupiter/junit-jupiter-engine/5.3.2/junit-jupiter-engine-5.3.2.pom
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:54.7188291Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter-engine/5.3.2/junit-jupiter-engine-5.3.2.pom
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:54.7372628Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter-engine/5.3.2/junit-jupiter-engine-5.3.2.pom (2.4 kB at 126 kB/s)
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:54.7409930Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/junit/jupiter/junit-jupiter-api/5.3.2/junit-jupiter-api-5.3.2.pom
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:54.7985323Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter-api/5.3.2/junit-jupiter-api-5.3.2.pom
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:54.8137727Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter-api/5.3.2/junit-jupiter-api-5.3.2.pom (2.4 kB at 158 kB/s)
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:54.8167916Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/junit/jupiter/junit-jupiter-params/5.3.2/junit-jupiter-params-5.3.2.pom
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:54.8814708Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter-params/5.3.2/junit-jupiter-params-5.3.2.pom
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:54.8967872Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter-params/5.3.2/junit-jupiter-params-5.3.2.pom (2.2 kB at 147 kB/s)
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:54.8991750Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/mockito/mockito-core/2.28.2/mockito-core-2.28.2.pom
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:54.9553184Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/mockito/mockito-core/2.28.2/mockito-core-2.28.2.pom
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:54.9701302Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/mockito/mockito-core/2.28.2/mockito-core-2.28.2.pom (20 kB at 1.4 MB/s)
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:54.9728828Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/net/bytebuddy/byte-buddy/1.9.10/byte-buddy-1.9.10.pom
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:55.0282406Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy/1.9.10/byte-buddy-1.9.10.pom
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:55.0428817Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy/1.9.10/byte-buddy-1.9.10.pom (10 kB at 688 kB/s)
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:55.0448093Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/net/bytebuddy/byte-buddy-parent/1.9.10/byte-buddy-parent-1.9.10.pom
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:55.0995195Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy-parent/1.9.10/byte-buddy-parent-1.9.10.pom
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:55.1175027Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy-parent/1.9.10/byte-buddy-parent-1.9.10.pom (36 kB at 2.0 MB/s)
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:55.1228235Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/net/bytebuddy/byte-buddy-agent/1.9.10/byte-buddy-agent-1.9.10.pom
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:55.1760016Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy-agent/1.9.10/byte-buddy-agent-1.9.10.pom
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:55.1899369Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy-agent/1.9.10/byte-buddy-agent-1.9.10.pom (6.0 kB at 431 kB/s)
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:55.1960061Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/powermock/powermock-reflect/2.0.9/powermock-reflect-2.0.9.pom
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:55.2590634Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/powermock/powermock-reflect/2.0.9/powermock-reflect-2.0.9.pom
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:55.2743987Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/powermock/powermock-reflect/2.0.9/powermock-reflect-2.0.9.pom (7.9 kB at 492 kB/s)
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:55.2772453Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/net/bytebuddy/byte-buddy/1.10.14/byte-buddy-1.10.14.pom
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:55.3298466Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy/1.10.14/byte-buddy-1.10.14.pom
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:55.3431825Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy/1.10.14/byte-buddy-1.10.14.pom (11 kB at 788 kB/s)
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:55.3450449Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/net/bytebuddy/byte-buddy-parent/1.10.14/byte-buddy-parent-1.10.14.pom
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:55.3982092Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy-parent/1.10.14/byte-buddy-parent-1.10.14.pom
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:55.4135228Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy-parent/1.10.14/byte-buddy-parent-1.10.14.pom (41 kB at 2.7 MB/s)
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:55.4179864Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/net/bytebuddy/byte-buddy-agent/1.10.14/byte-buddy-agent-1.10.14.pom
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:55.4727692Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy-agent/1.10.14/byte-buddy-agent-1.10.14.pom
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:55.4858195Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy-agent/1.10.14/byte-buddy-agent-1.10.14.pom (9.6 kB at 736 kB/s)
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:55.4911223Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/hamcrest/hamcrest-library/1.3/hamcrest-library-1.3.pom
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:55.5479590Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/hamcrest/hamcrest-library/1.3/hamcrest-library-1.3.pom
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:55.5622432Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/hamcrest/hamcrest-library/1.3/hamcrest-library-1.3.pom (820 B at 59 kB/s)
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:55.5665742Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/assertj/assertj-core/3.22.0/assertj-core-3.22.0.pom
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:55.6210721Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/assertj/assertj-core/3.22.0/assertj-core-3.22.0.pom
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:55.6358807Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/assertj/assertj-core/3.22.0/assertj-core-3.22.0.pom (31 kB at 2.0 MB/s)
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:55.6383033Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/assertj/assertj-parent-pom/2.2.14/assertj-parent-pom-2.2.14.pom
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:55.6978478Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/assertj/assertj-parent-pom/2.2.14/assertj-parent-pom-2.2.14.pom
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:55.7123243Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/assertj/assertj-parent-pom/2.2.14/assertj-parent-pom-2.2.14.pom (25 kB at 1.6 MB/s)
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:55.7151844Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/junit/junit-bom/5.8.2/junit-bom-5.8.2.pom
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:55.7776419Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.8.2/junit-bom-5.8.2.pom
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:55.7908132Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.8.2/junit-bom-5.8.2.pom (5.6 kB at 433 kB/s)
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:55.7935407Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/junit/junit-bom/5.8.0/junit-bom-5.8.0.pom
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:55.8476295Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.8.0/junit-bom-5.8.0.pom
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:55.8608865Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.8.0/junit-bom-5.8.0.pom (5.6 kB at 433 kB/s)
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:55.8642256Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/apache/maven/surefire/common-java5/3.0.0-M7/common-java5-3.0.0-M7.jar
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:55.8645912Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/junit/platform/junit-platform-launcher/1.3.2/junit-platform-launcher-1.3.2.jar
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:55.8648317Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/apiguardian/apiguardian-api/1.0.0/apiguardian-api-1.0.0.jar
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:55.8650664Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/junit/platform/junit-platform-engine/1.3.2/junit-platform-engine-1.3.2.jar
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:55.8653582Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/junit/platform/junit-platform-commons/1.3.2/junit-platform-commons-1.3.2.jar
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:55.8771899Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-java5/3.0.0-M7/common-java5-3.0.0-M7.jar
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:55.8921036Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-java5/3.0.0-M7/common-java5-3.0.0-M7.jar (17 kB at 1.2 MB/s)
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:55.8936245Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/opentest4j/opentest4j/1.1.1/opentest4j-1.1.1.jar
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:55.9018294Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-commons/1.3.2/junit-platform-commons-1.3.2.jar
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:55.9194721Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-commons/1.3.2/junit-platform-commons-1.3.2.jar (78 kB at 4.3 MB/s)
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:55.9268430Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-launcher/1.3.2/junit-platform-launcher-1.3.2.jar
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:55.9427086Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-launcher/1.3.2/junit-platform-launcher-1.3.2.jar (95 kB at 5.9 MB/s)
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:55.9653503Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/opentest4j/opentest4j/1.1.1/opentest4j-1.1.1.jar
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:55.9781192Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/opentest4j/opentest4j/1.1.1/opentest4j-1.1.1.jar (7.1 kB at 593 kB/s)
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:55.9807110Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-engine/1.3.2/junit-platform-engine-1.3.2.jar
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:55.9808954Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apiguardian/apiguardian-api/1.0.0/apiguardian-api-1.0.0.jar
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:55.9965090Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-engine/1.3.2/junit-platform-engine-1.3.2.jar (138 kB at 8.1 MB/s)
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:56.0293364Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apiguardian/apiguardian-api/1.0.0/apiguardian-api-1.0.0.jar (2.2 kB at 43 kB/s)
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:56.0614797Z [INFO] 
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:56.0615512Z [INFO] -------------------------------------------------------
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:56.0616073Z [INFO]  T E S T S
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:56.0616536Z [INFO] -------------------------------------------------------
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:58.1488656Z [INFO] Running org.keycloak.tests.suites.DatabaseTestSuite
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:58.2216079Z [INFO] Running org.keycloak.tests.admin.InitialAccessTokenResourceTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:58.2654302Z 2025-03-26 00:35:58,231 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (oracle)	Run new base tests	2025-03-26T00:35:58.2656423Z 2025-03-26 00:35:58,238 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.InitialAccessTokenResourceTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:37:44.7143502Z 2025-03-26 00:37:44,677 WARN  [managed.keycloak] (pool-2-thread-1) [liquibase.snapshot.JdbcDatabaseSnapshot$CachingDatabaseMetaData] (main) Liquibase needs to access the DBA_RECYCLEBIN table so we can automatically handle the case where constraints are deleted and restored. Since Oracle doesn't properly restore the original table names referenced in the constraint, we use the information from the DBA_RECYCLEBIN to automatically correct this issue.
+Store IT (oracle)	Run new base tests	2025-03-26T00:37:45.8152864Z 2025-03-26 00:37:45,727 WARN  [managed.keycloak] (pool-2-thread-1) [liquibase.snapshot.JdbcDatabaseSnapshot$CachingDatabaseMetaData] (main) Liquibase needs to access the DBA_RECYCLEBIN table so we can automatically handle the case where constraints are deleted and restored. Since Oracle doesn't properly restore the original table names referenced in the constraint, we use the information from the DBA_RECYCLEBIN to automatically correct this issue.
+Store IT (oracle)	Run new base tests	2025-03-26T00:37:50.6199185Z 2025-03-26 00:37:50,609 WARN  [managed.keycloak] (pool-2-thread-1) [liquibase.snapshot.JdbcDatabaseSnapshot$CachingDatabaseMetaData] (main) Liquibase needs to access the DBA_RECYCLEBIN table so we can automatically handle the case where constraints are deleted and restored. Since Oracle doesn't properly restore the original table names referenced in the constraint, we use the information from the DBA_RECYCLEBIN to automatically correct this issue.
+Store IT (oracle)	Run new base tests	2025-03-26T00:37:51.2205296Z 2025-03-26 00:37:51,181 WARN  [managed.keycloak] (pool-2-thread-1) [liquibase.snapshot.JdbcDatabaseSnapshot$CachingDatabaseMetaData] (main) Liquibase needs to access the DBA_RECYCLEBIN table so we can automatically handle the case where constraints are deleted and restored. Since Oracle doesn't properly restore the original table names referenced in the constraint, we use the information from the DBA_RECYCLEBIN to automatically correct this issue.
+Store IT (oracle)	Run new base tests	2025-03-26T00:37:55.0237226Z 2025-03-26 00:37:54,964 WARN  [managed.keycloak] (pool-2-thread-1) [liquibase.snapshot.JdbcDatabaseSnapshot$CachingDatabaseMetaData] (main) Liquibase needs to access the DBA_RECYCLEBIN table so we can automatically handle the case where constraints are deleted and restored. Since Oracle doesn't properly restore the original table names referenced in the constraint, we use the information from the DBA_RECYCLEBIN to automatically correct this issue.
+Store IT (oracle)	Run new base tests	2025-03-26T00:37:55.6243536Z 2025-03-26 00:37:55,563 WARN  [managed.keycloak] (pool-2-thread-1) [liquibase.snapshot.JdbcDatabaseSnapshot$CachingDatabaseMetaData] (main) Liquibase needs to access the DBA_RECYCLEBIN table so we can automatically handle the case where constraints are deleted and restored. Since Oracle doesn't properly restore the original table names referenced in the constraint, we use the information from the DBA_RECYCLEBIN to automatically correct this issue.
+Store IT (oracle)	Run new base tests	2025-03-26T00:37:58.9271705Z 2025-03-26 00:37:58,860 WARN  [managed.keycloak] (pool-2-thread-1) [liquibase.snapshot.JdbcDatabaseSnapshot$CachingDatabaseMetaData] (main) Liquibase needs to access the DBA_RECYCLEBIN table so we can automatically handle the case where constraints are deleted and restored. Since Oracle doesn't properly restore the original table names referenced in the constraint, we use the information from the DBA_RECYCLEBIN to automatically correct this issue.
+Store IT (oracle)	Run new base tests	2025-03-26T00:37:59.2274655Z 2025-03-26 00:37:59,135 WARN  [managed.keycloak] (pool-2-thread-1) [liquibase.snapshot.JdbcDatabaseSnapshot$CachingDatabaseMetaData] (main) Liquibase needs to access the DBA_RECYCLEBIN table so we can automatically handle the case where constraints are deleted and restored. Since Oracle doesn't properly restore the original table names referenced in the constraint, we use the information from the DBA_RECYCLEBIN to automatically correct this issue.
+Store IT (oracle)	Run new base tests	2025-03-26T00:38:02.2296906Z 2025-03-26 00:38:02,220 WARN  [managed.keycloak] (pool-2-thread-1) [liquibase.snapshot.JdbcDatabaseSnapshot$CachingDatabaseMetaData] (main) Liquibase needs to access the DBA_RECYCLEBIN table so we can automatically handle the case where constraints are deleted and restored. Since Oracle doesn't properly restore the original table names referenced in the constraint, we use the information from the DBA_RECYCLEBIN to automatically correct this issue.
+Store IT (oracle)	Run new base tests	2025-03-26T00:38:06.2333626Z 2025-03-26 00:38:06,133 WARN  [managed.keycloak] (pool-2-thread-1) [liquibase.snapshot.JdbcDatabaseSnapshot$CachingDatabaseMetaData] (main) Liquibase needs to access the DBA_RECYCLEBIN table so we can automatically handle the case where constraints are deleted and restored. Since Oracle doesn't properly restore the original table names referenced in the constraint, we use the information from the DBA_RECYCLEBIN to automatically correct this issue.
+Store IT (oracle)	Run new base tests	2025-03-26T00:38:09.8365943Z 2025-03-26 00:38:09,768 WARN  [managed.keycloak] (pool-2-thread-1) [liquibase.snapshot.JdbcDatabaseSnapshot$CachingDatabaseMetaData] (main) Liquibase needs to access the DBA_RECYCLEBIN table so we can automatically handle the case where constraints are deleted and restored. Since Oracle doesn't properly restore the original table names referenced in the constraint, we use the information from the DBA_RECYCLEBIN to automatically correct this issue.
+Store IT (oracle)	Run new base tests	2025-03-26T00:38:13.4391901Z 2025-03-26 00:38:13,373 WARN  [managed.keycloak] (pool-2-thread-1) [liquibase.snapshot.JdbcDatabaseSnapshot$CachingDatabaseMetaData] (main) Liquibase needs to access the DBA_RECYCLEBIN table so we can automatically handle the case where constraints are deleted and restored. Since Oracle doesn't properly restore the original table names referenced in the constraint, we use the information from the DBA_RECYCLEBIN to automatically correct this issue.
+Store IT (oracle)	Run new base tests	2025-03-26T00:38:16.1415519Z 2025-03-26 00:38:16,044 WARN  [managed.keycloak] (pool-2-thread-1) [liquibase.snapshot.JdbcDatabaseSnapshot$CachingDatabaseMetaData] (main) Liquibase needs to access the DBA_RECYCLEBIN table so we can automatically handle the case where constraints are deleted and restored. Since Oracle doesn't properly restore the original table names referenced in the constraint, we use the information from the DBA_RECYCLEBIN to automatically correct this issue.
+Store IT (oracle)	Run new base tests	2025-03-26T00:38:28.0029071Z [INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 149.681 s - in org.keycloak.tests.admin.InitialAccessTokenResourceTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:38:28.0059013Z [INFO] Running org.keycloak.tests.admin.partialexport.PartialExportTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:38:28.0060148Z 2025-03-26 00:38:27,921 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (oracle)	Run new base tests	2025-03-26T00:38:28.0066201Z 2025-03-26 00:38:27,922 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.partialexport.PartialExportTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:38:31.2747147Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.325 s - in org.keycloak.tests.admin.partialexport.PartialExportTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:38:31.2751852Z [INFO] Running org.keycloak.tests.admin.RoleByIdResourceTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:38:31.2757297Z 2025-03-26 00:38:31,249 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (oracle)	Run new base tests	2025-03-26T00:38:31.2766275Z 2025-03-26 00:38:31,250 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.RoleByIdResourceTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:38:47.6399210Z [INFO] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 16.358 s - in org.keycloak.tests.admin.RoleByIdResourceTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:38:47.6402322Z [INFO] Running org.keycloak.tests.admin.UsersTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:38:47.6403279Z 2025-03-26 00:38:47,608 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (oracle)	Run new base tests	2025-03-26T00:38:47.6404214Z 2025-03-26 00:38:47,609 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.UsersTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:38:59.1744507Z [INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.553 s - in org.keycloak.tests.admin.UsersTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:38:59.1746969Z [INFO] Running org.keycloak.tests.admin.TimeOffsetTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:38:59.1759476Z 2025-03-26 00:38:59,163 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (oracle)	Run new base tests	2025-03-26T00:38:59.1762966Z 2025-03-26 00:38:59,164 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.TimeOffsetTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:00.2735823Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.097 s - in org.keycloak.tests.admin.TimeOffsetTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:00.2737450Z [INFO] Running org.keycloak.tests.admin.client.ClientDescriptionConverterTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:00.2742295Z 2025-03-26 00:39:00,262 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:00.2743528Z 2025-03-26 00:39:00,263 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.client.ClientDescriptionConverterTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:01.5404199Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.265 s - in org.keycloak.tests.admin.client.ClientDescriptionConverterTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:01.5406818Z [INFO] Running org.keycloak.tests.admin.authentication.ExecutionTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:01.5407810Z 2025-03-26 00:39:01,530 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:01.5408890Z 2025-03-26 00:39:01,530 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authentication.ExecutionTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:04.2788415Z [INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.73 s - in org.keycloak.tests.admin.authentication.ExecutionTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:04.2789835Z [INFO] Running org.keycloak.tests.admin.authentication.RegistrationFlowTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:04.2794818Z 2025-03-26 00:39:04,263 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:04.2801305Z 2025-03-26 00:39:04,263 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authentication.RegistrationFlowTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:05.5340654Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.259 s - in org.keycloak.tests.admin.authentication.RegistrationFlowTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:05.5346516Z [INFO] Running org.keycloak.tests.admin.client.ClientSearchJpaTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:05.5347411Z 2025-03-26 00:39:05,524 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:05.5348417Z 2025-03-26 00:39:05,524 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.client.ClientSearchJpaTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:06.8807200Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.331 s - in org.keycloak.tests.admin.client.ClientSearchJpaTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:06.8808874Z [INFO] Running org.keycloak.tests.admin.SMTPConnectionTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:06.8809753Z 2025-03-26 00:39:06,861 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:06.8810760Z 2025-03-26 00:39:06,862 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.SMTPConnectionTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:12.0153754Z [INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.144 s - in org.keycloak.tests.admin.SMTPConnectionTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:12.0156917Z [INFO] Running org.keycloak.tests.admin.event.EventConfigTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:12.0158201Z 2025-03-26 00:39:12,004 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:12.0160333Z 2025-03-26 00:39:12,005 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.event.EventConfigTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:13.9539713Z [INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.94 s - in org.keycloak.tests.admin.event.EventConfigTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:13.9541175Z [INFO] Running org.keycloak.tests.admin.AdminHeadersTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:13.9542283Z 2025-03-26 00:39:13,945 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:13.9544347Z 2025-03-26 00:39:13,946 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.AdminHeadersTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:14.9537352Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.989 s - in org.keycloak.tests.admin.AdminHeadersTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:14.9546731Z [INFO] Running org.keycloak.tests.admin.event.AdminEventTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:14.9560891Z 2025-03-26 00:39:14,936 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:14.9562583Z 2025-03-26 00:39:14,936 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.event.AdminEventTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:19.9313059Z [INFO] Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.983 s - in org.keycloak.tests.admin.event.AdminEventTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:19.9319622Z [INFO] Running org.keycloak.tests.admin.event.AdminEventAuthDetailsTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:19.9320691Z 2025-03-26 00:39:19,921 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:19.9322161Z 2025-03-26 00:39:19,922 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.event.AdminEventAuthDetailsTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:21.5064361Z [INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.568 s - in org.keycloak.tests.admin.event.AdminEventAuthDetailsTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:21.5066155Z [INFO] Running org.keycloak.tests.admin.AdminConsoleLandingPageTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:21.5067304Z 2025-03-26 00:39:21,491 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:21.5068863Z 2025-03-26 00:39:21,491 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.AdminConsoleLandingPageTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:21.5471762Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.044 s - in org.keycloak.tests.admin.AdminConsoleLandingPageTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:21.5473934Z [INFO] Running org.keycloak.tests.admin.AdminPreflightTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:21.5475578Z 2025-03-26 00:39:21,537 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:21.5476922Z 2025-03-26 00:39:21,538 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.AdminPreflightTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:21.5642646Z [INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 s - in org.keycloak.tests.admin.AdminPreflightTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:21.5644284Z [INFO] Running org.keycloak.tests.admin.userprofile.UserProfileAdminTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:21.5645882Z 2025-03-26 00:39:21,555 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:21.5646990Z 2025-03-26 00:39:21,555 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.userprofile.UserProfileAdminTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:23.3117706Z [INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.745 s - in org.keycloak.tests.admin.userprofile.UserProfileAdminTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:23.3119506Z [INFO] Running org.keycloak.tests.admin.RealmLocalizationResourceTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:23.3120814Z 2025-03-26 00:39:23,301 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:23.3122219Z 2025-03-26 00:39:23,302 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.RealmLocalizationResourceTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:25.0511543Z [INFO] Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.739 s - in org.keycloak.tests.admin.RealmLocalizationResourceTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:25.0512897Z [INFO] Running org.keycloak.tests.admin.client.ClientProtocolMapperTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:25.0513824Z 2025-03-26 00:39:25,042 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:25.0514710Z 2025-03-26 00:39:25,042 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.client.ClientProtocolMapperTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:27.0839577Z [INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.029 s - in org.keycloak.tests.admin.client.ClientProtocolMapperTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:27.0847664Z [INFO] Running org.keycloak.tests.admin.client.ClientScopeProtocolMapperTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:27.0849275Z 2025-03-26 00:39:27,073 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:27.0853290Z 2025-03-26 00:39:27,073 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.client.ClientScopeProtocolMapperTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:29.7296765Z [INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.643 s - in org.keycloak.tests.admin.client.ClientScopeProtocolMapperTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:29.7298152Z [INFO] Running org.keycloak.tests.admin.group.SubGroupSearchTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:29.7304725Z 2025-03-26 00:39:29,718 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:29.7306378Z 2025-03-26 00:39:29,718 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.group.SubGroupSearchTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:31.2476128Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.518 s - in org.keycloak.tests.admin.group.SubGroupSearchTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:31.2486090Z [INFO] Running org.keycloak.tests.admin.DeclarativeUserTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:31.2487649Z 2025-03-26 00:39:31,238 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:31.2494209Z 2025-03-26 00:39:31,238 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.DeclarativeUserTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:33.3938312Z [INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.146 s - in org.keycloak.tests.admin.DeclarativeUserTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:33.3939576Z [INFO] Running org.keycloak.tests.admin.authz.fgap.FeatureDisabledTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:33.3940384Z 2025-03-26 00:39:33,385 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:33.3941328Z 2025-03-26 00:39:33,385 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authz.fgap.FeatureDisabledTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:34.9343537Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.532 s - in org.keycloak.tests.admin.authz.fgap.FeatureDisabledTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:34.9348112Z [INFO] Running org.keycloak.tests.admin.authentication.AuthenticatorConfigTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:34.9349199Z 2025-03-26 00:39:34,919 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:34.9350393Z 2025-03-26 00:39:34,919 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authentication.AuthenticatorConfigTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:37.8265326Z [INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.888 s - in org.keycloak.tests.admin.authentication.AuthenticatorConfigTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:37.8270643Z [INFO] Running org.keycloak.tests.admin.AttackDetectionResourceTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:37.8272486Z 2025-03-26 00:39:37,810 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:37.8273617Z 2025-03-26 00:39:37,810 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.AttackDetectionResourceTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:39.1363587Z 2025-03-26 00:39:39,131 WARN  [managed.keycloak] (main) [org.keycloak.events] (executor-thread-1) type="LOGIN_ERROR", realmId="default", realmName="default", clientId="test-app", userId="59e392e8-7d63-4c18-b05f-ccb69eb4e2cb", ipAddress="127.0.0.1", error="invalid_user_credentials", auth_method="openid-connect", grant_type="password", client_auth_method="client-secret", username="default"
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:39.1369511Z 2025-03-26 00:39:39,131 WARN  [managed.keycloak] (main) [org.keycloak.events] (executor-thread-1) type="LOGIN_ERROR", realmId="default", realmName="default", clientId="test-app", userId="59e392e8-7d63-4c18-b05f-ccb69eb4e2cb", ipAddress="127.0.0.1", error="invalid_user_credentials", auth_method="openid-connect", grant_type="password", client_auth_method="client-secret", username="default"
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:39.1373296Z 2025-03-26 00:39:39,131 WARN  [managed.keycloak] (main) [org.keycloak.events] (executor-thread-1) type="LOGIN_ERROR", realmId="default", realmName="default", clientId="test-app", userId="59e392e8-7d63-4c18-b05f-ccb69eb4e2cb", ipAddress="127.0.0.1", error="user_temporarily_disabled", auth_method="openid-connect", grant_type="password", client_auth_method="client-secret", username="default"
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:39.1377994Z 2025-03-26 00:39:39,131 WARN  [managed.keycloak] (main) [org.keycloak.events] (executor-thread-1) type="LOGIN_ERROR", realmId="default", realmName="default", clientId="test-app", userId="548e8519-1257-47c5-a42a-8dec8308aa1b", ipAddress="127.0.0.1", error="invalid_user_credentials", auth_method="openid-connect", grant_type="password", client_auth_method="client-secret", username="testUser2"
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:39.1382144Z 2025-03-26 00:39:39,131 WARN  [managed.keycloak] (main) [org.keycloak.events] (executor-thread-1) type="LOGIN_ERROR", realmId="default", realmName="default", clientId="test-app", userId="548e8519-1257-47c5-a42a-8dec8308aa1b", ipAddress="127.0.0.1", error="user_temporarily_disabled", auth_method="openid-connect", grant_type="password", client_auth_method="client-secret", username="testUser2"
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:39.1386310Z 2025-03-26 00:39:39,131 WARN  [managed.keycloak] (main) [org.keycloak.events] (executor-thread-1) type="LOGIN_ERROR", realmId="default", realmName="default", clientId="test-app", userId="null", ipAddress="127.0.0.1", error="user_not_found", auth_method="openid-connect", grant_type="password", client_auth_method="client-secret", username="nosuchuser"
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:39.1388661Z 2025-03-26 00:39:39,131 ERROR [testinfo] (main)     FAILED - org.keycloak.tests.admin.AttackDetectionResourceTest / test
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:39.6158829Z [ERROR] Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 1.795 s <<< FAILURE! - in org.keycloak.tests.admin.AttackDetectionResourceTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:39.6160093Z [ERROR] org.keycloak.tests.admin.AttackDetectionResourceTest.test  Time elapsed: 1.323 s  <<< FAILURE!
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:39.6160865Z org.opentest4j.AssertionFailedError: expected: <2> but was: <1>
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:39.6161564Z 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:39.6162425Z 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:39.6163208Z 	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:39.6163854Z 	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:39.6164513Z 	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:39.6165263Z 	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:39.6166066Z 	at org.keycloak.tests.admin.AttackDetectionResourceTest.assertBruteForce(AttackDetectionResourceTest.java:99)
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:39.6167070Z 	at org.keycloak.tests.admin.AttackDetectionResourceTest.test(AttackDetectionResourceTest.java:81)
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:39.6167792Z 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:39.6168360Z 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:39.6168873Z 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:39.6169140Z 
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:39.6169392Z [INFO] Running org.keycloak.tests.admin.CrossRealmPermissionsTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:39.6170011Z 2025-03-26 00:39:39,606 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:39.6170811Z 2025-03-26 00:39:39,606 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.CrossRealmPermissionsTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:41.8404073Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.224 s - in org.keycloak.tests.admin.CrossRealmPermissionsTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:41.8405464Z [INFO] Running org.keycloak.tests.admin.client.ClientScopeTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:41.8406370Z 2025-03-26 00:39:41,831 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:41.8407762Z 2025-03-26 00:39:41,831 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.client.ClientScopeTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:45.5630520Z [INFO] Tests run: 20, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.718 s - in org.keycloak.tests.admin.client.ClientScopeTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:45.5631751Z [INFO] Running org.keycloak.tests.admin.authentication.FlowTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:45.5632676Z 2025-03-26 00:39:45,550 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:45.5633728Z 2025-03-26 00:39:45,550 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authentication.FlowTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:49.5098173Z [INFO] Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.946 s - in org.keycloak.tests.admin.authentication.FlowTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:49.5099427Z [INFO] Running org.keycloak.tests.admin.authentication.ShiftRequiredActionTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:49.5100416Z 2025-03-26 00:39:49,498 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:49.5101902Z 2025-03-26 00:39:49,498 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authentication.ShiftRequiredActionTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:50.6471490Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.135 s - in org.keycloak.tests.admin.authentication.ShiftRequiredActionTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:50.6473310Z [INFO] Running org.keycloak.tests.admin.authentication.InitialFlowsTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:50.6474663Z 2025-03-26 00:39:50,634 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:50.6476421Z 2025-03-26 00:39:50,634 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authentication.InitialFlowsTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:51.6416221Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.993 s - in org.keycloak.tests.admin.authentication.InitialFlowsTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:51.6420460Z [INFO] Running org.keycloak.tests.admin.authentication.ProvidersTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:51.6421922Z 2025-03-26 00:39:51,629 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:51.6423626Z 2025-03-26 00:39:51,629 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authentication.ProvidersTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:52.5886626Z [INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.946 s - in org.keycloak.tests.admin.authentication.ProvidersTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:52.5896268Z [INFO] Running org.keycloak.tests.admin.AdminSignatureAlgorithmTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:52.5897298Z 2025-03-26 00:39:52,577 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:52.5898405Z 2025-03-26 00:39:52,577 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.AdminSignatureAlgorithmTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:52.8246073Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.238 s - in org.keycloak.tests.admin.AdminSignatureAlgorithmTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:52.8247509Z [INFO] Running org.keycloak.tests.admin.authentication.ShiftExecutionTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:52.8248551Z 2025-03-26 00:39:52,817 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:52.8249689Z 2025-03-26 00:39:52,817 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authentication.ShiftExecutionTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:54.0315251Z [INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.199 s - in org.keycloak.tests.admin.authentication.ShiftExecutionTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:54.0317431Z [INFO] Running org.keycloak.tests.admin.event.LoginEventsTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:54.0329507Z 2025-03-26 00:39:54,019 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:54.0333123Z 2025-03-26 00:39:54,019 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.event.LoginEventsTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:57.3441749Z [INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.314 s - in org.keycloak.tests.admin.event.LoginEventsTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:57.3444379Z [INFO] Running org.keycloak.tests.admin.event.EmailEventListenerTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:57.3445589Z 2025-03-26 00:39:57,335 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:57.3446713Z 2025-03-26 00:39:57,335 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.event.EmailEventListenerTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:58.7052470Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.359 s - in org.keycloak.tests.admin.event.EmailEventListenerTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:58.7054077Z [INFO] Running org.keycloak.tests.admin.client.ServiceAccountClientTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:58.7055394Z 2025-03-26 00:39:58,696 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (oracle)	Run new base tests	2025-03-26T00:39:58.7056577Z 2025-03-26 00:39:58,696 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.client.ServiceAccountClientTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:40:00.2482170Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.539 s - in org.keycloak.tests.admin.client.ServiceAccountClientTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:40:00.2483822Z [INFO] Running org.keycloak.tests.admin.AuthzCleanupTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:40:00.2485173Z 2025-03-26 00:40:00,237 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (oracle)	Run new base tests	2025-03-26T00:40:00.2487100Z 2025-03-26 00:40:00,237 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.AuthzCleanupTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:40:25.0408137Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 24.793 s - in org.keycloak.tests.admin.AuthzCleanupTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:40:25.0410342Z [INFO] Running org.keycloak.tests.admin.FineGrainedPermissionsUsersTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:40:25.0411547Z 2025-03-26 00:40:25,032 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (oracle)	Run new base tests	2025-03-26T00:40:25.0412747Z 2025-03-26 00:40:25,032 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.FineGrainedPermissionsUsersTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:41:00.6771055Z [INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 35.634 s - in org.keycloak.tests.admin.FineGrainedPermissionsUsersTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:41:00.6772420Z [INFO] Running org.keycloak.tests.admin.ImpersonationDisabledTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:41:00.6773374Z 2025-03-26 00:41:00,667 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (oracle)	Run new base tests	2025-03-26T00:41:00.6774463Z 2025-03-26 00:41:00,667 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.ImpersonationDisabledTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:41:24.3568583Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 23.652 s - in org.keycloak.tests.admin.ImpersonationDisabledTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:41:24.3569952Z [INFO] Running org.keycloak.tests.admin.ManagementPermissionsTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:41:24.3570954Z 2025-03-26 00:41:24,320 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (oracle)	Run new base tests	2025-03-26T00:41:24.3572197Z 2025-03-26 00:41:24,320 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.ManagementPermissionsTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:41:25.3035975Z 2025-03-26 00:41:25,298 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (oracle)	Run new base tests	2025-03-26T00:41:25.3038959Z 2025-03-26 00:41:25,299 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (oracle)	Run new base tests	2025-03-26T00:41:51.1444554Z [INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 26.811 s - in org.keycloak.tests.admin.ManagementPermissionsTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:41:51.1446814Z [INFO] Running org.keycloak.tests.admin.SMTPConnectionVaultTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:41:51.1448380Z 2025-03-26 00:41:51,133 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (oracle)	Run new base tests	2025-03-26T00:41:51.1451299Z 2025-03-26 00:41:51,133 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.SMTPConnectionVaultTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:42:16.6473774Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 25.503 s - in org.keycloak.tests.admin.SMTPConnectionVaultTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:42:16.6475260Z [INFO] Running org.keycloak.tests.admin.authentication.RequiredActionsTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:42:16.6476247Z 2025-03-26 00:42:16,638 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (oracle)	Run new base tests	2025-03-26T00:42:16.6477358Z 2025-03-26 00:42:16,638 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authentication.RequiredActionsTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:42:40.8424721Z [INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 24.19 s - in org.keycloak.tests.admin.authentication.RequiredActionsTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:42:40.8441542Z [INFO] Running org.keycloak.tests.admin.authz.fgap.UserResourceTypePermissionTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:42:40.8444235Z 2025-03-26 00:42:40,831 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (oracle)	Run new base tests	2025-03-26T00:42:40.8445780Z 2025-03-26 00:42:40,831 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authz.fgap.UserResourceTypePermissionTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:42:47.5173047Z 2025-03-26 00:42:47,453 WARN  [managed.keycloak] (pool-10-thread-1) [org.keycloak.common.Profile] (main) Experimental features enabled: admin-fine-grained-authz:v2
+Store IT (oracle)	Run new base tests	2025-03-26T00:42:47.5177302Z 2025-03-26 00:42:47,462 WARN  [managed.keycloak] (pool-10-thread-1) [org.keycloak.common.Profile] (main) Experimental features enabled: admin-fine-grained-authz:v2
+Store IT (oracle)	Run new base tests	2025-03-26T00:42:55.5419122Z 2025-03-26 00:42:55,441 WARN  [managed.keycloak] (pool-10-thread-1) [org.keycloak.common.Profile] (main) Experimental features enabled: admin-fine-grained-authz:v2
+Store IT (oracle)	Run new base tests	2025-03-26T00:42:55.5425395Z 2025-03-26 00:42:55,441 WARN  [managed.keycloak] (pool-10-thread-1) [org.keycloak.common.Profile] (main) Experimental features enabled: admin-fine-grained-authz:v2
+Store IT (oracle)	Run new base tests	2025-03-26T00:43:07.0030548Z [INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 26.162 s - in org.keycloak.tests.admin.authz.fgap.UserResourceTypePermissionTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:43:07.0031757Z [INFO] Running org.keycloak.tests.admin.authz.fgap.RoleResourceTypeEvaluationTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:43:07.0032540Z 2025-03-26 00:43:06,994 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (oracle)	Run new base tests	2025-03-26T00:43:07.0033332Z 2025-03-26 00:43:06,994 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authz.fgap.RoleResourceTypeEvaluationTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:43:09.9277648Z [INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.921 s - in org.keycloak.tests.admin.authz.fgap.RoleResourceTypeEvaluationTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:43:09.9282001Z [INFO] Running org.keycloak.tests.admin.authz.fgap.UserResourceTypeEvaluationTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:43:09.9283050Z 2025-03-26 00:43:09,917 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (oracle)	Run new base tests	2025-03-26T00:43:09.9283996Z 2025-03-26 00:43:09,917 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authz.fgap.UserResourceTypeEvaluationTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:43:13.5580738Z [INFO] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.628 s - in org.keycloak.tests.admin.authz.fgap.UserResourceTypeEvaluationTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:43:13.5585457Z [INFO] Running org.keycloak.tests.admin.authz.fgap.ClientResourceTypeFilteringTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:43:13.5590608Z 2025-03-26 00:43:13,546 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (oracle)	Run new base tests	2025-03-26T00:43:13.5595214Z 2025-03-26 00:43:13,546 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authz.fgap.ClientResourceTypeFilteringTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:43:23.1540161Z [INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.596 s - in org.keycloak.tests.admin.authz.fgap.ClientResourceTypeFilteringTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:43:23.1542398Z [INFO] Running org.keycloak.tests.admin.authz.fgap.GroupResourceTypeFilteringTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:43:23.1543649Z 2025-03-26 00:43:23,144 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (oracle)	Run new base tests	2025-03-26T00:43:23.1545866Z 2025-03-26 00:43:23,144 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authz.fgap.GroupResourceTypeFilteringTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:43:41.0488613Z [INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 17.895 s - in org.keycloak.tests.admin.authz.fgap.GroupResourceTypeFilteringTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:43:41.0489979Z [INFO] Running org.keycloak.tests.admin.authz.fgap.PermissionRESTTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:43:41.0490908Z 2025-03-26 00:43:41,041 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (oracle)	Run new base tests	2025-03-26T00:43:41.0491972Z 2025-03-26 00:43:41,041 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authz.fgap.PermissionRESTTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:43:42.5608744Z [INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.511 s - in org.keycloak.tests.admin.authz.fgap.PermissionRESTTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:43:42.5611391Z [INFO] Running org.keycloak.tests.admin.authz.fgap.FeatureV2EnabledTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:43:42.5613691Z 2025-03-26 00:43:42,552 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (oracle)	Run new base tests	2025-03-26T00:43:42.5616111Z 2025-03-26 00:43:42,552 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authz.fgap.FeatureV2EnabledTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:43:43.9459369Z [INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.384 s - in org.keycloak.tests.admin.authz.fgap.FeatureV2EnabledTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:43:43.9468168Z [INFO] Running org.keycloak.tests.admin.authz.fgap.GroupResourceTypeEvaluationTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:43:43.9469280Z 2025-03-26 00:43:43,938 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (oracle)	Run new base tests	2025-03-26T00:43:43.9470532Z 2025-03-26 00:43:43,938 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authz.fgap.GroupResourceTypeEvaluationTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:43:46.5538106Z [INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.605 s - in org.keycloak.tests.admin.authz.fgap.GroupResourceTypeEvaluationTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:43:46.5540839Z [INFO] Running org.keycloak.tests.admin.authz.fgap.RoleResourceTypePermissionTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:43:46.5542041Z 2025-03-26 00:43:46,543 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (oracle)	Run new base tests	2025-03-26T00:43:46.5543450Z 2025-03-26 00:43:46,543 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authz.fgap.RoleResourceTypePermissionTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:43:48.1543582Z [INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.602 s - in org.keycloak.tests.admin.authz.fgap.RoleResourceTypePermissionTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:43:48.1545564Z [INFO] Running org.keycloak.tests.admin.authz.fgap.UserResourceTypeFilteringTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:43:48.1546636Z 2025-03-26 00:43:48,147 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (oracle)	Run new base tests	2025-03-26T00:43:48.1547937Z 2025-03-26 00:43:48,147 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authz.fgap.UserResourceTypeFilteringTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:43:52.5015345Z [INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.343 s - in org.keycloak.tests.admin.authz.fgap.UserResourceTypeFilteringTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:43:52.5017108Z [INFO] Running org.keycloak.tests.admin.authz.fgap.GroupResourceTypePermissionTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:43:52.5018199Z 2025-03-26 00:43:52,491 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (oracle)	Run new base tests	2025-03-26T00:43:52.5019420Z 2025-03-26 00:43:52,491 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authz.fgap.GroupResourceTypePermissionTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:43:54.1686820Z [INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.668 s - in org.keycloak.tests.admin.authz.fgap.GroupResourceTypePermissionTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:43:54.1688378Z [INFO] Running org.keycloak.tests.admin.authz.fgap.ClientResourceTypePermissionTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:43:54.1689838Z 2025-03-26 00:43:54,161 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (oracle)	Run new base tests	2025-03-26T00:43:54.1691101Z 2025-03-26 00:43:54,161 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authz.fgap.ClientResourceTypePermissionTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:43:55.9009602Z [INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.73 s - in org.keycloak.tests.admin.authz.fgap.ClientResourceTypePermissionTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:43:55.9012947Z [INFO] Running org.keycloak.tests.admin.authz.fgap.ClientResourceTypeEvaluationTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:43:55.9014384Z 2025-03-26 00:43:55,892 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (oracle)	Run new base tests	2025-03-26T00:43:55.9016483Z 2025-03-26 00:43:55,893 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authz.fgap.ClientResourceTypeEvaluationTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:43:57.9370084Z 2025-03-26 00:43:57,845 WARN  [managed.keycloak] (pool-10-thread-1) [org.keycloak.events] (executor-thread-2) type="LOGOUT_ERROR", realmId="default", realmName="default", clientId="myclient", userId="null", ipAddress="127.0.0.1", error="invalid_client_credentials"
+Store IT (oracle)	Run new base tests	2025-03-26T00:43:58.3251532Z [INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.407 s - in org.keycloak.tests.admin.authz.fgap.ClientResourceTypeEvaluationTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:43:58.3253733Z [INFO] Running org.keycloak.tests.admin.authz.fgap.FeatureV1EnabledTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:43:58.3256412Z 2025-03-26 00:43:58,301 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (oracle)	Run new base tests	2025-03-26T00:43:58.3257554Z 2025-03-26 00:43:58,301 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authz.fgap.FeatureV1EnabledTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:44:22.7077807Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 24.393 s - in org.keycloak.tests.admin.authz.fgap.FeatureV1EnabledTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:44:22.7081053Z [INFO] Running org.keycloak.tests.admin.client.ClientSearchTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:44:22.7091050Z 2025-03-26 00:44:22,695 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (oracle)	Run new base tests	2025-03-26T00:44:22.7092786Z 2025-03-26 00:44:22,695 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.client.ClientSearchTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:44:45.6064816Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 22.901 s - in org.keycloak.tests.admin.client.ClientSearchTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:44:45.6069735Z [INFO] Running org.keycloak.tests.admin.client.DynamicClientScopeTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:44:45.6074006Z 2025-03-26 00:44:45,597 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (oracle)	Run new base tests	2025-03-26T00:44:45.6076166Z 2025-03-26 00:44:45,597 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.client.DynamicClientScopeTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:44:52.0769340Z 2025-03-26 00:44:52,041 WARN  [managed.keycloak] (pool-13-thread-1) [org.keycloak.common.Profile] (main) Experimental features enabled: dynamic-scopes:v1
+Store IT (oracle)	Run new base tests	2025-03-26T00:44:52.0778622Z 2025-03-26 00:44:52,045 WARN  [managed.keycloak] (pool-13-thread-1) [org.keycloak.common.Profile] (main) Experimental features enabled: dynamic-scopes:v1
+Store IT (oracle)	Run new base tests	2025-03-26T00:44:59.9947369Z 2025-03-26 00:44:59,959 WARN  [managed.keycloak] (pool-13-thread-1) [org.keycloak.common.Profile] (main) Experimental features enabled: dynamic-scopes:v1
+Store IT (oracle)	Run new base tests	2025-03-26T00:44:59.9949777Z 2025-03-26 00:44:59,960 WARN  [managed.keycloak] (pool-13-thread-1) [org.keycloak.common.Profile] (main) Experimental features enabled: dynamic-scopes:v1
+Store IT (oracle)	Run new base tests	2025-03-26T00:45:09.5873293Z [INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 23.979 s - in org.keycloak.tests.admin.client.DynamicClientScopeTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:45:09.5875490Z [INFO] Running org.keycloak.tests.admin.client.InstallationTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:45:09.5876847Z 2025-03-26 00:45:09,578 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (oracle)	Run new base tests	2025-03-26T00:45:09.5877987Z 2025-03-26 00:45:09,578 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.client.InstallationTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:45:35.4331809Z [INFO] Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 25.844 s - in org.keycloak.tests.admin.client.InstallationTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:45:35.4336166Z [INFO] Running org.keycloak.tests.admin.group.GroupSearchTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:45:35.4338886Z 2025-03-26 00:45:35,425 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (oracle)	Run new base tests	2025-03-26T00:45:35.4343056Z 2025-03-26 00:45:35,425 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.group.GroupSearchTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:45:58.7686205Z [INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 23.334 s - in org.keycloak.tests.admin.group.GroupSearchTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:45:58.7688204Z [INFO] Running org.keycloak.tests.admin.metric.PasswordValidationMetricCustomTagsTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:45:58.7690833Z 2025-03-26 00:45:58,760 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (oracle)	Run new base tests	2025-03-26T00:45:58.7692494Z 2025-03-26 00:45:58,760 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.metric.PasswordValidationMetricCustomTagsTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:46:23.7247409Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 24.952 s - in org.keycloak.tests.admin.metric.PasswordValidationMetricCustomTagsTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:46:23.7250351Z [INFO] Running org.keycloak.tests.admin.metric.PasswordValidationMetricTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:46:23.7251585Z 2025-03-26 00:46:23,714 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (oracle)	Run new base tests	2025-03-26T00:46:23.7255119Z 2025-03-26 00:46:23,714 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.metric.PasswordValidationMetricTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:46:48.2742602Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 24.548 s - in org.keycloak.tests.admin.metric.PasswordValidationMetricTest
+Store IT (oracle)	Run new base tests	2025-03-26T00:46:48.3576149Z [INFO] Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 650.208 s - in org.keycloak.tests.suites.DatabaseTestSuite
+Store IT (oracle)	Run new base tests	2025-03-26T00:46:48.7042208Z [INFO] 
+Store IT (oracle)	Run new base tests	2025-03-26T00:46:48.7042573Z [INFO] Results:
+Store IT (oracle)	Run new base tests	2025-03-26T00:46:48.7042867Z [INFO] 
+Store IT (oracle)	Run new base tests	2025-03-26T00:46:48.7043171Z [ERROR] Failures: 
+Store IT (oracle)	Run new base tests	2025-03-26T00:46:48.7043897Z [ERROR]   AttackDetectionResourceTest.test:81->assertBruteForce:99 expected: <2> but was: <1>
+Store IT (oracle)	Run new base tests	2025-03-26T00:46:48.7044710Z [INFO] 
+Store IT (oracle)	Run new base tests	2025-03-26T00:46:48.7045366Z [ERROR] Tests run: 287, Failures: 1, Errors: 0, Skipped: 0
+Store IT (oracle)	Run new base tests	2025-03-26T00:46:48.7045931Z [INFO] 
+Store IT (oracle)	Run new base tests	2025-03-26T00:46:48.7080657Z [INFO] ------------------------------------------------------------------------
+Store IT (oracle)	Run new base tests	2025-03-26T00:46:48.7081442Z [INFO] Reactor Summary for Keycloak Tests Parent 999.0.0-SNAPSHOT:
+Store IT (oracle)	Run new base tests	2025-03-26T00:46:48.7081897Z [INFO] 
+Store IT (oracle)	Run new base tests	2025-03-26T00:46:48.7083875Z [INFO] Keycloak Tests Parent .............................. SUCCESS [  0.983 s]
+Store IT (oracle)	Run new base tests	2025-03-26T00:46:48.7084729Z [INFO] Keycloak Testsuite Utilities ....................... SUCCESS [  7.364 s]
+Store IT (oracle)	Run new base tests	2025-03-26T00:46:48.7085767Z [INFO] Keycloak Testsuite Utilities Shared ................ SUCCESS [  0.862 s]
+Store IT (oracle)	Run new base tests	2025-03-26T00:46:48.7092462Z [INFO] Keycloak Testsuite Custom Providers ................ SUCCESS [  0.130 s]
+Store IT (oracle)	Run new base tests	2025-03-26T00:46:48.7093114Z [INFO] New Keycloak Base Testsuite ........................ FAILURE [11:01 min]
+Store IT (oracle)	Run new base tests	2025-03-26T00:46:48.7093740Z [INFO] ------------------------------------------------------------------------
+Store IT (oracle)	Run new base tests	2025-03-26T00:46:48.7094350Z [INFO] BUILD FAILURE
+Store IT (oracle)	Run new base tests	2025-03-26T00:46:48.7095149Z [INFO] ------------------------------------------------------------------------
+Store IT (oracle)	Run new base tests	2025-03-26T00:46:48.7095791Z [INFO] Total time:  11:11 min
+Store IT (oracle)	Run new base tests	2025-03-26T00:46:48.7096252Z [INFO] Finished at: 2025-03-26T00:46:48Z
+Store IT (oracle)	Run new base tests	2025-03-26T00:46:48.7096837Z [INFO] ------------------------------------------------------------------------
+Store IT (oracle)	Run new base tests	2025-03-26T00:46:48.7102160Z [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.0.0-M7:test (default-test) on project keycloak-tests-base: There are test failures.
+Store IT (oracle)	Run new base tests	2025-03-26T00:46:48.7103696Z [ERROR] 
+Store IT (oracle)	Run new base tests	2025-03-26T00:46:48.7105564Z [ERROR] Please refer to /home/runner/work/keycloak/keycloak/tests/base/target/surefire-reports for the individual test results.
+Store IT (oracle)	Run new base tests	2025-03-26T00:46:48.7107969Z [ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+Store IT (oracle)	Run new base tests	2025-03-26T00:46:48.7108753Z [ERROR] -> [Help 1]
+Store IT (oracle)	Run new base tests	2025-03-26T00:46:48.7109106Z [ERROR] 
+Store IT (oracle)	Run new base tests	2025-03-26T00:46:48.7109559Z [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+Store IT (oracle)	Run new base tests	2025-03-26T00:46:48.7110064Z [ERROR] Re-run Maven using the -X switch to enable full debug logging.
+Store IT (oracle)	Run new base tests	2025-03-26T00:46:48.7110567Z [ERROR] 
+Store IT (oracle)	Run new base tests	2025-03-26T00:46:48.7111304Z [ERROR] For more information about the errors and possible solutions, please read the following articles:
+Store IT (oracle)	Run new base tests	2025-03-26T00:46:48.7112453Z [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+Store IT (oracle)	Run new base tests	2025-03-26T00:46:48.7113092Z [ERROR] 
+Store IT (oracle)	Run new base tests	2025-03-26T00:46:48.7113429Z [ERROR] After correcting the problems, you can resume the build with the command
+Store IT (oracle)	Run new base tests	2025-03-26T00:46:48.7114114Z [ERROR]   mvn <args> -rf :keycloak-tests-base
+Store IT (oracle)	Run new base tests	2025-03-26T00:46:48.7382713Z ##[error]Process completed with exit code 1.
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7544559Z Prepare all required actions
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7608540Z ##[group]Run ./.github/actions/status-check
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7608883Z with:
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7612842Z   jobs: {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "conditional": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	      "ci": "true",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	      "ci-aurora": "true",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	      "ci-quarkus": "true",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	      "ci-sssd": "true",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	      "ci-store": "true",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	      "ci-webauthn": "true"
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    }
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "build": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "unit-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "base-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "adapter-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "adapter-integration-tests-strict-cookies": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "quarkus-unit-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "quarkus-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "jdk-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "store-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "failure",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "volatile-sessions-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "store-model-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "clustering-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "fips-unit-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "fips-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "forms-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "webauthn-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "sssd-unit-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "migration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "external-infinispan-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "test-framework": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "base-new-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  }
+Status Check - Keycloak CI	Run /./.github/actions/status-check	}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7617393Z env:
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7617710Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7618089Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7618432Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7618769Z ##[endgroup]
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7712897Z ##[group]Run JOBS='{
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7713283Z [36;1mJOBS='{[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7713528Z [36;1m  "conditional": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7713794Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7714074Z [36;1m    "outputs": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7714337Z [36;1m      "ci": "true",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7714606Z [36;1m      "ci-aurora": "true",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7714908Z [36;1m      "ci-quarkus": "true",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7715183Z [36;1m      "ci-sssd": "true",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7715444Z [36;1m      "ci-store": "true",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7715714Z [36;1m      "ci-webauthn": "true"[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7715978Z [36;1m    }[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7716208Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7716422Z [36;1m  "build": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7716662Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7716936Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7717190Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7717407Z [36;1m  "unit-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7717662Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7717921Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7718154Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7718388Z [36;1m  "base-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7718681Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7718953Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7719186Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7719425Z [36;1m  "adapter-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7719733Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7720000Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7720240Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7720536Z [36;1m  "adapter-integration-tests-strict-cookies": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7721314Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7721599Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7721839Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7722070Z [36;1m  "quarkus-unit-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7722334Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7722591Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7722822Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7723058Z [36;1m  "quarkus-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7723351Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7723600Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7723833Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7724059Z [36;1m  "jdk-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7724334Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7724592Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7724859Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7725097Z [36;1m  "store-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7725387Z [36;1m    "result": "failure",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7725663Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7725904Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7726130Z [36;1m  "volatile-sessions-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7726561Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7726883Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7727125Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7727351Z [36;1m  "store-model-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7727615Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7727869Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7728105Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7728349Z [36;1m  "clustering-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7728651Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7728912Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7729141Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7729366Z [36;1m  "fips-unit-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7729631Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7729888Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7730128Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7730349Z [36;1m  "fips-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7730774Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7731044Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7731283Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7731515Z [36;1m  "forms-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7731795Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7732054Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7732289Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7732527Z [36;1m  "webauthn-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7732819Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7733071Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7733331Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7733552Z [36;1m  "sssd-unit-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7733819Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7734074Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7734301Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7734520Z [36;1m  "migration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7734786Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7735039Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7735271Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7735506Z [36;1m  "external-infinispan-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7735795Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7736048Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7736279Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7736495Z [36;1m  "test-framework": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7736756Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7737010Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7737239Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7737472Z [36;1m  "base-new-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7737763Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7738012Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7738242Z [36;1m  }[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7738447Z [36;1m}'[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7738659Z [36;1m[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7738871Z [36;1mecho "Job status:"[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7739349Z [36;1mecho $JOBS | jq -r 'to_entries[] | " - \(.key): \(.value.result)"'[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7739714Z [36;1m[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7740010Z [36;1mfor i in $(echo $JOBS | jq -r 'to_entries[] | .value.result'); do[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7740420Z [36;1m  if [ "$i" != "success" ] && [ "$i" != "skipped" ]; then[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7819643Z [36;1m    echo ""[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7820201Z [36;1m    echo "Status check not okay!"[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7820981Z [36;1m    exit 1[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7821467Z [36;1m  fi[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7821927Z [36;1mdone[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7877779Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7878187Z env:
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7878500Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7878939Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7879273Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7879628Z ##[endgroup]
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.7964920Z Job status:
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.8306943Z  - conditional: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.8307545Z  - build: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.8308231Z  - unit-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.8308595Z  - base-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.8309001Z  - adapter-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.8309459Z  - adapter-integration-tests-strict-cookies: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.8309903Z  - quarkus-unit-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.8310278Z  - quarkus-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.8310891Z  - jdk-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.8311305Z  - store-integration-tests: failure
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.8311670Z  - volatile-sessions-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.8312027Z  - store-model-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.8312391Z  - clustering-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.8312799Z  - fips-unit-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.8313201Z  - fips-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.8313559Z  - forms-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.8313972Z  - webauthn-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.8314541Z  - sssd-unit-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.8315062Z  - migration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.8315603Z  - external-infinispan-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.8316148Z  - test-framework: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.8316652Z  - base-new-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.8343342Z 
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.8343612Z Status check not okay!
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T01:11:16.8355712Z ##[error]Process completed with exit code 1.
