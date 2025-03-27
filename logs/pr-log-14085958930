@@ -1,0 +1,986 @@
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:33.4818968Z ##[group]Run KC_TEST_DATABASE=mssql KC_TEST_DATABASE_REUSE=true TESTCONTAINERS_REUSE_ENABLE=true ./mvnw package -f tests/pom.xml -Dtest=DatabaseTestSuite
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:33.4820010Z [36;1mKC_TEST_DATABASE=mssql KC_TEST_DATABASE_REUSE=true TESTCONTAINERS_REUSE_ENABLE=true ./mvnw package -f tests/pom.xml -Dtest=DatabaseTestSuite[0m
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:33.4866658Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:33.4867002Z env:
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:33.4867315Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:33.4867695Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:33.4868013Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:33.4868447Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.6-7/x64
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:33.4868941Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.6-7/x64
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:33.4869313Z ##[endgroup]
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:37.1625596Z [INFO] Loading cache configuration from /home/runner/work/keycloak/keycloak/.mvn/maven-build-cache-config.xml
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:37.1785122Z [INFO] Scanning for projects...
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:37.3480656Z [INFO] ------------------------------------------------------------------------
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:37.3481475Z [INFO] Reactor Build Order:
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:37.3482180Z [INFO] 
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:37.3482986Z [INFO] Keycloak Tests Parent                                              [pom]
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:37.3484325Z [INFO] Keycloak Testsuite Utilities                                       [jar]
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:37.3485452Z [INFO] Keycloak Testsuite Utilities Shared                                [jar]
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:37.3486561Z [INFO] Keycloak Testsuite Custom Providers                                [jar]
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:37.3487714Z [INFO] New Keycloak Base Testsuite                                        [jar]
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:37.3558905Z [INFO] 
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:37.3562039Z [INFO] --------------< org.keycloak.tests:keycloak-tests-parent >--------------
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:37.3565307Z [INFO] Building Keycloak Tests Parent 999.0.0-SNAPSHOT                    [1/5]
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:37.3570183Z [INFO]   from pom.xml
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:37.3570716Z [INFO] --------------------------------[ pom ]---------------------------------
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:37.4133675Z [INFO] 
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:37.4136444Z [INFO] --- enforcer:3.0.0-M3:enforce (enforce-java-version) @ keycloak-tests-parent ---
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:37.6225191Z [INFO] 
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:37.6227963Z [INFO] --- enforcer:3.0.0-M3:enforce (enforce-maven-version) @ keycloak-tests-parent ---
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:37.6242650Z [INFO] 
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:37.6244406Z [INFO] --- buildnumber:1.4:create (get-scm-revision) @ keycloak-tests-parent ---
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:37.8798072Z [INFO] Executing: /bin/sh -c cd '/home/runner/work/keycloak/keycloak/tests' && 'git' 'rev-parse' '--verify' 'HEAD'
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:37.8801103Z [INFO] Working directory: /home/runner/work/keycloak/keycloak/tests
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:37.9024948Z [INFO] Storing buildNumber: 31d0c64807f92ae677eaa74ca083a3c685c2fe7a at timestamp: 1743000217864
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:37.9080945Z [WARNING] Cannot get the branch information from the git repository: 
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:37.9093812Z Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:37.9094537Z 
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:37.9095125Z [INFO] Executing: /bin/sh -c cd '/home/runner/work/keycloak/keycloak/tests' && 'git' 'rev-parse' '--verify' 'HEAD'
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:37.9096543Z [INFO] Working directory: /home/runner/work/keycloak/keycloak/tests
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:37.9154866Z [INFO] Storing buildScmBranch: UNKNOWN
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:37.9155498Z [INFO] 
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:37.9156149Z [INFO] --- source:3.1.0:jar-no-fork (attach-sources) @ keycloak-tests-parent ---
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:38.0556345Z [INFO] 
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:38.0557228Z [INFO] --------------< org.keycloak.tests:keycloak-tests-utils >---------------
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:38.0558243Z [INFO] Building Keycloak Testsuite Utilities 999.0.0-SNAPSHOT             [2/5]
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:38.0559681Z [INFO]   from utils/pom.xml
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:38.0587391Z [INFO] --------------------------------[ jar ]---------------------------------
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:40.2195017Z [INFO] 
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:40.2197093Z [INFO] --- enforcer:3.0.0-M3:enforce (enforce-java-version) @ keycloak-tests-utils ---
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:40.2245873Z [INFO] 
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:40.2246542Z [INFO] --- enforcer:3.0.0-M3:enforce (enforce-maven-version) @ keycloak-tests-utils ---
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:40.2247299Z [INFO] 
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:40.2247868Z [INFO] --- buildnumber:1.4:create (get-scm-revision) @ keycloak-tests-utils ---
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:40.2252096Z [INFO] 
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:40.2253048Z [INFO] --- resources:3.2.0:resources (default-resources) @ keycloak-tests-utils ---
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:40.3148669Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:40.3150274Z [INFO] Using 'UTF-8' encoding to copy filtered properties files.
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:40.3151717Z [INFO] skip non existing resourceDirectory /home/runner/work/keycloak/keycloak/tests/utils/src/main/resources
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:40.3153147Z [INFO] 
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:40.3155402Z [INFO] --- compiler:3.8.1:compile (default-compile) @ keycloak-tests-utils ---
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:40.3898642Z [INFO] Changes detected - recompiling the module!
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:40.3916311Z [INFO] Compiling 15 source files to /home/runner/work/keycloak/keycloak/tests/utils/target/classes
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:42.1868323Z [INFO] Annotation processing is enabled because one or more processors were found
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:42.1873489Z   on the class path. A future release of javac may disable annotation processing
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:42.1883098Z   unless at least one processor is specified by name (-processor), or a search
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:42.1884275Z   path is specified (--processor-path, --processor-module-path), or annotation
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:42.1885134Z   processing is enabled explicitly (-proc:only, -proc:full).
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:42.1885801Z   Use -Xlint:-options to suppress this message.
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:42.1886422Z   Use -proc:none to disable annotation processing.
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:42.1887946Z [WARNING] /home/runner/work/keycloak/keycloak/tests/utils/src/main/java/org/keycloak/tests/utils/matchers/SamlStatusResponseTypeMatcher.java:[30,31] unchecked conversion
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:42.1889562Z   required: java.util.List<org.hamcrest.Matcher<java.net.URI>>
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:42.1890189Z   found:    java.util.ArrayList
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:42.1890613Z [INFO] 
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:42.1891267Z [INFO] --- resources:3.2.0:testResources (default-testResources) @ keycloak-tests-utils ---
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:42.1909759Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:42.1910503Z [INFO] Using 'UTF-8' encoding to copy filtered properties files.
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:42.1911514Z [INFO] skip non existing resourceDirectory /home/runner/work/keycloak/keycloak/tests/utils/src/test/resources
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:42.1912418Z [INFO] 
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:42.1929165Z [INFO] --- compiler:3.8.1:testCompile (default-testCompile) @ keycloak-tests-utils ---
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:42.1957838Z [INFO] No sources to compile
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:42.1959198Z [INFO] 
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:42.1959881Z [INFO] --- surefire:3.0.0-M7:test (default-test) @ keycloak-tests-utils ---
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:42.3025553Z [INFO] No tests to run.
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:42.3096496Z [INFO] 
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:42.3098743Z [INFO] --- jar:3.1.2:jar (default-jar) @ keycloak-tests-utils ---
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:42.4343804Z [INFO] Building jar: /home/runner/work/keycloak/keycloak/tests/utils/target/keycloak-tests-utils-999.0.0-SNAPSHOT.jar
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:42.5131071Z [INFO] 
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:42.5133444Z [INFO] --- source:3.1.0:jar-no-fork (attach-sources) @ keycloak-tests-utils ---
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:42.5606810Z [INFO] Building jar: /home/runner/work/keycloak/keycloak/tests/utils/target/keycloak-tests-utils-999.0.0-SNAPSHOT-sources.jar
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:42.5954336Z [INFO] 
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:42.5957186Z [INFO] -----------< org.keycloak.tests:keycloak-tests-utils-shared >-----------
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:42.5966405Z [INFO] Building Keycloak Testsuite Utilities Shared 999.0.0-SNAPSHOT      [3/5]
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:42.5967722Z [INFO]   from utils-shared/pom.xml
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:42.5968620Z [INFO] --------------------------------[ jar ]---------------------------------
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:42.6669311Z [INFO] 
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:42.6671340Z [INFO] --- enforcer:3.0.0-M3:enforce (enforce-java-version) @ keycloak-tests-utils-shared ---
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:42.6724698Z [INFO] 
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:42.6725683Z [INFO] --- enforcer:3.0.0-M3:enforce (enforce-maven-version) @ keycloak-tests-utils-shared ---
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:42.6727307Z [INFO] 
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:42.6727903Z [INFO] --- buildnumber:1.4:create (get-scm-revision) @ keycloak-tests-utils-shared ---
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:42.6741696Z [INFO] 
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:42.6742369Z [INFO] --- resources:3.2.0:resources (default-resources) @ keycloak-tests-utils-shared ---
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:42.6785060Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:42.6794779Z [INFO] Using 'UTF-8' encoding to copy filtered properties files.
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:42.6796319Z [INFO] skip non existing resourceDirectory /home/runner/work/keycloak/keycloak/tests/utils-shared/src/main/resources
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:42.6797390Z [INFO] 
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:42.6798223Z [INFO] --- compiler:3.8.1:compile (default-compile) @ keycloak-tests-utils-shared ---
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:42.6936939Z [INFO] Changes detected - recompiling the module!
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:42.6948226Z [INFO] Compiling 47 source files to /home/runner/work/keycloak/keycloak/tests/utils-shared/target/classes
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.3725111Z [INFO] Annotation processing is enabled because one or more processors were found
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.3726140Z   on the class path. A future release of javac may disable annotation processing
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.3727043Z   unless at least one processor is specified by name (-processor), or a search
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.3727947Z   path is specified (--processor-path, --processor-module-path), or annotation
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.3728780Z   processing is enabled explicitly (-proc:only, -proc:full).
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.3729478Z   Use -Xlint:-options to suppress this message.
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.3730066Z   Use -proc:none to disable annotation processing.
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.3730583Z [INFO] 
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.3731250Z [INFO] --- resources:3.2.0:testResources (default-testResources) @ keycloak-tests-utils-shared ---
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.3740362Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.3741167Z [INFO] Using 'UTF-8' encoding to copy filtered properties files.
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.3742263Z [INFO] skip non existing resourceDirectory /home/runner/work/keycloak/keycloak/tests/utils-shared/src/test/resources
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.3743233Z [INFO] 
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.3743894Z [INFO] --- compiler:3.8.1:testCompile (default-testCompile) @ keycloak-tests-utils-shared ---
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.3772009Z [INFO] No sources to compile
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.3772729Z [INFO] 
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.3773441Z [INFO] --- surefire:3.0.0-M7:test (default-test) @ keycloak-tests-utils-shared ---
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.3792977Z [INFO] No tests to run.
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.3808890Z [INFO] 
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.3809491Z [INFO] --- jar:3.1.2:jar (default-jar) @ keycloak-tests-utils-shared ---
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.3942751Z [INFO] Building jar: /home/runner/work/keycloak/keycloak/tests/utils-shared/target/keycloak-tests-utils-shared-999.0.0-SNAPSHOT.jar
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.4113324Z [INFO] 
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.4133683Z [INFO] --- source:3.1.0:jar-no-fork (attach-sources) @ keycloak-tests-utils-shared ---
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.4409693Z [INFO] Building jar: /home/runner/work/keycloak/keycloak/tests/utils-shared/target/keycloak-tests-utils-shared-999.0.0-SNAPSHOT-sources.jar
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.4540106Z [INFO] 
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.4540974Z [INFO] ---------< org.keycloak.tests:keycloak-tests-custom-providers >---------
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.4541956Z [INFO] Building Keycloak Testsuite Custom Providers 999.0.0-SNAPSHOT      [4/5]
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.4544221Z [INFO]   from custom-providers/pom.xml
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.4545198Z [INFO] --------------------------------[ jar ]---------------------------------
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.4638051Z [INFO] 
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.4638971Z [INFO] --- enforcer:3.0.0-M3:enforce (enforce-java-version) @ keycloak-tests-custom-providers ---
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.4648421Z [INFO] 
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.4650772Z [INFO] --- enforcer:3.0.0-M3:enforce (enforce-maven-version) @ keycloak-tests-custom-providers ---
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.4656348Z [INFO] 
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.4657238Z [INFO] --- buildnumber:1.4:create (get-scm-revision) @ keycloak-tests-custom-providers ---
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.4664807Z [INFO] 
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.4667280Z [INFO] --- resources:3.2.0:resources (default-resources) @ keycloak-tests-custom-providers ---
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.4674747Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.4675515Z [INFO] Using 'UTF-8' encoding to copy filtered properties files.
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.4701436Z [INFO] Copying 1 resource
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.4758808Z [INFO] 
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.4759747Z [INFO] --- compiler:3.8.1:compile (default-compile) @ keycloak-tests-custom-providers ---
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.4763519Z [INFO] Changes detected - recompiling the module!
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.4771544Z [INFO] Compiling 2 source files to /home/runner/work/keycloak/keycloak/tests/custom-providers/target/classes
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.5410701Z [INFO] 
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.5413269Z [INFO] --- resources:3.2.0:testResources (default-testResources) @ keycloak-tests-custom-providers ---
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.5414811Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.5418503Z [INFO] Using 'UTF-8' encoding to copy filtered properties files.
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.5419627Z [INFO] skip non existing resourceDirectory /home/runner/work/keycloak/keycloak/tests/custom-providers/src/test/resources
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.5420590Z [INFO] 
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.5421273Z [INFO] --- compiler:3.8.1:testCompile (default-testCompile) @ keycloak-tests-custom-providers ---
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.5430423Z [INFO] No sources to compile
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.5431785Z [INFO] 
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.5432705Z [INFO] --- surefire:3.0.0-M7:test (default-test) @ keycloak-tests-custom-providers ---
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.5458055Z [INFO] No tests to run.
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.5466081Z [INFO] 
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.5466959Z [INFO] --- jar:3.1.2:jar (default-jar) @ keycloak-tests-custom-providers ---
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.5506585Z [INFO] Building jar: /home/runner/work/keycloak/keycloak/tests/custom-providers/target/keycloak-tests-custom-providers-999.0.0-SNAPSHOT.jar
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.5564714Z [INFO] 
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.5570763Z [INFO] --- source:3.1.0:jar-no-fork (attach-sources) @ keycloak-tests-custom-providers ---
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.5607558Z [INFO] Building jar: /home/runner/work/keycloak/keycloak/tests/custom-providers/target/keycloak-tests-custom-providers-999.0.0-SNAPSHOT-sources.jar
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.5666097Z [INFO] 
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.5672181Z [INFO] ---------------< org.keycloak.tests:keycloak-tests-base >---------------
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.5675533Z [INFO] Building New Keycloak Base Testsuite 999.0.0-SNAPSHOT              [5/5]
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.5677562Z [INFO]   from base/pom.xml
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.5678262Z [INFO] --------------------------------[ jar ]---------------------------------
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.8577056Z [INFO] 
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.8578518Z [INFO] --- enforcer:3.0.0-M3:enforce (enforce-java-version) @ keycloak-tests-base ---
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.8593485Z [INFO] 
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.8644817Z [INFO] --- enforcer:3.0.0-M3:enforce (enforce-maven-version) @ keycloak-tests-base ---
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.8646377Z [INFO] 
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.8647223Z [INFO] --- buildnumber:1.4:create (get-scm-revision) @ keycloak-tests-base ---
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.8648388Z [INFO] 
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.8649192Z [INFO] --- resources:3.2.0:resources (default-resources) @ keycloak-tests-base ---
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.8650580Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.8651833Z [INFO] Using 'UTF-8' encoding to copy filtered properties files.
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.8653052Z [INFO] skip non existing resourceDirectory /home/runner/work/keycloak/keycloak/tests/base/src/main/resources
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.8654346Z [INFO] 
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.8655056Z [INFO] --- compiler:3.8.1:compile (default-compile) @ keycloak-tests-base ---
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.8655898Z [INFO] No sources to compile
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.8656507Z [INFO] 
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.8657329Z [INFO] --- resources:3.2.0:testResources (default-testResources) @ keycloak-tests-base ---
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.8658380Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.8659293Z [INFO] Using 'UTF-8' encoding to copy filtered properties files.
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.8671348Z [INFO] Copying 6 resources
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.8697974Z [INFO] 
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.8698930Z [INFO] --- compiler:3.8.1:testCompile (default-testCompile) @ keycloak-tests-base ---
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.8846849Z [INFO] Changes detected - recompiling the module!
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:43.8853713Z [INFO] Compiling 75 source files to /home/runner/work/keycloak/keycloak/tests/base/target/test-classes
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:46.7639054Z [INFO] Annotation processing is enabled because one or more processors were found
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:46.7640173Z   on the class path. A future release of javac may disable annotation processing
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:46.7641110Z   unless at least one processor is specified by name (-processor), or a search
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:46.7642142Z   path is specified (--processor-path, --processor-module-path), or annotation
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:46.7643016Z   processing is enabled explicitly (-proc:only, -proc:full).
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:46.7643712Z   Use -Xlint:-options to suppress this message.
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:46.7644591Z   Use -proc:none to disable annotation processing.
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:46.7646945Z [WARNING] /home/runner/work/keycloak/keycloak/tests/base/src/test/java/org/keycloak/tests/admin/RealmLocalizationResourceTest.java:[77,73] getRealmLocalizationTexts(java.lang.String,java.lang.Boolean) in org.keycloak.admin.client.resource.RealmLocalizationResource has been deprecated
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:46.7650197Z [WARNING] /home/runner/work/keycloak/keycloak/tests/base/src/test/java/org/keycloak/tests/admin/client/AbstractClientScopeTest.java:[38,59] unchecked conversion
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:46.7651772Z   required: java.util.Map<java.lang.String,java.lang.String>
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:46.7652436Z   found:    java.util.Map
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:46.7654682Z [WARNING] /home/runner/work/keycloak/keycloak/tests/base/src/test/java/org/keycloak/tests/admin/InitialAccessTokenResourceTest.java:[157,45] removeExpired(org.keycloak.models.RealmModel) in org.keycloak.sessions.AuthenticationSessionProvider has been deprecated
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:46.7656842Z [INFO] 
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:46.7662759Z [INFO] --- surefire:3.0.0-M7:test (default-test) @ keycloak-tests-base ---
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:46.7833639Z [INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:47.0587686Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/apache/maven/surefire/surefire-junit-platform/3.0.0-M7/surefire-junit-platform-3.0.0-M7.jar
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:47.6725864Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit-platform/3.0.0-M7/surefire-junit-platform-3.0.0-M7.jar
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:47.7506446Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit-platform/3.0.0-M7/surefire-junit-platform-3.0.0-M7.jar (26 kB at 345 kB/s)
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:47.7515284Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/apache/maven/surefire/surefire-junit-platform/3.0.0-M7/surefire-junit-platform-3.0.0-M7.pom
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:47.9792873Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit-platform/3.0.0-M7/surefire-junit-platform-3.0.0-M7.pom
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:47.9927368Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit-platform/3.0.0-M7/surefire-junit-platform-3.0.0-M7.pom (5.3 kB at 378 kB/s)
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:47.9950604Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/apache/maven/surefire/surefire-providers/3.0.0-M7/surefire-providers-3.0.0-M7.pom
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:48.1629425Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-providers/3.0.0-M7/surefire-providers-3.0.0-M7.pom
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:48.1748314Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-providers/3.0.0-M7/surefire-providers-3.0.0-M7.pom (2.5 kB at 211 kB/s)
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:48.1860755Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/apache/maven/surefire/common-java5/3.0.0-M7/common-java5-3.0.0-M7.pom
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:48.3057457Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-java5/3.0.0-M7/common-java5-3.0.0-M7.pom
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:48.3173408Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-java5/3.0.0-M7/common-java5-3.0.0-M7.pom (2.7 kB at 224 kB/s)
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:48.3283875Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/junit/platform/junit-platform-launcher/1.3.2/junit-platform-launcher-1.3.2.pom
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:48.4120130Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-launcher/1.3.2/junit-platform-launcher-1.3.2.pom
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:48.4226629Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-launcher/1.3.2/junit-platform-launcher-1.3.2.pom (2.2 kB at 202 kB/s)
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:48.4247637Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/apiguardian/apiguardian-api/1.0.0/apiguardian-api-1.0.0.pom
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:48.5363131Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apiguardian/apiguardian-api/1.0.0/apiguardian-api-1.0.0.pom
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:48.5467657Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apiguardian/apiguardian-api/1.0.0/apiguardian-api-1.0.0.pom (1.2 kB at 117 kB/s)
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:48.5484697Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/junit/platform/junit-platform-engine/1.3.2/junit-platform-engine-1.3.2.pom
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:48.6510656Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-engine/1.3.2/junit-platform-engine-1.3.2.pom
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:48.6615535Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-engine/1.3.2/junit-platform-engine-1.3.2.pom (2.4 kB at 218 kB/s)
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:48.6629802Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/junit/platform/junit-platform-commons/1.3.2/junit-platform-commons-1.3.2.pom
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:48.7523069Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-commons/1.3.2/junit-platform-commons-1.3.2.pom
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:48.7634617Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-commons/1.3.2/junit-platform-commons-1.3.2.pom (2.0 kB at 184 kB/s)
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:48.7652800Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/opentest4j/opentest4j/1.1.1/opentest4j-1.1.1.pom
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:48.8581067Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/opentest4j/opentest4j/1.1.1/opentest4j-1.1.1.pom
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:48.8685120Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/opentest4j/opentest4j/1.1.1/opentest4j-1.1.1.pom (1.7 kB at 153 kB/s)
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:48.8705592Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/junit/jupiter/junit-jupiter-engine/5.3.2/junit-jupiter-engine-5.3.2.pom
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:48.9684206Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter-engine/5.3.2/junit-jupiter-engine-5.3.2.pom
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:48.9804481Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter-engine/5.3.2/junit-jupiter-engine-5.3.2.pom (2.4 kB at 200 kB/s)
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:48.9831377Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/junit/jupiter/junit-jupiter-api/5.3.2/junit-jupiter-api-5.3.2.pom
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:49.0825183Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter-api/5.3.2/junit-jupiter-api-5.3.2.pom
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:49.0931552Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter-api/5.3.2/junit-jupiter-api-5.3.2.pom (2.4 kB at 238 kB/s)
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:49.0959154Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/junit/jupiter/junit-jupiter-params/5.3.2/junit-jupiter-params-5.3.2.pom
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:49.2006535Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter-params/5.3.2/junit-jupiter-params-5.3.2.pom
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:49.2111214Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter-params/5.3.2/junit-jupiter-params-5.3.2.pom (2.2 kB at 220 kB/s)
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:49.2134742Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/mockito/mockito-core/2.28.2/mockito-core-2.28.2.pom
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:49.2984120Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/mockito/mockito-core/2.28.2/mockito-core-2.28.2.pom
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:49.3101614Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/mockito/mockito-core/2.28.2/mockito-core-2.28.2.pom (20 kB at 1.8 MB/s)
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:49.3127767Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/net/bytebuddy/byte-buddy/1.9.10/byte-buddy-1.9.10.pom
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:49.4062510Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy/1.9.10/byte-buddy-1.9.10.pom
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:49.4172039Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy/1.9.10/byte-buddy-1.9.10.pom (10 kB at 1.0 MB/s)
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:49.4188115Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/net/bytebuddy/byte-buddy-parent/1.9.10/byte-buddy-parent-1.9.10.pom
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:49.5199818Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy-parent/1.9.10/byte-buddy-parent-1.9.10.pom
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:49.5324361Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy-parent/1.9.10/byte-buddy-parent-1.9.10.pom (36 kB at 2.8 MB/s)
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:49.5358232Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/net/bytebuddy/byte-buddy-agent/1.9.10/byte-buddy-agent-1.9.10.pom
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:49.6446696Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy-agent/1.9.10/byte-buddy-agent-1.9.10.pom
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:49.6549819Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy-agent/1.9.10/byte-buddy-agent-1.9.10.pom (6.0 kB at 603 kB/s)
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:49.6602693Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/powermock/powermock-reflect/2.0.9/powermock-reflect-2.0.9.pom
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:49.7455081Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/powermock/powermock-reflect/2.0.9/powermock-reflect-2.0.9.pom
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:49.7557763Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/powermock/powermock-reflect/2.0.9/powermock-reflect-2.0.9.pom (7.9 kB at 787 kB/s)
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:49.7582819Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/net/bytebuddy/byte-buddy/1.10.14/byte-buddy-1.10.14.pom
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:49.8684460Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy/1.10.14/byte-buddy-1.10.14.pom
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:49.8795537Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy/1.10.14/byte-buddy-1.10.14.pom (11 kB at 1.0 MB/s)
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:49.8812792Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/net/bytebuddy/byte-buddy-parent/1.10.14/byte-buddy-parent-1.10.14.pom
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:50.0100957Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy-parent/1.10.14/byte-buddy-parent-1.10.14.pom
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:50.0215169Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy-parent/1.10.14/byte-buddy-parent-1.10.14.pom (41 kB at 3.4 MB/s)
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:50.0250383Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/net/bytebuddy/byte-buddy-agent/1.10.14/byte-buddy-agent-1.10.14.pom
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:50.1168057Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy-agent/1.10.14/byte-buddy-agent-1.10.14.pom
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:50.1269862Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy-agent/1.10.14/byte-buddy-agent-1.10.14.pom (9.6 kB at 957 kB/s)
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:50.1316626Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/hamcrest/hamcrest-library/1.3/hamcrest-library-1.3.pom
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:50.3333718Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/hamcrest/hamcrest-library/1.3/hamcrest-library-1.3.pom
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:50.3433509Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/hamcrest/hamcrest-library/1.3/hamcrest-library-1.3.pom (820 B at 82 kB/s)
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:50.3570130Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/assertj/assertj-core/3.22.0/assertj-core-3.22.0.pom
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:50.6716294Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/assertj/assertj-core/3.22.0/assertj-core-3.22.0.pom
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:50.6835674Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/assertj/assertj-core/3.22.0/assertj-core-3.22.0.pom (31 kB at 2.6 MB/s)
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:50.6854979Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/assertj/assertj-parent-pom/2.2.14/assertj-parent-pom-2.2.14.pom
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:50.7915719Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/assertj/assertj-parent-pom/2.2.14/assertj-parent-pom-2.2.14.pom
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:50.8035573Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/assertj/assertj-parent-pom/2.2.14/assertj-parent-pom-2.2.14.pom (25 kB at 2.0 MB/s)
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:50.8063296Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/junit/junit-bom/5.8.2/junit-bom-5.8.2.pom
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:50.8899968Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.8.2/junit-bom-5.8.2.pom
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:50.9005837Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.8.2/junit-bom-5.8.2.pom (5.6 kB at 512 kB/s)
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:50.9033367Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/junit/junit-bom/5.8.0/junit-bom-5.8.0.pom
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:51.0258808Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.8.0/junit-bom-5.8.0.pom
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:51.0360159Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.8.0/junit-bom-5.8.0.pom (5.6 kB at 563 kB/s)
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:51.0390583Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/apache/maven/surefire/common-java5/3.0.0-M7/common-java5-3.0.0-M7.jar
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:51.0397254Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/apiguardian/apiguardian-api/1.0.0/apiguardian-api-1.0.0.jar
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:51.0403823Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/junit/platform/junit-platform-engine/1.3.2/junit-platform-engine-1.3.2.jar
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:51.0406462Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/junit/platform/junit-platform-commons/1.3.2/junit-platform-commons-1.3.2.jar
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:51.0408978Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/junit/platform/junit-platform-launcher/1.3.2/junit-platform-launcher-1.3.2.jar
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:51.1250395Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-java5/3.0.0-M7/common-java5-3.0.0-M7.jar
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:51.1371039Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-java5/3.0.0-M7/common-java5-3.0.0-M7.jar (17 kB at 1.4 MB/s)
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:51.1385666Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/opentest4j/opentest4j/1.1.1/opentest4j-1.1.1.jar
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:51.1620632Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apiguardian/apiguardian-api/1.0.0/apiguardian-api-1.0.0.jar
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:51.1720674Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apiguardian/apiguardian-api/1.0.0/apiguardian-api-1.0.0.jar (2.2 kB at 216 kB/s)
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:51.1729346Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-commons/1.3.2/junit-platform-commons-1.3.2.jar
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:51.1862348Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-commons/1.3.2/junit-platform-commons-1.3.2.jar (78 kB at 5.6 MB/s)
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:51.2071886Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-engine/1.3.2/junit-platform-engine-1.3.2.jar
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:51.2208099Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-engine/1.3.2/junit-platform-engine-1.3.2.jar (138 kB at 9.9 MB/s)
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:51.2425569Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-launcher/1.3.2/junit-platform-launcher-1.3.2.jar
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:51.2538337Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-launcher/1.3.2/junit-platform-launcher-1.3.2.jar (95 kB at 8.6 MB/s)
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:51.4164811Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/opentest4j/opentest4j/1.1.1/opentest4j-1.1.1.jar
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:51.4270392Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/opentest4j/opentest4j/1.1.1/opentest4j-1.1.1.jar (7.1 kB at 712 kB/s)
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:51.4438960Z [INFO] 
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:51.4439782Z [INFO] -------------------------------------------------------
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:51.4440309Z [INFO]  T E S T S
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:51.4440765Z [INFO] -------------------------------------------------------
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:52.8595710Z [INFO] Running org.keycloak.tests.suites.DatabaseTestSuite
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:52.8880179Z [INFO] Running org.keycloak.tests.admin.InitialAccessTokenResourceTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:52.9249222Z 2025-03-26 14:43:52,897 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mssql)	Run new base tests	2025-03-26T14:43:52.9253200Z 2025-03-26 14:43:52,903 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.InitialAccessTokenResourceTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:07.2119531Z 2025-03-26 14:44:07,193 WARNING [com.microsoft.sqlserver.jdbc.internals.SQLServerConnection] (main) ConnectionID:1 ClientConnectionId: d3c3aa67-5403-4cab-a8c0-e8d24b7a22b3 Prelogin error: host localhost port 32768 Unexpected end of prelogin response after 0 bytes read
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:07.2121545Z 2025-03-26 14:44:07,197 WARNING [com.microsoft.sqlserver.jdbc.internals.SQLServerConnection] (main) ConnectionID:1 ClientConnectionId: 8f618c15-ee86-4cc8-a904-5dbd955c1dcc Prelogin error: host localhost port 32768 Unexpected end of prelogin response after 0 bytes read
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:07.3138190Z 2025-03-26 14:44:07,303 WARNING [com.microsoft.sqlserver.jdbc.internals.SQLServerConnection] (main) ConnectionID:2 ClientConnectionId: cf6aded3-2806-4e5f-a255-a51b613edf5f Prelogin error: host localhost port 32768 Unexpected end of prelogin response after 0 bytes read
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:07.3141831Z 2025-03-26 14:44:07,304 WARNING [com.microsoft.sqlserver.jdbc.internals.SQLServerConnection] (main) ConnectionID:2 ClientConnectionId: 1923e31c-1cc3-4c57-b80d-d27f48344fad Prelogin error: host localhost port 32768 Unexpected end of prelogin response after 0 bytes read
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:07.4121215Z 2025-03-26 14:44:07,409 WARNING [com.microsoft.sqlserver.jdbc.internals.SQLServerConnection] (main) ConnectionID:3 ClientConnectionId: 1daef206-2919-4c22-9c84-65e8804dd78f Prelogin error: host localhost port 32768 Unexpected end of prelogin response after 0 bytes read
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:07.4123075Z 2025-03-26 14:44:07,410 WARNING [com.microsoft.sqlserver.jdbc.internals.SQLServerConnection] (main) ConnectionID:3 ClientConnectionId: 7b0e45e4-fc6b-49c1-b90c-3ef0c6887050 Prelogin error: host localhost port 32768 Unexpected end of prelogin response after 0 bytes read
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:07.6125705Z 2025-03-26 14:44:07,515 WARNING [com.microsoft.sqlserver.jdbc.internals.SQLServerConnection] (main) ConnectionID:4 ClientConnectionId: 2ee03dcc-8e82-4213-9593-257a2a9c2566 Prelogin error: host localhost port 32768 Error reading prelogin response: Connection reset ClientConnectionId:2ee03dcc-8e82-4213-9593-257a2a9c2566
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:07.6129539Z 2025-03-26 14:44:07,516 WARNING [com.microsoft.sqlserver.jdbc.internals.SQLServerConnection] (main) ConnectionID:4 ClientConnectionId: d68e01ae-9a5d-4e6e-9707-bb5fc8c3a2b4 Prelogin error: host localhost port 32768 Unexpected end of prelogin response after 0 bytes read
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:07.7125614Z 2025-03-26 14:44:07,619 WARNING [com.microsoft.sqlserver.jdbc.internals.SQLServerConnection] (main) ConnectionID:5 ClientConnectionId: 003f08cf-b452-427b-9b59-adae0fb78fe1 Prelogin error: host localhost port 32768 Error reading prelogin response: Connection reset ClientConnectionId:003f08cf-b452-427b-9b59-adae0fb78fe1
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:07.7128073Z 2025-03-26 14:44:07,620 WARNING [com.microsoft.sqlserver.jdbc.internals.SQLServerConnection] (main) ConnectionID:5 ClientConnectionId: 55f67cb5-f596-4264-a8fa-7a662c39bb95 Prelogin error: host localhost port 32768 Unexpected end of prelogin response after 0 bytes read
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:07.8127022Z 2025-03-26 14:44:07,724 WARNING [com.microsoft.sqlserver.jdbc.internals.SQLServerConnection] (main) ConnectionID:6 ClientConnectionId: fcea5ecd-e356-4890-8a40-9e0596d7dcac Prelogin error: host localhost port 32768 Unexpected end of prelogin response after 0 bytes read
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:07.8130614Z 2025-03-26 14:44:07,725 WARNING [com.microsoft.sqlserver.jdbc.internals.SQLServerConnection] (main) ConnectionID:6 ClientConnectionId: 7b74ae9f-5dc4-45b9-93ed-d512648ad801 Prelogin error: host localhost port 32768 Unexpected end of prelogin response after 0 bytes read
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:07.9127989Z 2025-03-26 14:44:07,829 WARNING [com.microsoft.sqlserver.jdbc.internals.SQLServerConnection] (main) ConnectionID:7 ClientConnectionId: 72903b3a-fe7d-4417-8f30-31dd22a8021f Prelogin error: host localhost port 32768 Error reading prelogin response: Connection reset ClientConnectionId:72903b3a-fe7d-4417-8f30-31dd22a8021f
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:07.9130922Z 2025-03-26 14:44:07,830 WARNING [com.microsoft.sqlserver.jdbc.internals.SQLServerConnection] (main) ConnectionID:7 ClientConnectionId: 79890a8d-3555-4f56-95ef-b2cc2f14aacb Prelogin error: host localhost port 32768 Unexpected end of prelogin response after 0 bytes read
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:08.0130590Z 2025-03-26 14:44:07,933 WARNING [com.microsoft.sqlserver.jdbc.internals.SQLServerConnection] (main) ConnectionID:8 ClientConnectionId: f3fe0410-886f-4e44-925b-daf6a47ab6c0 Prelogin error: host localhost port 32768 Unexpected end of prelogin response after 0 bytes read
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:08.0134945Z 2025-03-26 14:44:07,935 WARNING [com.microsoft.sqlserver.jdbc.internals.SQLServerConnection] (main) ConnectionID:8 ClientConnectionId: 8bf31a05-2a6f-4006-814a-48bb6b3261b5 Prelogin error: host localhost port 32768 Error reading prelogin response: Connection reset ClientConnectionId:8bf31a05-2a6f-4006-814a-48bb6b3261b5
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:08.1132952Z 2025-03-26 14:44:08,038 WARNING [com.microsoft.sqlserver.jdbc.internals.SQLServerConnection] (main) ConnectionID:9 ClientConnectionId: 417ec463-fb5b-4c72-a78e-002f404158d0 Prelogin error: host localhost port 32768 Unexpected end of prelogin response after 0 bytes read
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:08.1136662Z 2025-03-26 14:44:08,040 WARNING [com.microsoft.sqlserver.jdbc.internals.SQLServerConnection] (main) ConnectionID:9 ClientConnectionId: a35ab6ec-5d58-4bf0-8596-58c8afe8ca2e Prelogin error: host localhost port 32768 Error reading prelogin response: Connection reset ClientConnectionId:a35ab6ec-5d58-4bf0-8596-58c8afe8ca2e
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:08.2134246Z 2025-03-26 14:44:08,144 WARNING [com.microsoft.sqlserver.jdbc.internals.SQLServerConnection] (main) ConnectionID:10 ClientConnectionId: 58b08e21-e6c0-42d6-8086-5d60122f5858 Prelogin error: host localhost port 32768 Unexpected end of prelogin response after 0 bytes read
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:08.2138435Z 2025-03-26 14:44:08,145 WARNING [com.microsoft.sqlserver.jdbc.internals.SQLServerConnection] (main) ConnectionID:10 ClientConnectionId: a9dbd51d-dcfa-4e73-b2c2-ee5c9717cbc2 Prelogin error: host localhost port 32768 Unexpected end of prelogin response after 0 bytes read
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:08.3135922Z 2025-03-26 14:44:08,249 WARNING [com.microsoft.sqlserver.jdbc.internals.SQLServerConnection] (main) ConnectionID:11 ClientConnectionId: e80f7932-f4ca-477e-b47b-2a3778e6e6c2 Prelogin error: host localhost port 32768 Error reading prelogin response: Connection reset ClientConnectionId:e80f7932-f4ca-477e-b47b-2a3778e6e6c2
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:08.4138416Z 2025-03-26 14:44:08,250 WARNING [com.microsoft.sqlserver.jdbc.internals.SQLServerConnection] (main) ConnectionID:11 ClientConnectionId: ce2d9cd0-ceaf-4dc5-9d55-7f1d48396b1d Prelogin error: host localhost port 32768 Error reading prelogin response: Connection reset ClientConnectionId:ce2d9cd0-ceaf-4dc5-9d55-7f1d48396b1d
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:08.4142357Z 2025-03-26 14:44:08,354 WARNING [com.microsoft.sqlserver.jdbc.internals.SQLServerConnection] (main) ConnectionID:12 ClientConnectionId: 0adb4cea-80c6-4e98-ac28-eb22d5fae023 Prelogin error: host localhost port 32768 Unexpected end of prelogin response after 0 bytes read
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:08.4147826Z 2025-03-26 14:44:08,355 WARNING [com.microsoft.sqlserver.jdbc.internals.SQLServerConnection] (main) ConnectionID:12 ClientConnectionId: 82ebb572-3b36-494e-86fe-09cedd48d1f6 Prelogin error: host localhost port 32768 Error reading prelogin response: Connection reset ClientConnectionId:82ebb572-3b36-494e-86fe-09cedd48d1f6
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:08.5137163Z 2025-03-26 14:44:08,459 WARNING [com.microsoft.sqlserver.jdbc.internals.SQLServerConnection] (main) ConnectionID:13 ClientConnectionId: 6c3adf3f-8e38-42ff-ad89-ae57cbb6ad8d Prelogin error: host localhost port 32768 Unexpected end of prelogin response after 0 bytes read
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:08.5139883Z 2025-03-26 14:44:08,460 WARNING [com.microsoft.sqlserver.jdbc.internals.SQLServerConnection] (main) ConnectionID:13 ClientConnectionId: 6b1cc439-42db-4616-a93d-23b719b6408a Prelogin error: host localhost port 32768 Unexpected end of prelogin response after 0 bytes read
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:08.6138416Z 2025-03-26 14:44:08,564 WARNING [com.microsoft.sqlserver.jdbc.internals.SQLServerConnection] (main) ConnectionID:14 ClientConnectionId: 0824ff66-7460-42c5-98c8-6aea0c3dd80c Prelogin error: host localhost port 32768 Unexpected end of prelogin response after 0 bytes read
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:08.6141579Z 2025-03-26 14:44:08,565 WARNING [com.microsoft.sqlserver.jdbc.internals.SQLServerConnection] (main) ConnectionID:14 ClientConnectionId: 01b0c9c7-cb0f-4a5f-8899-80d7d36bb891 Prelogin error: host localhost port 32768 Unexpected end of prelogin response after 0 bytes read
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:08.7140337Z 2025-03-26 14:44:08,669 WARNING [com.microsoft.sqlserver.jdbc.internals.SQLServerConnection] (main) ConnectionID:15 ClientConnectionId: 2b2d4b5b-e474-4d64-be5e-50b0c6d82d08 Prelogin error: host localhost port 32768 Unexpected end of prelogin response after 0 bytes read
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:08.7143671Z 2025-03-26 14:44:08,670 WARNING [com.microsoft.sqlserver.jdbc.internals.SQLServerConnection] (main) ConnectionID:15 ClientConnectionId: 60194f08-486e-4b9f-9f3e-6b8bba50f9e2 Prelogin error: host localhost port 32768 Unexpected end of prelogin response after 0 bytes read
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:08.8140045Z 2025-03-26 14:44:08,773 WARNING [com.microsoft.sqlserver.jdbc.internals.SQLServerConnection] (main) ConnectionID:16 ClientConnectionId: f6bf119e-6112-4eb3-9ace-ddde398fa2d4 Prelogin error: host localhost port 32768 Error reading prelogin response: Connection reset ClientConnectionId:f6bf119e-6112-4eb3-9ace-ddde398fa2d4
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:08.8142082Z 2025-03-26 14:44:08,774 WARNING [com.microsoft.sqlserver.jdbc.internals.SQLServerConnection] (main) ConnectionID:16 ClientConnectionId: 66ad44a4-78cb-4e10-9a76-229fcebc9253 Prelogin error: host localhost port 32768 Unexpected end of prelogin response after 0 bytes read
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:08.9142735Z 2025-03-26 14:44:08,877 WARNING [com.microsoft.sqlserver.jdbc.internals.SQLServerConnection] (main) ConnectionID:17 ClientConnectionId: eb5a94e8-0b63-4b1a-ab64-78452ec81f05 Prelogin error: host localhost port 32768 Unexpected end of prelogin response after 0 bytes read
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:08.9145394Z 2025-03-26 14:44:08,879 WARNING [com.microsoft.sqlserver.jdbc.internals.SQLServerConnection] (main) ConnectionID:17 ClientConnectionId: 357d517d-4ae9-4f97-b10e-500ee5bbf53e Prelogin error: host localhost port 32768 Unexpected end of prelogin response after 0 bytes read
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:09.0143289Z 2025-03-26 14:44:08,982 WARNING [com.microsoft.sqlserver.jdbc.internals.SQLServerConnection] (main) ConnectionID:18 ClientConnectionId: b8e1b252-507d-4dd7-acdb-a6bb36634eca Prelogin error: host localhost port 32768 Unexpected end of prelogin response after 0 bytes read
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:09.0147023Z 2025-03-26 14:44:08,983 WARNING [com.microsoft.sqlserver.jdbc.internals.SQLServerConnection] (main) ConnectionID:18 ClientConnectionId: b62d4462-1e5d-448b-88bf-b518ba4832c2 Prelogin error: host localhost port 32768 Error reading prelogin response: Connection reset ClientConnectionId:b62d4462-1e5d-448b-88bf-b518ba4832c2
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:09.1156437Z 2025-03-26 14:44:09,087 WARNING [com.microsoft.sqlserver.jdbc.internals.SQLServerConnection] (main) ConnectionID:19 ClientConnectionId: c285ed33-308a-4976-b589-e0cce83ace3f Prelogin error: host localhost port 32768 Unexpected end of prelogin response after 0 bytes read
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:09.1159792Z 2025-03-26 14:44:09,088 WARNING [com.microsoft.sqlserver.jdbc.internals.SQLServerConnection] (main) ConnectionID:19 ClientConnectionId: 5089e778-51db-44b1-afd0-340e5325883a Prelogin error: host localhost port 32768 Unexpected end of prelogin response after 0 bytes read
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:09.2145495Z 2025-03-26 14:44:09,191 WARNING [com.microsoft.sqlserver.jdbc.internals.SQLServerConnection] (main) ConnectionID:20 ClientConnectionId: de0df125-3817-4f21-a3f7-7ea12d31f3d1 Prelogin error: host localhost port 32768 Unexpected end of prelogin response after 0 bytes read
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:09.2147571Z 2025-03-26 14:44:09,192 WARNING [com.microsoft.sqlserver.jdbc.internals.SQLServerConnection] (main) ConnectionID:20 ClientConnectionId: 9138718f-6c94-4f7a-a479-d56cf0809591 Prelogin error: host localhost port 32768 Unexpected end of prelogin response after 0 bytes read
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:09.3146045Z 2025-03-26 14:44:09,295 WARNING [com.microsoft.sqlserver.jdbc.internals.SQLServerConnection] (main) ConnectionID:21 ClientConnectionId: 7828e9d2-9ddf-4bcd-99d6-13edd5be6903 Prelogin error: host localhost port 32768 Unexpected end of prelogin response after 0 bytes read
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:09.3149277Z 2025-03-26 14:44:09,296 WARNING [com.microsoft.sqlserver.jdbc.internals.SQLServerConnection] (main) ConnectionID:21 ClientConnectionId: 70053117-dc8b-4315-afac-c125c4b6548b Prelogin error: host localhost port 32768 Unexpected end of prelogin response after 0 bytes read
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:09.4147569Z 2025-03-26 14:44:09,399 WARNING [com.microsoft.sqlserver.jdbc.internals.SQLServerConnection] (main) ConnectionID:22 ClientConnectionId: 9fd333bd-2b53-4c05-8456-e56b76fad663 Prelogin error: host localhost port 32768 Unexpected end of prelogin response after 0 bytes read
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:09.4151111Z 2025-03-26 14:44:09,400 WARNING [com.microsoft.sqlserver.jdbc.internals.SQLServerConnection] (main) ConnectionID:22 ClientConnectionId: f05c9ce4-0a94-4a93-8e97-11fcf7205cf1 Prelogin error: host localhost port 32768 Error reading prelogin response: Connection reset ClientConnectionId:f05c9ce4-0a94-4a93-8e97-11fcf7205cf1
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:09.5148404Z 2025-03-26 14:44:09,504 WARNING [com.microsoft.sqlserver.jdbc.internals.SQLServerConnection] (main) ConnectionID:23 ClientConnectionId: 618bb1ba-52f4-4730-9e0f-8e69dfdc5f06 Prelogin error: host localhost port 32768 Unexpected end of prelogin response after 0 bytes read
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:09.5151512Z 2025-03-26 14:44:09,505 WARNING [com.microsoft.sqlserver.jdbc.internals.SQLServerConnection] (main) ConnectionID:23 ClientConnectionId: ffb57232-5fa2-4af0-ad3b-26b270323ab6 Prelogin error: host localhost port 32768 Error reading prelogin response: Connection reset ClientConnectionId:ffb57232-5fa2-4af0-ad3b-26b270323ab6
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:09.6165278Z 2025-03-26 14:44:09,610 WARNING [com.microsoft.sqlserver.jdbc.internals.SQLServerConnection] (main) ConnectionID:24 ClientConnectionId: ebaa4170-74ad-408d-bb19-dc574aeddc2c Prelogin error: host localhost port 32768 Unexpected end of prelogin response after 0 bytes read
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:09.6170644Z 2025-03-26 14:44:09,611 WARNING [com.microsoft.sqlserver.jdbc.internals.SQLServerConnection] (main) ConnectionID:24 ClientConnectionId: 16738a62-9201-449a-b9ad-460b7214cf86 Prelogin error: host localhost port 32768 Error reading prelogin response: Connection reset ClientConnectionId:16738a62-9201-449a-b9ad-460b7214cf86
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:09.8153781Z 2025-03-26 14:44:09,719 WARNING [com.microsoft.sqlserver.jdbc.internals.SQLServerConnection] (main) ConnectionID:25 ClientConnectionId: 7db09f4a-ec8c-4cb1-8f8b-bd0df7765de9 Prelogin error: host localhost port 32768 Unexpected end of prelogin response after 0 bytes read
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:09.8157765Z 2025-03-26 14:44:09,720 WARNING [com.microsoft.sqlserver.jdbc.internals.SQLServerConnection] (main) ConnectionID:25 ClientConnectionId: afaa71d4-05de-4104-9ce9-f84c5f72dcca Prelogin error: host localhost port 32768 Unexpected end of prelogin response after 0 bytes read
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:09.9154720Z 2025-03-26 14:44:09,825 WARNING [com.microsoft.sqlserver.jdbc.internals.SQLServerConnection] (main) ConnectionID:26 ClientConnectionId: 70b35e75-4a74-4ed7-afec-04fa809db84d Prelogin error: host localhost port 32768 Error reading prelogin response: Connection reset ClientConnectionId:70b35e75-4a74-4ed7-afec-04fa809db84d
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:09.9157312Z 2025-03-26 14:44:09,826 WARNING [com.microsoft.sqlserver.jdbc.internals.SQLServerConnection] (main) ConnectionID:26 ClientConnectionId: 0851c98c-a2a3-47a1-9811-c9f5e5ef3f9f Prelogin error: host localhost port 32768 Unexpected end of prelogin response after 0 bytes read
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:10.0157693Z 2025-03-26 14:44:09,930 WARNING [com.microsoft.sqlserver.jdbc.internals.SQLServerConnection] (main) ConnectionID:27 ClientConnectionId: 6a583d8f-b752-42e9-be45-d170206f38c5 Prelogin error: host localhost port 32768 Unexpected end of prelogin response after 0 bytes read
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:10.0161385Z 2025-03-26 14:44:09,931 WARNING [com.microsoft.sqlserver.jdbc.internals.SQLServerConnection] (main) ConnectionID:27 ClientConnectionId: 91195668-f213-4dfe-95cc-7ac6c6d71759 Prelogin error: host localhost port 32768 Unexpected end of prelogin response after 0 bytes read
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:10.1157346Z 2025-03-26 14:44:10,035 WARNING [com.microsoft.sqlserver.jdbc.internals.SQLServerConnection] (main) ConnectionID:28 ClientConnectionId: 9b708e71-d3cf-460f-8296-5a0a462bb5fd Prelogin error: host localhost port 32768 Unexpected end of prelogin response after 0 bytes read
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:10.1159970Z 2025-03-26 14:44:10,036 WARNING [com.microsoft.sqlserver.jdbc.internals.SQLServerConnection] (main) ConnectionID:28 ClientConnectionId: 4c3b97a2-f123-4d48-bb26-a457f634687b Prelogin error: host localhost port 32768 Unexpected end of prelogin response after 0 bytes read
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:10.2158685Z 2025-03-26 14:44:10,141 WARNING [com.microsoft.sqlserver.jdbc.internals.SQLServerConnection] (main) ConnectionID:29 ClientConnectionId: 90e4e346-0b53-4aa1-9286-71aa3ddf39f6 Prelogin error: host localhost port 32768 Unexpected end of prelogin response after 0 bytes read
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:10.2162718Z 2025-03-26 14:44:10,142 WARNING [com.microsoft.sqlserver.jdbc.internals.SQLServerConnection] (main) ConnectionID:29 ClientConnectionId: 15ed2539-bc4f-49b6-bdd7-f871647d4af6 Prelogin error: host localhost port 32768 Unexpected end of prelogin response after 0 bytes read
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:10.3160640Z 2025-03-26 14:44:10,249 WARNING [com.microsoft.sqlserver.jdbc.internals.SQLServerConnection] (main) ConnectionID:30 ClientConnectionId: 5f2f98f7-3c55-45a4-9903-f39da1bf030f Prelogin error: host localhost port 32768 Unexpected end of prelogin response after 0 bytes read
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:10.3163898Z 2025-03-26 14:44:10,250 WARNING [com.microsoft.sqlserver.jdbc.internals.SQLServerConnection] (main) ConnectionID:30 ClientConnectionId: aabaf39f-a5af-4047-a421-d5bb06b1e880 Prelogin error: host localhost port 32768 Unexpected end of prelogin response after 0 bytes read
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:24.5728387Z 2025-03-26 14:44:24,506 ERROR [managed.keycloak] (pool-3-thread-1) [org.keycloak.quarkus.runtime.configuration.mappers.PropertyMappers] (main) Hostname v1 options [hostname-strict-https] are still in use, please review your configuration
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:28.1784147Z 2025-03-26 14:44:28,107 WARN  [managed.keycloak] (pool-3-thread-1) [liquibase.executor.jvm.JdbcExecutor] (main) Caution: Changing any part of an object name could break scripts and stored procedures.
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:28.3810283Z 2025-03-26 14:44:28,295 WARN  [managed.keycloak] (pool-3-thread-1) [liquibase.executor.jvm.JdbcExecutor] (main) Caution: Changing any part of an object name could break scripts and stored procedures.
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:28.3812843Z 2025-03-26 14:44:28,298 WARN  [managed.keycloak] (pool-3-thread-1) [liquibase.executor.jvm.JdbcExecutor] (main) Caution: Changing any part of an object name could break scripts and stored procedures.
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:28.3814576Z 2025-03-26 14:44:28,301 WARN  [managed.keycloak] (pool-3-thread-1) [liquibase.executor.jvm.JdbcExecutor] (main) Caution: Changing any part of an object name could break scripts and stored procedures.
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:28.5811929Z 2025-03-26 14:44:28,512 WARN  [managed.keycloak] (pool-3-thread-1) [liquibase.executor.jvm.JdbcExecutor] (main) Caution: Changing any part of an object name could break scripts and stored procedures.
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:28.5813602Z 2025-03-26 14:44:28,555 WARN  [managed.keycloak] (pool-3-thread-1) [liquibase.executor.jvm.JdbcExecutor] (main) Caution: Changing any part of an object name could break scripts and stored procedures.
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:28.6855975Z 2025-03-26 14:44:28,623 WARN  [managed.keycloak] (pool-3-thread-1) [liquibase.executor.jvm.JdbcExecutor] (main) Caution: Changing any part of an object name could break scripts and stored procedures.
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:28.6858396Z 2025-03-26 14:44:28,626 WARN  [managed.keycloak] (pool-3-thread-1) [liquibase.executor.jvm.JdbcExecutor] (main) Caution: Changing any part of an object name could break scripts and stored procedures.
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:28.6860725Z 2025-03-26 14:44:28,634 WARN  [managed.keycloak] (pool-3-thread-1) [liquibase.executor.jvm.JdbcExecutor] (main) Caution: Changing any part of an object name could break scripts and stored procedures.
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:28.6863038Z 2025-03-26 14:44:28,636 WARN  [managed.keycloak] (pool-3-thread-1) [liquibase.executor.jvm.JdbcExecutor] (main) Caution: Changing any part of an object name could break scripts and stored procedures.
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:28.6865335Z 2025-03-26 14:44:28,644 WARN  [managed.keycloak] (pool-3-thread-1) [liquibase.executor.jvm.JdbcExecutor] (main) Caution: Changing any part of an object name could break scripts and stored procedures.
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:28.6867476Z 2025-03-26 14:44:28,647 WARN  [managed.keycloak] (pool-3-thread-1) [liquibase.executor.jvm.JdbcExecutor] (main) Caution: Changing any part of an object name could break scripts and stored procedures.
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:28.6869632Z 2025-03-26 14:44:28,654 WARN  [managed.keycloak] (pool-3-thread-1) [liquibase.executor.jvm.JdbcExecutor] (main) Caution: Changing any part of an object name could break scripts and stored procedures.
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:28.6871840Z 2025-03-26 14:44:28,657 WARN  [managed.keycloak] (pool-3-thread-1) [liquibase.executor.jvm.JdbcExecutor] (main) Caution: Changing any part of an object name could break scripts and stored procedures.
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:28.6874233Z 2025-03-26 14:44:28,660 WARN  [managed.keycloak] (pool-3-thread-1) [liquibase.executor.jvm.JdbcExecutor] (main) Caution: Changing any part of an object name could break scripts and stored procedures.
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:29.1855854Z 2025-03-26 14:44:29,084 WARN  [managed.keycloak] (pool-3-thread-1) [liquibase.executor.jvm.JdbcExecutor] (main) Caution: Changing any part of an object name could break scripts and stored procedures.
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:29.1858011Z 2025-03-26 14:44:29,087 WARN  [managed.keycloak] (pool-3-thread-1) [liquibase.executor.jvm.JdbcExecutor] (main) Caution: Changing any part of an object name could break scripts and stored procedures.
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:30.9870748Z 2025-03-26 14:44:30,947 WARN  [managed.keycloak] (pool-3-thread-1) [liquibase.executor.jvm.JdbcExecutor] (main) Caution: Changing any part of an object name could break scripts and stored procedures.
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:30.9874217Z 2025-03-26 14:44:30,950 WARN  [managed.keycloak] (pool-3-thread-1) [liquibase.executor.jvm.JdbcExecutor] (main) Caution: Changing any part of an object name could break scripts and stored procedures.
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:30.9877277Z 2025-03-26 14:44:30,952 WARN  [managed.keycloak] (pool-3-thread-1) [liquibase.executor.jvm.JdbcExecutor] (main) Caution: Changing any part of an object name could break scripts and stored procedures.
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:30.9879810Z 2025-03-26 14:44:30,954 WARN  [managed.keycloak] (pool-3-thread-1) [liquibase.executor.jvm.JdbcExecutor] (main) Caution: Changing any part of an object name could break scripts and stored procedures.
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:31.3874713Z 2025-03-26 14:44:31,304 WARN  [managed.keycloak] (pool-3-thread-1) [liquibase.executor.jvm.JdbcExecutor] (main) Caution: Changing any part of an object name could break scripts and stored procedures.
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:31.3876401Z 2025-03-26 14:44:31,306 WARN  [managed.keycloak] (pool-3-thread-1) [liquibase.executor.jvm.JdbcExecutor] (main) Caution: Changing any part of an object name could break scripts and stored procedures.
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:31.3877599Z 2025-03-26 14:44:31,312 WARN  [managed.keycloak] (pool-3-thread-1) [liquibase.executor.jvm.JdbcExecutor] (main) Caution: Changing any part of an object name could break scripts and stored procedures.
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:31.3878749Z 2025-03-26 14:44:31,315 WARN  [managed.keycloak] (pool-3-thread-1) [liquibase.executor.jvm.JdbcExecutor] (main) Caution: Changing any part of an object name could break scripts and stored procedures.
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:31.3879902Z 2025-03-26 14:44:31,320 WARN  [managed.keycloak] (pool-3-thread-1) [liquibase.executor.jvm.JdbcExecutor] (main) Caution: Changing any part of an object name could break scripts and stored procedures.
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:31.4876168Z 2025-03-26 14:44:31,467 WARN  [managed.keycloak] (pool-3-thread-1) [liquibase.executor.jvm.JdbcExecutor] (main) Caution: Changing any part of an object name could break scripts and stored procedures.
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:31.9880778Z 2025-03-26 14:44:31,891 WARN  [managed.keycloak] (pool-3-thread-1) [liquibase.executor.jvm.JdbcExecutor] (main) Caution: Changing any part of an object name could break scripts and stored procedures.
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:32.5885475Z 2025-03-26 14:44:32,488 WARN  [managed.keycloak] (pool-3-thread-1) [liquibase.executor.jvm.JdbcExecutor] (main) Caution: Changing any part of an object name could break scripts and stored procedures.
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:32.6886302Z 2025-03-26 14:44:32,663 WARN  [managed.keycloak] (pool-3-thread-1) [liquibase.executor.jvm.JdbcExecutor] (main) Caution: Changing any part of an object name could break scripts and stored procedures.
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:32.8888302Z 2025-03-26 14:44:32,824 WARN  [managed.keycloak] (pool-3-thread-1) [liquibase.executor.jvm.JdbcExecutor] (main) Caution: Changing any part of an object name could break scripts and stored procedures.
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:32.8890495Z 2025-03-26 14:44:32,881 WARN  [managed.keycloak] (pool-3-thread-1) [liquibase.executor.jvm.JdbcExecutor] (main) Caution: Changing any part of an object name could break scripts and stored procedures.
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:45.0866776Z [INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 52.128 s - in org.keycloak.tests.admin.InitialAccessTokenResourceTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:45.0877612Z [INFO] Running org.keycloak.tests.admin.partialexport.PartialExportTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:45.0882690Z 2025-03-26 14:44:45,017 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:45.0887518Z 2025-03-26 14:44:45,018 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.partialexport.PartialExportTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:48.3051722Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.245 s - in org.keycloak.tests.admin.partialexport.PartialExportTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:48.3053405Z [INFO] Running org.keycloak.tests.admin.RoleByIdResourceTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:48.3057334Z 2025-03-26 14:44:48,267 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mssql)	Run new base tests	2025-03-26T14:44:48.3058555Z 2025-03-26 14:44:48,267 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.RoleByIdResourceTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:07.7128858Z [INFO] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 19.428 s - in org.keycloak.tests.admin.RoleByIdResourceTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:07.7130555Z [INFO] Running org.keycloak.tests.admin.UsersTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:07.7131309Z 2025-03-26 14:45:07,695 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:07.7132222Z 2025-03-26 14:45:07,696 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.UsersTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:20.9960757Z [INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 13.289 s - in org.keycloak.tests.admin.UsersTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:20.9964744Z [INFO] Running org.keycloak.tests.admin.TimeOffsetTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:20.9966129Z 2025-03-26 14:45:20,986 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:20.9967460Z 2025-03-26 14:45:20,986 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.TimeOffsetTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:22.4327474Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.436 s - in org.keycloak.tests.admin.TimeOffsetTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:22.4330673Z [INFO] Running org.keycloak.tests.admin.client.ClientDescriptionConverterTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:22.4331757Z 2025-03-26 14:45:22,423 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:22.4332923Z 2025-03-26 14:45:22,423 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.client.ClientDescriptionConverterTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:23.8302549Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.393 s - in org.keycloak.tests.admin.client.ClientDescriptionConverterTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:23.8304239Z [INFO] Running org.keycloak.tests.admin.authentication.ExecutionTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:23.8305678Z 2025-03-26 14:45:23,819 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:23.8306753Z 2025-03-26 14:45:23,819 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authentication.ExecutionTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:26.2491196Z [INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.42 s - in org.keycloak.tests.admin.authentication.ExecutionTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:26.2492535Z [INFO] Running org.keycloak.tests.admin.authentication.RegistrationFlowTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:26.2493510Z 2025-03-26 14:45:26,240 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:26.2494856Z 2025-03-26 14:45:26,240 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authentication.RegistrationFlowTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:27.7518402Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.499 s - in org.keycloak.tests.admin.authentication.RegistrationFlowTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:27.7520521Z [INFO] Running org.keycloak.tests.admin.client.ClientSearchJpaTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:27.7521711Z 2025-03-26 14:45:27,742 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:27.7522734Z 2025-03-26 14:45:27,742 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.client.ClientSearchJpaTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:29.4189927Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.667 s - in org.keycloak.tests.admin.client.ClientSearchJpaTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:29.4191044Z [INFO] Running org.keycloak.tests.admin.SMTPConnectionTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:29.4191901Z 2025-03-26 14:45:29,413 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:29.4192882Z 2025-03-26 14:45:29,413 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.SMTPConnectionTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:33.6525468Z [INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.221 s - in org.keycloak.tests.admin.SMTPConnectionTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:33.6527398Z [INFO] Running org.keycloak.tests.admin.event.EventConfigTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:33.6528280Z 2025-03-26 14:45:33,635 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:33.6529696Z 2025-03-26 14:45:33,636 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.event.EventConfigTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:35.6846369Z [INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.038 s - in org.keycloak.tests.admin.event.EventConfigTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:35.6849661Z [INFO] Running org.keycloak.tests.admin.AdminHeadersTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:35.6850482Z 2025-03-26 14:45:35,675 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:35.6851402Z 2025-03-26 14:45:35,675 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.AdminHeadersTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:37.1300260Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.44 s - in org.keycloak.tests.admin.AdminHeadersTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:37.1301372Z [INFO] Running org.keycloak.tests.admin.event.AdminEventTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:37.1302229Z 2025-03-26 14:45:37,116 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:37.1303287Z 2025-03-26 14:45:37,117 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.event.AdminEventTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:41.8988500Z [INFO] Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.768 s - in org.keycloak.tests.admin.event.AdminEventTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:41.8989770Z [INFO] Running org.keycloak.tests.admin.event.AdminEventAuthDetailsTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:41.8990673Z 2025-03-26 14:45:41,888 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:41.8991736Z 2025-03-26 14:45:41,888 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.event.AdminEventAuthDetailsTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:43.7672742Z [INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.85 s - in org.keycloak.tests.admin.event.AdminEventAuthDetailsTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:43.7674137Z [INFO] Running org.keycloak.tests.admin.AdminConsoleLandingPageTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:43.7675048Z 2025-03-26 14:45:43,740 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:43.7675909Z 2025-03-26 14:45:43,740 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.AdminConsoleLandingPageTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:43.8075536Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.051 s - in org.keycloak.tests.admin.AdminConsoleLandingPageTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:43.8077554Z [INFO] Running org.keycloak.tests.admin.AdminPreflightTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:43.8078375Z 2025-03-26 14:45:43,792 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:43.8079396Z 2025-03-26 14:45:43,792 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.AdminPreflightTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:43.8165676Z [INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 s - in org.keycloak.tests.admin.AdminPreflightTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:43.8167961Z [INFO] Running org.keycloak.tests.admin.userprofile.UserProfileAdminTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:43.8168716Z 2025-03-26 14:45:43,805 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:43.8169713Z 2025-03-26 14:45:43,805 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.userprofile.UserProfileAdminTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:45.6748970Z [INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.858 s - in org.keycloak.tests.admin.userprofile.UserProfileAdminTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:45.6753243Z [INFO] Running org.keycloak.tests.admin.RealmLocalizationResourceTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:45.6755724Z 2025-03-26 14:45:45,665 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:45.6756860Z 2025-03-26 14:45:45,666 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.RealmLocalizationResourceTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:47.4607515Z [INFO] Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.758 s - in org.keycloak.tests.admin.RealmLocalizationResourceTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:47.4609104Z [INFO] Running org.keycloak.tests.admin.client.ClientProtocolMapperTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:47.4610566Z 2025-03-26 14:45:47,444 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:47.4611647Z 2025-03-26 14:45:47,444 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.client.ClientProtocolMapperTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:49.5267791Z [INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.072 s - in org.keycloak.tests.admin.client.ClientProtocolMapperTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:49.5270439Z [INFO] Running org.keycloak.tests.admin.client.ClientScopeProtocolMapperTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:49.5271551Z 2025-03-26 14:45:49,518 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:49.5272706Z 2025-03-26 14:45:49,518 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.client.ClientScopeProtocolMapperTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:52.7921675Z [INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.263 s - in org.keycloak.tests.admin.client.ClientScopeProtocolMapperTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:52.7923180Z [INFO] Running org.keycloak.tests.admin.group.SubGroupSearchTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:52.7924980Z 2025-03-26 14:45:52,783 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:52.7926261Z 2025-03-26 14:45:52,783 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.group.SubGroupSearchTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:54.6547595Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.86 s - in org.keycloak.tests.admin.group.SubGroupSearchTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:54.6550831Z [INFO] Running org.keycloak.tests.admin.DeclarativeUserTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:54.6552065Z 2025-03-26 14:45:54,644 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:54.6553356Z 2025-03-26 14:45:54,644 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.DeclarativeUserTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:57.5236286Z [INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.869 s - in org.keycloak.tests.admin.DeclarativeUserTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:57.5237518Z [INFO] Running org.keycloak.tests.admin.authz.fgap.FeatureDisabledTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:57.5238573Z 2025-03-26 14:45:57,515 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:57.5239638Z 2025-03-26 14:45:57,515 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authz.fgap.FeatureDisabledTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:59.1192134Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.587 s - in org.keycloak.tests.admin.authz.fgap.FeatureDisabledTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:59.1193784Z [INFO] Running org.keycloak.tests.admin.authentication.AuthenticatorConfigTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:59.1195026Z 2025-03-26 14:45:59,107 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mssql)	Run new base tests	2025-03-26T14:45:59.1196495Z 2025-03-26 14:45:59,107 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authentication.AuthenticatorConfigTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:46:01.9515287Z [INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.834 s - in org.keycloak.tests.admin.authentication.AuthenticatorConfigTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:46:01.9516679Z [INFO] Running org.keycloak.tests.admin.AttackDetectionResourceTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:46:01.9520450Z 2025-03-26 14:46:01,942 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mssql)	Run new base tests	2025-03-26T14:46:01.9526344Z 2025-03-26 14:46:01,943 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.AttackDetectionResourceTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:46:02.8762519Z 2025-03-26 14:46:02,868 WARN  [managed.keycloak] (main) [org.keycloak.events] (executor-thread-1) type="LOGIN_ERROR", realmId="default", realmName="default", clientId="test-app", userId="67bca0f8-1d52-4de0-907d-7fdac1555b80", ipAddress="127.0.0.1", error="invalid_user_credentials", auth_method="openid-connect", grant_type="password", client_auth_method="client-secret", username="default"
+Store IT (mssql)	Run new base tests	2025-03-26T14:46:02.8767740Z 2025-03-26 14:46:02,868 WARN  [managed.keycloak] (main) [org.keycloak.events] (executor-thread-1) type="LOGIN_ERROR", realmId="default", realmName="default", clientId="test-app", userId="67bca0f8-1d52-4de0-907d-7fdac1555b80", ipAddress="127.0.0.1", error="invalid_user_credentials", auth_method="openid-connect", grant_type="password", client_auth_method="client-secret", username="default"
+Store IT (mssql)	Run new base tests	2025-03-26T14:46:02.8771795Z 2025-03-26 14:46:02,868 WARN  [managed.keycloak] (main) [org.keycloak.events] (executor-thread-1) type="LOGIN_ERROR", realmId="default", realmName="default", clientId="test-app", userId="67bca0f8-1d52-4de0-907d-7fdac1555b80", ipAddress="127.0.0.1", error="user_temporarily_disabled", auth_method="openid-connect", grant_type="password", client_auth_method="client-secret", username="default"
+Store IT (mssql)	Run new base tests	2025-03-26T14:46:02.8776016Z 2025-03-26 14:46:02,868 WARN  [managed.keycloak] (main) [org.keycloak.events] (executor-thread-1) type="LOGIN_ERROR", realmId="default", realmName="default", clientId="test-app", userId="cbe02a83-3981-4747-a7d0-b1c55dd529b9", ipAddress="127.0.0.1", error="invalid_user_credentials", auth_method="openid-connect", grant_type="password", client_auth_method="client-secret", username="testUser2"
+Store IT (mssql)	Run new base tests	2025-03-26T14:46:02.8780136Z 2025-03-26 14:46:02,868 WARN  [managed.keycloak] (main) [org.keycloak.events] (executor-thread-1) type="LOGIN_ERROR", realmId="default", realmName="default", clientId="test-app", userId="cbe02a83-3981-4747-a7d0-b1c55dd529b9", ipAddress="127.0.0.1", error="user_temporarily_disabled", auth_method="openid-connect", grant_type="password", client_auth_method="client-secret", username="testUser2"
+Store IT (mssql)	Run new base tests	2025-03-26T14:46:02.8783928Z 2025-03-26 14:46:02,868 WARN  [managed.keycloak] (main) [org.keycloak.events] (executor-thread-1) type="LOGIN_ERROR", realmId="default", realmName="default", clientId="test-app", userId="null", ipAddress="127.0.0.1", error="user_not_found", auth_method="openid-connect", grant_type="password", client_auth_method="client-secret", username="nosuchuser"
+Store IT (mssql)	Run new base tests	2025-03-26T14:46:02.8788051Z 2025-03-26 14:46:02,869 ERROR [testinfo] (main)     FAILED - org.keycloak.tests.admin.AttackDetectionResourceTest / test
+Store IT (mssql)	Run new base tests	2025-03-26T14:46:03.5377043Z [ERROR] Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 1.585 s <<< FAILURE! - in org.keycloak.tests.admin.AttackDetectionResourceTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:46:03.5378750Z [ERROR] org.keycloak.tests.admin.AttackDetectionResourceTest.test  Time elapsed: 0.927 s  <<< FAILURE!
+Store IT (mssql)	Run new base tests	2025-03-26T14:46:03.5379850Z org.opentest4j.AssertionFailedError: expected: <2> but was: <1>
+Store IT (mssql)	Run new base tests	2025-03-26T14:46:03.5380673Z 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+Store IT (mssql)	Run new base tests	2025-03-26T14:46:03.5381721Z 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+Store IT (mssql)	Run new base tests	2025-03-26T14:46:03.5382589Z 	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+Store IT (mssql)	Run new base tests	2025-03-26T14:46:03.5383234Z 	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+Store IT (mssql)	Run new base tests	2025-03-26T14:46:03.5383870Z 	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+Store IT (mssql)	Run new base tests	2025-03-26T14:46:03.5384840Z 	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+Store IT (mssql)	Run new base tests	2025-03-26T14:46:03.5386001Z 	at org.keycloak.tests.admin.AttackDetectionResourceTest.assertBruteForce(AttackDetectionResourceTest.java:99)
+Store IT (mssql)	Run new base tests	2025-03-26T14:46:03.5387328Z 	at org.keycloak.tests.admin.AttackDetectionResourceTest.test(AttackDetectionResourceTest.java:81)
+Store IT (mssql)	Run new base tests	2025-03-26T14:46:03.5388227Z 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+Store IT (mssql)	Run new base tests	2025-03-26T14:46:03.5388656Z 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Store IT (mssql)	Run new base tests	2025-03-26T14:46:03.5389076Z 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Store IT (mssql)	Run new base tests	2025-03-26T14:46:03.5389336Z 
+Store IT (mssql)	Run new base tests	2025-03-26T14:46:03.5389535Z [INFO] Running org.keycloak.tests.admin.CrossRealmPermissionsTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:46:03.5390124Z 2025-03-26 14:46:03,528 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mssql)	Run new base tests	2025-03-26T14:46:03.5391597Z 2025-03-26 14:46:03,528 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.CrossRealmPermissionsTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:46:06.3363780Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.795 s - in org.keycloak.tests.admin.CrossRealmPermissionsTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:46:06.3365146Z [INFO] Running org.keycloak.tests.admin.client.ClientScopeTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:46:06.3366252Z 2025-03-26 14:46:06,325 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mssql)	Run new base tests	2025-03-26T14:46:06.3367592Z 2025-03-26 14:46:06,325 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.client.ClientScopeTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:46:10.6560375Z [INFO] Tests run: 20, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.285 s - in org.keycloak.tests.admin.client.ClientScopeTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:46:10.6562092Z [INFO] Running org.keycloak.tests.admin.authentication.FlowTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:46:10.6563000Z 2025-03-26 14:46:10,645 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mssql)	Run new base tests	2025-03-26T14:46:10.6564212Z 2025-03-26 14:46:10,645 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authentication.FlowTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:46:14.6926227Z [INFO] Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.035 s - in org.keycloak.tests.admin.authentication.FlowTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:46:14.6929548Z [INFO] Running org.keycloak.tests.admin.authentication.ShiftRequiredActionTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:46:14.6931215Z 2025-03-26 14:46:14,681 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mssql)	Run new base tests	2025-03-26T14:46:14.6933420Z 2025-03-26 14:46:14,681 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authentication.ShiftRequiredActionTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:46:15.8859552Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.195 s - in org.keycloak.tests.admin.authentication.ShiftRequiredActionTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:46:15.8865689Z [INFO] Running org.keycloak.tests.admin.authentication.InitialFlowsTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:46:15.8867160Z 2025-03-26 14:46:15,878 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mssql)	Run new base tests	2025-03-26T14:46:15.8868229Z 2025-03-26 14:46:15,878 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authentication.InitialFlowsTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:46:17.2426480Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.337 s - in org.keycloak.tests.admin.authentication.InitialFlowsTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:46:17.2436037Z [INFO] Running org.keycloak.tests.admin.authentication.ProvidersTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:46:17.2437198Z 2025-03-26 14:46:17,229 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mssql)	Run new base tests	2025-03-26T14:46:17.2438324Z 2025-03-26 14:46:17,229 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authentication.ProvidersTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:46:18.8941254Z [INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.652 s - in org.keycloak.tests.admin.authentication.ProvidersTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:46:18.8943737Z [INFO] Running org.keycloak.tests.admin.AdminSignatureAlgorithmTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:46:18.8944893Z 2025-03-26 14:46:18,883 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mssql)	Run new base tests	2025-03-26T14:46:18.8946132Z 2025-03-26 14:46:18,883 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.AdminSignatureAlgorithmTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:46:19.0656449Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.169 s - in org.keycloak.tests.admin.AdminSignatureAlgorithmTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:46:19.0663024Z [INFO] Running org.keycloak.tests.admin.authentication.ShiftExecutionTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:46:19.0664163Z 2025-03-26 14:46:19,053 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mssql)	Run new base tests	2025-03-26T14:46:19.0665212Z 2025-03-26 14:46:19,053 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authentication.ShiftExecutionTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:46:20.6773555Z [INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.613 s - in org.keycloak.tests.admin.authentication.ShiftExecutionTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:46:20.6775267Z [INFO] Running org.keycloak.tests.admin.event.LoginEventsTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:46:20.6775826Z 2025-03-26 14:46:20,668 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mssql)	Run new base tests	2025-03-26T14:46:20.6776432Z 2025-03-26 14:46:20,668 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.event.LoginEventsTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:46:23.9547610Z [INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.273 s - in org.keycloak.tests.admin.event.LoginEventsTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:46:23.9549201Z [INFO] Running org.keycloak.tests.admin.event.EmailEventListenerTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:46:23.9550117Z 2025-03-26 14:46:23,942 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mssql)	Run new base tests	2025-03-26T14:46:23.9551192Z 2025-03-26 14:46:23,942 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.event.EmailEventListenerTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:46:25.2845984Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.332 s - in org.keycloak.tests.admin.event.EmailEventListenerTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:46:25.2847256Z [INFO] Running org.keycloak.tests.admin.client.ServiceAccountClientTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:46:25.2848182Z 2025-03-26 14:46:25,276 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mssql)	Run new base tests	2025-03-26T14:46:25.2849234Z 2025-03-26 14:46:25,276 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.client.ServiceAccountClientTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:46:26.9631616Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.671 s - in org.keycloak.tests.admin.client.ServiceAccountClientTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:46:26.9633569Z [INFO] Running org.keycloak.tests.admin.AuthzCleanupTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:46:26.9635736Z 2025-03-26 14:46:26,949 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mssql)	Run new base tests	2025-03-26T14:46:26.9637369Z 2025-03-26 14:46:26,949 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.AuthzCleanupTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:46:40.5192494Z 2025-03-26 14:46:40,418 ERROR [managed.keycloak] (pool-5-thread-1) [org.keycloak.quarkus.runtime.configuration.mappers.PropertyMappers] (main) Hostname v1 options [hostname-strict-https] are still in use, please review your configuration
+Store IT (mssql)	Run new base tests	2025-03-26T14:46:49.7934429Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 22.834 s - in org.keycloak.tests.admin.AuthzCleanupTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:46:49.7943524Z [INFO] Running org.keycloak.tests.admin.FineGrainedPermissionsUsersTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:46:49.7944763Z 2025-03-26 14:46:49,784 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mssql)	Run new base tests	2025-03-26T14:46:49.7945937Z 2025-03-26 14:46:49,784 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.FineGrainedPermissionsUsersTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:47:02.9677356Z 2025-03-26 14:47:02,901 ERROR [managed.keycloak] (pool-6-thread-1) [org.keycloak.quarkus.runtime.configuration.mappers.PropertyMappers] (main) Hostname v1 options [hostname-strict-https] are still in use, please review your configuration
+Store IT (mssql)	Run new base tests	2025-03-26T14:47:25.5783894Z [INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 35.78 s - in org.keycloak.tests.admin.FineGrainedPermissionsUsersTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:47:25.5786103Z [INFO] Running org.keycloak.tests.admin.ImpersonationDisabledTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:47:25.5786979Z 2025-03-26 14:47:25,566 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mssql)	Run new base tests	2025-03-26T14:47:25.5788018Z 2025-03-26 14:47:25,566 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.ImpersonationDisabledTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:47:38.8490686Z 2025-03-26 14:47:38,746 ERROR [managed.keycloak] (pool-7-thread-1) [org.keycloak.quarkus.runtime.configuration.mappers.PropertyMappers] (main) Hostname v1 options [hostname-strict-https] are still in use, please review your configuration
+Store IT (mssql)	Run new base tests	2025-03-26T14:47:47.7598301Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 22.18 s - in org.keycloak.tests.admin.ImpersonationDisabledTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:47:47.7599864Z [INFO] Running org.keycloak.tests.admin.ManagementPermissionsTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:47:47.7600830Z 2025-03-26 14:47:47,747 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mssql)	Run new base tests	2025-03-26T14:47:47.7601871Z 2025-03-26 14:47:47,747 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.ManagementPermissionsTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:48:01.0983289Z 2025-03-26 14:48:01,042 ERROR [managed.keycloak] (pool-8-thread-1) [org.keycloak.quarkus.runtime.configuration.mappers.PropertyMappers] (main) Hostname v1 options [hostname-strict-https] are still in use, please review your configuration
+Store IT (mssql)	Run new base tests	2025-03-26T14:48:11.3943290Z [INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 23.634 s - in org.keycloak.tests.admin.ManagementPermissionsTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:48:11.3946399Z [INFO] Running org.keycloak.tests.admin.SMTPConnectionVaultTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:48:11.3947301Z 2025-03-26 14:48:11,386 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mssql)	Run new base tests	2025-03-26T14:48:11.3948404Z 2025-03-26 14:48:11,386 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.SMTPConnectionVaultTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:48:11.5240666Z 2025-03-26 14:48:11,487 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (mssql)	Run new base tests	2025-03-26T14:48:11.5243882Z 2025-03-26 14:48:11,488 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (mssql)	Run new base tests	2025-03-26T14:48:24.9611974Z 2025-03-26 14:48:24,910 ERROR [managed.keycloak] (pool-9-thread-1) [org.keycloak.quarkus.runtime.configuration.mappers.PropertyMappers] (main) Hostname v1 options [hostname-strict-https] are still in use, please review your configuration
+Store IT (mssql)	Run new base tests	2025-03-26T14:48:34.3622402Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 22.965 s - in org.keycloak.tests.admin.SMTPConnectionVaultTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:48:34.3626167Z [INFO] Running org.keycloak.tests.admin.authentication.RequiredActionsTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:48:34.3628500Z 2025-03-26 14:48:34,353 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mssql)	Run new base tests	2025-03-26T14:48:34.3633313Z 2025-03-26 14:48:34,353 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authentication.RequiredActionsTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:48:47.7178384Z 2025-03-26 14:48:47,650 ERROR [managed.keycloak] (pool-10-thread-1) [org.keycloak.quarkus.runtime.configuration.mappers.PropertyMappers] (main) Hostname v1 options [hostname-strict-https] are still in use, please review your configuration
+Store IT (mssql)	Run new base tests	2025-03-26T14:48:56.9105642Z [INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 22.547 s - in org.keycloak.tests.admin.authentication.RequiredActionsTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:48:56.9107662Z [INFO] Running org.keycloak.tests.admin.authz.fgap.UserResourceTypePermissionTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:48:56.9109711Z 2025-03-26 14:48:56,902 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mssql)	Run new base tests	2025-03-26T14:48:56.9110907Z 2025-03-26 14:48:56,903 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authz.fgap.UserResourceTypePermissionTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:49:02.7683146Z 2025-03-26 14:49:02,692 WARN  [managed.keycloak] (pool-11-thread-1) [org.keycloak.common.Profile] (main) Experimental features enabled: admin-fine-grained-authz:v2
+Store IT (mssql)	Run new base tests	2025-03-26T14:49:02.7690757Z 2025-03-26 14:49:02,698 WARN  [managed.keycloak] (pool-11-thread-1) [org.keycloak.common.Profile] (main) Experimental features enabled: admin-fine-grained-authz:v2
+Store IT (mssql)	Run new base tests	2025-03-26T14:49:10.5115374Z 2025-03-26 14:49:10,419 WARN  [managed.keycloak] (pool-11-thread-1) [org.keycloak.common.Profile] (main) Experimental features enabled: admin-fine-grained-authz:v2
+Store IT (mssql)	Run new base tests	2025-03-26T14:49:10.5121784Z 2025-03-26 14:49:10,420 ERROR [managed.keycloak] (pool-11-thread-1) [org.keycloak.quarkus.runtime.configuration.mappers.PropertyMappers] (main) Hostname v1 options [hostname-strict-https] are still in use, please review your configuration
+Store IT (mssql)	Run new base tests	2025-03-26T14:49:10.5126910Z 2025-03-26 14:49:10,420 WARN  [managed.keycloak] (pool-11-thread-1) [org.keycloak.common.Profile] (main) Experimental features enabled: admin-fine-grained-authz:v2
+Store IT (mssql)	Run new base tests	2025-03-26T14:49:20.2375882Z 2025-03-26 14:49:20,231 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (mssql)	Run new base tests	2025-03-26T14:49:20.2379072Z 2025-03-26 14:49:20,231 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (mssql)	Run new base tests	2025-03-26T14:49:20.2381758Z 2025-03-26 14:49:20,232 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (mssql)	Run new base tests	2025-03-26T14:49:20.2384941Z 2025-03-26 14:49:20,232 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (mssql)	Run new base tests	2025-03-26T14:49:21.8420781Z [INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 24.928 s - in org.keycloak.tests.admin.authz.fgap.UserResourceTypePermissionTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:49:21.8422152Z [INFO] Running org.keycloak.tests.admin.authz.fgap.RoleResourceTypeEvaluationTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:49:21.8423137Z 2025-03-26 14:49:21,832 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mssql)	Run new base tests	2025-03-26T14:49:21.8424204Z 2025-03-26 14:49:21,832 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authz.fgap.RoleResourceTypeEvaluationTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:49:24.8465789Z [INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.001 s - in org.keycloak.tests.admin.authz.fgap.RoleResourceTypeEvaluationTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:49:24.8475326Z [INFO] Running org.keycloak.tests.admin.authz.fgap.UserResourceTypeEvaluationTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:49:24.8477103Z 2025-03-26 14:49:24,838 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mssql)	Run new base tests	2025-03-26T14:49:24.8479103Z 2025-03-26 14:49:24,838 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authz.fgap.UserResourceTypeEvaluationTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:49:28.8031830Z [INFO] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.954 s - in org.keycloak.tests.admin.authz.fgap.UserResourceTypeEvaluationTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:49:28.8033449Z [INFO] Running org.keycloak.tests.admin.authz.fgap.ClientResourceTypeFilteringTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:49:28.8038001Z 2025-03-26 14:49:28,793 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mssql)	Run new base tests	2025-03-26T14:49:28.8043556Z 2025-03-26 14:49:28,794 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authz.fgap.ClientResourceTypeFilteringTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:49:41.0957490Z [INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.271 s - in org.keycloak.tests.admin.authz.fgap.ClientResourceTypeFilteringTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:49:41.0959421Z [INFO] Running org.keycloak.tests.admin.authz.fgap.GroupResourceTypeFilteringTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:49:41.0960695Z 2025-03-26 14:49:41,066 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mssql)	Run new base tests	2025-03-26T14:49:41.0961561Z 2025-03-26 14:49:41,066 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authz.fgap.GroupResourceTypeFilteringTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:50:01.7107950Z [INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 20.634 s - in org.keycloak.tests.admin.authz.fgap.GroupResourceTypeFilteringTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:50:01.7109843Z [INFO] Running org.keycloak.tests.admin.authz.fgap.PermissionRESTTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:50:01.7110894Z 2025-03-26 14:50:01,701 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mssql)	Run new base tests	2025-03-26T14:50:01.7111940Z 2025-03-26 14:50:01,701 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authz.fgap.PermissionRESTTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:50:03.4661963Z [INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.753 s - in org.keycloak.tests.admin.authz.fgap.PermissionRESTTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:50:03.4667726Z [INFO] Running org.keycloak.tests.admin.authz.fgap.FeatureV2EnabledTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:50:03.4668711Z 2025-03-26 14:50:03,455 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mssql)	Run new base tests	2025-03-26T14:50:03.4669832Z 2025-03-26 14:50:03,456 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authz.fgap.FeatureV2EnabledTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:50:05.1207930Z [INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.655 s - in org.keycloak.tests.admin.authz.fgap.FeatureV2EnabledTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:50:05.1209455Z [INFO] Running org.keycloak.tests.admin.authz.fgap.GroupResourceTypeEvaluationTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:50:05.1212818Z 2025-03-26 14:50:05,111 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mssql)	Run new base tests	2025-03-26T14:50:05.1214271Z 2025-03-26 14:50:05,111 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authz.fgap.GroupResourceTypeEvaluationTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:50:07.7726640Z [INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.65 s - in org.keycloak.tests.admin.authz.fgap.GroupResourceTypeEvaluationTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:50:07.7728373Z [INFO] Running org.keycloak.tests.admin.authz.fgap.RoleResourceTypePermissionTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:50:07.7735314Z 2025-03-26 14:50:07,763 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mssql)	Run new base tests	2025-03-26T14:50:07.7736466Z 2025-03-26 14:50:07,763 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authz.fgap.RoleResourceTypePermissionTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:50:09.8403512Z [INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.068 s - in org.keycloak.tests.admin.authz.fgap.RoleResourceTypePermissionTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:50:09.8407312Z [INFO] Running org.keycloak.tests.admin.authz.fgap.UserResourceTypeFilteringTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:50:09.8408352Z 2025-03-26 14:50:09,832 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mssql)	Run new base tests	2025-03-26T14:50:09.8409532Z 2025-03-26 14:50:09,832 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authz.fgap.UserResourceTypeFilteringTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:50:15.1035216Z [INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.261 s - in org.keycloak.tests.admin.authz.fgap.UserResourceTypeFilteringTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:50:15.1036530Z [INFO] Running org.keycloak.tests.admin.authz.fgap.GroupResourceTypePermissionTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:50:15.1037410Z 2025-03-26 14:50:15,095 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mssql)	Run new base tests	2025-03-26T14:50:15.1038330Z 2025-03-26 14:50:15,095 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authz.fgap.GroupResourceTypePermissionTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:50:17.0204799Z [INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.913 s - in org.keycloak.tests.admin.authz.fgap.GroupResourceTypePermissionTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:50:17.0206747Z [INFO] Running org.keycloak.tests.admin.authz.fgap.ClientResourceTypePermissionTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:50:17.0208453Z 2025-03-26 14:50:17,010 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mssql)	Run new base tests	2025-03-26T14:50:17.0211298Z 2025-03-26 14:50:17,010 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authz.fgap.ClientResourceTypePermissionTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:50:19.3291900Z [INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.31 s - in org.keycloak.tests.admin.authz.fgap.ClientResourceTypePermissionTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:50:19.3294541Z [INFO] Running org.keycloak.tests.admin.authz.fgap.ClientResourceTypeEvaluationTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:50:19.3295584Z 2025-03-26 14:50:19,322 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mssql)	Run new base tests	2025-03-26T14:50:19.3296595Z 2025-03-26 14:50:19,322 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authz.fgap.ClientResourceTypeEvaluationTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:50:21.2155886Z 2025-03-26 14:50:21,203 WARN  [managed.keycloak] (pool-11-thread-1) [org.keycloak.events] (executor-thread-3) type="LOGOUT_ERROR", realmId="default", realmName="default", clientId="myclient", userId="null", ipAddress="127.0.0.1", error="invalid_client_credentials"
+Store IT (mssql)	Run new base tests	2025-03-26T14:50:21.8589102Z [INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.525 s - in org.keycloak.tests.admin.authz.fgap.ClientResourceTypeEvaluationTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:50:21.8592135Z [INFO] Running org.keycloak.tests.admin.authz.fgap.FeatureV1EnabledTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:50:21.8594729Z 2025-03-26 14:50:21,849 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mssql)	Run new base tests	2025-03-26T14:50:21.8595831Z 2025-03-26 14:50:21,849 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authz.fgap.FeatureV1EnabledTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:50:35.4560367Z 2025-03-26 14:50:35,432 ERROR [managed.keycloak] (pool-12-thread-1) [org.keycloak.quarkus.runtime.configuration.mappers.PropertyMappers] (main) Hostname v1 options [hostname-strict-https] are still in use, please review your configuration
+Store IT (mssql)	Run new base tests	2025-03-26T14:50:43.9419209Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 22.081 s - in org.keycloak.tests.admin.authz.fgap.FeatureV1EnabledTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:50:43.9424438Z [INFO] Running org.keycloak.tests.admin.client.ClientSearchTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:50:43.9426433Z 2025-03-26 14:50:43,932 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mssql)	Run new base tests	2025-03-26T14:50:43.9427795Z 2025-03-26 14:50:43,932 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.client.ClientSearchTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:50:57.2098522Z 2025-03-26 14:50:57,200 ERROR [managed.keycloak] (pool-13-thread-1) [org.keycloak.quarkus.runtime.configuration.mappers.PropertyMappers] (main) Hostname v1 options [hostname-strict-https] are still in use, please review your configuration
+Store IT (mssql)	Run new base tests	2025-03-26T14:51:06.1892822Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 22.243 s - in org.keycloak.tests.admin.client.ClientSearchTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:51:06.1893824Z [INFO] Running org.keycloak.tests.admin.client.DynamicClientScopeTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:51:06.1895898Z 2025-03-26 14:51:06,176 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mssql)	Run new base tests	2025-03-26T14:51:06.1896851Z 2025-03-26 14:51:06,176 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.client.DynamicClientScopeTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:51:12.0447262Z 2025-03-26 14:51:11,952 WARN  [managed.keycloak] (pool-14-thread-1) [org.keycloak.common.Profile] (main) Experimental features enabled: dynamic-scopes:v1
+Store IT (mssql)	Run new base tests	2025-03-26T14:51:12.0470660Z 2025-03-26 14:51:11,960 WARN  [managed.keycloak] (pool-14-thread-1) [org.keycloak.common.Profile] (main) Experimental features enabled: dynamic-scopes:v1
+Store IT (mssql)	Run new base tests	2025-03-26T14:51:19.5808074Z 2025-03-26 14:51:19,577 WARN  [managed.keycloak] (pool-14-thread-1) [org.keycloak.common.Profile] (main) Experimental features enabled: dynamic-scopes:v1
+Store IT (mssql)	Run new base tests	2025-03-26T14:51:19.5811828Z 2025-03-26 14:51:19,577 ERROR [managed.keycloak] (pool-14-thread-1) [org.keycloak.quarkus.runtime.configuration.mappers.PropertyMappers] (main) Hostname v1 options [hostname-strict-https] are still in use, please review your configuration
+Store IT (mssql)	Run new base tests	2025-03-26T14:51:19.5819512Z 2025-03-26 14:51:19,577 WARN  [managed.keycloak] (pool-14-thread-1) [org.keycloak.common.Profile] (main) Experimental features enabled: dynamic-scopes:v1
+Store IT (mssql)	Run new base tests	2025-03-26T14:51:29.0805223Z [INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 22.894 s - in org.keycloak.tests.admin.client.DynamicClientScopeTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:51:29.0806651Z [INFO] Running org.keycloak.tests.admin.client.InstallationTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:51:29.0807987Z 2025-03-26 14:51:29,072 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mssql)	Run new base tests	2025-03-26T14:51:29.0808983Z 2025-03-26 14:51:29,072 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.client.InstallationTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:51:42.6837968Z 2025-03-26 14:51:42,635 ERROR [managed.keycloak] (pool-15-thread-1) [org.keycloak.quarkus.runtime.configuration.mappers.PropertyMappers] (main) Hostname v1 options [hostname-strict-https] are still in use, please review your configuration
+Store IT (mssql)	Run new base tests	2025-03-26T14:51:53.2203615Z [INFO] Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 24.139 s - in org.keycloak.tests.admin.client.InstallationTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:51:53.2205851Z [INFO] Running org.keycloak.tests.admin.group.GroupSearchTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:51:53.2206809Z 2025-03-26 14:51:53,212 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mssql)	Run new base tests	2025-03-26T14:51:53.2207964Z 2025-03-26 14:51:53,212 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.group.GroupSearchTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:52:06.5507581Z 2025-03-26 14:52:06,496 ERROR [managed.keycloak] (pool-16-thread-1) [org.keycloak.quarkus.runtime.configuration.mappers.PropertyMappers] (main) Hostname v1 options [hostname-strict-https] are still in use, please review your configuration
+Store IT (mssql)	Run new base tests	2025-03-26T14:52:15.8005605Z [INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 22.577 s - in org.keycloak.tests.admin.group.GroupSearchTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:52:15.8007786Z [INFO] Running org.keycloak.tests.admin.metric.PasswordValidationMetricCustomTagsTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:52:15.8008910Z 2025-03-26 14:52:15,791 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mssql)	Run new base tests	2025-03-26T14:52:15.8010176Z 2025-03-26 14:52:15,792 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.metric.PasswordValidationMetricCustomTagsTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:52:29.4036815Z 2025-03-26 14:52:29,389 ERROR [managed.keycloak] (pool-17-thread-1) [org.keycloak.quarkus.runtime.configuration.mappers.PropertyMappers] (main) Hostname v1 options [hostname-strict-https] are still in use, please review your configuration
+Store IT (mssql)	Run new base tests	2025-03-26T14:52:39.1835740Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 23.382 s - in org.keycloak.tests.admin.metric.PasswordValidationMetricCustomTagsTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:52:39.1837668Z [INFO] Running org.keycloak.tests.admin.metric.PasswordValidationMetricTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:52:39.1839592Z 2025-03-26 14:52:39,175 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (mssql)	Run new base tests	2025-03-26T14:52:39.1842493Z 2025-03-26 14:52:39,175 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.metric.PasswordValidationMetricTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:52:52.7661251Z 2025-03-26 14:52:52,745 ERROR [managed.keycloak] (pool-18-thread-1) [org.keycloak.quarkus.runtime.configuration.mappers.PropertyMappers] (main) Hostname v1 options [hostname-strict-https] are still in use, please review your configuration
+Store IT (mssql)	Run new base tests	2025-03-26T14:53:02.4440873Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 23.259 s - in org.keycloak.tests.admin.metric.PasswordValidationMetricTest
+Store IT (mssql)	Run new base tests	2025-03-26T14:53:02.5595880Z [INFO] Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 549.692 s - in org.keycloak.tests.suites.DatabaseTestSuite
+Store IT (mssql)	Run new base tests	2025-03-26T14:53:02.9042237Z [INFO] 
+Store IT (mssql)	Run new base tests	2025-03-26T14:53:02.9042660Z [INFO] Results:
+Store IT (mssql)	Run new base tests	2025-03-26T14:53:02.9046858Z [INFO] 
+Store IT (mssql)	Run new base tests	2025-03-26T14:53:02.9047571Z [ERROR] Failures: 
+Store IT (mssql)	Run new base tests	2025-03-26T14:53:02.9048634Z [ERROR]   AttackDetectionResourceTest.test:81->assertBruteForce:99 expected: <2> but was: <1>
+Store IT (mssql)	Run new base tests	2025-03-26T14:53:02.9050226Z [INFO] 
+Store IT (mssql)	Run new base tests	2025-03-26T14:53:02.9050889Z [ERROR] Tests run: 287, Failures: 1, Errors: 0, Skipped: 0
+Store IT (mssql)	Run new base tests	2025-03-26T14:53:02.9051608Z [INFO] 
+Store IT (mssql)	Run new base tests	2025-03-26T14:53:02.9076476Z [INFO] ------------------------------------------------------------------------
+Store IT (mssql)	Run new base tests	2025-03-26T14:53:02.9077264Z [INFO] Reactor Summary for Keycloak Tests Parent 999.0.0-SNAPSHOT:
+Store IT (mssql)	Run new base tests	2025-03-26T14:53:02.9078207Z [INFO] 
+Store IT (mssql)	Run new base tests	2025-03-26T14:53:02.9079543Z [INFO] Keycloak Tests Parent .............................. SUCCESS [  0.698 s]
+Store IT (mssql)	Run new base tests	2025-03-26T14:53:02.9080425Z [INFO] Keycloak Testsuite Utilities ....................... SUCCESS [  4.541 s]
+Store IT (mssql)	Run new base tests	2025-03-26T14:53:02.9081305Z [INFO] Keycloak Testsuite Utilities Shared ................ SUCCESS [  0.858 s]
+Store IT (mssql)	Run new base tests	2025-03-26T14:53:02.9082181Z [INFO] Keycloak Testsuite Custom Providers ................ SUCCESS [  0.112 s]
+Store IT (mssql)	Run new base tests	2025-03-26T14:53:02.9083037Z [INFO] New Keycloak Base Testsuite ........................ FAILURE [09:19 min]
+Store IT (mssql)	Run new base tests	2025-03-26T14:53:02.9084284Z [INFO] ------------------------------------------------------------------------
+Store IT (mssql)	Run new base tests	2025-03-26T14:53:02.9084865Z [INFO] BUILD FAILURE
+Store IT (mssql)	Run new base tests	2025-03-26T14:53:02.9085375Z [INFO] ------------------------------------------------------------------------
+Store IT (mssql)	Run new base tests	2025-03-26T14:53:02.9085999Z [INFO] Total time:  09:25 min
+Store IT (mssql)	Run new base tests	2025-03-26T14:53:02.9086482Z [INFO] Finished at: 2025-03-26T14:53:02Z
+Store IT (mssql)	Run new base tests	2025-03-26T14:53:02.9087101Z [INFO] ------------------------------------------------------------------------
+Store IT (mssql)	Run new base tests	2025-03-26T14:53:02.9095963Z [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.0.0-M7:test (default-test) on project keycloak-tests-base: There are test failures.
+Store IT (mssql)	Run new base tests	2025-03-26T14:53:02.9097136Z [ERROR] 
+Store IT (mssql)	Run new base tests	2025-03-26T14:53:02.9098021Z [ERROR] Please refer to /home/runner/work/keycloak/keycloak/tests/base/target/surefire-reports for the individual test results.
+Store IT (mssql)	Run new base tests	2025-03-26T14:53:02.9099239Z [ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+Store IT (mssql)	Run new base tests	2025-03-26T14:53:02.9099997Z [ERROR] -> [Help 1]
+Store IT (mssql)	Run new base tests	2025-03-26T14:53:02.9100357Z [ERROR] 
+Store IT (mssql)	Run new base tests	2025-03-26T14:53:02.9100914Z [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+Store IT (mssql)	Run new base tests	2025-03-26T14:53:02.9101725Z [ERROR] Re-run Maven using the -X switch to enable full debug logging.
+Store IT (mssql)	Run new base tests	2025-03-26T14:53:02.9102301Z [ERROR] 
+Store IT (mssql)	Run new base tests	2025-03-26T14:53:02.9102960Z [ERROR] For more information about the errors and possible solutions, please read the following articles:
+Store IT (mssql)	Run new base tests	2025-03-26T14:53:02.9104254Z [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+Store IT (mssql)	Run new base tests	2025-03-26T14:53:02.9104947Z [ERROR] 
+Store IT (mssql)	Run new base tests	2025-03-26T14:53:02.9105491Z [ERROR] After correcting the problems, you can resume the build with the command
+Store IT (mssql)	Run new base tests	2025-03-26T14:53:02.9106232Z [ERROR]   mvn <args> -rf :keycloak-tests-base
+Store IT (mssql)	Run new base tests	2025-03-26T14:53:02.9395383Z ##[error]Process completed with exit code 1.
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6356171Z Prepare all required actions
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6430770Z ##[group]Run ./.github/actions/status-check
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6431351Z with:
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6435316Z   jobs: {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "conditional": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	      "ci": "true",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	      "ci-aurora": "false",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	      "ci-quarkus": "false",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	      "ci-sssd": "false",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	      "ci-store": "false",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	      "ci-webauthn": "true"
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    }
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "build": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "unit-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "base-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "adapter-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "adapter-integration-tests-strict-cookies": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "quarkus-unit-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "skipped",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "quarkus-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "jdk-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "store-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "failure",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "volatile-sessions-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "skipped",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "store-model-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "skipped",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "clustering-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "fips-unit-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "fips-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "forms-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "webauthn-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "sssd-unit-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "skipped",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "migration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "external-infinispan-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "skipped",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "test-framework": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "base-new-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  }
+Status Check - Keycloak CI	Run /./.github/actions/status-check	}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6439880Z env:
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6440204Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6440626Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6440975Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6441300Z ##[endgroup]
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6631244Z ##[group]Run JOBS='{
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6631667Z [36;1mJOBS='{[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6631908Z [36;1m  "conditional": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6632176Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6632457Z [36;1m    "outputs": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6632702Z [36;1m      "ci": "true",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6632964Z [36;1m      "ci-aurora": "false",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6633236Z [36;1m      "ci-quarkus": "false",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6633519Z [36;1m      "ci-sssd": "false",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6633793Z [36;1m      "ci-store": "false",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6634071Z [36;1m      "ci-webauthn": "true"[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6634331Z [36;1m    }[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6634560Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6634779Z [36;1m  "build": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6635024Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6635310Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6635569Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6635793Z [36;1m  "unit-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6636059Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6636334Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6636576Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6636816Z [36;1m  "base-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6637105Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6637369Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6637612Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6637854Z [36;1m  "adapter-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6638152Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6638413Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6638650Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6638965Z [36;1m  "adapter-integration-tests-strict-cookies": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6639566Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6640067Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6640506Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6640739Z [36;1m  "quarkus-unit-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6641022Z [36;1m    "result": "skipped",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6641293Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6641531Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6641764Z [36;1m  "quarkus-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6642057Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6642322Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6642561Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6642789Z [36;1m  "jdk-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6643071Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6643332Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6643608Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6643839Z [36;1m  "store-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6644130Z [36;1m    "result": "failure",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6644401Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6644631Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6644870Z [36;1m  "volatile-sessions-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6645164Z [36;1m    "result": "skipped",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6645426Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6645663Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6645875Z [36;1m  "store-model-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6646142Z [36;1m    "result": "skipped",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6646398Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6646705Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6646949Z [36;1m  "clustering-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6647250Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6647506Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6647745Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6647969Z [36;1m  "fips-unit-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6648238Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6648501Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6648744Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6648969Z [36;1m  "fips-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6649255Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6649516Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6649969Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6650334Z [36;1m  "forms-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6650645Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6650906Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6651145Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6651383Z [36;1m  "webauthn-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6651672Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6651929Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6652167Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6652386Z [36;1m  "sssd-unit-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6652653Z [36;1m    "result": "skipped",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6652908Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6653150Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6653369Z [36;1m  "migration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6653642Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6653898Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6654129Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6654363Z [36;1m  "external-infinispan-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6654653Z [36;1m    "result": "skipped",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6654913Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6655146Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6655362Z [36;1m  "test-framework": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6655627Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6655886Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6656119Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6656358Z [36;1m  "base-new-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6656653Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6656913Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6657150Z [36;1m  }[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6657352Z [36;1m}'[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6657579Z [36;1m[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6657791Z [36;1mecho "Job status:"[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6658327Z [36;1mecho $JOBS | jq -r 'to_entries[] | " - \(.key): \(.value.result)"'[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6658803Z [36;1m[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6659095Z [36;1mfor i in $(echo $JOBS | jq -r 'to_entries[] | .value.result'); do[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6659502Z [36;1m  if [ "$i" != "success" ] && [ "$i" != "skipped" ]; then[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6660055Z [36;1m    echo ""[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6660319Z [36;1m    echo "Status check not okay!"[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6660607Z [36;1m    exit 1[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6660831Z [36;1m  fi[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6661042Z [36;1mdone[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6714566Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6714973Z env:
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6715290Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6715697Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6716024Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6716377Z ##[endgroup]
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6808146Z Job status:
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6855883Z  - conditional: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6856252Z  - build: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6856523Z  - unit-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6856815Z  - base-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6857136Z  - adapter-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6857514Z  - adapter-integration-tests-strict-cookies: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6857879Z  - quarkus-unit-tests: skipped
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6858179Z  - quarkus-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6858489Z  - jdk-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6858790Z  - store-integration-tests: failure
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6859424Z  - volatile-sessions-tests: skipped
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6860145Z  - store-model-tests: skipped
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6860649Z  - clustering-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6861183Z  - fips-unit-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6861664Z  - fips-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6862196Z  - forms-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6862720Z  - webauthn-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6863246Z  - sssd-unit-tests: skipped
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6863698Z  - migration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6864135Z  - external-infinispan-tests: skipped
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6864446Z  - test-framework: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6864744Z  - base-new-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6892664Z 
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6892943Z Status check not okay!
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-03-26T15:25:13.6906910Z ##[error]Process completed with exit code 1.
