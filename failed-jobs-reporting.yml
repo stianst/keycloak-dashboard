@@ -88,6 +88,13 @@ issues:
   - "13417042233/*" # Compilation failure
   - "13629269217/*" # OLM 500 error pushing image
   - "13718677571/*" # Failed to install opm
+  - "13923003190/*" # Timeout. Unusual long time.
+  - "13959239318/*" # could not create workflow dispatch event: HTTP 403: Resource not accessible by integration
+  - "13936023736/*" # could not create workflow dispatch event: HTTP 403: Resource not accessible by integration
+  - "13912658554/*" # could not create workflow dispatch event: HTTP 403: Resource not accessible by integration
+  - "13923003190/*" # Base IT (new). Timeout. Fixed now.
+  - "13867463493/*" # SSSD timeout
+  - "13847136114/*" # SSSD timeout
 - id: "keycloak-js-adapter-jar"
   description: "Could not extract/download archive: '/home/runner/.m2/repository/com/github/eirslett/node/18.16.0/node-18.16.0-linux-x64.tar.gz'"
   resolution: "ignored"
@@ -847,7 +854,7 @@ issues:
   resolves:
     - "11892812274/*"
 - id: "admin-ui-35125"
-  description: "[Keycloak Javascript CI] - Admin UI E2E - clients_test.spec.ts"
+  description: "[Keycloak Javascript CI] - Admin UI E2E - º.spec.ts"
   issue: 35125
   resolves:
     - "11914126390/*"
@@ -878,6 +885,7 @@ issues:
     - "13556012431/*"
     - "13567830295/*"
     - "13579055971/*"
+    - "13993187210/*"
 - id: "account-ui-34910"
   description: "[Keycloak JavaScript CI] - Account UI E2E - my-resources.spec.ts"
   issue: 34910
@@ -1012,6 +1020,7 @@ issues:
     - "13824112401/*"
     - "13817959204/*"
     - "13791925629/*"
+    - "13941327628/*"
 - id: "clickLink-38081"
   description: "Use clickLink and upgrade arquillian/selenium for chrome 134"
   issue: 38041
@@ -1052,3 +1061,55 @@ issues:
   resolves:
     - "13905006785/*"
     - "13758959477/*"
+    - "14112986326/*"
+- id: "quarkus-it-38517"
+  description: "[Keycloak CI] - Quarkus IT - ProxyHostnameV2DistTest.testForwardedProxyHeaders"
+  issue: 38517
+  resolves:
+    - "14119200987/*"
+- id: "javascript-ci-38282"
+  description: "[Keycloak JavaScript CI] - Admin UI E2E (chrome) - Upload Playwright report error"
+  issue: 38282
+  resolves:
+    - "14048681878/*"
+    - "14024496115/*"
+    - "14013684023/*"
+    - "14003150651/*"
+    - "13981890053/*"
+    - "13959239167/*"
+    - "13936034565/*"
+- id: "javascript-ci-38518"
+  description: "[Keycloak JavaScript CI] - Admin UI E2E (chrome) - 9 failures"
+  issue: 38518
+  resolves:
+    - "13926883252/*"
+- id: "forms-it-38519"
+  description: "[Keycloak CI] - Forms IT (chrome) - FlowOverrideTest.testWithClientBrowserOverrideWithDynamicScope"
+  issue: 38519
+  resolves:
+    - "14057393649/*"
+- id: "store-it-38429"
+  description: "[Keycloak CI] - Store IT - AttackDetectionResourceTest"
+  issue: 38429
+  resolves:
+    - "14085958930/*"
+    - "14072655943/*"
+    - "14037855115/*"
+    - "14021452728/*"
+- id: "operator-ci-38521"
+  description: "[Keycloak Operator CI] - Test local (slow) - KeycloakDeploymentTest"
+  issue: 38521
+  resolves:
+    - "13923801375/*"
+- id: "operator-ci-38487"
+  description: "[Keycloak Operator CI] - Test remote (slow) - UpdateTest.testExplicitStrategy"
+  issue: 38487
+  resolves:
+    - "14098694120/*"
+    - "14096028509/*"
+    - "14091898643/*"
+- id: "operator-ci-38522"
+  description: "[Keycloak Operator CI] - Test remote (fast) - WatchedSecretsTest"
+  issue: 38522
+  resolves:
+    - "14057459189"
