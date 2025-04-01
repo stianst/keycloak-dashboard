@@ -1,0 +1,744 @@
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:23:17.0333733Z ##[group]Run declare -A PARAMS
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:23:17.0334284Z [36;1mdeclare -A PARAMS[0m
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:23:17.0334801Z [36;1mPARAMS["slow"]="-Dkc.quarkus.tests.groups=slow"[0m
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:23:17.0335454Z [36;1mPARAMS["fast"]='-Dkc.quarkus.tests.groups=!slow'[0m
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:23:17.0335982Z [36;1m[0m
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:23:17.0336386Z [36;1meval $(minikube -p minikube docker-env)[0m
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:23:17.0337053Z [36;1m./mvnw install -Poperator -pl :keycloak-operator -am \[0m
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:23:17.0338074Z [36;1m    -Dquarkus.container-image.build=true \[0m
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:23:17.0338759Z [36;1m    -Dquarkus.kubernetes.image-pull-policy=IfNotPresent \[0m
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:23:17.0339522Z [36;1m    -Dkc.operator.keycloak.image=keycloak:0.0.1-53de7f \[0m
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:23:17.0340424Z [36;1m    -Dquarkus.kubernetes.env.vars.kc-operator-keycloak-image-pull-policy=Never \[0m
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:23:17.0341374Z [36;1m    -Dtest.operator.custom.image=custom-keycloak:0.0.1-53de7f \[0m
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:23:17.0342261Z [36;1m    --no-transfer-progress -Dtest.operator.deployment=remote ${PARAMS["fast"]}[0m
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:23:17.0410063Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:23:17.0410646Z env:
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:23:17.0411138Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:23:17.0411775Z   MINIKUBE_VERSION: v1.32.0
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:23:17.0412222Z   KUBERNETES_VERSION: v1.27.10
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:23:17.0412637Z   MINIKUBE_MEMORY: 4096
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:23:17.0413029Z   version_remote: 0.0.1-53de7f
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:23:17.0413640Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.6-7/x64
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:23:17.0414480Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.6-7/x64
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:23:17.0415648Z   MINIKUBE_HOME: /home/runner/work/_temp
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:23:17.0416138Z ##[endgroup]
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:23:21.1844693Z [INFO] Loading cache configuration from /home/runner/work/keycloak/keycloak/.mvn/maven-build-cache-config.xml
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:23:21.2032673Z [INFO] Scanning for projects...
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:23:22.3337591Z [INFO] ------------------------------------------------------------------------
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:23:22.3338730Z [INFO] Reactor Build Order:
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:23:22.3339534Z [INFO] 
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:23:22.3340139Z [INFO] Keycloak                                                           [pom]
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:23:22.3340987Z [INFO] Keycloak Common                                                    [jar]
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:23:22.3341837Z [INFO] Keycloak Core                                                      [jar]
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:23:22.3342692Z [INFO] Keycloak Operator                                                  [jar]
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:23:22.3393333Z [INFO] 
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:23:22.3397602Z [INFO] --------------------< org.keycloak:keycloak-parent >--------------------
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:23:22.3401833Z [INFO] Building Keycloak 999.0.0-SNAPSHOT                                 [1/4]
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:23:22.3416507Z [INFO]   from pom.xml
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:23:22.3434075Z [INFO] --------------------------------[ pom ]---------------------------------
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:23:24.7395386Z [INFO] 
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:23:24.7397791Z [INFO] --- enforcer:3.0.0-M3:enforce (enforce-java-version) @ keycloak-parent ---
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:23:36.8417849Z [INFO] 
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:23:36.8420813Z [INFO] --- enforcer:3.0.0-M3:enforce (enforce-maven-version) @ keycloak-parent ---
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:23:36.8453554Z [INFO] 
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:23:36.8454459Z [INFO] --- buildnumber:1.4:create (get-scm-revision) @ keycloak-parent ---
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:23:54.8350380Z [INFO] Executing: /bin/sh -c cd '/home/runner/work/keycloak/keycloak' && 'git' 'rev-parse' '--verify' 'HEAD'
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:23:54.8351205Z [INFO] Working directory: /home/runner/work/keycloak/keycloak
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:23:54.8521137Z [INFO] Storing buildNumber: 53de7f50f43f9f9053db614367249c939224f05a at timestamp: 1743452634819
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:23:54.8585858Z [WARNING] Cannot get the branch information from the git repository: 
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:23:54.8602971Z Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:23:54.8604579Z 
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:23:54.8613249Z [INFO] Executing: /bin/sh -c cd '/home/runner/work/keycloak/keycloak' && 'git' 'rev-parse' '--verify' 'HEAD'
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:23:54.8614314Z [INFO] Working directory: /home/runner/work/keycloak/keycloak
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:23:54.8641443Z [INFO] Storing buildScmBranch: UNKNOWN
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:23:54.8642578Z [INFO] 
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:23:54.8644674Z [INFO] --- source:3.1.0:jar-no-fork (attach-sources) @ keycloak-parent ---
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:23:56.9638259Z [INFO] 
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:23:56.9639614Z [INFO] --- install:2.5.2:install (default-install) @ keycloak-parent ---
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:23:58.6351503Z [INFO] Installing /home/runner/work/keycloak/keycloak/pom.xml to /home/runner/.m2/repository/org/keycloak/keycloak-parent/999.0.0-SNAPSHOT/keycloak-parent-999.0.0-SNAPSHOT.pom
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:23:58.6446099Z [INFO] 
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:23:58.6456511Z [INFO] --------------------< org.keycloak:keycloak-common >--------------------
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:23:58.6457792Z [INFO] Building Keycloak Common 999.0.0-SNAPSHOT                          [2/4]
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:23:58.6459015Z [INFO]   from common/pom.xml
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:23:58.6460059Z [INFO] --------------------------------[ jar ]---------------------------------
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:01.1117430Z [INFO] 
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:01.1119173Z [INFO] --- enforcer:3.0.0-M3:enforce (enforce-java-version) @ keycloak-common ---
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:01.1132624Z [INFO] 
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:01.1133244Z [INFO] --- enforcer:3.0.0-M3:enforce (enforce-maven-version) @ keycloak-common ---
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:01.1138754Z [INFO] 
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:01.1139335Z [INFO] --- buildnumber:1.4:create (get-scm-revision) @ keycloak-common ---
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:01.1151396Z [INFO] 
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:01.1152291Z [INFO] --- resources:3.2.0:resources (default-resources) @ keycloak-common ---
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:05.9561978Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:05.9562712Z [INFO] Using 'UTF-8' encoding to copy filtered properties files.
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:05.9582208Z [INFO] Copying 1 resource
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:05.9693604Z [INFO] The encoding used to copy filtered properties files have not been set. This means that the same encoding will be used to copy filtered properties files as when copying other filtered resources. This might not be what you want! Run your build with --debug to see which files might be affected. Read more at https://maven.apache.org/plugins/maven-resources-plugin/examples/filtering-properties-files.html
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:05.9697612Z [INFO] 
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:05.9698162Z [INFO] --- compiler:3.8.1:compile (default-compile) @ keycloak-common ---
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:07.4953008Z [INFO] Changes detected - recompiling the module!
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:07.4974111Z [INFO] Compiling 71 source files to /home/runner/work/keycloak/keycloak/common/target/classes
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:09.8726626Z [WARNING] source value 8 is obsolete and will be removed in a future release
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:09.8736914Z [WARNING] target value 8 is obsolete and will be removed in a future release
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:09.8739185Z [WARNING] To suppress warnings about obsolete options, use -Xlint:-options.
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:09.8740945Z [WARNING] /home/runner/work/keycloak/keycloak/common/src/main/java/org/keycloak/common/util/reflections/Types.java:[84,38] unchecked call to isAssignableFrom(java.lang.Class<?>) as a member of the raw type java.lang.Class
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:09.8746318Z [WARNING] /home/runner/work/keycloak/keycloak/common/src/main/java/org/keycloak/common/util/reflections/Types.java:[172,44] unchecked call to isAssignableFrom(java.lang.Class<?>) as a member of the raw type java.lang.Class
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:09.8749291Z [WARNING] /home/runner/work/keycloak/keycloak/common/src/main/java/org/keycloak/common/util/reflections/Types.java:[233,35] unchecked call to getMethod(java.lang.String,java.lang.Class<?>...) as a member of the raw type java.lang.Class
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:09.8752142Z [WARNING] /home/runner/work/keycloak/keycloak/common/src/main/java/org/keycloak/common/util/reflections/Types.java:[241,41] unchecked call to getMethod(java.lang.String,java.lang.Class<?>...) as a member of the raw type java.lang.Class
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:09.8755035Z [WARNING] /home/runner/work/keycloak/keycloak/common/src/main/java/org/keycloak/common/util/reflections/Reflections.java:[267,48] unchecked cast
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:09.8756174Z   required: java.lang.Class<T>
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:09.8756681Z   found:    java.lang.Class<capture#1 of ?>
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:09.8758090Z [WARNING] /home/runner/work/keycloak/keycloak/common/src/main/java/org/keycloak/common/util/reflections/Reflections.java:[269,48] unchecked cast
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:09.8759236Z   required: java.lang.Class<T>
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:09.8759690Z   found:    java.lang.Class<capture#2 of ?>
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:09.8760793Z [WARNING] /home/runner/work/keycloak/keycloak/common/src/main/java/org/keycloak/common/util/reflections/Reflections.java:[274,52] unchecked cast
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:09.8761970Z   required: java.lang.Class<T>
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:09.8762434Z   found:    java.lang.Class<capture#3 of ?>
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:09.8763609Z [WARNING] /home/runner/work/keycloak/keycloak/common/src/main/java/org/keycloak/common/util/reflections/Reflections.java:[1013,86] unchecked cast
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:09.8764756Z   required: T
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:09.8765099Z   found:    java.lang.Object
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:09.8766473Z [WARNING] /home/runner/work/keycloak/keycloak/common/src/main/java/org/keycloak/common/util/MultivaluedMap.java:[34,34] Possible heap pollution from parameterized vararg type V
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:09.8768910Z [WARNING] /home/runner/work/keycloak/keycloak/common/src/main/java/org/keycloak/common/util/Encode.java:[210,48] encode(java.lang.String) in java.net.URLEncoder has been deprecated
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:09.8771266Z [WARNING] /home/runner/work/keycloak/keycloak/common/src/main/java/org/keycloak/common/util/Resteasy.java:[48,44] unchecked cast
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:09.8772355Z   required: R
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:09.8772736Z   found:    java.lang.Object
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:09.8773687Z [WARNING] /home/runner/work/keycloak/keycloak/common/src/main/java/org/keycloak/common/util/Resteasy.java:[67,44] unchecked cast
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:09.8774657Z   required: R
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:09.8774993Z   found:    java.lang.Object
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:09.8776526Z [WARNING] /home/runner/work/keycloak/keycloak/common/src/main/java/org/keycloak/common/util/Resteasy.java:[78,20] unchecked method invocation: method pushContext in class org.keycloak.common.util.Resteasy is applied to given types
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:09.8778442Z   required: java.lang.Class<R>,R
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:09.8778950Z   found:    java.lang.Class,java.lang.Object
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:09.8780126Z [WARNING] /home/runner/work/keycloak/keycloak/common/src/main/java/org/keycloak/common/util/Resteasy.java:[78,21] unchecked conversion
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:09.8781193Z   required: java.lang.Class<R>
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:09.8781622Z   found:    java.lang.Class
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:09.8781992Z [INFO] 
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:09.8782563Z [INFO] --- resources:3.2.0:testResources (default-testResources) @ keycloak-common ---
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:09.8783358Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:09.8822459Z [INFO] Using 'UTF-8' encoding to copy filtered properties files.
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:09.8823438Z [INFO] skip non existing resourceDirectory /home/runner/work/keycloak/keycloak/common/src/test/resources
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:09.8824214Z [INFO] 
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:09.8824722Z [INFO] --- compiler:3.8.1:testCompile (default-testCompile) @ keycloak-common ---
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:09.8870214Z [INFO] Changes detected - recompiling the module!
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:09.8879284Z [INFO] Compiling 14 source files to /home/runner/work/keycloak/keycloak/common/target/test-classes
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:10.1802900Z [WARNING] source value 8 is obsolete and will be removed in a future release
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:10.1803792Z [WARNING] target value 8 is obsolete and will be removed in a future release
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:10.1804594Z [WARNING] To suppress warnings about obsolete options, use -Xlint:-options.
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:10.1808501Z [INFO] 
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:10.1839942Z [INFO] --- surefire:3.0.0-M7:test (default-test) @ keycloak-common ---
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:14.2818597Z [INFO] Using auto detected provider org.apache.maven.surefire.junit4.JUnit4Provider
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:15.5620256Z [INFO] 
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:15.5620801Z [INFO] -------------------------------------------------------
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:15.5621331Z [INFO]  T E S T S
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:15.5621783Z [INFO] -------------------------------------------------------
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:15.7986990Z [INFO] Running org.keycloak.common.ProfileTest
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:15.9809059Z Mar 31, 2025 8:24:15 PM org.keycloak.common.Profile logUnsupportedFeatures
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:15.9810794Z INFO: Preview features enabled: token-exchange:v1
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:15.9813822Z Mar 31, 2025 8:24:15 PM org.keycloak.common.Profile logUnsupportedFeatures
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:15.9815695Z WARN: Experimental features enabled: dynamic-scopes:v1
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:15.9836025Z Mar 31, 2025 8:24:15 PM org.keycloak.common.Profile logUnsupportedFeatures
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:15.9837398Z WARN: Deprecated features enabled: login:v1
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:15.9962066Z Mar 31, 2025 8:24:15 PM org.keycloak.common.Profile logUnsupportedFeatures
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:15.9964675Z INFO: Preview features enabled: admin-fine-grained-authz:v1, client-secret-rotation:v1, dpop:v1, passkeys:v1, recovery-codes:v1, scripts:v1, token-exchange:v1, update-email:v1
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:16.0014766Z Mar 31, 2025 8:24:15 PM org.keycloak.common.Profile logUnsupportedFeatures
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:16.0016875Z INFO: Preview features enabled: token-exchange:v1
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:16.0019303Z Mar 31, 2025 8:24:15 PM org.keycloak.common.Profile logUnsupportedFeatures
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:16.0040616Z WARN: Experimental features enabled: dynamic-scopes:v1
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:16.0041401Z Mar 31, 2025 8:24:15 PM org.keycloak.common.Profile logUnsupportedFeatures
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:16.0042099Z WARN: Deprecated features enabled: login:v1
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:16.0100407Z Mar 31, 2025 8:24:16 PM org.keycloak.common.Profile logUnsupportedFeatures
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:16.0101188Z INFO: Preview features enabled: token-exchange:v1
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:16.0108051Z Mar 31, 2025 8:24:16 PM org.keycloak.common.Profile logUnsupportedFeatures
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:16.0110424Z INFO: Preview features enabled: admin-fine-grained-authz:v1, client-secret-rotation:v1, dpop:v1, passkeys:v1, recovery-codes:v1, scripts:v1, token-exchange:v1, update-email:v1
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:16.0196917Z Mar 31, 2025 8:24:16 PM org.keycloak.common.util.KerberosJdkProvider isKerberosAvailable
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:16.0198390Z WARN: Kerberos feature not supported by JDK. Check security providers for your JDK in java.security. Supported mechanisms: []
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:16.0199661Z Mar 31, 2025 8:24:16 PM org.keycloak.common.util.KerberosJdkProvider isKerberosAvailable
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:16.0200885Z WARN: Kerberos feature not supported by JDK. Check security providers for your JDK in java.security. Supported mechanisms: []
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:16.0202082Z Mar 31, 2025 8:24:16 PM org.keycloak.common.util.KerberosJdkProvider isKerberosAvailable
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:16.0203298Z WARN: Kerberos feature not supported by JDK. Check security providers for your JDK in java.security. Supported mechanisms: []
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:16.0204490Z Mar 31, 2025 8:24:16 PM org.keycloak.common.util.KerberosJdkProvider isKerberosAvailable
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:16.0205692Z WARN: Kerberos feature not supported by JDK. Check security providers for your JDK in java.security. Supported mechanisms: []
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:16.0243289Z Mar 31, 2025 8:24:16 PM org.keycloak.common.Profile logUnsupportedFeatures
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:16.0245668Z INFO: Preview features enabled: token-exchange:v1
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:16.0247887Z Mar 31, 2025 8:24:16 PM org.keycloak.common.Profile logUnsupportedFeatures
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:16.0267639Z WARN: Experimental features enabled: dynamic-scopes:v1
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:16.0268708Z Mar 31, 2025 8:24:16 PM org.keycloak.common.Profile logUnsupportedFeatures
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:16.0269693Z WARN: Deprecated features enabled: login:v1
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:16.0469196Z [INFO] Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.234 s - in org.keycloak.common.ProfileTest
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:16.0472558Z [INFO] Running org.keycloak.common.enums.SslRequiredTest
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:16.0576891Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.keycloak.common.enums.SslRequiredTest
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:16.0582052Z [INFO] Running org.keycloak.common.util.Base64DecodeTest
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:16.0688998Z [INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.keycloak.common.util.Base64DecodeTest
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:16.0699336Z [INFO] Running org.keycloak.common.util.CollectionUtilTest
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:16.0787483Z [INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.keycloak.common.util.CollectionUtilTest
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:16.0807549Z [INFO] Running org.keycloak.common.util.HtmlUtilsTest
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:16.0829113Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.keycloak.common.util.HtmlUtilsTest
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:16.0830526Z [INFO] Running org.keycloak.common.util.KeyUtilsTest
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:16.0873513Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.keycloak.common.util.KeyUtilsTest
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:16.0875743Z [INFO] Running org.keycloak.common.util.KeycloakUriBuilderTest
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:16.0948311Z [INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in org.keycloak.common.util.KeycloakUriBuilderTest
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:16.0949744Z [INFO] Running org.keycloak.common.util.KeystoreUtilTest
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:16.0988686Z [INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.keycloak.common.util.KeystoreUtilTest
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:16.0996494Z [INFO] Running org.keycloak.common.util.MultivaluedHashMapTest
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:16.1073666Z [INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.keycloak.common.util.MultivaluedHashMapTest
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:16.1075122Z [INFO] Running org.keycloak.common.util.PaddingUtilsTest
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:16.1138701Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.keycloak.common.util.PaddingUtilsTest
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:16.1143836Z [INFO] Running org.keycloak.common.util.PathMatcherTest
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:16.1145255Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.keycloak.common.util.PathMatcherTest
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:16.1146774Z [INFO] Running org.keycloak.common.util.StringPropertyReplacerTest
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:16.1308695Z [INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 s - in org.keycloak.common.util.StringPropertyReplacerTest
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:16.1320312Z [INFO] Running org.keycloak.common.util.StringSerializationTest
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:16.1419788Z [INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in org.keycloak.common.util.StringSerializationTest
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:16.1421191Z [INFO] Running org.keycloak.common.util.URLEncodingTest
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:16.1476716Z [INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s - in org.keycloak.common.util.URLEncodingTest
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:16.1643076Z [INFO] 
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:16.1647850Z [INFO] Results:
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:16.1651810Z [INFO] 
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:16.1655762Z [INFO] Tests run: 52, Failures: 0, Errors: 0, Skipped: 0
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:16.1660154Z [INFO] 
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:16.1672401Z [INFO] 
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:16.1674883Z [INFO] --- jar:3.1.2:jar (default-jar) @ keycloak-common ---
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:17.4523229Z [INFO] Building jar: /home/runner/work/keycloak/keycloak/common/target/keycloak-common-999.0.0-SNAPSHOT.jar
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:17.4914668Z [INFO] 
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:17.4916450Z [INFO] --- source:3.1.0:jar-no-fork (attach-sources) @ keycloak-common ---
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:17.5328615Z [INFO] Building jar: /home/runner/work/keycloak/keycloak/common/target/keycloak-common-999.0.0-SNAPSHOT-sources.jar
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:17.5691067Z [INFO] 
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:17.5692788Z [INFO] --- install:2.5.2:install (default-install) @ keycloak-common ---
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:17.5746777Z [INFO] Installing /home/runner/work/keycloak/keycloak/common/target/keycloak-common-999.0.0-SNAPSHOT.jar to /home/runner/.m2/repository/org/keycloak/keycloak-common/999.0.0-SNAPSHOT/keycloak-common-999.0.0-SNAPSHOT.jar
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:17.5759042Z [INFO] Installing /home/runner/work/keycloak/keycloak/common/pom.xml to /home/runner/.m2/repository/org/keycloak/keycloak-common/999.0.0-SNAPSHOT/keycloak-common-999.0.0-SNAPSHOT.pom
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:17.5783898Z [INFO] Installing /home/runner/work/keycloak/keycloak/common/target/keycloak-common-999.0.0-SNAPSHOT-sources.jar to /home/runner/.m2/repository/org/keycloak/keycloak-common/999.0.0-SNAPSHOT/keycloak-common-999.0.0-SNAPSHOT-sources.jar
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:17.5824055Z [INFO] 
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:17.5824591Z [INFO] ---------------------< org.keycloak:keycloak-core >---------------------
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:17.5825444Z [INFO] Building Keycloak Core 999.0.0-SNAPSHOT                            [3/4]
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:17.5826139Z [INFO]   from core/pom.xml
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:17.5827422Z [INFO] --------------------------------[ jar ]---------------------------------
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:17.8448611Z [INFO] 
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:17.8450316Z [INFO] --- enforcer:3.0.0-M3:enforce (enforce-java-version) @ keycloak-core ---
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:17.8463458Z [INFO] 
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:17.8464476Z [INFO] --- enforcer:3.0.0-M3:enforce (enforce-maven-version) @ keycloak-core ---
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:17.8471723Z [INFO] 
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:17.8473137Z [INFO] --- buildnumber:1.4:create (get-scm-revision) @ keycloak-core ---
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:17.8484138Z [INFO] 
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:17.8486831Z [INFO] --- resources:3.2.0:resources (default-resources) @ keycloak-core ---
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:17.8495660Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:17.8496545Z [INFO] Using 'UTF-8' encoding to copy filtered properties files.
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:17.8527718Z [INFO] Copying 1 resource
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:17.8538943Z [INFO] 
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:17.8540685Z [INFO] --- compiler:3.8.1:compile (default-compile) @ keycloak-core ---
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:17.9055545Z [INFO] Changes detected - recompiling the module!
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:17.9067419Z [INFO] Compiling 302 source files to /home/runner/work/keycloak/keycloak/core/target/classes
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:19.2506274Z [WARNING] source value 8 is obsolete and will be removed in a future release
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:19.2507390Z [WARNING] target value 8 is obsolete and will be removed in a future release
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:19.2516174Z [WARNING] To suppress warnings about obsolete options, use -Xlint:-options.
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:19.2518443Z [WARNING] /home/runner/work/keycloak/keycloak/core/src/main/java/org/keycloak/jose/jws/crypto/HMACProvider.java:[22,29] org.keycloak.jose.jws.Algorithm in org.keycloak.jose.jws has been deprecated
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:19.2521363Z [WARNING] /home/runner/work/keycloak/keycloak/core/src/main/java/org/keycloak/jose/jws/crypto/RSAProvider.java:[22,29] org.keycloak.jose.jws.Algorithm in org.keycloak.jose.jws has been deprecated
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:19.2524691Z [WARNING] /home/runner/work/keycloak/keycloak/core/src/main/java/org/keycloak/TokenVerifier.java:[360,28] unchecked generic array creation for varargs parameter of type org.keycloak.TokenVerifier.Predicate<org.keycloak.representations.JsonWebToken>[]
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:19.2528657Z [WARNING] /home/runner/work/keycloak/keycloak/core/src/main/java/org/keycloak/jose/jws/JWSInput.java:[82,22] getHeader() in org.keycloak.jose.jws.JWSInput implements <H>getHeader() in org.keycloak.jose.JOSE
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:19.2530734Z   return type requires unchecked conversion from org.keycloak.jose.jws.JWSHeader to H
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:19.2532721Z [WARNING] /home/runner/work/keycloak/keycloak/core/src/main/java/org/keycloak/jose/jws/JWSHeader.java:[39,13] org.keycloak.jose.jws.Algorithm in org.keycloak.jose.jws has been deprecated
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:19.2535523Z [WARNING] /home/runner/work/keycloak/keycloak/core/src/main/java/org/keycloak/jose/jws/JWSHeader.java:[59,22] org.keycloak.jose.jws.Algorithm in org.keycloak.jose.jws has been deprecated
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:19.2539525Z [WARNING] /home/runner/work/keycloak/keycloak/core/src/main/java/org/keycloak/jose/jws/JWSHeader.java:[65,22] org.keycloak.jose.jws.Algorithm in org.keycloak.jose.jws has been deprecated
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:19.2542248Z [WARNING] /home/runner/work/keycloak/keycloak/core/src/main/java/org/keycloak/jose/jws/JWSHeader.java:[72,12] org.keycloak.jose.jws.Algorithm in org.keycloak.jose.jws has been deprecated
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:19.2551165Z [WARNING] /home/runner/work/keycloak/keycloak/core/src/main/java/org/keycloak/jose/jwe/JWE.java:[61,23] getHeader() in org.keycloak.jose.jwe.JWE implements <H>getHeader() in org.keycloak.jose.JOSE
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:19.2553050Z   return type requires unchecked conversion from org.keycloak.jose.JOSEHeader to H
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:19.2554723Z [WARNING] /home/runner/work/keycloak/keycloak/core/src/main/java/org/keycloak/representations/idm/authorization/PolicyRepresentation.java:[27,42] unchecked conversion
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:19.2556298Z   required: java.util.Map<java.lang.String,java.lang.String>
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:19.2556917Z   found:    java.util.HashMap
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:19.2558269Z [WARNING] /home/runner/work/keycloak/keycloak/core/src/main/java/org/keycloak/representations/ClaimsRepresentation.java:[103,62] unchecked cast
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:19.2559913Z   required: org.keycloak.representations.ClaimsRepresentation.ClaimValue<CLAIM_TYPE>
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:19.2560924Z   found:    org.keycloak.representations.ClaimsRepresentation.ClaimValue
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:19.2562631Z [WARNING] /home/runner/work/keycloak/keycloak/core/src/main/java/org/keycloak/representations/ClaimsRepresentation.java:[105,63] unchecked cast
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:19.2564167Z   required: org.keycloak.representations.ClaimsRepresentation.ClaimValue<CLAIM_TYPE>
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:19.2565162Z   found:    org.keycloak.representations.ClaimsRepresentation.ClaimValue
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:19.2566779Z [WARNING] /home/runner/work/keycloak/keycloak/core/src/main/java/org/keycloak/jose/jws/JWSBuilder.java:[143,27] org.keycloak.jose.jws.Algorithm in org.keycloak.jose.jws has been deprecated
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:19.2569316Z [WARNING] /home/runner/work/keycloak/keycloak/core/src/main/java/org/keycloak/jose/jws/JWSBuilder.java:[177,20] org.keycloak.jose.jws.Algorithm in org.keycloak.jose.jws has been deprecated
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:19.2571602Z [WARNING] /home/runner/work/keycloak/keycloak/core/src/main/java/org/keycloak/representations/AuthorizationDetailsJSONRepresentation.java:[131,73] unchecked cast
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:19.2573013Z   required: java.util.List<java.lang.String>
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:19.2573512Z   found:    java.lang.Object
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:19.2574912Z [WARNING] /home/runner/work/keycloak/keycloak/core/src/main/java/org/keycloak/protocol/oidc/client/authentication/JWTClientCredentialsProvider.java:[114,57] unchecked cast
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:19.2576513Z   required: java.util.Map<java.lang.String,java.lang.Object>
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:19.2590623Z   found:    java.lang.Object
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:19.2592206Z [WARNING] /home/runner/work/keycloak/keycloak/core/src/main/java/org/keycloak/protocol/oidc/client/authentication/JWTClientSecretCredentialsProvider.java:[61,57] unchecked cast
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:19.2593814Z   required: java.util.Map<java.lang.String,java.lang.Object>
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:19.2594400Z   found:    java.lang.Object
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:19.2596403Z [WARNING] /home/runner/work/keycloak/keycloak/core/src/main/java/org/keycloak/protocol/oidc/client/authentication/JWTClientSecretCredentialsProvider.java:[115,67] hmac512(javax.crypto.SecretKey) in org.keycloak.jose.jws.JWSBuilder.EncodingBuilder has been deprecated
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:19.2600147Z [WARNING] /home/runner/work/keycloak/keycloak/core/src/main/java/org/keycloak/protocol/oidc/client/authentication/JWTClientSecretCredentialsProvider.java:[117,67] hmac384(javax.crypto.SecretKey) in org.keycloak.jose.jws.JWSBuilder.EncodingBuilder has been deprecated
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:19.2604040Z [WARNING] /home/runner/work/keycloak/keycloak/core/src/main/java/org/keycloak/protocol/oidc/client/authentication/JWTClientSecretCredentialsProvider.java:[119,67] hmac256(javax.crypto.SecretKey) in org.keycloak.jose.jws.JWSBuilder.EncodingBuilder has been deprecated
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:19.2607532Z [WARNING] /home/runner/work/keycloak/keycloak/core/src/main/java/org/keycloak/representations/idm/authorization/PermissionRequest.java:[51,20] non-varargs call of varargs method with inexact argument type for last parameter;
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:19.2609280Z   cast to java.lang.String for a varargs call
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:19.2609937Z   cast to java.lang.String[] for a non-varargs call and to suppress this warning
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:19.2611544Z [WARNING] /home/runner/work/keycloak/keycloak/core/src/main/java/org/keycloak/AbstractOAuthClient.java:[131,58] non-varargs call of varargs method with inexact argument type for last parameter;
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:19.2613094Z   cast to java.lang.Object for a varargs call
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:19.2613819Z   cast to java.lang.Object[] for a non-varargs call and to suppress this warning
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:19.2615059Z [WARNING] /home/runner/work/keycloak/keycloak/core/src/main/java/org/keycloak/AbstractOAuthClient.java:[132,59] non-varargs call of varargs method with inexact argument type for last parameter;
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:19.2615914Z   cast to java.lang.Object for a varargs call
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:19.2616356Z   cast to java.lang.Object[] for a non-varargs call and to suppress this warning
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:19.2617625Z [WARNING] /home/runner/work/keycloak/keycloak/core/src/main/java/org/keycloak/jose/jws/crypto/HMACProvider.java:[38,44] org.keycloak.jose.jws.Algorithm in org.keycloak.jose.jws has been deprecated
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:19.2620257Z [WARNING] /home/runner/work/keycloak/keycloak/core/src/main/java/org/keycloak/jose/jws/crypto/HMACProvider.java:[51,37] org.keycloak.jose.jws.Algorithm in org.keycloak.jose.jws has been deprecated
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:19.2622788Z [WARNING] /home/runner/work/keycloak/keycloak/core/src/main/java/org/keycloak/jose/jws/crypto/HMACProvider.java:[62,44] org.keycloak.jose.jws.Algorithm in org.keycloak.jose.jws has been deprecated
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:19.2625336Z [WARNING] /home/runner/work/keycloak/keycloak/core/src/main/java/org/keycloak/jose/jws/crypto/HMACProvider.java:[73,44] org.keycloak.jose.jws.Algorithm in org.keycloak.jose.jws has been deprecated
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:19.2628087Z [WARNING] /home/runner/work/keycloak/keycloak/core/src/main/java/org/keycloak/jose/jws/crypto/RSAProvider.java:[36,43] org.keycloak.jose.jws.Algorithm in org.keycloak.jose.jws has been deprecated
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:19.2630654Z [WARNING] /home/runner/work/keycloak/keycloak/core/src/main/java/org/keycloak/jose/jws/crypto/RSAProvider.java:[49,42] org.keycloak.jose.jws.Algorithm in org.keycloak.jose.jws has been deprecated
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:19.2633197Z [WARNING] /home/runner/work/keycloak/keycloak/core/src/main/java/org/keycloak/jose/jws/crypto/RSAProvider.java:[57,44] org.keycloak.jose.jws.Algorithm in org.keycloak.jose.jws has been deprecated
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:19.2635857Z [WARNING] /home/runner/work/keycloak/keycloak/core/src/main/java/org/keycloak/KeyPairVerifier.java:[50,72] rsa256(java.security.PrivateKey) in org.keycloak.jose.jws.JWSBuilder.EncodingBuilder has been deprecated
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:19.2639079Z [WARNING] /home/runner/work/keycloak/keycloak/core/src/main/java/org/keycloak/representations/idm/RealmRepresentation.java:[277,17] org.keycloak.representations.idm.ApplicationRepresentation in org.keycloak.representations.idm has been deprecated
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:19.2641816Z [WARNING] /home/runner/work/keycloak/keycloak/core/src/main/java/org/keycloak/representations/idm/RealmRepresentation.java:[1474,38] unchecked cast
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:19.2643209Z   required: java.util.Map<java.lang.String,java.lang.String>
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:19.2643969Z   found:    java.util.Map<? extends java.lang.Object,? extends java.lang.Object>
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:19.2644594Z [INFO] 
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:19.2645333Z [INFO] --- compiler:3.8.1:compile (compile-java15) @ keycloak-core ---
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:19.2646206Z [WARNING]  Parameter 'compileSourceRoots' is read-only, must not be used in configuration
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:19.2647010Z [INFO] Changes detected - recompiling the module!
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:19.2647952Z [INFO] Compiling 1 source file to /home/runner/work/keycloak/keycloak/core/target/classes
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:19.4398129Z [INFO] 
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:19.4401949Z [INFO] --- resources:3.2.0:testResources (default-testResources) @ keycloak-core ---
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:19.4440522Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:19.4442352Z [INFO] Using 'UTF-8' encoding to copy filtered properties files.
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:19.4503787Z [INFO] Copying 50 resources
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:19.4589688Z [INFO] 
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:19.4597999Z [INFO] --- compiler:3.8.1:testCompile (default-testCompile) @ keycloak-core ---
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:19.4673915Z [INFO] Changes detected - recompiling the module!
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:19.4675238Z [INFO] Compiling 41 source files to /home/runner/work/keycloak/keycloak/core/target/test-classes
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:20.0673044Z [WARNING] source value 8 is obsolete and will be removed in a future release
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:20.0710867Z [WARNING] target value 8 is obsolete and will be removed in a future release
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:20.0711788Z [WARNING] To suppress warnings about obsolete options, use -Xlint:-options.
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:20.0713021Z [WARNING] /home/runner/work/keycloak/keycloak/core/src/test/java/org/keycloak/JsonParserTest.java:[94,64] unchecked cast
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:20.0714173Z   required: java.util.Map<java.lang.String,java.lang.String>
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:20.0715141Z   found:    java.lang.Object
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:20.0716182Z [WARNING] /home/runner/work/keycloak/keycloak/core/src/test/java/org/keycloak/JsonParserTest.java:[156,35] unchecked conversion
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:20.0717533Z   required: java.util.Collection<java.lang.String>
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:20.0718083Z   found:    java.util.Collection
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:20.0719137Z [WARNING] /home/runner/work/keycloak/keycloak/core/src/test/java/org/keycloak/JsonParserTest.java:[165,16] unchecked conversion
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:20.0720271Z   required: java.util.Collection<java.lang.String>
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:20.0720801Z   found:    java.util.Collection
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:20.0721832Z [WARNING] /home/runner/work/keycloak/keycloak/core/src/test/java/org/keycloak/JsonParserTest.java:[173,43] unchecked conversion
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:20.0723018Z   required: java.util.Map<java.lang.String,java.lang.Object>
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:20.0723602Z   found:    java.util.Map
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:20.0724805Z [WARNING] /home/runner/work/keycloak/keycloak/core/src/test/java/org/keycloak/JsonParserTest.java:[228,74] Possible heap pollution from parameterized vararg type T
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:20.0727376Z [WARNING] /home/runner/work/keycloak/keycloak/core/src/test/java/org/keycloak/SkeletonKeyTokenTest.java:[65,17] rsa256(java.security.PrivateKey) in org.keycloak.jose.jws.JWSBuilder.EncodingBuilder has been deprecated
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:20.0730213Z [WARNING] /home/runner/work/keycloak/keycloak/core/src/test/java/org/keycloak/SkeletonKeyTokenTest.java:[85,17] rsa256(java.security.PrivateKey) in org.keycloak.jose.jws.JWSBuilder.EncodingBuilder has been deprecated
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:20.0733034Z [WARNING] /home/runner/work/keycloak/keycloak/core/src/test/java/org/keycloak/SkeletonKeyTokenTest.java:[88,17] rsa256(java.security.PrivateKey) in org.keycloak.jose.jws.JWSBuilder.EncodingBuilder has been deprecated
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:20.0735870Z [WARNING] /home/runner/work/keycloak/keycloak/core/src/test/java/org/keycloak/SkeletonKeyTokenTest.java:[91,39] unchecked call to KeycloakPrincipal(java.lang.String,T) as a member of the raw type org.keycloak.KeycloakPrincipal
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:20.0738744Z [WARNING] /home/runner/work/keycloak/keycloak/core/src/test/java/org/keycloak/jose/HmacTest.java:[59,17] hmac256(javax.crypto.SecretKey) in org.keycloak.jose.jws.JWSBuilder.EncodingBuilder has been deprecated
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:20.0741685Z [WARNING] /home/runner/work/keycloak/keycloak/core/src/test/java/org/keycloak/RSAVerifierTest.java:[81,17] rsa256(java.security.PrivateKey) in org.keycloak.jose.jws.JWSBuilder.EncodingBuilder has been deprecated
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:20.0744373Z [WARNING] /home/runner/work/keycloak/keycloak/core/src/test/java/org/keycloak/RSAVerifierTest.java:[102,17] rsa256(java.security.PrivateKey) in org.keycloak.jose.jws.JWSBuilder.EncodingBuilder has been deprecated
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:20.0746819Z [WARNING] /home/runner/work/keycloak/keycloak/core/src/test/java/org/keycloak/RSAVerifierTest.java:[117,16] org.keycloak.RSATokenVerifier in org.keycloak has been deprecated
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:20.0749441Z [WARNING] /home/runner/work/keycloak/keycloak/core/src/test/java/org/keycloak/RSAVerifierTest.java:[130,21] rsa256(java.security.PrivateKey) in org.keycloak.jose.jws.JWSBuilder.EncodingBuilder has been deprecated
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:20.0752123Z [WARNING] /home/runner/work/keycloak/keycloak/core/src/test/java/org/keycloak/RSAVerifierTest.java:[144,17] rsa256(java.security.PrivateKey) in org.keycloak.jose.jws.JWSBuilder.EncodingBuilder has been deprecated
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:20.0754794Z [WARNING] /home/runner/work/keycloak/keycloak/core/src/test/java/org/keycloak/RSAVerifierTest.java:[160,17] rsa256(java.security.PrivateKey) in org.keycloak.jose.jws.JWSBuilder.EncodingBuilder has been deprecated
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:20.0781242Z [WARNING] /home/runner/work/keycloak/keycloak/core/src/test/java/org/keycloak/RSAVerifierTest.java:[176,17] rsa256(java.security.PrivateKey) in org.keycloak.jose.jws.JWSBuilder.EncodingBuilder has been deprecated
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:20.0784022Z [WARNING] /home/runner/work/keycloak/keycloak/core/src/test/java/org/keycloak/RSAVerifierTest.java:[193,17] rsa256(java.security.PrivateKey) in org.keycloak.jose.jws.JWSBuilder.EncodingBuilder has been deprecated
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:20.0786997Z [WARNING] /home/runner/work/keycloak/keycloak/core/src/test/java/org/keycloak/RSAVerifierTest.java:[209,17] rsa256(java.security.PrivateKey) in org.keycloak.jose.jws.JWSBuilder.EncodingBuilder has been deprecated
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:20.0789860Z [WARNING] /home/runner/work/keycloak/keycloak/core/src/test/java/org/keycloak/RSAVerifierTest.java:[229,17] rsa256(java.security.PrivateKey) in org.keycloak.jose.jws.JWSBuilder.EncodingBuilder has been deprecated
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:20.0804765Z [WARNING] /home/runner/work/keycloak/keycloak/core/src/test/java/org/keycloak/RSAVerifierTest.java:[248,17] rsa256(java.security.PrivateKey) in org.keycloak.jose.jws.JWSBuilder.EncodingBuilder has been deprecated
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:20.0807498Z [WARNING] /home/runner/work/keycloak/keycloak/core/src/test/java/org/keycloak/RSAVerifierTest.java:[271,22] realmUrl(java.lang.String) in org.keycloak.TokenVerifier has been deprecated
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:20.0828415Z [INFO] 
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:20.0828924Z [INFO] --- surefire:3.0.0-M7:test (default-test) @ keycloak-core ---
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:20.0829954Z [INFO] Using auto detected provider org.apache.maven.surefire.junit4.JUnit4Provider
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:20.0925055Z [INFO] 
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:20.0978067Z [INFO] -------------------------------------------------------
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:20.0979279Z [INFO]  T E S T S
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:20.0979852Z [INFO] -------------------------------------------------------
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:20.6600231Z [INFO] Running org.keycloak.AtHashTest
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:20.7989881Z [INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.135 s - in org.keycloak.AtHashTest
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:20.7993236Z [INFO] Running org.keycloak.HashTest
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:20.8086276Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 s - in org.keycloak.HashTest
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:20.8162737Z [INFO] Running org.keycloak.JsonParserTest
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:21.0644497Z GROUP: ALIAS
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:21.0645050Z GROUP: CRAP
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:21.0645382Z ALIAS.CRAP
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:21.1224429Z .pdf no match
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:21.1224865Z foo.txt matches
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:21.1406186Z java.lang.Double
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:21.1407421Z java.lang.Boolean
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:21.1407982Z java.lang.Integer
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:21.1409757Z java.util.ArrayList
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:21.1565337Z {
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:21.1565926Z   "email_verified" : "true",
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:21.1566348Z   "yo" : "true",
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:21.1566736Z   "phone_number" : "978-666-0000",
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:21.1567405Z   "nested" : {
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:21.1567781Z     "foo" : "bar"
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:21.1568126Z   }
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:21.1568423Z }
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:21.1568762Z email_verified property: true
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:21.1569206Z property: 978-666-0000
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:21.1569581Z map: null
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:21.1632906Z [INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.346 s - in org.keycloak.JsonParserTest
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:21.1641972Z [INFO] Running org.keycloak.SkeletonKeyTokenTest
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:21.6248528Z Mar 31, 2025 8:24:21 PM org.keycloak.common.util.DelegatingSerializationFilter createOnJavaAfter8Adapter
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:21.6249530Z INFO: Using OnJavaAfter8 serialization filter adapter
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:21.6250559Z Mar 31, 2025 8:24:21 PM org.keycloak.common.util.DelegatingSerializationFilter$OnJavaAfter8 setObjectInputFilter
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:21.6251525Z WARN: Could not set ObjectFilter: null
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:21.6252447Z Mar 31, 2025 8:24:21 PM org.keycloak.common.util.DelegatingSerializationFilter$OnJavaAfter8 setObjectInputFilter
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:21.6253353Z WARN: Could not set ObjectFilter: null
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:21.6253889Z Size of serialized principal: 1502
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:22.5888872Z [INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.418 s - in org.keycloak.SkeletonKeyTokenTest
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:22.5890775Z [INFO] Running org.keycloak.jose.JsonWebTokenTest
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:22.5988210Z [INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s - in org.keycloak.jose.JsonWebTokenTest
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:22.5989446Z [INFO] Running org.keycloak.jose.jwk.JWKUtilTest
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:22.6034859Z [INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s - in org.keycloak.jose.jwk.JWKUtilTest
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:22.6036191Z [INFO] Running org.keycloak.json.StringListMapDeserializerTest
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:22.6110940Z [INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s - in org.keycloak.json.StringListMapDeserializerTest
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:22.6112343Z [INFO] Running org.keycloak.sdjwt.ArrayElementDisclosureTest
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:22.6444690Z [INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.03 s - in org.keycloak.sdjwt.ArrayElementDisclosureTest
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:22.6445829Z [INFO] Running org.keycloak.sdjwt.ArrayElementSerializationTest
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:22.6467834Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.keycloak.sdjwt.ArrayElementSerializationTest
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:22.6469221Z [INFO] Running org.keycloak.sdjwt.DisclosureRedListTest
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:22.6545710Z [INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s - in org.keycloak.sdjwt.DisclosureRedListTest
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:22.6548324Z [INFO] Running org.keycloak.sdjwt.IssuerSignedJWTTest
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:22.6696709Z [INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 s - in org.keycloak.sdjwt.IssuerSignedJWTTest
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:22.6698508Z [INFO] Running org.keycloak.sdjwt.JsonClaimsetTest
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:22.6728253Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.keycloak.sdjwt.JsonClaimsetTest
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:22.6729252Z [INFO] Running org.keycloak.sdjwt.JsonNodeComparisonTest
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:22.6763514Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.keycloak.sdjwt.JsonNodeComparisonTest
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:22.6777845Z [INFO] Running org.keycloak.sdjwt.SdJWTSamplesTest
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:22.6859539Z [INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s - in org.keycloak.sdjwt.SdJWTSamplesTest
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:22.6864475Z [INFO] Running org.keycloak.sdjwt.SdJwtTest
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:22.7888612Z [INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.093 s - in org.keycloak.sdjwt.SdJwtTest
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:22.7890134Z [INFO] Running org.keycloak.sdjwt.SdJwtUtilsTest
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:22.7891330Z [INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.keycloak.sdjwt.SdJwtUtilsTest
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:22.7892465Z [INFO] Running org.keycloak.sdjwt.UndisclosedClaimTest
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:22.7919900Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.keycloak.sdjwt.UndisclosedClaimTest
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:22.7921380Z [INFO] Running org.keycloak.sdjwt.consumer.SimplePresentationDefinitionTest
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:22.7951284Z [INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in org.keycloak.sdjwt.consumer.SimplePresentationDefinitionTest
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:22.7956664Z [INFO] Running org.keycloak.sdjwt.sdjwtvp.KeyBindingJwtVerificationOptsTest
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:22.8005840Z [INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.keycloak.sdjwt.sdjwtvp.KeyBindingJwtVerificationOptsTest
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:22.8007510Z [INFO] Running org.keycloak.util.BasicAuthHelperTest
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:22.8045109Z [INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.keycloak.util.BasicAuthHelperTest
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:22.8046336Z [INFO] Running org.keycloak.util.UriUtilsTest
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:22.8105822Z [INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s - in org.keycloak.util.UriUtilsTest
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:22.8443060Z [INFO] 
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:22.8448907Z [INFO] Results:
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:22.8450553Z [INFO] 
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:22.8453973Z [INFO] Tests run: 78, Failures: 0, Errors: 0, Skipped: 0
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:22.8455101Z [INFO] 
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:22.8455850Z [INFO] 
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:22.8456500Z [INFO] --- jar:3.1.2:jar (default-jar) @ keycloak-core ---
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:22.8848903Z [INFO] Building jar: /home/runner/work/keycloak/keycloak/core/target/keycloak-core-999.0.0-SNAPSHOT.jar
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:22.9326218Z [INFO] 
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:22.9326819Z [INFO] --- source:3.1.0:jar-no-fork (attach-sources) @ keycloak-core ---
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:23.0184043Z [INFO] Building jar: /home/runner/work/keycloak/keycloak/core/target/keycloak-core-999.0.0-SNAPSHOT-sources.jar
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:23.0560755Z [INFO] 
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:23.0568836Z [INFO] --- jar:3.1.2:test-jar (default) @ keycloak-core ---
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:23.0703258Z [INFO] Building jar: /home/runner/work/keycloak/keycloak/core/target/keycloak-core-999.0.0-SNAPSHOT-tests.jar
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:23.0899685Z [INFO] 
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:23.0900291Z [INFO] --- install:2.5.2:install (default-install) @ keycloak-core ---
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:23.0902024Z [INFO] Installing /home/runner/work/keycloak/keycloak/core/target/keycloak-core-999.0.0-SNAPSHOT.jar to /home/runner/.m2/repository/org/keycloak/keycloak-core/999.0.0-SNAPSHOT/keycloak-core-999.0.0-SNAPSHOT.jar
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:23.0918021Z [INFO] Installing /home/runner/work/keycloak/keycloak/core/pom.xml to /home/runner/.m2/repository/org/keycloak/keycloak-core/999.0.0-SNAPSHOT/keycloak-core-999.0.0-SNAPSHOT.pom
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:23.0948296Z [INFO] Installing /home/runner/work/keycloak/keycloak/core/target/keycloak-core-999.0.0-SNAPSHOT-sources.jar to /home/runner/.m2/repository/org/keycloak/keycloak-core/999.0.0-SNAPSHOT/keycloak-core-999.0.0-SNAPSHOT-sources.jar
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:23.0974835Z [INFO] Installing /home/runner/work/keycloak/keycloak/core/target/keycloak-core-999.0.0-SNAPSHOT-tests.jar to /home/runner/.m2/repository/org/keycloak/keycloak-core/999.0.0-SNAPSHOT/keycloak-core-999.0.0-SNAPSHOT-tests.jar
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:23.0998878Z [INFO] 
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:23.0999445Z [INFO] -------------------< org.keycloak:keycloak-operator >-------------------
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:23.1000264Z [INFO] Building Keycloak Operator 999.0.0-SNAPSHOT                        [4/4]
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:23.1000945Z [INFO]   from operator/pom.xml
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:23.1001845Z [INFO] --------------------------------[ jar ]---------------------------------
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:31.9305576Z [INFO] 
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:31.9306684Z [INFO] --- enforcer:3.0.0-M3:enforce (enforce-java-version) @ keycloak-operator ---
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:31.9330988Z [INFO] 
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:31.9339803Z [INFO] --- enforcer:3.0.0-M3:enforce (enforce-maven-version) @ keycloak-operator ---
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:31.9341772Z [INFO] 
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:31.9357999Z [INFO] --- resources:3.2.0:copy-resources (copy-resources) @ keycloak-operator ---
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:31.9411862Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:31.9412661Z [INFO] Using 'UTF-8' encoding to copy filtered properties files.
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:31.9420300Z [INFO] Copying 3 resources
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:31.9432650Z [INFO] 
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:31.9433586Z [INFO] --- resources:3.2.0:copy-resources (copy-ubi-null) @ keycloak-operator ---
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:31.9443393Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:31.9444438Z [INFO] Using 'UTF-8' encoding to copy filtered properties files.
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:31.9452415Z [INFO] Copying 1 resource
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:31.9452948Z [INFO] 
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:31.9453481Z [INFO] --- buildnumber:1.4:create (get-scm-revision) @ keycloak-operator ---
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:31.9460686Z [INFO] 
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:31.9461572Z [INFO] --- build-helper:3.2.0:add-source (default) @ keycloak-operator ---
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:33.2306996Z [INFO] Source directory: /home/runner/work/keycloak/keycloak/operator/target/generated-sources/java added.
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:33.2308506Z [INFO] 
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:33.2310398Z [INFO] --- resources:3.2.0:resources (default-resources) @ keycloak-operator ---
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:33.2319922Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:33.2320929Z [INFO] Using 'UTF-8' encoding to copy filtered properties files.
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:33.2324269Z [INFO] Copying 3 resources
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:33.2332401Z [INFO] 
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:33.2333232Z [INFO] --- compiler:3.8.1:compile (default-compile) @ keycloak-operator ---
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:33.2403321Z [INFO] Changes detected - recompiling the module!
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:33.2408765Z [INFO] Compiling 57 source files to /home/runner/work/keycloak/keycloak/operator/target/classes
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:35.3472088Z   0% Generating: io.fabric8.kubernetes.api.model.PodTemplateSpec
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:35.3793278Z   4% Generating: org.keycloak.operator.crds.v2alpha1.deployment.spec.BootstrapAdminSpec
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:35.4050713Z   8% Generating: org.keycloak.operator.crds.v2alpha1.deployment.spec.TransactionsSpec
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:35.4323257Z  12% Generating: org.keycloak.operator.crds.v2alpha1.realmimport.KeycloakRealmImport
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:35.4707419Z  15% Generating: org.keycloak.operator.crds.v2alpha1.deployment.spec.SchedulingSpec
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:35.4785037Z  19% Generating: io.fabric8.kubernetes.client.CustomResource
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:35.4910457Z  23% Generating: org.keycloak.operator.crds.v2alpha1.deployment.spec.TruststoreSource
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:35.5214017Z  27% Generating: io.fabric8.kubernetes.api.model.ObjectMeta
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:35.5317964Z  31% Generating: org.keycloak.operator.crds.v2alpha1.deployment.spec.ProxySpec
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:35.5431019Z  35% Generating: org.keycloak.operator.crds.v2alpha1.deployment.spec.UpdateSpec
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:35.5570493Z  38% Generating: org.keycloak.operator.crds.v2alpha1.deployment.spec.HttpSpec
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:35.5727393Z  42% Generating: org.keycloak.operator.crds.v2alpha1.deployment.spec.HostnameSpec
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:35.5914797Z  46% Generating: org.keycloak.operator.crds.v2alpha1.realmimport.KeycloakRealmImportSpec
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:35.7578610Z  50% Generating: org.keycloak.operator.crds.v2alpha1.deployment.KeycloakSpec
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:35.7789481Z  54% Generating: org.keycloak.operator.crds.v2alpha1.deployment.Keycloak
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:35.7965686Z  58% Generating: org.keycloak.operator.crds.v2alpha1.deployment.spec.DatabaseSpec
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:35.8048868Z  62% Generating: org.keycloak.operator.crds.v2alpha1.deployment.spec.UnsupportedSpec
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:35.8184642Z  65% Generating: org.keycloak.operator.crds.v2alpha1.deployment.KeycloakStatus
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:35.8250677Z  69% Generating: org.keycloak.operator.crds.v2alpha1.realmimport.Placeholder
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:35.8365064Z  73% Generating: org.keycloak.operator.crds.v2alpha1.deployment.spec.TracingSpec
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:35.8421084Z  77% Generating: org.keycloak.operator.crds.v2alpha1.deployment.spec.IngressSpec
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:35.8486168Z  81% Generating: org.keycloak.operator.crds.v2alpha1.deployment.spec.CacheSpec
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:35.8550086Z  85% Generating: org.keycloak.operator.crds.v2alpha1.deployment.spec.Truststore
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:35.8588538Z  88% Generating: org.keycloak.operator.crds.v2alpha1.deployment.spec.HttpManagementSpec
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:35.8738227Z  92% Generating: org.keycloak.operator.crds.v2alpha1.deployment.spec.FeatureSpec
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:36.8266653Z [INFO] Annotation processing is enabled because one or more processors were found
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:36.8267884Z   on the class path. A future release of javac may disable annotation processing
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:36.8271196Z   unless at least one processor is specified by name (-processor), or a search
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:36.8277087Z   path is specified (--processor-path, --processor-module-path), or annotation
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:36.8278121Z   processing is enabled explicitly (-proc:only, -proc:full).
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:36.8278755Z   Use -Xlint:-options to suppress this message.
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:36.8279324Z   Use -proc:none to disable annotation processing.
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:36.8280099Z [INFO] 100%: Builder generation complete.                                                                                      
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:36.8282346Z [WARNING] /home/runner/work/keycloak/keycloak/operator/src/main/java/org/keycloak/operator/controllers/KeycloakSharedCsvMetadata.java:[24,5] name() in io.quarkiverse.operatorsdk.annotations.CSVMetadata has been deprecated
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:36.8285333Z [WARNING] /home/runner/work/keycloak/keycloak/operator/src/main/java/org/keycloak/operator/controllers/KeycloakSharedCsvMetadata.java:[24,5] name() in io.quarkiverse.operatorsdk.annotations.CSVMetadata has been deprecated
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:36.8289993Z [WARNING] /home/runner/work/keycloak/keycloak/operator/src/main/java/org/keycloak/operator/controllers/KeycloakSharedCsvMetadata.java:[24,5] name() in io.quarkiverse.operatorsdk.annotations.CSVMetadata has been deprecated
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:36.8292961Z [WARNING] /home/runner/work/keycloak/keycloak/operator/src/main/java/org/keycloak/operator/controllers/KeycloakSharedCsvMetadata.java:[24,5] name() in io.quarkiverse.operatorsdk.annotations.CSVMetadata has been deprecated
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:36.8295052Z [INFO] 
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:36.8295647Z [INFO] --- resources:3.2.0:testResources (default-testResources) @ keycloak-operator ---
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:36.8301923Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:36.8302596Z [INFO] Using 'UTF-8' encoding to copy filtered properties files.
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:36.8325576Z [INFO] Copying 18 resources
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:36.8352678Z [INFO] 
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:36.8353569Z [INFO] --- compiler:3.8.1:testCompile (default-testCompile) @ keycloak-operator ---
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:36.8390084Z [INFO] Changes detected - recompiling the module!
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:36.8403977Z [INFO] Compiling 25 source files to /home/runner/work/keycloak/keycloak/operator/target/test-classes
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:38.3845605Z [INFO] Annotation processing is enabled because one or more processors were found
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:38.3846981Z   on the class path. A future release of javac may disable annotation processing
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:38.3851639Z   unless at least one processor is specified by name (-processor), or a search
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:38.3854564Z   path is specified (--processor-path, --processor-module-path), or annotation
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:38.3855463Z   processing is enabled explicitly (-proc:only, -proc:full).
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:38.3856513Z   Use -Xlint:-options to suppress this message.
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:38.3857087Z   Use -proc:none to disable annotation processing.
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:38.3858647Z [WARNING] /home/runner/work/keycloak/keycloak/operator/src/test/java/org/keycloak/operator/testsuite/unit/PodTemplateTest.java:[114,49] unchecked conversion
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:38.3860510Z   required: io.javaoperatorsdk.operator.api.reconciler.Context<org.keycloak.operator.crds.v2alpha1.deployment.Keycloak>
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:38.3861738Z   found:    io.javaoperatorsdk.operator.api.reconciler.Context
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:38.3866755Z [WARNING] /home/runner/work/keycloak/keycloak/operator/src/test/java/org/keycloak/operator/testsuite/unit/KeycloakControllerTest.java:[47,53] unchecked conversion
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:38.3868895Z   required: io.javaoperatorsdk.operator.api.reconciler.Context<org.keycloak.operator.crds.v2alpha1.deployment.Keycloak>
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:38.3870049Z   found:    io.javaoperatorsdk.operator.api.reconciler.Context
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:38.3872096Z [WARNING] /home/runner/work/keycloak/keycloak/operator/src/test/java/org/keycloak/operator/testsuite/unit/KeycloakControllerTest.java:[51,102] unchecked method invocation: method thenReturn in interface org.mockito.stubbing.OngoingStubbing is applied to given types
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:38.3874065Z   required: T
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:38.3874504Z   found:    io.fabric8.kubernetes.client.dsl.Resource
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:38.3875941Z [WARNING] /home/runner/work/keycloak/keycloak/operator/src/test/java/org/keycloak/operator/testsuite/unit/KeycloakControllerTest.java:[51,103] unchecked conversion
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:38.3877636Z   required: T
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:38.3878082Z   found:    io.fabric8.kubernetes.client.dsl.Resource
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:38.3880211Z [WARNING] /home/runner/work/keycloak/keycloak/operator/src/test/java/org/keycloak/operator/testsuite/integration/ClusteringTest.java:[324,57] jsonMapper() in io.fabric8.kubernetes.client.utils.Serialization has been deprecated
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:38.3883239Z [WARNING] /home/runner/work/keycloak/keycloak/operator/src/test/java/org/keycloak/operator/testsuite/integration/ClusteringTest.java:[335,48] jsonMapper() in io.fabric8.kubernetes.client.utils.Serialization has been deprecated
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:38.3884967Z [INFO] 
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:38.3885409Z [INFO] --- jar:3.1.2:jar (default-jar) @ keycloak-operator ---
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:38.4000364Z [INFO] Building jar: /home/runner/work/keycloak/keycloak/operator/target/keycloak-operator-999.0.0-SNAPSHOT.jar
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:38.4234584Z [INFO] 
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:38.4235845Z [INFO] --- source:3.1.0:jar-no-fork (attach-sources) @ keycloak-operator ---
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:38.4419845Z [INFO] Building jar: /home/runner/work/keycloak/keycloak/operator/target/keycloak-operator-999.0.0-SNAPSHOT-sources.jar
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:38.4753869Z [INFO] 
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:38.4756330Z [INFO] --- quarkus:3.20.0:build (default) @ keycloak-operator ---
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:48.7170692Z [INFO] [io.quarkiverse.operatorsdk.deployment.VersionAlignmentCheckingStep] QOSDK: 7.1.1 (commit: 7805667) built on Thu Mar 13 19:06:46 UTC 2025
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:48.7285561Z [INFO] [io.quarkiverse.operatorsdk.deployment.VersionAlignmentCheckingStep] JOSDK: 5.0.4 (commit: a8a15b1) built on Wed Mar 12 11:07:58 UTC 2025
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:48.7287423Z [INFO] [io.quarkiverse.operatorsdk.deployment.VersionAlignmentCheckingStep] Fabric8 (effective): 7.1.0
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:48.7289551Z [WARNING] [io.quarkus.config] Unrecognized configuration key "quarkus.operator-sdk.bundle.package-name" was provided; it will be ignored; verify that the dependency extension for this configuration is set or that you did not make a typo
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:48.7308358Z [WARNING] [io.quarkiverse.operatorsdk.deployment.VersionAlignmentCheckingStep] Mismatched Quarkus version found: "3.20.0", expected: "3.19.3" by at least a minor version and things might not work as expected.
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:48.7428653Z [INFO] [io.quarkiverse.operatorsdk.deployment.VersionAlignmentCheckingStep] Fabric8 (JOSDK-defined): 7.1.0
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:48.7440257Z [INFO] [io.quarkiverse.operatorsdk.deployment.VersionAlignmentCheckingStep] Fabric8 (Quarkus): 7.1.0
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:49.8495114Z [INFO] [io.quarkiverse.operatorsdk.deployment.OperatorSDKProcessor] Registered 'io.javaoperatorsdk.operator.processing.event.rate.LinearRateLimiter' for reflection
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:49.8497984Z [INFO] [io.quarkiverse.operatorsdk.deployment.OperatorSDKProcessor] Registered 'io.javaoperatorsdk.operator.processing.retry.GenericRetry' for reflection
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:49.8500539Z [INFO] [io.quarkiverse.operatorsdk.deployment.OperatorSDKProcessor] Registered 'io.quarkiverse.operatorsdk.runtime.QuarkusControllerConfiguration$DefaultRateLimiter' for reflection
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:49.8503334Z [INFO] [io.quarkiverse.operatorsdk.deployment.OperatorSDKProcessor] Registered 'io.javaoperatorsdk.operator.processing.dependent.kubernetes.KubernetesDependentResourceConfig' for reflection
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:49.9220578Z [INFO] Generating 'keycloakrealmimports.k8s.keycloak.org' version 'v2alpha1' with org.keycloak.operator.crds.v2alpha1.realmimport.KeycloakRealmImport (spec: org.keycloak.operator.crds.v2alpha1.realmimport.KeycloakRealmImportSpec / status org.keycloak.operator.crds.v2alpha1.realmimport.KeycloakRealmImportStatus)...
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:50.1635702Z [WARNING] [io.quarkus.deployment.steps.ReflectiveHierarchyStep] Unable to properly register the hierarchy of the following classes for reflection as they are not in the Jandex index:
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:50.1639543Z 	- org.keycloak.representations.idm.RealmRepresentation (source: KubernetesClientProcessor > org.keycloak.operator.crds.v2alpha1.realmimport.KeycloakRealmImportSpec > org.keycloak.operator.crds.v2alpha1.realmimport.KeycloakRealmImportSpec > org.keycloak.representations.idm.RealmRepresentation)
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:50.1643286Z Consider adding them to the index either by creating a Jandex index for your dependency via the Maven plugin, an empty META-INF/beans.xml or quarkus.index-dependency properties.
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:50.2779667Z [INFO] Generating 'keycloaks.k8s.keycloak.org' version 'v2alpha1' with org.keycloak.operator.crds.v2alpha1.deployment.Keycloak (spec: org.keycloak.operator.crds.v2alpha1.deployment.KeycloakSpec / status org.keycloak.operator.crds.v2alpha1.deployment.KeycloakStatus)...
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:50.9045032Z [INFO] [io.quarkiverse.operatorsdk.deployment.CRDGeneratorV2] Generated keycloakrealmimports.k8s.keycloak.org CRD:
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:50.9051984Z [INFO] [io.quarkiverse.operatorsdk.deployment.CRDGeneratorV2]   - v1 -> /home/runner/work/keycloak/keycloak/operator/target/kubernetes/keycloakrealmimports.k8s.keycloak.org-v1.yml
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:50.9060068Z [INFO] [io.quarkiverse.operatorsdk.deployment.CRDGeneratorV2] Generated keycloaks.k8s.keycloak.org CRD:
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:50.9066860Z [INFO] [io.quarkiverse.operatorsdk.deployment.CRDGeneratorV2]   - v1 -> /home/runner/work/keycloak/keycloak/operator/target/kubernetes/keycloaks.k8s.keycloak.org-v1.yml
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:50.9260104Z [INFO] [io.quarkiverse.operatorsdk.deployment.QuarkusControllerConfigurationBuildStep] Processed 'org.keycloak.operator.controllers.KeycloakRealmImportController' reconciler named 'keycloakrealmimportcontroller' for 'keycloakrealmimports.k8s.keycloak.org' resource (version 'k8s.keycloak.org/v2alpha1')
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:50.9299762Z [INFO] [io.quarkiverse.operatorsdk.deployment.QuarkusControllerConfigurationBuildStep] Processed 'org.keycloak.operator.controllers.KeycloakController' reconciler named 'keycloakcontroller' for 'keycloaks.k8s.keycloak.org' resource (version 'k8s.keycloak.org/v2alpha1')
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:50.9458914Z [INFO] [io.quarkiverse.operatorsdk.deployment.RoleBindings] Creating 'keycloakrealmimportcontroller-role-binding' RoleBinding to be applied to current namespace
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:50.9529160Z [INFO] [io.quarkiverse.operatorsdk.deployment.RoleBindings] Creating 'keycloakcontroller-role-binding' RoleBinding to be applied to current namespace
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:51.6369797Z [INFO] [io.quarkus.kubernetes.deployment.PropertyUtil] Kubernetes manifests are generated with 'The container port http' having default value '8080'. The app and manifests will get out of sync if the property 'quarkus.http.port' is changed at runtime.
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:51.8379299Z Invalid AnsiLogger Stream -> Swapping to default sdt out logger.
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:51.8408451Z [[34;1mINFO[m] Adding existing Role with name: keycloak-operator-role.
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:51.8413112Z [[34;1mINFO[m] Adding existing ClusterRole with name: keycloak-operator-clusterrole.
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:51.8418244Z [[34;1mINFO[m] Adding existing RoleBinding with name: keycloak-operator-role-binding.
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:51.8423815Z [[34;1mINFO[m] Adding existing ClusterRoleBinding with name: keycloak-operator-clusterrole-binding.
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:52.1482835Z [INFO] [io.quarkiverse.operatorsdk.bundle.deployment.BundleProcessor] Assigning 'keycloakrealmimportcontroller' reconciler to default bundle automatically named 'keycloak-operator'
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:52.1537736Z [INFO] [io.quarkiverse.operatorsdk.bundle.deployment.BundleProcessor] Assigning 'keycloakcontroller' reconciler to default bundle automatically named 'keycloak-operator'
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:52.1865778Z [INFO] Testcontainers version: 1.20.6
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:53.1725226Z [INFO] [io.quarkiverse.operatorsdk.bundle.deployment.BundleProcessor] Processing CSV for 'keycloak-operator' controller -> /home/runner/work/keycloak/keycloak/operator/target/bundle/keycloak-operator/manifests/keycloak-operator.clusterserviceversion.yaml
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:53.1736450Z [INFO] [io.quarkiverse.operatorsdk.bundle.deployment.BundleProcessor] Processing annotations for 'keycloak-operator' controller -> /home/runner/work/keycloak/keycloak/operator/target/bundle/keycloak-operator/metadata/annotations.yaml
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:53.1740364Z [INFO] [io.quarkiverse.operatorsdk.bundle.deployment.BundleProcessor] Processing bundle for 'keycloak-operator' controller -> /home/runner/work/keycloak/keycloak/operator/target/bundle/keycloak-operator/bundle.Dockerfile
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:53.1745405Z [INFO] [io.quarkiverse.operatorsdk.bundle.deployment.BundleProcessor] Processing Custom Resource Definition for 'keycloak-operator' controller -> /home/runner/work/keycloak/keycloak/operator/target/bundle/keycloak-operator/manifests/keycloakrealmimports.k8s.keycloak.org-v1.crd.yml
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:53.1749816Z [INFO] [io.quarkiverse.operatorsdk.bundle.deployment.BundleProcessor] Processing Custom Resource Definition for 'keycloak-operator' controller -> /home/runner/work/keycloak/keycloak/operator/target/bundle/keycloak-operator/manifests/keycloaks.k8s.keycloak.org-v1.crd.yml
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:53.4919241Z [INFO] Found Docker environment with Environment variables, system properties and defaults. Resolved dockerHost=tcp://192.168.49.2:2376
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:53.4931711Z [INFO] Docker host IP address is 192.168.49.2
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:53.5094333Z [INFO] Connected to docker: 
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:53.5094844Z   Server Version: 24.0.7
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:53.5095225Z   API Version: 1.43
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:53.5095604Z   Operating System: Ubuntu 22.04.3 LTS
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:53.5096091Z   Total Memory: 15990 MB
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:53.5096550Z   Labels: 
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:53.5096830Z     provider=docker
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:53.5191629Z [INFO] Image pull policy will be performed by: DefaultPullPolicy()
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:53.5222943Z [INFO] Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:53.5258428Z [INFO] Checking the system...
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:53.5260647Z [INFO] ✔︎ Docker server version should be at least 1.6.0
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:53.5298841Z [INFO] [io.quarkus.container.image.docker.common.deployment.CommonProcessor] Starting (local) container image build for jar using docker
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:53.6036996Z [INFO] [io.quarkus.container.image.docker.common.deployment.CommonProcessor] Executing the following command to build image: 'docker build -f /home/runner/work/keycloak/keycloak/operator/Dockerfile --build-arg KEYCLOAK_VERSION=999.0.0-SNAPSHOT -t docker.io/keycloak/keycloak-operator:999.0.0-SNAPSHOT /home/runner/work/keycloak/keycloak/operator'
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:53.9711206Z [INFO] [io.quarkus.deployment.util.ExecUtil] #0 building with "default" instance using docker driver
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:53.9712168Z [INFO] [io.quarkus.deployment.util.ExecUtil] 
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:53.9712882Z [INFO] [io.quarkus.deployment.util.ExecUtil] #1 [internal] load .dockerignore
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:53.9713872Z [INFO] [io.quarkus.deployment.util.ExecUtil] #1 transferring context: 2B done
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:53.9714522Z [INFO] [io.quarkus.deployment.util.ExecUtil] #1 DONE 0.0s
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:53.9714939Z [INFO] [io.quarkus.deployment.util.ExecUtil] 
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:53.9715511Z [INFO] [io.quarkus.deployment.util.ExecUtil] #2 [internal] load build definition from Dockerfile
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:53.9716192Z [INFO] [io.quarkus.deployment.util.ExecUtil] #2 transferring dockerfile: 2.12kB done
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:53.9716768Z [INFO] [io.quarkus.deployment.util.ExecUtil] #2 DONE 0.0s
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:53.9717482Z [INFO] [io.quarkus.deployment.util.ExecUtil] 
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:53.9718121Z [INFO] [io.quarkus.deployment.util.ExecUtil] #3 [internal] load metadata for registry.access.redhat.com/ubi9:latest
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:54.3789888Z [INFO] [io.quarkus.deployment.util.ExecUtil] #3 DONE 0.6s
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:54.3790529Z [INFO] [io.quarkus.deployment.util.ExecUtil] 
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:54.3791213Z [INFO] [io.quarkus.deployment.util.ExecUtil] #4 [internal] load metadata for registry.access.redhat.com/ubi9-micro:latest
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:54.4319715Z [INFO] [io.quarkus.deployment.util.ExecUtil] #4 ERROR: pulling from host registry.access.redhat.com failed with status code [manifests latest]: 502 Bad Gateway
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:54.4321323Z [INFO] [io.quarkus.deployment.util.ExecUtil] ------
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:54.4322310Z [INFO] [io.quarkus.deployment.util.ExecUtil]  > [internal] load metadata for registry.access.redhat.com/ubi9-micro:latest:
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:54.4323351Z [INFO] [io.quarkus.deployment.util.ExecUtil] ------
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:54.4333871Z [INFO] [io.quarkus.deployment.util.ExecUtil] Dockerfile:6
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:54.4334598Z [INFO] [io.quarkus.deployment.util.ExecUtil] --------------------
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:54.4338075Z [INFO] [io.quarkus.deployment.util.ExecUtil]    4 |     RUN bash /tmp/ubi-null.sh java-21-openjdk-headless glibc-langpack-en
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:54.4339395Z [INFO] [io.quarkus.deployment.util.ExecUtil]    5 |     
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:54.4341409Z [INFO] [io.quarkus.deployment.util.ExecUtil]    6 | >>> FROM registry.access.redhat.com/ubi9-micro
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:54.4342427Z [INFO] [io.quarkus.deployment.util.ExecUtil]    7 |     ENV LANG en_US.UTF-8
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:54.4343223Z [INFO] [io.quarkus.deployment.util.ExecUtil]    8 |     
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:54.4343933Z [INFO] [io.quarkus.deployment.util.ExecUtil] --------------------
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:54.4345605Z [INFO] [io.quarkus.deployment.util.ExecUtil] ERROR: failed to solve: registry.access.redhat.com/ubi9-micro: pulling from host registry.access.redhat.com failed with status code [manifests latest]: 502 Bad Gateway
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:54.4689625Z [INFO] ------------------------------------------------------------------------
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:54.4691560Z [INFO] Reactor Summary for Keycloak 999.0.0-SNAPSHOT:
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:54.4695517Z [INFO] 
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:54.4696041Z [INFO] Keycloak ........................................... SUCCESS [ 36.306 s]
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:54.4696822Z [INFO] Keycloak Common .................................... SUCCESS [ 18.937 s]
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:54.4697750Z [INFO] Keycloak Core ...................................... SUCCESS [  5.518 s]
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:54.4698490Z [INFO] Keycloak Operator .................................. FAILURE [ 31.369 s]
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:54.4699258Z [INFO] ------------------------------------------------------------------------
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:54.4699813Z [INFO] BUILD FAILURE
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:54.4700288Z [INFO] ------------------------------------------------------------------------
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:54.4700764Z [INFO] Total time:  01:33 min
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:54.4718168Z [INFO] Finished at: 2025-03-31T20:24:54Z
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:54.4719305Z [INFO] ------------------------------------------------------------------------
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:54.4721505Z [ERROR] Failed to execute goal io.quarkus:quarkus-maven-plugin:3.20.0:build (default) on project keycloak-operator: Failed to build quarkus application: io.quarkus.builder.BuildException: Build failure: Build failed due to errors
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:54.4726459Z [ERROR] 	[error]: Build step io.quarkus.container.image.docker.deployment.DockerProcessor#dockerBuildFromJar threw an exception: java.lang.RuntimeException: Execution of 'docker build -f /home/runner/work/keycloak/keycloak/operator/Dockerfile --build-arg KEYCLOAK_VERSION=999.0.0-SNAPSHOT -t docker.io/keycloak/keycloak-operator:999.0.0-SNAPSHOT /home/runner/work/keycloak/keycloak/operator' failed. See docker output for more details
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:54.4730313Z [ERROR] 	at io.quarkus.container.image.docker.common.deployment.CommonProcessor.containerRuntimeException(CommonProcessor.java:261)
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:54.4731998Z [ERROR] 	at io.quarkus.container.image.docker.common.deployment.CommonProcessor.buildImage(CommonProcessor.java:249)
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:54.4733603Z [ERROR] 	at io.quarkus.container.image.docker.deployment.DockerProcessor.createContainerImage(DockerProcessor.java:125)
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:54.4735165Z [ERROR] 	at io.quarkus.container.image.docker.deployment.DockerProcessor.createContainerImage(DockerProcessor.java:31)
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:54.4736568Z [ERROR] 	at io.quarkus.container.image.docker.common.deployment.CommonProcessor.buildFromJar(CommonProcessor.java:87)
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:54.4754340Z [ERROR] 	at io.quarkus.container.image.docker.deployment.DockerProcessor.dockerBuildFromJar(DockerProcessor.java:62)
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:54.4755751Z [ERROR] 	at java.base/java.lang.invoke.MethodHandle.invokeWithArguments(MethodHandle.java:733)
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:54.4756854Z [ERROR] 	at io.quarkus.deployment.ExtensionLoader$3.execute(ExtensionLoader.java:856)
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:54.4758030Z [ERROR] 	at io.quarkus.builder.BuildContext.run(BuildContext.java:255)
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:54.4758871Z [ERROR] 	at org.jboss.threads.ContextHandler$1.runWith(ContextHandler.java:18)
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:54.4759899Z [ERROR] 	at org.jboss.threads.EnhancedQueueExecutor$Task.doRunWith(EnhancedQueueExecutor.java:2675)
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:54.4761055Z [ERROR] 	at org.jboss.threads.EnhancedQueueExecutor$Task.run(EnhancedQueueExecutor.java:2654)
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:54.4762214Z [ERROR] 	at org.jboss.threads.EnhancedQueueExecutor.runThreadBody(EnhancedQueueExecutor.java:1627)
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:54.4763372Z [ERROR] 	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1594)
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:54.4764350Z [ERROR] 	at java.base/java.lang.Thread.run(Thread.java:1583)
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:54.4765063Z [ERROR] 	at org.jboss.threads.JBossThread.run(JBossThread.java:499)
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:54.4765683Z [ERROR] -> [Help 1]
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:54.4766044Z [ERROR] 
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:54.4766583Z [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:54.4767655Z [ERROR] Re-run Maven using the -X switch to enable full debug logging.
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:54.4768261Z [ERROR] 
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:54.4768945Z [ERROR] For more information about the errors and possible solutions, please read the following articles:
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:54.4770062Z [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:54.4770781Z [ERROR] 
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:54.4771324Z [ERROR] After correcting the problems, you can resume the build with the command
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:54.4772052Z [ERROR]   mvn <args> -rf :keycloak-operator
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:54.5266224Z  96% Generating: org.keycloak.operator.crds.v2alpha1.deployment.spec.NetworkPolicySpec
+Test remote (fast)	Test operator running in cluster	2025-03-31T20:24:54.5282232Z ##[error]Process completed with exit code 1.
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-03-31T20:50:02.3225024Z Prepare all required actions
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-03-31T20:50:02.3294056Z ##[group]Run ./.github/actions/status-check
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-03-31T20:50:02.3294428Z with:
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-03-31T20:50:02.3295299Z   jobs: {
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	  "conditional": {
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	    "outputs": {
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	      "operator": "true"
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	    }
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	  "build": {
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	  "test-local": {
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	  "test-remote": {
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	    "result": "failure",
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	  "test-olm": {
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	  }
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	}
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-03-31T20:50:02.3296488Z env:
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-03-31T20:50:02.3296822Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-03-31T20:50:02.3297244Z   MINIKUBE_VERSION: v1.32.0
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-03-31T20:50:02.3297546Z   KUBERNETES_VERSION: v1.27.10
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-03-31T20:50:02.3297832Z   MINIKUBE_MEMORY: 4096
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-03-31T20:50:02.3298090Z ##[endgroup]
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-03-31T20:50:02.3483968Z ##[group]Run JOBS='{
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-03-31T20:50:02.3484365Z [36;1mJOBS='{[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-03-31T20:50:02.3484621Z [36;1m  "conditional": {[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-03-31T20:50:02.3484949Z [36;1m    "result": "success",[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-03-31T20:50:02.3485239Z [36;1m    "outputs": {[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-03-31T20:50:02.3485509Z [36;1m      "operator": "true"[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-03-31T20:50:02.3485782Z [36;1m    }[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-03-31T20:50:02.3486008Z [36;1m  },[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-03-31T20:50:02.3486234Z [36;1m  "build": {[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-03-31T20:50:02.3486486Z [36;1m    "result": "success",[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-03-31T20:50:02.3486767Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-03-31T20:50:02.3487024Z [36;1m  },[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-03-31T20:50:02.3487265Z [36;1m  "test-local": {[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-03-31T20:50:02.3487546Z [36;1m    "result": "success",[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-03-31T20:50:02.3487835Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-03-31T20:50:02.3488096Z [36;1m  },[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-03-31T20:50:02.3488333Z [36;1m  "test-remote": {[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-03-31T20:50:02.3488609Z [36;1m    "result": "failure",[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-03-31T20:50:02.3488899Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-03-31T20:50:02.3489148Z [36;1m  },[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-03-31T20:50:02.3489379Z [36;1m  "test-olm": {[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-03-31T20:50:02.3489642Z [36;1m    "result": "success",[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-03-31T20:50:02.3489916Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-03-31T20:50:02.3490310Z [36;1m  }[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-03-31T20:50:02.3490527Z [36;1m}'[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-03-31T20:50:02.3490750Z [36;1m[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-03-31T20:50:02.3490981Z [36;1mecho "Job status:"[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-03-31T20:50:02.3491371Z [36;1mecho $JOBS | jq -r 'to_entries[] | " - \(.key): \(.value.result)"'[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-03-31T20:50:02.3491746Z [36;1m[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-03-31T20:50:02.3492043Z [36;1mfor i in $(echo $JOBS | jq -r 'to_entries[] | .value.result'); do[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-03-31T20:50:02.3492460Z [36;1m  if [ "$i" != "success" ] && [ "$i" != "skipped" ]; then[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-03-31T20:50:02.3492791Z [36;1m    echo ""[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-03-31T20:50:02.3493055Z [36;1m    echo "Status check not okay!"[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-03-31T20:50:02.3493349Z [36;1m    exit 1[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-03-31T20:50:02.3493577Z [36;1m  fi[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-03-31T20:50:02.3493807Z [36;1mdone[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-03-31T20:50:02.3545401Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-03-31T20:50:02.3545828Z env:
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-03-31T20:50:02.3546156Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-03-31T20:50:02.3546552Z   MINIKUBE_VERSION: v1.32.0
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-03-31T20:50:02.3546845Z   KUBERNETES_VERSION: v1.27.10
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-03-31T20:50:02.3547172Z   MINIKUBE_MEMORY: 4096
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-03-31T20:50:02.3547428Z ##[endgroup]
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-03-31T20:50:02.3634608Z Job status:
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-03-31T20:50:02.3682325Z  - conditional: success
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-03-31T20:50:02.3682666Z  - build: success
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-03-31T20:50:02.3682937Z  - test-local: success
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-03-31T20:50:02.3683219Z  - test-remote: failure
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-03-31T20:50:02.3683489Z  - test-olm: success
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-03-31T20:50:02.3716767Z 
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-03-31T20:50:02.3716976Z Status check not okay!
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-03-31T20:50:02.3729695Z ##[error]Process completed with exit code 1.
