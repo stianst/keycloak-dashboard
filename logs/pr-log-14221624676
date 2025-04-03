@@ -1,0 +1,128 @@
+Test remote (slow)	Build Keycloak Docker images	2025-04-02T14:11:51.7960097Z ##[group]Run eval $(minikube -p minikube docker-env)
+Test remote (slow)	Build Keycloak Docker images	2025-04-02T14:11:51.7960572Z [36;1meval $(minikube -p minikube docker-env)[0m
+Test remote (slow)	Build Keycloak Docker images	2025-04-02T14:11:51.7961186Z [36;1m(cd quarkus/container && docker build --build-arg KEYCLOAK_DIST=$(ls keycloak-*.tar.gz) . -t keycloak:0.0.1-1a26d9)[0m
+Test remote (slow)	Build Keycloak Docker images	2025-04-02T14:11:51.7961998Z [36;1m(cd operator && ./scripts/build-testing-docker-images.sh 0.0.1-1a26d9 keycloak custom-keycloak)[0m
+Test remote (slow)	Build Keycloak Docker images	2025-04-02T14:11:51.8011672Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Test remote (slow)	Build Keycloak Docker images	2025-04-02T14:11:51.8012176Z env:
+Test remote (slow)	Build Keycloak Docker images	2025-04-02T14:11:51.8012787Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Test remote (slow)	Build Keycloak Docker images	2025-04-02T14:11:51.8013358Z   MINIKUBE_VERSION: v1.32.0
+Test remote (slow)	Build Keycloak Docker images	2025-04-02T14:11:51.8013724Z   KUBERNETES_VERSION: v1.27.10
+Test remote (slow)	Build Keycloak Docker images	2025-04-02T14:11:51.8014012Z   MINIKUBE_MEMORY: 4096
+Test remote (slow)	Build Keycloak Docker images	2025-04-02T14:11:51.8014273Z   version_remote: 0.0.1-1a26d9
+Test remote (slow)	Build Keycloak Docker images	2025-04-02T14:11:51.8014673Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.6-7/x64
+Test remote (slow)	Build Keycloak Docker images	2025-04-02T14:11:51.8015250Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.6-7/x64
+Test remote (slow)	Build Keycloak Docker images	2025-04-02T14:11:51.8015872Z   MINIKUBE_HOME: /home/runner/work/_temp
+Test remote (slow)	Build Keycloak Docker images	2025-04-02T14:11:51.8016182Z ##[endgroup]
+Test remote (slow)	Build Keycloak Docker images	2025-04-02T14:11:52.4438656Z #0 building with "default" instance using docker driver
+Test remote (slow)	Build Keycloak Docker images	2025-04-02T14:11:52.4439510Z 
+Test remote (slow)	Build Keycloak Docker images	2025-04-02T14:11:52.4439827Z #1 [internal] load .dockerignore
+Test remote (slow)	Build Keycloak Docker images	2025-04-02T14:11:52.4440658Z #1 transferring context: 2B done
+Test remote (slow)	Build Keycloak Docker images	2025-04-02T14:11:52.4441462Z #1 DONE 0.0s
+Test remote (slow)	Build Keycloak Docker images	2025-04-02T14:11:52.4441821Z 
+Test remote (slow)	Build Keycloak Docker images	2025-04-02T14:11:52.4442212Z #2 [internal] load build definition from Dockerfile
+Test remote (slow)	Build Keycloak Docker images	2025-04-02T14:11:52.4443431Z #2 transferring dockerfile: 2.72kB done
+Test remote (slow)	Build Keycloak Docker images	2025-04-02T14:11:52.4444255Z #2 DONE 0.0s
+Test remote (slow)	Build Keycloak Docker images	2025-04-02T14:11:52.4444508Z 
+Test remote (slow)	Build Keycloak Docker images	2025-04-02T14:11:52.4445005Z #3 [internal] load metadata for registry.access.redhat.com/ubi9-micro:latest
+Test remote (slow)	Build Keycloak Docker images	2025-04-02T14:11:52.4446508Z #3 ERROR: pulling from host registry.access.redhat.com failed with status code [manifests latest]: 502 Bad Gateway
+Test remote (slow)	Build Keycloak Docker images	2025-04-02T14:11:52.4447777Z 
+Test remote (slow)	Build Keycloak Docker images	2025-04-02T14:11:52.4448360Z #4 [internal] load metadata for registry.access.redhat.com/ubi9:latest
+Test remote (slow)	Build Keycloak Docker images	2025-04-02T14:11:52.4626597Z #4 CANCELED
+Test remote (slow)	Build Keycloak Docker images	2025-04-02T14:11:52.4627407Z ------
+Test remote (slow)	Build Keycloak Docker images	2025-04-02T14:11:52.4628604Z  > [internal] load metadata for registry.access.redhat.com/ubi9-micro:latest:
+Test remote (slow)	Build Keycloak Docker images	2025-04-02T14:11:52.4629362Z ------
+Test remote (slow)	Build Keycloak Docker images	2025-04-02T14:11:52.4645743Z Dockerfile:22
+Test remote (slow)	Build Keycloak Docker images	2025-04-02T14:11:52.4646095Z --------------------
+Test remote (slow)	Build Keycloak Docker images	2025-04-02T14:11:52.4647227Z   20 |     RUN bash /tmp/ubi-null.sh java-21-openjdk-headless glibc-langpack-en findutils
+Test remote (slow)	Build Keycloak Docker images	2025-04-02T14:11:52.4648221Z   21 |     
+Test remote (slow)	Build Keycloak Docker images	2025-04-02T14:11:52.4648600Z   22 | >>> FROM registry.access.redhat.com/ubi9-micro
+Test remote (slow)	Build Keycloak Docker images	2025-04-02T14:11:52.4649100Z   23 |     ENV LANG en_US.UTF-8
+Test remote (slow)	Build Keycloak Docker images	2025-04-02T14:11:52.4649480Z   24 |     
+Test remote (slow)	Build Keycloak Docker images	2025-04-02T14:11:52.4649765Z --------------------
+Test remote (slow)	Build Keycloak Docker images	2025-04-02T14:11:52.4650862Z ERROR: failed to solve: registry.access.redhat.com/ubi9-micro: pulling from host registry.access.redhat.com failed with status code [manifests latest]: 502 Bad Gateway
+Test remote (slow)	Build Keycloak Docker images	2025-04-02T14:11:52.4702937Z ##[error]Process completed with exit code 1.
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-04-02T14:42:28.2362596Z Prepare all required actions
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-04-02T14:42:28.2434219Z ##[group]Run ./.github/actions/status-check
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-04-02T14:42:28.2434604Z with:
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-04-02T14:42:28.2435392Z   jobs: {
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	  "conditional": {
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	    "outputs": {
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	      "operator": "true"
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	    }
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	  "build": {
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	  "test-local": {
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	  "test-remote": {
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	    "result": "failure",
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	  "test-olm": {
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	  }
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	}
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-04-02T14:42:28.2436572Z env:
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-04-02T14:42:28.2436900Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-04-02T14:42:28.2437290Z   MINIKUBE_VERSION: v1.32.0
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-04-02T14:42:28.2437587Z   KUBERNETES_VERSION: v1.27.10
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-04-02T14:42:28.2437859Z   MINIKUBE_MEMORY: 4096
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-04-02T14:42:28.2438100Z ##[endgroup]
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-04-02T14:42:28.2677948Z ##[group]Run JOBS='{
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-04-02T14:42:28.2678458Z [36;1mJOBS='{[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-04-02T14:42:28.2678738Z [36;1m  "conditional": {[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-04-02T14:42:28.2679102Z [36;1m    "result": "success",[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-04-02T14:42:28.2679405Z [36;1m    "outputs": {[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-04-02T14:42:28.2679689Z [36;1m      "operator": "true"[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-04-02T14:42:28.2679975Z [36;1m    }[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-04-02T14:42:28.2680219Z [36;1m  },[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-04-02T14:42:28.2680456Z [36;1m  "build": {[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-04-02T14:42:28.2680877Z [36;1m    "result": "success",[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-04-02T14:42:28.2681180Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-04-02T14:42:28.2681453Z [36;1m  },[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-04-02T14:42:28.2681699Z [36;1m  "test-local": {[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-04-02T14:42:28.2681975Z [36;1m    "result": "success",[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-04-02T14:42:28.2682257Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-04-02T14:42:28.2682533Z [36;1m  },[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-04-02T14:42:28.2682784Z [36;1m  "test-remote": {[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-04-02T14:42:28.2683070Z [36;1m    "result": "failure",[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-04-02T14:42:28.2683376Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-04-02T14:42:28.2683631Z [36;1m  },[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-04-02T14:42:28.2683879Z [36;1m  "test-olm": {[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-04-02T14:42:28.2684154Z [36;1m    "result": "success",[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-04-02T14:42:28.2684435Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-04-02T14:42:28.2684689Z [36;1m  }[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-04-02T14:42:28.2684913Z [36;1m}'[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-04-02T14:42:28.2685163Z [36;1m[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-04-02T14:42:28.2685404Z [36;1mecho "Job status:"[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-04-02T14:42:28.2685822Z [36;1mecho $JOBS | jq -r 'to_entries[] | " - \(.key): \(.value.result)"'[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-04-02T14:42:28.2686487Z [36;1m[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-04-02T14:42:28.2686808Z [36;1mfor i in $(echo $JOBS | jq -r 'to_entries[] | .value.result'); do[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-04-02T14:42:28.2687245Z [36;1m  if [ "$i" != "success" ] && [ "$i" != "skipped" ]; then[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-04-02T14:42:28.2687581Z [36;1m    echo ""[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-04-02T14:42:28.2687861Z [36;1m    echo "Status check not okay!"[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-04-02T14:42:28.2688166Z [36;1m    exit 1[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-04-02T14:42:28.2688406Z [36;1m  fi[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-04-02T14:42:28.2688653Z [36;1mdone[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-04-02T14:42:28.2747014Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-04-02T14:42:28.2747585Z env:
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-04-02T14:42:28.2747942Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-04-02T14:42:28.2748359Z   MINIKUBE_VERSION: v1.32.0
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-04-02T14:42:28.2748668Z   KUBERNETES_VERSION: v1.27.10
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-04-02T14:42:28.2748957Z   MINIKUBE_MEMORY: 4096
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-04-02T14:42:28.2749210Z ##[endgroup]
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-04-02T14:42:28.2856585Z Job status:
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-04-02T14:42:28.2901757Z  - conditional: success
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-04-02T14:42:28.2902245Z  - build: success
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-04-02T14:42:28.2902576Z  - test-local: success
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-04-02T14:42:28.2902868Z  - test-remote: failure
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-04-02T14:42:28.2903129Z  - test-olm: success
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-04-02T14:42:28.2942712Z 
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-04-02T14:42:28.2943404Z Status check not okay!
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-04-02T14:42:28.2959655Z ##[error]Process completed with exit code 1.
