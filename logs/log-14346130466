@@ -1,0 +1,414 @@
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:41:33.9846463Z ##[group]Run pnpm --fail-if-no-match --filter keycloak-admin-ui test:integration
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:41:33.9847025Z [36;1mpnpm --fail-if-no-match --filter keycloak-admin-ui test:integration[0m
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:41:33.9895119Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:41:33.9895451Z env:
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:41:33.9895727Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:41:33.9896062Z   RETRY_COUNT: 3
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:41:33.9896273Z   WORKSPACE: keycloak-admin-ui
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:41:33.9896621Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.6-7/x64
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:41:33.9897074Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.6-7/x64
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:41:33.9897419Z ##[endgroup]
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:41:34.3254414Z 
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:41:34.3255637Z > @keycloak/keycloak-admin-ui@999.0.0-SNAPSHOT test:integration /home/runner/work/keycloak/keycloak/js/apps/admin-ui
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:41:34.3256706Z > playwright test
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:41:34.3256954Z 
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:41:37.3157448Z 
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:41:37.3158197Z Running 344 tests using 1 worker
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:44:32.6153161Z ················································································
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:47:17.1993020Z ··············°·································································
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:50:41.8245811Z ·················×±·············××F·············································
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:53:17.9751514Z ············································································×±··
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8050700Z ··×±·························
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8065284Z 
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8084856Z   1) [chromium] › test/realm-roles/main.spec.ts:123:3 › Realm roles test › Add associated roles test 
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8085499Z 
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8085965Z     Error: Row accountmanage-account not found: ,offline_access,False,role_offline-access,
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8086368Z 
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8086466Z        at utils/table.ts:103
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8086631Z 
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8086929Z       101 |     const rowIndex = rows.findIndex((r) => r.includes(row as string));
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8087539Z       102 |     if (rowIndex === -1) {
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8087892Z     > 103 |       throw new Error(`Row ${row} not found: ${rows}`);
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8088190Z           |             ^
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8088395Z       104 |     }
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8088607Z       105 |     row = rowIndex;
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8088824Z       106 |   }
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8089475Z         at clickSelectRow (/home/runner/work/keycloak/keycloak/js/apps/admin-ui/test/utils/table.ts:103:13)
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8090232Z         at pickRole (/home/runner/work/keycloak/keycloak/js/apps/admin-ui/test/utils/roles.ts:32:3)
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8091118Z         at /home/runner/work/keycloak/keycloak/js/apps/admin-ui/test/realm-roles/main.spec.ts:143:5
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8091505Z 
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8091870Z     Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8092125Z 
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8092605Z     Error: locator.waitFor: Error: strict mode violation: getByLabel('Associated roles', { exact: true }).locator('tbody') resolved to 2 elements:
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8094101Z         1) <tbody role="rowgroup" class="pf-v5-c-table__tbody">…</tbody> aka getByTestId('assigned-roles').locator('tbody')
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8095379Z         2) <tbody role="rowgroup" class="pf-v5-c-table__tbody">…</tbody> aka getByText('accountdelete-accountrole_delete-accountaccountmanage-accountrole_manage-')
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8095942Z 
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8096027Z     Call log:
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8096542Z     [2m  - waiting for getByLabel('Associated roles', { exact: true }).locator('tbody') to be visible[22m
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8096896Z 
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8096902Z 
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8097354Z        at utils/table.ts:71
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8097541Z 
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8097767Z       69 | export async function getTableData(page: Page, name: string) {
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8098425Z       70 |   const table = page.getByLabel(name, { exact: true });
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8098804Z     > 71 |   await table.locator("tbody").waitFor();
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8099115Z          |                                ^
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8099480Z       72 |   const rows = await table.locator("tbody tr").elementHandles();
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8099810Z       73 |
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8101747Z       74 |   const tableData = await Promise.all(
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8102310Z         at getTableData (/home/runner/work/keycloak/keycloak/js/apps/admin-ui/test/utils/table.ts:71:32)
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8103018Z         at clickSelectRow (/home/runner/work/keycloak/keycloak/js/apps/admin-ui/test/utils/table.ts:100:24)
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8103867Z         at pickRole (/home/runner/work/keycloak/keycloak/js/apps/admin-ui/test/utils/roles.ts:32:9)
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8105141Z         at /home/runner/work/keycloak/keycloak/js/apps/admin-ui/test/realm-roles/main.spec.ts:143:11
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8105801Z 
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8106231Z     attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8107081Z     test-results/realm-roles-main-Realm-roles-test-Add-associated-roles-test-chromium-retry1/trace.zip
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8107576Z     Usage:
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8107683Z 
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8108187Z         pnpm exec playwright show-trace test-results/realm-roles-main-Realm-roles-test-Add-associated-roles-test-chromium-retry1/trace.zip
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8108712Z 
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8109081Z     ────────────────────────────────────────────────────────────────────────────────────────────────
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8109390Z 
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8109709Z     Retry #2 ───────────────────────────────────────────────────────────────────────────────────────
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8109962Z 
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8110431Z     Error: locator.waitFor: Error: strict mode violation: getByLabel('Associated roles', { exact: true }).locator('tbody') resolved to 2 elements:
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8111621Z         1) <tbody role="rowgroup" class="pf-v5-c-table__tbody">…</tbody> aka getByTestId('assigned-roles').locator('tbody')
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8112670Z         2) <tbody role="rowgroup" class="pf-v5-c-table__tbody">…</tbody> aka getByText('accountdelete-accountrole_delete-accountaccountmanage-accountrole_manage-')
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8113201Z 
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8113284Z     Call log:
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8113976Z     [2m  - waiting for getByLabel('Associated roles', { exact: true }).locator('tbody') to be visible[22m
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8114329Z 
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8114335Z 
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8114444Z        at utils/table.ts:71
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8114711Z 
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8115102Z       69 | export async function getTableData(page: Page, name: string) {
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8115900Z       70 |   const table = page.getByLabel(name, { exact: true });
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8116295Z     > 71 |   await table.locator("tbody").waitFor();
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8116839Z          |                                ^
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8117450Z       72 |   const rows = await table.locator("tbody tr").elementHandles();
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8117777Z       73 |
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8118013Z       74 |   const tableData = await Promise.all(
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8118551Z         at getTableData (/home/runner/work/keycloak/keycloak/js/apps/admin-ui/test/utils/table.ts:71:32)
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8119802Z         at clickSelectRow (/home/runner/work/keycloak/keycloak/js/apps/admin-ui/test/utils/table.ts:100:24)
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8120813Z         at pickRole (/home/runner/work/keycloak/keycloak/js/apps/admin-ui/test/utils/roles.ts:32:9)
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8121490Z         at /home/runner/work/keycloak/keycloak/js/apps/admin-ui/test/realm-roles/main.spec.ts:149:11
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8121851Z 
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8122350Z   2) [chromium] › test/permissions/main.spec.ts:83:3 › Permissions section tests › should edit group permission 
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8122728Z 
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8122907Z     [31mTest timeout of 30000ms exceeded.[39m
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8123284Z 
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8123469Z     Error: locator.click: Test timeout of 30000ms exceeded.
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8123999Z     Call log:
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8124392Z     [2m  - waiting for getByTestId('no-permissions-empty-action')[22m
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8124654Z 
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8124661Z 
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8124784Z        at permissions/main.ts:18
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8124951Z 
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8125024Z       16 |
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8125322Z       17 | export async function clickCreatePermission(page: Page) {
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8125775Z     > 18 |   await page.getByTestId("no-permissions-empty-action").click();
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8126165Z          |                                                         ^
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8126421Z       19 | }
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8126607Z       20 |
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8126944Z       21 | export async function selectResource(page: Page, resourceName: string) {
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8127634Z         at clickCreatePermission (/home/runner/work/keycloak/keycloak/js/apps/admin-ui/test/permissions/main.ts:18:57)
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8128371Z         at /home/runner/work/keycloak/keycloak/js/apps/admin-ui/test/permissions/main.spec.ts:84:11
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8128731Z 
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8129311Z   3) [chromium] › test/user-federation/kerberos.spec.ts:93:5 › User Fed Kerberos tests › Edit Kerberos provider › Should edit existing Kerberos provider 
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8129797Z 
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8130211Z     Error: [31mTimed out 5000ms waiting for [39m[2mexpect([22m[31mlocator[39m[2m).[22mtoBeChecked[2m()[22m
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8130574Z 
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8130692Z     Locator: getByTestId('debug')
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8130940Z     Expected: checked
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8131150Z     Received: unchecked
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8131366Z     Call log:
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8131662Z     [2m  - expect.toBeChecked with timeout 5000ms[22m
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8132044Z     [2m  - waiting for getByTestId('debug')[22m
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8132772Z     [2m    9 × locator resolved to <input id="kc-debug" type="checkbox" aria-label="Debug" data-testid="debug" class="pf-v5-c-switch__input"/>[22m
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8133385Z     [2m      - unexpected value "unchecked"[22m
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8133713Z 
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8133719Z 
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8133936Z       111 |       await clickUserFederationCard(page, firstKerberosName);
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8134261Z       112 |
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8134551Z     > 113 |       await expect(page.getByTestId("debug")).toBeChecked();
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8134913Z           |                                               ^
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8135193Z       114 |       await expect(
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8135538Z       115 |         page.getByTestId("allow-password-authentication"),
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8136040Z       116 |       ).toBeChecked();
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8136562Z         at /home/runner/work/keycloak/keycloak/js/apps/admin-ui/test/user-federation/kerberos.spec.ts:113:47
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8137061Z 
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8137705Z   4) [chromium] › test/user-federation/kerberos.spec.ts:180:5 › User Fed Kerberos tests › Edit Kerberos provider › Should edit existing Kerberos provider and cancel 
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8138229Z 
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8138732Z     Error: [31mTimed out 5000ms waiting for [39m[2mexpect([22m[31mlocator[39m[2m).[22mtoHaveText[2m([22m[32mexpected[39m[2m)[22m
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8139153Z 
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8139282Z     Locator: locator('#kc-cache-policy')
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8139634Z     Expected string: [32m"DEFAULT"[39m
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8139960Z     Received string: [31m"NO_CACHE"[39m
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8140207Z     Call log:
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8140507Z     [2m  - expect.toHaveText with timeout 5000ms[22m
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8140916Z     [2m  - waiting for locator('#kc-cache-policy')[22m
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8142337Z     [2m    9 × locator resolved to <button type="button" id="kc-cache-policy" aria-expanded="false" data-ouia-safe="true" aria-label="Select cache policy" data-ouia-component-type="PF5/MenuToggle" class="pf-v5-c-menu-toggle pf-m-full-width" data-ouia-component-id="OUIA-Generated-MenuToggle-8">…</button>[22m
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8143486Z     [2m      - unexpected value "NO_CACHE"[22m
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8143796Z 
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8143802Z 
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8144009Z       190 |       await clickUserFederationCard(page, firstKerberosName);
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8144333Z       191 |
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8144686Z     > 192 |       await expect(page.locator("#kc-cache-policy")).toHaveText(defaultPolicy);
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8145108Z           |                                                      ^
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8145366Z       193 |     });
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8145552Z       194 |
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8145892Z       195 |     test("Should disable an existing Kerberos provider", async ({ page }) => {
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8146544Z         at /home/runner/work/keycloak/keycloak/js/apps/admin-ui/test/user-federation/kerberos.spec.ts:192:54
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8146941Z 
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8147022Z   1 failed
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8147719Z     [chromium] › test/realm-roles/main.spec.ts:123:3 › Realm roles test › Add associated roles test 
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8148466Z   3 flaky
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8149226Z     [chromium] › test/permissions/main.spec.ts:83:3 › Permissions section tests › should edit group permission 
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8150177Z     [chromium] › test/user-federation/kerberos.spec.ts:93:5 › User Fed Kerberos tests › Edit Kerberos provider › Should edit existing Kerberos provider 
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8151276Z     [chromium] › test/user-federation/kerberos.spec.ts:180:5 › User Fed Kerberos tests › Edit Kerberos provider › Should edit existing Kerberos provider and cancel 
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8151867Z   1 skipped
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8152073Z   339 passed (12.7m)
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8177445Z ##[error]  1) [chromium] › test/realm-roles/main.spec.ts:123:3 › Realm roles test › Add associated roles test 
+Admin UI E2E (firefox)	Run Playwright tests	    Error: Row accountmanage-account not found: ,offline_access,False,role_offline-access,
+Admin UI E2E (firefox)	Run Playwright tests	
+Admin UI E2E (firefox)	Run Playwright tests	       at utils/table.ts:103
+Admin UI E2E (firefox)	Run Playwright tests	
+Admin UI E2E (firefox)	Run Playwright tests	      101 |     const rowIndex = rows.findIndex((r) => r.includes(row as string));
+Admin UI E2E (firefox)	Run Playwright tests	      102 |     if (rowIndex === -1) {
+Admin UI E2E (firefox)	Run Playwright tests	    > 103 |       throw new Error(`Row ${row} not found: ${rows}`);
+Admin UI E2E (firefox)	Run Playwright tests	          |             ^
+Admin UI E2E (firefox)	Run Playwright tests	      104 |     }
+Admin UI E2E (firefox)	Run Playwright tests	      105 |     row = rowIndex;
+Admin UI E2E (firefox)	Run Playwright tests	      106 |   }
+Admin UI E2E (firefox)	Run Playwright tests	        at clickSelectRow (/home/runner/work/keycloak/keycloak/js/apps/admin-ui/test/utils/table.ts:103:13)
+Admin UI E2E (firefox)	Run Playwright tests	        at pickRole (/home/runner/work/keycloak/keycloak/js/apps/admin-ui/test/utils/roles.ts:32:3)
+Admin UI E2E (firefox)	Run Playwright tests	        at /home/runner/work/keycloak/keycloak/js/apps/admin-ui/test/realm-roles/main.spec.ts:143:5
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8194892Z ##[error]  1) [chromium] › test/realm-roles/main.spec.ts:123:3 › Realm roles test › Add associated roles test 
+Admin UI E2E (firefox)	Run Playwright tests	
+Admin UI E2E (firefox)	Run Playwright tests	    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+Admin UI E2E (firefox)	Run Playwright tests	    Error: locator.waitFor: Error: strict mode violation: getByLabel('Associated roles', { exact: true }).locator('tbody') resolved to 2 elements:
+Admin UI E2E (firefox)	Run Playwright tests	        1) <tbody role="rowgroup" class="pf-v5-c-table__tbody">…</tbody> aka getByTestId('assigned-roles').locator('tbody')
+Admin UI E2E (firefox)	Run Playwright tests	        2) <tbody role="rowgroup" class="pf-v5-c-table__tbody">…</tbody> aka getByText('accountdelete-accountrole_delete-accountaccountmanage-accountrole_manage-')
+Admin UI E2E (firefox)	Run Playwright tests	
+Admin UI E2E (firefox)	Run Playwright tests	    Call log:
+Admin UI E2E (firefox)	Run Playwright tests	      - waiting for getByLabel('Associated roles', { exact: true }).locator('tbody') to be visible
+Admin UI E2E (firefox)	Run Playwright tests	
+Admin UI E2E (firefox)	Run Playwright tests	
+Admin UI E2E (firefox)	Run Playwright tests	       at utils/table.ts:71
+Admin UI E2E (firefox)	Run Playwright tests	
+Admin UI E2E (firefox)	Run Playwright tests	      69 | export async function getTableData(page: Page, name: string) {
+Admin UI E2E (firefox)	Run Playwright tests	      70 |   const table = page.getByLabel(name, { exact: true });
+Admin UI E2E (firefox)	Run Playwright tests	    > 71 |   await table.locator("tbody").waitFor();
+Admin UI E2E (firefox)	Run Playwright tests	         |                                ^
+Admin UI E2E (firefox)	Run Playwright tests	      72 |   const rows = await table.locator("tbody tr").elementHandles();
+Admin UI E2E (firefox)	Run Playwright tests	      73 |
+Admin UI E2E (firefox)	Run Playwright tests	      74 |   const tableData = await Promise.all(
+Admin UI E2E (firefox)	Run Playwright tests	        at getTableData (/home/runner/work/keycloak/keycloak/js/apps/admin-ui/test/utils/table.ts:71:32)
+Admin UI E2E (firefox)	Run Playwright tests	        at clickSelectRow (/home/runner/work/keycloak/keycloak/js/apps/admin-ui/test/utils/table.ts:100:24)
+Admin UI E2E (firefox)	Run Playwright tests	        at pickRole (/home/runner/work/keycloak/keycloak/js/apps/admin-ui/test/utils/roles.ts:32:9)
+Admin UI E2E (firefox)	Run Playwright tests	        at /home/runner/work/keycloak/keycloak/js/apps/admin-ui/test/realm-roles/main.spec.ts:143:11
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8208644Z ##[error]  1) [chromium] › test/realm-roles/main.spec.ts:123:3 › Realm roles test › Add associated roles test 
+Admin UI E2E (firefox)	Run Playwright tests	
+Admin UI E2E (firefox)	Run Playwright tests	    Retry #2 ───────────────────────────────────────────────────────────────────────────────────────
+Admin UI E2E (firefox)	Run Playwright tests	    Error: locator.waitFor: Error: strict mode violation: getByLabel('Associated roles', { exact: true }).locator('tbody') resolved to 2 elements:
+Admin UI E2E (firefox)	Run Playwright tests	        1) <tbody role="rowgroup" class="pf-v5-c-table__tbody">…</tbody> aka getByTestId('assigned-roles').locator('tbody')
+Admin UI E2E (firefox)	Run Playwright tests	        2) <tbody role="rowgroup" class="pf-v5-c-table__tbody">…</tbody> aka getByText('accountdelete-accountrole_delete-accountaccountmanage-accountrole_manage-')
+Admin UI E2E (firefox)	Run Playwright tests	
+Admin UI E2E (firefox)	Run Playwright tests	    Call log:
+Admin UI E2E (firefox)	Run Playwright tests	      - waiting for getByLabel('Associated roles', { exact: true }).locator('tbody') to be visible
+Admin UI E2E (firefox)	Run Playwright tests	
+Admin UI E2E (firefox)	Run Playwright tests	
+Admin UI E2E (firefox)	Run Playwright tests	       at utils/table.ts:71
+Admin UI E2E (firefox)	Run Playwright tests	
+Admin UI E2E (firefox)	Run Playwright tests	      69 | export async function getTableData(page: Page, name: string) {
+Admin UI E2E (firefox)	Run Playwright tests	      70 |   const table = page.getByLabel(name, { exact: true });
+Admin UI E2E (firefox)	Run Playwright tests	    > 71 |   await table.locator("tbody").waitFor();
+Admin UI E2E (firefox)	Run Playwright tests	         |                                ^
+Admin UI E2E (firefox)	Run Playwright tests	      72 |   const rows = await table.locator("tbody tr").elementHandles();
+Admin UI E2E (firefox)	Run Playwright tests	      73 |
+Admin UI E2E (firefox)	Run Playwright tests	      74 |   const tableData = await Promise.all(
+Admin UI E2E (firefox)	Run Playwright tests	        at getTableData (/home/runner/work/keycloak/keycloak/js/apps/admin-ui/test/utils/table.ts:71:32)
+Admin UI E2E (firefox)	Run Playwright tests	        at clickSelectRow (/home/runner/work/keycloak/keycloak/js/apps/admin-ui/test/utils/table.ts:100:24)
+Admin UI E2E (firefox)	Run Playwright tests	        at pickRole (/home/runner/work/keycloak/keycloak/js/apps/admin-ui/test/utils/roles.ts:32:9)
+Admin UI E2E (firefox)	Run Playwright tests	        at /home/runner/work/keycloak/keycloak/js/apps/admin-ui/test/realm-roles/main.spec.ts:149:11
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8215929Z ##[error]  2) [chromium] › test/permissions/main.spec.ts:83:3 › Permissions section tests › should edit group permission 
+Admin UI E2E (firefox)	Run Playwright tests	    Test timeout of 30000ms exceeded.
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8225562Z ##[error]  2) [chromium] › test/permissions/main.spec.ts:83:3 › Permissions section tests › should edit group permission 
+Admin UI E2E (firefox)	Run Playwright tests	    Error: locator.click: Test timeout of 30000ms exceeded.
+Admin UI E2E (firefox)	Run Playwright tests	    Call log:
+Admin UI E2E (firefox)	Run Playwright tests	      - waiting for getByTestId('no-permissions-empty-action')
+Admin UI E2E (firefox)	Run Playwright tests	
+Admin UI E2E (firefox)	Run Playwright tests	
+Admin UI E2E (firefox)	Run Playwright tests	       at permissions/main.ts:18
+Admin UI E2E (firefox)	Run Playwright tests	
+Admin UI E2E (firefox)	Run Playwright tests	      16 |
+Admin UI E2E (firefox)	Run Playwright tests	      17 | export async function clickCreatePermission(page: Page) {
+Admin UI E2E (firefox)	Run Playwright tests	    > 18 |   await page.getByTestId("no-permissions-empty-action").click();
+Admin UI E2E (firefox)	Run Playwright tests	         |                                                         ^
+Admin UI E2E (firefox)	Run Playwright tests	      19 | }
+Admin UI E2E (firefox)	Run Playwright tests	      20 |
+Admin UI E2E (firefox)	Run Playwright tests	      21 | export async function selectResource(page: Page, resourceName: string) {
+Admin UI E2E (firefox)	Run Playwright tests	        at clickCreatePermission (/home/runner/work/keycloak/keycloak/js/apps/admin-ui/test/permissions/main.ts:18:57)
+Admin UI E2E (firefox)	Run Playwright tests	        at /home/runner/work/keycloak/keycloak/js/apps/admin-ui/test/permissions/main.spec.ts:84:11
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8239404Z ##[error]  3) [chromium] › test/user-federation/kerberos.spec.ts:93:5 › User Fed Kerberos tests › Edit Kerberos provider › Should edit existing Kerberos provider 
+Admin UI E2E (firefox)	Run Playwright tests	    Error: Timed out 5000ms waiting for expect(locator).toBeChecked()
+Admin UI E2E (firefox)	Run Playwright tests	
+Admin UI E2E (firefox)	Run Playwright tests	    Locator: getByTestId('debug')
+Admin UI E2E (firefox)	Run Playwright tests	    Expected: checked
+Admin UI E2E (firefox)	Run Playwright tests	    Received: unchecked
+Admin UI E2E (firefox)	Run Playwright tests	    Call log:
+Admin UI E2E (firefox)	Run Playwright tests	      - expect.toBeChecked with timeout 5000ms
+Admin UI E2E (firefox)	Run Playwright tests	      - waiting for getByTestId('debug')
+Admin UI E2E (firefox)	Run Playwright tests	        9 × locator resolved to <input id="kc-debug" type="checkbox" aria-label="Debug" data-testid="debug" class="pf-v5-c-switch__input"/>
+Admin UI E2E (firefox)	Run Playwright tests	          - unexpected value "unchecked"
+Admin UI E2E (firefox)	Run Playwright tests	
+Admin UI E2E (firefox)	Run Playwright tests	
+Admin UI E2E (firefox)	Run Playwright tests	      111 |       await clickUserFederationCard(page, firstKerberosName);
+Admin UI E2E (firefox)	Run Playwright tests	      112 |
+Admin UI E2E (firefox)	Run Playwright tests	    > 113 |       await expect(page.getByTestId("debug")).toBeChecked();
+Admin UI E2E (firefox)	Run Playwright tests	          |                                               ^
+Admin UI E2E (firefox)	Run Playwright tests	      114 |       await expect(
+Admin UI E2E (firefox)	Run Playwright tests	      115 |         page.getByTestId("allow-password-authentication"),
+Admin UI E2E (firefox)	Run Playwright tests	      116 |       ).toBeChecked();
+Admin UI E2E (firefox)	Run Playwright tests	        at /home/runner/work/keycloak/keycloak/js/apps/admin-ui/test/user-federation/kerberos.spec.ts:113:47
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8256598Z ##[error]  4) [chromium] › test/user-federation/kerberos.spec.ts:180:5 › User Fed Kerberos tests › Edit Kerberos provider › Should edit existing Kerberos provider and cancel 
+Admin UI E2E (firefox)	Run Playwright tests	    Error: Timed out 5000ms waiting for expect(locator).toHaveText(expected)
+Admin UI E2E (firefox)	Run Playwright tests	
+Admin UI E2E (firefox)	Run Playwright tests	    Locator: locator('#kc-cache-policy')
+Admin UI E2E (firefox)	Run Playwright tests	    Expected string: "DEFAULT"
+Admin UI E2E (firefox)	Run Playwright tests	    Received string: "NO_CACHE"
+Admin UI E2E (firefox)	Run Playwright tests	    Call log:
+Admin UI E2E (firefox)	Run Playwright tests	      - expect.toHaveText with timeout 5000ms
+Admin UI E2E (firefox)	Run Playwright tests	      - waiting for locator('#kc-cache-policy')
+Admin UI E2E (firefox)	Run Playwright tests	        9 × locator resolved to <button type="button" id="kc-cache-policy" aria-expanded="false" data-ouia-safe="true" aria-label="Select cache policy" data-ouia-component-type="PF5/MenuToggle" class="pf-v5-c-menu-toggle pf-m-full-width" data-ouia-component-id="OUIA-Generated-MenuToggle-8">…</button>
+Admin UI E2E (firefox)	Run Playwright tests	          - unexpected value "NO_CACHE"
+Admin UI E2E (firefox)	Run Playwright tests	
+Admin UI E2E (firefox)	Run Playwright tests	
+Admin UI E2E (firefox)	Run Playwright tests	      190 |       await clickUserFederationCard(page, firstKerberosName);
+Admin UI E2E (firefox)	Run Playwright tests	      191 |
+Admin UI E2E (firefox)	Run Playwright tests	    > 192 |       await expect(page.locator("#kc-cache-policy")).toHaveText(defaultPolicy);
+Admin UI E2E (firefox)	Run Playwright tests	          |                                                      ^
+Admin UI E2E (firefox)	Run Playwright tests	      193 |     });
+Admin UI E2E (firefox)	Run Playwright tests	      194 |
+Admin UI E2E (firefox)	Run Playwright tests	      195 |     test("Should disable an existing Kerberos provider", async ({ page }) => {
+Admin UI E2E (firefox)	Run Playwright tests	        at /home/runner/work/keycloak/keycloak/js/apps/admin-ui/test/user-federation/kerberos.spec.ts:192:54
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:19.8271956Z ##[notice]  1 failed
+Admin UI E2E (firefox)	Run Playwright tests	    [chromium] › test/realm-roles/main.spec.ts:123:3 › Realm roles test › Add associated roles test 
+Admin UI E2E (firefox)	Run Playwright tests	  3 flaky
+Admin UI E2E (firefox)	Run Playwright tests	    [chromium] › test/permissions/main.spec.ts:83:3 › Permissions section tests › should edit group permission 
+Admin UI E2E (firefox)	Run Playwright tests	    [chromium] › test/user-federation/kerberos.spec.ts:93:5 › User Fed Kerberos tests › Edit Kerberos provider › Should edit existing Kerberos provider 
+Admin UI E2E (firefox)	Run Playwright tests	    [chromium] › test/user-federation/kerberos.spec.ts:180:5 › User Fed Kerberos tests › Edit Kerberos provider › Should edit existing Kerberos provider and cancel 
+Admin UI E2E (firefox)	Run Playwright tests	  1 skipped
+Admin UI E2E (firefox)	Run Playwright tests	  339 passed (12.7m)
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:20.0742165Z /home/runner/work/keycloak/keycloak/js/apps/admin-ui:
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:20.0744103Z  ERR_PNPM_RECURSIVE_RUN_FIRST_FAIL  @keycloak/keycloak-admin-ui@999.0.0-SNAPSHOT test:integration: `playwright test`
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:20.0744892Z Exit status 1
+Admin UI E2E (firefox)	Run Playwright tests	2025-04-09T00:54:20.0929132Z ##[error]Process completed with exit code 1.
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-09T00:54:37.1879136Z Prepare all required actions
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-09T00:54:37.1942817Z ##[group]Run ./.github/actions/status-check
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-09T00:54:37.1943171Z with:
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-09T00:54:37.1944370Z   jobs: {
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	  "conditional": {
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	    "outputs": {
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	      "js-ci": "true"
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	    }
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	  "build-keycloak": {
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	  "admin-client": {
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	  "ui-shared": {
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	  "account-ui": {
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	  "account-ui-e2e": {
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	  "admin-ui": {
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	  "admin-ui-e2e": {
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	    "result": "failure",
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	  }
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	}
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-09T00:54:37.1945677Z env:
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-09T00:54:37.1946010Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-09T00:54:37.1946402Z   RETRY_COUNT: 3
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-09T00:54:37.1946637Z ##[endgroup]
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-09T00:54:37.2041600Z ##[group]Run JOBS='{
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-09T00:54:37.2042010Z [36;1mJOBS='{[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-09T00:54:37.2042494Z [36;1m  "conditional": {[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-09T00:54:37.2042779Z [36;1m    "result": "success",[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-09T00:54:37.2043061Z [36;1m    "outputs": {[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-09T00:54:37.2043315Z [36;1m      "js-ci": "true"[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-09T00:54:37.2043563Z [36;1m    }[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-09T00:54:37.2043863Z [36;1m  },[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-09T00:54:37.2044111Z [36;1m  "build-keycloak": {[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-09T00:54:37.2044374Z [36;1m    "result": "success",[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-09T00:54:37.2044645Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-09T00:54:37.2044893Z [36;1m  },[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-09T00:54:37.2045123Z [36;1m  "admin-client": {[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-09T00:54:37.2045387Z [36;1m    "result": "success",[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-09T00:54:37.2045656Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-09T00:54:37.2045897Z [36;1m  },[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-09T00:54:37.2046122Z [36;1m  "ui-shared": {[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-09T00:54:37.2046376Z [36;1m    "result": "success",[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-09T00:54:37.2046644Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-09T00:54:37.2046885Z [36;1m  },[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-09T00:54:37.2047115Z [36;1m  "account-ui": {[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-09T00:54:37.2047377Z [36;1m    "result": "success",[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-09T00:54:37.2047649Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-09T00:54:37.2047890Z [36;1m  },[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-09T00:54:37.2048108Z [36;1m  "account-ui-e2e": {[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-09T00:54:37.2048373Z [36;1m    "result": "success",[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-09T00:54:37.2048637Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-09T00:54:37.2048882Z [36;1m  },[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-09T00:54:37.2049097Z [36;1m  "admin-ui": {[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-09T00:54:37.2049347Z [36;1m    "result": "success",[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-09T00:54:37.2049611Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-09T00:54:37.2049981Z [36;1m  },[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-09T00:54:37.2050202Z [36;1m  "admin-ui-e2e": {[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-09T00:54:37.2050458Z [36;1m    "result": "failure",[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-09T00:54:37.2050722Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-09T00:54:37.2050961Z [36;1m  }[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-09T00:54:37.2051165Z [36;1m}'[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-09T00:54:37.2051377Z [36;1m[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-09T00:54:37.2051614Z [36;1mecho "Job status:"[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-09T00:54:37.2051983Z [36;1mecho $JOBS | jq -r 'to_entries[] | " - \(.key): \(.value.result)"'[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-09T00:54:37.2052381Z [36;1m[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-09T00:54:37.2052674Z [36;1mfor i in $(echo $JOBS | jq -r 'to_entries[] | .value.result'); do[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-09T00:54:37.2053086Z [36;1m  if [ "$i" != "success" ] && [ "$i" != "skipped" ]; then[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-09T00:54:37.2053403Z [36;1m    echo ""[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-09T00:54:37.2053686Z [36;1m    echo "Status check not okay!"[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-09T00:54:37.2053971Z [36;1m    exit 1[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-09T00:54:37.2054199Z [36;1m  fi[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-09T00:54:37.2054410Z [36;1mdone[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-09T00:54:37.2107091Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-09T00:54:37.2107523Z env:
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-09T00:54:37.2107895Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-09T00:54:37.2108273Z   RETRY_COUNT: 3
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-09T00:54:37.2108549Z ##[endgroup]
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-09T00:54:37.2191636Z Job status:
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-09T00:54:37.2235707Z  - conditional: success
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-09T00:54:37.2236221Z  - build-keycloak: success
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-09T00:54:37.2236665Z  - admin-client: success
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-09T00:54:37.2237095Z  - ui-shared: success
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-09T00:54:37.2237504Z  - account-ui: success
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-09T00:54:37.2237922Z  - account-ui-e2e: success
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-09T00:54:37.2238342Z  - admin-ui: success
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-09T00:54:37.2238735Z  - admin-ui-e2e: failure
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-09T00:54:37.2270249Z 
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-09T00:54:37.2270663Z Status check not okay!
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-09T00:54:37.2282315Z ##[error]Process completed with exit code 1.
