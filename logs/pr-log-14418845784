@@ -1,0 +1,328 @@
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:46:25.5281177Z ##[group]Run pnpm --fail-if-no-match --filter keycloak-admin-ui test:integration --project=chromium
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:46:25.5281923Z [36;1mpnpm --fail-if-no-match --filter keycloak-admin-ui test:integration --project=chromium[0m
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:46:25.5328789Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:46:25.5329128Z env:
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:46:25.5329416Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:46:25.5329762Z   RETRY_COUNT: 3
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:46:25.5329980Z   WORKSPACE: keycloak-admin-ui
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:46:25.5330332Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.6-7/x64
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:46:25.5330816Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.6-7/x64
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:46:25.5331204Z ##[endgroup]
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:46:25.8714155Z 
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:46:25.8715028Z > @keycloak/keycloak-admin-ui@999.0.0-SNAPSHOT test:integration /home/runner/work/keycloak/keycloak/js/apps/admin-ui
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:46:25.8715701Z > playwright test --project\=chromium
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:46:25.8715994Z 
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:46:58.6441681Z 
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:46:58.6444304Z Running 344 tests using 1 worker
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:49:54.0172959Z ················································································
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:52:42.8919042Z ··············°························································×±·······
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:55:33.0676008Z ································××F·············································
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:57:59.1741520Z ················································································
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6509613Z ···························
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6519030Z 
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6530298Z   1) [chromium] › test/realm-roles/main.spec.ts:123:3 › Realm roles test › Add associated roles test 
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6530916Z 
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6531736Z     Error: locator.waitFor: Error: strict mode violation: getByLabel('Associated roles', { exact: true }).locator('tbody') resolved to 2 elements:
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6533455Z         1) <tbody role="rowgroup" class="pf-v5-c-table__tbody">…</tbody> aka getByTestId('assigned-roles').locator('tbody')
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6535278Z         2) <tbody role="rowgroup" class="pf-v5-c-table__tbody">…</tbody> aka getByText('accountdelete-accountrole_delete-accountaccountmanage-accountrole_manage-')
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6536235Z 
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6536376Z     Call log:
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6537300Z     [2m  - waiting for getByLabel('Associated roles', { exact: true }).locator('tbody') to be visible[22m
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6537927Z 
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6537938Z 
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6538098Z        at utils/table.ts:71
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6538622Z 
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6539034Z       69 | export async function getTableData(page: Page, name: string) {
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6539784Z       70 |   const table = page.getByLabel(name, { exact: true });
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6540433Z     > 71 |   await table.locator("tbody").waitFor();
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6540953Z          |                                ^
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6541600Z       72 |   const rows = await table.locator("tbody tr").elementHandles();
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6542162Z       73 |
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6542563Z       74 |   const tableData = await Promise.all(
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6543227Z         at getTableData (/home/runner/work/keycloak/keycloak/js/apps/admin-ui/test/utils/table.ts:71:32)
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6543970Z         at clickSelectRow (/home/runner/work/keycloak/keycloak/js/apps/admin-ui/test/utils/table.ts:100:24)
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6544665Z         at pickRole (/home/runner/work/keycloak/keycloak/js/apps/admin-ui/test/utils/roles.ts:32:9)
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6545578Z         at /home/runner/work/keycloak/keycloak/js/apps/admin-ui/test/realm-roles/main.spec.ts:143:11
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6546664Z 
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6547343Z     Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6547806Z 
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6548862Z     Error: locator.waitFor: Error: strict mode violation: getByLabel('Associated roles', { exact: true }).locator('tbody') resolved to 2 elements:
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6550890Z         1) <tbody role="rowgroup" class="pf-v5-c-table__tbody">…</tbody> aka getByTestId('assigned-roles').locator('tbody')
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6552789Z         2) <tbody role="rowgroup" class="pf-v5-c-table__tbody">…</tbody> aka getByText('accountdelete-accountrole_delete-accountaccountmanage-accountrole_manage-')
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6553769Z 
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6553918Z     Call log:
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6554883Z     [2m  - waiting for getByLabel('Associated roles', { exact: true }).locator('tbody') to be visible[22m
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6555564Z 
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6555576Z 
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6555750Z        at utils/table.ts:71
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6556024Z 
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6556426Z       69 | export async function getTableData(page: Page, name: string) {
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6557217Z       70 |   const table = page.getByLabel(name, { exact: true });
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6557884Z     > 71 |   await table.locator("tbody").waitFor();
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6558943Z          |                                ^
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6559622Z       72 |   const rows = await table.locator("tbody tr").elementHandles();
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6560141Z       73 |
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6560402Z       74 |   const tableData = await Promise.all(
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6560964Z         at getTableData (/home/runner/work/keycloak/keycloak/js/apps/admin-ui/test/utils/table.ts:71:32)
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6561725Z         at clickSelectRow (/home/runner/work/keycloak/keycloak/js/apps/admin-ui/test/utils/table.ts:100:24)
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6562425Z         at pickRole (/home/runner/work/keycloak/keycloak/js/apps/admin-ui/test/utils/roles.ts:32:9)
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6563108Z         at /home/runner/work/keycloak/keycloak/js/apps/admin-ui/test/realm-roles/main.spec.ts:143:11
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6563477Z 
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6563902Z     attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6564609Z     test-results/realm-roles-main-Realm-roles-test-Add-associated-roles-test-chromium-retry1/trace.zip
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6565107Z     Usage:
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6565216Z 
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6565735Z         pnpm exec playwright show-trace test-results/realm-roles-main-Realm-roles-test-Add-associated-roles-test-chromium-retry1/trace.zip
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6566257Z 
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6566566Z     ────────────────────────────────────────────────────────────────────────────────────────────────
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6566808Z 
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6567119Z     Retry #2 ───────────────────────────────────────────────────────────────────────────────────────
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6567573Z 
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6568123Z     Error: Row accountmanage-consent not found: ,accountmanage-account-links,False,role_manage-account-links,,,offline_access,False,role_offline-access,
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6568861Z 
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6568966Z        at utils/table.ts:103
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6569137Z 
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6569373Z       101 |     const rowIndex = rows.findIndex((r) => r.includes(row as string));
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6569763Z       102 |     if (rowIndex === -1) {
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6570109Z     > 103 |       throw new Error(`Row ${row} not found: ${rows}`);
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6570411Z           |             ^
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6570623Z       104 |     }
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6570860Z       105 |     row = rowIndex;
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6571083Z       106 |   }
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6571551Z         at clickSelectRow (/home/runner/work/keycloak/keycloak/js/apps/admin-ui/test/utils/table.ts:103:13)
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6572250Z         at pickRole (/home/runner/work/keycloak/keycloak/js/apps/admin-ui/test/utils/roles.ts:32:3)
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6572921Z         at /home/runner/work/keycloak/keycloak/js/apps/admin-ui/test/realm-roles/main.spec.ts:149:5
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6573277Z 
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6573855Z   2) [chromium] › test/identity-providers/saml.spec.ts:79:5 › SAML identity provider test › should add SAML mapper of type Hardcoded Attribute 
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6574494Z 
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6575021Z     Error: [31mTimed out 5000ms waiting for [39m[2mexpect([22m[31mlocator[39m[2m).[22mtoHaveText[2m([22m[32mexpected[39m[2m)[22m
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6575446Z 
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6575574Z     Locator: getByTestId('last-alert')
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6575997Z     Expected string: [32m"Mapper created successfully."[39m
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6576349Z     Received: <element(s) not found>
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6576599Z     Call log:
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6576907Z     [2m  - expect.toHaveText with timeout 5000ms[22m
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6577307Z     [2m  - waiting for getByTestId('last-alert')[22m
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6577511Z 
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6577517Z 
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6577618Z        at utils/masthead.ts:5
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6577768Z 
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6577848Z       3 |
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6578343Z       4 | export async function assertNotificationMessage(page: Page, message: string) {
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6578889Z     > 5 |   await expect(page.getByTestId("last-alert")).toHaveText(message);
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6579283Z         |                                                ^
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6579541Z       6 | }
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6579714Z       7 |
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6579965Z       8 | function getActionToggleButton(page: Page) {
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6580592Z         at assertNotificationMessage (/home/runner/work/keycloak/keycloak/js/apps/admin-ui/test/utils/masthead.ts:5:48)
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6581384Z         at /home/runner/work/keycloak/keycloak/js/apps/admin-ui/test/identity-providers/saml.spec.ts:83:13
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6581779Z 
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6581860Z   1 failed
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6582338Z     [chromium] › test/realm-roles/main.spec.ts:123:3 › Realm roles test › Add associated roles test 
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6582758Z   1 flaky
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6583396Z     [chromium] › test/identity-providers/saml.spec.ts:79:5 › SAML identity provider test › should add SAML mapper of type Hardcoded Attribute 
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6583948Z   1 skipped
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6584137Z   341 passed (12.4m)
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6615847Z ##[error]  1) [chromium] › test/realm-roles/main.spec.ts:123:3 › Realm roles test › Add associated roles test 
+Admin UI E2E (chromium)	Run Playwright tests	    Error: locator.waitFor: Error: strict mode violation: getByLabel('Associated roles', { exact: true }).locator('tbody') resolved to 2 elements:
+Admin UI E2E (chromium)	Run Playwright tests	        1) <tbody role="rowgroup" class="pf-v5-c-table__tbody">…</tbody> aka getByTestId('assigned-roles').locator('tbody')
+Admin UI E2E (chromium)	Run Playwright tests	        2) <tbody role="rowgroup" class="pf-v5-c-table__tbody">…</tbody> aka getByText('accountdelete-accountrole_delete-accountaccountmanage-accountrole_manage-')
+Admin UI E2E (chromium)	Run Playwright tests	
+Admin UI E2E (chromium)	Run Playwright tests	    Call log:
+Admin UI E2E (chromium)	Run Playwright tests	      - waiting for getByLabel('Associated roles', { exact: true }).locator('tbody') to be visible
+Admin UI E2E (chromium)	Run Playwright tests	
+Admin UI E2E (chromium)	Run Playwright tests	
+Admin UI E2E (chromium)	Run Playwright tests	       at utils/table.ts:71
+Admin UI E2E (chromium)	Run Playwright tests	
+Admin UI E2E (chromium)	Run Playwright tests	      69 | export async function getTableData(page: Page, name: string) {
+Admin UI E2E (chromium)	Run Playwright tests	      70 |   const table = page.getByLabel(name, { exact: true });
+Admin UI E2E (chromium)	Run Playwright tests	    > 71 |   await table.locator("tbody").waitFor();
+Admin UI E2E (chromium)	Run Playwright tests	         |                                ^
+Admin UI E2E (chromium)	Run Playwright tests	      72 |   const rows = await table.locator("tbody tr").elementHandles();
+Admin UI E2E (chromium)	Run Playwright tests	      73 |
+Admin UI E2E (chromium)	Run Playwright tests	      74 |   const tableData = await Promise.all(
+Admin UI E2E (chromium)	Run Playwright tests	        at getTableData (/home/runner/work/keycloak/keycloak/js/apps/admin-ui/test/utils/table.ts:71:32)
+Admin UI E2E (chromium)	Run Playwright tests	        at clickSelectRow (/home/runner/work/keycloak/keycloak/js/apps/admin-ui/test/utils/table.ts:100:24)
+Admin UI E2E (chromium)	Run Playwright tests	        at pickRole (/home/runner/work/keycloak/keycloak/js/apps/admin-ui/test/utils/roles.ts:32:9)
+Admin UI E2E (chromium)	Run Playwright tests	        at /home/runner/work/keycloak/keycloak/js/apps/admin-ui/test/realm-roles/main.spec.ts:143:11
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6636356Z ##[error]  1) [chromium] › test/realm-roles/main.spec.ts:123:3 › Realm roles test › Add associated roles test 
+Admin UI E2E (chromium)	Run Playwright tests	
+Admin UI E2E (chromium)	Run Playwright tests	    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+Admin UI E2E (chromium)	Run Playwright tests	    Error: locator.waitFor: Error: strict mode violation: getByLabel('Associated roles', { exact: true }).locator('tbody') resolved to 2 elements:
+Admin UI E2E (chromium)	Run Playwright tests	        1) <tbody role="rowgroup" class="pf-v5-c-table__tbody">…</tbody> aka getByTestId('assigned-roles').locator('tbody')
+Admin UI E2E (chromium)	Run Playwright tests	        2) <tbody role="rowgroup" class="pf-v5-c-table__tbody">…</tbody> aka getByText('accountdelete-accountrole_delete-accountaccountmanage-accountrole_manage-')
+Admin UI E2E (chromium)	Run Playwright tests	
+Admin UI E2E (chromium)	Run Playwright tests	    Call log:
+Admin UI E2E (chromium)	Run Playwright tests	      - waiting for getByLabel('Associated roles', { exact: true }).locator('tbody') to be visible
+Admin UI E2E (chromium)	Run Playwright tests	
+Admin UI E2E (chromium)	Run Playwright tests	
+Admin UI E2E (chromium)	Run Playwright tests	       at utils/table.ts:71
+Admin UI E2E (chromium)	Run Playwright tests	
+Admin UI E2E (chromium)	Run Playwright tests	      69 | export async function getTableData(page: Page, name: string) {
+Admin UI E2E (chromium)	Run Playwright tests	      70 |   const table = page.getByLabel(name, { exact: true });
+Admin UI E2E (chromium)	Run Playwright tests	    > 71 |   await table.locator("tbody").waitFor();
+Admin UI E2E (chromium)	Run Playwright tests	         |                                ^
+Admin UI E2E (chromium)	Run Playwright tests	      72 |   const rows = await table.locator("tbody tr").elementHandles();
+Admin UI E2E (chromium)	Run Playwright tests	      73 |
+Admin UI E2E (chromium)	Run Playwright tests	      74 |   const tableData = await Promise.all(
+Admin UI E2E (chromium)	Run Playwright tests	        at getTableData (/home/runner/work/keycloak/keycloak/js/apps/admin-ui/test/utils/table.ts:71:32)
+Admin UI E2E (chromium)	Run Playwright tests	        at clickSelectRow (/home/runner/work/keycloak/keycloak/js/apps/admin-ui/test/utils/table.ts:100:24)
+Admin UI E2E (chromium)	Run Playwright tests	        at pickRole (/home/runner/work/keycloak/keycloak/js/apps/admin-ui/test/utils/roles.ts:32:9)
+Admin UI E2E (chromium)	Run Playwright tests	        at /home/runner/work/keycloak/keycloak/js/apps/admin-ui/test/realm-roles/main.spec.ts:143:11
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6646668Z ##[error]  1) [chromium] › test/realm-roles/main.spec.ts:123:3 › Realm roles test › Add associated roles test 
+Admin UI E2E (chromium)	Run Playwright tests	
+Admin UI E2E (chromium)	Run Playwright tests	    Retry #2 ───────────────────────────────────────────────────────────────────────────────────────
+Admin UI E2E (chromium)	Run Playwright tests	    Error: Row accountmanage-consent not found: ,accountmanage-account-links,False,role_manage-account-links,,,offline_access,False,role_offline-access,
+Admin UI E2E (chromium)	Run Playwright tests	
+Admin UI E2E (chromium)	Run Playwright tests	       at utils/table.ts:103
+Admin UI E2E (chromium)	Run Playwright tests	
+Admin UI E2E (chromium)	Run Playwright tests	      101 |     const rowIndex = rows.findIndex((r) => r.includes(row as string));
+Admin UI E2E (chromium)	Run Playwright tests	      102 |     if (rowIndex === -1) {
+Admin UI E2E (chromium)	Run Playwright tests	    > 103 |       throw new Error(`Row ${row} not found: ${rows}`);
+Admin UI E2E (chromium)	Run Playwright tests	          |             ^
+Admin UI E2E (chromium)	Run Playwright tests	      104 |     }
+Admin UI E2E (chromium)	Run Playwright tests	      105 |     row = rowIndex;
+Admin UI E2E (chromium)	Run Playwright tests	      106 |   }
+Admin UI E2E (chromium)	Run Playwright tests	        at clickSelectRow (/home/runner/work/keycloak/keycloak/js/apps/admin-ui/test/utils/table.ts:103:13)
+Admin UI E2E (chromium)	Run Playwright tests	        at pickRole (/home/runner/work/keycloak/keycloak/js/apps/admin-ui/test/utils/roles.ts:32:3)
+Admin UI E2E (chromium)	Run Playwright tests	        at /home/runner/work/keycloak/keycloak/js/apps/admin-ui/test/realm-roles/main.spec.ts:149:5
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6659545Z ##[error]  2) [chromium] › test/identity-providers/saml.spec.ts:79:5 › SAML identity provider test › should add SAML mapper of type Hardcoded Attribute 
+Admin UI E2E (chromium)	Run Playwright tests	    Error: Timed out 5000ms waiting for expect(locator).toHaveText(expected)
+Admin UI E2E (chromium)	Run Playwright tests	
+Admin UI E2E (chromium)	Run Playwright tests	    Locator: getByTestId('last-alert')
+Admin UI E2E (chromium)	Run Playwright tests	    Expected string: "Mapper created successfully."
+Admin UI E2E (chromium)	Run Playwright tests	    Received: <element(s) not found>
+Admin UI E2E (chromium)	Run Playwright tests	    Call log:
+Admin UI E2E (chromium)	Run Playwright tests	      - expect.toHaveText with timeout 5000ms
+Admin UI E2E (chromium)	Run Playwright tests	      - waiting for getByTestId('last-alert')
+Admin UI E2E (chromium)	Run Playwright tests	
+Admin UI E2E (chromium)	Run Playwright tests	
+Admin UI E2E (chromium)	Run Playwright tests	       at utils/masthead.ts:5
+Admin UI E2E (chromium)	Run Playwright tests	
+Admin UI E2E (chromium)	Run Playwright tests	      3 |
+Admin UI E2E (chromium)	Run Playwright tests	      4 | export async function assertNotificationMessage(page: Page, message: string) {
+Admin UI E2E (chromium)	Run Playwright tests	    > 5 |   await expect(page.getByTestId("last-alert")).toHaveText(message);
+Admin UI E2E (chromium)	Run Playwright tests	        |                                                ^
+Admin UI E2E (chromium)	Run Playwright tests	      6 | }
+Admin UI E2E (chromium)	Run Playwright tests	      7 |
+Admin UI E2E (chromium)	Run Playwright tests	      8 | function getActionToggleButton(page: Page) {
+Admin UI E2E (chromium)	Run Playwright tests	        at assertNotificationMessage (/home/runner/work/keycloak/keycloak/js/apps/admin-ui/test/utils/masthead.ts:5:48)
+Admin UI E2E (chromium)	Run Playwright tests	        at /home/runner/work/keycloak/keycloak/js/apps/admin-ui/test/identity-providers/saml.spec.ts:83:13
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.6671138Z ##[notice]  1 failed
+Admin UI E2E (chromium)	Run Playwright tests	    [chromium] › test/realm-roles/main.spec.ts:123:3 › Realm roles test › Add associated roles test 
+Admin UI E2E (chromium)	Run Playwright tests	  1 flaky
+Admin UI E2E (chromium)	Run Playwright tests	    [chromium] › test/identity-providers/saml.spec.ts:79:5 › SAML identity provider test › should add SAML mapper of type Hardcoded Attribute 
+Admin UI E2E (chromium)	Run Playwright tests	  1 skipped
+Admin UI E2E (chromium)	Run Playwright tests	  341 passed (12.4m)
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.9136391Z /home/runner/work/keycloak/keycloak/js/apps/admin-ui:
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.9137958Z  ERR_PNPM_RECURSIVE_RUN_FIRST_FAIL  @keycloak/keycloak-admin-ui@999.0.0-SNAPSHOT test:integration: `playwright test --project\=chromium`
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.9138840Z Exit status 1
+Admin UI E2E (chromium)	Run Playwright tests	2025-04-12T10:58:48.9300278Z ##[error]Process completed with exit code 1.
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-12T10:59:04.1054232Z Prepare all required actions
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-12T10:59:04.1127258Z ##[group]Run ./.github/actions/status-check
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-12T10:59:04.1127593Z with:
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-12T10:59:04.1128761Z   jobs: {
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	  "conditional": {
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	    "outputs": {
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	      "js-ci": "true"
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	    }
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	  "build-keycloak": {
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	  "admin-client": {
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	  "ui-shared": {
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	  "account-ui": {
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	  "account-ui-e2e": {
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	  "admin-ui": {
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	  "admin-ui-e2e": {
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	    "result": "failure",
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	  }
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	}
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-12T10:59:04.1130030Z env:
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-12T10:59:04.1130331Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-12T10:59:04.1130857Z   RETRY_COUNT: 3
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-12T10:59:04.1131105Z ##[endgroup]
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-12T10:59:04.1326903Z ##[group]Run JOBS='{
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-12T10:59:04.1327322Z [36;1mJOBS='{[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-12T10:59:04.1327564Z [36;1m  "conditional": {[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-12T10:59:04.1327834Z [36;1m    "result": "success",[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-12T10:59:04.1328112Z [36;1m    "outputs": {[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-12T10:59:04.1328365Z [36;1m      "js-ci": "true"[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-12T10:59:04.1328605Z [36;1m    }[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-12T10:59:04.1328813Z [36;1m  },[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-12T10:59:04.1329031Z [36;1m  "build-keycloak": {[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-12T10:59:04.1329288Z [36;1m    "result": "success",[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-12T10:59:04.1329554Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-12T10:59:04.1329792Z [36;1m  },[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-12T10:59:04.1330008Z [36;1m  "admin-client": {[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-12T10:59:04.1330262Z [36;1m    "result": "success",[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-12T10:59:04.1330766Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-12T10:59:04.1331010Z [36;1m  },[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-12T10:59:04.1331221Z [36;1m  "ui-shared": {[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-12T10:59:04.1331464Z [36;1m    "result": "success",[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-12T10:59:04.1331720Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-12T10:59:04.1331965Z [36;1m  },[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-12T10:59:04.1332177Z [36;1m  "account-ui": {[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-12T10:59:04.1332420Z [36;1m    "result": "success",[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-12T10:59:04.1332672Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-12T10:59:04.1332901Z [36;1m  },[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-12T10:59:04.1333105Z [36;1m  "account-ui-e2e": {[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-12T10:59:04.1333360Z [36;1m    "result": "success",[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-12T10:59:04.1333620Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-12T10:59:04.1333855Z [36;1m  },[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-12T10:59:04.1334065Z [36;1m  "admin-ui": {[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-12T10:59:04.1334300Z [36;1m    "result": "success",[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-12T10:59:04.1334555Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-12T10:59:04.1334789Z [36;1m  },[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-12T10:59:04.1335000Z [36;1m  "admin-ui-e2e": {[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-12T10:59:04.1335256Z [36;1m    "result": "failure",[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-12T10:59:04.1335514Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-12T10:59:04.1335749Z [36;1m  }[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-12T10:59:04.1335953Z [36;1m}'[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-12T10:59:04.1336161Z [36;1m[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-12T10:59:04.1336390Z [36;1mecho "Job status:"[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-12T10:59:04.1336782Z [36;1mecho $JOBS | jq -r 'to_entries[] | " - \(.key): \(.value.result)"'[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-12T10:59:04.1337142Z [36;1m[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-12T10:59:04.1337424Z [36;1mfor i in $(echo $JOBS | jq -r 'to_entries[] | .value.result'); do[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-12T10:59:04.1337824Z [36;1m  if [ "$i" != "success" ] && [ "$i" != "skipped" ]; then[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-12T10:59:04.1338155Z [36;1m    echo ""[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-12T10:59:04.1338444Z [36;1m    echo "Status check not okay!"[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-12T10:59:04.1338725Z [36;1m    exit 1[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-12T10:59:04.1338933Z [36;1m  fi[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-12T10:59:04.1339141Z [36;1mdone[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-12T10:59:04.1392818Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-12T10:59:04.1393197Z env:
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-12T10:59:04.1393506Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-12T10:59:04.1393898Z   RETRY_COUNT: 3
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-12T10:59:04.1394122Z ##[endgroup]
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-12T10:59:04.1489861Z Job status:
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-12T10:59:04.1527152Z  - conditional: success
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-12T10:59:04.1527595Z  - build-keycloak: success
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-12T10:59:04.1527972Z  - admin-client: success
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-12T10:59:04.1528255Z  - ui-shared: success
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-12T10:59:04.1528513Z  - account-ui: success
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-12T10:59:04.1528904Z  - account-ui-e2e: success
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-12T10:59:04.1529315Z  - admin-ui: success
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-12T10:59:04.1529681Z  - admin-ui-e2e: failure
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-12T10:59:04.1562227Z 
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-12T10:59:04.1562582Z Status check not okay!
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-04-12T10:59:04.1575195Z ##[error]Process completed with exit code 1.
