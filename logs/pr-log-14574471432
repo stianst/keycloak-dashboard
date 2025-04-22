@@ -1,0 +1,782 @@
+FIPS UT	Run crypto tests	2025-04-21T13:44:46.7590873Z ##[group]Run docker run --rm --workdir /github/workspace -v "/home/runner/work/keycloak/keycloak":"/github/workspace" -v "$HOME/.m2":"/root/.m2" registry.access.redhat.com/ubi8/ubi:latest .github/scripts/run-fips-ut.sh
+FIPS UT	Run crypto tests	2025-04-21T13:44:46.7592291Z [36;1mdocker run --rm --workdir /github/workspace -v "/home/runner/work/keycloak/keycloak":"/github/workspace" -v "$HOME/.m2":"/root/.m2" registry.access.redhat.com/ubi8/ubi:latest .github/scripts/run-fips-ut.sh[0m
+FIPS UT	Run crypto tests	2025-04-21T13:44:46.7623008Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+FIPS UT	Run crypto tests	2025-04-21T13:44:46.7623542Z env:
+FIPS UT	Run crypto tests	2025-04-21T13:44:46.7623832Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+FIPS UT	Run crypto tests	2025-04-21T13:44:46.7624181Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+FIPS UT	Run crypto tests	2025-04-21T13:44:46.7624472Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+FIPS UT	Run crypto tests	2025-04-21T13:44:46.7624886Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.7-6/x64
+FIPS UT	Run crypto tests	2025-04-21T13:44:46.7625537Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.7-6/x64
+FIPS UT	Run crypto tests	2025-04-21T13:44:46.7625924Z ##[endgroup]
+FIPS UT	Run crypto tests	2025-04-21T13:44:46.8618783Z Unable to find image 'registry.access.redhat.com/ubi8/ubi:latest' locally
+FIPS UT	Run crypto tests	2025-04-21T13:44:47.4547441Z latest: Pulling from ubi8/ubi
+FIPS UT	Run crypto tests	2025-04-21T13:44:47.6046001Z 11102654476d: Pulling fs layer
+FIPS UT	Run crypto tests	2025-04-21T13:44:48.6453287Z 11102654476d: Verifying Checksum
+FIPS UT	Run crypto tests	2025-04-21T13:44:48.6453903Z 11102654476d: Download complete
+FIPS UT	Run crypto tests	2025-04-21T13:44:51.3496851Z 11102654476d: Pull complete
+FIPS UT	Run crypto tests	2025-04-21T13:44:52.2358653Z Digest: sha256:8bd1b6306f8164de7fb0974031a0f903bd3ab3e6bcab835854d3d9a1a74ea5db
+FIPS UT	Run crypto tests	2025-04-21T13:44:52.2375529Z Status: Downloaded newer image for registry.access.redhat.com/ubi8/ubi:latest
+FIPS UT	Run crypto tests	2025-04-21T13:44:55.9380559Z Updating Subscription Management repositories.
+FIPS UT	Run crypto tests	2025-04-21T13:44:55.9383808Z Unable to read consumer identity
+FIPS UT	Run crypto tests	2025-04-21T13:44:55.9450514Z 
+FIPS UT	Run crypto tests	2025-04-21T13:44:55.9451227Z This system is not registered with an entitlement server. You can use subscription-manager to register.
+FIPS UT	Run crypto tests	2025-04-21T13:44:55.9451910Z 
+FIPS UT	Run crypto tests	2025-04-21T13:44:56.1351255Z Red Hat Universal Base Image 8 (RPMs) - BaseOS  4.8 MB/s | 732 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:56.3759278Z Red Hat Universal Base Image 8 (RPMs) - AppStre  27 MB/s | 3.4 MB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:56.9627647Z Red Hat Universal Base Image 8 (RPMs) - CodeRea 3.2 MB/s | 186 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2177785Z Package crypto-policies-scripts-20230731-1.git3177e06.el8.noarch is already installed.
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2360286Z Dependencies resolved.
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2437863Z =================================================================================================
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2438808Z  Package                     Arch    Version                          Repository             Size
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2439733Z =================================================================================================
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2440310Z Installing:
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2440997Z  java-21-openjdk-devel       x86_64  1:21.0.7.0.6-1.el8               ubi-8-appstream-rpms  5.2 M
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2441813Z Installing dependencies:
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2442508Z  adwaita-cursor-theme        noarch  3.28.0-3.el8                     ubi-8-appstream-rpms  647 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2443489Z  adwaita-icon-theme          noarch  3.28.0-3.el8                     ubi-8-appstream-rpms   11 M
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2444477Z  alsa-lib                    x86_64  1.2.10-2.el8                     ubi-8-appstream-rpms  501 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2445456Z  at-spi2-atk                 x86_64  2.26.2-1.el8                     ubi-8-appstream-rpms   89 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2446089Z  at-spi2-core                x86_64  2.28.0-1.el8                     ubi-8-appstream-rpms  169 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2446689Z  atk                         x86_64  2.28.1-1.el8                     ubi-8-appstream-rpms  272 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2447156Z  avahi-libs                  x86_64  0.7-27.el8_10.1                  ubi-8-baseos-rpms      62 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2447618Z  cairo                       x86_64  1.15.12-6.el8                    ubi-8-appstream-rpms  719 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2448406Z  cairo-gobject               x86_64  1.15.12-6.el8                    ubi-8-appstream-rpms   33 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2448882Z  colord-libs                 x86_64  1.4.2-1.el8                      ubi-8-appstream-rpms  236 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2449366Z  copy-jdk-configs            noarch  4.0-2.el8                        ubi-8-appstream-rpms   31 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2449845Z  cups-libs                   x86_64  1:2.2.6-62.el8_10                ubi-8-baseos-rpms     438 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2450485Z  dejavu-fonts-common         noarch  2.35-7.el8                       ubi-8-baseos-rpms      74 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2451021Z  dejavu-sans-mono-fonts      noarch  2.35-7.el8                       ubi-8-baseos-rpms     447 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2451514Z  fontconfig                  x86_64  2.13.1-4.el8                     ubi-8-baseos-rpms     274 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2452022Z  fontpackages-filesystem     noarch  1.44-22.el8                      ubi-8-baseos-rpms      16 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2452537Z  freetype                    x86_64  2.9.1-10.el8_10                  ubi-8-baseos-rpms     394 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2452974Z  fribidi                     x86_64  1.0.4-9.el8                      ubi-8-appstream-rpms   89 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2453423Z  gdk-pixbuf2                 x86_64  2.36.12-6.el8_10                 ubi-8-baseos-rpms     466 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2453915Z  gdk-pixbuf2-modules         x86_64  2.36.12-6.el8_10                 ubi-8-appstream-rpms  109 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2454424Z  glib-networking             x86_64  2.56.1-1.1.el8                   ubi-8-baseos-rpms     155 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2454895Z  graphite2                   x86_64  1.3.10-10.el8                    ubi-8-appstream-rpms  122 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2455623Z  gsettings-desktop-schemas   x86_64  3.32.0-6.el8                     ubi-8-baseos-rpms     633 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2456179Z  gtk-update-icon-cache       x86_64  3.22.30-12.el8_10                ubi-8-appstream-rpms   32 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2456683Z  harfbuzz                    x86_64  1.7.5-4.el8                      ubi-8-appstream-rpms  296 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2457168Z  hicolor-icon-theme          noarch  0.17-2.el8                       ubi-8-appstream-rpms   48 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2457662Z  jasper-libs                 x86_64  2.0.14-6.el8_10                  ubi-8-appstream-rpms  167 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2458121Z  java-21-openjdk             x86_64  1:21.0.7.0.6-1.el8               ubi-8-appstream-rpms  419 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2458601Z  java-21-openjdk-headless    x86_64  1:21.0.7.0.6-1.el8               ubi-8-appstream-rpms   50 M
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2459150Z  javapackages-filesystem     noarch  5.3.0-1.module+el8+2447+6f56d9a6 ubi-8-appstream-rpms   30 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2459661Z  jbigkit-libs                x86_64  2.1-14.el8                       ubi-8-appstream-rpms   55 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2460081Z  lcms2                       x86_64  2.9-2.el8                        ubi-8-appstream-rpms  165 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2460477Z  libX11                      x86_64  1.6.8-9.el8_10                   ubi-8-appstream-rpms  612 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2460904Z  libX11-common               noarch  1.6.8-9.el8_10                   ubi-8-appstream-rpms  159 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2461329Z  libXau                      x86_64  1.0.9-3.el8                      ubi-8-appstream-rpms   37 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2461757Z  libXcomposite               x86_64  0.4.4-14.el8                     ubi-8-appstream-rpms   29 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2462193Z  libXcursor                  x86_64  1.1.15-3.el8                     ubi-8-appstream-rpms   36 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2462617Z  libXdamage                  x86_64  1.1.4-14.el8                     ubi-8-appstream-rpms   27 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2463031Z  libXext                     x86_64  1.3.4-1.el8                      ubi-8-appstream-rpms   45 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2463447Z  libXfixes                   x86_64  5.0.3-7.el8                      ubi-8-appstream-rpms   25 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2464044Z  libXft                      x86_64  2.3.3-1.el8                      ubi-8-appstream-rpms   67 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2464432Z  libXi                       x86_64  1.7.10-1.el8                     ubi-8-appstream-rpms   49 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2464845Z  libXinerama                 x86_64  1.1.4-1.el8                      ubi-8-appstream-rpms   16 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2465381Z  libXrandr                   x86_64  1.5.2-1.el8                      ubi-8-appstream-rpms   34 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2465800Z  libXrender                  x86_64  0.9.10-7.el8                     ubi-8-appstream-rpms   33 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2466327Z  libXtst                     x86_64  1.2.3-7.el8                      ubi-8-appstream-rpms   22 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2466736Z  libdatrie                   x86_64  0.2.9-7.el8                      ubi-8-appstream-rpms   33 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2467150Z  libepoxy                    x86_64  1.5.8-1.el8                      ubi-8-appstream-rpms  225 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2467567Z  libfontenc                  x86_64  1.1.3-8.el8                      ubi-8-appstream-rpms   37 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2467971Z  libgusb                     x86_64  0.3.0-1.el8                      ubi-8-baseos-rpms      49 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2468392Z  libjpeg-turbo               x86_64  1.5.3-12.el8                     ubi-8-appstream-rpms  157 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2468814Z  libmodman                   x86_64  2.0.1-17.el8                     ubi-8-baseos-rpms      36 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2469225Z  libpkgconf                  x86_64  1.4.2-1.el8                      ubi-8-baseos-rpms      35 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2469636Z  libpng                      x86_64  2:1.6.34-5.el8                   ubi-8-baseos-rpms     126 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2470037Z  libproxy                    x86_64  0.4.15-5.5.el8_10                ubi-8-baseos-rpms      73 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2470575Z  libsoup                     x86_64  2.62.3-7.el8_10                  ubi-8-baseos-rpms     426 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2471331Z  libthai                     x86_64  0.1.27-2.el8                     ubi-8-appstream-rpms  203 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2472143Z  libtiff                     x86_64  4.0.9-33.el8_10                  ubi-8-appstream-rpms  190 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2472970Z  libwayland-client           x86_64  1.21.0-1.el8                     ubi-8-appstream-rpms   41 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2473777Z  libwayland-cursor           x86_64  1.21.0-1.el8                     ubi-8-appstream-rpms   26 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2474241Z  libwayland-egl              x86_64  1.21.0-1.el8                     ubi-8-appstream-rpms   20 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2474703Z  libxcb                      x86_64  1.13.1-1.el8                     ubi-8-appstream-rpms  229 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2475236Z  libxkbcommon                x86_64  0.9.1-1.el8                      ubi-8-appstream-rpms  116 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2475686Z  lksctp-tools                x86_64  1.0.18-3.el8                     ubi-8-baseos-rpms     100 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2476104Z  lua                         x86_64  5.3.4-12.el8                     ubi-8-appstream-rpms  192 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2476497Z  nspr                        x86_64  4.35.0-1.el8_8                   ubi-8-appstream-rpms  143 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2477282Z  nss                         x86_64  3.101.0-11.el8_8                 ubi-8-appstream-rpms  766 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2478036Z  nss-softokn                 x86_64  3.101.0-11.el8_8                 ubi-8-appstream-rpms  532 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2478844Z  nss-softokn-freebl          x86_64  3.101.0-11.el8_8                 ubi-8-appstream-rpms  392 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2479727Z  nss-sysinit                 x86_64  3.101.0-11.el8_8                 ubi-8-appstream-rpms   77 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2480515Z  nss-util                    x86_64  3.101.0-11.el8_8                 ubi-8-appstream-rpms  143 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2481260Z  pango                       x86_64  1.42.4-8.el8                     ubi-8-appstream-rpms  297 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2481857Z  pixman                      x86_64  0.38.4-4.el8                     ubi-8-appstream-rpms  258 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2482273Z  pkgconf                     x86_64  1.4.2-1.el8                      ubi-8-baseos-rpms      38 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2482695Z  pkgconf-m4                  noarch  1.4.2-1.el8                      ubi-8-baseos-rpms      17 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2483153Z  pkgconf-pkg-config          x86_64  1.4.2-1.el8                      ubi-8-baseos-rpms      15 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2483577Z  rest                        x86_64  0.8.1-2.el8                      ubi-8-appstream-rpms   71 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2484101Z  shared-mime-info            x86_64  1.9-4.el8                        ubi-8-baseos-rpms     329 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2484537Z  ttmkfdir                    x86_64  3.0.9-54.el8                     ubi-8-appstream-rpms   62 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2484970Z  tzdata-java                 noarch  2025b-1.el8                      ubi-8-appstream-rpms  187 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2485712Z  xkeyboard-config            noarch  2.28-1.el8                       ubi-8-appstream-rpms  782 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2486192Z  xorg-x11-font-utils         x86_64  1:7.5-41.el8                     ubi-8-appstream-rpms  104 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2486676Z  xorg-x11-fonts-Type1        noarch  7.5-19.el8                       ubi-8-appstream-rpms  522 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2487058Z Installing weak dependencies:
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2487439Z  abattis-cantarell-fonts     noarch  0.0.25-6.el8                     ubi-8-appstream-rpms  156 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2487892Z  dconf                       x86_64  0.28.0-4.el8                     ubi-8-appstream-rpms  108 k
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2488291Z  gtk3                        x86_64  3.22.30-12.el8_10                ubi-8-appstream-rpms  4.5 M
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2488612Z Enabling module streams:
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2488937Z  javapackages-runtime                201801                                                      
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2489211Z 
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2489297Z Transaction Summary
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2489526Z =================================================================================================
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2489800Z Install  87 Packages
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2489937Z 
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2490033Z Total download size: 87 M
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2490252Z Installed size: 312 M
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.2490464Z Downloading Packages:
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.3012110Z (1/87): dejavu-fonts-common-2.35-7.el8.noarch.r 1.6 MB/s |  74 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.3037854Z (2/87): avahi-libs-0.7-27.el8_10.1.x86_64.rpm   1.3 MB/s |  62 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.3137312Z (3/87): cups-libs-2.2.6-62.el8_10.x86_64.rpm    7.3 MB/s | 438 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.3163562Z (4/87): fontconfig-2.13.1-4.el8.x86_64.rpm       22 MB/s | 274 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.3191892Z (5/87): dejavu-sans-mono-fonts-2.35-7.el8.noarc  25 MB/s | 447 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.3209234Z (6/87): fontpackages-filesystem-1.44-22.el8.noa 2.3 MB/s |  16 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.3259292Z (7/87): freetype-2.9.1-10.el8_10.x86_64.rpm      42 MB/s | 394 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.3303126Z (8/87): gdk-pixbuf2-2.36.12-6.el8_10.x86_64.rpm  42 MB/s | 466 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.3332824Z (9/87): glib-networking-2.56.1-1.1.el8.x86_64.r  13 MB/s | 155 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.3364548Z (10/87): libgusb-0.3.0-1.el8.x86_64.rpm         8.8 MB/s |  49 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.3403704Z (11/87): gsettings-desktop-schemas-3.32.0-6.el8  44 MB/s | 633 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.3418868Z (12/87): libmodman-2.0.1-17.el8.x86_64.rpm      4.4 MB/s |  36 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.3436582Z (13/87): libpkgconf-1.4.2-1.el8.x86_64.rpm      5.0 MB/s |  35 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.3466105Z (14/87): libpng-1.6.34-5.el8.x86_64.rpm          21 MB/s | 126 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.3512916Z (15/87): libproxy-0.4.15-5.5.el8_10.x86_64.rpm  7.9 MB/s |  73 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.3548902Z (16/87): libsoup-2.62.3-7.el8_10.x86_64.rpm      38 MB/s | 426 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.3564347Z (17/87): pkgconf-1.4.2-1.el8.x86_64.rpm         7.8 MB/s |  38 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.3608988Z (18/87): lksctp-tools-1.0.18-3.el8.x86_64.rpm   7.0 MB/s | 100 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.3697864Z (19/87): shared-mime-info-1.9-4.el8.x86_64.rpm   38 MB/s | 329 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.3729674Z (20/87): pkgconf-m4-1.4.2-1.el8.noarch.rpm      970 kB/s |  17 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.3738417Z (21/87): pkgconf-pkg-config-1.4.2-1.el8.x86_64. 899 kB/s |  15 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.3765865Z (22/87): abattis-cantarell-fonts-0.0.25-6.el8.n  24 MB/s | 156 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.3876240Z (23/87): adwaita-cursor-theme-3.28.0-3.el8.noar  49 MB/s | 647 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.3914578Z (24/87): at-spi2-atk-2.26.2-1.el8.x86_64.rpm    6.0 MB/s |  89 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.3991363Z (25/87): at-spi2-core-2.28.0-1.el8.x86_64.rpm    15 MB/s | 169 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.4021808Z (26/87): atk-2.28.1-1.el8.x86_64.rpm             25 MB/s | 272 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.4137439Z (27/87): cairo-1.15.12-6.el8.x86_64.rpm          50 MB/s | 719 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.4153424Z (28/87): cairo-gobject-1.15.12-6.el8.x86_64.rpm 2.6 MB/s |  33 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.4208409Z (29/87): copy-jdk-configs-4.0-2.el8.noarch.rpm  6.0 MB/s |  31 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.4269580Z (30/87): dconf-0.28.0-4.el8.x86_64.rpm           18 MB/s | 108 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.4335256Z (31/87): graphite2-1.3.10-10.el8.x86_64.rpm      19 MB/s | 122 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.4392304Z (32/87): hicolor-icon-theme-0.17-2.el8.noarch.r 8.9 MB/s |  48 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.4445828Z (33/87): javapackages-filesystem-5.3.0-1.module 6.0 MB/s |  30 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.4499800Z (34/87): jbigkit-libs-2.1-14.el8.x86_64.rpm      11 MB/s |  55 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.4571717Z (35/87): lcms2-2.9-2.el8.x86_64.rpm              23 MB/s | 165 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.4628029Z (36/87): libXau-1.0.9-3.el8.x86_64.rpm          6.9 MB/s |  37 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.4681124Z (37/87): colord-libs-1.4.2-1.el8.x86_64.rpm     4.3 MB/s | 236 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.4960127Z (38/87): adwaita-icon-theme-3.28.0-3.el8.noarch  94 MB/s |  11 MB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.4973418Z (39/87): libXcomposite-0.4.4-14.el8.x86_64.rpm  835 kB/s |  29 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.4988189Z (40/87): libXcursor-1.1.15-3.el8.x86_64.rpm     1.2 MB/s |  36 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.5049830Z (41/87): libXfixes-5.0.3-7.el8.x86_64.rpm       4.1 MB/s |  25 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.5099243Z (42/87): libXdamage-1.1.4-14.el8.x86_64.rpm     1.9 MB/s |  27 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.5114078Z (43/87): libXft-2.3.3-1.el8.x86_64.rpm           11 MB/s |  67 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.5158922Z (44/87): libXi-1.7.10-1.el8.x86_64.rpm          8.5 MB/s |  49 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.5169922Z (45/87): libXinerama-1.1.4-1.el8.x86_64.rpm     2.9 MB/s |  16 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.5250285Z (46/87): libXrender-0.9.10-7.el8.x86_64.rpm     4.2 MB/s |  33 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.5264971Z (47/87): libXrandr-1.5.2-1.el8.x86_64.rpm       3.2 MB/s |  34 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.5299890Z (48/87): libXtst-1.2.3-7.el8.x86_64.rpm         4.6 MB/s |  22 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.5315514Z (49/87): libdatrie-0.2.9-7.el8.x86_64.rpm       6.9 MB/s |  33 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.5333321Z (50/87): libXext-1.3.4-1.el8.x86_64.rpm         1.2 MB/s |  45 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.5362779Z (51/87): libfontenc-1.1.3-8.el8.x86_64.rpm      8.3 MB/s |  37 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.5384220Z (52/87): libepoxy-1.5.8-1.el8.x86_64.rpm         27 MB/s | 225 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.5427417Z (53/87): libthai-0.1.27-2.el8.x86_64.rpm         32 MB/s | 203 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.5451510Z (54/87): libxcb-1.13.1-1.el8.x86_64.rpm          35 MB/s | 229 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.5487194Z (55/87): libxkbcommon-0.9.1-1.el8.x86_64.rpm     21 MB/s | 116 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.5503710Z (56/87): libjpeg-turbo-1.5.3-12.el8.x86_64.rpm  9.2 MB/s | 157 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.5525827Z (57/87): lua-5.3.4-12.el8.x86_64.rpm             26 MB/s | 192 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.5558955Z (58/87): pango-1.42.4-8.el8.x86_64.rpm           42 MB/s | 297 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.5578228Z (59/87): rest-0.8.1-2.el8.x86_64.rpm            9.6 MB/s |  71 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.5599166Z (60/87): ttmkfdir-3.0.9-54.el8.x86_64.rpm       8.9 MB/s |  62 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.5641856Z (61/87): xorg-x11-font-utils-7.5-41.el8.x86_64.  17 MB/s | 104 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.5691833Z (62/87): xkeyboard-config-2.28-1.el8.noarch.rpm  59 MB/s | 782 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.5757475Z (63/87): alsa-lib-1.2.10-2.el8.x86_64.rpm        44 MB/s | 501 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.5797712Z (64/87): xorg-x11-fonts-Type1-7.5-19.el8.noarch  26 MB/s | 522 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.5823017Z (65/87): gdk-pixbuf2-modules-2.36.12-6.el8_10.x  17 MB/s | 109 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.5844205Z (66/87): fribidi-1.0.4-9.el8.x86_64.rpm         5.9 MB/s |  89 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.5884112Z (67/87): harfbuzz-1.7.5-4.el8.x86_64.rpm         36 MB/s | 296 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.5908083Z (68/87): libwayland-client-1.21.0-1.el8.x86_64. 6.6 MB/s |  41 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.5934904Z (69/87): libwayland-cursor-1.21.0-1.el8.x86_64. 5.5 MB/s |  26 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.5955664Z (70/87): libwayland-egl-1.21.0-1.el8.x86_64.rpm 4.4 MB/s |  20 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.5988118Z (71/87): libX11-1.6.8-9.el8_10.x86_64.rpm        37 MB/s | 612 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.6015846Z (72/87): nspr-4.35.0-1.el8_8.x86_64.rpm          18 MB/s | 143 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.6037438Z (73/87): pixman-0.38.4-4.el8.x86_64.rpm          32 MB/s | 258 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.6054445Z (74/87): gtk-update-icon-cache-3.22.30-12.el8_1 5.4 MB/s |  32 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.6108107Z (75/87): jasper-libs-2.0.14-6.el8_10.x86_64.rpm  25 MB/s | 167 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.6528330Z (76/87): gtk3-3.22.30-12.el8_10.x86_64.rpm       88 MB/s | 4.5 MB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.6557754Z (77/87): java-21-openjdk-21.0.7.0.6-1.el8.x86_6 8.3 MB/s | 419 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.6634051Z (78/87): libX11-common-1.6.8-9.el8_10.noarch.rp  21 MB/s | 159 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.6808910Z (79/87): java-21-openjdk-devel-21.0.7.0.6-1.el8  74 MB/s | 5.2 MB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.6840852Z (80/87): libtiff-4.0.9-33.el8_10.x86_64.rpm     9.2 MB/s | 190 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.6962685Z (81/87): nss-3.101.0-11.el8_8.x86_64.rpm         50 MB/s | 766 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.7041640Z (82/87): nss-softokn-3.101.0-11.el8_8.x86_64.rp  26 MB/s | 532 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.7092379Z (83/87): nss-softokn-freebl-3.101.0-11.el8_8.x8  32 MB/s | 392 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.7115511Z (84/87): nss-sysinit-3.101.0-11.el8_8.x86_64.rp  11 MB/s |  77 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.7157761Z (85/87): nss-util-3.101.0-11.el8_8.x86_64.rpm    24 MB/s | 143 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:57.7184830Z (86/87): tzdata-java-2025b-1.el8.noarch.rpm      28 MB/s | 187 kB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:58.1774831Z (87/87): java-21-openjdk-headless-21.0.7.0.6-1.  96 MB/s |  50 MB     00:00    
+FIPS UT	Run crypto tests	2025-04-21T13:44:58.1808992Z --------------------------------------------------------------------------------
+FIPS UT	Run crypto tests	2025-04-21T13:44:58.1811043Z Total                                            93 MB/s |  87 MB     00:00     
+FIPS UT	Run crypto tests	2025-04-21T13:44:59.2480736Z Running transaction check
+FIPS UT	Run crypto tests	2025-04-21T13:44:59.2957645Z Transaction check succeeded.
+FIPS UT	Run crypto tests	2025-04-21T13:44:59.2958383Z Running transaction test
+FIPS UT	Run crypto tests	2025-04-21T13:44:59.6455375Z Transaction test succeeded.
+FIPS UT	Run crypto tests	2025-04-21T13:44:59.6480253Z Running transaction
+FIPS UT	Run crypto tests	2025-04-21T13:45:00.2086721Z   Running scriptlet: copy-jdk-configs-4.0-2.el8.noarch                      1/1 
+FIPS UT	Run crypto tests	2025-04-21T13:45:00.2446447Z   Running scriptlet: java-21-openjdk-headless-1:21.0.7.0.6-1.el8.x86_64     1/1 
+FIPS UT	Run crypto tests	2025-04-21T13:45:00.2936585Z   Preparing        :                                                        1/1 
+FIPS UT	Run crypto tests	2025-04-21T13:45:00.2981064Z   Installing       : nspr-4.35.0-1.el8_8.x86_64                            1/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:00.3248088Z   Running scriptlet: nspr-4.35.0-1.el8_8.x86_64                            1/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:00.3578521Z   Installing       : libpng-2:1.6.34-5.el8.x86_64                          2/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:00.3708072Z   Installing       : freetype-2.9.1-10.el8_10.x86_64                       3/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:00.3889737Z   Installing       : nss-util-3.101.0-11.el8_8.x86_64                      4/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:00.3959168Z   Installing       : libjpeg-turbo-1.5.3-12.el8.x86_64                     5/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:00.4189242Z   Installing       : fontpackages-filesystem-1.44-22.el8.noarch            6/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:00.4276303Z   Installing       : pixman-0.38.4-4.el8.x86_64                            7/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:00.4563353Z   Installing       : libwayland-client-1.21.0-1.el8.x86_64                 8/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:00.4652241Z   Installing       : atk-2.28.1-1.el8.x86_64                               9/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:00.4759178Z   Installing       : libwayland-cursor-1.21.0-1.el8.x86_64                10/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:00.5102328Z   Installing       : dejavu-fonts-common-2.35-7.el8.noarch                11/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:00.5518430Z   Installing       : dejavu-sans-mono-fonts-2.35-7.el8.noarch             12/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:00.5618552Z   Installing       : fontconfig-2.13.1-4.el8.x86_64                       13/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:01.5969645Z   Running scriptlet: fontconfig-2.13.1-4.el8.x86_64                       13/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:01.6539893Z   Installing       : abattis-cantarell-fonts-0.0.25-6.el8.noarch          14/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:01.6733877Z   Installing       : gsettings-desktop-schemas-3.32.0-6.el8.x86_64        15/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:01.7061086Z   Installing       : jasper-libs-2.0.14-6.el8_10.x86_64                   16/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:01.7545553Z   Installing       : nss-softokn-freebl-3.101.0-11.el8_8.x86_64           17/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:01.8145385Z   Installing       : nss-softokn-3.101.0-11.el8_8.x86_64                  18/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:01.8239530Z   Installing       : nss-3.101.0-11.el8_8.x86_64                          19/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:01.8333976Z   Installing       : nss-sysinit-3.101.0-11.el8_8.x86_64                  20/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:01.8872097Z   Installing       : ttmkfdir-3.0.9-54.el8.x86_64                         21/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:01.9428106Z   Installing       : tzdata-java-2025b-1.el8.noarch                       22/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:01.9524275Z   Installing       : libX11-common-1.6.8-9.el8_10.noarch                  23/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:01.9672125Z   Installing       : libwayland-egl-1.21.0-1.el8.x86_64                   24/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:02.0187711Z   Installing       : fribidi-1.0.4-9.el8.x86_64                           25/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:02.0255912Z   Installing       : alsa-lib-1.2.10-2.el8.x86_64                         26/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:02.1456186Z   Running scriptlet: alsa-lib-1.2.10-2.el8.x86_64                         26/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:02.1633858Z   Installing       : xkeyboard-config-2.28-1.el8.noarch                   27/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:02.1844236Z   Installing       : libxkbcommon-0.9.1-1.el8.x86_64                      28/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:02.1909641Z   Installing       : lua-5.3.4-12.el8.x86_64                              29/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:02.1977217Z   Installing       : copy-jdk-configs-4.0-2.el8.noarch                    30/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:02.2228014Z   Installing       : libfontenc-1.1.3-8.el8.x86_64                        31/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:02.2299096Z   Installing       : libepoxy-1.5.8-1.el8.x86_64                          32/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:02.2344232Z   Installing       : libdatrie-0.2.9-7.el8.x86_64                         33/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:02.2646962Z   Running scriptlet: libdatrie-0.2.9-7.el8.x86_64                         33/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:02.2693046Z   Installing       : libthai-0.1.27-2.el8.x86_64                          34/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:02.2857452Z   Running scriptlet: libthai-0.1.27-2.el8.x86_64                          34/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:02.3303165Z   Installing       : libXau-1.0.9-3.el8.x86_64                            35/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:02.3794321Z   Installing       : libxcb-1.13.1-1.el8.x86_64                           36/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:02.3879633Z   Installing       : libX11-1.6.8-9.el8_10.x86_64                         37/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:02.3962562Z   Installing       : libXext-1.3.4-1.el8.x86_64                           38/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:02.4531480Z   Installing       : libXrender-0.9.10-7.el8.x86_64                       39/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:02.4699065Z   Installing       : cairo-1.15.12-6.el8.x86_64                           40/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:02.4784141Z   Installing       : libXi-1.7.10-1.el8.x86_64                            41/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:02.4849015Z   Installing       : libXfixes-5.0.3-7.el8.x86_64                         42/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:02.4921852Z   Installing       : libXtst-1.2.3-7.el8.x86_64                           43/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:02.5166797Z   Installing       : libXcomposite-0.4.4-14.el8.x86_64                    44/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:02.5231879Z   Installing       : at-spi2-core-2.28.0-1.el8.x86_64                     45/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:02.5475946Z   Running scriptlet: at-spi2-core-2.28.0-1.el8.x86_64                     45/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:02.5530359Z   Installing       : at-spi2-atk-2.26.2-1.el8.x86_64                      46/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:02.5709967Z   Running scriptlet: at-spi2-atk-2.26.2-1.el8.x86_64                      46/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:02.5804017Z   Installing       : libXcursor-1.1.15-3.el8.x86_64                       47/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:02.5868852Z   Installing       : libXdamage-1.1.4-14.el8.x86_64                       48/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:02.5988097Z   Installing       : cairo-gobject-1.15.12-6.el8.x86_64                   49/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:02.6066501Z   Installing       : libXft-2.3.3-1.el8.x86_64                            50/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:02.6143549Z   Installing       : libXrandr-1.5.2-1.el8.x86_64                         51/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:02.6325254Z   Installing       : libXinerama-1.1.4-1.el8.x86_64                       52/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:02.6386585Z   Installing       : lcms2-2.9-2.el8.x86_64                               53/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:02.6594315Z   Running scriptlet: lcms2-2.9-2.el8.x86_64                               53/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:02.6645562Z   Installing       : jbigkit-libs-2.1-14.el8.x86_64                       54/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:02.6927320Z   Running scriptlet: jbigkit-libs-2.1-14.el8.x86_64                       54/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:02.7038553Z   Installing       : libtiff-4.0.9-33.el8_10.x86_64                       55/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:02.7464605Z   Installing       : javapackages-filesystem-5.3.0-1.module+el8+2447+6f   56/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:02.7672530Z   Installing       : hicolor-icon-theme-0.17-2.el8.noarch                 57/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:02.7948877Z   Installing       : graphite2-1.3.10-10.el8.x86_64                       58/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:02.8067514Z   Installing       : harfbuzz-1.7.5-4.el8.x86_64                          59/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:02.8476379Z   Running scriptlet: harfbuzz-1.7.5-4.el8.x86_64                          59/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:02.8595511Z   Installing       : pango-1.42.4-8.el8.x86_64                            60/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:02.8920539Z   Running scriptlet: pango-1.42.4-8.el8.x86_64                            60/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:03.0079668Z   Installing       : dconf-0.28.0-4.el8.x86_64                            61/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:04.2369196Z   Installing       : adwaita-cursor-theme-3.28.0-3.el8.noarch             62/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:04.3034473Z   Installing       : adwaita-icon-theme-3.28.0-3.el8.noarch               63/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:04.3089649Z   Installing       : shared-mime-info-1.9-4.el8.x86_64                    64/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:04.3563980Z   Running scriptlet: shared-mime-info-1.9-4.el8.x86_64                    64/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:04.3639396Z   Installing       : gdk-pixbuf2-2.36.12-6.el8_10.x86_64                  65/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:04.3985972Z   Running scriptlet: gdk-pixbuf2-2.36.12-6.el8_10.x86_64                  65/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:04.4095533Z   Installing       : gdk-pixbuf2-modules-2.36.12-6.el8_10.x86_64          66/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:04.4157197Z   Installing       : gtk-update-icon-cache-3.22.30-12.el8_10.x86_64       67/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:04.4350273Z   Installing       : pkgconf-m4-1.4.2-1.el8.noarch                        68/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:04.4414114Z   Installing       : lksctp-tools-1.0.18-3.el8.x86_64                     69/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:04.4583305Z   Running scriptlet: lksctp-tools-1.0.18-3.el8.x86_64                     69/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:04.4708175Z   Installing       : libpkgconf-1.4.2-1.el8.x86_64                        70/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:04.4780365Z   Installing       : pkgconf-1.4.2-1.el8.x86_64                           71/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:04.5016807Z   Installing       : pkgconf-pkg-config-1.4.2-1.el8.x86_64                72/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:04.5449279Z   Installing       : xorg-x11-font-utils-1:7.5-41.el8.x86_64              73/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:04.5506838Z   Installing       : xorg-x11-fonts-Type1-7.5-19.el8.noarch               74/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:04.6026676Z   Running scriptlet: xorg-x11-fonts-Type1-7.5-19.el8.noarch               74/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:04.6086234Z   Installing       : libmodman-2.0.1-17.el8.x86_64                        75/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:04.6286394Z   Running scriptlet: libmodman-2.0.1-17.el8.x86_64                        75/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:04.6344285Z   Installing       : libproxy-0.4.15-5.5.el8_10.x86_64                    76/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:04.6618831Z   Running scriptlet: libproxy-0.4.15-5.5.el8_10.x86_64                    76/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:04.7040271Z   Installing       : glib-networking-2.56.1-1.1.el8.x86_64                77/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:04.7214875Z   Installing       : libsoup-2.62.3-7.el8_10.x86_64                       78/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:04.7274631Z   Installing       : rest-0.8.1-2.el8.x86_64                              79/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:04.7465545Z   Running scriptlet: rest-0.8.1-2.el8.x86_64                              79/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:04.7741179Z   Installing       : libgusb-0.3.0-1.el8.x86_64                           80/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:04.7852811Z   Installing       : colord-libs-1.4.2-1.el8.x86_64                       81/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:04.8194371Z   Installing       : avahi-libs-0.7-27.el8_10.1.x86_64                    82/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:08.6854444Z   Installing       : cups-libs-1:2.2.6-62.el8_10.x86_64                   83/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:08.6951630Z   Installing       : java-21-openjdk-headless-1:21.0.7.0.6-1.el8.x86_64   84/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:09.0444005Z   Running scriptlet: java-21-openjdk-headless-1:21.0.7.0.6-1.el8.x86_64   84/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:09.0924434Z   Installing       : gtk3-3.22.30-12.el8_10.x86_64                        85/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:09.0981371Z   Installing       : java-21-openjdk-1:21.0.7.0.6-1.el8.x86_64            86/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:09.4861788Z   Running scriptlet: java-21-openjdk-1:21.0.7.0.6-1.el8.x86_64            86/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:09.4936827Z   Installing       : java-21-openjdk-devel-1:21.0.7.0.6-1.el8.x86_64      87/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:09.5020647Z   Running scriptlet: java-21-openjdk-devel-1:21.0.7.0.6-1.el8.x86_64      87/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:09.5960150Z   Running scriptlet: nss-3.101.0-11.el8_8.x86_64                          87/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:09.6033192Z   Running scriptlet: copy-jdk-configs-4.0-2.el8.noarch                    87/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:09.6145928Z   Running scriptlet: dconf-0.28.0-4.el8.x86_64                            87/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:09.6271472Z   Running scriptlet: java-21-openjdk-headless-1:21.0.7.0.6-1.el8.x86_64   87/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:09.6478981Z   Running scriptlet: java-21-openjdk-1:21.0.7.0.6-1.el8.x86_64            87/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:09.7200070Z   Running scriptlet: java-21-openjdk-devel-1:21.0.7.0.6-1.el8.x86_64      87/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:09.7385960Z   Running scriptlet: fontconfig-2.13.1-4.el8.x86_64                       87/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:09.7611111Z   Running scriptlet: hicolor-icon-theme-0.17-2.el8.noarch                 87/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:09.8420051Z   Running scriptlet: adwaita-icon-theme-3.28.0-3.el8.noarch               87/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8391745Z   Running scriptlet: shared-mime-info-1.9-4.el8.x86_64                    87/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8861203Z   Running scriptlet: gdk-pixbuf2-2.36.12-6.el8_10.x86_64                  87/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8862173Z   Verifying        : avahi-libs-0.7-27.el8_10.1.x86_64                     1/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8862964Z   Verifying        : cups-libs-1:2.2.6-62.el8_10.x86_64                    2/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8863775Z   Verifying        : dejavu-fonts-common-2.35-7.el8.noarch                 3/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8864664Z   Verifying        : dejavu-sans-mono-fonts-2.35-7.el8.noarch              4/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8865685Z   Verifying        : fontconfig-2.13.1-4.el8.x86_64                        5/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8866539Z   Verifying        : fontpackages-filesystem-1.44-22.el8.noarch            6/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8867369Z   Verifying        : freetype-2.9.1-10.el8_10.x86_64                       7/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8868171Z   Verifying        : gdk-pixbuf2-2.36.12-6.el8_10.x86_64                   8/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8871755Z   Verifying        : glib-networking-2.56.1-1.1.el8.x86_64                 9/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8873087Z   Verifying        : gsettings-desktop-schemas-3.32.0-6.el8.x86_64        10/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8873963Z   Verifying        : libgusb-0.3.0-1.el8.x86_64                           11/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8874719Z   Verifying        : libmodman-2.0.1-17.el8.x86_64                        12/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8875645Z   Verifying        : libpkgconf-1.4.2-1.el8.x86_64                        13/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8876411Z   Verifying        : libpng-2:1.6.34-5.el8.x86_64                         14/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8877137Z   Verifying        : libproxy-0.4.15-5.5.el8_10.x86_64                    15/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8877861Z   Verifying        : libsoup-2.62.3-7.el8_10.x86_64                       16/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8878586Z   Verifying        : lksctp-tools-1.0.18-3.el8.x86_64                     17/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8879335Z   Verifying        : pkgconf-1.4.2-1.el8.x86_64                           18/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8879971Z   Verifying        : pkgconf-m4-1.4.2-1.el8.noarch                        19/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8880708Z   Verifying        : pkgconf-pkg-config-1.4.2-1.el8.x86_64                20/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8881528Z   Verifying        : shared-mime-info-1.9-4.el8.x86_64                    21/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8883510Z   Verifying        : abattis-cantarell-fonts-0.0.25-6.el8.noarch          22/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8884574Z   Verifying        : adwaita-cursor-theme-3.28.0-3.el8.noarch             23/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8885706Z   Verifying        : adwaita-icon-theme-3.28.0-3.el8.noarch               24/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8889907Z   Verifying        : at-spi2-atk-2.26.2-1.el8.x86_64                      25/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8890804Z   Verifying        : at-spi2-core-2.28.0-1.el8.x86_64                     26/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8891909Z   Verifying        : atk-2.28.1-1.el8.x86_64                              27/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8892639Z   Verifying        : cairo-1.15.12-6.el8.x86_64                           28/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8893395Z   Verifying        : cairo-gobject-1.15.12-6.el8.x86_64                   29/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8894151Z   Verifying        : colord-libs-1.4.2-1.el8.x86_64                       30/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8894936Z   Verifying        : copy-jdk-configs-4.0-2.el8.noarch                    31/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8896182Z   Verifying        : dconf-0.28.0-4.el8.x86_64                            32/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8896959Z   Verifying        : graphite2-1.3.10-10.el8.x86_64                       33/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8897760Z   Verifying        : hicolor-icon-theme-0.17-2.el8.noarch                 34/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8898628Z   Verifying        : javapackages-filesystem-5.3.0-1.module+el8+2447+6f   35/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8899467Z   Verifying        : jbigkit-libs-2.1-14.el8.x86_64                       36/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8900210Z   Verifying        : lcms2-2.9-2.el8.x86_64                               37/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8900950Z   Verifying        : libXau-1.0.9-3.el8.x86_64                            38/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8901713Z   Verifying        : libXcomposite-0.4.4-14.el8.x86_64                    39/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8902494Z   Verifying        : libXcursor-1.1.15-3.el8.x86_64                       40/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8903302Z   Verifying        : libXdamage-1.1.4-14.el8.x86_64                       41/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8904082Z   Verifying        : libXext-1.3.4-1.el8.x86_64                           42/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8904801Z   Verifying        : libXfixes-5.0.3-7.el8.x86_64                         43/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8905670Z   Verifying        : libXft-2.3.3-1.el8.x86_64                            44/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8906380Z   Verifying        : libXi-1.7.10-1.el8.x86_64                            45/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8907126Z   Verifying        : libXinerama-1.1.4-1.el8.x86_64                       46/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8907871Z   Verifying        : libXrandr-1.5.2-1.el8.x86_64                         47/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8908602Z   Verifying        : libXrender-0.9.10-7.el8.x86_64                       48/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8909323Z   Verifying        : libXtst-1.2.3-7.el8.x86_64                           49/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8910024Z   Verifying        : libdatrie-0.2.9-7.el8.x86_64                         50/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8910739Z   Verifying        : libepoxy-1.5.8-1.el8.x86_64                          51/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8911459Z   Verifying        : libfontenc-1.1.3-8.el8.x86_64                        52/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8912193Z   Verifying        : libjpeg-turbo-1.5.3-12.el8.x86_64                    53/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8912917Z   Verifying        : libthai-0.1.27-2.el8.x86_64                          54/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8913626Z   Verifying        : libxcb-1.13.1-1.el8.x86_64                           55/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8914939Z   Verifying        : libxkbcommon-0.9.1-1.el8.x86_64                      56/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8915827Z   Verifying        : lua-5.3.4-12.el8.x86_64                              57/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8916516Z   Verifying        : pango-1.42.4-8.el8.x86_64                            58/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8917202Z   Verifying        : rest-0.8.1-2.el8.x86_64                              59/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8918030Z   Verifying        : ttmkfdir-3.0.9-54.el8.x86_64                         60/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8918757Z   Verifying        : xkeyboard-config-2.28-1.el8.noarch                   61/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8919504Z   Verifying        : xorg-x11-font-utils-1:7.5-41.el8.x86_64              62/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8920231Z   Verifying        : xorg-x11-fonts-Type1-7.5-19.el8.noarch               63/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8921194Z   Verifying        : alsa-lib-1.2.10-2.el8.x86_64                         64/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8921896Z   Verifying        : fribidi-1.0.4-9.el8.x86_64                           65/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8922723Z   Verifying        : gdk-pixbuf2-modules-2.36.12-6.el8_10.x86_64          66/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8923457Z   Verifying        : harfbuzz-1.7.5-4.el8.x86_64                          67/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8924401Z   Verifying        : libX11-1.6.8-9.el8_10.x86_64                         68/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8927323Z   Verifying        : libwayland-client-1.21.0-1.el8.x86_64                69/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8928109Z   Verifying        : libwayland-cursor-1.21.0-1.el8.x86_64                70/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8928863Z   Verifying        : libwayland-egl-1.21.0-1.el8.x86_64                   71/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8929566Z   Verifying        : nspr-4.35.0-1.el8_8.x86_64                           72/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8930252Z   Verifying        : pixman-0.38.4-4.el8.x86_64                           73/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8931290Z   Verifying        : gtk-update-icon-cache-3.22.30-12.el8_10.x86_64       74/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8932509Z   Verifying        : gtk3-3.22.30-12.el8_10.x86_64                        75/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8934738Z   Verifying        : jasper-libs-2.0.14-6.el8_10.x86_64                   76/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8936105Z   Verifying        : java-21-openjdk-1:21.0.7.0.6-1.el8.x86_64            77/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8937043Z   Verifying        : java-21-openjdk-devel-1:21.0.7.0.6-1.el8.x86_64      78/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8937828Z   Verifying        : java-21-openjdk-headless-1:21.0.7.0.6-1.el8.x86_64   79/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8938572Z   Verifying        : libX11-common-1.6.8-9.el8_10.noarch                  80/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8939287Z   Verifying        : libtiff-4.0.9-33.el8_10.x86_64                       81/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8940003Z   Verifying        : nss-3.101.0-11.el8_8.x86_64                          82/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8940701Z   Verifying        : nss-softokn-3.101.0-11.el8_8.x86_64                  83/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8941439Z   Verifying        : nss-softokn-freebl-3.101.0-11.el8_8.x86_64           84/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8942175Z   Verifying        : nss-sysinit-3.101.0-11.el8_8.x86_64                  85/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:10.8942869Z   Verifying        : nss-util-3.101.0-11.el8_8.x86_64                     86/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0207751Z   Verifying        : tzdata-java-2025b-1.el8.noarch                       87/87 
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0208291Z Installed products updated.
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0432231Z 
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0432501Z Installed:
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0433333Z   abattis-cantarell-fonts-0.0.25-6.el8.noarch                                   
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0434710Z   adwaita-cursor-theme-3.28.0-3.el8.noarch                                      
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0436205Z   adwaita-icon-theme-3.28.0-3.el8.noarch                                        
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0437363Z   alsa-lib-1.2.10-2.el8.x86_64                                                  
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0438295Z   at-spi2-atk-2.26.2-1.el8.x86_64                                               
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0438946Z   at-spi2-core-2.28.0-1.el8.x86_64                                              
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0439583Z   atk-2.28.1-1.el8.x86_64                                                       
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0440204Z   avahi-libs-0.7-27.el8_10.1.x86_64                                             
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0440843Z   cairo-1.15.12-6.el8.x86_64                                                    
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0441501Z   cairo-gobject-1.15.12-6.el8.x86_64                                            
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0442172Z   colord-libs-1.4.2-1.el8.x86_64                                                
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0442754Z   copy-jdk-configs-4.0-2.el8.noarch                                             
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0443479Z   cups-libs-1:2.2.6-62.el8_10.x86_64                                            
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0443940Z   dconf-0.28.0-4.el8.x86_64                                                     
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0444454Z   dejavu-fonts-common-2.35-7.el8.noarch                                         
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0445016Z   dejavu-sans-mono-fonts-2.35-7.el8.noarch                                      
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0445794Z   fontconfig-2.13.1-4.el8.x86_64                                                
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0446341Z   fontpackages-filesystem-1.44-22.el8.noarch                                    
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0447036Z   freetype-2.9.1-10.el8_10.x86_64                                               
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0447508Z   fribidi-1.0.4-9.el8.x86_64                                                    
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0447955Z   gdk-pixbuf2-2.36.12-6.el8_10.x86_64                                           
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0448377Z   gdk-pixbuf2-modules-2.36.12-6.el8_10.x86_64                                   
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0448808Z   glib-networking-2.56.1-1.1.el8.x86_64                                         
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0449252Z   graphite2-1.3.10-10.el8.x86_64                                                
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0449678Z   gsettings-desktop-schemas-3.32.0-6.el8.x86_64                                 
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0450136Z   gtk-update-icon-cache-3.22.30-12.el8_10.x86_64                                
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0450549Z   gtk3-3.22.30-12.el8_10.x86_64                                                 
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0450947Z   harfbuzz-1.7.5-4.el8.x86_64                                                   
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0451373Z   hicolor-icon-theme-0.17-2.el8.noarch                                          
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0451801Z   jasper-libs-2.0.14-6.el8_10.x86_64                                            
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0452208Z   java-21-openjdk-1:21.0.7.0.6-1.el8.x86_64                                     
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0452639Z   java-21-openjdk-devel-1:21.0.7.0.6-1.el8.x86_64                               
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0453094Z   java-21-openjdk-headless-1:21.0.7.0.6-1.el8.x86_64                            
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0453586Z   javapackages-filesystem-5.3.0-1.module+el8+2447+6f56d9a6.noarch               
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0454039Z   jbigkit-libs-2.1-14.el8.x86_64                                                
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0454413Z   lcms2-2.9-2.el8.x86_64                                                        
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0454776Z   libX11-1.6.8-9.el8_10.x86_64                                                  
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0455287Z   libX11-common-1.6.8-9.el8_10.noarch                                           
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0455673Z   libXau-1.0.9-3.el8.x86_64                                                     
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0456059Z   libXcomposite-0.4.4-14.el8.x86_64                                             
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0456467Z   libXcursor-1.1.15-3.el8.x86_64                                                
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0456858Z   libXdamage-1.1.4-14.el8.x86_64                                                
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0457250Z   libXext-1.3.4-1.el8.x86_64                                                    
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0457629Z   libXfixes-5.0.3-7.el8.x86_64                                                  
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0458005Z   libXft-2.3.3-1.el8.x86_64                                                     
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0458368Z   libXi-1.7.10-1.el8.x86_64                                                     
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0458743Z   libXinerama-1.1.4-1.el8.x86_64                                                
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0459126Z   libXrandr-1.5.2-1.el8.x86_64                                                  
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0459514Z   libXrender-0.9.10-7.el8.x86_64                                                
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0459892Z   libXtst-1.2.3-7.el8.x86_64                                                    
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0460385Z   libdatrie-0.2.9-7.el8.x86_64                                                  
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0460763Z   libepoxy-1.5.8-1.el8.x86_64                                                   
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0461145Z   libfontenc-1.1.3-8.el8.x86_64                                                 
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0461519Z   libgusb-0.3.0-1.el8.x86_64                                                    
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0461902Z   libjpeg-turbo-1.5.3-12.el8.x86_64                                             
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0462408Z   libmodman-2.0.1-17.el8.x86_64                                                 
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0462796Z   libpkgconf-1.4.2-1.el8.x86_64                                                 
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0463168Z   libpng-2:1.6.34-5.el8.x86_64                                                  
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0463540Z   libproxy-0.4.15-5.5.el8_10.x86_64                                             
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0463921Z   libsoup-2.62.3-7.el8_10.x86_64                                                
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0464295Z   libthai-0.1.27-2.el8.x86_64                                                   
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0464662Z   libtiff-4.0.9-33.el8_10.x86_64                                                
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0465192Z   libwayland-client-1.21.0-1.el8.x86_64                                         
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0465619Z   libwayland-cursor-1.21.0-1.el8.x86_64                                         
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0466046Z   libwayland-egl-1.21.0-1.el8.x86_64                                            
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0466428Z   libxcb-1.13.1-1.el8.x86_64                                                    
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0466811Z   libxkbcommon-0.9.1-1.el8.x86_64                                               
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0467211Z   lksctp-tools-1.0.18-3.el8.x86_64                                              
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0467600Z   lua-5.3.4-12.el8.x86_64                                                       
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0467949Z   nspr-4.35.0-1.el8_8.x86_64                                                    
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0468299Z   nss-3.101.0-11.el8_8.x86_64                                                   
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0468674Z   nss-softokn-3.101.0-11.el8_8.x86_64                                           
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0469098Z   nss-softokn-freebl-3.101.0-11.el8_8.x86_64                                    
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0469516Z   nss-sysinit-3.101.0-11.el8_8.x86_64                                           
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0469900Z   nss-util-3.101.0-11.el8_8.x86_64                                              
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0470269Z   pango-1.42.4-8.el8.x86_64                                                     
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0470633Z   pixman-0.38.4-4.el8.x86_64                                                    
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0471003Z   pkgconf-1.4.2-1.el8.x86_64                                                    
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0471386Z   pkgconf-m4-1.4.2-1.el8.noarch                                                 
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0471795Z   pkgconf-pkg-config-1.4.2-1.el8.x86_64                                         
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0472187Z   rest-0.8.1-2.el8.x86_64                                                       
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0472570Z   shared-mime-info-1.9-4.el8.x86_64                                             
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0472963Z   ttmkfdir-3.0.9-54.el8.x86_64                                                  
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0473365Z   tzdata-java-2025b-1.el8.noarch                                                
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0473792Z   xkeyboard-config-2.28-1.el8.noarch                                            
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0474219Z   xorg-x11-font-utils-1:7.5-41.el8.x86_64                                       
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0474652Z   xorg-x11-fonts-Type1-7.5-19.el8.noarch                                        
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0475136Z 
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.0475222Z Complete!
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.2079370Z Setting system policy to FIPS
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.2079914Z Note: System-wide crypto policies are applied on application start-up.
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.2080498Z It is recommended to restart the system for the change of policies
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.2080914Z to fully take place.
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.2166841Z The grubby command is missing, please configure the bootloader manually.
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.2171566Z FIPS mode will be enabled.
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.2172682Z Now you need to configure the bootloader to add kernel options "fips=1"
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.2173397Z and reboot the system for the setting to take effect.
+FIPS UT	Run crypto tests	2025-04-21T13:45:11.2210657Z cat: /proc/sys/crypto/fips_enabled: No such file or directory
+FIPS UT	Run crypto tests	2025-04-21T13:45:12.1643887Z ##[error]Process completed with exit code 1.
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1643602Z Prepare all required actions
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1716520Z ##[group]Run ./.github/actions/status-check
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1716890Z with:
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1720740Z   jobs: {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "conditional": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	      "ci": "true",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	      "ci-aurora": "false",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	      "ci-quarkus": "false",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	      "ci-sssd": "false",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	      "ci-store": "false",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	      "ci-webauthn": "true"
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    }
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "build": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "unit-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "base-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "adapter-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "adapter-integration-tests-strict-cookies": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "quarkus-unit-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "skipped",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "quarkus-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "jdk-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "store-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "volatile-sessions-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "skipped",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "store-model-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "skipped",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "clustering-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "fips-unit-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "failure",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "fips-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "forms-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "webauthn-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "sssd-unit-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "skipped",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "migration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "external-infinispan-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "skipped",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "test-framework": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "base-new-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  }
+Status Check - Keycloak CI	Run /./.github/actions/status-check	}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1725308Z env:
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1725626Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1726020Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1726456Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1726779Z ##[endgroup]
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1917745Z ##[group]Run JOBS='{
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1918154Z [36;1mJOBS='{[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1918406Z [36;1m  "conditional": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1918681Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1918962Z [36;1m    "outputs": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1919207Z [36;1m      "ci": "true",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1919465Z [36;1m      "ci-aurora": "false",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1919741Z [36;1m      "ci-quarkus": "false",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1920019Z [36;1m      "ci-sssd": "false",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1920292Z [36;1m      "ci-store": "false",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1920599Z [36;1m      "ci-webauthn": "true"[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1920855Z [36;1m    }[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1921070Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1921285Z [36;1m  "build": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1921524Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1921784Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1922017Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1922229Z [36;1m  "unit-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1922482Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1922741Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1922972Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1923203Z [36;1m  "base-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1923488Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1923745Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1923979Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1924209Z [36;1m  "adapter-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1924824Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1925115Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1925575Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1925899Z [36;1m  "adapter-integration-tests-strict-cookies": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1926409Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1926670Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1926910Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1927136Z [36;1m  "quarkus-unit-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1927410Z [36;1m    "result": "skipped",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1927672Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1927902Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1928136Z [36;1m  "quarkus-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1928445Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1928703Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1928939Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1929156Z [36;1m  "jdk-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1929506Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1929767Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1930002Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1930240Z [36;1m  "store-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1930532Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1930791Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1931023Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1931250Z [36;1m  "volatile-sessions-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1931537Z [36;1m    "result": "skipped",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1931790Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1932013Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1932227Z [36;1m  "store-model-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1932487Z [36;1m    "result": "skipped",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1932738Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1932971Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1933205Z [36;1m  "clustering-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1933501Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1933759Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1933989Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1934211Z [36;1m  "fips-unit-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1934712Z [36;1m    "result": "failure",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1934976Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1935227Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1935454Z [36;1m  "fips-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1935736Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1935989Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1936223Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1936448Z [36;1m  "forms-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1936731Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1936985Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1937212Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1937449Z [36;1m  "webauthn-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1937744Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1938003Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1938239Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1938452Z [36;1m  "sssd-unit-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1938715Z [36;1m    "result": "skipped",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1938979Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1939204Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1939417Z [36;1m  "migration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1939678Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1939928Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1940155Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1940383Z [36;1m  "external-infinispan-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1940673Z [36;1m    "result": "skipped",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1940924Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1941153Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1941365Z [36;1m  "test-framework": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1941624Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1941873Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1942094Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1942326Z [36;1m  "base-new-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1942612Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1942867Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1943095Z [36;1m  }[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1943435Z [36;1m}'[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1943651Z [36;1m[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1943864Z [36;1mecho "Job status:"[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1944532Z [36;1mecho $JOBS | jq -r 'to_entries[] | " - \(.key): \(.value.result)"'[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1944917Z [36;1m[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1945196Z [36;1mfor i in $(echo $JOBS | jq -r 'to_entries[] | .value.result'); do[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1945600Z [36;1m  if [ "$i" != "success" ] && [ "$i" != "skipped" ]; then[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1945911Z [36;1m    echo ""[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1946154Z [36;1m    echo "Status check not okay!"[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1946436Z [36;1m    exit 1[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1946655Z [36;1m  fi[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1946860Z [36;1mdone[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1999509Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.1999918Z env:
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.2000237Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.2000623Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.2000970Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.2001307Z ##[endgroup]
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.2091579Z Job status:
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.2138089Z  - conditional: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.2138426Z  - build: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.2138681Z  - unit-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.2138955Z  - base-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.2139266Z  - adapter-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.2139649Z  - adapter-integration-tests-strict-cookies: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.2140013Z  - quarkus-unit-tests: skipped
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.2140300Z  - quarkus-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.2140625Z  - jdk-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.2140918Z  - store-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.2141216Z  - volatile-sessions-tests: skipped
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.2141515Z  - store-model-tests: skipped
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.2141809Z  - clustering-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.2142202Z  - fips-unit-tests: failure
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.2142484Z  - fips-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.2142793Z  - forms-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.2143099Z  - webauthn-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.2143394Z  - sssd-unit-tests: skipped
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.2143664Z  - migration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.2143943Z  - external-infinispan-tests: skipped
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.2144454Z  - test-framework: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.2144909Z  - base-new-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.2174507Z 
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.2174770Z Status check not okay!
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-04-21T14:23:02.2188294Z ##[error]Process completed with exit code 1.
