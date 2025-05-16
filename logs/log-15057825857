@@ -1,0 +1,1072 @@
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:15.6116530Z ##[group]Run KC_TEST_DATABASE=postgres KC_TEST_DATABASE_REUSE=true TESTCONTAINERS_REUSE_ENABLE=true ./mvnw package -f tests/pom.xml -Dtest=DatabaseTestSuite -Dkeycloak.distribution.start.timeout=360
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:15.6117864Z [36;1mKC_TEST_DATABASE=postgres KC_TEST_DATABASE_REUSE=true TESTCONTAINERS_REUSE_ENABLE=true ./mvnw package -f tests/pom.xml -Dtest=DatabaseTestSuite -Dkeycloak.distribution.start.timeout=360[0m
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:15.6149677Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:15.6150027Z env:
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:15.6150327Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:15.6150883Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:15.6151194Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:15.6151616Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.7-6/x64
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:15.6152084Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.7-6/x64
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:15.6152503Z ##[endgroup]
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:17.6878684Z [INFO] Loading cache configuration from /home/runner/work/keycloak/keycloak/.mvn/maven-build-cache-config.xml
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:17.7045640Z [INFO] Scanning for projects...
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:17.8412036Z [INFO] ------------------------------------------------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:17.8412926Z [INFO] Reactor Build Order:
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:17.8413458Z [INFO] 
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:17.8414120Z [INFO] Keycloak Tests Parent                                              [pom]
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:17.8415096Z [INFO] Keycloak Testsuite Utilities                                       [jar]
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:17.8416070Z [INFO] Keycloak Testsuite Utilities Shared                                [jar]
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:17.8417112Z [INFO] Keycloak Testsuite Custom Providers                                [jar]
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:17.8418135Z [INFO] New Keycloak Base Testsuite                                        [jar]
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:17.8501438Z [INFO] 
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:17.8502128Z [INFO] --------------< org.keycloak.tests:keycloak-tests-parent >--------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:17.8503036Z [INFO] Building Keycloak Tests Parent 999.0.0-SNAPSHOT                    [1/5]
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:17.8503680Z [INFO]   from pom.xml
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:17.8504194Z [INFO] --------------------------------[ pom ]---------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:17.9033256Z [INFO] 
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:17.9034023Z [INFO] --- enforcer:3.0.0-M3:enforce (enforce-java-version) @ keycloak-tests-parent ---
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:18.1029987Z [INFO] 
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:18.1030936Z [INFO] --- enforcer:3.0.0-M3:enforce (enforce-maven-version) @ keycloak-tests-parent ---
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:18.1041430Z [INFO] 
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:18.1042327Z [INFO] --- buildnumber:1.4:create (get-scm-revision) @ keycloak-tests-parent ---
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:18.3834784Z [INFO] Executing: /bin/sh -c cd '/home/runner/work/keycloak/keycloak/tests' && 'git' 'rev-parse' '--verify' 'HEAD'
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:18.3836360Z [INFO] Working directory: /home/runner/work/keycloak/keycloak/tests
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:18.4331657Z [INFO] Storing buildNumber: 603ecf20ebdc19067baa2200c6296912a56f3957 at timestamp: 1747355838369
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:18.4391861Z [INFO] Storing buildScmBranch: main
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:18.4397498Z [INFO] 
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:18.4404083Z [INFO] --- source:3.1.0:jar-no-fork (attach-sources) @ keycloak-tests-parent ---
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:18.5718646Z [INFO] 
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:18.5721519Z [INFO] --------------< org.keycloak.tests:keycloak-tests-utils >---------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:18.5725439Z [INFO] Building Keycloak Testsuite Utilities 999.0.0-SNAPSHOT             [2/5]
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:18.5729104Z [INFO]   from utils/pom.xml
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:18.5730152Z [INFO] --------------------------------[ jar ]---------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:20.7736165Z [INFO] 
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:20.7737210Z [INFO] --- enforcer:3.0.0-M3:enforce (enforce-java-version) @ keycloak-tests-utils ---
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:20.7768230Z [INFO] 
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:20.7769192Z [INFO] --- enforcer:3.0.0-M3:enforce (enforce-maven-version) @ keycloak-tests-utils ---
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:20.7776406Z [INFO] 
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:20.7780379Z [INFO] --- buildnumber:1.4:create (get-scm-revision) @ keycloak-tests-utils ---
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:20.7796454Z [INFO] 
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:20.7798419Z [INFO] --- resources:3.2.0:resources (default-resources) @ keycloak-tests-utils ---
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:20.8743293Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:20.8752829Z [INFO] Using 'UTF-8' encoding to copy filtered properties files.
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:20.8758792Z [INFO] skip non existing resourceDirectory /home/runner/work/keycloak/keycloak/tests/utils/src/main/resources
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:20.8759620Z [INFO] 
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:20.8760172Z [INFO] --- compiler:3.8.1:compile (default-compile) @ keycloak-tests-utils ---
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:20.9363198Z [INFO] Changes detected - recompiling the module!
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:20.9380965Z [INFO] Compiling 15 source files to /home/runner/work/keycloak/keycloak/tests/utils/target/classes
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:23.4136737Z [INFO] Annotation processing is enabled because one or more processors were found
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:23.4143400Z   on the class path. A future release of javac may disable annotation processing
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:23.4148010Z   unless at least one processor is specified by name (-processor), or a search
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:23.4149261Z   path is specified (--processor-path, --processor-module-path), or annotation
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:23.4150965Z   processing is enabled explicitly (-proc:only, -proc:full).
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:23.4152690Z   Use -Xlint:-options to suppress this message.
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:23.4153560Z   Use -proc:none to disable annotation processing.
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:23.4156391Z [WARNING] /home/runner/work/keycloak/keycloak/tests/utils/src/main/java/org/keycloak/tests/utils/matchers/SamlStatusResponseTypeMatcher.java:[30,31] unchecked conversion
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:23.4158070Z   required: java.util.List<org.hamcrest.Matcher<java.net.URI>>
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:23.4159035Z   found:    java.util.ArrayList
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:23.4159470Z [INFO] 
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:23.4160088Z [INFO] --- resources:3.2.0:testResources (default-testResources) @ keycloak-tests-utils ---
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:23.4202893Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:23.4203610Z [INFO] Using 'UTF-8' encoding to copy filtered properties files.
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:23.4204596Z [INFO] skip non existing resourceDirectory /home/runner/work/keycloak/keycloak/tests/utils/src/test/resources
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:23.4205431Z [INFO] 
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:23.4206009Z [INFO] --- compiler:3.8.1:testCompile (default-testCompile) @ keycloak-tests-utils ---
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:23.4220998Z [INFO] No sources to compile
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:23.4222250Z [INFO] 
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:23.4222929Z [INFO] --- surefire:3.0.0-M7:test (default-test) @ keycloak-tests-utils ---
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:23.5370847Z [INFO] No tests to run.
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:23.5440418Z [INFO] 
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:23.5442622Z [INFO] --- jar:3.1.2:jar (default-jar) @ keycloak-tests-utils ---
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:23.7372440Z [INFO] Building jar: /home/runner/work/keycloak/keycloak/tests/utils/target/keycloak-tests-utils-999.0.0-SNAPSHOT.jar
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:23.7944794Z [INFO] 
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:23.7971444Z [INFO] --- source:3.1.0:jar-no-fork (attach-sources) @ keycloak-tests-utils ---
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:23.8303958Z [INFO] Building jar: /home/runner/work/keycloak/keycloak/tests/utils/target/keycloak-tests-utils-999.0.0-SNAPSHOT-sources.jar
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:23.8683600Z [INFO] 
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:23.8687701Z [INFO] -----------< org.keycloak.tests:keycloak-tests-utils-shared >-----------
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:23.8692065Z [INFO] Building Keycloak Testsuite Utilities Shared 999.0.0-SNAPSHOT      [3/5]
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:23.8696094Z [INFO]   from utils-shared/pom.xml
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:23.8699934Z [INFO] --------------------------------[ jar ]---------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:23.9397780Z [INFO] 
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:23.9431417Z [INFO] --- enforcer:3.0.0-M3:enforce (enforce-java-version) @ keycloak-tests-utils-shared ---
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:23.9433040Z [INFO] 
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:23.9433795Z [INFO] --- enforcer:3.0.0-M3:enforce (enforce-maven-version) @ keycloak-tests-utils-shared ---
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:23.9441009Z [INFO] 
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:23.9444970Z [INFO] --- buildnumber:1.4:create (get-scm-revision) @ keycloak-tests-utils-shared ---
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:23.9456345Z [INFO] 
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:23.9458977Z [INFO] --- resources:3.2.0:resources (default-resources) @ keycloak-tests-utils-shared ---
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:23.9483990Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:23.9485828Z [INFO] Using 'UTF-8' encoding to copy filtered properties files.
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:23.9511407Z [INFO] skip non existing resourceDirectory /home/runner/work/keycloak/keycloak/tests/utils-shared/src/main/resources
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:23.9512669Z [INFO] 
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:23.9516599Z [INFO] --- compiler:3.8.1:compile (default-compile) @ keycloak-tests-utils-shared ---
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:23.9682656Z [INFO] Changes detected - recompiling the module!
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:23.9689020Z [INFO] Compiling 52 source files to /home/runner/work/keycloak/keycloak/tests/utils-shared/target/classes
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:24.6542602Z [INFO] Annotation processing is enabled because one or more processors were found
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:24.6543626Z   on the class path. A future release of javac may disable annotation processing
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:24.6544515Z   unless at least one processor is specified by name (-processor), or a search
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:24.6545398Z   path is specified (--processor-path, --processor-module-path), or annotation
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:24.6546235Z   processing is enabled explicitly (-proc:only, -proc:full).
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:24.6546882Z   Use -Xlint:-options to suppress this message.
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:24.6547456Z   Use -proc:none to disable annotation processing.
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:24.6561202Z [INFO] 
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:24.6565542Z [INFO] --- resources:3.2.0:testResources (default-testResources) @ keycloak-tests-utils-shared ---
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:24.6572264Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:24.6573028Z [INFO] Using 'UTF-8' encoding to copy filtered properties files.
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:24.6575980Z [INFO] skip non existing resourceDirectory /home/runner/work/keycloak/keycloak/tests/utils-shared/src/test/resources
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:24.6577388Z [INFO] 
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:24.6579929Z [INFO] --- compiler:3.8.1:testCompile (default-testCompile) @ keycloak-tests-utils-shared ---
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:24.6621286Z [INFO] No sources to compile
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:24.6622007Z [INFO] 
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:24.6622980Z [INFO] --- surefire:3.0.0-M7:test (default-test) @ keycloak-tests-utils-shared ---
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:24.6633858Z [INFO] No tests to run.
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:24.6646105Z [INFO] 
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:24.6650109Z [INFO] --- jar:3.1.2:jar (default-jar) @ keycloak-tests-utils-shared ---
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:24.6751644Z [INFO] Building jar: /home/runner/work/keycloak/keycloak/tests/utils-shared/target/keycloak-tests-utils-shared-999.0.0-SNAPSHOT.jar
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:24.6931788Z [INFO] 
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:24.6936079Z [INFO] --- source:3.1.0:jar-no-fork (attach-sources) @ keycloak-tests-utils-shared ---
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:24.7252173Z [INFO] Building jar: /home/runner/work/keycloak/keycloak/tests/utils-shared/target/keycloak-tests-utils-shared-999.0.0-SNAPSHOT-sources.jar
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:24.7395012Z [INFO] 
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:24.7395687Z [INFO] ---------< org.keycloak.tests:keycloak-tests-custom-providers >---------
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:24.7396642Z [INFO] Building Keycloak Testsuite Custom Providers 999.0.0-SNAPSHOT      [4/5]
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:24.7397542Z [INFO]   from custom-providers/pom.xml
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:24.7417096Z [INFO] --------------------------------[ jar ]---------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:24.7520216Z [INFO] 
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:24.7521362Z [INFO] --- enforcer:3.0.0-M3:enforce (enforce-java-version) @ keycloak-tests-custom-providers ---
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:24.7528615Z [INFO] 
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:24.7529697Z [INFO] --- enforcer:3.0.0-M3:enforce (enforce-maven-version) @ keycloak-tests-custom-providers ---
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:24.7536471Z [INFO] 
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:24.7537792Z [INFO] --- buildnumber:1.4:create (get-scm-revision) @ keycloak-tests-custom-providers ---
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:24.7545755Z [INFO] 
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:24.7546961Z [INFO] --- resources:3.2.0:resources (default-resources) @ keycloak-tests-custom-providers ---
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:24.7557509Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:24.7559513Z [INFO] Using 'UTF-8' encoding to copy filtered properties files.
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:24.7588270Z [INFO] Copying 1 resource
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:24.7647172Z [INFO] 
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:24.7653039Z [INFO] --- compiler:3.8.1:compile (default-compile) @ keycloak-tests-custom-providers ---
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:24.7667157Z [INFO] Changes detected - recompiling the module!
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:24.7674363Z [INFO] Compiling 2 source files to /home/runner/work/keycloak/keycloak/tests/custom-providers/target/classes
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:24.8318601Z [INFO] 
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:24.8323381Z [INFO] --- resources:3.2.0:testResources (default-testResources) @ keycloak-tests-custom-providers ---
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:24.8332734Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:24.8339382Z [INFO] Using 'UTF-8' encoding to copy filtered properties files.
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:24.8342301Z [INFO] skip non existing resourceDirectory /home/runner/work/keycloak/keycloak/tests/custom-providers/src/test/resources
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:24.8343303Z [INFO] 
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:24.8344002Z [INFO] --- compiler:3.8.1:testCompile (default-testCompile) @ keycloak-tests-custom-providers ---
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:24.8346517Z [INFO] No sources to compile
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:24.8347231Z [INFO] 
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:24.8349216Z [INFO] --- surefire:3.0.0-M7:test (default-test) @ keycloak-tests-custom-providers ---
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:24.8371405Z [INFO] No tests to run.
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:24.8381157Z [INFO] 
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:24.8385180Z [INFO] --- jar:3.1.2:jar (default-jar) @ keycloak-tests-custom-providers ---
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:24.8422696Z [INFO] Building jar: /home/runner/work/keycloak/keycloak/tests/custom-providers/target/keycloak-tests-custom-providers-999.0.0-SNAPSHOT.jar
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:24.8602216Z [INFO] 
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:24.8603294Z [INFO] --- source:3.1.0:jar-no-fork (attach-sources) @ keycloak-tests-custom-providers ---
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:24.8641753Z [INFO] Building jar: /home/runner/work/keycloak/keycloak/tests/custom-providers/target/keycloak-tests-custom-providers-999.0.0-SNAPSHOT-sources.jar
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:24.8701414Z [INFO] 
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:24.8705962Z [INFO] ---------------< org.keycloak.tests:keycloak-tests-base >---------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:24.8711107Z [INFO] Building New Keycloak Base Testsuite 999.0.0-SNAPSHOT              [5/5]
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:24.8716088Z [INFO]   from base/pom.xml
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:24.8720770Z [INFO] --------------------------------[ jar ]---------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:25.3221879Z [INFO] 
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:25.3231422Z [INFO] --- enforcer:3.0.0-M3:enforce (enforce-java-version) @ keycloak-tests-base ---
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:25.3271178Z [INFO] 
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:25.3272093Z [INFO] --- enforcer:3.0.0-M3:enforce (enforce-maven-version) @ keycloak-tests-base ---
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:25.3273060Z [INFO] 
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:25.3273760Z [INFO] --- buildnumber:1.4:create (get-scm-revision) @ keycloak-tests-base ---
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:25.3274595Z [INFO] 
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:25.3275330Z [INFO] --- resources:3.2.0:resources (default-resources) @ keycloak-tests-base ---
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:25.3291087Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:25.3295790Z [INFO] Using 'UTF-8' encoding to copy filtered properties files.
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:25.3301155Z [INFO] skip non existing resourceDirectory /home/runner/work/keycloak/keycloak/tests/base/src/main/resources
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:25.3307227Z [INFO] 
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:25.3312231Z [INFO] --- compiler:3.8.1:compile (default-compile) @ keycloak-tests-base ---
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:25.3333307Z [INFO] No sources to compile
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:25.3351323Z [INFO] 
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:25.3371422Z [INFO] --- resources:3.2.0:testResources (default-testResources) @ keycloak-tests-base ---
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:25.3372500Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:25.3373325Z [INFO] Using 'UTF-8' encoding to copy filtered properties files.
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:25.3374093Z [INFO] Copying 6 resources
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:25.3386839Z [INFO] 
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:25.3394443Z [INFO] --- compiler:3.8.1:testCompile (default-testCompile) @ keycloak-tests-base ---
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:25.3572582Z [INFO] Changes detected - recompiling the module!
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:25.3587173Z [INFO] Compiling 88 source files to /home/runner/work/keycloak/keycloak/tests/base/target/test-classes
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:29.0604596Z [INFO] Annotation processing is enabled because one or more processors were found
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:29.0612162Z   on the class path. A future release of javac may disable annotation processing
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:29.0619166Z   unless at least one processor is specified by name (-processor), or a search
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:29.0622423Z   path is specified (--processor-path, --processor-module-path), or annotation
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:29.0625070Z   processing is enabled explicitly (-proc:only, -proc:full).
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:29.0643157Z   Use -Xlint:-options to suppress this message.
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:29.0643786Z   Use -proc:none to disable annotation processing.
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:29.0646052Z [WARNING] /home/runner/work/keycloak/keycloak/tests/base/src/test/java/org/keycloak/tests/admin/RealmLocalizationResourceTest.java:[77,73] getRealmLocalizationTexts(java.lang.String,java.lang.Boolean) in org.keycloak.admin.client.resource.RealmLocalizationResource has been deprecated
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:29.0660911Z [WARNING] /home/runner/work/keycloak/keycloak/tests/base/src/test/java/org/keycloak/tests/admin/client/AbstractClientScopeTest.java:[38,59] unchecked conversion
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:29.0674444Z   required: java.util.Map<java.lang.String,java.lang.String>
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:29.0675083Z   found:    java.util.Map
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:29.0677021Z [WARNING] /home/runner/work/keycloak/keycloak/tests/base/src/test/java/org/keycloak/tests/admin/InitialAccessTokenResourceTest.java:[157,45] removeExpired(org.keycloak.models.RealmModel) in org.keycloak.sessions.AuthenticationSessionProvider has been deprecated
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:29.0680830Z [WARNING] /home/runner/work/keycloak/keycloak/tests/base/src/test/java/org/keycloak/tests/admin/PermissionsTest.java:[610,64] getRealmLocalizationTexts(java.lang.String,java.lang.Boolean) in org.keycloak.admin.client.resource.RealmLocalizationResource has been deprecated
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:29.0684928Z [WARNING] /home/runner/work/keycloak/keycloak/tests/base/src/test/java/org/keycloak/tests/admin/PermissionsWithRemovalTest.java:[139,32] testLDAPConnection(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) in org.keycloak.admin.client.resource.RealmResource has been deprecated
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:29.0688615Z [WARNING] /home/runner/work/keycloak/keycloak/tests/base/src/test/java/org/keycloak/tests/admin/ClientTest.java:[950,19] getDefaultRoles() in org.keycloak.representations.idm.ClientRepresentation has been deprecated
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:29.0691846Z [WARNING] /home/runner/work/keycloak/keycloak/tests/base/src/test/java/org/keycloak/tests/admin/ClientTest.java:[951,44] getDefaultRoles() in org.keycloak.representations.idm.ClientRepresentation has been deprecated
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:29.0694735Z [WARNING] /home/runner/work/keycloak/keycloak/tests/base/src/test/java/org/keycloak/tests/admin/ClientTest.java:[952,56] getDefaultRoles() in org.keycloak.representations.idm.ClientRepresentation has been deprecated
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:29.0696394Z [INFO] 
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:29.0696894Z [INFO] --- surefire:3.0.0-M7:test (default-test) @ keycloak-tests-base ---
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:29.0800165Z [INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:29.6737357Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/apache/maven/surefire/surefire-junit-platform/3.0.0-M7/surefire-junit-platform-3.0.0-M7.jar
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:30.4795965Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit-platform/3.0.0-M7/surefire-junit-platform-3.0.0-M7.jar
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:30.5662642Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit-platform/3.0.0-M7/surefire-junit-platform-3.0.0-M7.jar (26 kB at 302 kB/s)
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:30.5688594Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/apache/maven/surefire/surefire-junit-platform/3.0.0-M7/surefire-junit-platform-3.0.0-M7.pom
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:30.7571804Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit-platform/3.0.0-M7/surefire-junit-platform-3.0.0-M7.pom
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:30.7703386Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit-platform/3.0.0-M7/surefire-junit-platform-3.0.0-M7.pom (5.3 kB at 378 kB/s)
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:30.7726749Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/apache/maven/surefire/surefire-providers/3.0.0-M7/surefire-providers-3.0.0-M7.pom
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:30.9114684Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-providers/3.0.0-M7/surefire-providers-3.0.0-M7.pom
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:30.9228840Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-providers/3.0.0-M7/surefire-providers-3.0.0-M7.pom (2.5 kB at 231 kB/s)
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:30.9341828Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/apache/maven/surefire/common-java5/3.0.0-M7/common-java5-3.0.0-M7.pom
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:31.0507611Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-java5/3.0.0-M7/common-java5-3.0.0-M7.pom
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:31.0636312Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-java5/3.0.0-M7/common-java5-3.0.0-M7.pom (2.7 kB at 207 kB/s)
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:31.0731634Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/junit/platform/junit-platform-launcher/1.3.2/junit-platform-launcher-1.3.2.pom
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:31.1522185Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-launcher/1.3.2/junit-platform-launcher-1.3.2.pom
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:31.1638475Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-launcher/1.3.2/junit-platform-launcher-1.3.2.pom (2.2 kB at 185 kB/s)
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:31.1659755Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/apiguardian/apiguardian-api/1.0.0/apiguardian-api-1.0.0.pom
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:31.3275458Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apiguardian/apiguardian-api/1.0.0/apiguardian-api-1.0.0.pom
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:31.3380371Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apiguardian/apiguardian-api/1.0.0/apiguardian-api-1.0.0.pom (1.2 kB at 117 kB/s)
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:31.3398040Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/junit/platform/junit-platform-engine/1.3.2/junit-platform-engine-1.3.2.pom
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:31.4157033Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-engine/1.3.2/junit-platform-engine-1.3.2.pom
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:31.4272550Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-engine/1.3.2/junit-platform-engine-1.3.2.pom (2.4 kB at 199 kB/s)
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:31.4289770Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/junit/platform/junit-platform-commons/1.3.2/junit-platform-commons-1.3.2.pom
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:31.5342582Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-commons/1.3.2/junit-platform-commons-1.3.2.pom
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:31.5456490Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-commons/1.3.2/junit-platform-commons-1.3.2.pom (2.0 kB at 168 kB/s)
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:31.5477015Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/opentest4j/opentest4j/1.1.1/opentest4j-1.1.1.pom
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:31.7485977Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/opentest4j/opentest4j/1.1.1/opentest4j-1.1.1.pom
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:31.7595093Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/opentest4j/opentest4j/1.1.1/opentest4j-1.1.1.pom (1.7 kB at 153 kB/s)
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:31.7614311Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/junit/jupiter/junit-jupiter-engine/5.3.2/junit-jupiter-engine-5.3.2.pom
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:31.8336841Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter-engine/5.3.2/junit-jupiter-engine-5.3.2.pom
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:31.8450787Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter-engine/5.3.2/junit-jupiter-engine-5.3.2.pom (2.4 kB at 218 kB/s)
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:31.8487992Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/junit/jupiter/junit-jupiter-api/5.3.2/junit-jupiter-api-5.3.2.pom
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:31.9208449Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter-api/5.3.2/junit-jupiter-api-5.3.2.pom
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:31.9313821Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter-api/5.3.2/junit-jupiter-api-5.3.2.pom (2.4 kB at 216 kB/s)
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:31.9341305Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/junit/jupiter/junit-jupiter-params/5.3.2/junit-jupiter-params-5.3.2.pom
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:32.0542355Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter-params/5.3.2/junit-jupiter-params-5.3.2.pom
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:32.0648728Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter-params/5.3.2/junit-jupiter-params-5.3.2.pom (2.2 kB at 200 kB/s)
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:32.0674702Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/mockito/mockito-core/2.28.2/mockito-core-2.28.2.pom
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:32.1493850Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/mockito/mockito-core/2.28.2/mockito-core-2.28.2.pom
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:32.1613637Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/mockito/mockito-core/2.28.2/mockito-core-2.28.2.pom (20 kB at 1.7 MB/s)
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:32.1650257Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/net/bytebuddy/byte-buddy/1.9.10/byte-buddy-1.9.10.pom
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:32.2541181Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy/1.9.10/byte-buddy-1.9.10.pom
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:32.2662488Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy/1.9.10/byte-buddy-1.9.10.pom (10 kB at 794 kB/s)
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:32.2680387Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/net/bytebuddy/byte-buddy-parent/1.9.10/byte-buddy-parent-1.9.10.pom
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:32.3646385Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy-parent/1.9.10/byte-buddy-parent-1.9.10.pom
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:32.3784049Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy-parent/1.9.10/byte-buddy-parent-1.9.10.pom (36 kB at 2.6 MB/s)
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:32.3836241Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/net/bytebuddy/byte-buddy-agent/1.9.10/byte-buddy-agent-1.9.10.pom
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:32.4623980Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy-agent/1.9.10/byte-buddy-agent-1.9.10.pom
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:32.4745733Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy-agent/1.9.10/byte-buddy-agent-1.9.10.pom (6.0 kB at 503 kB/s)
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:32.4821296Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/powermock/powermock-reflect/2.0.9/powermock-reflect-2.0.9.pom
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:32.5941588Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/powermock/powermock-reflect/2.0.9/powermock-reflect-2.0.9.pom
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:32.6055109Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/powermock/powermock-reflect/2.0.9/powermock-reflect-2.0.9.pom (7.9 kB at 656 kB/s)
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:32.6075569Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/net/bytebuddy/byte-buddy/1.10.14/byte-buddy-1.10.14.pom
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:32.8053949Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy/1.10.14/byte-buddy-1.10.14.pom
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:32.8184683Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy/1.10.14/byte-buddy-1.10.14.pom (11 kB at 849 kB/s)
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:32.8204355Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/net/bytebuddy/byte-buddy-parent/1.10.14/byte-buddy-parent-1.10.14.pom
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:33.0147313Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy-parent/1.10.14/byte-buddy-parent-1.10.14.pom
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:33.0274673Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy-parent/1.10.14/byte-buddy-parent-1.10.14.pom (41 kB at 3.1 MB/s)
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:33.0333070Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/net/bytebuddy/byte-buddy-agent/1.10.14/byte-buddy-agent-1.10.14.pom
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:33.1092223Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy-agent/1.10.14/byte-buddy-agent-1.10.14.pom
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:33.1205300Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy-agent/1.10.14/byte-buddy-agent-1.10.14.pom (9.6 kB at 797 kB/s)
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:33.1273742Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/hamcrest/hamcrest-library/1.3/hamcrest-library-1.3.pom
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:33.2097566Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/hamcrest/hamcrest-library/1.3/hamcrest-library-1.3.pom
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:33.2202386Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/hamcrest/hamcrest-library/1.3/hamcrest-library-1.3.pom (820 B at 75 kB/s)
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:33.2239750Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/assertj/assertj-core/3.22.0/assertj-core-3.22.0.pom
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:33.2999853Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/assertj/assertj-core/3.22.0/assertj-core-3.22.0.pom
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:33.3115915Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/assertj/assertj-core/3.22.0/assertj-core-3.22.0.pom (31 kB at 2.6 MB/s)
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:33.3145015Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/assertj/assertj-parent-pom/2.2.14/assertj-parent-pom-2.2.14.pom
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:33.3942274Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/assertj/assertj-parent-pom/2.2.14/assertj-parent-pom-2.2.14.pom
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:33.4066499Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/assertj/assertj-parent-pom/2.2.14/assertj-parent-pom-2.2.14.pom (25 kB at 1.9 MB/s)
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:33.4107487Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/junit/junit-bom/5.8.2/junit-bom-5.8.2.pom
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:33.5100251Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.8.2/junit-bom-5.8.2.pom
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:33.5211766Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.8.2/junit-bom-5.8.2.pom (5.6 kB at 512 kB/s)
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:33.5237106Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/junit/junit-bom/5.8.0/junit-bom-5.8.0.pom
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:33.5958953Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.8.0/junit-bom-5.8.0.pom
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:33.6072568Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.8.0/junit-bom-5.8.0.pom (5.6 kB at 469 kB/s)
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:33.6111229Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/apache/maven/surefire/common-java5/3.0.0-M7/common-java5-3.0.0-M7.jar
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:33.6113770Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/junit/platform/junit-platform-launcher/1.3.2/junit-platform-launcher-1.3.2.jar
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:33.6116541Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/apiguardian/apiguardian-api/1.0.0/apiguardian-api-1.0.0.jar
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:33.6130006Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/junit/platform/junit-platform-engine/1.3.2/junit-platform-engine-1.3.2.jar
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:33.6132577Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/junit/platform/junit-platform-commons/1.3.2/junit-platform-commons-1.3.2.jar
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:33.6259350Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-java5/3.0.0-M7/common-java5-3.0.0-M7.jar
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:33.6426179Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-java5/3.0.0-M7/common-java5-3.0.0-M7.jar (17 kB at 1.3 MB/s)
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:33.6428640Z [INFO] Downloading from jboss-public-repository: https://repository.jboss.org/nexus/content/groups/public/org/opentest4j/opentest4j/1.1.1/opentest4j-1.1.1.jar
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:33.6534744Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-engine/1.3.2/junit-platform-engine-1.3.2.jar
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:33.6664373Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apiguardian/apiguardian-api/1.0.0/apiguardian-api-1.0.0.jar
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:33.6711159Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/opentest4j/opentest4j/1.1.1/opentest4j-1.1.1.jar
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:33.6753249Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-engine/1.3.2/junit-platform-engine-1.3.2.jar (138 kB at 6.6 MB/s)
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:33.6990844Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apiguardian/apiguardian-api/1.0.0/apiguardian-api-1.0.0.jar (2.2 kB at 68 kB/s)
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:33.7014163Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/opentest4j/opentest4j/1.1.1/opentest4j-1.1.1.jar (7.1 kB at 230 kB/s)
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:33.7649651Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-launcher/1.3.2/junit-platform-launcher-1.3.2.jar
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:33.7839830Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-commons/1.3.2/junit-platform-commons-1.3.2.jar
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:33.7889773Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-launcher/1.3.2/junit-platform-launcher-1.3.2.jar (95 kB at 3.9 MB/s)
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:33.8053165Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-commons/1.3.2/junit-platform-commons-1.3.2.jar (78 kB at 3.5 MB/s)
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:34.2426082Z [INFO] 
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:34.2427070Z [INFO] -------------------------------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:34.2427639Z [INFO]  T E S T S
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:34.2427921Z [INFO] -------------------------------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:35.7447689Z [INFO] Running org.keycloak.tests.suites.DatabaseTestSuite
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:35.7717307Z [INFO] Running org.keycloak.tests.admin.authz.fgap.UserResourceTypeEvaluationSpecTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:35.8114949Z 2025-05-16 00:37:35,782 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:35.8116739Z 2025-05-16 00:37:35,789 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authz.fgap.UserResourceTypeEvaluationSpecTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:47.7547252Z 2025-05-16 00:37:47,681 WARN  [managed.db.postgres] (docker-java-stream--1801308972) initdb: warning: enabling "trust" authentication for local connections
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:47.7549129Z 2025-05-16 00:37:47,681 WARN  [managed.db.postgres] (docker-java-stream--1801308972) initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:48.0552182Z 2025-05-16 00:37:48,027 WARN  [managed.db.postgres] (docker-java-stream--1801308972) 2025-05-16 00:37:48.027 UTC [1] LOG:  starting PostgreSQL 17.5 (Debian 17.5-1.pgdg120+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14) 12.2.0, 64-bit
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:48.0558682Z 2025-05-16 00:37:48,027 WARN  [managed.db.postgres] (docker-java-stream--1801308972) 2025-05-16 00:37:48.027 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:48.0560220Z 2025-05-16 00:37:48,028 WARN  [managed.db.postgres] (docker-java-stream--1801308972) 2025-05-16 00:37:48.027 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:48.0561996Z 2025-05-16 00:37:48,028 WARN  [managed.db.postgres] (docker-java-stream--1801308972) 2025-05-16 00:37:48.027 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:48.0563784Z 2025-05-16 00:37:48,030 WARN  [managed.db.postgres] (docker-java-stream--1801308972) 2025-05-16 00:37:48.030 UTC [64] LOG:  database system was shut down at 2025-05-16 00:37:47 UTC
+Store IT (postgres)	Run new base tests	2025-05-16T00:37:48.0565297Z 2025-05-16 00:37:48,033 WARN  [managed.db.postgres] (docker-java-stream--1801308972) 2025-05-16 00:37:48.033 UTC [1] LOG:  database system is ready to accept connections
+Store IT (postgres)	Run new base tests	2025-05-16T00:38:03.2272098Z 2025-05-16 00:38:03,131 WARN  [managed.db.postgres] (docker-java-stream--1801308972) 2025-05-16 00:38:03.131 UTC [68] ERROR:  relation "migration_model" does not exist at character 25
+Store IT (postgres)	Run new base tests	2025-05-16T00:38:03.2275603Z 2025-05-16 00:38:03,132 WARN  [managed.db.postgres] (docker-java-stream--1801308972) 2025-05-16 00:38:03.131 UTC [68] STATEMENT:  SELECT ID, VERSION FROM MIGRATION_MODEL ORDER BY UPDATE_TIME DESC
+Store IT (postgres)	Run new base tests	2025-05-16T00:38:04.0321409Z 2025-05-16 00:38:03,931 WARN  [managed.db.postgres] (docker-java-stream--1801308972) 2025-05-16 00:38:03.929 UTC [68] ERROR:  relation "public.databasechangelog" does not exist at character 22
+Store IT (postgres)	Run new base tests	2025-05-16T00:38:04.0324272Z 2025-05-16 00:38:03,931 WARN  [managed.db.postgres] (docker-java-stream--1801308972) 2025-05-16 00:38:03.929 UTC [68] STATEMENT:  SELECT COUNT(*) FROM public.databasechangelog
+Store IT (postgres)	Run new base tests	2025-05-16T00:38:04.3327051Z 2025-05-16 00:38:04,256 WARN  [managed.db.postgres] (docker-java-stream--1801308972) 2025-05-16 00:38:04.256 UTC [69] ERROR:  relation "public.databasechangeloglock" does not exist at character 22
+Store IT (postgres)	Run new base tests	2025-05-16T00:38:04.3338525Z 2025-05-16 00:38:04,256 WARN  [managed.db.postgres] (docker-java-stream--1801308972) 2025-05-16 00:38:04.256 UTC [69] STATEMENT:  SELECT COUNT(*) FROM public.databasechangeloglock
+Store IT (postgres)	Run new base tests	2025-05-16T00:38:04.3341147Z 2025-05-16 00:38:04,290 WARN  [managed.db.postgres] (docker-java-stream--1801308972) 2025-05-16 00:38:04.289 UTC [68] ERROR:  relation "public.databasechangelog" does not exist at character 22
+Store IT (postgres)	Run new base tests	2025-05-16T00:38:04.3343376Z 2025-05-16 00:38:04,291 WARN  [managed.db.postgres] (docker-java-stream--1801308972) 2025-05-16 00:38:04.289 UTC [68] STATEMENT:  SELECT COUNT(*) FROM public.databasechangelog
+Store IT (postgres)	Run new base tests	2025-05-16T00:38:51.3362521Z 2025-05-16 00:38:51,261 WARN  [managed.keycloak] (pool-2-thread-1) [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] (executor-thread-2) HHH000444: Encountered request for locking however dialect reports that database prefers locking be done in a separate select (follow-on locking); results will be locked after initial query executes
+Store IT (postgres)	Run new base tests	2025-05-16T00:38:52.0189958Z [INFO] Tests run: 66, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 76.164 s - in org.keycloak.tests.admin.authz.fgap.UserResourceTypeEvaluationSpecTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:38:52.0207429Z [INFO] Running org.keycloak.tests.admin.authz.fgap.UserResourceTypePermissionTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:38:52.0208529Z 2025-05-16 00:38:51,940 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:38:52.0209726Z 2025-05-16 00:38:51,940 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authz.fgap.UserResourceTypePermissionTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:38:53.9422587Z 2025-05-16 00:38:53,928 WARN  [managed.keycloak] (pool-2-thread-1) [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] (executor-thread-1) HHH000444: Encountered request for locking however dialect reports that database prefers locking be done in a separate select (follow-on locking); results will be locked after initial query executes
+Store IT (postgres)	Run new base tests	2025-05-16T00:38:54.4496338Z [INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.459 s - in org.keycloak.tests.admin.authz.fgap.UserResourceTypePermissionTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:38:54.4501996Z [INFO] Running org.keycloak.tests.admin.PermissionsWithRemovalTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:38:54.4504888Z 2025-05-16 00:38:54,402 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:38:54.4506119Z 2025-05-16 00:38:54,402 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.PermissionsWithRemovalTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:12.8382396Z [INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 18.414 s - in org.keycloak.tests.admin.PermissionsWithRemovalTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:12.8383673Z [INFO] Running org.keycloak.tests.admin.InitialAccessTokenResourceTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:12.8384592Z 2025-05-16 00:39:12,820 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:12.8386509Z 2025-05-16 00:39:12,820 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.InitialAccessTokenResourceTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:14.0106909Z 2025-05-16 00:39:13,989 WARN  [managed.keycloak] (pool-2-thread-1) [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] (executor-thread-2) HHH000444: Encountered request for locking however dialect reports that database prefers locking be done in a separate select (follow-on locking); results will be locked after initial query executes
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:14.3641320Z [INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.496 s - in org.keycloak.tests.admin.InitialAccessTokenResourceTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:14.3653264Z [INFO] Running org.keycloak.tests.admin.authz.fgap.RoleResourceTypeEvaluationTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:14.3654662Z 2025-05-16 00:39:14,316 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:14.3657351Z 2025-05-16 00:39:14,316 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authz.fgap.RoleResourceTypeEvaluationTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:15.9131562Z 2025-05-16 00:39:15,818 WARN  [managed.keycloak] (pool-2-thread-1) [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] (executor-thread-2) HHH000444: Encountered request for locking however dialect reports that database prefers locking be done in a separate select (follow-on locking); results will be locked after initial query executes
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:16.2434468Z [INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.911 s - in org.keycloak.tests.admin.authz.fgap.RoleResourceTypeEvaluationTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:16.2435883Z [INFO] Running org.keycloak.tests.admin.partialexport.PartialExportTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:16.2436858Z 2025-05-16 00:39:16,229 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:16.2437948Z 2025-05-16 00:39:16,229 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.partialexport.PartialExportTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:17.8678369Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.629 s - in org.keycloak.tests.admin.partialexport.PartialExportTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:17.8679862Z [INFO] Running org.keycloak.tests.admin.UsersTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:17.8680923Z 2025-05-16 00:39:17,860 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:17.8681620Z 2025-05-16 00:39:17,860 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.UsersTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:26.5163627Z [INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.646 s - in org.keycloak.tests.admin.UsersTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:26.5165922Z [INFO] Running org.keycloak.tests.admin.RoleByIdResourceTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:26.5167133Z 2025-05-16 00:39:26,507 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:26.5168104Z 2025-05-16 00:39:26,507 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.RoleByIdResourceTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:38.2039056Z [INFO] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.686 s - in org.keycloak.tests.admin.RoleByIdResourceTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:38.2040133Z [INFO] Running org.keycloak.tests.admin.TimeOffsetTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:38.2041257Z 2025-05-16 00:39:38,195 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:38.2042228Z 2025-05-16 00:39:38,195 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.TimeOffsetTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:39.0423809Z 2025-05-16 00:39:39,028 WARN  [managed.keycloak] (pool-2-thread-1) [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] (executor-thread-1) HHH000444: Encountered request for locking however dialect reports that database prefers locking be done in a separate select (follow-on locking); results will be locked after initial query executes
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:39.3786195Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.168 s - in org.keycloak.tests.admin.TimeOffsetTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:39.3791603Z [INFO] Running org.keycloak.tests.admin.authz.fgap.UserResourceTypeEvaluationTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:39.3792944Z 2025-05-16 00:39:39,365 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:39.3794446Z 2025-05-16 00:39:39,365 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authz.fgap.UserResourceTypeEvaluationTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:41.7447706Z 2025-05-16 00:39:41,738 WARN  [managed.keycloak] (pool-2-thread-1) [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] (executor-thread-1) HHH000444: Encountered request for locking however dialect reports that database prefers locking be done in a separate select (follow-on locking); results will be locked after initial query executes
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:42.0942802Z [INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.716 s - in org.keycloak.tests.admin.authz.fgap.UserResourceTypeEvaluationTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:42.0944164Z [INFO] Running org.keycloak.tests.admin.client.ClientRolesTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:42.0945008Z 2025-05-16 00:39:42,083 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:42.0945969Z 2025-05-16 00:39:42,083 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.client.ClientRolesTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:44.3476248Z 2025-05-16 00:39:44,267 WARN  [managed.keycloak] (pool-2-thread-1) [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] (executor-thread-2) HHH000444: Encountered request for locking however dialect reports that database prefers locking be done in a separate select (follow-on locking); results will be locked after initial query executes
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:44.5712270Z [INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.475 s - in org.keycloak.tests.admin.client.ClientRolesTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:44.5731540Z [INFO] Running org.keycloak.tests.admin.authz.fgap.ClientResourceTypeFilteringTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:44.5733009Z 2025-05-16 00:39:44,560 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:44.5734051Z 2025-05-16 00:39:44,560 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authz.fgap.ClientResourceTypeFilteringTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:51.3593210Z 2025-05-16 00:39:51,287 WARN  [managed.keycloak] (pool-2-thread-1) [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] (executor-thread-1) HHH000444: Encountered request for locking however dialect reports that database prefers locking be done in a separate select (follow-on locking); results will be locked after initial query executes
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:51.6278622Z [INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.055 s - in org.keycloak.tests.admin.authz.fgap.ClientResourceTypeFilteringTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:51.6280136Z [INFO] Running org.keycloak.tests.admin.ClientTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:51.6281274Z 2025-05-16 00:39:51,619 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:51.6282618Z 2025-05-16 00:39:51,619 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.ClientTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:52.9640293Z 2025-05-16 00:39:52,949 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:52.9643731Z 2025-05-16 00:39:52,951 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:52.9646835Z 2025-05-16 00:39:52,952 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:52.9658334Z 2025-05-16 00:39:52,953 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:52.9663106Z 2025-05-16 00:39:52,953 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:52.9668417Z 2025-05-16 00:39:52,954 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:52.9676578Z 2025-05-16 00:39:52,954 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:52.9682138Z 2025-05-16 00:39:52,954 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:52.9686771Z 2025-05-16 00:39:52,955 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:52.9689736Z 2025-05-16 00:39:52,955 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:52.9708005Z 2025-05-16 00:39:52,956 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:52.9711149Z 2025-05-16 00:39:52,957 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:52.9714188Z 2025-05-16 00:39:52,957 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:52.9717657Z 2025-05-16 00:39:52,958 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:52.9724749Z 2025-05-16 00:39:52,958 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:52.9727855Z 2025-05-16 00:39:52,959 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:52.9731089Z 2025-05-16 00:39:52,960 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:52.9734177Z 2025-05-16 00:39:52,960 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:52.9737222Z 2025-05-16 00:39:52,960 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:52.9740253Z 2025-05-16 00:39:52,961 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:52.9744907Z 2025-05-16 00:39:52,961 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:52.9752530Z 2025-05-16 00:39:52,962 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:53.0634755Z 2025-05-16 00:39:52,963 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:53.0638418Z 2025-05-16 00:39:52,964 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:53.0642175Z 2025-05-16 00:39:52,966 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:53.0648352Z 2025-05-16 00:39:52,966 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:53.0652125Z 2025-05-16 00:39:52,967 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:53.0664396Z 2025-05-16 00:39:52,967 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:53.0667550Z 2025-05-16 00:39:52,969 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:53.0671053Z 2025-05-16 00:39:52,969 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:53.0674241Z 2025-05-16 00:39:52,969 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:53.0677369Z 2025-05-16 00:39:52,970 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:53.0680626Z 2025-05-16 00:39:52,972 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:53.0683661Z 2025-05-16 00:39:52,974 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:53.0686764Z 2025-05-16 00:39:52,975 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:53.0690102Z 2025-05-16 00:39:52,975 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:53.0693376Z 2025-05-16 00:39:52,976 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:53.0696522Z 2025-05-16 00:39:52,976 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (postgres)	Run new base tests	2025-05-16T00:39:53.0699670Z 2025-05-16 00:39:52,977 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:00.1284195Z 2025-05-16 00:40:00,080 WARN  [managed.keycloak] (pool-2-thread-1) [org.keycloak.utils.ReservedCharValidator] (executor-thread-1) Character '#' not allowed.
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:00.7764398Z 2025-05-16 00:40:00,694 WARN  [managed.keycloak] (pool-2-thread-1) [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] (executor-thread-2) HHH000444: Encountered request for locking however dialect reports that database prefers locking be done in a separate select (follow-on locking); results will be locked after initial query executes
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:01.1091731Z [INFO] Tests run: 29, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.478 s - in org.keycloak.tests.admin.ClientTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:01.1098857Z [INFO] Running org.keycloak.tests.admin.authz.fgap.GroupResourceTypeFilteringTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:01.1105102Z 2025-05-16 00:40:01,097 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:01.1109888Z 2025-05-16 00:40:01,097 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authz.fgap.GroupResourceTypeFilteringTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:17.2945450Z 2025-05-16 00:40:17,257 WARN  [managed.keycloak] (pool-2-thread-1) [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] (executor-thread-1) HHH000444: Encountered request for locking however dialect reports that database prefers locking be done in a separate select (follow-on locking); results will be locked after initial query executes
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:17.6233424Z [INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 16.515 s - in org.keycloak.tests.admin.authz.fgap.GroupResourceTypeFilteringTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:17.6235544Z [INFO] Running org.keycloak.tests.admin.client.ClientDescriptionConverterTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:17.6236593Z 2025-05-16 00:40:17,614 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:17.6237701Z 2025-05-16 00:40:17,614 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.client.ClientDescriptionConverterTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:18.3959154Z 2025-05-16 00:40:18,351 WARN  [managed.keycloak] (pool-2-thread-1) [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] (executor-thread-1) HHH000444: Encountered request for locking however dialect reports that database prefers locking be done in a separate select (follow-on locking); results will be locked after initial query executes
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:18.6534240Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.03 s - in org.keycloak.tests.admin.client.ClientDescriptionConverterTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:18.6535577Z [INFO] Running org.keycloak.tests.admin.authentication.ExecutionTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:18.6536501Z 2025-05-16 00:40:18,646 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:18.6537289Z 2025-05-16 00:40:18,646 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authentication.ExecutionTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:19.8001054Z 2025-05-16 00:40:19,718 WARN  [managed.keycloak] (pool-2-thread-1) [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] (executor-thread-1) HHH000444: Encountered request for locking however dialect reports that database prefers locking be done in a separate select (follow-on locking); results will be locked after initial query executes
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:20.0497216Z [INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.392 s - in org.keycloak.tests.admin.authentication.ExecutionTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:20.0499615Z [INFO] Running org.keycloak.tests.admin.authentication.RegistrationFlowTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:20.0500867Z 2025-05-16 00:40:20,039 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:20.0501989Z 2025-05-16 00:40:20,039 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authentication.RegistrationFlowTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:20.8066903Z 2025-05-16 00:40:20,779 WARN  [managed.keycloak] (pool-2-thread-1) [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] (executor-thread-2) HHH000444: Encountered request for locking however dialect reports that database prefers locking be done in a separate select (follow-on locking); results will be locked after initial query executes
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:21.0981060Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.048 s - in org.keycloak.tests.admin.authentication.RegistrationFlowTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:21.0982971Z [INFO] Running org.keycloak.tests.admin.client.ClientSearchJpaTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:21.0983838Z 2025-05-16 00:40:21,089 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:21.0985165Z 2025-05-16 00:40:21,089 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.client.ClientSearchJpaTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:21.8077284Z 2025-05-16 00:40:21,718 WARN  [managed.keycloak] (pool-2-thread-1) [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] (executor-thread-2) HHH000444: Encountered request for locking however dialect reports that database prefers locking be done in a separate select (follow-on locking); results will be locked after initial query executes
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:22.0380086Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.921 s - in org.keycloak.tests.admin.client.ClientSearchJpaTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:22.0382628Z [INFO] Running org.keycloak.tests.admin.authz.fgap.PermissionRESTTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:22.0383594Z 2025-05-16 00:40:22,012 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:22.0384672Z 2025-05-16 00:40:22,012 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authz.fgap.PermissionRESTTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:23.2088908Z 2025-05-16 00:40:23,198 WARN  [managed.keycloak] (pool-2-thread-1) [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] (executor-thread-2) HHH000444: Encountered request for locking however dialect reports that database prefers locking be done in a separate select (follow-on locking); results will be locked after initial query executes
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:23.5406867Z [INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.519 s - in org.keycloak.tests.admin.authz.fgap.PermissionRESTTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:23.5409759Z [INFO] Running org.keycloak.tests.admin.authz.fgap.FeatureV2EnabledTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:23.5411493Z 2025-05-16 00:40:23,533 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:23.5412916Z 2025-05-16 00:40:23,533 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authz.fgap.FeatureV2EnabledTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:24.3099121Z 2025-05-16 00:40:24,255 WARN  [managed.keycloak] (pool-2-thread-1) [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] (executor-thread-2) HHH000444: Encountered request for locking however dialect reports that database prefers locking be done in a separate select (follow-on locking); results will be locked after initial query executes
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:24.6193011Z [INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.078 s - in org.keycloak.tests.admin.authz.fgap.FeatureV2EnabledTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:24.6194347Z [INFO] Running org.keycloak.tests.admin.authz.fgap.GroupResourceTypeEvaluationTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:24.6195363Z 2025-05-16 00:40:24,612 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:24.6196462Z 2025-05-16 00:40:24,612 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authz.fgap.GroupResourceTypeEvaluationTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:27.2127444Z 2025-05-16 00:40:27,192 WARN  [managed.keycloak] (pool-2-thread-1) [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] (executor-thread-2) HHH000444: Encountered request for locking however dialect reports that database prefers locking be done in a separate select (follow-on locking); results will be locked after initial query executes
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:27.5398570Z [INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.919 s - in org.keycloak.tests.admin.authz.fgap.GroupResourceTypeEvaluationTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:27.5400050Z [INFO] Running org.keycloak.tests.admin.authz.fgap.RoleResourceTypePermissionTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:27.5401485Z 2025-05-16 00:40:27,532 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:27.5403790Z 2025-05-16 00:40:27,532 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authz.fgap.RoleResourceTypePermissionTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:28.6139682Z 2025-05-16 00:40:28,520 WARN  [managed.keycloak] (pool-2-thread-1) [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] (executor-thread-2) HHH000444: Encountered request for locking however dialect reports that database prefers locking be done in a separate select (follow-on locking); results will be locked after initial query executes
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:28.8707969Z [INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.328 s - in org.keycloak.tests.admin.authz.fgap.RoleResourceTypePermissionTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:28.8710298Z [INFO] Running org.keycloak.tests.admin.SMTPConnectionTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:28.8711387Z 2025-05-16 00:40:28,862 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:28.8712451Z 2025-05-16 00:40:28,862 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.SMTPConnectionTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:30.8162364Z 2025-05-16 00:40:30,736 WARN  [managed.keycloak] (pool-2-thread-1) [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] (executor-thread-1) HHH000444: Encountered request for locking however dialect reports that database prefers locking be done in a separate select (follow-on locking); results will be locked after initial query executes
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:31.1053279Z [INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.233 s - in org.keycloak.tests.admin.SMTPConnectionTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:31.1054560Z [INFO] Running org.keycloak.tests.admin.event.EventConfigTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:31.1055430Z 2025-05-16 00:40:31,096 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:31.1056423Z 2025-05-16 00:40:31,096 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.event.EventConfigTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:32.4553382Z [INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.35 s - in org.keycloak.tests.admin.event.EventConfigTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:32.4554665Z [INFO] Running org.keycloak.tests.admin.authz.fgap.UserResourceTypeFilteringTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:32.4555655Z 2025-05-16 00:40:32,447 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:32.4557093Z 2025-05-16 00:40:32,447 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authz.fgap.UserResourceTypeFilteringTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:36.8275960Z 2025-05-16 00:40:36,766 WARN  [managed.keycloak] (pool-2-thread-1) [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] (executor-thread-1) HHH000444: Encountered request for locking however dialect reports that database prefers locking be done in a separate select (follow-on locking); results will be locked after initial query executes
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:37.1332607Z [INFO] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.678 s - in org.keycloak.tests.admin.authz.fgap.UserResourceTypeFilteringTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:37.1334545Z [INFO] Running org.keycloak.tests.admin.AdminHeadersTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:37.1335998Z 2025-05-16 00:40:37,126 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:37.1340334Z 2025-05-16 00:40:37,126 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.AdminHeadersTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:37.7283282Z 2025-05-16 00:40:37,651 WARN  [managed.keycloak] (pool-2-thread-1) [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] (executor-thread-1) HHH000444: Encountered request for locking however dialect reports that database prefers locking be done in a separate select (follow-on locking); results will be locked after initial query executes
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:37.9829166Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.838 s - in org.keycloak.tests.admin.AdminHeadersTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:37.9831394Z [INFO] Running org.keycloak.tests.admin.group.GroupMappersTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:37.9832584Z 2025-05-16 00:40:37,965 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:37.9834327Z 2025-05-16 00:40:37,966 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.group.GroupMappersTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:39.1297943Z 2025-05-16 00:40:39,041 WARN  [managed.keycloak] (pool-2-thread-1) [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] (executor-thread-1) HHH000444: Encountered request for locking however dialect reports that database prefers locking be done in a separate select (follow-on locking); results will be locked after initial query executes
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:39.3378162Z [INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.364 s - in org.keycloak.tests.admin.group.GroupMappersTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:39.3379297Z [INFO] Running org.keycloak.tests.admin.event.AdminEventTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:39.3380061Z 2025-05-16 00:40:39,331 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:39.3381046Z 2025-05-16 00:40:39,331 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.event.AdminEventTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:42.3338593Z 2025-05-16 00:40:42,219 WARN  [managed.keycloak] (pool-2-thread-1) [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] (executor-thread-1) HHH000444: Encountered request for locking however dialect reports that database prefers locking be done in a separate select (follow-on locking); results will be locked after initial query executes
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:42.5385664Z [INFO] Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.198 s - in org.keycloak.tests.admin.event.AdminEventTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:42.5391133Z [INFO] Running org.keycloak.tests.admin.event.AdminEventAuthDetailsTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:42.5392296Z 2025-05-16 00:40:42,531 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:42.5393425Z 2025-05-16 00:40:42,531 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.event.AdminEventAuthDetailsTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:43.9348227Z 2025-05-16 00:40:43,919 WARN  [managed.keycloak] (pool-2-thread-1) [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] (executor-thread-1) HHH000444: Encountered request for locking however dialect reports that database prefers locking be done in a separate select (follow-on locking); results will be locked after initial query executes
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:44.2081590Z [INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.665 s - in org.keycloak.tests.admin.event.AdminEventAuthDetailsTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:44.2083159Z [INFO] Running org.keycloak.tests.admin.AdminConsoleLandingPageTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:44.2084097Z 2025-05-16 00:40:44,198 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:44.2085138Z 2025-05-16 00:40:44,198 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.AdminConsoleLandingPageTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:44.2471440Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.037 s - in org.keycloak.tests.admin.AdminConsoleLandingPageTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:44.2472757Z [INFO] Running org.keycloak.tests.admin.group.GroupTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:44.2476330Z 2025-05-16 00:40:44,236 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:44.2478818Z 2025-05-16 00:40:44,236 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.group.GroupTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:50.5446555Z 2025-05-16 00:40:50,508 WARN  [managed.keycloak] (pool-2-thread-1) [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] (executor-thread-2) HHH000444: Encountered request for locking however dialect reports that database prefers locking be done in a separate select (follow-on locking); results will be locked after initial query executes
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:50.8191576Z [INFO] Tests run: 21, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.572 s - in org.keycloak.tests.admin.group.GroupTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:50.8193581Z [INFO] Running org.keycloak.tests.admin.AdminPreflightTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:50.8196297Z 2025-05-16 00:40:50,809 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:50.8197756Z 2025-05-16 00:40:50,810 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.AdminPreflightTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:50.8290203Z [INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 s - in org.keycloak.tests.admin.AdminPreflightTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:50.8296375Z [INFO] Running org.keycloak.tests.admin.userprofile.UserProfileAdminTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:50.8297778Z 2025-05-16 00:40:50,821 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:50.8298848Z 2025-05-16 00:40:50,821 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.userprofile.UserProfileAdminTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:52.0459495Z 2025-05-16 00:40:52,022 WARN  [managed.keycloak] (pool-2-thread-1) [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] (executor-thread-2) HHH000444: Encountered request for locking however dialect reports that database prefers locking be done in a separate select (follow-on locking); results will be locked after initial query executes
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:52.3380315Z [INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.495 s - in org.keycloak.tests.admin.userprofile.UserProfileAdminTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:52.3382346Z [INFO] Running org.keycloak.tests.admin.RealmLocalizationResourceTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:52.3383240Z 2025-05-16 00:40:52,318 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:52.3384319Z 2025-05-16 00:40:52,318 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.RealmLocalizationResourceTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:53.3470918Z 2025-05-16 00:40:53,310 WARN  [managed.keycloak] (pool-2-thread-1) [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] (executor-thread-2) HHH000444: Encountered request for locking however dialect reports that database prefers locking be done in a separate select (follow-on locking); results will be locked after initial query executes
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:53.6031872Z [INFO] Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.276 s - in org.keycloak.tests.admin.RealmLocalizationResourceTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:53.6035119Z [INFO] Running org.keycloak.tests.admin.client.ClientProtocolMapperTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:53.6036116Z 2025-05-16 00:40:53,596 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:53.6037265Z 2025-05-16 00:40:53,596 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.client.ClientProtocolMapperTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:55.4498236Z 2025-05-16 00:40:55,357 WARN  [managed.keycloak] (pool-2-thread-1) [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] (executor-thread-1) HHH000444: Encountered request for locking however dialect reports that database prefers locking be done in a separate select (follow-on locking); results will be locked after initial query executes
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:55.6568289Z [INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.051 s - in org.keycloak.tests.admin.client.ClientProtocolMapperTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:55.6570311Z [INFO] Running org.keycloak.tests.admin.AdminEndpointAccessibilityTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:55.6571551Z 2025-05-16 00:40:55,648 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:55.6572619Z 2025-05-16 00:40:55,648 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.AdminEndpointAccessibilityTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:56.2011252Z [INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.544 s - in org.keycloak.tests.admin.AdminEndpointAccessibilityTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:56.2013104Z [INFO] Running org.keycloak.tests.admin.client.ClientScopeProtocolMapperTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:56.2014232Z 2025-05-16 00:40:56,194 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:56.2015410Z 2025-05-16 00:40:56,194 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.client.ClientScopeProtocolMapperTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:57.9525294Z 2025-05-16 00:40:57,906 WARN  [managed.keycloak] (pool-2-thread-1) [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] (executor-thread-1) HHH000444: Encountered request for locking however dialect reports that database prefers locking be done in a separate select (follow-on locking); results will be locked after initial query executes
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:58.2634999Z [INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.059 s - in org.keycloak.tests.admin.client.ClientScopeProtocolMapperTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:58.2637922Z [INFO] Running org.keycloak.tests.admin.PermissionsTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:58.2638794Z 2025-05-16 00:40:58,256 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:40:58.2639818Z 2025-05-16 00:40:58,256 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.PermissionsTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:31.8002573Z 2025-05-16 00:41:31,750 WARN  [managed.keycloak] (pool-2-thread-1) [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] (executor-thread-1) HHH000444: Encountered request for locking however dialect reports that database prefers locking be done in a separate select (follow-on locking); results will be locked after initial query executes
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:32.1003671Z 2025-05-16 00:41:32,044 WARN  [managed.keycloak] (pool-2-thread-1) [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] (executor-thread-1) HHH000444: Encountered request for locking however dialect reports that database prefers locking be done in a separate select (follow-on locking); results will be locked after initial query executes
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:32.3906277Z [INFO] Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 34.126 s - in org.keycloak.tests.admin.PermissionsTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:32.3907460Z [INFO] Running org.keycloak.tests.admin.group.GroupSearchTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:32.3908305Z 2025-05-16 00:41:32,383 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:32.3909356Z 2025-05-16 00:41:32,383 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.group.GroupSearchTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:34.9029892Z 2025-05-16 00:41:34,806 WARN  [managed.keycloak] (pool-2-thread-1) [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] (executor-thread-1) HHH000444: Encountered request for locking however dialect reports that database prefers locking be done in a separate select (follow-on locking); results will be locked after initial query executes
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:35.0923327Z [INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.697 s - in org.keycloak.tests.admin.group.GroupSearchTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:35.0926018Z [INFO] Running org.keycloak.tests.admin.authz.fgap.GroupResourceTypePermissionTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:35.0927083Z 2025-05-16 00:41:35,082 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:35.0928259Z 2025-05-16 00:41:35,082 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authz.fgap.GroupResourceTypePermissionTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:36.1039819Z 2025-05-16 00:41:36,049 WARN  [managed.keycloak] (pool-2-thread-1) [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] (executor-thread-1) HHH000444: Encountered request for locking however dialect reports that database prefers locking be done in a separate select (follow-on locking); results will be locked after initial query executes
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:36.3823214Z [INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.288 s - in org.keycloak.tests.admin.authz.fgap.GroupResourceTypePermissionTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:36.3824599Z [INFO] Running org.keycloak.tests.admin.DeclarativeUserTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:36.3829310Z 2025-05-16 00:41:36,372 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:36.3830357Z 2025-05-16 00:41:36,372 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.DeclarativeUserTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:37.8054815Z 2025-05-16 00:41:37,801 WARN  [managed.keycloak] (pool-2-thread-1) [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] (executor-thread-1) HHH000444: Encountered request for locking however dialect reports that database prefers locking be done in a separate select (follow-on locking); results will be locked after initial query executes
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:38.0846610Z [INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.703 s - in org.keycloak.tests.admin.DeclarativeUserTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:38.0847998Z [INFO] Running org.keycloak.tests.admin.authentication.AuthenticatorConfigTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:38.0849151Z 2025-05-16 00:41:38,076 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:38.0850335Z 2025-05-16 00:41:38,076 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authentication.AuthenticatorConfigTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:39.5098914Z 2025-05-16 00:41:39,414 WARN  [managed.keycloak] (pool-2-thread-1) [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] (executor-thread-1) HHH000444: Encountered request for locking however dialect reports that database prefers locking be done in a separate select (follow-on locking); results will be locked after initial query executes
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:39.7455314Z [INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.659 s - in org.keycloak.tests.admin.authentication.AuthenticatorConfigTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:39.7456650Z [INFO] Running org.keycloak.tests.admin.AdminConsoleWhoAmILocaleTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:39.7457922Z 2025-05-16 00:41:39,737 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:39.7458844Z 2025-05-16 00:41:39,737 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.AdminConsoleWhoAmILocaleTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:41.7125296Z 2025-05-16 00:41:41,623 WARN  [managed.keycloak] (pool-2-thread-1) [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] (executor-thread-1) HHH000444: Encountered request for locking however dialect reports that database prefers locking be done in a separate select (follow-on locking); results will be locked after initial query executes
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:42.0125968Z 2025-05-16 00:41:41,914 WARN  [managed.keycloak] (pool-2-thread-1) [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] (executor-thread-1) HHH000444: Encountered request for locking however dialect reports that database prefers locking be done in a separate select (follow-on locking); results will be locked after initial query executes
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:42.2998958Z [INFO] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.554 s - in org.keycloak.tests.admin.AdminConsoleWhoAmILocaleTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:42.3000866Z [INFO] Running org.keycloak.tests.admin.AttackDetectionResourceTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:42.3004039Z 2025-05-16 00:41:42,291 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:42.3005169Z 2025-05-16 00:41:42,291 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.AttackDetectionResourceTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:42.8213491Z 2025-05-16 00:41:42,817 WARN  [managed.keycloak] (main) [org.keycloak.events] (executor-thread-1) type="LOGIN_ERROR", realmId="default", realmName="default", clientId="test-app", userId="ac10a98c-5836-42f7-9efa-4998217438ad", ipAddress="127.0.0.1", error="invalid_user_credentials", auth_method="openid-connect", grant_type="password", client_auth_method="client-secret", username="default"
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:42.8223507Z 2025-05-16 00:41:42,817 WARN  [managed.keycloak] (main) [org.keycloak.events] (executor-thread-1) type="LOGIN_ERROR", realmId="default", realmName="default", clientId="test-app", userId="ac10a98c-5836-42f7-9efa-4998217438ad", ipAddress="127.0.0.1", error="user_temporarily_disabled", auth_method="openid-connect", grant_type="password", client_auth_method="client-secret", username="default"
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:42.8227462Z 2025-05-16 00:41:42,817 WARN  [managed.keycloak] (main) [org.keycloak.events] (executor-thread-1) type="LOGIN_ERROR", realmId="default", realmName="default", clientId="test-app", userId="ac10a98c-5836-42f7-9efa-4998217438ad", ipAddress="127.0.0.1", error="invalid_user_credentials", auth_method="openid-connect", grant_type="password", client_auth_method="client-secret", username="default"
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:42.8231905Z 2025-05-16 00:41:42,817 WARN  [managed.keycloak] (main) [org.keycloak.events] (executor-thread-1) type="LOGIN_ERROR", realmId="default", realmName="default", clientId="test-app", userId="240fed9e-f250-47ab-98ce-19aa405a5b5e", ipAddress="127.0.0.1", error="invalid_user_credentials", auth_method="openid-connect", grant_type="password", client_auth_method="client-secret", username="testUser2"
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:42.8235876Z 2025-05-16 00:41:42,817 WARN  [managed.keycloak] (main) [org.keycloak.events] (executor-thread-1) type="LOGIN_ERROR", realmId="default", realmName="default", clientId="test-app", userId="240fed9e-f250-47ab-98ce-19aa405a5b5e", ipAddress="127.0.0.1", error="user_temporarily_disabled", auth_method="openid-connect", grant_type="password", client_auth_method="client-secret", username="testUser2"
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:42.8239308Z 2025-05-16 00:41:42,817 WARN  [managed.keycloak] (main) [org.keycloak.events] (executor-thread-1) type="LOGIN_ERROR", realmId="default", realmName="default", clientId="test-app", userId="null", ipAddress="127.0.0.1", error="user_not_found", auth_method="openid-connect", grant_type="password", client_auth_method="client-secret", username="nosuchuser"
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:42.8241783Z 2025-05-16 00:41:42,817 ERROR [testinfo] (main)     FAILED - org.keycloak.tests.admin.AttackDetectionResourceTest / test
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:42.9135407Z 2025-05-16 00:41:42,847 WARN  [managed.keycloak] (pool-2-thread-1) [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] (executor-thread-1) HHH000444: Encountered request for locking however dialect reports that database prefers locking be done in a separate select (follow-on locking); results will be locked after initial query executes
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:43.1464049Z [ERROR] Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.844 s <<< FAILURE! - in org.keycloak.tests.admin.AttackDetectionResourceTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:43.1465892Z [ERROR] org.keycloak.tests.admin.AttackDetectionResourceTest.test  Time elapsed: 0.528 s  <<< FAILURE!
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:43.1466853Z org.opentest4j.AssertionFailedError: expected: <2> but was: <1>
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:43.1467683Z 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:43.1468821Z 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:43.1469866Z 	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:43.1470903Z 	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:43.1471716Z 	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:43.1472521Z 	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:43.1473632Z 	at org.keycloak.tests.admin.AttackDetectionResourceTest.assertBruteForce(AttackDetectionResourceTest.java:99)
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:43.1474815Z 	at org.keycloak.tests.admin.AttackDetectionResourceTest.test(AttackDetectionResourceTest.java:81)
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:43.1475381Z 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:43.1475800Z 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:43.1476196Z 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:43.1476433Z 
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:43.1476645Z [INFO] Running org.keycloak.tests.admin.CrossRealmPermissionsTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:43.1477149Z 2025-05-16 00:41:43,137 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:43.1477743Z 2025-05-16 00:41:43,137 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.CrossRealmPermissionsTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:43.3136747Z 2025-05-16 00:41:43,161 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:43.3140363Z 2025-05-16 00:41:43,161 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:43.3146135Z 2025-05-16 00:41:43,161 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:43.3149394Z 2025-05-16 00:41:43,161 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:43.3152722Z 2025-05-16 00:41:43,161 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:43.3155754Z 2025-05-16 00:41:43,162 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:43.3158593Z 2025-05-16 00:41:43,162 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:43.3161835Z 2025-05-16 00:41:43,162 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:43.3165277Z 2025-05-16 00:41:43,162 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:43.3168278Z 2025-05-16 00:41:43,162 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:43.3171465Z 2025-05-16 00:41:43,162 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:43.3174227Z 2025-05-16 00:41:43,163 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:43.3177329Z 2025-05-16 00:41:43,163 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:43.3180352Z 2025-05-16 00:41:43,163 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:43.3183280Z 2025-05-16 00:41:43,163 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:43.3186596Z 2025-05-16 00:41:43,163 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:43.3189319Z 2025-05-16 00:41:43,163 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:43.3191531Z 2025-05-16 00:41:43,163 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:43.3193176Z 2025-05-16 00:41:43,164 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:43.3194842Z 2025-05-16 00:41:43,164 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:43.3196934Z 2025-05-16 00:41:43,164 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:43.3199021Z 2025-05-16 00:41:43,164 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:43.3201657Z 2025-05-16 00:41:43,164 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:43.3203855Z 2025-05-16 00:41:43,164 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:43.3205836Z 2025-05-16 00:41:43,165 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:43.3208123Z 2025-05-16 00:41:43,165 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:43.3209875Z 2025-05-16 00:41:43,165 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:44.7150412Z 2025-05-16 00:41:44,675 WARN  [managed.keycloak] (pool-2-thread-1) [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] (executor-thread-1) HHH000444: Encountered request for locking however dialect reports that database prefers locking be done in a separate select (follow-on locking); results will be locked after initial query executes
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:45.0151511Z 2025-05-16 00:41:44,949 WARN  [managed.keycloak] (pool-2-thread-1) [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] (executor-thread-1) HHH000444: Encountered request for locking however dialect reports that database prefers locking be done in a separate select (follow-on locking); results will be locked after initial query executes
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:45.2842842Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.134 s - in org.keycloak.tests.admin.CrossRealmPermissionsTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:45.2847626Z [INFO] Running org.keycloak.tests.admin.authz.fgap.ClientResourceTypePermissionTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:45.2850845Z 2025-05-16 00:41:45,273 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:45.2852734Z 2025-05-16 00:41:45,274 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authz.fgap.ClientResourceTypePermissionTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:46.3164512Z 2025-05-16 00:41:46,307 WARN  [managed.keycloak] (pool-2-thread-1) [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] (executor-thread-1) HHH000444: Encountered request for locking however dialect reports that database prefers locking be done in a separate select (follow-on locking); results will be locked after initial query executes
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:46.6399731Z [INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.358 s - in org.keycloak.tests.admin.authz.fgap.ClientResourceTypePermissionTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:46.6402253Z [INFO] Running org.keycloak.tests.admin.client.ClientScopeTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:46.6403127Z 2025-05-16 00:41:46,633 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:46.6404454Z 2025-05-16 00:41:46,633 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.client.ClientScopeTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:48.8185459Z 2025-05-16 00:41:48,808 WARN  [managed.keycloak] (pool-2-thread-1) [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] (executor-thread-1) HHH000444: Encountered request for locking however dialect reports that database prefers locking be done in a separate select (follow-on locking); results will be locked after initial query executes
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:49.0305356Z [INFO] Tests run: 20, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.389 s - in org.keycloak.tests.admin.client.ClientScopeTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:49.0307322Z [INFO] Running org.keycloak.tests.admin.authz.fgap.ClientResourceTypeEvaluationTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:49.0308549Z 2025-05-16 00:41:49,023 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:49.0309436Z 2025-05-16 00:41:49,023 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authz.fgap.ClientResourceTypeEvaluationTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:50.5200299Z 2025-05-16 00:41:50,503 WARN  [managed.keycloak] (pool-2-thread-1) [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] (executor-thread-1) HHH000444: Encountered request for locking however dialect reports that database prefers locking be done in a separate select (follow-on locking); results will be locked after initial query executes
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:50.8463347Z [INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.814 s - in org.keycloak.tests.admin.authz.fgap.ClientResourceTypeEvaluationTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:50.8464799Z [INFO] Running org.keycloak.tests.admin.authentication.FlowTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:50.8465664Z 2025-05-16 00:41:50,838 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:50.8466712Z 2025-05-16 00:41:50,838 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authentication.FlowTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:52.9222397Z 2025-05-16 00:41:52,824 WARN  [managed.keycloak] (pool-2-thread-1) [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] (executor-thread-1) HHH000444: Encountered request for locking however dialect reports that database prefers locking be done in a separate select (follow-on locking); results will be locked after initial query executes
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:53.1221914Z [INFO] Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.26 s - in org.keycloak.tests.admin.authentication.FlowTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:53.1225183Z [INFO] Running org.keycloak.tests.admin.authentication.ShiftRequiredActionTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:53.1229436Z 2025-05-16 00:41:53,099 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:53.1230841Z 2025-05-16 00:41:53,099 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authentication.ShiftRequiredActionTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:53.8231407Z 2025-05-16 00:41:53,766 WARN  [managed.keycloak] (pool-2-thread-1) [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] (executor-thread-1) HHH000444: Encountered request for locking however dialect reports that database prefers locking be done in a separate select (follow-on locking); results will be locked after initial query executes
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:54.0347260Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.926 s - in org.keycloak.tests.admin.authentication.ShiftRequiredActionTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:54.0348567Z [INFO] Running org.keycloak.tests.admin.authentication.InitialFlowsTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:54.0349859Z 2025-05-16 00:41:54,026 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:54.0350909Z 2025-05-16 00:41:54,026 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authentication.InitialFlowsTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:54.7237943Z 2025-05-16 00:41:54,681 WARN  [managed.keycloak] (pool-2-thread-1) [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] (executor-thread-1) HHH000444: Encountered request for locking however dialect reports that database prefers locking be done in a separate select (follow-on locking); results will be locked after initial query executes
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:54.9589170Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.922 s - in org.keycloak.tests.admin.authentication.InitialFlowsTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:54.9590433Z [INFO] Running org.keycloak.tests.admin.authentication.ProvidersTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:54.9591597Z 2025-05-16 00:41:54,950 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:54.9592871Z 2025-05-16 00:41:54,950 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authentication.ProvidersTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:55.6245485Z 2025-05-16 00:41:55,607 WARN  [managed.keycloak] (pool-2-thread-1) [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] (executor-thread-1) HHH000444: Encountered request for locking however dialect reports that database prefers locking be done in a separate select (follow-on locking); results will be locked after initial query executes
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:55.9270976Z [INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.965 s - in org.keycloak.tests.admin.authentication.ProvidersTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:55.9274074Z [INFO] Running org.keycloak.tests.admin.authz.fgap.FineGrainedPermissionsUsersTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:55.9275437Z 2025-05-16 00:41:55,917 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:41:55.9277149Z 2025-05-16 00:41:55,917 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authz.fgap.FineGrainedPermissionsUsersTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:42:01.3292710Z 2025-05-16 00:42:01,318 WARN  [managed.keycloak] (pool-2-thread-1) [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] (executor-thread-1) HHH000444: Encountered request for locking however dialect reports that database prefers locking be done in a separate select (follow-on locking); results will be locked after initial query executes
+Store IT (postgres)	Run new base tests	2025-05-16T00:42:01.6537497Z [INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.727 s - in org.keycloak.tests.admin.authz.fgap.FineGrainedPermissionsUsersTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:42:01.6539285Z [INFO] Running org.keycloak.tests.admin.AdminSignatureAlgorithmTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:42:01.6540181Z 2025-05-16 00:42:01,646 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:42:01.6541797Z 2025-05-16 00:42:01,646 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.AdminSignatureAlgorithmTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:42:01.8230129Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.166 s - in org.keycloak.tests.admin.AdminSignatureAlgorithmTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:42:01.8238121Z [INFO] Running org.keycloak.tests.admin.authentication.ShiftExecutionTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:42:01.8241575Z 2025-05-16 00:42:01,814 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:42:01.8243768Z 2025-05-16 00:42:01,814 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authentication.ShiftExecutionTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:42:02.6324984Z 2025-05-16 00:42:02,607 WARN  [managed.keycloak] (pool-2-thread-1) [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] (executor-thread-1) HHH000444: Encountered request for locking however dialect reports that database prefers locking be done in a separate select (follow-on locking); results will be locked after initial query executes
+Store IT (postgres)	Run new base tests	2025-05-16T00:42:02.9134994Z [INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.089 s - in org.keycloak.tests.admin.authentication.ShiftExecutionTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:42:02.9136694Z [INFO] Running org.keycloak.tests.admin.event.LoginEventsTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:42:02.9137605Z 2025-05-16 00:42:02,904 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:42:02.9138664Z 2025-05-16 00:42:02,904 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.event.LoginEventsTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:42:05.0202406Z [INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.105 s - in org.keycloak.tests.admin.event.LoginEventsTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:42:05.0203918Z [INFO] Running org.keycloak.tests.admin.event.EmailEventListenerTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:42:05.0204809Z 2025-05-16 00:42:05,011 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:42:05.0205858Z 2025-05-16 00:42:05,011 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.event.EmailEventListenerTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:42:05.8369449Z 2025-05-16 00:42:05,787 WARN  [managed.keycloak] (pool-2-thread-1) [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] (executor-thread-1) HHH000444: Encountered request for locking however dialect reports that database prefers locking be done in a separate select (follow-on locking); results will be locked after initial query executes
+Store IT (postgres)	Run new base tests	2025-05-16T00:42:06.0675044Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.047 s - in org.keycloak.tests.admin.event.EmailEventListenerTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:42:06.0676784Z [INFO] Running org.keycloak.tests.admin.client.ServiceAccountClientTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:42:06.0677651Z 2025-05-16 00:42:06,060 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:42:06.0678667Z 2025-05-16 00:42:06,060 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.client.ServiceAccountClientTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:42:06.7378325Z 2025-05-16 00:42:06,697 WARN  [managed.keycloak] (pool-2-thread-1) [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] (executor-thread-1) HHH000444: Encountered request for locking however dialect reports that database prefers locking be done in a separate select (follow-on locking); results will be locked after initial query executes
+Store IT (postgres)	Run new base tests	2025-05-16T00:42:06.9927951Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.924 s - in org.keycloak.tests.admin.client.ServiceAccountClientTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:42:06.9929359Z [INFO] Running org.keycloak.tests.admin.AdminRootEdgeTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:42:07.0032676Z 2025-05-16 00:42:06,986 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:42:07.0036419Z 2025-05-16 00:42:06,986 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.AdminRootEdgeTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:42:08.0386998Z 2025-05-16 00:42:08,001 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (postgres)	Run new base tests	2025-05-16T00:42:08.0390419Z 2025-05-16 00:42:08,002 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (postgres)	Run new base tests	2025-05-16T00:42:25.3078295Z [INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 18.312 s - in org.keycloak.tests.admin.AdminRootEdgeTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:42:25.3079402Z [INFO] Running org.keycloak.tests.admin.AdminRootTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:42:25.3080054Z 2025-05-16 00:42:25,300 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:42:25.3081029Z 2025-05-16 00:42:25,300 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.AdminRootTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:42:42.5290267Z [INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 17.217 s - in org.keycloak.tests.admin.AdminRootTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:42:42.5291792Z [INFO] Running org.keycloak.tests.admin.AuthzCleanupTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:42:42.5292670Z 2025-05-16 00:42:42,518 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:42:42.5293684Z 2025-05-16 00:42:42,519 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.AuthzCleanupTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:42:48.1428826Z 2025-05-16 00:42:48,130 WARN  [managed.db.postgres] (docker-java-stream--1801308972) 2025-05-16 00:42:48.129 UTC [62] LOG:  checkpoint starting: time
+Store IT (postgres)	Run new base tests	2025-05-16T00:43:03.8858446Z 2025-05-16 00:43:03,854 WARN  [managed.keycloak] (pool-6-thread-1) [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] (executor-thread-1) HHH000444: Encountered request for locking however dialect reports that database prefers locking be done in a separate select (follow-on locking); results will be locked after initial query executes
+Store IT (postgres)	Run new base tests	2025-05-16T00:43:04.8543827Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 22.323 s - in org.keycloak.tests.admin.AuthzCleanupTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:43:04.8547024Z [INFO] Running org.keycloak.tests.admin.FineGrainedPermissionsV1UsersTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:43:04.8551009Z 2025-05-16 00:43:04,843 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:43:04.8553474Z 2025-05-16 00:43:04,843 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.FineGrainedPermissionsV1UsersTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:43:38.6254125Z [INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 33.769 s - in org.keycloak.tests.admin.FineGrainedPermissionsV1UsersTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:43:38.6262574Z [INFO] Running org.keycloak.tests.admin.ImpersonationDisabledTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:43:38.6263461Z 2025-05-16 00:43:38,614 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:43:38.6264524Z 2025-05-16 00:43:38,614 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.ImpersonationDisabledTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:43:59.6287578Z 2025-05-16 00:43:59,616 WARN  [managed.keycloak] (pool-8-thread-1) [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] (executor-thread-1) HHH000444: Encountered request for locking however dialect reports that database prefers locking be done in a separate select (follow-on locking); results will be locked after initial query executes
+Store IT (postgres)	Run new base tests	2025-05-16T00:44:00.5212081Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 21.883 s - in org.keycloak.tests.admin.ImpersonationDisabledTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:44:00.5213810Z [INFO] Running org.keycloak.tests.admin.ManagementPermissionsTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:44:00.5214985Z 2025-05-16 00:44:00,499 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:44:00.5216291Z 2025-05-16 00:44:00,499 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.ManagementPermissionsTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:44:22.5857983Z 2025-05-16 00:44:22,500 WARN  [managed.keycloak] (pool-9-thread-1) [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] (executor-thread-1) HHH000444: Encountered request for locking however dialect reports that database prefers locking be done in a separate select (follow-on locking); results will be locked after initial query executes
+Store IT (postgres)	Run new base tests	2025-05-16T00:44:23.6336149Z [INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 23.104 s - in org.keycloak.tests.admin.ManagementPermissionsTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:44:23.6337934Z [INFO] Running org.keycloak.tests.admin.SMTPConnectionVaultTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:44:23.6340107Z 2025-05-16 00:44:23,605 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:44:23.6342345Z 2025-05-16 00:44:23,605 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.SMTPConnectionVaultTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:44:23.7885283Z 2025-05-16 00:44:23,718 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (postgres)	Run new base tests	2025-05-16T00:44:45.3398416Z 2025-05-16 00:44:45,286 WARN  [managed.keycloak] (pool-10-thread-1) [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] (executor-thread-1) HHH000444: Encountered request for locking however dialect reports that database prefers locking be done in a separate select (follow-on locking); results will be locked after initial query executes
+Store IT (postgres)	Run new base tests	2025-05-16T00:44:46.2514361Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 22.632 s - in org.keycloak.tests.admin.SMTPConnectionVaultTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:44:46.2515949Z [INFO] Running org.keycloak.tests.admin.authentication.RequiredActionsTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:44:46.2520833Z 2025-05-16 00:44:46,239 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:44:46.2525610Z 2025-05-16 00:44:46,239 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authentication.RequiredActionsTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:45:07.7907739Z 2025-05-16 00:45:07,702 WARN  [managed.keycloak] (pool-11-thread-1) [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] (executor-thread-1) HHH000444: Encountered request for locking however dialect reports that database prefers locking be done in a separate select (follow-on locking); results will be locked after initial query executes
+Store IT (postgres)	Run new base tests	2025-05-16T00:45:08.6225959Z [INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 22.374 s - in org.keycloak.tests.admin.authentication.RequiredActionsTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:45:08.6233260Z [INFO] Running org.keycloak.tests.admin.authz.fgap.FeatureV1EnabledTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:45:08.6237787Z 2025-05-16 00:45:08,614 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:45:08.6239059Z 2025-05-16 00:45:08,614 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.authz.fgap.FeatureV1EnabledTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:45:29.5485015Z 2025-05-16 00:45:29,541 WARN  [managed.keycloak] (pool-12-thread-1) [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] (executor-thread-1) HHH000444: Encountered request for locking however dialect reports that database prefers locking be done in a separate select (follow-on locking); results will be locked after initial query executes
+Store IT (postgres)	Run new base tests	2025-05-16T00:45:30.4468128Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 21.816 s - in org.keycloak.tests.admin.authz.fgap.FeatureV1EnabledTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:45:30.4469799Z [INFO] Running org.keycloak.tests.admin.client.ClientSearchTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:45:30.4471015Z 2025-05-16 00:45:30,432 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:45:30.4472943Z 2025-05-16 00:45:30,432 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.client.ClientSearchTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:45:30.6499217Z 2025-05-16 00:45:30,586 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (postgres)	Run new base tests	2025-05-16T00:45:30.6501896Z 2025-05-16 00:45:30,586 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (postgres)	Run new base tests	2025-05-16T00:45:30.6503893Z 2025-05-16 00:45:30,587 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (postgres)	Run new base tests	2025-05-16T00:45:30.6505855Z 2025-05-16 00:45:30,587 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (postgres)	Run new base tests	2025-05-16T00:45:30.6507745Z 2025-05-16 00:45:30,587 WARN  [org.jboss.resteasy.client.jaxrs.i18n] (Cleaner-0) RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+Store IT (postgres)	Run new base tests	2025-05-16T00:45:41.2840360Z 2025-05-16 00:45:41,267 WARN  [managed.db.postgres] (docker-java-stream--1801308972) 2025-05-16 00:45:41.265 UTC [62] LOG:  checkpoint complete: wrote 1730 buffers (10.6%); 0 WAL file(s) added, 0 removed, 3 recycled; write=173.129 s, sync=0.001 s, total=173.137 s; sync files=0, longest=0.000 s, average=0.000 s; distance=44494 kB, estimate=44494 kB; lsn=0/498FD78, redo lsn=0/447C1E8
+Store IT (postgres)	Run new base tests	2025-05-16T00:45:51.3114585Z 2025-05-16 00:45:51,302 WARN  [managed.keycloak] (pool-13-thread-1) [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] (executor-thread-1) HHH000444: Encountered request for locking however dialect reports that database prefers locking be done in a separate select (follow-on locking); results will be locked after initial query executes
+Store IT (postgres)	Run new base tests	2025-05-16T00:45:52.3754114Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 21.934 s - in org.keycloak.tests.admin.client.ClientSearchTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:45:52.3756164Z [INFO] Running org.keycloak.tests.admin.client.DynamicClientScopeTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:45:52.3757152Z 2025-05-16 00:45:52,368 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:45:52.3758283Z 2025-05-16 00:45:52,368 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.client.DynamicClientScopeTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:45:58.0263461Z 2025-05-16 00:45:58,011 WARN  [managed.keycloak] (pool-14-thread-1) [org.keycloak.common.Profile] (main) Experimental features enabled: dynamic-scopes:v1
+Store IT (postgres)	Run new base tests	2025-05-16T00:45:58.0266369Z 2025-05-16 00:45:58,018 WARN  [managed.keycloak] (pool-14-thread-1) [org.keycloak.common.Profile] (main) Experimental features enabled: dynamic-scopes:v1
+Store IT (postgres)	Run new base tests	2025-05-16T00:46:05.4510098Z 2025-05-16 00:46:05,442 WARN  [managed.keycloak] (pool-14-thread-1) [org.keycloak.common.Profile] (main) Experimental features enabled: dynamic-scopes:v1
+Store IT (postgres)	Run new base tests	2025-05-16T00:46:05.4512057Z 2025-05-16 00:46:05,442 WARN  [managed.keycloak] (pool-14-thread-1) [org.keycloak.common.Profile] (main) Experimental features enabled: dynamic-scopes:v1
+Store IT (postgres)	Run new base tests	2025-05-16T00:46:12.8703452Z 2025-05-16 00:46:12,827 WARN  [managed.keycloak] (pool-14-thread-1) [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] (executor-thread-1) HHH000444: Encountered request for locking however dialect reports that database prefers locking be done in a separate select (follow-on locking); results will be locked after initial query executes
+Store IT (postgres)	Run new base tests	2025-05-16T00:46:13.5736924Z [INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 21.196 s - in org.keycloak.tests.admin.client.DynamicClientScopeTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:46:13.5738432Z [INFO] Running org.keycloak.tests.admin.client.InstallationTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:46:13.5740606Z 2025-05-16 00:46:13,566 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:46:13.5741452Z 2025-05-16 00:46:13,566 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.client.InstallationTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:46:36.4355846Z 2025-05-16 00:46:36,336 WARN  [managed.keycloak] (pool-15-thread-1) [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] (executor-thread-1) HHH000444: Encountered request for locking however dialect reports that database prefers locking be done in a separate select (follow-on locking); results will be locked after initial query executes
+Store IT (postgres)	Run new base tests	2025-05-16T00:46:37.1126196Z [INFO] Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 23.523 s - in org.keycloak.tests.admin.client.InstallationTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:46:37.1133384Z [INFO] Running org.keycloak.tests.admin.group.GroupAttributeSearchTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:46:37.1134554Z 2025-05-16 00:46:37,091 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:46:37.1135380Z 2025-05-16 00:46:37,091 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.group.GroupAttributeSearchTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:46:59.5220906Z [INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 22.421 s - in org.keycloak.tests.admin.group.GroupAttributeSearchTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:46:59.5223019Z [INFO] Running org.keycloak.tests.admin.metric.PasswordValidationMetricCustomTagsTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:46:59.5223945Z 2025-05-16 00:46:59,514 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:46:59.5225166Z 2025-05-16 00:46:59,514 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.metric.PasswordValidationMetricCustomTagsTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:47:21.5698445Z 2025-05-16 00:47:21,468 WARN  [managed.keycloak] (pool-17-thread-1) [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] (executor-thread-1) HHH000444: Encountered request for locking however dialect reports that database prefers locking be done in a separate select (follow-on locking); results will be locked after initial query executes
+Store IT (postgres)	Run new base tests	2025-05-16T00:47:22.3087874Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 22.784 s - in org.keycloak.tests.admin.metric.PasswordValidationMetricCustomTagsTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:47:22.3094343Z [INFO] Running org.keycloak.tests.admin.metric.PasswordValidationMetricTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:47:22.3099857Z 2025-05-16 00:47:22,299 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:47:22.3141186Z 2025-05-16 00:47:22,299 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.metric.PasswordValidationMetricTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:47:44.4316367Z 2025-05-16 00:47:44,372 WARN  [managed.keycloak] (pool-18-thread-1) [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] (executor-thread-1) HHH000444: Encountered request for locking however dialect reports that database prefers locking be done in a separate select (follow-on locking); results will be locked after initial query executes
+Store IT (postgres)	Run new base tests	2025-05-16T00:47:45.2343918Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 22.921 s - in org.keycloak.tests.admin.metric.PasswordValidationMetricTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:47:45.2351464Z [INFO] Running org.keycloak.tests.admin.tracing.TracingTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:47:45.2352374Z 2025-05-16 00:47:45,221 INFO  [testinfo] (main) ----------------------------------------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:47:45.2353387Z 2025-05-16 00:47:45,221 INFO  [testinfo] (main)    RUNNING - org.keycloak.tests.admin.tracing.TracingTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:47:48.4424031Z 2025-05-16 00:47:48,366 WARN  [managed.db.postgres] (docker-java-stream--1801308972) 2025-05-16 00:47:48.366 UTC [62] LOG:  checkpoint starting: time
+Store IT (postgres)	Run new base tests	2025-05-16T00:48:07.4577655Z [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 22.228 s - in org.keycloak.tests.admin.tracing.TracingTest
+Store IT (postgres)	Run new base tests	2025-05-16T00:48:08.5260422Z [INFO] Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 632.782 s - in org.keycloak.tests.suites.DatabaseTestSuite
+Store IT (postgres)	Run new base tests	2025-05-16T00:48:08.8760231Z [INFO] 
+Store IT (postgres)	Run new base tests	2025-05-16T00:48:08.8760811Z [INFO] Results:
+Store IT (postgres)	Run new base tests	2025-05-16T00:48:08.8761186Z [INFO] 
+Store IT (postgres)	Run new base tests	2025-05-16T00:48:08.8761528Z [ERROR] Failures: 
+Store IT (postgres)	Run new base tests	2025-05-16T00:48:08.8762306Z [ERROR]   AttackDetectionResourceTest.test:81->assertBruteForce:99 expected: <2> but was: <1>
+Store IT (postgres)	Run new base tests	2025-05-16T00:48:08.8763132Z [INFO] 
+Store IT (postgres)	Run new base tests	2025-05-16T00:48:08.8763573Z [ERROR] Tests run: 481, Failures: 1, Errors: 0, Skipped: 0
+Store IT (postgres)	Run new base tests	2025-05-16T00:48:08.8764114Z [INFO] 
+Store IT (postgres)	Run new base tests	2025-05-16T00:48:08.8795389Z [INFO] ------------------------------------------------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:48:08.8796141Z [INFO] Reactor Summary for Keycloak Tests Parent 999.0.0-SNAPSHOT:
+Store IT (postgres)	Run new base tests	2025-05-16T00:48:08.8796710Z [INFO] 
+Store IT (postgres)	Run new base tests	2025-05-16T00:48:08.8798272Z [INFO] Keycloak Tests Parent .............................. SUCCESS [  0.721 s]
+Store IT (postgres)	Run new base tests	2025-05-16T00:48:08.8799094Z [INFO] Keycloak Testsuite Utilities ....................... SUCCESS [  5.297 s]
+Store IT (postgres)	Run new base tests	2025-05-16T00:48:08.8799930Z [INFO] Keycloak Testsuite Utilities Shared ................ SUCCESS [  0.870 s]
+Store IT (postgres)	Run new base tests	2025-05-16T00:48:08.8800972Z [INFO] Keycloak Testsuite Custom Providers ................ SUCCESS [  0.131 s]
+Store IT (postgres)	Run new base tests	2025-05-16T00:48:08.8801794Z [INFO] New Keycloak Base Testsuite ........................ FAILURE [10:44 min]
+Store IT (postgres)	Run new base tests	2025-05-16T00:48:08.8802537Z [INFO] ------------------------------------------------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:48:08.8803126Z [INFO] BUILD FAILURE
+Store IT (postgres)	Run new base tests	2025-05-16T00:48:08.8803627Z [INFO] ------------------------------------------------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:48:08.8804242Z [INFO] Total time:  10:51 min
+Store IT (postgres)	Run new base tests	2025-05-16T00:48:08.8804701Z [INFO] Finished at: 2025-05-16T00:48:08Z
+Store IT (postgres)	Run new base tests	2025-05-16T00:48:08.8805303Z [INFO] ------------------------------------------------------------------------
+Store IT (postgres)	Run new base tests	2025-05-16T00:48:08.8813340Z [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.0.0-M7:test (default-test) on project keycloak-tests-base: There are test failures.
+Store IT (postgres)	Run new base tests	2025-05-16T00:48:08.8814517Z [ERROR] 
+Store IT (postgres)	Run new base tests	2025-05-16T00:48:08.8815435Z [ERROR] Please refer to /home/runner/work/keycloak/keycloak/tests/base/target/surefire-reports for the individual test results.
+Store IT (postgres)	Run new base tests	2025-05-16T00:48:08.8816893Z [ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+Store IT (postgres)	Run new base tests	2025-05-16T00:48:08.8817353Z [ERROR] -> [Help 1]
+Store IT (postgres)	Run new base tests	2025-05-16T00:48:08.8817564Z [ERROR] 
+Store IT (postgres)	Run new base tests	2025-05-16T00:48:08.8817873Z [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+Store IT (postgres)	Run new base tests	2025-05-16T00:48:08.8818710Z [ERROR] Re-run Maven using the -X switch to enable full debug logging.
+Store IT (postgres)	Run new base tests	2025-05-16T00:48:08.8819336Z [ERROR] 
+Store IT (postgres)	Run new base tests	2025-05-16T00:48:08.8820035Z [ERROR] For more information about the errors and possible solutions, please read the following articles:
+Store IT (postgres)	Run new base tests	2025-05-16T00:48:08.8823069Z [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+Store IT (postgres)	Run new base tests	2025-05-16T00:48:08.8831581Z [ERROR] 
+Store IT (postgres)	Run new base tests	2025-05-16T00:48:08.8832508Z [ERROR] After correcting the problems, you can resume the build with the command
+Store IT (postgres)	Run new base tests	2025-05-16T00:48:08.8836593Z [ERROR]   mvn <args> -rf :keycloak-tests-base
+Store IT (postgres)	Run new base tests	2025-05-16T00:48:08.9091509Z ##[error]Process completed with exit code 1.
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7245021Z Prepare all required actions
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7311392Z ##[group]Run ./.github/actions/status-check
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7311778Z with:
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7315666Z   jobs: {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "conditional": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	      "ci": "true",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	      "ci-aurora": "true",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	      "ci-quarkus": "true",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	      "ci-sssd": "true",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	      "ci-store": "true",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	      "ci-webauthn": "true"
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    }
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "build": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "unit-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "base-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "adapter-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "adapter-integration-tests-strict-cookies": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "quarkus-unit-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "quarkus-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "jdk-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "store-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "failure",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "volatile-sessions-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "store-model-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "clustering-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "fips-unit-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "fips-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "forms-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "webauthn-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "sssd-unit-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "migration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "external-infinispan-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "test-framework": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "base-new-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  }
+Status Check - Keycloak CI	Run /./.github/actions/status-check	}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7320430Z env:
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7320777Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7321178Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7321531Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7321877Z ##[endgroup]
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7418226Z ##[group]Run JOBS='{
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7418644Z [36;1mJOBS='{[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7418914Z [36;1m  "conditional": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7419210Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7419506Z [36;1m    "outputs": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7419785Z [36;1m      "ci": "true",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7420079Z [36;1m      "ci-aurora": "true",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7420399Z [36;1m      "ci-quarkus": "true",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7420717Z [36;1m      "ci-sssd": "true",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7421008Z [36;1m      "ci-store": "true",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7421310Z [36;1m      "ci-webauthn": "true"[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7421593Z [36;1m    }[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7421834Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7422070Z [36;1m  "build": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7422323Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7422609Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7422868Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7423109Z [36;1m  "unit-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7423382Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7423657Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7423917Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7424168Z [36;1m  "base-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7424476Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7424830Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7425246Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7425578Z [36;1m  "adapter-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7426014Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7426427Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7426757Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7427210Z [36;1m  "adapter-integration-tests-strict-cookies": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7428072Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7428372Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7428635Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7428887Z [36;1m  "quarkus-unit-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7429183Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7429466Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7429764Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7430022Z [36;1m  "quarkus-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7430342Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7430624Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7430886Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7431135Z [36;1m  "jdk-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7431602Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7431886Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7432140Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7432398Z [36;1m  "store-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7432706Z [36;1m    "result": "failure",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7432994Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7433250Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7433498Z [36;1m  "volatile-sessions-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7433807Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7434145Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7434405Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7434646Z [36;1m  "store-model-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7434931Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7435200Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7435456Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7435720Z [36;1m  "clustering-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7436042Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7436335Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7436585Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7436826Z [36;1m  "fips-unit-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7437109Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7437386Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7437758Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7438007Z [36;1m  "fips-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7438315Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7438595Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7438849Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7439149Z [36;1m  "forms-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7439455Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7439732Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7439986Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7440242Z [36;1m  "webauthn-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7440554Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7440830Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7441083Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7441326Z [36;1m  "sssd-unit-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7441606Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7441881Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7442127Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7442366Z [36;1m  "migration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7442655Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7442940Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7443197Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7443444Z [36;1m  "external-infinispan-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7443757Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7444042Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7444298Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7444540Z [36;1m  "test-framework": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7444819Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7445101Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7445358Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7445620Z [36;1m  "base-new-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7445935Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7446206Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7446455Z [36;1m  }[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7525973Z [36;1m}'[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7526341Z [36;1m[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7526602Z [36;1mecho "Job status:"[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7527277Z [36;1mecho $JOBS | jq -r 'to_entries[] | " - \(.key): \(.value.result)"'[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7528034Z [36;1m[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7528398Z [36;1mfor i in $(echo $JOBS | jq -r 'to_entries[] | .value.result'); do[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7528819Z [36;1m  if [ "$i" != "success" ] && [ "$i" != "skipped" ]; then[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7529152Z [36;1m    echo ""[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7529421Z [36;1m    echo "Status check not okay!"[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7529710Z [36;1m    exit 1[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7529948Z [36;1m  fi[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7530177Z [36;1mdone[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7565563Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7566184Z env:
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7566520Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7566922Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7567272Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7567931Z ##[endgroup]
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7636521Z Job status:
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7671026Z  - conditional: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7671525Z  - build: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7671918Z  - unit-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7672235Z  - base-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7672577Z  - adapter-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7672971Z  - adapter-integration-tests-strict-cookies: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7673343Z  - quarkus-unit-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7673655Z  - quarkus-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7673978Z  - jdk-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7674298Z  - store-integration-tests: failure
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7674623Z  - volatile-sessions-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7674951Z  - store-model-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7675271Z  - clustering-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7675606Z  - fips-unit-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7675901Z  - fips-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7676221Z  - forms-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7676542Z  - webauthn-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7676856Z  - sssd-unit-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7677145Z  - migration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7677737Z  - external-infinispan-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7678278Z  - test-framework: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7678785Z  - base-new-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7705775Z 
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7706032Z Status check not okay!
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-16T01:18:48.7718985Z ##[error]Process completed with exit code 1.
