@@ -1,0 +1,751 @@
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:51.6409516Z Prepare all required actions
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:51.6409986Z Getting action download info
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:51.7994213Z ##[group]Download immutable action package 'actions/download-artifact@v4'
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:51.7994694Z Version: 4.3.0
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:51.7995095Z Digest: sha256:552a5b9ad918f62ec0c2e8f42f3c694d4ebd1b4036b18c39b14168fcdfc0e4f2
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:51.7995654Z Source commit SHA: d3f86a106a0bac45b974a628896c90dbdf5c8093
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:51.7996008Z ##[endgroup]
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:51.9661742Z ##[group]Run ./.github/actions/integration-test-setup
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:51.9662268Z with:
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:51.9662451Z   jdk-version: 21
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:51.9662635Z   jdk-dist: temurin
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:51.9662815Z env:
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:51.9663081Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:51.9663448Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:51.9663740Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:51.9664017Z ##[endgroup]
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:51.9751319Z Prepare all required actions
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:51.9788629Z ##[group]Run ./.github/actions/update-hosts
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:51.9788917Z env:
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:51.9789204Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:51.9789581Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:51.9789871Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:51.9790160Z ##[endgroup]
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:51.9829281Z ##[group]Run printf "\n\n$(cat .github/actions/update-hosts/nipio-hosts)" | sudo tee -a /etc/hosts
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:51.9829902Z [36;1mprintf "\n\n$(cat .github/actions/update-hosts/nipio-hosts)" | sudo tee -a /etc/hosts[0m
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:51.9882060Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:51.9882562Z env:
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:51.9882831Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:51.9883172Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:51.9883466Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:51.9883767Z ##[endgroup]
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.0018414Z 
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.0018462Z 
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.0030570Z 127.0.0.1 127.0.0.1.nip.io admin.127.0.0.1.nip.io localhost-myapp.127.0.0.1.nip.io localhost-sso.127.0.0.1.nip.io realmFrontend.127.0.0.1.nip.io proxy.kc.127.0.0.1.nip.io
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.0075770Z Prepare all required actions
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.0076063Z Getting action download info
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.1402448Z ##[group]Download immutable action package 'actions/setup-java@v4'
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.1403091Z Version: 4.7.1
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.1403683Z Digest: sha256:23223d64943473efb4336f60463c0429cd4f422cd5fc6c48a5cf0d5907c1aeac
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.1404506Z Source commit SHA: c5195efecf7bdfc987ee8bae7a71cb8b11521c00
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.1405087Z ##[endgroup]
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.3861149Z ##[group]Run ./.github/actions/java-setup
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.3861428Z with:
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.3861606Z   distribution: temurin
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.3861807Z   java-version: 21
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.3862178Z env:
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.3862450Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.3862784Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.3863074Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.3863360Z ##[endgroup]
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.3941551Z ##[group]Run actions/setup-java@v4
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.3941812Z with:
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.3942199Z   distribution: temurin
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.3942406Z   java-version: 21
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.3942593Z   java-package: jdk
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.3942789Z   check-latest: false
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.3942983Z   server-id: github
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.3943185Z   server-username: GITHUB_ACTOR
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.3943425Z   server-password: GITHUB_TOKEN
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.3943664Z   overwrite-settings: true
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.3943878Z   job-status: success
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.3944192Z   token: ***
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.3944370Z env:
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.3944634Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.3945219Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.3945507Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.3945797Z ##[endgroup]
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.5870813Z ##[group]Installed distributions
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.5957315Z Resolved Java 21.0.7+6 from tool-cache
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.5957869Z Setting Java 21.0.7+6 as the default
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.5971098Z Creating toolchains.xml for JDK version 21 from temurin
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.6046655Z Writing to /home/runner/.m2/toolchains.xml
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.6047056Z 
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.6047492Z Java configuration:
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.6047813Z   Distribution: temurin
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.6048155Z   Version: 21.0.7+6
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.6048828Z   Path: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.7-6/x64
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.6049182Z 
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.6051189Z ##[endgroup]
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.6067099Z Creating settings.xml with server-id: github
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.6071381Z Writing to /home/runner/.m2/settings.xml
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.6198559Z Prepare all required actions
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.6198898Z Getting action download info
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.7397337Z ##[group]Download immutable action package 'actions/cache@v4'
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.7397800Z Version: 4.2.3
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.7398250Z Digest: sha256:c8a3bb963e1f1826d8fcc8d1354f0dd29d8ac1db1d4f6f20247055ae11b81ed9
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.7398871Z Source commit SHA: 5a3ec84eff668545956fd18022155c47e93e2684
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.7399277Z ##[endgroup]
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.8573707Z ##[group]Run ./.github/actions/maven-cache
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.8574000Z with:
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.8574204Z   create-cache-if-it-doesnt-exist: false
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.8574451Z env:
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.8574894Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.8575238Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.8575520Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.8575929Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.7-6/x64
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.8576461Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.7-6/x64
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.8576912Z ##[endgroup]
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.8599864Z ##[group]Run echo "key=mvn-`date -u "+%Y-%U"`" >> $GITHUB_OUTPUT
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.8600479Z [36;1mecho "key=mvn-`date -u "+%Y-%U"`" >> $GITHUB_OUTPUT[0m
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.8675739Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.8676257Z env:
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.8676695Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.8677251Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.8677732Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.8678411Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.7-6/x64
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.8679150Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.7-6/x64
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.8679717Z ##[endgroup]
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.8841200Z ##[group]Run actions/cache/restore@v4
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.8841456Z with:
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.8841692Z   path: ~/.m2/repository/*/*
+FIPS IT (non-strict)	Integration test setup	!~/.m2/repository/org/keycloak
+FIPS IT (non-strict)	Integration test setup	
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.8842257Z   key: mvn-2025-21
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.8842462Z   enableCrossOsArchive: true
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.8842698Z   fail-on-cache-miss: false
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.8842914Z   lookup-only: false
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.8843100Z env:
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.8843362Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.8843688Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.8843970Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.8844375Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.7-6/x64
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.8844831Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.7-6/x64
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:52.8845162Z ##[endgroup]
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:53.0077180Z [warning]An internal error has occurred in cache backend. Please check https://www.githubstatus.com/ for any ongoing issue in actions.
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:53.0193566Z Prepare all required actions
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:53.0193898Z Getting action download info
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:53.1537367Z ##[group]Run ./.github/actions/node-cache
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:53.1537655Z env:
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:53.1537917Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:53.1538268Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:53.1538557Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:53.1538964Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.7-6/x64
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:53.1539409Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.7-6/x64
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:53.1539763Z ##[endgroup]
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:53.1562241Z ##[group]Run echo "node=$(cat js/pom.xml | grep '<node.version>' | cut -d '>' -f 2 | cut -d '<' -f 1 | cut -c 2-)" >> $GITHUB_OUTPUT
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:53.1562909Z [36;1mecho "node=$(cat js/pom.xml | grep '<node.version>' | cut -d '>' -f 2 | cut -d '<' -f 1 | cut -c 2-)" >> $GITHUB_OUTPUT[0m
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:53.1563512Z [36;1mecho "pnpm=$(cat js/pom.xml | grep '<pnpm.version>' | cut -d '>' -f 2 | cut -d '<' -f 1 | cut -c 1-)" >> $GITHUB_OUTPUT[0m
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:53.1617757Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:53.1618085Z env:
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:53.1618355Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:53.1618691Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:53.1618967Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:53.1619359Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.7-6/x64
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:53.1619802Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.7-6/x64
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:53.1620314Z ##[endgroup]
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:53.1823623Z ##[group]Run actions/cache@v4
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:53.1823855Z with:
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:53.1824208Z   path: ~/.m2/repository/com/github/eirslett/node
+FIPS IT (non-strict)	Integration test setup	~/.m2/repository/com/github/eirslett/pnpm
+FIPS IT (non-strict)	Integration test setup	
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:53.1824700Z   key: Linux-frontend-plugin-artifacts-22.14.0-10.4.1
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:53.1825012Z   enableCrossOsArchive: false
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:53.1825245Z   fail-on-cache-miss: false
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:53.1825464Z   lookup-only: false
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:53.1825651Z   save-always: false
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:53.1825831Z env:
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:53.1826090Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:53.1826439Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:53.1826728Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:53.1827114Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.7-6/x64
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:53.1827553Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.7-6/x64
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:53.1827907Z ##[endgroup]
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:53.3007670Z [warning]An internal error has occurred in cache backend. Please check https://www.githubstatus.com/ for any ongoing issue in actions.
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:53.3089683Z ##[group]Run ./.github/scripts/download-node-tooling.sh 22.14.0 10.4.1
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:53.3090149Z [36;1m./.github/scripts/download-node-tooling.sh 22.14.0 10.4.1[0m
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:53.3144575Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:53.3144910Z env:
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:53.3145186Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:53.3145534Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:53.3145825Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:53.3146222Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.7-6/x64
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:53.3146672Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.7-6/x64
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:53.3147030Z ##[endgroup]
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:53.3251138Z Downloading node-v22.14.0-linux-x64.tar.gz...
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:53.3448400Z curl: (35) Insufficient randomness
+FIPS IT (non-strict)	Integration test setup	2025-05-27T12:07:53.3472166Z ##[error]Process completed with exit code 35.
+FIPS UT	Unit test setup	2025-05-27T12:08:20.9440683Z Prepare all required actions
+FIPS UT	Unit test setup	2025-05-27T12:08:20.9441134Z Getting action download info
+FIPS UT	Unit test setup	2025-05-27T12:08:20.9489889Z ##[group]Run ./.github/actions/unit-test-setup
+FIPS UT	Unit test setup	2025-05-27T12:08:20.9490189Z env:
+FIPS UT	Unit test setup	2025-05-27T12:08:20.9490477Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+FIPS UT	Unit test setup	2025-05-27T12:08:20.9490852Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+FIPS UT	Unit test setup	2025-05-27T12:08:20.9491138Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+FIPS UT	Unit test setup	2025-05-27T12:08:20.9491429Z ##[endgroup]
+FIPS UT	Unit test setup	2025-05-27T12:08:20.9558266Z Prepare all required actions
+FIPS UT	Unit test setup	2025-05-27T12:08:20.9558576Z Getting action download info
+FIPS UT	Unit test setup	2025-05-27T12:08:21.1342413Z ##[group]Download immutable action package 'actions/setup-java@v4'
+FIPS UT	Unit test setup	2025-05-27T12:08:21.1342806Z Version: 4.7.1
+FIPS UT	Unit test setup	2025-05-27T12:08:21.1343129Z Digest: sha256:23223d64943473efb4336f60463c0429cd4f422cd5fc6c48a5cf0d5907c1aeac
+FIPS UT	Unit test setup	2025-05-27T12:08:21.1343766Z Source commit SHA: c5195efecf7bdfc987ee8bae7a71cb8b11521c00
+FIPS UT	Unit test setup	2025-05-27T12:08:21.1344108Z ##[endgroup]
+FIPS UT	Unit test setup	2025-05-27T12:08:21.5737647Z ##[group]Run ./.github/actions/java-setup
+FIPS UT	Unit test setup	2025-05-27T12:08:21.5738029Z with:
+FIPS UT	Unit test setup	2025-05-27T12:08:21.5738216Z   distribution: temurin
+FIPS UT	Unit test setup	2025-05-27T12:08:21.5738426Z   java-version: 21
+FIPS UT	Unit test setup	2025-05-27T12:08:21.5738646Z env:
+FIPS UT	Unit test setup	2025-05-27T12:08:21.5738945Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+FIPS UT	Unit test setup	2025-05-27T12:08:21.5739293Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+FIPS UT	Unit test setup	2025-05-27T12:08:21.5739583Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+FIPS UT	Unit test setup	2025-05-27T12:08:21.5739873Z ##[endgroup]
+FIPS UT	Unit test setup	2025-05-27T12:08:21.5826621Z ##[group]Run actions/setup-java@v4
+FIPS UT	Unit test setup	2025-05-27T12:08:21.5826896Z with:
+FIPS UT	Unit test setup	2025-05-27T12:08:21.5827083Z   distribution: temurin
+FIPS UT	Unit test setup	2025-05-27T12:08:21.5827298Z   java-version: 21
+FIPS UT	Unit test setup	2025-05-27T12:08:21.5827495Z   java-package: jdk
+FIPS UT	Unit test setup	2025-05-27T12:08:21.5827690Z   check-latest: false
+FIPS UT	Unit test setup	2025-05-27T12:08:21.5828084Z   server-id: github
+FIPS UT	Unit test setup	2025-05-27T12:08:21.5828287Z   server-username: GITHUB_ACTOR
+FIPS UT	Unit test setup	2025-05-27T12:08:21.5828526Z   server-password: GITHUB_TOKEN
+FIPS UT	Unit test setup	2025-05-27T12:08:21.5828754Z   overwrite-settings: true
+FIPS UT	Unit test setup	2025-05-27T12:08:21.5828983Z   job-status: success
+FIPS UT	Unit test setup	2025-05-27T12:08:21.5829292Z   token: ***
+FIPS UT	Unit test setup	2025-05-27T12:08:21.5829472Z env:
+FIPS UT	Unit test setup	2025-05-27T12:08:21.5829740Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+FIPS UT	Unit test setup	2025-05-27T12:08:21.5830088Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+FIPS UT	Unit test setup	2025-05-27T12:08:21.5830380Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+FIPS UT	Unit test setup	2025-05-27T12:08:21.5830675Z ##[endgroup]
+FIPS UT	Unit test setup	2025-05-27T12:08:21.7779735Z ##[group]Installed distributions
+FIPS UT	Unit test setup	2025-05-27T12:08:21.7894827Z Resolved Java 21.0.7+6 from tool-cache
+FIPS UT	Unit test setup	2025-05-27T12:08:21.7895404Z Setting Java 21.0.7+6 as the default
+FIPS UT	Unit test setup	2025-05-27T12:08:21.7908366Z Creating toolchains.xml for JDK version 21 from temurin
+FIPS UT	Unit test setup	2025-05-27T12:08:21.7984003Z Writing to /home/runner/.m2/toolchains.xml
+FIPS UT	Unit test setup	2025-05-27T12:08:21.7984477Z 
+FIPS UT	Unit test setup	2025-05-27T12:08:21.7986158Z Java configuration:
+FIPS UT	Unit test setup	2025-05-27T12:08:21.7986801Z   Distribution: temurin
+FIPS UT	Unit test setup	2025-05-27T12:08:21.7989156Z   Version: 21.0.7+6
+FIPS UT	Unit test setup	2025-05-27T12:08:21.7990126Z   Path: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.7-6/x64
+FIPS UT	Unit test setup	2025-05-27T12:08:21.7990840Z 
+FIPS UT	Unit test setup	2025-05-27T12:08:21.7991496Z ##[endgroup]
+FIPS UT	Unit test setup	2025-05-27T12:08:21.8006490Z Creating settings.xml with server-id: github
+FIPS UT	Unit test setup	2025-05-27T12:08:21.8009997Z Writing to /home/runner/.m2/settings.xml
+FIPS UT	Unit test setup	2025-05-27T12:08:21.8160615Z Prepare all required actions
+FIPS UT	Unit test setup	2025-05-27T12:08:21.8160920Z Getting action download info
+FIPS UT	Unit test setup	2025-05-27T12:08:22.0087316Z ##[group]Download immutable action package 'actions/cache@v4'
+FIPS UT	Unit test setup	2025-05-27T12:08:22.0087768Z Version: 4.2.3
+FIPS UT	Unit test setup	2025-05-27T12:08:22.0088208Z Digest: sha256:c8a3bb963e1f1826d8fcc8d1354f0dd29d8ac1db1d4f6f20247055ae11b81ed9
+FIPS UT	Unit test setup	2025-05-27T12:08:22.0088682Z Source commit SHA: 5a3ec84eff668545956fd18022155c47e93e2684
+FIPS UT	Unit test setup	2025-05-27T12:08:22.0088995Z ##[endgroup]
+FIPS UT	Unit test setup	2025-05-27T12:08:22.1296414Z ##[group]Run ./.github/actions/maven-cache
+FIPS UT	Unit test setup	2025-05-27T12:08:22.1296742Z with:
+FIPS UT	Unit test setup	2025-05-27T12:08:22.1296968Z   create-cache-if-it-doesnt-exist: false
+FIPS UT	Unit test setup	2025-05-27T12:08:22.1297244Z env:
+FIPS UT	Unit test setup	2025-05-27T12:08:22.1297520Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+FIPS UT	Unit test setup	2025-05-27T12:08:22.1298126Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+FIPS UT	Unit test setup	2025-05-27T12:08:22.1298418Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+FIPS UT	Unit test setup	2025-05-27T12:08:22.1298843Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.7-6/x64
+FIPS UT	Unit test setup	2025-05-27T12:08:22.1299295Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.7-6/x64
+FIPS UT	Unit test setup	2025-05-27T12:08:22.1299673Z ##[endgroup]
+FIPS UT	Unit test setup	2025-05-27T12:08:22.1344413Z ##[group]Run echo "key=mvn-`date -u "+%Y-%U"`" >> $GITHUB_OUTPUT
+FIPS UT	Unit test setup	2025-05-27T12:08:22.1344841Z [36;1mecho "key=mvn-`date -u "+%Y-%U"`" >> $GITHUB_OUTPUT[0m
+FIPS UT	Unit test setup	2025-05-27T12:08:22.1399349Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+FIPS UT	Unit test setup	2025-05-27T12:08:22.1399679Z env:
+FIPS UT	Unit test setup	2025-05-27T12:08:22.1399960Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+FIPS UT	Unit test setup	2025-05-27T12:08:22.1400315Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+FIPS UT	Unit test setup	2025-05-27T12:08:22.1400608Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+FIPS UT	Unit test setup	2025-05-27T12:08:22.1401008Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.7-6/x64
+FIPS UT	Unit test setup	2025-05-27T12:08:22.1401465Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.7-6/x64
+FIPS UT	Unit test setup	2025-05-27T12:08:22.1401797Z ##[endgroup]
+FIPS UT	Unit test setup	2025-05-27T12:08:22.1537130Z ##[group]Run actions/cache/restore@v4
+FIPS UT	Unit test setup	2025-05-27T12:08:22.1537389Z with:
+FIPS UT	Unit test setup	2025-05-27T12:08:22.1537630Z   path: ~/.m2/repository/*/*
+FIPS UT	Unit test setup	!~/.m2/repository/org/keycloak
+FIPS UT	Unit test setup	
+FIPS UT	Unit test setup	2025-05-27T12:08:22.1537935Z   key: mvn-2025-21
+FIPS UT	Unit test setup	2025-05-27T12:08:22.1538131Z   enableCrossOsArchive: true
+FIPS UT	Unit test setup	2025-05-27T12:08:22.1538362Z   fail-on-cache-miss: false
+FIPS UT	Unit test setup	2025-05-27T12:08:22.1538608Z   lookup-only: false
+FIPS UT	Unit test setup	2025-05-27T12:08:22.1538831Z env:
+FIPS UT	Unit test setup	2025-05-27T12:08:22.1539092Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+FIPS UT	Unit test setup	2025-05-27T12:08:22.1539430Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+FIPS UT	Unit test setup	2025-05-27T12:08:22.1539731Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+FIPS UT	Unit test setup	2025-05-27T12:08:22.1540290Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.7-6/x64
+FIPS UT	Unit test setup	2025-05-27T12:08:22.1540741Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.7-6/x64
+FIPS UT	Unit test setup	2025-05-27T12:08:22.1541095Z ##[endgroup]
+FIPS UT	Unit test setup	2025-05-27T12:08:22.2691940Z [warning]An internal error has occurred in cache backend. Please check https://www.githubstatus.com/ for any ongoing issue in actions.
+FIPS UT	Unit test setup	2025-05-27T12:08:22.2776883Z Prepare all required actions
+FIPS UT	Unit test setup	2025-05-27T12:08:22.2777202Z Getting action download info
+FIPS UT	Unit test setup	2025-05-27T12:08:22.4535027Z ##[group]Run ./.github/actions/node-cache
+FIPS UT	Unit test setup	2025-05-27T12:08:22.4535318Z env:
+FIPS UT	Unit test setup	2025-05-27T12:08:22.4535619Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+FIPS UT	Unit test setup	2025-05-27T12:08:22.4535965Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+FIPS UT	Unit test setup	2025-05-27T12:08:22.4536252Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+FIPS UT	Unit test setup	2025-05-27T12:08:22.4536653Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.7-6/x64
+FIPS UT	Unit test setup	2025-05-27T12:08:22.4537114Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.7-6/x64
+FIPS UT	Unit test setup	2025-05-27T12:08:22.4537478Z ##[endgroup]
+FIPS UT	Unit test setup	2025-05-27T12:08:22.4553245Z ##[group]Run echo "node=$(cat js/pom.xml | grep '<node.version>' | cut -d '>' -f 2 | cut -d '<' -f 1 | cut -c 2-)" >> $GITHUB_OUTPUT
+FIPS UT	Unit test setup	2025-05-27T12:08:22.4554100Z [36;1mecho "node=$(cat js/pom.xml | grep '<node.version>' | cut -d '>' -f 2 | cut -d '<' -f 1 | cut -c 2-)" >> $GITHUB_OUTPUT[0m
+FIPS UT	Unit test setup	2025-05-27T12:08:22.4554721Z [36;1mecho "pnpm=$(cat js/pom.xml | grep '<pnpm.version>' | cut -d '>' -f 2 | cut -d '<' -f 1 | cut -c 1-)" >> $GITHUB_OUTPUT[0m
+FIPS UT	Unit test setup	2025-05-27T12:08:22.4607815Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+FIPS UT	Unit test setup	2025-05-27T12:08:22.4608149Z env:
+FIPS UT	Unit test setup	2025-05-27T12:08:22.4608424Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+FIPS UT	Unit test setup	2025-05-27T12:08:22.4608775Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+FIPS UT	Unit test setup	2025-05-27T12:08:22.4609060Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+FIPS UT	Unit test setup	2025-05-27T12:08:22.4609481Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.7-6/x64
+FIPS UT	Unit test setup	2025-05-27T12:08:22.4609935Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.7-6/x64
+FIPS UT	Unit test setup	2025-05-27T12:08:22.4610278Z ##[endgroup]
+FIPS UT	Unit test setup	2025-05-27T12:08:22.4812488Z ##[group]Run actions/cache@v4
+FIPS UT	Unit test setup	2025-05-27T12:08:22.4812721Z with:
+FIPS UT	Unit test setup	2025-05-27T12:08:22.4813091Z   path: ~/.m2/repository/com/github/eirslett/node
+FIPS UT	Unit test setup	~/.m2/repository/com/github/eirslett/pnpm
+FIPS UT	Unit test setup	
+FIPS UT	Unit test setup	2025-05-27T12:08:22.4813912Z   key: Linux-frontend-plugin-artifacts-22.14.0-10.4.1
+FIPS UT	Unit test setup	2025-05-27T12:08:22.4814242Z   enableCrossOsArchive: false
+FIPS UT	Unit test setup	2025-05-27T12:08:22.4814482Z   fail-on-cache-miss: false
+FIPS UT	Unit test setup	2025-05-27T12:08:22.4814698Z   lookup-only: false
+FIPS UT	Unit test setup	2025-05-27T12:08:22.4814897Z   save-always: false
+FIPS UT	Unit test setup	2025-05-27T12:08:22.4815080Z env:
+FIPS UT	Unit test setup	2025-05-27T12:08:22.4815343Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+FIPS UT	Unit test setup	2025-05-27T12:08:22.4815696Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+FIPS UT	Unit test setup	2025-05-27T12:08:22.4815974Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+FIPS UT	Unit test setup	2025-05-27T12:08:22.4816382Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.7-6/x64
+FIPS UT	Unit test setup	2025-05-27T12:08:22.4816826Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.7-6/x64
+FIPS UT	Unit test setup	2025-05-27T12:08:22.4817170Z ##[endgroup]
+FIPS UT	Unit test setup	2025-05-27T12:08:22.6005485Z [warning]An internal error has occurred in cache backend. Please check https://www.githubstatus.com/ for any ongoing issue in actions.
+FIPS UT	Unit test setup	2025-05-27T12:08:22.6083548Z ##[group]Run ./.github/scripts/download-node-tooling.sh 22.14.0 10.4.1
+FIPS UT	Unit test setup	2025-05-27T12:08:22.6084036Z [36;1m./.github/scripts/download-node-tooling.sh 22.14.0 10.4.1[0m
+FIPS UT	Unit test setup	2025-05-27T12:08:22.6137631Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+FIPS UT	Unit test setup	2025-05-27T12:08:22.6137968Z env:
+FIPS UT	Unit test setup	2025-05-27T12:08:22.6138265Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+FIPS UT	Unit test setup	2025-05-27T12:08:22.6138627Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+FIPS UT	Unit test setup	2025-05-27T12:08:22.6138946Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+FIPS UT	Unit test setup	2025-05-27T12:08:22.6139376Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.7-6/x64
+FIPS UT	Unit test setup	2025-05-27T12:08:22.6140021Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.7-6/x64
+FIPS UT	Unit test setup	2025-05-27T12:08:22.6140384Z ##[endgroup]
+FIPS UT	Unit test setup	2025-05-27T12:08:22.6239772Z Downloading node-v22.14.0-linux-x64.tar.gz...
+FIPS UT	Unit test setup	2025-05-27T12:08:22.6504408Z curl: (35) Insufficient randomness
+FIPS UT	Unit test setup	2025-05-27T12:08:22.6526442Z ##[error]Process completed with exit code 35.
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:16.4497386Z Prepare all required actions
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:16.4497867Z Getting action download info
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:16.5852428Z ##[group]Download immutable action package 'actions/download-artifact@v4'
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:16.5852878Z Version: 4.3.0
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:16.5853249Z Digest: sha256:552a5b9ad918f62ec0c2e8f42f3c694d4ebd1b4036b18c39b14168fcdfc0e4f2
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:16.5853770Z Source commit SHA: d3f86a106a0bac45b974a628896c90dbdf5c8093
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:16.5854115Z ##[endgroup]
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:16.7997805Z ##[group]Run ./.github/actions/integration-test-setup
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:16.7998180Z with:
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:16.7998389Z   jdk-version: 21
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:16.7998601Z   jdk-dist: temurin
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:16.7998808Z env:
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:16.7999112Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:16.7999506Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:16.7999828Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:16.8000323Z ##[endgroup]
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:16.8089919Z Prepare all required actions
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:16.8128604Z ##[group]Run ./.github/actions/update-hosts
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:16.8128902Z env:
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:16.8129217Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:16.8129619Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:16.8129932Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:16.8130389Z ##[endgroup]
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:16.8171801Z ##[group]Run printf "\n\n$(cat .github/actions/update-hosts/nipio-hosts)" | sudo tee -a /etc/hosts
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:16.8172488Z [36;1mprintf "\n\n$(cat .github/actions/update-hosts/nipio-hosts)" | sudo tee -a /etc/hosts[0m
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:16.8224732Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:16.8225269Z env:
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:16.8225561Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:16.8225969Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:16.8226280Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:16.8226608Z ##[endgroup]
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:16.8372700Z 
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:16.8373017Z 
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:16.8384822Z 127.0.0.1 127.0.0.1.nip.io admin.127.0.0.1.nip.io localhost-myapp.127.0.0.1.nip.io localhost-sso.127.0.0.1.nip.io realmFrontend.127.0.0.1.nip.io proxy.kc.127.0.0.1.nip.io
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:16.8430881Z Prepare all required actions
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:16.8431193Z Getting action download info
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.0177921Z ##[group]Download immutable action package 'actions/setup-java@v4'
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.0178338Z Version: 4.7.1
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.0178689Z Digest: sha256:23223d64943473efb4336f60463c0429cd4f422cd5fc6c48a5cf0d5907c1aeac
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.0179165Z Source commit SHA: c5195efecf7bdfc987ee8bae7a71cb8b11521c00
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.0179498Z ##[endgroup]
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.3271191Z ##[group]Run ./.github/actions/java-setup
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.3271480Z with:
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.3271664Z   distribution: temurin
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.3271871Z   java-version: 21
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.3272069Z env:
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.3272325Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.3272668Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.3272955Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.3273239Z ##[endgroup]
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.3384661Z ##[group]Run actions/setup-java@v4
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.3384930Z with:
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.3385120Z   distribution: temurin
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.3385330Z   java-version: 21
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.3385527Z   java-package: jdk
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.3385722Z   check-latest: false
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.3385918Z   server-id: github
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.3386117Z   server-username: GITHUB_ACTOR
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.3386362Z   server-password: GITHUB_TOKEN
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.3386617Z   overwrite-settings: true
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.3386834Z   job-status: success
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.3387172Z   token: ***
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.3387347Z env:
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.3387612Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.3388204Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.3388495Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.3388794Z ##[endgroup]
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.5447614Z ##[group]Installed distributions
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.5497496Z Resolved Java 21.0.7+6 from tool-cache
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.5498079Z Setting Java 21.0.7+6 as the default
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.5511507Z Creating toolchains.xml for JDK version 21 from temurin
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.5588827Z Writing to /home/runner/.m2/toolchains.xml
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.5591375Z 
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.5591572Z Java configuration:
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.5591970Z   Distribution: temurin
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.5592376Z   Version: 21.0.7+6
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.5593752Z   Path: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.7-6/x64
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.5595091Z 
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.5595962Z ##[endgroup]
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.5612577Z Creating settings.xml with server-id: github
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.5617732Z Writing to /home/runner/.m2/settings.xml
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.5745606Z Prepare all required actions
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.5745955Z Getting action download info
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.7464296Z ##[group]Download immutable action package 'actions/cache@v4'
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.7464730Z Version: 4.2.3
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.7465133Z Digest: sha256:c8a3bb963e1f1826d8fcc8d1354f0dd29d8ac1db1d4f6f20247055ae11b81ed9
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.7465685Z Source commit SHA: 5a3ec84eff668545956fd18022155c47e93e2684
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.7466043Z ##[endgroup]
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.8607297Z ##[group]Run ./.github/actions/maven-cache
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.8607583Z with:
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.8607790Z   create-cache-if-it-doesnt-exist: false
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.8608040Z env:
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.8608480Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.8608818Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.8609100Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.8609504Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.7-6/x64
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.8609936Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.7-6/x64
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.8610429Z ##[endgroup]
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.8631834Z ##[group]Run echo "key=mvn-`date -u "+%Y-%U"`" >> $GITHUB_OUTPUT
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.8632216Z [36;1mecho "key=mvn-`date -u "+%Y-%U"`" >> $GITHUB_OUTPUT[0m
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.8685014Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.8685335Z env:
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.8685603Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.8685934Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.8686227Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.8686634Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.7-6/x64
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.8687091Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.7-6/x64
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.8687433Z ##[endgroup]
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.8824875Z ##[group]Run actions/cache/restore@v4
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.8825159Z with:
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.8825420Z   path: ~/.m2/repository/*/*
+FIPS IT (strict)	Integration test setup	!~/.m2/repository/org/keycloak
+FIPS IT (strict)	Integration test setup	
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.8825747Z   key: mvn-2025-21
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.8825969Z   enableCrossOsArchive: true
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.8826221Z   fail-on-cache-miss: false
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.8826450Z   lookup-only: false
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.8826653Z env:
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.8826927Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.8827276Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.8827581Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.8827991Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.7-6/x64
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.8828459Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.7-6/x64
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:17.8828819Z ##[endgroup]
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:18.0013971Z [warning]An internal error has occurred in cache backend. Please check https://www.githubstatus.com/ for any ongoing issue in actions.
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:18.0100952Z Prepare all required actions
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:18.0101282Z Getting action download info
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:18.1568057Z ##[group]Run ./.github/actions/node-cache
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:18.1568334Z env:
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:18.1568607Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:18.1568953Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:18.1569238Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:18.1569632Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.7-6/x64
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:18.1570250Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.7-6/x64
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:18.1570593Z ##[endgroup]
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:18.1586178Z ##[group]Run echo "node=$(cat js/pom.xml | grep '<node.version>' | cut -d '>' -f 2 | cut -d '<' -f 1 | cut -c 2-)" >> $GITHUB_OUTPUT
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:18.1586853Z [36;1mecho "node=$(cat js/pom.xml | grep '<node.version>' | cut -d '>' -f 2 | cut -d '<' -f 1 | cut -c 2-)" >> $GITHUB_OUTPUT[0m
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:18.1587476Z [36;1mecho "pnpm=$(cat js/pom.xml | grep '<pnpm.version>' | cut -d '>' -f 2 | cut -d '<' -f 1 | cut -c 1-)" >> $GITHUB_OUTPUT[0m
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:18.1638410Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:18.1638738Z env:
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:18.1639006Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:18.1639354Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:18.1639633Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:18.1640134Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.7-6/x64
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:18.1640580Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.7-6/x64
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:18.1641105Z ##[endgroup]
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:18.1850426Z ##[group]Run actions/cache@v4
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:18.1850676Z with:
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:18.1851031Z   path: ~/.m2/repository/com/github/eirslett/node
+FIPS IT (strict)	Integration test setup	~/.m2/repository/com/github/eirslett/pnpm
+FIPS IT (strict)	Integration test setup	
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:18.1851514Z   key: Linux-frontend-plugin-artifacts-22.14.0-10.4.1
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:18.1851841Z   enableCrossOsArchive: false
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:18.1852077Z   fail-on-cache-miss: false
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:18.1852292Z   lookup-only: false
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:18.1852483Z   save-always: false
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:18.1852656Z env:
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:18.1852914Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:18.1853251Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:18.1853531Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:18.1853915Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.7-6/x64
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:18.1854347Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.7-6/x64
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:18.1854695Z ##[endgroup]
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:18.3043726Z [warning]An internal error has occurred in cache backend. Please check https://www.githubstatus.com/ for any ongoing issue in actions.
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:18.3120449Z ##[group]Run ./.github/scripts/download-node-tooling.sh 22.14.0 10.4.1
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:18.3120935Z [36;1m./.github/scripts/download-node-tooling.sh 22.14.0 10.4.1[0m
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:18.3172407Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:18.3172729Z env:
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:18.3172999Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:18.3173339Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:18.3173620Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:18.3174031Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.7-6/x64
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:18.3174481Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.7-6/x64
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:18.3174829Z ##[endgroup]
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:18.3275283Z Downloading node-v22.14.0-linux-x64.tar.gz...
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:18.3419780Z curl: (35) Insufficient randomness
+FIPS IT (strict)	Integration test setup	2025-05-27T12:08:18.3441603Z ##[error]Process completed with exit code 35.
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.1952012Z Prepare all required actions
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2022025Z ##[group]Run ./.github/actions/status-check
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2022380Z with:
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2106124Z   jobs: {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "conditional": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	      "ci": "true",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	      "ci-aurora": "false",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	      "ci-quarkus": "false",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	      "ci-sssd": "false",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	      "ci-store": "true",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	      "ci-webauthn": "true"
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    }
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "build": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "unit-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "base-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "adapter-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "adapter-integration-tests-strict-cookies": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "quarkus-unit-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "skipped",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "quarkus-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "jdk-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "store-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "volatile-sessions-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "store-model-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "clustering-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "fips-unit-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "failure",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "fips-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "failure",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "forms-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "webauthn-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "sssd-unit-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "skipped",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "migration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "external-infinispan-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "test-framework": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  "base-new-integration-tests": {
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	  }
+Status Check - Keycloak CI	Run /./.github/actions/status-check	}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2110868Z env:
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2111207Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2111607Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2111960Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2112291Z ##[endgroup]
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2213369Z ##[group]Run JOBS='{
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2213747Z [36;1mJOBS='{[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2213986Z [36;1m  "conditional": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2214254Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2214529Z [36;1m    "outputs": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2214779Z [36;1m      "ci": "true",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2215038Z [36;1m      "ci-aurora": "false",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2215333Z [36;1m      "ci-quarkus": "false",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2215607Z [36;1m      "ci-sssd": "false",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2215877Z [36;1m      "ci-store": "true",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2216148Z [36;1m      "ci-webauthn": "true"[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2216408Z [36;1m    }[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2216623Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2216841Z [36;1m  "build": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2217087Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2217355Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2217597Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2217814Z [36;1m  "unit-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2218073Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2218338Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2218725Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2218970Z [36;1m  "base-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2219259Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2219525Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2219960Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2220206Z [36;1m  "adapter-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2220507Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2220767Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2221005Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2221322Z [36;1m  "adapter-integration-tests-strict-cookies": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2221840Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2222117Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2222369Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2222599Z [36;1m  "quarkus-unit-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2222884Z [36;1m    "result": "skipped",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2223151Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2223388Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2223622Z [36;1m  "quarkus-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2223921Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2224182Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2224425Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2224657Z [36;1m  "jdk-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2225009Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2225271Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2225503Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2225738Z [36;1m  "store-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2226031Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2226305Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2226540Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2226764Z [36;1m  "volatile-sessions-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2227051Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2227305Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2227539Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2227761Z [36;1m  "store-model-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2228023Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2228283Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2228695Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2228946Z [36;1m  "clustering-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2229252Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2229515Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2229755Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2229972Z [36;1m  "fips-unit-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2230241Z [36;1m    "result": "failure",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2230502Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2230743Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2230975Z [36;1m  "fips-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2231256Z [36;1m    "result": "failure",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2231518Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2231753Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2231975Z [36;1m  "forms-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2232271Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2232533Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2232769Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2233012Z [36;1m  "webauthn-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2233305Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2233570Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2233811Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2234035Z [36;1m  "sssd-unit-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2234303Z [36;1m    "result": "skipped",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2234556Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2234793Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2235007Z [36;1m  "migration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2235270Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2235526Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2235755Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2235993Z [36;1m  "external-infinispan-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2236289Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2236551Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2236784Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2237000Z [36;1m  "test-framework": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2237264Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2237525Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2237761Z [36;1m  },[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2238000Z [36;1m  "base-new-integration-tests": {[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2238575Z [36;1m    "result": "success",[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2238852Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2239096Z [36;1m  }[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2239301Z [36;1m}'[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2239516Z [36;1m[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2239732Z [36;1mecho "Job status:"[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2240214Z [36;1mecho $JOBS | jq -r 'to_entries[] | " - \(.key): \(.value.result)"'[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2240573Z [36;1m[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2240861Z [36;1mfor i in $(echo $JOBS | jq -r 'to_entries[] | .value.result'); do[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2241264Z [36;1m  if [ "$i" != "success" ] && [ "$i" != "skipped" ]; then[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2241574Z [36;1m    echo ""[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2241823Z [36;1m    echo "Status check not okay!"[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2242104Z [36;1m    exit 1[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2242335Z [36;1m  fi[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2242541Z [36;1mdone[0m
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2407860Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2408303Z env:
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2408760Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2409154Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2409497Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2409858Z ##[endgroup]
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2497366Z Job status:
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2537703Z  - conditional: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2538206Z  - build: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2538740Z  - unit-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2539056Z  - base-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2539409Z  - adapter-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2539805Z  - adapter-integration-tests-strict-cookies: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2540203Z  - quarkus-unit-tests: skipped
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2540526Z  - quarkus-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2540851Z  - jdk-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2541167Z  - store-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2541513Z  - volatile-sessions-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2541824Z  - store-model-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2542141Z  - clustering-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2542561Z  - fips-unit-tests: failure
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2542886Z  - fips-integration-tests: failure
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2543284Z  - forms-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2543833Z  - webauthn-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2544366Z  - sssd-unit-tests: skipped
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2544836Z  - migration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2545337Z  - external-infinispan-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2545871Z  - test-framework: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2546373Z  - base-new-integration-tests: success
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2573317Z 
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2573670Z Status check not okay!
+Status Check - Keycloak CI	Run /./.github/actions/status-check	2025-05-27T12:52:44.2585659Z ##[error]Process completed with exit code 1.
