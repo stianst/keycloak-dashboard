@@ -1,0 +1,126 @@
+Test OLM installation	Install OLM	2025-05-28T17:54:16.9697103Z ##[group]Run ./scripts/install-olm.sh
+Test OLM installation	Install OLM	2025-05-28T17:54:16.9698003Z [36;1m./scripts/install-olm.sh[0m
+Test OLM installation	Install OLM	2025-05-28T17:54:16.9762292Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Test OLM installation	Install OLM	2025-05-28T17:54:16.9762843Z env:
+Test OLM installation	Install OLM	2025-05-28T17:54:16.9763291Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Test OLM installation	Install OLM	2025-05-28T17:54:16.9763873Z   MINIKUBE_VERSION: v1.32.0
+Test OLM installation	Install OLM	2025-05-28T17:54:16.9764411Z   KUBERNETES_VERSION: v1.27.10
+Test OLM installation	Install OLM	2025-05-28T17:54:16.9764810Z   MINIKUBE_MEMORY: 4096
+Test OLM installation	Install OLM	2025-05-28T17:54:16.9765340Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.7-6/x64
+Test OLM installation	Install OLM	2025-05-28T17:54:16.9766116Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.7-6/x64
+Test OLM installation	Install OLM	2025-05-28T17:54:16.9766758Z   MINIKUBE_HOME: /home/runner/work/_temp
+Test OLM installation	Install OLM	2025-05-28T17:54:16.9767340Z ##[endgroup]
+Test OLM installation	Install OLM	2025-05-28T17:54:16.9874133Z + mkdir -p /tmp/olm/
+Test OLM installation	Install OLM	2025-05-28T17:54:16.9888994Z + curl -f -L https://github.com/operator-framework/operator-lifecycle-manager/releases/download/v0.26.0/install.sh -o /tmp/olm/install.sh
+Test OLM installation	Install OLM	2025-05-28T17:54:16.9950947Z   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+Test OLM installation	Install OLM	2025-05-28T17:54:16.9951950Z                                  Dload  Upload   Total   Spent    Left  Speed
+Test OLM installation	Install OLM	2025-05-28T17:54:16.9955759Z 
+Test OLM installation	Install OLM	2025-05-28T17:54:17.0539749Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+Test OLM installation	Install OLM	2025-05-28T17:54:17.2286823Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+Test OLM installation	Install OLM	2025-05-28T17:54:17.2287764Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+Test OLM installation	Install OLM	2025-05-28T17:54:17.6180982Z 
+Test OLM installation	Install OLM	2025-05-28T17:54:17.6181675Z 100  1886  100  1886    0     0   3026      0 --:--:-- --:--:-- --:--:--  3026
+Test OLM installation	Install OLM	2025-05-28T17:54:17.6216275Z + chmod +x /tmp/olm/install.sh
+Test OLM installation	Install OLM	2025-05-28T17:54:17.6229466Z + /tmp/olm/install.sh v0.26.0
+Test OLM installation	Install OLM	2025-05-28T17:54:18.6255232Z customresourcedefinition.apiextensions.k8s.io/catalogsources.operators.coreos.com created
+Test OLM installation	Install OLM	2025-05-28T17:54:18.7816601Z customresourcedefinition.apiextensions.k8s.io/clusterserviceversions.operators.coreos.com created
+Test OLM installation	Install OLM	2025-05-28T17:54:18.7963826Z customresourcedefinition.apiextensions.k8s.io/installplans.operators.coreos.com created
+Test OLM installation	Install OLM	2025-05-28T17:54:18.8045756Z customresourcedefinition.apiextensions.k8s.io/olmconfigs.operators.coreos.com created
+Test OLM installation	Install OLM	2025-05-28T17:54:18.8182933Z customresourcedefinition.apiextensions.k8s.io/operatorconditions.operators.coreos.com created
+Test OLM installation	Install OLM	2025-05-28T17:54:18.8333782Z customresourcedefinition.apiextensions.k8s.io/operatorgroups.operators.coreos.com created
+Test OLM installation	Install OLM	2025-05-28T17:54:18.8439618Z customresourcedefinition.apiextensions.k8s.io/operators.operators.coreos.com created
+Test OLM installation	Install OLM	2025-05-28T17:54:18.9099854Z customresourcedefinition.apiextensions.k8s.io/subscriptions.operators.coreos.com created
+Test OLM installation	Install OLM	2025-05-28T17:55:16.1555260Z timed out waiting for the condition on customresourcedefinitions/catalogsources.operators.coreos.com
+Test OLM installation	Install OLM	2025-05-28T17:55:16.1556924Z timed out waiting for the condition on customresourcedefinitions/clusterserviceversions.operators.coreos.com
+Test OLM installation	Install OLM	2025-05-28T17:55:16.1558347Z timed out waiting for the condition on customresourcedefinitions/installplans.operators.coreos.com
+Test OLM installation	Install OLM	2025-05-28T17:55:16.1559437Z timed out waiting for the condition on customresourcedefinitions/olmconfigs.operators.coreos.com
+Test OLM installation	Install OLM	2025-05-28T17:55:16.1560550Z timed out waiting for the condition on customresourcedefinitions/operatorconditions.operators.coreos.com
+Test OLM installation	Install OLM	2025-05-28T17:55:16.1561695Z timed out waiting for the condition on customresourcedefinitions/operatorgroups.operators.coreos.com
+Test OLM installation	Install OLM	2025-05-28T17:55:16.1562767Z timed out waiting for the condition on customresourcedefinitions/operators.operators.coreos.com
+Test OLM installation	Install OLM	2025-05-28T17:55:16.1563799Z timed out waiting for the condition on customresourcedefinitions/subscriptions.operators.coreos.com
+Test OLM installation	Install OLM	2025-05-28T17:55:16.1589543Z ##[error]Process completed with exit code 1.
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-05-28T18:22:47.7592078Z Prepare all required actions
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-05-28T18:22:47.7704605Z ##[group]Run ./.github/actions/status-check
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-05-28T18:22:47.7705919Z with:
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-05-28T18:22:47.7709732Z   jobs: {
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	  "conditional": {
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	    "outputs": {
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	      "operator": "true"
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	    }
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	  "build": {
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	  "test-local-apiserver": {
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	  "test-remote": {
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	  "test-olm": {
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	    "result": "failure",
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	  }
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	}
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-05-28T18:22:47.7713999Z env:
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-05-28T18:22:47.7715203Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-05-28T18:22:47.7716775Z   MINIKUBE_VERSION: v1.32.0
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-05-28T18:22:47.7717898Z   KUBERNETES_VERSION: v1.27.10
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-05-28T18:22:47.7718995Z   MINIKUBE_MEMORY: 4096
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-05-28T18:22:47.7719980Z ##[endgroup]
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-05-28T18:22:47.7932783Z ##[group]Run JOBS='{
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-05-28T18:22:47.7934238Z [36;1mJOBS='{[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-05-28T18:22:47.7935231Z [36;1m  "conditional": {[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-05-28T18:22:47.7936368Z [36;1m    "result": "success",[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-05-28T18:22:47.7937471Z [36;1m    "outputs": {[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-05-28T18:22:47.7938488Z [36;1m      "operator": "true"[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-05-28T18:22:47.7939551Z [36;1m    }[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-05-28T18:22:47.7940370Z [36;1m  },[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-05-28T18:22:47.7941206Z [36;1m  "build": {[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-05-28T18:22:47.7942146Z [36;1m    "result": "success",[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-05-28T18:22:47.7943345Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-05-28T18:22:47.7944330Z [36;1m  },[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-05-28T18:22:47.7945233Z [36;1m  "test-local-apiserver": {[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-05-28T18:22:47.7946410Z [36;1m    "result": "success",[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-05-28T18:22:47.7947509Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-05-28T18:22:47.7948476Z [36;1m  },[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-05-28T18:22:47.7949313Z [36;1m  "test-remote": {[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-05-28T18:22:47.7950340Z [36;1m    "result": "success",[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-05-28T18:22:47.7951417Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-05-28T18:22:47.7952369Z [36;1m  },[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-05-28T18:22:47.7953331Z [36;1m  "test-olm": {[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-05-28T18:22:47.7954332Z [36;1m    "result": "failure",[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-05-28T18:22:47.7955399Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-05-28T18:22:47.7956357Z [36;1m  }[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-05-28T18:22:47.7957153Z [36;1m}'[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-05-28T18:22:47.7957961Z [36;1m[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-05-28T18:22:47.7958767Z [36;1mecho "Job status:"[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-05-28T18:22:47.7960175Z [36;1mecho $JOBS | jq -r 'to_entries[] | " - \(.key): \(.value.result)"'[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-05-28T18:22:47.7961611Z [36;1m[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-05-28T18:22:47.7962726Z [36;1mfor i in $(echo $JOBS | jq -r 'to_entries[] | .value.result'); do[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-05-28T18:22:47.7964650Z [36;1m  if [ "$i" != "success" ] && [ "$i" != "skipped" ]; then[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-05-28T18:22:47.7965962Z [36;1m    echo ""[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-05-28T18:22:47.7966943Z [36;1m    echo "Status check not okay!"[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-05-28T18:22:47.7968091Z [36;1m    exit 1[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-05-28T18:22:47.7968948Z [36;1m  fi[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-05-28T18:22:47.7969766Z [36;1mdone[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-05-28T18:22:47.8202775Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-05-28T18:22:47.8204586Z env:
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-05-28T18:22:47.8205780Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-05-28T18:22:47.8207322Z   MINIKUBE_VERSION: v1.32.0
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-05-28T18:22:47.8208356Z   KUBERNETES_VERSION: v1.27.10
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-05-28T18:22:47.8209476Z   MINIKUBE_MEMORY: 4096
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-05-28T18:22:47.8210391Z ##[endgroup]
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-05-28T18:22:47.8316651Z Job status:
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-05-28T18:22:47.8360955Z  - conditional: success
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-05-28T18:22:47.8362069Z  - build: success
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-05-28T18:22:47.8363017Z  - test-local-apiserver: success
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-05-28T18:22:47.8364447Z  - test-remote: success
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-05-28T18:22:47.8365412Z  - test-olm: failure
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-05-28T18:22:47.8396661Z 
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-05-28T18:22:47.8397252Z Status check not okay!
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-05-28T18:22:47.8413678Z ##[error]Process completed with exit code 1.
