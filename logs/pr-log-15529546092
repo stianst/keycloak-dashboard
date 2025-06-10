@@ -1,0 +1,851 @@
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:39.9974117Z ##[group]Run eval $(minikube -p minikube docker-env)
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:39.9975444Z [36;1meval $(minikube -p minikube docker-env)[0m
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:39.9976067Z [36;1m./scripts/olm-testing.sh ${GITHUB_SHA::6}[0m
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:40.0048262Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:40.0048619Z env:
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:40.0048919Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:40.0049295Z   MINIKUBE_VERSION: v1.32.0
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:40.0049543Z   KUBERNETES_VERSION: v1.27.10
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:40.0049783Z   MINIKUBE_MEMORY: 4096
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:40.0050109Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.7-6/x64
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:40.0050620Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.7-6/x64
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:40.0051154Z   MINIKUBE_HOME: /home/runner/work/_temp
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:40.0051419Z ##[endgroup]
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:40.3014449Z + UUID=21890d
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:40.3015303Z + INSTALL_NAMESPACE=default
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:40.3017298Z + TARGET_NAMESPACES=default
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:40.3017770Z +++ dirname -- ./scripts/olm-testing.sh
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:40.3027083Z ++ cd -- ./scripts
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:40.3028429Z ++ pwd
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:40.3030742Z + SCRIPT_DIR=/home/runner/work/keycloak/keycloak/operator/scripts
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:40.3031496Z + VERSION=86400000.0.0
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:40.3033890Z + cd /home/runner/work/keycloak/keycloak/operator/scripts/../../quarkus/container
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:40.3037571Z ++ ls keycloak-999.0.0-SNAPSHOT.tar.gz
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:40.3053146Z + docker build --build-arg KEYCLOAK_DIST=keycloak-999.0.0-SNAPSHOT.tar.gz . -t ttl.sh/21890dkeycloak:86400000.0.0
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:40.9047836Z #0 building with "default" instance using docker driver
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:41.3373531Z 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:41.3374069Z #1 [internal] load .dockerignore
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:41.3374810Z #1 transferring context: 2B done
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:41.3375245Z #1 DONE 0.0s
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:41.3375450Z 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:41.3375662Z #2 [internal] load build definition from Dockerfile
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:41.3376220Z #2 transferring dockerfile: 2.72kB done
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:41.3376620Z #2 DONE 0.0s
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:41.3376792Z 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:41.3377093Z #3 [internal] load metadata for registry.access.redhat.com/ubi9:latest
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:41.3377651Z #3 ...
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:41.3377812Z 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:41.3378307Z #4 [internal] load metadata for registry.access.redhat.com/ubi9-micro:latest
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:41.3378901Z #4 DONE 0.6s
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:41.4464075Z 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:41.4465298Z #3 [internal] load metadata for registry.access.redhat.com/ubi9:latest
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:41.4466407Z #3 DONE 0.7s
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:41.4467327Z 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:41.4468107Z #5 [stage-1 1/4] FROM registry.access.redhat.com/ubi9-micro@sha256:955512628a9104d74f7b3b0a91db27a6bbecdd6a1975ce0f1b2658d3cd060b98
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:41.4470628Z #5 resolve registry.access.redhat.com/ubi9-micro@sha256:955512628a9104d74f7b3b0a91db27a6bbecdd6a1975ce0f1b2658d3cd060b98 0.0s done
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:41.5498073Z #5 sha256:352e1e8e3c437ad6bd352f164df8bdf7018df09f730362546276fe3df62ffd8c 4.00kB / 4.00kB done
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:41.5502343Z #5 sha256:cd2f3f69481dffe63a3071ea43aeeab2a4af254e96b065c35b2d7ce2534e0383 0B / 7.27MB 0.1s
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:41.5503390Z #5 sha256:955512628a9104d74f7b3b0a91db27a6bbecdd6a1975ce0f1b2658d3cd060b98 897B / 897B done
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:41.5504401Z #5 sha256:bc049e6e35c145513e3ec226faf3f929337ea2337fa5c9f7e00375aef4b801e8 504B / 504B done
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:41.6568876Z #5 sha256:cd2f3f69481dffe63a3071ea43aeeab2a4af254e96b065c35b2d7ce2534e0383 5.24MB / 7.27MB 0.2s
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:41.7577750Z #5 sha256:cd2f3f69481dffe63a3071ea43aeeab2a4af254e96b065c35b2d7ce2534e0383 7.27MB / 7.27MB 0.2s done
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:41.7581822Z #5 extracting sha256:cd2f3f69481dffe63a3071ea43aeeab2a4af254e96b065c35b2d7ce2534e0383
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:43.1626412Z #5 extracting sha256:cd2f3f69481dffe63a3071ea43aeeab2a4af254e96b065c35b2d7ce2534e0383 1.4s done
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:43.1627752Z #5 DONE 1.7s
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:43.1628978Z 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:43.1636274Z #6 [ubi-micro-build 1/8] FROM registry.access.redhat.com/ubi9@sha256:304b50df1ea4db9706d8a30f4bbf26f582936ebc80c7e075c72ff2af99292a54
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:43.1637845Z #6 resolve registry.access.redhat.com/ubi9@sha256:304b50df1ea4db9706d8a30f4bbf26f582936ebc80c7e075c72ff2af99292a54 done
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:43.1639210Z #6 sha256:92efcdccd1058003df257e9cbdf756ff6b10bd276551590536a5a1678e099aaf 79.59MB / 79.59MB 1.6s done
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:43.1640373Z #6 sha256:304b50df1ea4db9706d8a30f4bbf26f582936ebc80c7e075c72ff2af99292a54 897B / 897B done
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:43.1641449Z #6 sha256:62fb429dc6b93ab5ade55d1c8e6b08735f00224d3081d58f161eb5f55eeb3d7d 505B / 505B done
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:43.1642536Z #6 sha256:83c48939c2c8782580d44062545386358defd2d5cc748b9b963bdb8a78046a46 5.06kB / 5.06kB done
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:43.1643593Z #6 extracting sha256:92efcdccd1058003df257e9cbdf756ff6b10bd276551590536a5a1678e099aaf
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:43.5695304Z #6 ...
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:43.5698438Z 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:43.5698679Z #7 [internal] load build context
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:43.5699082Z #7 transferring context: 155.27MB 2.1s done
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:43.5699437Z #7 DONE 2.1s
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:43.7357930Z 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:43.7358999Z #6 [ubi-micro-build 1/8] FROM registry.access.redhat.com/ubi9@sha256:304b50df1ea4db9706d8a30f4bbf26f582936ebc80c7e075c72ff2af99292a54
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:46.9389350Z #6 extracting sha256:92efcdccd1058003df257e9cbdf756ff6b10bd276551590536a5a1678e099aaf 3.8s done
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:47.1177464Z #6 DONE 5.5s
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:47.1177774Z 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:47.1178046Z #8 [ubi-micro-build 2/8] RUN dnf install -y tar gzip
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:47.3098938Z #8 0.342 Updating Subscription Management repositories.
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:47.4515647Z #8 0.343 Unable to read consumer identity
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:47.4516176Z #8 0.346 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:47.4516843Z #8 0.346 This system is not registered with an entitlement server. You can use subscription-manager to register.
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:47.4517608Z #8 0.346 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:47.4518063Z #8 0.484 Red Hat Universal Base Image 9 (RPMs) - BaseOS  5.6 MB/s | 587 kB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:47.6600469Z #8 0.693 Red Hat Universal Base Image 9 (RPMs) - AppStre  20 MB/s | 2.4 MB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:48.0865605Z #8 1.119 Red Hat Universal Base Image 9 (RPMs) - CodeRea 4.8 MB/s | 284 kB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:48.2233712Z #8 1.256 Package tar-2:1.34-7.el9.x86_64 is already installed.
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:48.3890434Z #8 1.256 Package gzip-1.12-1.el9.x86_64 is already installed.
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:48.3890868Z #8 1.270 Dependencies resolved.
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:48.3891113Z #8 1.271 Nothing to do.
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:48.3893738Z #8 1.271 Complete!
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:48.4817316Z #8 DONE 1.5s
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:48.6328810Z 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:48.6329551Z #9 [ubi-micro-build 3/8] ADD keycloak-999.0.0-SNAPSHOT.tar.gz /tmp/keycloak/
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:49.3265324Z #9 DONE 0.8s
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:49.4282066Z 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:49.4283292Z #10 [ubi-micro-build 4/8] RUN (cd /tmp/keycloak &&     tar -xvf /tmp/keycloak/keycloak-*.tar.gz &&     rm /tmp/keycloak/keycloak-*.tar.gz) || true
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:49.4284703Z #10 0.101 tar: /tmp/keycloak/keycloak-*.tar.gz: Cannot open: No such file or directory
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:49.4285358Z #10 0.101 tar: Error is not recoverable: exiting now
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:49.5848916Z #10 DONE 0.1s
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:49.5849222Z 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:49.5849746Z #11 [ubi-micro-build 5/8] RUN mv /tmp/keycloak/keycloak-* /opt/keycloak && mkdir -p /opt/keycloak/data
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:49.5950018Z #11 DONE 0.2s
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:49.7460604Z 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:49.7461285Z #12 [ubi-micro-build 6/8] RUN chmod -R g+rwX /opt/keycloak
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:50.2803864Z #12 DONE 0.7s
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:50.4078889Z 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:50.4080257Z #13 [ubi-micro-build 7/8] ADD ubi-null.sh /tmp/
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:50.4081483Z #13 DONE 0.0s
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:50.4081703Z 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:50.4082197Z #14 [ubi-micro-build 8/8] RUN bash /tmp/ubi-null.sh java-21-openjdk-headless glibc-langpack-en findutils
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:50.4083425Z #14 0.113 ==> Installing packages into chroot
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:50.4083947Z #14 0.113 + dnf install -y findutils diffutils
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:50.6574865Z #14 0.363 Updating Subscription Management repositories.
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:50.7697932Z #14 0.364 Unable to read consumer identity
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:50.7699535Z #14 0.367 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:50.7700200Z #14 0.367 This system is not registered with an entitlement server. You can use subscription-manager to register.
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:50.7700932Z #14 0.367 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:50.7701400Z #14 0.407 Last metadata expiration check: 0:00:02 ago on Mon Jun  9 07:53:48 2025.
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:50.7702165Z #14 0.428 Package findutils-1:4.8.0-7.el9.x86_64 is already installed.
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:50.7702751Z #14 0.443 Dependencies resolved.
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:50.7703180Z #14 0.444 ================================================================================
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:50.7703839Z #14 0.444  Package         Architecture Version             Repository               Size
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:50.7704772Z #14 0.444 ================================================================================
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:50.7705230Z #14 0.444 Installing:
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:50.7705708Z #14 0.444  diffutils       x86_64       3.7-12.el9          ubi-9-baseos-rpms       402 k
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:50.7706254Z #14 0.444 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:50.7706792Z #14 0.444 Transaction Summary
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:50.7708469Z #14 0.444 ================================================================================
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:50.7709127Z #14 0.444 Install  1 Package
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:50.7709503Z #14 0.444 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:50.7709835Z #14 0.445 Total download size: 402 k
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:50.7710310Z #14 0.445 Installed size: 1.4 M
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:50.7710702Z #14 0.445 Downloading Packages:
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:50.7711221Z #14 0.475 diffutils-3.7-12.el9.x86_64.rpm                  14 MB/s | 402 kB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:50.8719256Z #14 0.477 --------------------------------------------------------------------------------
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:50.8719938Z #14 0.477 Total                                            12 MB/s | 402 kB     00:00     
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:50.8720292Z #14 0.490 Running transaction check
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:50.8720671Z #14 0.493 Transaction check succeeded.
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:50.8720933Z #14 0.493 Running transaction test
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:50.8721230Z #14 0.519 Transaction test succeeded.
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:50.8721537Z #14 0.520 Running transaction
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:50.8721837Z #14 0.541   Preparing        :                                                        1/1 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:50.9726986Z #14 0.578   Installing       : diffutils-3.7-12.el9.x86_64                            1/1 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:50.9728139Z #14 0.588   Running scriptlet: diffutils-3.7-12.el9.x86_64                            1/1 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:50.9728666Z #14 0.628   Verifying        : diffutils-3.7-12.el9.x86_64                            1/1 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:50.9729071Z #14 0.678 Installed products updated.
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:51.1881745Z #14 0.686 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:51.1882136Z #14 0.686 Installed:
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:51.1882558Z #14 0.686   diffutils-3.7-12.el9.x86_64                                                   
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:51.1882934Z #14 0.686 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:51.1883122Z #14 0.686 Complete!
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:51.1883347Z #14 0.740 ++ realpath rootfs
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:51.1883589Z #14 0.742 + rootfs=/tmp/null/rootfs
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:51.1883878Z #14 0.742 + mkdir -p /tmp/null/rootfs
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:51.1884405Z #14 0.743 + xargs dnf install -y --installroot /tmp/null/rootfs --releasever 9 --setopt install_weak_deps=false --nodocs
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:51.2754402Z #14 0.981 Updating Subscription Management repositories.
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:51.5133329Z #14 0.982 Unable to read consumer identity
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:51.5133919Z #14 0.983 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:51.5134382Z #14 0.983 This system is not registered with an entitlement server. You can use subscription-manager to register.
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:51.5135165Z #14 0.983 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:51.5135920Z #14 1.069 Red Hat Universal Base Image 9 (RPMs) - BaseOS  9.0 MB/s | 587 kB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:51.5275588Z #14 1.233 Red Hat Universal Base Image 9 (RPMs) - AppStre  31 MB/s | 2.4 MB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:51.9815746Z #14 1.687 Red Hat Universal Base Image 9 (RPMs) - CodeRea 5.1 MB/s | 284 kB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.1326955Z #14 1.838 Dependencies resolved.
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2379753Z #14 1.844 =============================================================================================
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2380691Z #14 1.844  Package                    Arch    Version                       Repository             Size
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2381438Z #14 1.844 =============================================================================================
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2381953Z #14 1.844 Installing:
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2382472Z #14 1.844  bash                       x86_64  5.1.8-9.el9                   ubi-9-baseos-rpms     1.7 M
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2383287Z #14 1.844  coreutils-single           x86_64  8.32-39.el9                   ubi-9-baseos-rpms     625 k
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2384136Z #14 1.844  findutils                  x86_64  1:4.8.0-7.el9                 ubi-9-baseos-rpms     550 k
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2385231Z #14 1.844  glibc-langpack-en          x86_64  2.34-168.el9_6.14             ubi-9-baseos-rpms     657 k
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2386200Z #14 1.844  java-21-openjdk-headless   x86_64  1:21.0.7.0.6-1.el9            ubi-9-appstream-rpms   49 M
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2386925Z #14 1.844 Installing dependencies:
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2387531Z #14 1.844  alsa-lib                   x86_64  1.2.13-2.el9                  ubi-9-appstream-rpms  530 k
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2388441Z #14 1.844  alternatives               x86_64  1.24-2.el9                    ubi-9-baseos-rpms      42 k
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2389241Z #14 1.844  avahi-libs                 x86_64  0.8-22.el9_6                  ubi-9-baseos-rpms      67 k
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2390075Z #14 1.844  basesystem                 noarch  11-13.el9                     ubi-9-baseos-rpms     8.0 k
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2390908Z #14 1.844  bzip2-libs                 x86_64  1.0.8-10.el9_5                ubi-9-baseos-rpms      42 k
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2391757Z #14 1.844  ca-certificates            noarch  2024.2.69_v8.0.303-91.4.el9_4 ubi-9-baseos-rpms     1.0 M
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2392762Z #14 1.844  copy-jdk-configs           noarch  4.0-3.el9                     ubi-9-appstream-rpms   29 k
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2393725Z #14 1.844  crypto-policies            noarch  20250128-1.git5269e22.el9     ubi-9-baseos-rpms      90 k
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2394972Z #14 1.844  crypto-policies-scripts    noarch  20250128-1.git5269e22.el9     ubi-9-baseos-rpms     101 k
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2396302Z #14 1.844  cups-libs                  x86_64  1:2.3.3op2-33.el9             ubi-9-baseos-rpms     265 k
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2397112Z #14 1.844  dbus-libs                  x86_64  1:1.12.20-8.el9               ubi-9-baseos-rpms     154 k
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2397881Z #14 1.844  expat                      x86_64  2.5.0-5.el9_6                 ubi-9-baseos-rpms     119 k
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2398653Z #14 1.844  filesystem                 x86_64  3.16-5.el9                    ubi-9-baseos-rpms     4.8 M
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2399489Z #14 1.844  gawk                       x86_64  5.1.0-6.el9                   ubi-9-baseos-rpms     1.0 M
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2400224Z #14 1.844  gdbm-libs                  x86_64  1:1.23-1.el9                  ubi-9-baseos-rpms      59 k
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2400995Z #14 1.844  glibc                      x86_64  2.34-168.el9_6.14             ubi-9-baseos-rpms     2.0 M
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2401814Z #14 1.844  glibc-common               x86_64  2.34-168.el9_6.14             ubi-9-baseos-rpms     304 k
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2402592Z #14 1.844  gmp                        x86_64  1:6.2.0-13.el9                ubi-9-baseos-rpms     319 k
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2403362Z #14 1.844  gnutls                     x86_64  3.8.3-6.el9                   ubi-9-baseos-rpms     1.1 M
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2404315Z #14 1.844  grep                       x86_64  3.6-5.el9                     ubi-9-baseos-rpms     273 k
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2405492Z #14 1.844  javapackages-filesystem    noarch  6.4.0-1.el9                   ubi-9-appstream-rpms   17 k
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2406437Z #14 1.844  keyutils-libs              x86_64  1.6.3-1.el9                   ubi-9-baseos-rpms      34 k
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2407236Z #14 1.844  krb5-libs                  x86_64  1.21.1-6.el9                  ubi-9-baseos-rpms     770 k
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2408054Z #14 1.844  libacl                     x86_64  2.3.1-4.el9                   ubi-9-baseos-rpms      24 k
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2408822Z #14 1.844  libattr                    x86_64  2.5.1-3.el9                   ubi-9-baseos-rpms      20 k
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2409601Z #14 1.844  libcap                     x86_64  2.48-9.el9_2                  ubi-9-baseos-rpms      74 k
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2410344Z #14 1.844  libcom_err                 x86_64  1.46.5-7.el9                  ubi-9-baseos-rpms      28 k
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2411153Z #14 1.844  libevent                   x86_64  2.1.12-8.el9_4                ubi-9-baseos-rpms     266 k
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2411885Z #14 1.844  libffi                     x86_64  3.4.2-8.el9                   ubi-9-baseos-rpms      40 k
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2412621Z #14 1.844  libgcc                     x86_64  11.5.0-5.el9_5                ubi-9-baseos-rpms      88 k
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2413398Z #14 1.844  libgcrypt                  x86_64  1.10.0-11.el9                 ubi-9-baseos-rpms     510 k
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2414208Z #14 1.844  libgpg-error               x86_64  1.42-5.el9                    ubi-9-baseos-rpms     220 k
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2415213Z #14 1.844  libidn2                    x86_64  2.3.0-7.el9                   ubi-9-baseos-rpms     105 k
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2415957Z #14 1.844  libselinux                 x86_64  3.6-3.el9                     ubi-9-baseos-rpms      88 k
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2416688Z #14 1.844  libsepol                   x86_64  3.6-2.el9                     ubi-9-baseos-rpms     331 k
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2417464Z #14 1.844  libsigsegv                 x86_64  2.13-4.el9                    ubi-9-baseos-rpms      30 k
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2418369Z #14 1.844  libtasn1                   x86_64  4.16.0-9.el9                  ubi-9-baseos-rpms      77 k
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2419196Z #14 1.844  libunistring               x86_64  0.9.10-15.el9                 ubi-9-baseos-rpms     499 k
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2419993Z #14 1.844  libuuid                    x86_64  2.37.4-21.el9                 ubi-9-baseos-rpms      30 k
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2420782Z #14 1.844  libverto                   x86_64  0.3.2-3.el9                   ubi-9-baseos-rpms      24 k
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2421749Z #14 1.844  libxcrypt                  x86_64  4.4.18-3.el9                  ubi-9-baseos-rpms     120 k
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2422523Z #14 1.844  libzstd                    x86_64  1.5.5-1.el9                   ubi-9-baseos-rpms     297 k
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2423337Z #14 1.844  lksctp-tools               x86_64  1.0.19-3.el9_4                ubi-9-baseos-rpms     104 k
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2424116Z #14 1.844  lua                        x86_64  5.4.4-4.el9                   ubi-9-appstream-rpms  192 k
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2425023Z #14 1.844  lua-libs                   x86_64  5.4.4-4.el9                   ubi-9-baseos-rpms     132 k
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2425807Z #14 1.844  lua-posix                  x86_64  35.0-8.el9                    ubi-9-appstream-rpms  155 k
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2426574Z #14 1.844  lz4-libs                   x86_64  1.9.3-5.el9                   ubi-9-baseos-rpms      69 k
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2427332Z #14 1.844  mpfr                       x86_64  4.1.0-7.el9                   ubi-9-baseos-rpms     329 k
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2428135Z #14 1.844  ncurses-base               noarch  6.2-10.20210508.el9           ubi-9-baseos-rpms      99 k
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2429144Z #14 1.844  ncurses-libs               x86_64  6.2-10.20210508.el9           ubi-9-baseos-rpms     332 k
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2430163Z #14 1.844  nettle                     x86_64  3.10.1-1.el9                  ubi-9-baseos-rpms     568 k
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2430928Z #14 1.844  nspr                       x86_64  4.35.0-17.el9_2               ubi-9-appstream-rpms  137 k
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2431674Z #14 1.844  nss                        x86_64  3.101.0-10.el9_2              ubi-9-appstream-rpms  720 k
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2432460Z #14 1.844  nss-softokn                x86_64  3.101.0-10.el9_2              ubi-9-appstream-rpms  393 k
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2433600Z #14 1.844  nss-softokn-freebl         x86_64  3.101.0-10.el9_2              ubi-9-appstream-rpms  313 k
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2434759Z #14 1.844  nss-sysinit                x86_64  3.101.0-10.el9_2              ubi-9-appstream-rpms   21 k
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2435598Z #14 1.844  nss-util                   x86_64  3.101.0-10.el9_2              ubi-9-appstream-rpms   92 k
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2436486Z #14 1.844  openssl-fips-provider      x86_64  3.0.7-6.el9_5                 ubi-9-baseos-rpms     9.4 k
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2437462Z #14 1.844  openssl-fips-provider-so   x86_64  3.0.7-6.el9_5                 ubi-9-baseos-rpms     577 k
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2438348Z #14 1.844  openssl-libs               x86_64  1:3.2.2-6.el9_5.1             ubi-9-baseos-rpms     2.1 M
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2439144Z #14 1.844  p11-kit                    x86_64  0.25.3-3.el9_5                ubi-9-baseos-rpms     536 k
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2439947Z #14 1.844  p11-kit-trust              x86_64  0.25.3-3.el9_5                ubi-9-baseos-rpms     144 k
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2440738Z #14 1.844  pcre                       x86_64  8.44-4.el9                    ubi-9-baseos-rpms     200 k
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2441550Z #14 1.844  pcre2                      x86_64  10.40-6.el9                   ubi-9-baseos-rpms     236 k
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2442393Z #14 1.844  pcre2-syntax               noarch  10.40-6.el9                   ubi-9-baseos-rpms     144 k
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2443290Z #14 1.844  python3                    x86_64  3.9.21-2.el9                  ubi-9-baseos-rpms      30 k
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2444088Z #14 1.844  python3-libs               x86_64  3.9.21-2.el9                  ubi-9-baseos-rpms     8.1 M
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2445107Z #14 1.844  python3-pip-wheel          noarch  21.3.1-1.el9                  ubi-9-baseos-rpms     1.1 M
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2446054Z #14 1.844  python3-setuptools-wheel   noarch  53.0.0-13.el9                 ubi-9-baseos-rpms     469 k
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2447062Z #14 1.844  readline                   x86_64  8.1-4.el9                     ubi-9-baseos-rpms     215 k
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2448082Z #14 1.844  redhat-release             x86_64  9.6-0.1.el9                   ubi-9-baseos-rpms      44 k
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2448862Z #14 1.844  sed                        x86_64  4.8-9.el9                     ubi-9-baseos-rpms     309 k
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2449946Z #14 1.844  setup                      noarch  2.13.7-10.el9                 ubi-9-baseos-rpms     150 k
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2450854Z #14 1.844  sqlite-libs                x86_64  3.34.1-7.el9_3                ubi-9-baseos-rpms     622 k
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2451732Z #14 1.844  systemd-libs               x86_64  252-51.el9                    ubi-9-baseos-rpms     684 k
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2452684Z #14 1.844  tzdata                     noarch  2025b-1.el9                   ubi-9-baseos-rpms     842 k
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2453561Z #14 1.844  tzdata-java                noarch  2025b-1.el9                   ubi-9-appstream-rpms  228 k
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2454383Z #14 1.844  xz-libs                    x86_64  5.2.5-8.el9_0                 ubi-9-baseos-rpms      94 k
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2455383Z #14 1.844  zlib                       x86_64  1.2.11-40.el9                 ubi-9-baseos-rpms      93 k
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2455955Z #14 1.844 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2456290Z #14 1.844 Transaction Summary
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2456751Z #14 1.844 =============================================================================================
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2457446Z #14 1.844 Install  84 Packages
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2457822Z #14 1.844 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2458122Z #14 1.847 Total download size: 89 M
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2458519Z #14 1.847 Installed size: 319 M
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2458896Z #14 1.847 Downloading Packages:
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2459454Z #14 1.881 (1/84): basesystem-11-13.el9.noarch.rpm         295 kB/s | 8.0 kB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2460245Z #14 1.884 (2/84): alternatives-1.24-2.el9.x86_64.rpm      1.3 MB/s |  42 kB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2460998Z #14 1.888 (3/84): avahi-libs-0.8-22.el9_6.x86_64.rpm      1.9 MB/s |  67 kB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2461731Z #14 1.890 (4/84): bzip2-libs-1.0.8-10.el9_5.x86_64.rpm    8.4 MB/s |  42 kB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2462535Z #14 1.904 (5/84): coreutils-single-8.32-39.el9.x86_64.rpm  44 MB/s | 625 kB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2463362Z #14 1.907 (6/84): ca-certificates-2024.2.69_v8.0.303-91.4  52 MB/s | 1.0 MB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2464176Z #14 1.909 (7/84): crypto-policies-20250128-1.git5269e22.e  18 MB/s |  90 kB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2465108Z #14 1.914 (8/84): bash-5.1.8-9.el9.x86_64.rpm              52 MB/s | 1.7 MB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2465596Z #14 1.916 (9/84): crypto-policies-scripts-20250128-1.git5  12 MB/s | 101 kB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2466072Z #14 1.918 (10/84): cups-libs-2.3.3op2-33.el9.x86_64.rpm    30 MB/s | 265 kB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2466507Z #14 1.921 (11/84): dbus-libs-1.12.20-8.el9.x86_64.rpm      23 MB/s | 154 kB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2466921Z #14 1.922 (12/84): expat-2.5.0-5.el9_6.x86_64.rpm          19 MB/s | 119 kB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2467480Z #14 1.933 (13/84): findutils-4.8.0-7.el9.x86_64.rpm        45 MB/s | 550 kB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2468043Z #14 1.938 (14/84): gdbm-libs-1.23-1.el9.x86_64.rpm         14 MB/s |  59 kB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.2468450Z #14 1.943 (15/84): gawk-5.1.0-6.el9.x86_64.rpm             49 MB/s | 1.0 MB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.3383132Z #14 1.953 (16/84): glibc-common-2.34-168.el9_6.14.x86_64.  31 MB/s | 304 kB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.3384009Z #14 1.971 (17/84): glibc-2.34-168.el9_6.14.x86_64.rpm      61 MB/s | 2.0 MB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.3384922Z #14 1.974 (18/84): glibc-langpack-en-2.34-168.el9_6.14.x8  33 MB/s | 657 kB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.3385666Z #14 1.977 (19/84): gmp-6.2.0-13.el9.x86_64.rpm             51 MB/s | 319 kB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.3386369Z #14 1.984 (20/84): grep-3.6-5.el9.x86_64.rpm               46 MB/s | 273 kB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.3387602Z #14 1.989 (21/84): keyutils-libs-1.6.3-1.el9.x86_64.rpm   7.8 MB/s |  34 kB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.3388359Z #14 1.992 (22/84): gnutls-3.8.3-6.el9.x86_64.rpm           59 MB/s | 1.1 MB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.3389077Z #14 2.002 (23/84): filesystem-3.16-5.el9.x86_64.rpm        57 MB/s | 4.8 MB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.3389818Z #14 2.003 (24/84): libacl-2.3.1-4.el9.x86_64.rpm          2.4 MB/s |  24 kB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.3390532Z #14 2.007 (25/84): libattr-2.5.1-3.el9.x86_64.rpm         4.9 MB/s |  20 kB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.3391206Z #14 2.009 (26/84): libcap-2.48-9.el9_2.x86_64.rpm          14 MB/s |  74 kB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.3391835Z #14 2.012 (27/84): krb5-libs-1.21.1-6.el9.x86_64.rpm       33 MB/s | 770 kB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.3392290Z #14 2.013 (28/84): libcom_err-1.46.5-7.el9.x86_64.rpm     4.6 MB/s |  28 kB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.3392749Z #14 2.016 (29/84): libevent-2.1.12-8.el9_4.x86_64.rpm      41 MB/s | 266 kB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.3393183Z #14 2.017 (30/84): libffi-3.4.2-8.el9.x86_64.rpm          7.7 MB/s |  40 kB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.3393598Z #14 2.019 (31/84): libgcc-11.5.0-5.el9_5.x86_64.rpm        17 MB/s |  88 kB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.3394057Z #14 2.024 (32/84): libgpg-error-1.42-5.el9.x86_64.rpm      35 MB/s | 220 kB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.3395063Z #14 2.025 (33/84): libidn2-2.3.0-7.el9.x86_64.rpm          16 MB/s | 105 kB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.3395508Z #14 2.027 (34/84): libgcrypt-1.10.0-11.el9.x86_64.rpm      45 MB/s | 510 kB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.3395941Z #14 2.029 (35/84): libselinux-3.6-3.el9.x86_64.rpm         18 MB/s |  88 kB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.3396398Z #14 2.031 (36/84): libsigsegv-2.13-4.el9.x86_64.rpm       8.0 MB/s |  30 kB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.3396822Z #14 2.033 (37/84): libsepol-3.6-2.el9.x86_64.rpm           43 MB/s | 331 kB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.3397241Z #14 2.035 (38/84): libtasn1-4.16.0-9.el9.x86_64.rpm        13 MB/s |  77 kB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.3397673Z #14 2.038 (39/84): libuuid-2.37.4-21.el9.x86_64.rpm       7.0 MB/s |  30 kB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.3398092Z #14 2.039 (40/84): libverto-0.3.2-3.el9.x86_64.rpm        6.1 MB/s |  24 kB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.3398795Z #14 2.042 (41/84): libunistring-0.9.10-15.el9.x86_64.rpm   48 MB/s | 499 kB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.3399380Z #14 2.044 (42/84): libxcrypt-4.4.18-3.el9.x86_64.rpm       20 MB/s | 120 kB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.4406009Z #14 2.047 (43/84): libzstd-1.5.5-1.el9.x86_64.rpm          41 MB/s | 297 kB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.4406720Z #14 2.049 (44/84): lksctp-tools-1.0.19-3.el9_4.x86_64.rpm  16 MB/s | 104 kB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.4407205Z #14 2.050 (45/84): lua-libs-5.4.4-4.el9.x86_64.rpm         22 MB/s | 132 kB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.4407948Z #14 2.052 (46/84): lz4-libs-1.9.3-5.el9.x86_64.rpm         14 MB/s |  69 kB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.4410062Z #14 2.056 (47/84): mpfr-4.1.0-7.el9.x86_64.rpm             47 MB/s | 329 kB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.4410796Z #14 2.057 (48/84): ncurses-base-6.2-10.20210508.el9.noarc  15 MB/s |  99 kB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.4411560Z #14 2.060 (49/84): ncurses-libs-6.2-10.20210508.el9.x86_6  39 MB/s | 332 kB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.4412958Z #14 2.062 (50/84): openssl-fips-provider-3.0.7-6.el9_5.x8 2.3 MB/s | 9.4 kB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.4413462Z #14 2.069 (51/84): nettle-3.10.1-1.el9.x86_64.rpm          50 MB/s | 568 kB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.4414754Z #14 2.073 (52/84): openssl-fips-provider-so-3.0.7-6.el9_5  44 MB/s | 577 kB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.4415318Z #14 2.080 (53/84): p11-kit-0.25.3-3.el9_5.x86_64.rpm       51 MB/s | 536 kB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.4415752Z #14 2.081 (54/84): p11-kit-trust-0.25.3-3.el9_5.x86_64.rp  19 MB/s | 144 kB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.4416177Z #14 2.086 (55/84): pcre-8.44-4.el9.x86_64.rpm              34 MB/s | 200 kB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.4416912Z #14 2.089 (56/84): pcre2-10.40-6.el9.x86_64.rpm            35 MB/s | 236 kB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.4417348Z #14 2.091 (57/84): pcre2-syntax-10.40-6.el9.noarch.rpm     28 MB/s | 144 kB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.4417788Z #14 2.093 (58/84): python3-3.9.21-2.el9.x86_64.rpm        7.7 MB/s |  30 kB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.4418226Z #14 2.099 (59/84): openssl-libs-3.2.2-6.el9_5.1.x86_64.rp  58 MB/s | 2.1 MB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.4418684Z #14 2.109 (60/84): python3-setuptools-wheel-53.0.0-13.el9  47 MB/s | 469 kB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.4419165Z #14 2.115 (61/84): python3-pip-wheel-21.3.1-1.el9.noarch.  53 MB/s | 1.1 MB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.4419622Z #14 2.117 (62/84): readline-8.1-4.el9.x86_64.rpm           26 MB/s | 215 kB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.4420059Z #14 2.119 (63/84): redhat-release-9.6-0.1.el9.x86_64.rpm   10 MB/s |  44 kB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.4420498Z #14 2.125 (64/84): setup-2.13.7-10.el9.noarch.rpm          26 MB/s | 150 kB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.4420901Z #14 2.127 (65/84): sed-4.8-9.el9.x86_64.rpm                32 MB/s | 309 kB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.4421307Z #14 2.137 (66/84): sqlite-libs-3.34.1-7.el9_3.x86_64.rpm   55 MB/s | 622 kB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.4421902Z #14 2.141 (67/84): systemd-libs-252-51.el9.x86_64.rpm      51 MB/s | 684 kB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.4422327Z #14 2.146 (68/84): xz-libs-5.2.5-8.el9_0.x86_64.rpm        20 MB/s |  94 kB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.6816283Z #14 2.151 (69/84): tzdata-2025b-1.el9.noarch.rpm           59 MB/s | 842 kB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.6817119Z #14 2.154 (70/84): zlib-1.2.11-40.el9.x86_64.rpm           13 MB/s |  93 kB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.6817861Z #14 2.155 (71/84): copy-jdk-configs-4.0-3.el9.noarch.rpm  8.1 MB/s |  29 kB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.6818581Z #14 2.160 (72/84): lua-5.4.4-4.el9.x86_64.rpm              34 MB/s | 192 kB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.6819404Z #14 2.162 (73/84): lua-posix-35.0-8.el9.x86_64.rpm         24 MB/s | 155 kB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.6820113Z #14 2.171 (74/84): alsa-lib-1.2.13-2.el9.x86_64.rpm        49 MB/s | 530 kB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.6820874Z #14 2.175 (75/84): javapackages-filesystem-6.4.0-1.el9.no 4.4 MB/s |  17 kB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.6821638Z #14 2.186 (76/84): nspr-4.35.0-17.el9_2.x86_64.rpm         13 MB/s | 137 kB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.6822308Z #14 2.200 (77/84): nss-3.101.0-10.el9_2.x86_64.rpm         51 MB/s | 720 kB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.6823010Z #14 2.219 (78/84): python3-libs-3.9.21-2.el9.x86_64.rpm    63 MB/s | 8.1 MB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.6823738Z #14 2.223 (79/84): nss-softokn-3.101.0-10.el9_2.x86_64.rp  17 MB/s | 393 kB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.6824480Z #14 2.228 (80/84): nss-softokn-freebl-3.101.0-10.el9_2.x8  36 MB/s | 313 kB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.6825489Z #14 2.230 (81/84): nss-sysinit-3.101.0-10.el9_2.x86_64.rp 3.4 MB/s |  21 kB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.6826204Z #14 2.234 (82/84): nss-util-3.101.0-10.el9_2.x86_64.rpm    17 MB/s |  92 kB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.6826944Z #14 2.237 (83/84): tzdata-java-2025b-1.el9.noarch.rpm      33 MB/s | 228 kB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.7424052Z #14 2.448 (84/84): java-21-openjdk-headless-21.0.7.0.6-1. 172 MB/s |  49 MB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.9807224Z #14 2.452 --------------------------------------------------------------------------------
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.9807745Z #14 2.453 Total                                           147 MB/s |  89 MB     00:00     
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.9808209Z #14 2.464 Red Hat Universal Base Image 9 (RPMs) - BaseOS  3.5 MB/s | 3.6 kB     00:00    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.9808623Z #14 2.531 Importing GPG key 0xFD431D51:
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.9808981Z #14 2.531  Userid     : "Red Hat, Inc. (release key 2) <security@redhat.com>"
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.9809406Z #14 2.531  Fingerprint: 567E 347A D004 4ADE 55BA 8A5F 199E 2F91 FD43 1D51
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.9810627Z #14 2.531  From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.9811167Z #14 2.534 Key imported successfully
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.9811578Z #14 2.534 Importing GPG key 0x5A6340B3:
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.9812134Z #14 2.534  Userid     : "Red Hat, Inc. (auxiliary key 3) <security@redhat.com>"
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.9812830Z #14 2.534  Fingerprint: 7E46 2425 8C40 6535 D56D 6F13 5054 E4A4 5A63 40B3
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.9813470Z #14 2.534  From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:52.9813998Z #14 2.536 Key imported successfully
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:53.9388297Z #14 3.644 Running transaction check
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:54.1413958Z #14 3.697 Transaction check succeeded.
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:54.1414752Z #14 3.697 Running transaction test
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:54.6365222Z #14 4.342 Transaction test succeeded.
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:54.7874370Z #14 4.343 Running transaction
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:55.1911359Z #14 4.897   Running scriptlet: filesystem-3.16-5.el9.x86_64                           1/1 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:55.1912403Z #14 4.897   Running scriptlet: copy-jdk-configs-4.0-3.el9.noarch                      1/1 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:55.4693473Z #14 4.897   Running scriptlet: java-21-openjdk-headless-1:21.0.7.0.6-1.el9.x86_64     1/1 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:55.6290275Z #14 5.175   Preparing        :                                                        1/1 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:55.6291560Z #14 5.182   Installing       : libgcc-11.5.0-5.el9_5.x86_64                          1/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:55.6680640Z #14 5.184   Running scriptlet: libgcc-11.5.0-5.el9_5.x86_64                          1/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:55.7783965Z #14 5.374   Installing       : tzdata-2025b-1.el9.noarch                             2/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:55.7785045Z #14 5.421   Installing       : tzdata-java-2025b-1.el9.noarch                        3/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:55.7785623Z #14 5.427   Installing       : javapackages-filesystem-6.4.0-1.el9.noarch            4/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:55.7786191Z #14 5.433   Installing       : redhat-release-9.6-0.1.el9.x86_64                     5/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:55.7786678Z #14 5.442   Installing       : setup-2.13.7-10.el9.noarch                            6/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:55.7787168Z #14 5.443   Running scriptlet: setup-2.13.7-10.el9.noarch                            6/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:55.9197476Z #14 5.484   Installing       : filesystem-3.16-5.el9.x86_64                          7/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:55.9198387Z #14 5.531   Installing       : basesystem-11-13.el9.noarch                           8/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:55.9199075Z #14 5.535   Installing       : python3-setuptools-wheel-53.0.0-13.el9.noarch         9/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:55.9199595Z #14 5.538   Installing       : pcre2-syntax-10.40-6.el9.noarch                      10/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:55.9200070Z #14 5.558   Installing       : ncurses-base-6.2-10.20210508.el9.noarch              11/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:56.1224748Z #14 5.625   Installing       : glibc-langpack-en-2.34-168.el9_6.14.x86_64           12/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:56.1225715Z #14 5.640   Installing       : glibc-common-2.34-168.el9_6.14.x86_64                13/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:56.1226626Z #14 5.643   Running scriptlet: glibc-2.34-168.el9_6.14.x86_64                       14/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:56.1227403Z #14 5.675   Installing       : glibc-2.34-168.el9_6.14.x86_64                       14/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:56.4669270Z #14 5.678   Running scriptlet: glibc-2.34-168.el9_6.14.x86_64                       14/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:56.5725773Z #14 6.173   Installing       : ncurses-libs-6.2-10.20210508.el9.x86_64              15/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:56.5726719Z #14 6.189   Installing       : bash-5.1.8-9.el9.x86_64                              16/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:56.5727551Z #14 6.192   Running scriptlet: bash-5.1.8-9.el9.x86_64                              16/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:56.5728407Z #14 6.209   Installing       : crypto-policies-20250128-1.git5269e22.el9.noarch     17/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:56.5729665Z #14 6.211   Running scriptlet: crypto-policies-20250128-1.git5269e22.el9.noarch     17/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:56.5730534Z #14 6.215   Installing       : nspr-4.35.0-17.el9_2.x86_64                          18/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:56.5731299Z #14 6.219   Installing       : nss-util-3.101.0-10.el9_2.x86_64                     19/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:56.5732102Z #14 6.222   Installing       : zlib-1.2.11-40.el9.x86_64                            20/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:56.5732905Z #14 6.228   Installing       : readline-8.1-4.el9.x86_64                            21/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:56.5733701Z #14 6.232   Installing       : libtasn1-4.16.0-9.el9.x86_64                         22/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:56.5734487Z #14 6.236   Installing       : libxcrypt-4.4.18-3.el9.x86_64                        23/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:56.5735510Z #14 6.243   Installing       : sqlite-libs-3.34.1-7.el9_3.x86_64                    24/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:56.5736318Z #14 6.246   Installing       : alternatives-1.24-2.el9.x86_64                       25/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:56.5737102Z #14 6.252   Installing       : gmp-1:6.2.0-13.el9.x86_64                            26/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:56.5737844Z #14 6.255   Installing       : libattr-2.5.1-3.el9.x86_64                           27/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:56.5738730Z #14 6.258   Installing       : libacl-2.3.1-4.el9.x86_64                            28/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:56.5739439Z #14 6.263   Installing       : libcap-2.48-9.el9_2.x86_64                           29/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:56.5739894Z #14 6.267   Installing       : libffi-3.4.2-8.el9.x86_64                            30/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:56.7312253Z #14 6.278   Installing       : p11-kit-0.25.3-3.el9_5.x86_64                        31/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:56.7313053Z #14 6.284   Installing       : p11-kit-trust-0.25.3-3.el9_5.x86_64                  32/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:56.8281954Z #14 6.286   Running scriptlet: p11-kit-trust-0.25.3-3.el9_5.x86_64                  32/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:56.9285799Z #14 6.534   Installing       : libsigsegv-2.13-4.el9.x86_64                         33/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:56.9286700Z #14 6.542   Installing       : libunistring-0.9.10-15.el9.x86_64                    34/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:56.9287502Z #14 6.547   Installing       : lua-libs-5.4.4-4.el9.x86_64                          35/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:56.9288349Z #14 6.550   Installing       : xz-libs-5.2.5-8.el9_0.x86_64                         36/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:56.9289072Z #14 6.554   Installing       : lua-5.4.4-4.el9.x86_64                               37/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:56.9289684Z #14 6.568   Installing       : lua-posix-35.0-8.el9.x86_64                          38/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:56.9290170Z #14 6.573   Installing       : libidn2-2.3.0-7.el9.x86_64                           39/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:56.9290627Z #14 6.579   Installing       : mpfr-4.1.0-7.el9.x86_64                              40/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:56.9291277Z #14 6.595   Installing       : gawk-5.1.0-6.el9.x86_64                              41/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:56.9291778Z #14 6.603   Installing       : nss-softokn-freebl-3.101.0-10.el9_2.x86_64           42/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:56.9292346Z #14 6.612   Installing       : nss-softokn-3.101.0-10.el9_2.x86_64                  43/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:56.9293107Z #14 6.617   Installing       : lksctp-tools-1.0.19-3.el9_4.x86_64                   44/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:56.9293980Z #14 6.620   Installing       : bzip2-libs-1.0.8-10.el9_5.x86_64                     45/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:56.9295054Z #14 6.625   Installing       : expat-2.5.0-5.el9_6.x86_64                           46/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:56.9295854Z #14 6.628   Installing       : gdbm-libs-1:1.23-1.el9.x86_64                        47/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:56.9296765Z #14 6.631   Installing       : keyutils-libs-1.6.3-1.el9.x86_64                     48/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:57.0316502Z #14 6.634   Installing       : libcom_err-1.46.5-7.el9.x86_64                       49/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:57.0317449Z #14 6.640   Installing       : libgpg-error-1.42-5.el9.x86_64                       50/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:57.0317963Z #14 6.647   Installing       : libgcrypt-1.10.0-11.el9.x86_64                       51/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:57.0318442Z #14 6.653   Installing       : libsepol-3.6-2.el9.x86_64                            52/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:57.0318932Z #14 6.656   Installing       : libuuid-2.37.4-21.el9.x86_64                         53/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:57.0319397Z #14 6.659   Installing       : libverto-0.3.2-3.el9.x86_64                          54/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:57.0319865Z #14 6.665   Installing       : libzstd-1.5.5-1.el9.x86_64                           55/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:57.0320378Z #14 6.668   Installing       : lz4-libs-1.9.3-5.el9.x86_64                          56/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:57.0321179Z #14 6.675   Installing       : nettle-3.10.1-1.el9.x86_64                           57/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:57.0321643Z #14 6.687   Installing       : gnutls-3.8.3-6.el9.x86_64                            58/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:57.0322119Z #14 6.693   Installing       : pcre-8.44-4.el9.x86_64                               59/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:57.0322578Z #14 6.698   Installing       : grep-3.6-5.el9.x86_64                                60/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:57.0323031Z #14 6.704   Installing       : pcre2-10.40-6.el9.x86_64                             61/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:57.0323718Z #14 6.708   Installing       : libselinux-3.6-3.el9.x86_64                          62/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:57.0324212Z #14 6.728   Installing       : coreutils-single-8.32-39.el9.x86_64                  63/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:57.0324978Z #14 6.734   Installing       : sed-4.8-9.el9.x86_64                                 64/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:57.2871406Z #14 6.737   Running scriptlet: ca-certificates-2024.2.69_v8.0.303-91.4.el9_4.noar   65/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:57.4414474Z #14 6.993   Installing       : ca-certificates-2024.2.69_v8.0.303-91.4.el9_4.noar   65/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:58.3936191Z #14 6.997   Running scriptlet: ca-certificates-2024.2.69_v8.0.303-91.4.el9_4.noar   65/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:58.6058450Z #14 8.099   Installing       : python3-pip-wheel-21.3.1-1.el9.noarch                66/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:58.6059433Z #14 8.106   Installing       : openssl-fips-provider-so-3.0.7-6.el9_5.x86_64        67/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:58.6060319Z #14 8.109   Installing       : openssl-fips-provider-3.0.7-6.el9_5.x86_64           68/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:58.6061132Z #14 8.133   Installing       : openssl-libs-1:3.2.2-6.el9_5.1.x86_64                69/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:58.6061826Z #14 8.148   Installing       : krb5-libs-1.21.1-6.el9.x86_64                        70/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:58.6062361Z #14 8.157   Installing       : libevent-2.1.12-8.el9_4.x86_64                       71/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:58.8100174Z #14 8.161   Installing       : python3-3.9.21-2.el9.x86_64                          72/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:58.9975605Z #14 8.516   Installing       : python3-libs-3.9.21-2.el9.x86_64                     73/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:58.9976597Z #14 8.536   Installing       : crypto-policies-scripts-20250128-1.git5269e22.el9.   74/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:58.9977440Z #14 8.540   Installing       : nss-sysinit-3.101.0-10.el9_2.x86_64                  75/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:58.9978195Z #14 8.550   Installing       : nss-3.101.0-10.el9_2.x86_64                          76/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:59.0984355Z #14 8.553   Running scriptlet: nss-3.101.0-10.el9_2.x86_64                          76/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:59.2519759Z #14 8.804   Installing       : systemd-libs-252-51.el9.x86_64                       77/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:59.3563529Z #14 8.807   Running scriptlet: systemd-libs-252-51.el9.x86_64                       77/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:59.5448851Z #14 9.062   Installing       : dbus-libs-1:1.12.20-8.el9.x86_64                     78/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:59.5449890Z #14 9.067   Installing       : avahi-libs-0.8-22.el9_6.x86_64                       79/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:59.5451173Z #14 9.072   Installing       : cups-libs-1:2.3.3op2-33.el9.x86_64                   80/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:59.5452048Z #14 9.079   Installing       : findutils-1:4.8.0-7.el9.x86_64                       81/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:53:59.5452708Z #14 9.083   Installing       : copy-jdk-configs-4.0-3.el9.noarch                    82/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:00.2189281Z #14 9.100   Installing       : alsa-lib-1.2.13-2.el9.x86_64                         83/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:00.3870059Z #14 9.925   Installing       : java-21-openjdk-headless-1:21.0.7.0.6-1.el9.x86_64   84/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:00.4924110Z #14 9.942   Running scriptlet: java-21-openjdk-headless-1:21.0.7.0.6-1.el9.x86_64   84/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:00.7423477Z #14 10.20   Running scriptlet: filesystem-3.16-5.el9.x86_64                         84/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:01.8769745Z #14 10.45   Running scriptlet: ca-certificates-2024.2.69_v8.0.303-91.4.el9_4.noar   84/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:02.4659802Z #14 11.58   Running scriptlet: crypto-policies-scripts-20250128-1.git5269e22.el9.   84/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.0557505Z #14 12.17   Running scriptlet: nss-3.101.0-10.el9_2.x86_64                          84/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.3005643Z #14 12.76   Running scriptlet: copy-jdk-configs-4.0-3.el9.noarch                    84/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.8394798Z #14 13.01   Running scriptlet: java-21-openjdk-headless-1:21.0.7.0.6-1.el9.x86_64   84/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9419877Z #14 13.54   Verifying        : alternatives-1.24-2.el9.x86_64                        1/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9420815Z #14 13.54   Verifying        : avahi-libs-0.8-22.el9_6.x86_64                        2/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9421635Z #14 13.54   Verifying        : basesystem-11-13.el9.noarch                           3/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9422371Z #14 13.55   Verifying        : bash-5.1.8-9.el9.x86_64                               4/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9423152Z #14 13.55   Verifying        : bzip2-libs-1.0.8-10.el9_5.x86_64                      5/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9423983Z #14 13.55   Verifying        : ca-certificates-2024.2.69_v8.0.303-91.4.el9_4.noar    6/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9425108Z #14 13.55   Verifying        : coreutils-single-8.32-39.el9.x86_64                   7/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9425961Z #14 13.55   Verifying        : crypto-policies-20250128-1.git5269e22.el9.noarch      8/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9426840Z #14 13.55   Verifying        : crypto-policies-scripts-20250128-1.git5269e22.el9.    9/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9427659Z #14 13.55   Verifying        : cups-libs-1:2.3.3op2-33.el9.x86_64                   10/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9428494Z #14 13.55   Verifying        : dbus-libs-1:1.12.20-8.el9.x86_64                     11/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9429244Z #14 13.55   Verifying        : expat-2.5.0-5.el9_6.x86_64                           12/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9430011Z #14 13.55   Verifying        : filesystem-3.16-5.el9.x86_64                         13/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9430802Z #14 13.55   Verifying        : findutils-1:4.8.0-7.el9.x86_64                       14/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9431567Z #14 13.55   Verifying        : gawk-5.1.0-6.el9.x86_64                              15/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9432333Z #14 13.55   Verifying        : gdbm-libs-1:1.23-1.el9.x86_64                        16/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9433058Z #14 13.55   Verifying        : glibc-2.34-168.el9_6.14.x86_64                       17/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9433803Z #14 13.55   Verifying        : glibc-common-2.34-168.el9_6.14.x86_64                18/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9434805Z #14 13.55   Verifying        : glibc-langpack-en-2.34-168.el9_6.14.x86_64           19/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9435586Z #14 13.55   Verifying        : gmp-1:6.2.0-13.el9.x86_64                            20/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9436285Z #14 13.55   Verifying        : gnutls-3.8.3-6.el9.x86_64                            21/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9436974Z #14 13.55   Verifying        : grep-3.6-5.el9.x86_64                                22/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9437701Z #14 13.55   Verifying        : keyutils-libs-1.6.3-1.el9.x86_64                     23/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9438854Z #14 13.55   Verifying        : krb5-libs-1.21.1-6.el9.x86_64                        24/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9439624Z #14 13.55   Verifying        : libacl-2.3.1-4.el9.x86_64                            25/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9440401Z #14 13.55   Verifying        : libattr-2.5.1-3.el9.x86_64                           26/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9441188Z #14 13.55   Verifying        : libcap-2.48-9.el9_2.x86_64                           27/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9441952Z #14 13.55   Verifying        : libcom_err-1.46.5-7.el9.x86_64                       28/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9442716Z #14 13.55   Verifying        : libevent-2.1.12-8.el9_4.x86_64                       29/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9443492Z #14 13.55   Verifying        : libffi-3.4.2-8.el9.x86_64                            30/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9444228Z #14 13.55   Verifying        : libgcc-11.5.0-5.el9_5.x86_64                         31/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9445222Z #14 13.55   Verifying        : libgcrypt-1.10.0-11.el9.x86_64                       32/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9445990Z #14 13.55   Verifying        : libgpg-error-1.42-5.el9.x86_64                       33/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9446744Z #14 13.55   Verifying        : libidn2-2.3.0-7.el9.x86_64                           34/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9447812Z #14 13.55   Verifying        : libselinux-3.6-3.el9.x86_64                          35/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9448560Z #14 13.55   Verifying        : libsepol-3.6-2.el9.x86_64                            36/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9449299Z #14 13.55   Verifying        : libsigsegv-2.13-4.el9.x86_64                         37/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9450038Z #14 13.55   Verifying        : libtasn1-4.16.0-9.el9.x86_64                         38/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9450792Z #14 13.55   Verifying        : libunistring-0.9.10-15.el9.x86_64                    39/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9451596Z #14 13.55   Verifying        : libuuid-2.37.4-21.el9.x86_64                         40/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9452347Z #14 13.55   Verifying        : libverto-0.3.2-3.el9.x86_64                          41/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9453071Z #14 13.55   Verifying        : libxcrypt-4.4.18-3.el9.x86_64                        42/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9453796Z #14 13.55   Verifying        : libzstd-1.5.5-1.el9.x86_64                           43/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9454839Z #14 13.55   Verifying        : lksctp-tools-1.0.19-3.el9_4.x86_64                   44/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9455655Z #14 13.55   Verifying        : lua-libs-5.4.4-4.el9.x86_64                          45/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9456423Z #14 13.55   Verifying        : lz4-libs-1.9.3-5.el9.x86_64                          46/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9457164Z #14 13.55   Verifying        : mpfr-4.1.0-7.el9.x86_64                              47/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9457897Z #14 13.55   Verifying        : ncurses-base-6.2-10.20210508.el9.noarch              48/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9458695Z #14 13.55   Verifying        : ncurses-libs-6.2-10.20210508.el9.x86_64              49/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9459477Z #14 13.55   Verifying        : nettle-3.10.1-1.el9.x86_64                           50/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9460286Z #14 13.55   Verifying        : openssl-fips-provider-3.0.7-6.el9_5.x86_64           51/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9461134Z #14 13.55   Verifying        : openssl-fips-provider-so-3.0.7-6.el9_5.x86_64        52/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9461915Z #14 13.55   Verifying        : openssl-libs-1:3.2.2-6.el9_5.1.x86_64                53/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9462670Z #14 13.55   Verifying        : p11-kit-0.25.3-3.el9_5.x86_64                        54/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9463492Z #14 13.55   Verifying        : p11-kit-trust-0.25.3-3.el9_5.x86_64                  55/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9464220Z #14 13.55   Verifying        : pcre-8.44-4.el9.x86_64                               56/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9465098Z #14 13.55   Verifying        : pcre2-10.40-6.el9.x86_64                             57/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9466122Z #14 13.55   Verifying        : pcre2-syntax-10.40-6.el9.noarch                      58/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9466929Z #14 13.55   Verifying        : python3-3.9.21-2.el9.x86_64                          59/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9467722Z #14 13.55   Verifying        : python3-libs-3.9.21-2.el9.x86_64                     60/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9468565Z #14 13.55   Verifying        : python3-pip-wheel-21.3.1-1.el9.noarch                61/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9469377Z #14 13.55   Verifying        : python3-setuptools-wheel-53.0.0-13.el9.noarch        62/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9470149Z #14 13.55   Verifying        : readline-8.1-4.el9.x86_64                            63/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9470939Z #14 13.55   Verifying        : redhat-release-9.6-0.1.el9.x86_64                    64/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9471688Z #14 13.55   Verifying        : sed-4.8-9.el9.x86_64                                 65/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9472395Z #14 13.55   Verifying        : setup-2.13.7-10.el9.noarch                           66/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9473111Z #14 13.55   Verifying        : sqlite-libs-3.34.1-7.el9_3.x86_64                    67/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9473905Z #14 13.55   Verifying        : systemd-libs-252-51.el9.x86_64                       68/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9475067Z #14 13.55   Verifying        : tzdata-2025b-1.el9.noarch                            69/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9475804Z #14 13.55   Verifying        : xz-libs-5.2.5-8.el9_0.x86_64                         70/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9476505Z #14 13.55   Verifying        : zlib-1.2.11-40.el9.x86_64                            71/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9477224Z #14 13.55   Verifying        : copy-jdk-configs-4.0-3.el9.noarch                    72/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9477941Z #14 13.55   Verifying        : lua-5.4.4-4.el9.x86_64                               73/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9478640Z #14 13.55   Verifying        : lua-posix-35.0-8.el9.x86_64                          74/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9479360Z #14 13.55   Verifying        : alsa-lib-1.2.13-2.el9.x86_64                         75/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9480088Z #14 13.55   Verifying        : java-21-openjdk-headless-1:21.0.7.0.6-1.el9.x86_64   76/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9480868Z #14 13.55   Verifying        : javapackages-filesystem-6.4.0-1.el9.noarch           77/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9481626Z #14 13.55   Verifying        : nspr-4.35.0-17.el9_2.x86_64                          78/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9482312Z #14 13.55   Verifying        : nss-3.101.0-10.el9_2.x86_64                          79/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9483018Z #14 13.55   Verifying        : nss-softokn-3.101.0-10.el9_2.x86_64                  80/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9483764Z #14 13.55   Verifying        : nss-softokn-freebl-3.101.0-10.el9_2.x86_64           81/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9484645Z #14 13.55   Verifying        : nss-sysinit-3.101.0-10.el9_2.x86_64                  82/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9485392Z #14 13.55   Verifying        : nss-util-3.101.0-10.el9_2.x86_64                     83/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9486140Z #14 13.55   Verifying        : tzdata-java-2025b-1.el9.noarch                       84/84 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9486794Z #14 13.64 Installed products updated.
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9487228Z #14 13.65 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9487533Z #14 13.65 Installed:
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9488019Z #14 13.65   alsa-lib-1.2.13-2.el9.x86_64                                                  
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9488784Z #14 13.65   alternatives-1.24-2.el9.x86_64                                                
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9489549Z #14 13.65   avahi-libs-0.8-22.el9_6.x86_64                                                
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9490338Z #14 13.65   basesystem-11-13.el9.noarch                                                   
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9491044Z #14 13.65   bash-5.1.8-9.el9.x86_64                                                       
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9491838Z #14 13.65   bzip2-libs-1.0.8-10.el9_5.x86_64                                              
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9492880Z #14 13.65   ca-certificates-2024.2.69_v8.0.303-91.4.el9_4.noarch                          
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9493730Z #14 13.65   copy-jdk-configs-4.0-3.el9.noarch                                             
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9494759Z #14 13.65   coreutils-single-8.32-39.el9.x86_64                                           
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9495673Z #14 13.65   crypto-policies-20250128-1.git5269e22.el9.noarch                              
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9496644Z #14 13.65   crypto-policies-scripts-20250128-1.git5269e22.el9.noarch                      
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9497497Z #14 13.65   cups-libs-1:2.3.3op2-33.el9.x86_64                                            
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9498193Z #14 13.65   dbus-libs-1:1.12.20-8.el9.x86_64                                              
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9498893Z #14 13.65   expat-2.5.0-5.el9_6.x86_64                                                    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9499635Z #14 13.65   filesystem-3.16-5.el9.x86_64                                                  
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9500438Z #14 13.65   findutils-1:4.8.0-7.el9.x86_64                                                
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9501161Z #14 13.65   gawk-5.1.0-6.el9.x86_64                                                       
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9502063Z #14 13.65   gdbm-libs-1:1.23-1.el9.x86_64                                                 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9502750Z #14 13.65   glibc-2.34-168.el9_6.14.x86_64                                                
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9503452Z #14 13.65   glibc-common-2.34-168.el9_6.14.x86_64                                         
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9504195Z #14 13.65   glibc-langpack-en-2.34-168.el9_6.14.x86_64                                    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9505095Z #14 13.65   gmp-1:6.2.0-13.el9.x86_64                                                     
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9505758Z #14 13.65   gnutls-3.8.3-6.el9.x86_64                                                     
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9506471Z #14 13.65   grep-3.6-5.el9.x86_64                                                         
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9507224Z #14 13.65   java-21-openjdk-headless-1:21.0.7.0.6-1.el9.x86_64                            
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9508132Z #14 13.65   javapackages-filesystem-6.4.0-1.el9.noarch                                    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9509013Z #14 13.65   keyutils-libs-1.6.3-1.el9.x86_64                                              
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9509762Z #14 13.65   krb5-libs-1.21.1-6.el9.x86_64                                                 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9510499Z #14 13.65   libacl-2.3.1-4.el9.x86_64                                                     
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9511187Z #14 13.65   libattr-2.5.1-3.el9.x86_64                                                    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9511878Z #14 13.65   libcap-2.48-9.el9_2.x86_64                                                    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9512606Z #14 13.65   libcom_err-1.46.5-7.el9.x86_64                                                
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9513497Z #14 13.65   libevent-2.1.12-8.el9_4.x86_64                                                
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9514243Z #14 13.65   libffi-3.4.2-8.el9.x86_64                                                     
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9515118Z #14 13.65   libgcc-11.5.0-5.el9_5.x86_64                                                  
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9515861Z #14 13.65   libgcrypt-1.10.0-11.el9.x86_64                                                
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9516598Z #14 13.65   libgpg-error-1.42-5.el9.x86_64                                                
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9517292Z #14 13.65   libidn2-2.3.0-7.el9.x86_64                                                    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9517981Z #14 13.65   libselinux-3.6-3.el9.x86_64                                                   
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9518663Z #14 13.65   libsepol-3.6-2.el9.x86_64                                                     
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9519519Z #14 13.65   libsigsegv-2.13-4.el9.x86_64                                                  
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9520236Z #14 13.65   libtasn1-4.16.0-9.el9.x86_64                                                  
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9520953Z #14 13.65   libunistring-0.9.10-15.el9.x86_64                                             
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9521701Z #14 13.65   libuuid-2.37.4-21.el9.x86_64                                                  
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9522422Z #14 13.65   libverto-0.3.2-3.el9.x86_64                                                   
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9523135Z #14 13.65   libxcrypt-4.4.18-3.el9.x86_64                                                 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9523874Z #14 13.65   libzstd-1.5.5-1.el9.x86_64                                                    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9524758Z #14 13.65   lksctp-tools-1.0.19-3.el9_4.x86_64                                            
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9525486Z #14 13.65   lua-5.4.4-4.el9.x86_64                                                        
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9526188Z #14 13.65   lua-libs-5.4.4-4.el9.x86_64                                                   
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9526903Z #14 13.65   lua-posix-35.0-8.el9.x86_64                                                   
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9527828Z #14 13.65   lz4-libs-1.9.3-5.el9.x86_64                                                   
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9528479Z #14 13.65   mpfr-4.1.0-7.el9.x86_64                                                       
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9529189Z #14 13.65   ncurses-base-6.2-10.20210508.el9.noarch                                       
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9529966Z #14 13.65   ncurses-libs-6.2-10.20210508.el9.x86_64                                       
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9530676Z #14 13.65   nettle-3.10.1-1.el9.x86_64                                                    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9531319Z #14 13.65   nspr-4.35.0-17.el9_2.x86_64                                                   
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9531961Z #14 13.65   nss-3.101.0-10.el9_2.x86_64                                                   
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9532633Z #14 13.65   nss-softokn-3.101.0-10.el9_2.x86_64                                           
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9533370Z #14 13.65   nss-softokn-freebl-3.101.0-10.el9_2.x86_64                                    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9534117Z #14 13.65   nss-sysinit-3.101.0-10.el9_2.x86_64                                           
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9535071Z #14 13.65   nss-util-3.101.0-10.el9_2.x86_64                                              
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9535826Z #14 13.65   openssl-fips-provider-3.0.7-6.el9_5.x86_64                                    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9536640Z #14 13.65   openssl-fips-provider-so-3.0.7-6.el9_5.x86_64                                 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9537412Z #14 13.65   openssl-libs-1:3.2.2-6.el9_5.1.x86_64                                         
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9538097Z #14 13.65   p11-kit-0.25.3-3.el9_5.x86_64                                                 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9538777Z #14 13.65   p11-kit-trust-0.25.3-3.el9_5.x86_64                                           
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9539447Z #14 13.65   pcre-8.44-4.el9.x86_64                                                        
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9540096Z #14 13.65   pcre2-10.40-6.el9.x86_64                                                      
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9540813Z #14 13.65   pcre2-syntax-10.40-6.el9.noarch                                               
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9541525Z #14 13.65   python3-3.9.21-2.el9.x86_64                                                   
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9542220Z #14 13.65   python3-libs-3.9.21-2.el9.x86_64                                              
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9542975Z #14 13.65   python3-pip-wheel-21.3.1-1.el9.noarch                                         
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9543803Z #14 13.65   python3-setuptools-wheel-53.0.0-13.el9.noarch                                 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9544920Z #14 13.65   readline-8.1-4.el9.x86_64                                                     
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9545636Z #14 13.65   redhat-release-9.6-0.1.el9.x86_64                                             
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9546315Z #14 13.65   sed-4.8-9.el9.x86_64                                                          
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9546969Z #14 13.65   setup-2.13.7-10.el9.noarch                                                    
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9547664Z #14 13.65   sqlite-libs-3.34.1-7.el9_3.x86_64                                             
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9548386Z #14 13.65   systemd-libs-252-51.el9.x86_64                                                
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9549107Z #14 13.65   tzdata-2025b-1.el9.noarch                                                     
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9549842Z #14 13.65   tzdata-java-2025b-1.el9.noarch                                                
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9550555Z #14 13.65   xz-libs-5.2.5-8.el9_0.x86_64                                                  
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9551199Z #14 13.65   zlib-1.2.11-40.el9.x86_64                                                     
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9551713Z #14 13.65 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:03.9551997Z #14 13.65 Complete!
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.0522944Z #14 13.76 + dnf --installroot /tmp/null/rootfs clean all
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.3115324Z #14 14.02 Updating Subscription Management repositories.
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.5174289Z #14 14.02 Unable to read consumer identity
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.5175235Z #14 14.02 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.5176132Z #14 14.02 This system is not registered with an entitlement server. You can use subscription-manager to register.
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.5177193Z #14 14.02 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.5177663Z #14 14.03 26 files removed
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.5179174Z #14 14.07 + rm -rf /tmp/null/rootfs/var/cache/bpf /tmp/null/rootfs/var/cache/dnf /tmp/null/rootfs/var/cache/ldconfig /tmp/null/rootfs/var/log/dnf.librepo.log /tmp/null/rootfs/var/log/dnf.log /tmp/null/rootfs/var/log/dnf.rpm.log '/tmp/null/rootfs/var/log/yum.*'
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.5180346Z #14 14.07 ==> Building dependency tree
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.7757495Z #14 14.48 ==> 42 packages to erase:
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9312542Z #14 14.48 alsa-lib
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9313027Z #14 14.48 avahi-libs
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9313409Z #14 14.48 bzip2-libs
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9313742Z #14 14.48 copy-jdk-configs
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9314110Z #14 14.48 cups-libs
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9314398Z #14 14.48 dbus-libs
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9314781Z #14 14.48 expat
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9314967Z #14 14.48 gawk
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9315153Z #14 14.48 gdbm-libs
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9315342Z #14 14.48 gmp
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9315518Z #14 14.48 gnutls
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9315710Z #14 14.48 gpg-pubkey
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9315921Z #14 14.48 keyutils-libs
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9316126Z #14 14.48 krb5-libs
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9316314Z #14 14.48 libcom_err
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9316503Z #14 14.48 libevent
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9316702Z #14 14.48 libffi
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9316885Z #14 14.48 libgcrypt
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9317075Z #14 14.48 libgpg-error
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9317272Z #14 14.48 libidn2
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9317457Z #14 14.48 libunistring
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9317651Z #14 14.48 libuuid
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9317825Z #14 14.48 libverto
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9318014Z #14 14.48 libxcrypt
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9318196Z #14 14.48 libzstd
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9318375Z #14 14.48 lua
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9318556Z #14 14.48 lua-libs
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9318744Z #14 14.48 lua-posix
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9318941Z #14 14.48 lz4-libs
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9319125Z #14 14.48 mpfr
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9319304Z #14 14.48 nettle
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9319511Z #14 14.48 openssl-fips-provider
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9319768Z #14 14.48 openssl-fips-provider-so
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9320023Z #14 14.48 openssl-libs
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9320222Z #14 14.48 p11-kit
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9320406Z #14 14.48 python3
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9320588Z #14 14.48 python3-libs
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9321104Z #14 14.48 python3-pip-wheel
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9321350Z #14 14.48 python3-setuptools-wheel
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9321590Z #14 14.48 readline
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9321791Z #14 14.48 systemd-libs
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9321987Z #14 14.48 xz-libs
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9322181Z #14 14.48 ==> 43 packages to keep:
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9322420Z #14 14.49 alternatives
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9322616Z #14 14.49 basesystem
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9322804Z #14 14.49 bash
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9322991Z #14 14.49 ca-certificates
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9323211Z #14 14.49 coreutils-single
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9323436Z #14 14.49 crypto-policies
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9323667Z #14 14.49 crypto-policies-scripts
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9323915Z #14 14.49 filesystem
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9324110Z #14 14.49 findutils
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9324291Z #14 14.49 glibc
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9324477Z #14 14.49 glibc-common
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9324832Z #14 14.49 glibc-langpack-en
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9325050Z #14 14.49 grep
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9325256Z #14 14.49 java-21-openjdk-headless
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9325511Z #14 14.49 javapackages-filesystem
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9325747Z #14 14.49 libacl
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9325927Z #14 14.49 libattr
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9326107Z #14 14.49 libcap
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9326290Z #14 14.49 libgcc
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9326472Z #14 14.49 libselinux
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9326826Z #14 14.49 libsepol
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9327011Z #14 14.49 libsigsegv
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9327200Z #14 14.49 libtasn1
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9327382Z #14 14.49 lksctp-tools
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9327582Z #14 14.49 ncurses-base
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9327780Z #14 14.49 ncurses-libs
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9327971Z #14 14.49 nspr
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9328147Z #14 14.49 nss
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9328326Z #14 14.49 nss-softokn
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9328546Z #14 14.49 nss-softokn-freebl
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9328782Z #14 14.49 nss-sysinit
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9328972Z #14 14.49 nss-util
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9329161Z #14 14.49 p11-kit-trust
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9329364Z #14 14.49 pcre
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9329533Z #14 14.49 pcre2
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9329706Z #14 14.49 pcre2-syntax
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9329900Z #14 14.49 redhat-release
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9330094Z #14 14.49 sed
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9330259Z #14 14.49 setup
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9330426Z #14 14.49 sqlite-libs
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9330603Z #14 14.49 tzdata
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9330783Z #14 14.49 tzdata-java
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9330960Z #14 14.49 zlib
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9331126Z #14 14.49 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9331301Z #14 14.49 ==> Erasing packages
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:04.9331616Z #14 14.49 + xargs rpm -r /tmp/null/rootfs --erase --nodeps --allmatches
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:05.0760845Z #14 14.78 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:05.0761540Z #14 14.78 ==> Packages erased ok!
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:05.2440213Z #14 DONE 14.8s
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:06.3474471Z 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:06.3475454Z #15 [stage-1 2/4] COPY --from=ubi-micro-build /tmp/null/rootfs/ /
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:07.5536436Z #15 DONE 1.2s
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:07.7053339Z 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:07.7054118Z #16 [stage-1 3/4] COPY --from=ubi-micro-build --chown=1000:0 /opt/keycloak /opt/keycloak
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:07.9928887Z #16 DONE 0.4s
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:08.1119311Z 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:08.1121709Z #17 [stage-1 4/4] RUN echo "keycloak:x:0:root" >> /etc/group &&     echo "keycloak:x:1000:0:keycloak user:/opt/keycloak:/sbin/nologin" >> /etc/passwd
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:08.1122708Z #17 DONE 0.1s
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:08.2630860Z 
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:08.2631759Z #18 exporting to image
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:08.2632521Z #18 exporting layers
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:09.5312038Z #18 exporting layers 1.4s done
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:09.5451553Z #18 writing image sha256:e1c544f23b09e377bb7a27b4bad34259715366690f46460a822d6227fd7f01e5 done
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:09.5452656Z #18 naming to ttl.sh/21890dkeycloak:86400000.0.0 done
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:09.5453148Z #18 DONE 1.4s
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:09.5500839Z + docker push ttl.sh/21890dkeycloak:86400000.0.0
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:09.8643061Z The push refers to repository [ttl.sh/21890dkeycloak]
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:10.0079436Z 8e71d736945b: Preparing
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:10.0080388Z d8a5435acfd7: Preparing
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:10.0080794Z d388c7bad73a: Preparing
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:10.0081170Z ef3cb51dff21: Preparing
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:13.3115801Z 8e71d736945b: Pushed
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:54:31.1634047Z ef3cb51dff21: Pushed
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:55:40.6328080Z error parsing HTTP 499 response body: invalid character '<' looking for beginning of value: "<!DOCTYPE html>\n<html>\n  <head>\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <meta charset=\"utf-8\">\n    <title>Application Error</title>\n    <style media=\"screen\">\n      html,body,iframe {\n        margin: 0;\n        padding: 0;\n      }\n\n      html,body {\n        height: 100%;\n        overflow: hidden;\n      }\n\n      iframe {\n        width: 100%;\n        height: 100%;\n        border: 0;\n      }\n    </style>\n  </head>\n  <body>\n    <iframe src=\"https://www.herokucdn.com/error-pages/application-error.html\"></iframe>\n  </body>\n</html>"
+Test OLM installation	Arrange OLM test installation	2025-06-09T07:55:40.6353635Z ##[error]Process completed with exit code 1.
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-06-09T08:20:14.9544654Z Prepare all required actions
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-06-09T08:20:14.9621740Z ##[group]Run ./.github/actions/status-check
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-06-09T08:20:14.9622146Z with:
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-06-09T08:20:14.9623011Z   jobs: {
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	  "conditional": {
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	    "outputs": {
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	      "operator": "true"
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	    }
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	  "build": {
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	  "test-local-apiserver": {
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	  "test-remote": {
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	  "test-olm": {
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	    "result": "failure",
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	  }
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	}
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-06-09T08:20:14.9623962Z env:
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-06-09T08:20:14.9624309Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-06-09T08:20:14.9624710Z   MINIKUBE_VERSION: v1.32.0
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-06-09T08:20:14.9625019Z   KUBERNETES_VERSION: v1.27.10
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-06-09T08:20:14.9625311Z   MINIKUBE_MEMORY: 4096
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-06-09T08:20:14.9625586Z ##[endgroup]
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-06-09T08:20:14.9827447Z ##[group]Run JOBS='{
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-06-09T08:20:14.9827907Z [36;1mJOBS='{[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-06-09T08:20:14.9828177Z [36;1m  "conditional": {[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-06-09T08:20:14.9828528Z [36;1m    "result": "success",[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-06-09T08:20:14.9828821Z [36;1m    "outputs": {[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-06-09T08:20:14.9829102Z [36;1m      "operator": "true"[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-06-09T08:20:14.9829390Z [36;1m    }[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-06-09T08:20:14.9829623Z [36;1m  },[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-06-09T08:20:14.9829856Z [36;1m  "build": {[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-06-09T08:20:14.9830109Z [36;1m    "result": "success",[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-06-09T08:20:14.9830552Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-06-09T08:20:14.9830826Z [36;1m  },[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-06-09T08:20:14.9831085Z [36;1m  "test-local-apiserver": {[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-06-09T08:20:14.9831396Z [36;1m    "result": "success",[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-06-09T08:20:14.9831678Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-06-09T08:20:14.9831942Z [36;1m  },[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-06-09T08:20:14.9832184Z [36;1m  "test-remote": {[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-06-09T08:20:14.9832470Z [36;1m    "result": "success",[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-06-09T08:20:14.9832810Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-06-09T08:20:14.9833068Z [36;1m  },[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-06-09T08:20:14.9833304Z [36;1m  "test-olm": {[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-06-09T08:20:14.9833578Z [36;1m    "result": "failure",[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-06-09T08:20:14.9833871Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-06-09T08:20:14.9834137Z [36;1m  }[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-06-09T08:20:14.9834357Z [36;1m}'[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-06-09T08:20:14.9834602Z [36;1m[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-06-09T08:20:14.9834841Z [36;1mecho "Job status:"[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-06-09T08:20:14.9835245Z [36;1mecho $JOBS | jq -r 'to_entries[] | " - \(.key): \(.value.result)"'[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-06-09T08:20:14.9835620Z [36;1m[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-06-09T08:20:14.9835922Z [36;1mfor i in $(echo $JOBS | jq -r 'to_entries[] | .value.result'); do[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-06-09T08:20:14.9836347Z [36;1m  if [ "$i" != "success" ] && [ "$i" != "skipped" ]; then[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-06-09T08:20:14.9836683Z [36;1m    echo ""[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-06-09T08:20:14.9836952Z [36;1m    echo "Status check not okay!"[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-06-09T08:20:14.9837254Z [36;1m    exit 1[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-06-09T08:20:14.9837498Z [36;1m  fi[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-06-09T08:20:14.9837719Z [36;1mdone[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-06-09T08:20:15.0101092Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-06-09T08:20:15.0101657Z env:
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-06-09T08:20:15.0102036Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-06-09T08:20:15.0102478Z   MINIKUBE_VERSION: v1.32.0
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-06-09T08:20:15.0102791Z   KUBERNETES_VERSION: v1.27.10
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-06-09T08:20:15.0103188Z   MINIKUBE_MEMORY: 4096
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-06-09T08:20:15.0103470Z ##[endgroup]
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-06-09T08:20:15.0202083Z Job status:
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-06-09T08:20:15.0255743Z  - conditional: success
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-06-09T08:20:15.0256130Z  - build: success
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-06-09T08:20:15.0256434Z  - test-local-apiserver: success
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-06-09T08:20:15.0256755Z  - test-remote: success
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-06-09T08:20:15.0257025Z  - test-olm: failure
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-06-09T08:20:15.0289814Z 
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-06-09T08:20:15.0290241Z Status check not okay!
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2025-06-09T08:20:15.0303736Z ##[error]Process completed with exit code 1.
