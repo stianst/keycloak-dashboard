@@ -119,6 +119,9 @@ issues:
   - "16405855756/*" # wget: Failed to fetch https://repo.maven.apache.org/maven2/org/apache/maven/apache-maven/3.9.8/apache-maven-3.9.8-bin.zip
   - "16438594667/*" # Quarkus IT: tar: Unexpected EOF in archive;\n tar: Error is not recoverable: exiting now
   - "16438590439/*" # Forms IT: tar: Unexpected EOF in archive;\n tar: Error is not recoverable: exiting now
+  - "16574259366/*" # Integration test setup; Error: Response status code does not indicate success: 429 (Too Many Requests).
+  - "16574259367/*" # Error: Response status code does not indicate success: 429 (Too Many Requests).
+  - "16526244502/*" # docker: Error response from daemon: received unexpected HTTP status: 503 Service Unavailable
 - id: "keycloak-js-adapter-jar"
   description: "Could not extract/download archive: '/home/runner/.m2/repository/com/github/eirslett/node/18.16.0/node-18.16.0-linux-x64.tar.gz'"
   resolution: "ignored"
@@ -345,6 +348,7 @@ issues:
   - "8138369067/*"
   - "8367457709/*"
   - "14752936659/*"
+  - "16526244519/*"
 - id: "github-actions-glitches"
   resolution: "ignored"
   resolves:
@@ -1232,6 +1236,7 @@ issues:
     - "16366902818/*"
     - "16366799592/*"
     - "16346087387/*"
+    - "16474420040/*"
 - id: "operator-ci-38522"
   description: "[Keycloak Operator CI] - Test remote (fast) - WatchedSecretsTest"
   issue: 38522
@@ -1365,3 +1370,11 @@ issues:
     - "16368702593/*"
     - "16365621840/*"
     - "16348003471/*"
+- id: "quarkus-it-41430"
+  description: "CustomJpaEntityProviderDistTest.testUserManagedEntityNotAddedToDefaultPU flakey test"
+  issue: 41430
+  resolves:
+    - "16469027711/*"
+    - "16493332042/*"
+    - "16496497373/*"
+    - "16523242819/*"
