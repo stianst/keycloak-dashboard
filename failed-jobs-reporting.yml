@@ -119,9 +119,12 @@ issues:
   - "16405855756/*" # wget: Failed to fetch https://repo.maven.apache.org/maven2/org/apache/maven/apache-maven/3.9.8/apache-maven-3.9.8-bin.zip
   - "16438594667/*" # Quarkus IT: tar: Unexpected EOF in archive;\n tar: Error is not recoverable: exiting now
   - "16438590439/*" # Forms IT: tar: Unexpected EOF in archive;\n tar: Error is not recoverable: exiting now
-  - "16574259366/*" # Integration test setup; Error: Response status code does not indicate success: 429 (Too Many Requests).
-  - "16574259367/*" # Error: Response status code does not indicate success: 429 (Too Many Requests).
+  - "16574259366/*" # Failed to download action https://api.github.com/repos/actions/xyz; Error: Response status code does not indicate success: 429 (Too Many Requests).
+  - "16574259367/*" # Failed to download action https://api.github.com/repos/actions/xyz; Error: Response status code does not indicate success: 429 (Too Many Requests).
   - "16526244502/*" # docker: Error response from daemon: received unexpected HTTP status: 503 Service Unavailable
+  - "16610382223/*" # wget: Failed to fetch https://repo.maven.apache.org/maven2/org/apache/maven/apache-maven/3.9.8/apache-maven-3.9.8-bin.zip
+  - "16500896650/*" # The hosted runner lost communication with the server. Anything in your workflow that terminates the runner process, starves it for CPU/Memory, or blocks its network access can cause this error.
+  - "16593799977/*" # Failed to execute goal org.infinispan.protostream:proto-schema-compatibility-maven-plugin; An error occurred while running protolock: Server returned HTTP response code: 429 for URL
 - id: "keycloak-js-adapter-jar"
   description: "Could not extract/download archive: '/home/runner/.m2/repository/com/github/eirslett/node/18.16.0/node-18.16.0-linux-x64.tar.gz'"
   resolution: "ignored"
@@ -1278,7 +1281,7 @@ issues:
     - "14930431136/*"
     - "16419095096/*"
 - id: "proto-lock"
-  description: "Server returned HTTP response code: 429 for URL... to many requests"
+  description: "Server returned HTTP response code: 429 for URL... too many requests"
   issue: 39861
   resolves:
     - "15106391913/*"
@@ -1378,3 +1381,9 @@ issues:
     - "16493332042/*"
     - "16496497373/*"
     - "16523242819/*"
+- id: "account-ui-41545"
+  description: "Unstable test Account UI 2E2 / device-activity"
+  issue: 41545
+  resolves:
+    - "16627882668/*"
+    - "16570902599/*"
