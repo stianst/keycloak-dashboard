@@ -125,6 +125,7 @@ issues:
   - "16610382223/*" # wget: Failed to fetch https://repo.maven.apache.org/maven2/org/apache/maven/apache-maven/3.9.8/apache-maven-3.9.8-bin.zip
   - "16500896650/*" # The hosted runner lost communication with the server. Anything in your workflow that terminates the runner process, starves it for CPU/Memory, or blocks its network access can cause this error.
   - "16593799977/*" # Failed to execute goal org.infinispan.protostream:proto-schema-compatibility-maven-plugin; An error occurred while running protolock: Server returned HTTP response code: 429 for URL
+  - "16533981865/*" # IllegalArgument No enum constant org.keycloak.testsuite.pages.AppPage.RequestType.Sign in to test
 - id: "keycloak-js-adapter-jar"
   description: "Could not extract/download archive: '/home/runner/.m2/repository/com/github/eirslett/node/18.16.0/node-18.16.0-linux-x64.tar.gz'"
   resolution: "ignored"
@@ -1387,3 +1388,12 @@ issues:
   resolves:
     - "16627882668/*"
     - "16570902599/*"
+    - "16651052537/*"
+- id: "javascript-ci-41543"
+  description: "Tests fail due to multiple workers"
+  issue: 41543
+  resolves:
+    - "16643936300/*"
+    - "16644791487/*"
+    - "16610383041/*"
+    - "16583396940/*"
