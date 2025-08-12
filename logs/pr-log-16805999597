@@ -1,0 +1,717 @@
+Test OLM installation	UNKNOWN STEP	﻿2025-08-11T06:37:22.9910251Z Current runner version: '2.327.1'
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:22.9935125Z ##[group]Runner Image Provisioner
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:22.9935989Z Hosted Compute Agent
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:22.9936547Z Version: 20250711.363
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:22.9937100Z Commit: 6785254374ce925a23743850c1cb91912ce5c14c
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:22.9938142Z Build Date: 2025-07-11T20:04:25Z
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:22.9938715Z ##[endgroup]
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:22.9939274Z ##[group]Operating System
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:22.9939834Z Ubuntu
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:22.9940326Z 24.04.2
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:22.9940781Z LTS
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:22.9941226Z ##[endgroup]
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:22.9941721Z ##[group]Runner Image
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:22.9942243Z Image: ubuntu-24.04
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:22.9942768Z Version: 20250804.2.0
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:22.9943744Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250804.2/images/ubuntu/Ubuntu2404-Readme.md
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:22.9945277Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250804.2
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:22.9946288Z ##[endgroup]
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:22.9949630Z ##[group]GITHUB_TOKEN Permissions
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:22.9952235Z Actions: read
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:22.9953097Z Attestations: read
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:22.9953865Z Checks: read
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:22.9954744Z Contents: read
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:22.9955530Z Deployments: read
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:22.9956281Z Discussions: read
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:22.9957094Z Issues: read
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:22.9958071Z Metadata: read
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:22.9958761Z Models: read
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:22.9959596Z Packages: read
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:22.9960414Z Pages: read
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:22.9961161Z PullRequests: read
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:22.9962093Z RepositoryProjects: read
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:22.9962914Z SecurityEvents: read
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:22.9963899Z Statuses: read
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:22.9964739Z ##[endgroup]
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:22.9968522Z Secret source: None
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:22.9969920Z Prepare workflow directory
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:23.0528198Z Prepare all required actions
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:23.0584293Z Getting action download info
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:23.3851584Z ##[group]Download immutable action package 'actions/checkout@v4'
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:23.3852784Z Version: 4.2.2
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:23.3853856Z Digest: sha256:ccb2698953eaebd21c7bf6268a94f9c26518a7e38e27e0b83c1fe1ad049819b1
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:23.3855061Z Source commit SHA: 11bd71901bbe5b1630ceea73d27597364c9af683
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:23.3855891Z ##[endgroup]
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:23.4565331Z Download action repository 'manusa/actions-setup-minikube@v2.13.0' (SHA:0e8062ceff873bd77979f39cf8fd3621416afe4d)
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:24.2564252Z Download action repository 'redhat-actions/openshift-tools-installer@v1' (SHA:144527c7d98999f2652264c048c7a9bd103f8a82)
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:24.8984158Z ##[group]Download immutable action package 'actions/download-artifact@v4'
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:24.8985707Z Version: 4.3.0
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:24.8987102Z Digest: sha256:552a5b9ad918f62ec0c2e8f42f3c694d4ebd1b4036b18c39b14168fcdfc0e4f2
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:24.8989392Z Source commit SHA: d3f86a106a0bac45b974a628896c90dbdf5c8093
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:24.8990884Z ##[endgroup]
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:25.1899748Z Complete job name: Test OLM installation
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:25.2719802Z ##[group]Run actions/checkout@v4
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:25.2721065Z with:
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:25.2721826Z   repository: keycloak/keycloak
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:25.2722985Z   token: ***
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:25.2723726Z   ssh-strict: true
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:25.2724481Z   ssh-user: git
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:25.2725258Z   persist-credentials: true
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:25.2726131Z   clean: true
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:25.2726927Z   sparse-checkout-cone-mode: true
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:25.2728051Z   fetch-depth: 1
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:25.2728815Z   fetch-tags: false
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:25.2729597Z   show-progress: true
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:25.2730386Z   lfs: false
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:25.2731108Z   submodules: false
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:25.2731910Z   set-safe-directory: true
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:25.2733008Z env:
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:25.2734045Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:25.2735367Z   MINIKUBE_VERSION: v1.32.0
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:25.2736525Z   KUBERNETES_VERSION: v1.27.10
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:25.2737607Z   MINIKUBE_MEMORY: 4096
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:25.2738422Z ##[endgroup]
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:25.3806652Z Syncing repository: keycloak/keycloak
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:25.3809473Z ##[group]Getting Git version info
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:25.3810854Z Working directory is '/home/runner/work/keycloak/keycloak'
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:25.3812879Z [command]/usr/bin/git version
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:25.3834509Z git version 2.50.1
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:25.3860404Z ##[endgroup]
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:25.3874145Z Temporarily overriding HOME='/home/runner/work/_temp/81f175f7-9c57-4a5c-975b-7f4d4b170209' before making global git config changes
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:25.3877098Z Adding repository directory to the temporary git global config as a safe directory
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:25.3881085Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/keycloak/keycloak
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:25.3913115Z Deleting the contents of '/home/runner/work/keycloak/keycloak'
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:25.3916526Z ##[group]Initializing the repository
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:25.3920358Z [command]/usr/bin/git init /home/runner/work/keycloak/keycloak
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:25.3977359Z hint: Using 'master' as the name for the initial branch. This default branch name
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:25.3980523Z hint: is subject to change. To configure the initial branch name to use in all
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:25.3983702Z hint: of your new repositories, which will suppress this warning, call:
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:25.3986190Z hint:
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:25.3988151Z hint: 	git config --global init.defaultBranch <name>
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:25.3990314Z hint:
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:25.3992307Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:25.3995603Z hint: 'development'. The just-created branch can be renamed via this command:
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:25.3998268Z hint:
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:25.3999342Z hint: 	git branch -m <name>
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:25.4000388Z hint:
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:25.4001645Z hint: Disable this message with "git config set advice.defaultBranchName false"
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:25.4003825Z Initialized empty Git repository in /home/runner/work/keycloak/keycloak/.git/
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:25.4009114Z [command]/usr/bin/git remote add origin https://github.com/keycloak/keycloak
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:25.4026149Z ##[endgroup]
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:25.4029007Z ##[group]Disabling automatic garbage collection
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:25.4031367Z [command]/usr/bin/git config --local gc.auto 0
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:25.4059979Z ##[endgroup]
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:25.4062497Z ##[group]Setting up auth
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:25.4067095Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:25.4099199Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:25.4352947Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:25.4385334Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:25.4608338Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:25.4641437Z ##[endgroup]
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:25.4643543Z ##[group]Fetching the repository
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:25.4718987Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +555079beab86c91ef4ad8393b5f0912aed5095b7:refs/remotes/pull/41724/merge
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:28.0118996Z From https://github.com/keycloak/keycloak
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:28.0119870Z  * [new ref]         555079beab86c91ef4ad8393b5f0912aed5095b7 -> pull/41724/merge
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:28.0142626Z ##[endgroup]
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:28.0143298Z ##[group]Determining the checkout info
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:28.0145417Z ##[endgroup]
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:28.0150740Z [command]/usr/bin/git sparse-checkout disable
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:28.0188707Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:28.0215719Z ##[group]Checking out the ref
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:28.0219207Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/41724/merge
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:28.7551128Z Note: switching to 'refs/remotes/pull/41724/merge'.
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:28.7553209Z 
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:28.7553563Z You are in 'detached HEAD' state. You can look around, make experimental
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:28.7554329Z changes and commit them, and you can discard any commits you make in this
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:28.7555053Z state without impacting any branches by switching back to a branch.
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:28.7555483Z 
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:28.7555793Z If you want to create a new branch to retain commits you create, you may
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:28.7556496Z do so (now or later) by using -c with the switch command. Example:
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:28.7556900Z 
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:28.7557096Z   git switch -c <new-branch-name>
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:28.7557641Z 
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:28.7557876Z Or undo this operation with:
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:28.7558187Z 
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:28.7558316Z   git switch -
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:28.7558586Z 
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:28.7558940Z Turn off this advice by setting config variable advice.detachedHead to false
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:28.7559438Z 
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:28.7560031Z HEAD is now at 555079b Merge 4ccb2dc8ff47e795cd52e6f3e70ef131ff274aad into d46f3bc38a43e9358c5b27c3deb2946c790f4140
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:28.7585481Z ##[endgroup]
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:28.7630313Z [command]/usr/bin/git log -1 --format=%H
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:28.7653621Z 555079beab86c91ef4ad8393b5f0912aed5095b7
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:28.7875338Z Prepare all required actions
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:28.7875799Z Getting action download info
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:28.9081085Z ##[group]Download immutable action package 'actions/setup-java@v4'
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:28.9081509Z Version: 4.7.1
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:28.9081892Z Digest: sha256:23223d64943473efb4336f60463c0429cd4f422cd5fc6c48a5cf0d5907c1aeac
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:28.9082445Z Source commit SHA: c5195efecf7bdfc987ee8bae7a71cb8b11521c00
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:28.9082809Z ##[endgroup]
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:29.2057778Z ##[group]Run ./.github/actions/java-setup
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:29.2058067Z with:
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:29.2058243Z   distribution: temurin
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:29.2058447Z   java-version: 21
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:29.2058618Z env:
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:29.2058882Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:29.2059208Z   MINIKUBE_VERSION: v1.32.0
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:29.2059432Z   KUBERNETES_VERSION: v1.27.10
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:29.2059644Z   MINIKUBE_MEMORY: 4096
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:29.2059881Z ##[endgroup]
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:29.2194926Z ##[group]Run actions/setup-java@v4
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:29.2195177Z with:
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:29.2195351Z   distribution: temurin
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:29.2195549Z   java-version: 21
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:29.2195728Z   java-package: jdk
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:29.2195917Z   check-latest: false
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:29.2196115Z   server-id: github
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:29.2196308Z   server-username: GITHUB_ACTOR
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:29.2196533Z   server-password: GITHUB_TOKEN
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:29.2196756Z   overwrite-settings: true
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:29.2196955Z   job-status: success
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:29.2197454Z   token: ***
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:29.2197633Z env:
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:29.2197892Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:29.2198225Z   MINIKUBE_VERSION: v1.32.0
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:29.2198454Z   KUBERNETES_VERSION: v1.27.10
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:29.2198670Z   MINIKUBE_MEMORY: 4096
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:29.2198855Z ##[endgroup]
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:29.4192761Z ##[group]Installed distributions
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:29.4242792Z Resolved Java 21.0.8+9 from tool-cache
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:29.4243616Z Setting Java 21.0.8+9 as the default
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:29.4256551Z Creating toolchains.xml for JDK version 21 from temurin
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:29.4333226Z Writing to /home/runner/.m2/toolchains.xml
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:29.4334033Z 
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:29.4334196Z Java configuration:
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:29.4334601Z   Distribution: temurin
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:29.4334981Z   Version: 21.0.8+9
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:29.4336959Z   Path: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.8-9/x64
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:29.4337647Z 
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:29.4338383Z ##[endgroup]
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:29.4353931Z Creating settings.xml with server-id: github
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:29.4361328Z Writing to /home/runner/.m2/settings.xml
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:29.4520763Z ##[group]Run manusa/actions-setup-minikube@v2.13.0
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:29.4521054Z with:
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:29.4521230Z   minikube version: v1.32.0
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:29.4521451Z   kubernetes version: v1.27.10
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:29.4521886Z   github token: ***
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:29.4522076Z   driver: docker
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:29.4522369Z   start args: --memory=4096 --addons=registry --insecure-registry=192.168.49.0/24
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:29.4522705Z env:
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:29.4522950Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:29.4523283Z   MINIKUBE_VERSION: v1.32.0
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:29.4523500Z   KUBERNETES_VERSION: v1.27.10
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:29.4523703Z   MINIKUBE_MEMORY: 4096
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:29.4523995Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.8-9/x64
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:29.4524414Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.8-9/x64
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:29.4524742Z ##[endgroup]
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:29.5718477Z Loading input variables
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:29.5720907Z Updating Environment configuration to support Minikube
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:29.5981544Z 
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:29.5982006Z WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:29.5982526Z 
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:29.7142104Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:29.7967029Z Hit:2 http://azure.archive.ubuntu.com/ubuntu noble InRelease
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:29.7991909Z Get:3 http://azure.archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:29.8097738Z Get:4 http://azure.archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:29.8182308Z Get:5 http://azure.archive.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:29.8263273Z Get:6 https://packages.microsoft.com/repos/azure-cli noble InRelease [3564 B]
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:29.8346687Z Get:7 https://packages.microsoft.com/ubuntu/24.04/prod noble InRelease [3600 B]
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:29.9558829Z Get:8 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1313 kB]
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:29.9720532Z Get:9 http://azure.archive.ubuntu.com/ubuntu noble-updates/main Translation-en [264 kB]
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:29.9751852Z Get:10 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 Components [164 kB]
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:29.9795090Z Get:11 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [1120 kB]
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:29.9867444Z Get:12 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe Translation-en [287 kB]
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:29.9901980Z Get:13 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Components [377 kB]
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:29.9936126Z Get:14 http://azure.archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Components [212 B]
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:29.9949054Z Get:15 http://azure.archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Components [940 B]
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:30.0173224Z Get:16 http://azure.archive.ubuntu.com/ubuntu noble-backports/main amd64 Components [7084 B]
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:30.0189955Z Get:17 http://azure.archive.ubuntu.com/ubuntu noble-backports/universe amd64 Packages [28.9 kB]
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:30.0648044Z Get:18 http://azure.archive.ubuntu.com/ubuntu noble-backports/universe Translation-en [17.4 kB]
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:30.0662938Z Get:19 http://azure.archive.ubuntu.com/ubuntu noble-backports/universe amd64 Components [30.8 kB]
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:30.0678518Z Get:20 http://azure.archive.ubuntu.com/ubuntu noble-backports/restricted amd64 Components [212 B]
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:30.0695578Z Get:21 http://azure.archive.ubuntu.com/ubuntu noble-backports/multiverse amd64 Components [212 B]
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:30.0709571Z Get:22 http://azure.archive.ubuntu.com/ubuntu noble-security/main amd64 Packages [1054 kB]
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:30.0778564Z Get:23 http://azure.archive.ubuntu.com/ubuntu noble-security/main amd64 Components [21.6 kB]
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:30.0792475Z Get:24 http://azure.archive.ubuntu.com/ubuntu noble-security/universe amd64 Components [52.3 kB]
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:30.0807558Z Get:25 http://azure.archive.ubuntu.com/ubuntu noble-security/restricted amd64 Components [212 B]
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:30.0830109Z Get:26 http://azure.archive.ubuntu.com/ubuntu noble-security/multiverse amd64 Components [212 B]
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:30.1152951Z Get:27 https://packages.microsoft.com/repos/azure-cli noble/main amd64 Packages [1497 B]
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:30.1834763Z Get:28 https://packages.microsoft.com/ubuntu/24.04/prod noble/main amd64 Packages [46.8 kB]
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:30.1982846Z Get:29 https://packages.microsoft.com/ubuntu/24.04/prod noble/main arm64 Packages [32.2 kB]
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:37.3053282Z Fetched 5205 kB in 1s (6586 kB/s)
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:37.9685084Z Reading package lists...
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:38.1136843Z Building dependency tree...
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:38.1143769Z Reading state information...
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:38.1295663Z 14 packages can be upgraded. Run 'apt list --upgradable' to see them.
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:38.1555289Z Reading package lists...
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:38.3148484Z Building dependency tree...
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:38.3155524Z Reading state information...
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:38.4877684Z The following NEW packages will be installed:
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:38.4883174Z   conntrack
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:38.5052272Z 0 upgraded, 1 newly installed, 0 to remove and 14 not upgraded.
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:38.5053034Z Need to get 37.9 kB of archives.
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:38.5053681Z After this operation, 119 kB of additional disk space will be used.
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:38.5054572Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:38.5507022Z Get:2 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 conntrack amd64 1:1.4.8-1ubuntu1 [37.9 kB]
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:38.8044691Z Fetched 37.9 kB in 0s (656 kB/s)
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:38.8382986Z Selecting previously unselected package conntrack.
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:38.8969341Z (Reading database ... 
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:38.8970127Z (Reading database ... 5%
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:38.8970644Z (Reading database ... 10%
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:38.8971294Z (Reading database ... 15%
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:38.8971935Z (Reading database ... 20%
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:38.8972511Z (Reading database ... 25%
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:38.8972914Z (Reading database ... 30%
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:38.8973431Z (Reading database ... 35%
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:38.8973933Z (Reading database ... 40%
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:38.8974360Z (Reading database ... 45%
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:38.8974815Z (Reading database ... 50%
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:39.0012371Z (Reading database ... 55%
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:39.2001328Z (Reading database ... 60%
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:39.4018419Z (Reading database ... 65%
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:39.5122258Z (Reading database ... 70%
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:39.7426663Z (Reading database ... 75%
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:40.0211311Z (Reading database ... 80%
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:40.7520189Z (Reading database ... 85%
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:41.5880610Z (Reading database ... 90%
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:42.1706275Z (Reading database ... 95%
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:42.1706903Z (Reading database ... 100%
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:42.1707907Z (Reading database ... 219989 files and directories currently installed.)
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:42.1751337Z Preparing to unpack .../conntrack_1%3a1.4.8-1ubuntu1_amd64.deb ...
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:42.1808376Z Unpacking conntrack (1:1.4.8-1ubuntu1) ...
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:42.2393180Z Setting up conntrack (1:1.4.8-1ubuntu1) ...
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:42.2423845Z Processing triggers for man-db (2.12.0-4build2) ...
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:45.2812170Z 
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:45.2812905Z Running kernel seems to be up-to-date.
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:45.2813491Z 
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:45.2813647Z Restarting services...
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:45.2880701Z 
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:45.2881044Z Service restarts being deferred:
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:45.2882783Z  systemctl restart hosted-compute-agent.service
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:45.2883305Z 
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:45.2883457Z No containers need to be restarted.
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:45.2883663Z 
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:45.2883841Z No user sessions are running outdated binaries.
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:45.2884061Z 
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:45.2884557Z No VM guests are running outdated hypervisor (qemu) binaries on this host.
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:46.0486303Z fs.protected_regular = 0
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:46.0498024Z Waiting for Docker to be ready
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:46.0890241Z 28.0.4 - 28.0.4
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:46.0905276Z Docker daemon is ready
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:46.0910052Z Downloading Minikube  v1.32.0
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:46.3325839Z Downloading from: https://github.com/kubernetes/minikube/releases/download/v1.32.0/minikube-linux-amd64
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:47.0121689Z Installing Minikube
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:47.0522898Z * minikube v1.32.0 on Ubuntu 24.04
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:47.0529072Z   - MINIKUBE_VERSION=v1.32.0
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:47.0532034Z   - MINIKUBE_MEMORY=4096
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:47.0536193Z   - MINIKUBE_HOME=/home/runner/work/_temp
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:47.1019262Z * minikube 1.36.0 is available! Download it: https://github.com/kubernetes/minikube/releases/tag/v1.36.0
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:47.1021845Z * To disable this notice, run: 'minikube config set WantUpdateNotification false'
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:47.1023319Z 
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:49.9706655Z * Using the docker driver based on user configuration
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:50.0285959Z * Using Docker driver with root privileges
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:50.0295465Z * Starting control plane node minikube in cluster minikube
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:50.0304330Z * Pulling base image ...
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:37:50.0864423Z * Downloading Kubernetes v1.27.10 preload ...
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:38:02.0086933Z * Creating docker container (CPUs=2, Memory=4096MB) ...
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:38:14.2410445Z * Preparing Kubernetes v1.27.10 on Docker 24.0.7 ...
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:38:24.6132353Z   - Generating certificates and keys ...
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:38:24.6138345Z   - Booting up control plane ...
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:38:24.6150972Z   - Configuring RBAC rules ...
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:38:24.6182604Z * Configuring bridge CNI (Container Networking Interface) ...
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:38:24.7771548Z   - Using image gcr.io/k8s-minikube/storage-provisioner:v5
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:38:24.7772443Z * Verifying Kubernetes components...
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:38:24.7831253Z   - Using image docker.io/registry:2.8.3
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:38:24.7870500Z   - Using image gcr.io/k8s-minikube/kube-registry-proxy:0.0.5
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:38:25.6947943Z * Verifying registry addon...
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:38:43.7029282Z * Enabled addons: storage-provisioner, default-storageclass, registry
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:38:46.7581736Z 
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:38:46.7590374Z     > gcr.io/k8s-minikube/kicbase...:  0 B [_______________________] ?% ? p/s ?    > gcr.io/k8s-minikube/kicbase...:  1.62 KiB / 453.90 MiB [>_] 0.00% ? p/s ?    > gcr.io/k8s-minikube/kicbase...:  49.75 KiB / 453.90 MiB [>] 0.01% ? p/s ?    > gcr.io/k8s-minikube/kicbase...:  17.15 MiB / 453.90 MiB  3.78% 28.59 MiB     > gcr.io/k8s-minikube/kicbase...:  57.37 MiB / 453.90 MiB  12.64% 28.59 MiB    > gcr.io/k8s-minikube/kicbase...:  97.95 MiB / 453.90 MiB  21.58% 28.59 MiB    > gcr.io/k8s-minikube/kicbase...:  137.81 MiB / 453.90 MiB  30.36% 39.72 Mi    > gcr.io/k8s-minikube/kicbase...:  177.72 MiB / 453.90 MiB  39.15% 39.72 Mi    > gcr.io/k8s-minikube/kicbase...:  217.35 MiB / 453.90 MiB  47.89% 39.72 Mi    > gcr.io/k8s-minikube/kicbase...:  256.96 MiB / 453.90 MiB  56.61% 49.97 Mi    > gcr.io/k8s-minikube/kicbase...:  297.06 MiB / 453.90 MiB  65.45% 49.97 Mi    > gcr.io/k8s-minikube/kicbase...:  336.90 MiB / 453.90 MiB  74.22% 49.97 Mi    > gcr.io/k8s-minikube/kicbase...:  377.41 MiB / 453.90 MiB  83.15% 59.70 Mi    > gcr.io/k8s-minikube/kicbase...:  417.15 MiB / 453.90 MiB  91.90% 59.70 Mi    > gcr.io/k8s-minikube/kicbase...:  453.87 MiB / 453.90 MiB  99.99% 163.14 M! /usr/bin/kubectl is version 1.33.3, which may have incompatibilities with Kubernetes 1.27.10.
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:38:46.7595495Z   - Want kubectl v1.27.10? Try 'minikube kubectl -- get pods -A'
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:38:46.7596180Z * Done! kubectl is now configured to use "minikube" cluster and "default" namespace by default
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:38:46.8398110Z minikube version: v1.32.0commit: 8220a6eb95f0a4d75f7f2d7b14cef975f050512d installed successfully
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:38:46.8618863Z ##[group]Run redhat-actions/openshift-tools-installer@v1
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:38:46.8619172Z with:
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:38:46.8619337Z   source: github
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:38:46.8619507Z   opm: 1.21.0
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:38:46.8619804Z   github_pat: ***
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:38:46.8619998Z   skip_cache: false
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:38:46.8620172Z env:
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:38:46.8620426Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:38:46.8620746Z   MINIKUBE_VERSION: v1.32.0
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:38:46.8620963Z   KUBERNETES_VERSION: v1.27.10
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:38:46.8621168Z   MINIKUBE_MEMORY: 4096
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:38:46.8621459Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.8-9/x64
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:38:46.8621897Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.8-9/x64
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:38:46.8622239Z   MINIKUBE_HOME: /home/runner/work/_temp
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:38:46.8622471Z ##[endgroup]
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:38:47.0223214Z Installing opm matching version "1.21.0"
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:38:47.0242287Z ℹ️ Tools will be installed from "github".
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:38:47.0243682Z 
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:38:47.0244416Z 🔎 Searching for a version of opm satisfying the range "1.21.0" that was input as "1.21.0"
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:38:48.7600711Z Max opm version satisfying 1.21.0 is 1.21.0
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:38:48.7601869Z Download path of opm is https://github.com/operator-framework/operator-registry/releases
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:38:48.9844287Z Current operating system is linux
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:38:48.9847014Z Current architecture is amd64
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:38:48.9848336Z Selecting linux-amd64-opm
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:38:48.9852122Z Using temporary directory for storage
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:38:48.9857745Z 📁 CLIs will be downloaded to /home/runner/work/_temp/openshift-bin
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:38:48.9860814Z Added /home/runner/work/_temp/openshift-bin to PATH
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:38:48.9861291Z Checking the cache for opm v1.21.0...
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:38:49.0646133Z ##[warning]Failed to check cache for opm v1.21.0: Error: Cache service responded with 400
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:38:49.2372894Z ⬇️ Downloading 45.03MB https://github.com/operator-framework/operator-registry/releases/download/v1.21.0/linux-amd64-opm ...
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:38:49.5880745Z Downloaded linux-amd64-opm in 0.3s
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:38:49.5883816Z Download path of opm is https://github.com/operator-framework/operator-registry/releases
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:38:49.7645943Z ⬇️ Downloading hash file https://github.com/operator-framework/operator-registry/releases/download/v1.21.0/checksums.txt
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:38:49.9880315Z sha256 verification of linux-amd64-opm succeeded.
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:38:49.9952099Z opm installed into /home/runner/work/_temp/openshift-bin/opm
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:38:49.9980855Z [command]/home/runner/work/_temp/openshift-bin/opm version
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:38:50.0168670Z Version: version.Version{OpmVersion:"v1.21.0", GitCommit:"9999f796", BuildDate:"2022-03-03T21:23:12Z", GoOs:"linux", GoArch:"amd64"}
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:38:50.0188406Z 💾 Saving opm v1.21.0 into the cache
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:38:50.0318617Z ##[warning]Failed to cache opm v1.21.0: ReserveCacheError: Unable to reserve cache with key opm_v1.21.0_linux_amd64_github, another job may be creating this cache.
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:38:50.0320485Z ✅ Successfully installed opm v1.21.0.
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:38:50.0320691Z 
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:38:50.0320834Z ✅ Successfully installed 1/1 client:
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:38:50.0321085Z   - opm v1.21.0
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:38:50.0335107Z Wrote out installed versions to /home/runner/work/_temp/openshift-bin/openshift-clients-installed.json
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:38:50.0476134Z ##[group]Run sudo snap install yq
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:38:50.0476454Z [36;1msudo snap install yq[0m
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:38:50.0544398Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:38:50.0544969Z env:
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:38:50.0545262Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:38:50.0545628Z   MINIKUBE_VERSION: v1.32.0
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:38:50.0545872Z   KUBERNETES_VERSION: v1.27.10
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:38:50.0546085Z   MINIKUBE_MEMORY: 4096
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:38:50.0546385Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.8-9/x64
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:38:50.0546808Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.8-9/x64
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:38:50.0547320Z   MINIKUBE_HOME: /home/runner/work/_temp
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:38:50.0547558Z ##[endgroup]
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:38:53.9318759Z 2025-08-11T06:38:53Z INFO Waiting for automatic snapd restart...
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:04.7078336Z yq v4.46.1 from Mike Farah (mikefarah) installed
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:04.7130333Z ##[group]Run ./scripts/install-olm.sh
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:04.7130654Z [36;1m./scripts/install-olm.sh[0m
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:04.7171236Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:04.7171551Z env:
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:04.7171809Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:04.7172168Z   MINIKUBE_VERSION: v1.32.0
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:04.7172560Z   KUBERNETES_VERSION: v1.27.10
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:04.7172914Z   MINIKUBE_MEMORY: 4096
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:04.7173234Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.8-9/x64
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:04.7173668Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.8-9/x64
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:04.7174019Z   MINIKUBE_HOME: /home/runner/work/_temp
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:04.7174248Z ##[endgroup]
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:04.7243944Z + mkdir -p /tmp/olm/
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:04.7258474Z + curl -f -L https://github.com/operator-framework/operator-lifecycle-manager/releases/download/v0.26.0/install.sh -o /tmp/olm/install.sh
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:04.7308418Z   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:04.7309048Z                                  Dload  Upload   Total   Spent    Left  Speed
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:04.7309411Z 
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:04.8819658Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:04.8820347Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:04.9143457Z 
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:04.9143963Z 100  1886  100  1886    0     0  10268      0 --:--:-- --:--:-- --:--:-- 10268
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:04.9168755Z + chmod +x /tmp/olm/install.sh
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:04.9181388Z + /tmp/olm/install.sh v0.26.0
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:05.7064683Z customresourcedefinition.apiextensions.k8s.io/catalogsources.operators.coreos.com created
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:05.9474685Z customresourcedefinition.apiextensions.k8s.io/clusterserviceversions.operators.coreos.com created
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:05.9662330Z customresourcedefinition.apiextensions.k8s.io/installplans.operators.coreos.com created
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:05.9784016Z customresourcedefinition.apiextensions.k8s.io/olmconfigs.operators.coreos.com created
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:06.0036651Z customresourcedefinition.apiextensions.k8s.io/operatorconditions.operators.coreos.com created
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:06.0419825Z customresourcedefinition.apiextensions.k8s.io/operatorgroups.operators.coreos.com created
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:06.0691094Z customresourcedefinition.apiextensions.k8s.io/operators.operators.coreos.com created
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:06.1568648Z customresourcedefinition.apiextensions.k8s.io/subscriptions.operators.coreos.com created
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:06.5316634Z customresourcedefinition.apiextensions.k8s.io/catalogsources.operators.coreos.com condition met
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:06.7765883Z customresourcedefinition.apiextensions.k8s.io/clusterserviceversions.operators.coreos.com condition met
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:06.8836956Z customresourcedefinition.apiextensions.k8s.io/installplans.operators.coreos.com condition met
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:06.9890957Z customresourcedefinition.apiextensions.k8s.io/olmconfigs.operators.coreos.com condition met
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:07.1042496Z customresourcedefinition.apiextensions.k8s.io/operatorconditions.operators.coreos.com condition met
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:07.2122965Z customresourcedefinition.apiextensions.k8s.io/operatorgroups.operators.coreos.com condition met
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:07.3170169Z customresourcedefinition.apiextensions.k8s.io/operators.operators.coreos.com condition met
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:07.4562150Z customresourcedefinition.apiextensions.k8s.io/subscriptions.operators.coreos.com condition met
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:07.7932382Z namespace/olm created
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:07.8704550Z namespace/operators created
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:07.9582506Z serviceaccount/olm-operator-serviceaccount created
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:07.9800998Z clusterrole.rbac.authorization.k8s.io/system:controller:operator-lifecycle-manager created
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:07.9970371Z clusterrolebinding.rbac.authorization.k8s.io/olm-operator-binding-olm created
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:08.0234329Z olmconfig.operators.coreos.com/cluster created
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:08.0690393Z deployment.apps/olm-operator created
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:08.1217031Z deployment.apps/catalog-operator created
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:08.1545560Z clusterrole.rbac.authorization.k8s.io/aggregate-olm-edit created
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:08.1745787Z clusterrole.rbac.authorization.k8s.io/aggregate-olm-view created
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:08.1912793Z operatorgroup.operators.coreos.com/global-operators created
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:08.2060059Z operatorgroup.operators.coreos.com/olm-operators created
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:08.2604819Z clusterserviceversion.operators.coreos.com/packageserver created
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:08.2964756Z catalogsource.operators.coreos.com/operatorhubio-catalog created
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:08.4014615Z Waiting for deployment "olm-operator" rollout to finish: 0 of 1 updated replicas are available...
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:13.0209178Z deployment "olm-operator" successfully rolled out
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:13.1548280Z deployment "catalog-operator" successfully rolled out
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:13.3187583Z Package server phase: Installing
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:23.4091067Z Package server phase: Succeeded
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:23.5048061Z deployment "packageserver" successfully rolled out
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:23.5118871Z ##[group]Run actions/download-artifact@v4
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:23.5119142Z with:
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:23.5119313Z   name: keycloak-dist
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:23.5119505Z   path: quarkus/container
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:23.5119712Z   merge-multiple: false
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:23.5119908Z   repository: keycloak/keycloak
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:23.5120114Z   run-id: 16805999597
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:23.5120279Z env:
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:23.5120526Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:23.5120846Z   MINIKUBE_VERSION: v1.32.0
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:23.5121062Z   KUBERNETES_VERSION: v1.27.10
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:23.5121277Z   MINIKUBE_MEMORY: 4096
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:23.5121565Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.8-9/x64
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:23.5121994Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.8-9/x64
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:23.5122334Z   MINIKUBE_HOME: /home/runner/work/_temp
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:23.5122565Z ##[endgroup]
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:23.7052160Z Downloading single artifact
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:23.8332607Z ##[error]Unable to download artifact(s): Artifact not found for name: keycloak-dist
+Test OLM installation	UNKNOWN STEP	        Please ensure that your artifact is not expired and the artifact was uploaded using a compatible version of toolkit/upload-artifact.
+Test OLM installation	UNKNOWN STEP	        For more information, visit the GitHub Artifacts FAQ: https://github.com/actions/toolkit/blob/main/packages/artifact/docs/faq.md
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:23.8443284Z Post job cleanup.
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:23.8483222Z Post job cleanup.
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:24.0246710Z Post job cleanup.
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:24.1191231Z [command]/usr/bin/git version
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:24.1248712Z git version 2.50.1
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:24.1312604Z Temporarily overriding HOME='/home/runner/work/_temp/41c6e8a6-7cf6-4bc0-b8a9-52a381ef4f9a' before making global git config changes
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:24.1313904Z Adding repository directory to the temporary git global config as a safe directory
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:24.1320228Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/keycloak/keycloak
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:24.1354635Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:24.1389460Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:24.1726960Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:24.1759149Z http.https://github.com/.extraheader
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:24.1778458Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:24.1818671Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Test OLM installation	UNKNOWN STEP	2025-08-11T06:39:24.2360837Z Cleaning up orphan processes
+Status Check - Keycloak Operator CI	UNKNOWN STEP	﻿2025-08-11T06:39:31.8323575Z Current runner version: '2.327.1'
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:31.8349217Z ##[group]Runner Image Provisioner
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:31.8350019Z Hosted Compute Agent
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:31.8350540Z Version: 20250711.363
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:31.8351236Z Commit: 6785254374ce925a23743850c1cb91912ce5c14c
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:31.8351894Z Build Date: 2025-07-11T20:04:25Z
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:31.8352507Z ##[endgroup]
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:31.8353085Z ##[group]Operating System
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:31.8353677Z Ubuntu
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:31.8354171Z 24.04.2
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:31.8354640Z LTS
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:31.8355113Z ##[endgroup]
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:31.8355576Z ##[group]Runner Image
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:31.8356178Z Image: ubuntu-24.04
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:31.8356677Z Version: 20250804.2.0
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:31.8357682Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250804.2/images/ubuntu/Ubuntu2404-Readme.md
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:31.8359509Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250804.2
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:31.8360498Z ##[endgroup]
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:31.8362883Z ##[group]GITHUB_TOKEN Permissions
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:31.8365052Z Actions: read
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:31.8365653Z Attestations: read
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:31.8366237Z Checks: read
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:31.8366702Z Contents: read
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:31.8367260Z Deployments: read
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:31.8367753Z Discussions: read
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:31.8368284Z Issues: read
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:31.8369104Z Metadata: read
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:31.8369638Z Models: read
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:31.8370128Z Packages: read
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:31.8370571Z Pages: read
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:31.8371111Z PullRequests: read
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:31.8371644Z RepositoryProjects: read
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:31.8372248Z SecurityEvents: read
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:31.8372890Z Statuses: read
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:31.8373357Z ##[endgroup]
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:31.8375501Z Secret source: None
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:31.8376196Z Prepare workflow directory
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:31.8781110Z Prepare all required actions
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:31.8819115Z Getting action download info
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:32.2031231Z ##[group]Download immutable action package 'actions/checkout@v4'
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:32.2032313Z Version: 4.2.2
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:32.2033383Z Digest: sha256:ccb2698953eaebd21c7bf6268a94f9c26518a7e38e27e0b83c1fe1ad049819b1
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:32.2034555Z Source commit SHA: 11bd71901bbe5b1630ceea73d27597364c9af683
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:32.2035308Z ##[endgroup]
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:32.3679214Z Complete job name: Status Check - Keycloak Operator CI
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:32.4332369Z ##[group]Run actions/checkout@v4
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:32.4333194Z with:
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:32.4333594Z   repository: keycloak/keycloak
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:32.4334242Z   token: ***
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:32.4334632Z   ssh-strict: true
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:32.4335038Z   ssh-user: git
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:32.4335440Z   persist-credentials: true
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:32.4335899Z   clean: true
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:32.4336300Z   sparse-checkout-cone-mode: true
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:32.4336784Z   fetch-depth: 1
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:32.4337186Z   fetch-tags: false
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:32.4337618Z   show-progress: true
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:32.4338033Z   lfs: false
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:32.4338399Z   submodules: false
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:32.4338991Z   set-safe-directory: true
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:32.4339651Z env:
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:32.4340200Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:32.4340856Z   MINIKUBE_VERSION: v1.32.0
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:32.4341330Z   KUBERNETES_VERSION: v1.27.10
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:32.4341834Z   MINIKUBE_MEMORY: 4096
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:32.4342251Z ##[endgroup]
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:32.5408940Z Syncing repository: keycloak/keycloak
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:32.5410725Z ##[group]Getting Git version info
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:32.5411590Z Working directory is '/home/runner/work/keycloak/keycloak'
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:32.5412523Z [command]/usr/bin/git version
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:32.5465692Z git version 2.50.1
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:32.5491433Z ##[endgroup]
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:32.5507383Z Temporarily overriding HOME='/home/runner/work/_temp/ce48d99b-9a48-481d-914d-564ddc84d248' before making global git config changes
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:32.5510359Z Adding repository directory to the temporary git global config as a safe directory
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:32.5514148Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/keycloak/keycloak
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:32.5548316Z Deleting the contents of '/home/runner/work/keycloak/keycloak'
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:32.5552239Z ##[group]Initializing the repository
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:32.5556994Z [command]/usr/bin/git init /home/runner/work/keycloak/keycloak
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:32.5628807Z hint: Using 'master' as the name for the initial branch. This default branch name
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:32.5630316Z hint: is subject to change. To configure the initial branch name to use in all
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:32.5631813Z hint: of your new repositories, which will suppress this warning, call:
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:32.5632494Z hint:
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:32.5633082Z hint: 	git config --global init.defaultBranch <name>
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:32.5634080Z hint:
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:32.5635072Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:32.5636667Z hint: 'development'. The just-created branch can be renamed via this command:
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:32.5638087Z hint:
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:32.5638972Z hint: 	git branch -m <name>
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:32.5639756Z hint:
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:32.5640737Z hint: Disable this message with "git config set advice.defaultBranchName false"
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:32.5642402Z Initialized empty Git repository in /home/runner/work/keycloak/keycloak/.git/
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:32.5646128Z [command]/usr/bin/git remote add origin https://github.com/keycloak/keycloak
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:32.5678875Z ##[endgroup]
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:32.5680073Z ##[group]Disabling automatic garbage collection
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:32.5683729Z [command]/usr/bin/git config --local gc.auto 0
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:32.5713832Z ##[endgroup]
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:32.5715004Z ##[group]Setting up auth
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:32.5721656Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:32.5752778Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:32.6034820Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:32.6063063Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:32.6284768Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:32.6330324Z ##[endgroup]
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:32.6331369Z ##[group]Fetching the repository
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:32.6339174Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +555079beab86c91ef4ad8393b5f0912aed5095b7:refs/remotes/pull/41724/merge
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:34.9788965Z From https://github.com/keycloak/keycloak
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:34.9791271Z  * [new ref]         555079beab86c91ef4ad8393b5f0912aed5095b7 -> pull/41724/merge
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:34.9815038Z ##[endgroup]
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:34.9816190Z ##[group]Determining the checkout info
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:34.9817541Z ##[endgroup]
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:34.9823521Z [command]/usr/bin/git sparse-checkout disable
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:34.9864182Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:34.9892159Z ##[group]Checking out the ref
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:34.9894630Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/41724/merge
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.7289146Z Note: switching to 'refs/remotes/pull/41724/merge'.
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.7290481Z 
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.7290757Z You are in 'detached HEAD' state. You can look around, make experimental
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.7291344Z changes and commit them, and you can discard any commits you make in this
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.7292276Z state without impacting any branches by switching back to a branch.
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.7292607Z 
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.7292831Z If you want to create a new branch to retain commits you create, you may
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.7293322Z do so (now or later) by using -c with the switch command. Example:
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.7293603Z 
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.7293722Z   git switch -c <new-branch-name>
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.7293909Z 
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.7294052Z Or undo this operation with:
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.7294224Z 
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.7294328Z   git switch -
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.7294481Z 
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.7294729Z Turn off this advice by setting config variable advice.detachedHead to false
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.7295052Z 
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.7295427Z HEAD is now at 555079b Merge 4ccb2dc8ff47e795cd52e6f3e70ef131ff274aad into d46f3bc38a43e9358c5b27c3deb2946c790f4140
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.7320077Z ##[endgroup]
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.7357927Z [command]/usr/bin/git log -1 --format=%H
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.7380316Z 555079beab86c91ef4ad8393b5f0912aed5095b7
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.7613188Z Prepare all required actions
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.7683223Z ##[group]Run ./.github/actions/status-check
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.7683556Z with:
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.7684386Z   jobs: {
+Status Check - Keycloak Operator CI	UNKNOWN STEP	  "conditional": {
+Status Check - Keycloak Operator CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak Operator CI	UNKNOWN STEP	    "outputs": {
+Status Check - Keycloak Operator CI	UNKNOWN STEP	      "operator": "true"
+Status Check - Keycloak Operator CI	UNKNOWN STEP	    }
+Status Check - Keycloak Operator CI	UNKNOWN STEP	  },
+Status Check - Keycloak Operator CI	UNKNOWN STEP	  "build": {
+Status Check - Keycloak Operator CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak Operator CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak Operator CI	UNKNOWN STEP	  },
+Status Check - Keycloak Operator CI	UNKNOWN STEP	  "test-local": {
+Status Check - Keycloak Operator CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak Operator CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak Operator CI	UNKNOWN STEP	  },
+Status Check - Keycloak Operator CI	UNKNOWN STEP	  "test-remote": {
+Status Check - Keycloak Operator CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak Operator CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak Operator CI	UNKNOWN STEP	  },
+Status Check - Keycloak Operator CI	UNKNOWN STEP	  "test-olm": {
+Status Check - Keycloak Operator CI	UNKNOWN STEP	    "result": "failure",
+Status Check - Keycloak Operator CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak Operator CI	UNKNOWN STEP	  }
+Status Check - Keycloak Operator CI	UNKNOWN STEP	}
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.7685257Z env:
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.7685560Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.7685946Z   MINIKUBE_VERSION: v1.32.0
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.7686226Z   KUBERNETES_VERSION: v1.27.10
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.7686488Z   MINIKUBE_MEMORY: 4096
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.7686711Z ##[endgroup]
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.7788332Z ##[group]Run JOBS='{
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.7788832Z [36;1mJOBS='{[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.7789141Z [36;1m  "conditional": {[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.7789411Z [36;1m    "result": "success",[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.7789684Z [36;1m    "outputs": {[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.7789931Z [36;1m      "operator": "true"[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.7790193Z [36;1m    }[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.7790397Z [36;1m  },[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.7790608Z [36;1m  "build": {[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.7790834Z [36;1m    "result": "success",[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.7791101Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.7791338Z [36;1m  },[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.7791544Z [36;1m  "test-local": {[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.7791793Z [36;1m    "result": "success",[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.7792039Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.7792349Z [36;1m  },[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.7792557Z [36;1m  "test-remote": {[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.7792812Z [36;1m    "result": "success",[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.7793068Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.7793306Z [36;1m  },[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.7793529Z [36;1m  "test-olm": {[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.7793774Z [36;1m    "result": "failure",[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.7794037Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.7794266Z [36;1m  }[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.7794461Z [36;1m}'[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.7794664Z [36;1m[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.7794879Z [36;1mecho "Job status:"[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.7795258Z [36;1mecho $JOBS | jq -r 'to_entries[] | " - \(.key): \(.value.result)"'[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.7795618Z [36;1m[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.7795893Z [36;1mfor i in $(echo $JOBS | jq -r 'to_entries[] | .value.result'); do[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.7796291Z [36;1m  if [ "$i" != "success" ] && [ "$i" != "skipped" ]; then[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.7796630Z [36;1m    echo ""[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.7796865Z [36;1m    echo "Status check not okay!"[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.7797141Z [36;1m    exit 1[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.7797388Z [36;1m  fi[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.7797583Z [36;1mdone[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.7868316Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.7869063Z env:
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.7869377Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.7869755Z   MINIKUBE_VERSION: v1.32.0
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.7870018Z   KUBERNETES_VERSION: v1.27.10
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.7870346Z   MINIKUBE_MEMORY: 4096
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.7870582Z ##[endgroup]
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.7952045Z Job status:
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.8075166Z  - conditional: success
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.8075600Z  - build: success
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.8075968Z  - test-local: success
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.8076228Z  - test-remote: success
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.8076469Z  - test-olm: failure
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.8113270Z 
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.8113523Z Status check not okay!
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.8126723Z ##[error]Process completed with exit code 1.
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.8242442Z Post job cleanup.
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.9163784Z [command]/usr/bin/git version
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.9199393Z git version 2.50.1
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.9240830Z Temporarily overriding HOME='/home/runner/work/_temp/3c5f4720-4f09-46d1-9369-68f26e252a97' before making global git config changes
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.9241792Z Adding repository directory to the temporary git global config as a safe directory
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.9253531Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/keycloak/keycloak
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.9287763Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.9321495Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.9563384Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.9583946Z http.https://github.com/.extraheader
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.9596180Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:35.9627243Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-11T06:39:36.0033295Z Cleaning up orphan processes
