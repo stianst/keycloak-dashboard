@@ -126,8 +126,12 @@ issues:
   - "16500896650/*" # The hosted runner lost communication with the server. Anything in your workflow that terminates the runner process, starves it for CPU/Memory, or blocks its network access can cause this error.
   - "16593799977/*" # Failed to execute goal org.infinispan.protostream:proto-schema-compatibility-maven-plugin; An error occurred while running protolock: Server returned HTTP response code: 429 for URL
   - "16533981865/*" # IllegalArgument No enum constant org.keycloak.testsuite.pages.AppPage.RequestType.Sign in to test
-  - "16591057766/*" # org.junit.platform.commons.PreconditionViolationException: Could not load class
   - "16746100338/*" # DroneTimeoutException: Drone creation request timed out after 60 seconds
+  - "16888916588/*" # HTTPError: Unexpected HTTP response: 503
+  - "16805999597/*" # Unable to download artifact(s): Artifact not found for name: keycloak-dist
+  - "16935649203/*" # backport
+  - "16927646132/Store IT (mysql)" # Unable to download artifact(s): Artifact not found for name: m2-keycloak.tzts
+  - "16963803786/Account UI E2E" # Upload Server logs; Error: Failed to FinalizeArtifact: Unable to make request: ECONNRESET
 - id: "keycloak-js-adapter-jar"
   description: "Could not extract/download archive: '/home/runner/.m2/repository/com/github/eirslett/node/18.16.0/node-18.16.0-linux-x64.tar.gz'"
   resolution: "ignored"
@@ -416,6 +420,15 @@ issues:
   - "10402131099/*"
   - "13132937632/*"
   - "13620778345/*"
+- id: "mirror.gcr.io-unavailable"
+  description: "mirror.gcr.io service unavailable"
+  resolution: "ignored"
+  resolves:
+      - "16932826383/*"
+      - "16947690379/Migration Tests (24.0.4, postgres)"
+      - "16948260443/*"
+      - "16935252074/*"
+      - "16927646132/Migration Tests (24.0.4, postgres)"
 - id: "docker-pull-glitch"
   description: "Temporary outage/errors pulling images from Docker"
   resolution: "ignored"
@@ -1359,6 +1372,7 @@ issues:
   resolves:
     - "16157381019/*"
     - "16424605710/*"
+    - "16963803786/*" # Only the "Admin UI E2E (chromium)" job, but I couldn't figure out how to specify it properly
 - id: "javascript-ci-41355"
   description: "[Keycloak JavaScript CI] - Admin UI E2E (firefox) - main.spec.ts"
   issue: 41355
@@ -1420,3 +1434,16 @@ issues:
   resolves:
     - "16769981649/*"
     - "16855263900/*"
+- id: "operator-ci-Could-not-load-class-with-name-KeycloakDistConfiguratorTest"
+  description: "https://github.com/keycloak/keycloak/issues/41903"
+  issue: 41903
+  resolves:
+    - "16591057766/*"
+    - "16933708684/*"
+    - "16943887261/*"
+- id: "keycloak-ci-StoreIT-UserSessionRefreshTimePolicyTest-unstable"
+  description: "[Store IT] - UserSessionRefreshTimePolicyTest unstable"
+  issue: 41913
+  resolves:
+    - "16947690379/*"
+    - "16967452704/*"
