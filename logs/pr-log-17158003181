@@ -1,0 +1,536 @@
+Test remote (slow)	UNKNOWN STEP	﻿2025-08-25T12:56:25.4431977Z Current runner version: '2.328.0'
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:25.4455460Z ##[group]Runner Image Provisioner
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:25.4456277Z Hosted Compute Agent
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:25.4456855Z Version: 20250818.377
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:25.4457503Z Commit: 3c593e9f75fe0b87e893bca80d6e12ba089c61fc
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:25.4458245Z Build Date: 2025-08-18T14:52:18Z
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:25.4458825Z ##[endgroup]
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:25.4459451Z ##[group]Operating System
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:25.4460017Z Ubuntu
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:25.4460525Z 24.04.2
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:25.4461056Z LTS
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:25.4461573Z ##[endgroup]
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:25.4462093Z ##[group]Runner Image
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:25.4462796Z Image: ubuntu-24.04
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:25.4463408Z Version: 20250818.1.0
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:25.4464409Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250818.1/images/ubuntu/Ubuntu2404-Readme.md
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:25.4465992Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250818.1
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:25.4466994Z ##[endgroup]
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:25.4468096Z ##[group]GITHUB_TOKEN Permissions
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:25.4469911Z Contents: read
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:25.4470436Z Metadata: read
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:25.4471078Z ##[endgroup]
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:25.4473370Z Secret source: None
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:25.4474119Z Prepare workflow directory
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:25.4874480Z Prepare all required actions
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:25.4912535Z Getting action download info
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:25.9017243Z Download action repository 'actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683' (SHA:11bd71901bbe5b1630ceea73d27597364c9af683)
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:26.1398151Z Download action repository 'manusa/actions-setup-minikube@b589f2d61bf96695c546929c72b38563e856059d' (SHA:b589f2d61bf96695c546929c72b38563e856059d)
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:27.3233229Z Download action repository 'actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093' (SHA:d3f86a106a0bac45b974a628896c90dbdf5c8093)
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:28.3153998Z Complete job name: Test remote (slow)
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:28.3949043Z ##[group]Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:28.3950693Z with:
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:28.3951405Z   repository: keycloak/keycloak
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:28.3952717Z   token: ***
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:28.3953406Z   ssh-strict: true
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:28.3954111Z   ssh-user: git
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:28.3954835Z   persist-credentials: true
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:28.3955655Z   clean: true
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:28.3956390Z   sparse-checkout-cone-mode: true
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:28.3957281Z   fetch-depth: 1
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:28.3957981Z   fetch-tags: false
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:28.3958708Z   show-progress: true
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:28.3959437Z   lfs: false
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:28.3960109Z   submodules: false
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:28.3960874Z   set-safe-directory: true
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:28.3961992Z env:
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:28.3963178Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:28.3964460Z   MINIKUBE_VERSION: v1.32.0
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:28.3965404Z   KUBERNETES_VERSION: v1.27.10
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:28.3966296Z   MINIKUBE_MEMORY: 4096
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:28.3967054Z ##[endgroup]
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:28.5054146Z Syncing repository: keycloak/keycloak
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:28.5057990Z ##[group]Getting Git version info
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:28.5059753Z Working directory is '/home/runner/work/keycloak/keycloak'
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:28.5061781Z [command]/usr/bin/git version
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:28.5148768Z git version 2.51.0
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:28.5187660Z ##[endgroup]
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:28.5206636Z Temporarily overriding HOME='/home/runner/work/_temp/5589bb75-4539-4d4b-a7de-938c86877e6c' before making global git config changes
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:28.5209596Z Adding repository directory to the temporary git global config as a safe directory
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:28.5213478Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/keycloak/keycloak
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:28.5256307Z Deleting the contents of '/home/runner/work/keycloak/keycloak'
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:28.5260675Z ##[group]Initializing the repository
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:28.5266539Z [command]/usr/bin/git init /home/runner/work/keycloak/keycloak
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:28.5394359Z hint: Using 'master' as the name for the initial branch. This default branch name
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:28.5397752Z hint: is subject to change. To configure the initial branch name to use in all
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:28.5400853Z hint: of your new repositories, which will suppress this warning, call:
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:28.5403343Z hint:
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:28.5404799Z hint: 	git config --global init.defaultBranch <name>
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:28.5406679Z hint:
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:28.5408506Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:28.5411706Z hint: 'development'. The just-created branch can be renamed via this command:
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:28.5414398Z hint:
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:28.5415659Z hint: 	git branch -m <name>
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:28.5417116Z hint:
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:28.5419129Z hint: Disable this message with "git config set advice.defaultBranchName false"
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:28.5422765Z Initialized empty Git repository in /home/runner/work/keycloak/keycloak/.git/
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:28.5428060Z [command]/usr/bin/git remote add origin https://github.com/keycloak/keycloak
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:28.5447719Z ##[endgroup]
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:28.5450030Z ##[group]Disabling automatic garbage collection
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:28.5451923Z [command]/usr/bin/git config --local gc.auto 0
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:28.5485618Z ##[endgroup]
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:28.5487217Z ##[group]Setting up auth
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:28.5495347Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:28.5529761Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:28.6047942Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:28.6076984Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:28.6297602Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:28.6331839Z ##[endgroup]
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:28.6335257Z ##[group]Fetching the repository
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:28.6343962Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +892f1bf1c180417e7bd25c299de412865275713a:refs/remotes/pull/40373/merge
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:30.2928759Z From https://github.com/keycloak/keycloak
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:30.2929315Z  * [new ref]         892f1bf1c180417e7bd25c299de412865275713a -> pull/40373/merge
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:30.2959634Z ##[endgroup]
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:30.2960292Z ##[group]Determining the checkout info
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:30.2962946Z ##[endgroup]
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:30.2967506Z [command]/usr/bin/git sparse-checkout disable
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:30.3006488Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:30.3032232Z ##[group]Checking out the ref
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:30.3035689Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/40373/merge
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:31.0992729Z Note: switching to 'refs/remotes/pull/40373/merge'.
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:31.0993469Z 
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:31.0993857Z You are in 'detached HEAD' state. You can look around, make experimental
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:31.0994843Z changes and commit them, and you can discard any commits you make in this
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:31.0996455Z state without impacting any branches by switching back to a branch.
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:31.0997079Z 
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:31.0997492Z If you want to create a new branch to retain commits you create, you may
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:31.0998468Z do so (now or later) by using -c with the switch command. Example:
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:31.0999059Z 
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:31.0999479Z   git switch -c <new-branch-name>
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:31.1000247Z 
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:31.1000489Z Or undo this operation with:
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:31.1000832Z 
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:31.1001083Z   git switch -
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:31.1001544Z 
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:31.1002094Z Turn off this advice by setting config variable advice.detachedHead to false
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:31.1003022Z 
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:31.1003701Z HEAD is now at 892f1bf Merge fba182f14df7c0356e0ddd788e1bbb697b4a27a0 into 61e488bbf02c408f1f3a1f90724acb674202cdd8
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:31.1027452Z ##[endgroup]
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:31.1071151Z [command]/usr/bin/git log -1 --format=%H
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:31.1094636Z 892f1bf1c180417e7bd25c299de412865275713a
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:31.1282097Z ##[group]Run echo "version_remote=0.0.1-${GITHUB_SHA::6}" >> $GITHUB_ENV
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:31.1283028Z [36;1mecho "version_remote=0.0.1-${GITHUB_SHA::6}" >> $GITHUB_ENV[0m
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:31.1358167Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:31.1358584Z env:
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:31.1358949Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:31.1359401Z   MINIKUBE_VERSION: v1.32.0
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:31.1359749Z   KUBERNETES_VERSION: v1.27.10
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:31.1360047Z   MINIKUBE_MEMORY: 4096
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:31.1360397Z ##[endgroup]
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:31.1609531Z Prepare all required actions
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:31.1609978Z Getting action download info
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:31.3250731Z Download action repository 'actions/setup-java@c5195efecf7bdfc987ee8bae7a71cb8b11521c00' (SHA:c5195efecf7bdfc987ee8bae7a71cb8b11521c00)
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:32.2592642Z ##[group]Run ./.github/actions/java-setup
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:32.2592912Z with:
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:32.2593079Z   distribution: temurin
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:32.2593277Z   java-version: 21
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:32.2593439Z env:
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:32.2593695Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:32.2594018Z   MINIKUBE_VERSION: v1.32.0
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:32.2594238Z   KUBERNETES_VERSION: v1.27.10
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:32.2594444Z   MINIKUBE_MEMORY: 4096
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:32.2594663Z   version_remote: 0.0.1-892f1b
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:32.2594853Z ##[endgroup]
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:32.2730757Z ##[group]Run actions/setup-java@c5195efecf7bdfc987ee8bae7a71cb8b11521c00
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:32.2731142Z with:
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:32.2731317Z   distribution: temurin
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:32.2731522Z   java-version: 21
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:32.2731701Z   java-package: jdk
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:32.2731891Z   check-latest: false
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:32.2732071Z   server-id: github
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:32.2732260Z   server-username: GITHUB_ACTOR
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:32.2732782Z   server-password: GITHUB_TOKEN
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:32.2733021Z   overwrite-settings: true
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:32.2733230Z   job-status: success
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:32.2733541Z   token: ***
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:32.2733710Z env:
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:32.2733956Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:32.2734290Z   MINIKUBE_VERSION: v1.32.0
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:32.2734504Z   KUBERNETES_VERSION: v1.27.10
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:32.2734736Z   MINIKUBE_MEMORY: 4096
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:32.2734931Z   version_remote: 0.0.1-892f1b
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:32.2735130Z ##[endgroup]
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:32.4646694Z ##[group]Installed distributions
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:32.4872089Z Resolved Java 21.0.8+9 from tool-cache
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:32.4873257Z Setting Java 21.0.8+9 as the default
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:32.4885551Z Creating toolchains.xml for JDK version 21 from temurin
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:32.4960720Z Writing to /home/runner/.m2/toolchains.xml
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:32.4961778Z 
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:32.4962005Z Java configuration:
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:32.4962563Z   Distribution: temurin
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:32.4962935Z   Version: 21.0.8+9
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:32.4963548Z   Path: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.8-9/x64
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:32.4964044Z 
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:32.4965110Z ##[endgroup]
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:32.4979885Z Creating settings.xml with server-id: github
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:32.4985731Z Writing to /home/runner/.m2/settings.xml
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:32.5134119Z ##[group]Run manusa/actions-setup-minikube@b589f2d61bf96695c546929c72b38563e856059d
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:32.5134687Z with:
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:32.5134863Z   minikube version: v1.32.0
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:32.5135095Z   kubernetes version: v1.27.10
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:32.5135527Z   github token: ***
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:32.5135708Z   driver: docker
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:32.5135983Z   start args: --addons=ingress --memory=4096 --cni cilium --cpus=max
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:32.5136285Z env:
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:32.5136537Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:32.5136861Z   MINIKUBE_VERSION: v1.32.0
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:32.5137083Z   KUBERNETES_VERSION: v1.27.10
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:32.5137304Z   MINIKUBE_MEMORY: 4096
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:32.5137502Z   version_remote: 0.0.1-892f1b
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:32.5137815Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.8-9/x64
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:32.5138276Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.8-9/x64
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:32.5138604Z ##[endgroup]
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:32.6306029Z Loading input variables
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:32.6308419Z Updating Environment configuration to support Minikube
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:32.6514513Z 
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:32.6515031Z WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:32.6515516Z 
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:32.7731689Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:32.8227351Z Hit:2 http://azure.archive.ubuntu.com/ubuntu noble InRelease
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:32.8231715Z Hit:6 https://packages.microsoft.com/repos/azure-cli noble InRelease
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:32.8241307Z Get:7 https://packages.microsoft.com/ubuntu/24.04/prod noble InRelease [3600 B]
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:32.8283930Z Get:3 http://azure.archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:32.8341705Z Get:4 http://azure.archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:32.8391191Z Get:5 http://azure.archive.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:33.0723875Z Get:8 https://packages.microsoft.com/ubuntu/24.04/prod noble/main arm64 Packages [33.3 kB]
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:33.0901712Z Get:9 https://packages.microsoft.com/ubuntu/24.04/prod noble/main armhf Packages [9870 B]
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:33.0969298Z Get:10 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1352 kB]
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:33.1048357Z Get:11 http://azure.archive.ubuntu.com/ubuntu noble-updates/main Translation-en [269 kB]
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:33.1049620Z Get:20 https://packages.microsoft.com/ubuntu/24.04/prod noble/main amd64 Packages [49.2 kB]
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:33.1076351Z Get:12 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 Components [175 kB]
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:33.1106023Z Get:13 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [1123 kB]
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:33.1178208Z Get:14 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe Translation-en [288 kB]
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:33.1209890Z Get:15 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Components [377 kB]
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:33.1238576Z Get:16 http://azure.archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [1731 kB]
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:33.1343898Z Get:17 http://azure.archive.ubuntu.com/ubuntu noble-updates/restricted Translation-en [384 kB]
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:33.1375111Z Get:18 http://azure.archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Components [212 B]
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:33.1386680Z Get:19 http://azure.archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Components [940 B]
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:33.2034101Z Get:21 http://azure.archive.ubuntu.com/ubuntu noble-backports/main amd64 Components [7088 B]
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:33.2046181Z Get:22 http://azure.archive.ubuntu.com/ubuntu noble-backports/universe amd64 Components [19.2 kB]
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:33.2056897Z Get:23 http://azure.archive.ubuntu.com/ubuntu noble-backports/restricted amd64 Components [216 B]
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:33.2066413Z Get:24 http://azure.archive.ubuntu.com/ubuntu noble-backports/multiverse amd64 Components [212 B]
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:33.2135093Z Get:25 http://azure.archive.ubuntu.com/ubuntu noble-security/main amd64 Packages [1083 kB]
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:33.2201526Z Get:26 http://azure.archive.ubuntu.com/ubuntu noble-security/main Translation-en [187 kB]
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:33.2222107Z Get:27 http://azure.archive.ubuntu.com/ubuntu noble-security/main amd64 Components [21.6 kB]
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:33.2232712Z Get:28 http://azure.archive.ubuntu.com/ubuntu noble-security/universe amd64 Packages [881 kB]
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:33.2285540Z Get:29 http://azure.archive.ubuntu.com/ubuntu noble-security/universe Translation-en [195 kB]
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:33.2308702Z Get:30 http://azure.archive.ubuntu.com/ubuntu noble-security/universe amd64 Components [52.3 kB]
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:33.2321910Z Get:31 http://azure.archive.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [1631 kB]
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:33.2409053Z Get:32 http://azure.archive.ubuntu.com/ubuntu noble-security/restricted Translation-en [361 kB]
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:33.2435997Z Get:33 http://azure.archive.ubuntu.com/ubuntu noble-security/restricted amd64 Components [212 B]
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:33.2444007Z Get:34 http://azure.archive.ubuntu.com/ubuntu noble-security/multiverse amd64 Components [212 B]
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:39.4339444Z Fetched 10.6 MB in 1s (7554 kB/s)
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:40.1227273Z Reading package lists...
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:40.2668245Z Building dependency tree...
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:40.2677096Z Reading state information...
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:40.2828897Z 25 packages can be upgraded. Run 'apt list --upgradable' to see them.
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:40.3160477Z Reading package lists...
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:40.4689870Z Building dependency tree...
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:40.4697169Z Reading state information...
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:40.6438550Z The following NEW packages will be installed:
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:40.6444647Z   conntrack
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:40.6609856Z 0 upgraded, 1 newly installed, 0 to remove and 25 not upgraded.
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:40.6610504Z Need to get 37.9 kB of archives.
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:40.6611075Z After this operation, 119 kB of additional disk space will be used.
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:40.6611563Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:40.7408699Z Get:2 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 conntrack amd64 1:1.4.8-1ubuntu1 [37.9 kB]
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:40.9986885Z Fetched 37.9 kB in 0s (416 kB/s)
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:41.0336948Z Selecting previously unselected package conntrack.
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:41.1463755Z (Reading database ... 
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:41.1464321Z (Reading database ... 5%
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:41.1464814Z (Reading database ... 10%
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:41.1465183Z (Reading database ... 15%
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:41.1465524Z (Reading database ... 20%
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:41.1465852Z (Reading database ... 25%
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:41.1466189Z (Reading database ... 30%
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:41.1466407Z (Reading database ... 35%
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:41.1466608Z (Reading database ... 40%
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:41.1466830Z (Reading database ... 45%
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:41.1467029Z (Reading database ... 50%
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:41.2516600Z (Reading database ... 55%
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:41.7713946Z (Reading database ... 60%
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:42.3029361Z (Reading database ... 65%
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:42.8333694Z (Reading database ... 70%
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:43.3683722Z (Reading database ... 75%
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:43.9132120Z (Reading database ... 80%
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:44.5060517Z (Reading database ... 85%
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:45.1213627Z (Reading database ... 90%
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:45.7500711Z (Reading database ... 95%
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:45.7501275Z (Reading database ... 100%
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:45.7504168Z (Reading database ... 219830 files and directories currently installed.)
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:45.7547640Z Preparing to unpack .../conntrack_1%3a1.4.8-1ubuntu1_amd64.deb ...
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:45.7578715Z Unpacking conntrack (1:1.4.8-1ubuntu1) ...
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:45.8204885Z Setting up conntrack (1:1.4.8-1ubuntu1) ...
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:45.8241139Z Processing triggers for man-db (2.12.0-4build2) ...
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:51.9733690Z 
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:51.9734580Z Running kernel seems to be up-to-date.
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:51.9734901Z 
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:51.9735019Z Restarting services...
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:51.9807713Z 
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:51.9808152Z Service restarts being deferred:
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:51.9811454Z  systemctl restart hosted-compute-agent.service
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:51.9811813Z 
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:51.9812128Z No containers need to be restarted.
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:51.9812637Z 
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:51.9812841Z No user sessions are running outdated binaries.
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:51.9813155Z 
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:51.9813456Z No VM guests are running outdated hypervisor (qemu) binaries on this host.
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:52.8400597Z fs.protected_regular = 0
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:52.8411303Z Waiting for Docker to be ready
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:53.9297071Z 28.0.4 - 28.0.4
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:53.9316768Z Docker daemon is ready
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:53.9321162Z Downloading Minikube  v1.32.0
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:54.2853422Z Downloading from: https://github.com/kubernetes/minikube/releases/download/v1.32.0/minikube-linux-amd64
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:54.5430736Z read ECONNRESET
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:56:54.5431054Z Waiting 11 seconds before trying again
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:57:05.7271443Z read ECONNRESET
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:57:05.7271913Z Waiting 10 seconds before trying again
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:57:15.9401651Z Error: read ECONNRESET
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:57:15.9402239Z     at TLSWrap.onStreamRead (node:internal/stream_base_commons:218:20) {
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:57:15.9402993Z   errno: -104,
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:57:15.9403218Z   code: 'ECONNRESET',
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:57:15.9403443Z   syscall: 'read'
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:57:15.9403818Z }
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:57:15.9421851Z ##[error]read ECONNRESET
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:57:15.9429740Z ##[error]read ECONNRESET
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:57:15.9523148Z Post job cleanup.
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:57:15.9591983Z Post job cleanup.
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:57:16.1293083Z Post job cleanup.
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:57:16.2314901Z [command]/usr/bin/git version
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:57:16.2354916Z git version 2.51.0
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:57:16.2406067Z Temporarily overriding HOME='/home/runner/work/_temp/f992f7f3-5b10-49d8-976b-6e4c78003a63' before making global git config changes
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:57:16.2407395Z Adding repository directory to the temporary git global config as a safe directory
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:57:16.2412094Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/keycloak/keycloak
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:57:16.2448033Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:57:16.2488128Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:57:16.2740948Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:57:16.2762011Z http.https://github.com/.extraheader
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:57:16.2774729Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:57:16.2805253Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Test remote (slow)	UNKNOWN STEP	2025-08-25T12:57:16.3148449Z Cleaning up orphan processes
+Status Check - Keycloak Operator CI	UNKNOWN STEP	﻿2025-08-25T13:07:01.7095021Z Current runner version: '2.328.0'
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:01.7118700Z ##[group]Runner Image Provisioner
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:01.7119654Z Hosted Compute Agent
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:01.7120233Z Version: 20250821.380
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:01.7120921Z Commit: 438d12cb4fe092871db9867344e3bc0bc5319035
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:01.7121630Z Build Date: 2025-08-21T20:49:43Z
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:01.7122218Z ##[endgroup]
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:01.7122819Z ##[group]Operating System
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:01.7123398Z Ubuntu
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:01.7123853Z 24.04.2
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:01.7124440Z LTS
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:01.7124871Z ##[endgroup]
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:01.7125351Z ##[group]Runner Image
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:01.7125920Z Image: ubuntu-24.04
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:01.7126485Z Version: 20250818.1.0
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:01.7127503Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250818.1/images/ubuntu/Ubuntu2404-Readme.md
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:01.7129270Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250818.1
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:01.7130273Z ##[endgroup]
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:01.7131399Z ##[group]GITHUB_TOKEN Permissions
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:01.7133148Z Contents: read
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:01.7133827Z Metadata: read
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:01.7134303Z ##[endgroup]
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:01.7136251Z Secret source: None
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:01.7137005Z Prepare workflow directory
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:01.7524946Z Prepare all required actions
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:01.7562613Z Getting action download info
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:02.0245844Z Download action repository 'actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683' (SHA:11bd71901bbe5b1630ceea73d27597364c9af683)
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:02.1748141Z Complete job name: Status Check - Keycloak Operator CI
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:02.2508976Z ##[group]Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:02.2510362Z with:
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:02.2510778Z   repository: keycloak/keycloak
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:02.2511453Z   token: ***
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:02.2511882Z   ssh-strict: true
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:02.2512288Z   ssh-user: git
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:02.2512713Z   persist-credentials: true
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:02.2513174Z   clean: true
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:02.2513592Z   sparse-checkout-cone-mode: true
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:02.2514084Z   fetch-depth: 1
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:02.2514474Z   fetch-tags: false
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:02.2514869Z   show-progress: true
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:02.2515276Z   lfs: false
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:02.2515644Z   submodules: false
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:02.2516063Z   set-safe-directory: true
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:02.2516691Z env:
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:02.2517242Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:02.2517893Z   MINIKUBE_VERSION: v1.32.0
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:02.2518425Z   KUBERNETES_VERSION: v1.27.10
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:02.2518887Z   MINIKUBE_MEMORY: 4096
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:02.2519538Z ##[endgroup]
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:02.3592126Z Syncing repository: keycloak/keycloak
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:02.3593882Z ##[group]Getting Git version info
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:02.3594604Z Working directory is '/home/runner/work/keycloak/keycloak'
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:02.3595637Z [command]/usr/bin/git version
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:02.3689213Z git version 2.51.0
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:02.3715186Z ##[endgroup]
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:02.3729540Z Temporarily overriding HOME='/home/runner/work/_temp/3554f336-29be-48ca-a158-9320785a95a9' before making global git config changes
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:02.3730935Z Adding repository directory to the temporary git global config as a safe directory
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:02.3734656Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/keycloak/keycloak
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:02.3773672Z Deleting the contents of '/home/runner/work/keycloak/keycloak'
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:02.3777164Z ##[group]Initializing the repository
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:02.3781242Z [command]/usr/bin/git init /home/runner/work/keycloak/keycloak
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:02.3859017Z hint: Using 'master' as the name for the initial branch. This default branch name
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:02.3860672Z hint: is subject to change. To configure the initial branch name to use in all
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:02.3861987Z hint: of your new repositories, which will suppress this warning, call:
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:02.3863040Z hint:
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:02.3863617Z hint: 	git config --global init.defaultBranch <name>
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:02.3864530Z hint:
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:02.3865385Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:02.3866786Z hint: 'development'. The just-created branch can be renamed via this command:
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:02.3867667Z hint:
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:02.3868054Z hint: 	git branch -m <name>
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:02.3868502Z hint:
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:02.3869432Z hint: Disable this message with "git config set advice.defaultBranchName false"
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:02.3870627Z Initialized empty Git repository in /home/runner/work/keycloak/keycloak/.git/
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:02.3875430Z [command]/usr/bin/git remote add origin https://github.com/keycloak/keycloak
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:02.3912914Z ##[endgroup]
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:02.3913653Z ##[group]Disabling automatic garbage collection
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:02.3916839Z [command]/usr/bin/git config --local gc.auto 0
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:02.3944677Z ##[endgroup]
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:02.3945375Z ##[group]Setting up auth
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:02.3951602Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:02.3980575Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:02.4315761Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:02.4345931Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:02.4564215Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:02.4810623Z ##[endgroup]
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:02.4812456Z ##[group]Fetching the repository
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:02.4822259Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +892f1bf1c180417e7bd25c299de412865275713a:refs/remotes/pull/40373/merge
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:05.5983619Z From https://github.com/keycloak/keycloak
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:05.5985833Z  * [new ref]         892f1bf1c180417e7bd25c299de412865275713a -> pull/40373/merge
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:05.6018819Z ##[endgroup]
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:05.6020933Z ##[group]Determining the checkout info
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:05.6022943Z ##[endgroup]
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:05.6027047Z [command]/usr/bin/git sparse-checkout disable
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:05.6068840Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:05.6097808Z ##[group]Checking out the ref
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:05.6101722Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/40373/merge
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4136788Z Note: switching to 'refs/remotes/pull/40373/merge'.
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4138336Z 
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4138808Z You are in 'detached HEAD' state. You can look around, make experimental
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4140157Z changes and commit them, and you can discard any commits you make in this
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4140909Z state without impacting any branches by switching back to a branch.
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4141224Z 
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4141442Z If you want to create a new branch to retain commits you create, you may
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4141916Z do so (now or later) by using -c with the switch command. Example:
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4142181Z 
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4142303Z   git switch -c <new-branch-name>
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4142511Z 
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4142654Z Or undo this operation with:
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4142832Z 
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4142940Z   git switch -
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4143092Z 
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4143356Z Turn off this advice by setting config variable advice.detachedHead to false
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4143678Z 
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4144055Z HEAD is now at 892f1bf Merge fba182f14df7c0356e0ddd788e1bbb697b4a27a0 into 61e488bbf02c408f1f3a1f90724acb674202cdd8
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4170062Z ##[endgroup]
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4207468Z [command]/usr/bin/git log -1 --format=%H
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4229059Z 892f1bf1c180417e7bd25c299de412865275713a
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4465123Z Prepare all required actions
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4534720Z ##[group]Run ./.github/actions/status-check
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4535042Z with:
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4536043Z   jobs: {
+Status Check - Keycloak Operator CI	UNKNOWN STEP	  "conditional": {
+Status Check - Keycloak Operator CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak Operator CI	UNKNOWN STEP	    "outputs": {
+Status Check - Keycloak Operator CI	UNKNOWN STEP	      "operator": "true"
+Status Check - Keycloak Operator CI	UNKNOWN STEP	    }
+Status Check - Keycloak Operator CI	UNKNOWN STEP	  },
+Status Check - Keycloak Operator CI	UNKNOWN STEP	  "build": {
+Status Check - Keycloak Operator CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak Operator CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak Operator CI	UNKNOWN STEP	  },
+Status Check - Keycloak Operator CI	UNKNOWN STEP	  "test-local-apiserver": {
+Status Check - Keycloak Operator CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak Operator CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak Operator CI	UNKNOWN STEP	  },
+Status Check - Keycloak Operator CI	UNKNOWN STEP	  "test-remote": {
+Status Check - Keycloak Operator CI	UNKNOWN STEP	    "result": "failure",
+Status Check - Keycloak Operator CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak Operator CI	UNKNOWN STEP	  },
+Status Check - Keycloak Operator CI	UNKNOWN STEP	  "test-olm": {
+Status Check - Keycloak Operator CI	UNKNOWN STEP	    "result": "success",
+Status Check - Keycloak Operator CI	UNKNOWN STEP	    "outputs": {}
+Status Check - Keycloak Operator CI	UNKNOWN STEP	  }
+Status Check - Keycloak Operator CI	UNKNOWN STEP	}
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4536979Z env:
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4537302Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4537710Z   MINIKUBE_VERSION: v1.32.0
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4538032Z   KUBERNETES_VERSION: v1.27.10
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4538301Z   MINIKUBE_MEMORY: 4096
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4538525Z ##[endgroup]
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4640262Z ##[group]Run JOBS='{
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4640597Z [36;1mJOBS='{[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4640965Z [36;1m  "conditional": {[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4641240Z [36;1m    "result": "success",[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4641518Z [36;1m    "outputs": {[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4641765Z [36;1m      "operator": "true"[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4642026Z [36;1m    }[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4642224Z [36;1m  },[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4642432Z [36;1m  "build": {[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4642658Z [36;1m    "result": "success",[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4642915Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4643152Z [36;1m  },[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4643371Z [36;1m  "test-local-apiserver": {[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4643643Z [36;1m    "result": "success",[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4643889Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4644128Z [36;1m  },[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4644332Z [36;1m  "test-remote": {[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4644606Z [36;1m    "result": "failure",[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4644845Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4645074Z [36;1m  },[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4645285Z [36;1m  "test-olm": {[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4645516Z [36;1m    "result": "success",[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4645768Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4645988Z [36;1m  }[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4646203Z [36;1m}'[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4646397Z [36;1m[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4646604Z [36;1mecho "Job status:"[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4646961Z [36;1mecho $JOBS | jq -r 'to_entries[] | " - \(.key): \(.value.result)"'[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4647307Z [36;1m[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4647572Z [36;1mfor i in $(echo $JOBS | jq -r 'to_entries[] | .value.result'); do[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4647965Z [36;1m  if [ "$i" != "success" ] && [ "$i" != "skipped" ]; then[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4648291Z [36;1m    echo ""[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4648535Z [36;1m    echo "Status check not okay!"[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4648796Z [36;1m    exit 1[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4649003Z [36;1m  fi[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4649323Z [36;1mdone[0m
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4724276Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4724675Z env:
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4724976Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4725359Z   MINIKUBE_VERSION: v1.32.0
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4725616Z   KUBERNETES_VERSION: v1.27.10
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4725876Z   MINIKUBE_MEMORY: 4096
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4726104Z ##[endgroup]
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4802553Z Job status:
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4844739Z  - conditional: success
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4845212Z  - build: success
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4845621Z  - test-local-apiserver: success
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4845930Z  - test-remote: failure
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4846172Z  - test-olm: success
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4878521Z 
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4879035Z Status check not okay!
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.4891873Z ##[error]Process completed with exit code 1.
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.5010735Z Post job cleanup.
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.5937967Z [command]/usr/bin/git version
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.5973513Z git version 2.51.0
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.6023790Z Temporarily overriding HOME='/home/runner/work/_temp/dde4b2d3-30f2-4bd8-b56e-2ed857c90bf5' before making global git config changes
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.6025334Z Adding repository directory to the temporary git global config as a safe directory
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.6030002Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/keycloak/keycloak
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.6064365Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.6096034Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.6340289Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.6360415Z http.https://github.com/.extraheader
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.6373271Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.6404533Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Status Check - Keycloak Operator CI	UNKNOWN STEP	2025-08-25T13:07:06.6812552Z Cleaning up orphan processes
