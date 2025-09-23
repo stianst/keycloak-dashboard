@@ -3,7 +3,6 @@ package org.keycloak.dashboard.gh;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -34,11 +33,11 @@ public class GHWorkflowRuns {
 
     public static GHWorkflowRuns combine(List<GHWorkflowRuns> runs) {
         GHWorkflowRuns combined = new GHWorkflowRuns();
-        combined.setTotalCount(runs.get(0).getTotalCount());
         combined.setWorkflowRuns(new LinkedList<>());
         for (GHWorkflowRuns r : runs) {
             combined.getWorkflowRuns().addAll(r.getWorkflowRuns());
         }
+        combined.setTotalCount(combined.getWorkflowRuns().size());
         return combined;
     }
 

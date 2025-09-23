@@ -61,8 +61,12 @@ public class DateUtil {
         return DATE_STRING_FORMATTER.format(LocalDateTime.now().minusDays(days));
     }
 
-    public static Date fromJson(String date) throws ParseException {
-        return JSON_DATE_FORMAT.parse(date);
+    public static Date fromJson(String date) {
+        try {
+            return JSON_DATE_FORMAT.parse(date);
+        } catch (ParseException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public static String monthString(Date date) {
