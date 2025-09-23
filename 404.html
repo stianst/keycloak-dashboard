@@ -11,8 +11,10 @@
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         var newLocation = "https://keycloak.org" + window.location.pathname.replace("/keycloak-dashboard/", "/dashboard/");
-        document.getElementById("redirectlink").href=newLocation
-        //window.location.replace(newLocation);
+        var redirectLink = document.getElementById("redirectlink");
+        redirectLink.href=newLocation;
+        redirectLink.innerHTML=newLocation;
+        window.location.replace(newLocation);
     });
 </script>
 
