@@ -10,7 +10,9 @@
 
 <script>
     document.addEventListener("DOMContentLoaded", function() {
-        window.location.replace("https://keycloak.org" + window.location.pathname.replace("/keycloak-dashboard/", "/dashboard/"));
+        var newLocation = "https://keycloak.org" + window.location.pathname.replace("/keycloak-dashboard/", "/dashboard/");
+        document.getElementById("redirectlink").href=newLocation
+        //window.location.replace(newLocation);
     });
 </script>
 
