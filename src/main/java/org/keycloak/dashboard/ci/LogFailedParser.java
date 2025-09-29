@@ -150,6 +150,12 @@ public class LogFailedParser {
         String attempt = header.length > 3 ? header[3] : null;
         failedRun.setAttempt(attempt);
 
+        String runConclusion = header.length > 4 ? header[4] : null;
+
+        if (JobConclusion.CANCELLED.name().equalsIgnoreCase(runConclusion)) {
+            return;
+        }
+
         for (String l = br.readLine(); l != null; l = br.readLine()) {
             String[] split = l.split(": ");
             String name = split[0];
