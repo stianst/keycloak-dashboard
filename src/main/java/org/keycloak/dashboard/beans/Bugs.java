@@ -75,7 +75,7 @@ public class Bugs {
         stats.add(BugStat.global("Triage Overdue")
                 .issues(filteredIssues.clone().openBug().triage(true).missingInformation(false).createdBefore(DateUtil.minusdays(Config.getInt("bugs.TriageOverdue.days")))));
         stats.add(BugStat.global("Weakness")
-                .issues(filteredIssues.clone().openBug().label("kind/weakness")));
+                .issues(filteredIssues.clone().openBug().label("area/weakness")));
         stats.add(BugStat.global("Blocker")
                 .issues(filteredIssues.clone().openBug().priority("blocker")));
         stats.add(BugStat.global("Blocker Overdue")
