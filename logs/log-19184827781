@@ -1,0 +1,267 @@
+AuroraDB IT	UNKNOWN STEP	﻿2025-11-08T00:19:47.7003699Z Current runner version: '2.329.0'
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:47.7036374Z ##[group]Runner Image Provisioner
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:47.7037603Z Hosted Compute Agent
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:47.7038528Z Version: 20251016.436
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:47.7039666Z Commit: 8ab8ac8bfd662a3739dab9fe09456aba92132568
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:47.7040914Z Build Date: 2025-10-15T20:44:12Z
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:47.7042109Z ##[endgroup]
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:47.7043261Z ##[group]Operating System
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:47.7044304Z Ubuntu
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:47.7045261Z 24.04.3
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:47.7045991Z LTS
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:47.7046762Z ##[endgroup]
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:47.7047693Z ##[group]Runner Image
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:47.7048593Z Image: ubuntu-24.04
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:47.7049400Z Version: 20251030.96.2
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:47.7051444Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20251030.96/images/ubuntu/Ubuntu2404-Readme.md
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:47.7054130Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20251030.96
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:47.7056147Z ##[endgroup]
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:47.7058026Z ##[group]GITHUB_TOKEN Permissions
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:47.7061579Z Actions: write
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:47.7062523Z Contents: read
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:47.7063413Z Metadata: read
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:47.7064521Z ##[endgroup]
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:47.7067379Z Secret source: Actions
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:47.7068507Z Prepare workflow directory
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:47.7600990Z Prepare all required actions
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:47.7655536Z Getting action download info
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:48.1031026Z Download action repository 'actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8' (SHA:08c6903cd8c0fde910a37f88322edcfb5dd907a8)
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:48.2712540Z Download action repository 'actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:48.4686950Z Complete job name: AuroraDB IT
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:48.5374769Z ##[group]Run actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:48.5375790Z with:
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:48.5376223Z   repository: keycloak/keycloak
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:48.5376862Z   token: ***
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:48.5377267Z   ssh-strict: true
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:48.5377677Z   ssh-user: git
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:48.5378086Z   persist-credentials: true
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:48.5378553Z   clean: true
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:48.5378972Z   sparse-checkout-cone-mode: true
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:48.5379460Z   fetch-depth: 1
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:48.5379864Z   fetch-tags: false
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:48.5380278Z   show-progress: true
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:48.5380688Z   lfs: false
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:48.5381070Z   submodules: false
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:48.5381659Z   set-safe-directory: true
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:48.5382318Z env:
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:48.5382871Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:48.5383541Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:48.5384144Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:48.5384729Z ##[endgroup]
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:48.6323210Z Syncing repository: keycloak/keycloak
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:48.6324958Z ##[group]Getting Git version info
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:48.6325655Z Working directory is '/home/runner/work/keycloak/keycloak'
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:48.6326644Z [command]/usr/bin/git version
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:48.6370577Z git version 2.51.2
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:48.6391936Z ##[endgroup]
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:48.6408126Z Temporarily overriding HOME='/home/runner/work/_temp/17fa4952-2f95-4d5a-b999-c611e94378e2' before making global git config changes
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:48.6410558Z Adding repository directory to the temporary git global config as a safe directory
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:48.6413890Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/keycloak/keycloak
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:48.6451193Z Deleting the contents of '/home/runner/work/keycloak/keycloak'
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:48.6455255Z ##[group]Initializing the repository
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:48.6459808Z [command]/usr/bin/git init /home/runner/work/keycloak/keycloak
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:48.6570237Z hint: Using 'master' as the name for the initial branch. This default branch name
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:48.6571785Z hint: is subject to change. To configure the initial branch name to use in all
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:48.6572691Z hint: of your new repositories, which will suppress this warning, call:
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:48.6573891Z hint:
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:48.6574441Z hint: 	git config --global init.defaultBranch <name>
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:48.6575136Z hint:
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:48.6576145Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:48.6577850Z hint: 'development'. The just-created branch can be renamed via this command:
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:48.6579181Z hint:
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:48.6579926Z hint: 	git branch -m <name>
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:48.6580782Z hint:
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:48.6582054Z hint: Disable this message with "git config set advice.defaultBranchName false"
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:48.6583855Z Initialized empty Git repository in /home/runner/work/keycloak/keycloak/.git/
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:48.6586362Z [command]/usr/bin/git remote add origin https://github.com/keycloak/keycloak
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:48.6651727Z ##[endgroup]
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:48.6652950Z ##[group]Disabling automatic garbage collection
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:48.6656153Z [command]/usr/bin/git config --local gc.auto 0
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:48.6684047Z ##[endgroup]
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:48.6685265Z ##[group]Setting up auth
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:48.6690940Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:48.6727288Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:48.7059029Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:48.7093593Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:48.7333498Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:48.7374405Z ##[endgroup]
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:48.7375787Z ##[group]Fetching the repository
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:48.7384625Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +18eeef7b261e3fa34074acbdb06bef2b6c2f770b:refs/remotes/origin/main
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:50.0817156Z From https://github.com/keycloak/keycloak
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:50.0818839Z  * [new ref]         18eeef7b261e3fa34074acbdb06bef2b6c2f770b -> origin/main
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:50.0850723Z ##[endgroup]
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:50.0852162Z ##[group]Determining the checkout info
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:50.0853588Z ##[endgroup]
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:50.0859557Z [command]/usr/bin/git sparse-checkout disable
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:50.0901716Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:50.0929176Z ##[group]Checking out the ref
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:50.0933964Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:50.9122909Z Switched to a new branch 'main'
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:50.9124270Z branch 'main' set up to track 'origin/main'.
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:50.9167921Z ##[endgroup]
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:50.9209859Z [command]/usr/bin/git log -1 --format=%H
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:50.9233012Z 18eeef7b261e3fa34074acbdb06bef2b6c2f770b
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:50.9486191Z Prepare all required actions
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:50.9486714Z Getting action download info
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:51.0875288Z Download action repository 'actions/cache@5a3ec84eff668545956fd18022155c47e93e2684' (SHA:5a3ec84eff668545956fd18022155c47e93e2684)
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:51.2526661Z ##[group]Run ./.github/actions/node-cache
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:51.2526996Z env:
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:51.2527307Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:51.2527693Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:51.2528025Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:51.2528565Z ##[endgroup]
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:51.2604956Z ##[group]Run echo "node=$(cat js/pom.xml | grep '<node.version>' | cut -d '>' -f 2 | cut -d '<' -f 1 | cut -c 2-)" >> $GITHUB_OUTPUT
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:51.2605799Z [36;1mecho "node=$(cat js/pom.xml | grep '<node.version>' | cut -d '>' -f 2 | cut -d '<' -f 1 | cut -c 2-)" >> $GITHUB_OUTPUT[0m
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:51.2606498Z [36;1mecho "pnpm=$(cat js/pom.xml | grep '<pnpm.version>' | cut -d '>' -f 2 | cut -d '<' -f 1 | cut -c 1-)" >> $GITHUB_OUTPUT[0m
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:51.2642965Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:51.2643346Z env:
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:51.2643666Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:51.2644056Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:51.2644412Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:51.2644734Z ##[endgroup]
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:51.2938159Z ##[group]Run actions/cache@5a3ec84eff668545956fd18022155c47e93e2684
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:51.2938581Z with:
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:51.2938998Z   path: ~/.m2/repository/com/github/eirslett/node
+AuroraDB IT	UNKNOWN STEP	~/.m2/repository/com/github/eirslett/pnpm
+AuroraDB IT	UNKNOWN STEP	
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:51.2939536Z   key: Linux-frontend-plugin-artifacts-24.9.0-10.14.0
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:51.2939884Z   enableCrossOsArchive: false
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:51.2940148Z   fail-on-cache-miss: false
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:51.2940398Z   lookup-only: false
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:51.2940623Z   save-always: false
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:51.2940832Z env:
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:51.2941133Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:51.2941841Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:51.2942171Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:51.2942489Z ##[endgroup]
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:51.5574846Z Cache hit for: Linux-frontend-plugin-artifacts-24.9.0-10.14.0
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:52.7336033Z Received 88080384 of 178075408 (49.5%), 83.9 MBs/sec
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:53.4040112Z Received 178075408 of 178075408 (100.0%), 101.6 MBs/sec
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:53.4072268Z Cache Size: ~170 MB (178075408 B)
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:53.4149821Z [command]/usr/bin/tar -xf /home/runner/work/_temp/a6f4f54b-0dc2-48dd-8557-ee088fefae97/cache.tzst -P -C /home/runner/work/keycloak/keycloak --use-compress-program unzstd
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:53.8400785Z Cache restored successfully
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:53.8816171Z Cache restored from key: Linux-frontend-plugin-artifacts-24.9.0-10.14.0
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:53.8963089Z ##[group]Run AWS_REGION=us-east-1
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:53.8963436Z [36;1mAWS_REGION=us-east-1[0m
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:53.8963683Z [36;1mecho "AWS Region: ${AWS_REGION}"[0m
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:53.8963943Z [36;1m[0m
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:53.8964408Z [36;1maws configure set aws_access_key_id ***[0m
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:53.8964876Z [36;1maws configure set aws_secret_access_key ***[0m
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:53.8965187Z [36;1maws configure set region ${AWS_REGION}[0m
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:53.8965446Z [36;1m[0m
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:53.8965775Z [36;1mAURORA_CLUSTER_NAME="gh-action-$(git rev-parse --short HEAD)-19184827781-1"[0m
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:53.8966284Z [36;1mPASS=$(tr -dc A-Za-z0-9 </dev/urandom | head -c 13; echo)[0m
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:53.8966601Z [36;1mecho "::add-mask::${PASS}"[0m
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:53.8966834Z [36;1m[0m
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:53.8967118Z [36;1mecho "aurora-cluster-name=${AURORA_CLUSTER_NAME}" >> $GITHUB_OUTPUT[0m
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:53.8967691Z [36;1mecho "aurora-cluster-***" >> $GITHUB_OUTPUT[0m
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:53.8968031Z [36;1mecho "region=${AWS_REGION}" >> $GITHUB_OUTPUT[0m
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:53.8968622Z [36;1mcurl --fail-with-body https://truststore.pki.rds.amazonaws.com/${AWS_REGION}/${AWS_REGION}-bundle.pem -o aws.pem[0m
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:53.8969423Z [36;1mPROPS+=' -Dkeycloak.connectionsJpa.jdbcParameters=\"?ssl=true&sslmode=verify-ca&sslrootcert=/opt/keycloak/aws.pem\"'[0m
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:53.8969938Z [36;1m[0m
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:53.8970168Z [36;1mecho "maven_properties=${PROPS}" >> $GITHUB_OUTPUT[0m
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:53.9005465Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:53.9006015Z env:
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:53.9006287Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:53.9006635Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:53.9006956Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:53.9007281Z ##[endgroup]
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:53.9060066Z AWS Region: us-east-1
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:57.7321774Z tr: write error: Broken pipe
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:57.7409533Z   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:57.7410318Z                                  Dload  Upload   Total   Spent    Left  Speed
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:57.7410676Z 
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:57.8537717Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:57.8538460Z 100  4576  100  4576    0     0  40546      0 --:--:-- --:--:-- --:--:-- 40857
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:57.8604027Z Prepare all required actions
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:57.8640493Z ##[group]Run ./.github/actions/aurora-create-database
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:57.8640794Z with:
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:57.8640987Z   name: gh-action-18eeef7-19184827781-1
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:57.8641665Z   password: ***
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:57.8641879Z   region: us-east-1
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:57.8642068Z env:
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:57.8642339Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:57.8642684Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:57.8642986Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:57.8643289Z ##[endgroup]
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:57.8657529Z ##[group]Run source ./aurora_create.sh
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:57.8657817Z [36;1msource ./aurora_create.sh[0m
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:57.8658115Z [36;1mecho "endpoint=${AURORA_ENDPOINT}" >> $GITHUB_OUTPUT[0m
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:57.8690615Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:57.8690925Z env:
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:57.8691415Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:57.8691823Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:57.8692116Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:57.8692455Z   AURORA_CLUSTER: gh-action-18eeef7-19184827781-1
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:57.8692819Z   AURORA_PASSWORD: ***
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:57.8693029Z   AURORA_REGION: us-east-1
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:19:57.8693237Z ##[endgroup]
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:22:13.9391693Z 
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:22:13.9392682Z An error occurred (InvalidClientTokenId) when calling the DescribeDBInstances operation: The security token included in the request is invalid.
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:22:14.0305971Z ##[error]Process completed with exit code 254.
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:22:14.0385538Z ##[group]Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:22:14.0385915Z with:
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:22:14.0386117Z   name: auroraDB-migration-tests-mvn-logs
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:22:14.0386389Z   path: .github/scripts/ansible/files
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:22:14.0386626Z   if-no-files-found: warn
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:22:14.0386838Z   compression-level: 6
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:22:14.0387048Z   overwrite: false
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:22:14.0387243Z   include-hidden-files: false
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:22:14.0387448Z env:
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:22:14.0387706Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:22:14.0388058Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:22:14.0388346Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:22:14.0388620Z ##[endgroup]
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:22:14.2526397Z ##[warning]No files were found with the provided path: .github/scripts/ansible/files. No artifacts will be uploaded.
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:22:14.2644260Z ##[group]Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:22:14.2644646Z with:
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:22:14.2644855Z   name: aurora-integration-tests-mvn-logs
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:22:14.2645135Z   path: .github/scripts/ansible/files
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:22:14.2645378Z   if-no-files-found: warn
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:22:14.2645594Z   compression-level: 6
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:22:14.2645792Z   overwrite: false
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:22:14.2646164Z   include-hidden-files: false
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:22:14.2646370Z env:
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:22:14.2646630Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:22:14.2646975Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:22:14.2647260Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:22:14.2647536Z ##[endgroup]
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:22:14.4751196Z ##[warning]No files were found with the provided path: .github/scripts/ansible/files. No artifacts will be uploaded.
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:22:14.4881430Z ##[group]Run source .venv/bin/activate
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:22:14.4881987Z [36;1msource .venv/bin/activate[0m
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:22:14.4882440Z [36;1m./aws_ec2.sh delete us-east-1 [0m
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:22:14.4934246Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:22:14.4934562Z env:
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:22:14.4934828Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:22:14.4935182Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:22:14.4935476Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:22:14.4935776Z ##[endgroup]
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:22:14.4983615Z /home/runner/work/_temp/de6bf0c6-1e5f-4a7a-998e-a74866bdf0e9.sh: line 1: .venv/bin/activate: No such file or directory
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:22:14.4986486Z ##[error]Process completed with exit code 1.
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:22:14.5007247Z ##[group]Run gh workflow run aurora-delete.yml \
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:22:14.5007607Z [36;1mgh workflow run aurora-delete.yml \[0m
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:22:14.5007917Z [36;1m  -f name=gh-action-18eeef7-19184827781-1 \[0m
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:22:14.5008208Z [36;1m  -f region=us-east-1 \[0m
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:22:14.5008448Z [36;1m  --repo keycloak/keycloak \[0m
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:22:14.5008690Z [36;1m  --ref main[0m
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:22:14.5036748Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:22:14.5037058Z env:
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:22:14.5037319Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:22:14.5037657Z   SUREFIRE_RERUN_FAILING_COUNT: 2
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:22:14.5037947Z   SUREFIRE_RETRY: -Dsurefire.rerunFailingTestsCount=2
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:22:14.5038404Z   GH_TOKEN: ***
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:22:14.5038595Z ##[endgroup]
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:22:15.0981857Z Post job cleanup.
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:22:15.1026475Z Post job cleanup.
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:22:15.1789770Z [command]/usr/bin/git version
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:22:15.1856947Z git version 2.51.2
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:22:15.1894542Z Temporarily overriding HOME='/home/runner/work/_temp/e9054251-a11b-4f71-8f3f-39895bac790e' before making global git config changes
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:22:15.1895818Z Adding repository directory to the temporary git global config as a safe directory
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:22:15.1900415Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/keycloak/keycloak
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:22:15.1936054Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:22:15.1966852Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:22:15.2210082Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:22:15.2232664Z http.https://github.com/.extraheader
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:22:15.2242902Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:22:15.2272861Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+AuroraDB IT	UNKNOWN STEP	2025-11-08T00:22:15.2619431Z Cleaning up orphan processes
