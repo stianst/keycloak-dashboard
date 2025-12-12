@@ -1,0 +1,445 @@
+Account UI E2E (chromium)	Run Playwright tests	﻿2025-12-12T04:19:12.3862276Z ##[group]Run pnpm --fail-if-no-match --filter @keycloak/keycloak-account-ui test -- --project=chromium
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:12.3863025Z [36;1mpnpm --fail-if-no-match --filter @keycloak/keycloak-account-ui test -- --project=chromium[0m
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:12.3897219Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:12.3897552Z env:
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:12.3897831Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:12.3898206Z   WORKSPACE: @keycloak/keycloak-account-ui
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:12.3898594Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.9-10/x64
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:12.3899079Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.9-10/x64
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:12.3899438Z ##[endgroup]
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:12.7085492Z 
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:12.7086547Z > @keycloak/keycloak-account-ui@999.0.0-SNAPSHOT test /home/runner/work/keycloak/keycloak/js/apps/account-ui
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:12.7087596Z > wireit -- --project=chromium
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:12.7088003Z 
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:12.8222990Z Analyzing
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:13.8227524Z   0% [0 / 2] [1 running] ../../libs/keycloak-admin-client:build
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:14.4711658Z (node:5800) [DEP0190] DeprecationWarning: Passing args to a child process with shell option true can lead to security vulnerabilities, as the arguments are not escaped, only concatenated.
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:14.4713298Z (Use `node --trace-deprecation ...` to show where the warning was created)
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:14.8249025Z  50% [1 / 2] [1 running] test
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:16.4393502Z 
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:16.4394129Z Running 20 tests using 2 workers
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1504233Z ················F·FF
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1512078Z 
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1521916Z   1) [chromium] › test/resources.spec.ts:7:3 › Resources › shows the resources owned by the user ───
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1522523Z 
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1522714Z     Error: Duplicate resource error
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1522906Z 
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1523451Z        at ../../../libs/keycloak-admin-client/lib/utils/fetchWithError.js:16
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1523859Z 
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1524200Z       14 |         const responseData = await parseResponse(response);
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1524679Z       15 |         const message = getErrorMessage(responseData);
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1525316Z     > 16 |         throw new NetworkError(message, {
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1525784Z          |               ^
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1526198Z       17 |             response,
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1526609Z       18 |             responseData,
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1526999Z       19 |         });
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1527992Z         at fetchWithError (/home/runner/work/keycloak/keycloak/js/libs/keycloak-admin-client/lib/utils/fetchWithError.js:16:15)
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1529697Z         at Agent.#requestWithParams (/home/runner/work/keycloak/keycloak/js/libs/keycloak-admin-client/lib/resources/agent.js:127:25)
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1531230Z         at createTestBed (/home/runner/work/keycloak/keycloak/js/apps/account-ui/test/support/testbed.ts:12:32)
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1532564Z         at /home/runner/work/keycloak/keycloak/js/apps/account-ui/test/resources.spec.ts:9:27
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1533254Z 
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1534035Z     attachment #1: trace (application/zip) ─────────────────────────────────────────────────────────
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1534828Z     test-results/resources-Resources-shows-the-resources-owned-by-the-user-chromium/trace.zip
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1535645Z     Usage:
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1535769Z 
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1536450Z         pnpm exec playwright show-trace test-results/resources-Resources-shows-the-resources-owned-by-the-user-chromium/trace.zip
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1537231Z 
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1537636Z     ────────────────────────────────────────────────────────────────────────────────────────────────
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1538077Z 
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1538805Z   2) [chromium] › test/resources.spec.ts:24:3 › Resources › shows no resources are shared with another user 
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1539328Z 
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1539933Z     Error: Duplicate resource error
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1540257Z 
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1540691Z        at ../../../libs/keycloak-admin-client/lib/utils/fetchWithError.js:16
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1541196Z 
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1541512Z       14 |         const responseData = await parseResponse(response);
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1541944Z       15 |         const message = getErrorMessage(responseData);
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1542499Z     > 16 |         throw new NetworkError(message, {
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1542785Z          |               ^
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1543126Z       17 |             response,
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1543428Z       18 |             responseData,
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1543674Z       19 |         });
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1544250Z         at fetchWithError (/home/runner/work/keycloak/keycloak/js/libs/keycloak-admin-client/lib/utils/fetchWithError.js:16:15)
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1545655Z         at Agent.#requestWithParams (/home/runner/work/keycloak/keycloak/js/libs/keycloak-admin-client/lib/resources/agent.js:127:25)
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1546543Z         at createTestBed (/home/runner/work/keycloak/keycloak/js/apps/account-ui/test/support/testbed.ts:12:32)
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1547249Z         at /home/runner/work/keycloak/keycloak/js/apps/account-ui/test/resources.spec.ts:20:27
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1547591Z 
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1548014Z     attachment #1: trace (application/zip) ─────────────────────────────────────────────────────────
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1548674Z     test-results/resources-Resources-shows--ef5b7-re-shared-with-another-user-chromium/trace.zip
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1549133Z     Usage:
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1549239Z 
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1549709Z         pnpm exec playwright show-trace test-results/resources-Resources-shows--ef5b7-re-shared-with-another-user-chromium/trace.zip
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1550195Z 
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1550503Z     ────────────────────────────────────────────────────────────────────────────────────────────────
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1550918Z 
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1551305Z   3) [chromium] › test/resources.spec.ts:41:3 › Resources › shares a resource with another user ────
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1551640Z 
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1551762Z     Error: Duplicate resource error
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1551937Z 
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1552154Z        at ../../../libs/keycloak-admin-client/lib/utils/fetchWithError.js:16
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1552417Z 
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1552603Z       14 |         const responseData = await parseResponse(response);
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1553009Z       15 |         const message = getErrorMessage(responseData);
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1553366Z     > 16 |         throw new NetworkError(message, {
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1553645Z          |               ^
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1553884Z       17 |             response,
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1554135Z       18 |             responseData,
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1554376Z       19 |         });
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1555187Z         at fetchWithError (/home/runner/work/keycloak/keycloak/js/libs/keycloak-admin-client/lib/utils/fetchWithError.js:16:15)
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1556212Z         at Agent.#requestWithParams (/home/runner/work/keycloak/keycloak/js/libs/keycloak-admin-client/lib/resources/agent.js:127:25)
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1557051Z         at createTestBed (/home/runner/work/keycloak/keycloak/js/apps/account-ui/test/support/testbed.ts:12:32)
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1557746Z         at /home/runner/work/keycloak/keycloak/js/apps/account-ui/test/resources.spec.ts:33:27
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1558090Z 
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1558470Z     attachment #1: trace (application/zip) ─────────────────────────────────────────────────────────
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1559115Z     test-results/resources-Resources-shares-a-resource-with-another-user-chromium/trace.zip
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1559585Z     Usage:
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1559691Z 
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1560144Z         pnpm exec playwright show-trace test-results/resources-Resources-shares-a-resource-with-another-user-chromium/trace.zip
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1561009Z 
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1561619Z     ────────────────────────────────────────────────────────────────────────────────────────────────
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1562302Z 
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1562474Z   3 failed
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1563406Z     [chromium] › test/resources.spec.ts:7:3 › Resources › shows the resources owned by the user ────
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1564767Z     [chromium] › test/resources.spec.ts:24:3 › Resources › shows no resources are shared with another user 
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1566331Z     [chromium] › test/resources.spec.ts:41:3 › Resources › shares a resource with another user ─────
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1567092Z   17 passed (39.8s)
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1602108Z ##[error]  1) [chromium] › test/resources.spec.ts:7:3 › Resources › shows the resources owned by the user ───
+Account UI E2E (chromium)	Run Playwright tests	    Error: Duplicate resource error
+Account UI E2E (chromium)	Run Playwright tests	
+Account UI E2E (chromium)	Run Playwright tests	       at ../../../libs/keycloak-admin-client/lib/utils/fetchWithError.js:16
+Account UI E2E (chromium)	Run Playwright tests	
+Account UI E2E (chromium)	Run Playwright tests	      14 |         const responseData = await parseResponse(response);
+Account UI E2E (chromium)	Run Playwright tests	      15 |         const message = getErrorMessage(responseData);
+Account UI E2E (chromium)	Run Playwright tests	    > 16 |         throw new NetworkError(message, {
+Account UI E2E (chromium)	Run Playwright tests	         |               ^
+Account UI E2E (chromium)	Run Playwright tests	      17 |             response,
+Account UI E2E (chromium)	Run Playwright tests	      18 |             responseData,
+Account UI E2E (chromium)	Run Playwright tests	      19 |         });
+Account UI E2E (chromium)	Run Playwright tests	        at fetchWithError (/home/runner/work/keycloak/keycloak/js/libs/keycloak-admin-client/lib/utils/fetchWithError.js:16:15)
+Account UI E2E (chromium)	Run Playwright tests	        at Agent.#requestWithParams (/home/runner/work/keycloak/keycloak/js/libs/keycloak-admin-client/lib/resources/agent.js:127:25)
+Account UI E2E (chromium)	Run Playwright tests	        at createTestBed (/home/runner/work/keycloak/keycloak/js/apps/account-ui/test/support/testbed.ts:12:32)
+Account UI E2E (chromium)	Run Playwright tests	        at /home/runner/work/keycloak/keycloak/js/apps/account-ui/test/resources.spec.ts:9:27
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1619558Z ##[error]  2) [chromium] › test/resources.spec.ts:24:3 › Resources › shows no resources are shared with another user 
+Account UI E2E (chromium)	Run Playwright tests	    Error: Duplicate resource error
+Account UI E2E (chromium)	Run Playwright tests	
+Account UI E2E (chromium)	Run Playwright tests	       at ../../../libs/keycloak-admin-client/lib/utils/fetchWithError.js:16
+Account UI E2E (chromium)	Run Playwright tests	
+Account UI E2E (chromium)	Run Playwright tests	      14 |         const responseData = await parseResponse(response);
+Account UI E2E (chromium)	Run Playwright tests	      15 |         const message = getErrorMessage(responseData);
+Account UI E2E (chromium)	Run Playwright tests	    > 16 |         throw new NetworkError(message, {
+Account UI E2E (chromium)	Run Playwright tests	         |               ^
+Account UI E2E (chromium)	Run Playwright tests	      17 |             response,
+Account UI E2E (chromium)	Run Playwright tests	      18 |             responseData,
+Account UI E2E (chromium)	Run Playwright tests	      19 |         });
+Account UI E2E (chromium)	Run Playwright tests	        at fetchWithError (/home/runner/work/keycloak/keycloak/js/libs/keycloak-admin-client/lib/utils/fetchWithError.js:16:15)
+Account UI E2E (chromium)	Run Playwright tests	        at Agent.#requestWithParams (/home/runner/work/keycloak/keycloak/js/libs/keycloak-admin-client/lib/resources/agent.js:127:25)
+Account UI E2E (chromium)	Run Playwright tests	        at createTestBed (/home/runner/work/keycloak/keycloak/js/apps/account-ui/test/support/testbed.ts:12:32)
+Account UI E2E (chromium)	Run Playwright tests	        at /home/runner/work/keycloak/keycloak/js/apps/account-ui/test/resources.spec.ts:20:27
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1632223Z ##[error]  3) [chromium] › test/resources.spec.ts:41:3 › Resources › shares a resource with another user ────
+Account UI E2E (chromium)	Run Playwright tests	    Error: Duplicate resource error
+Account UI E2E (chromium)	Run Playwright tests	
+Account UI E2E (chromium)	Run Playwright tests	       at ../../../libs/keycloak-admin-client/lib/utils/fetchWithError.js:16
+Account UI E2E (chromium)	Run Playwright tests	
+Account UI E2E (chromium)	Run Playwright tests	      14 |         const responseData = await parseResponse(response);
+Account UI E2E (chromium)	Run Playwright tests	      15 |         const message = getErrorMessage(responseData);
+Account UI E2E (chromium)	Run Playwright tests	    > 16 |         throw new NetworkError(message, {
+Account UI E2E (chromium)	Run Playwright tests	         |               ^
+Account UI E2E (chromium)	Run Playwright tests	      17 |             response,
+Account UI E2E (chromium)	Run Playwright tests	      18 |             responseData,
+Account UI E2E (chromium)	Run Playwright tests	      19 |         });
+Account UI E2E (chromium)	Run Playwright tests	        at fetchWithError (/home/runner/work/keycloak/keycloak/js/libs/keycloak-admin-client/lib/utils/fetchWithError.js:16:15)
+Account UI E2E (chromium)	Run Playwright tests	        at Agent.#requestWithParams (/home/runner/work/keycloak/keycloak/js/libs/keycloak-admin-client/lib/resources/agent.js:127:25)
+Account UI E2E (chromium)	Run Playwright tests	        at createTestBed (/home/runner/work/keycloak/keycloak/js/apps/account-ui/test/support/testbed.ts:12:32)
+Account UI E2E (chromium)	Run Playwright tests	        at /home/runner/work/keycloak/keycloak/js/apps/account-ui/test/resources.spec.ts:33:27
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.1640452Z ##[notice]  3 failed
+Account UI E2E (chromium)	Run Playwright tests	    [chromium] › test/resources.spec.ts:7:3 › Resources › shows the resources owned by the user ────
+Account UI E2E (chromium)	Run Playwright tests	    [chromium] › test/resources.spec.ts:24:3 › Resources › shows no resources are shared with another user 
+Account UI E2E (chromium)	Run Playwright tests	    [chromium] › test/resources.spec.ts:41:3 › Resources › shares a resource with another user ─────
+Account UI E2E (chromium)	Run Playwright tests	  17 passed (39.8s)
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.2013869Z 
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.2014637Z ❌ [test] exited with exit code 1.
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.2019478Z ❌ 1 script failed.
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.2266124Z /home/runner/work/keycloak/keycloak/js/apps/account-ui:
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.2267856Z  ERR_PNPM_RECURSIVE_RUN_FIRST_FAIL  @keycloak/keycloak-account-ui@999.0.0-SNAPSHOT test: `wireit -- --project=chromium`
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.2268568Z Exit status 1
+Account UI E2E (chromium)	Run Playwright tests	2025-12-12T04:19:55.2467269Z ##[error]Process completed with exit code 1.
+Account UI E2E (firefox)	Run Playwright tests	﻿2025-12-12T04:19:43.4989987Z ##[group]Run pnpm --fail-if-no-match --filter @keycloak/keycloak-account-ui test -- --project=firefox
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:19:43.4991168Z [36;1mpnpm --fail-if-no-match --filter @keycloak/keycloak-account-ui test -- --project=firefox[0m
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:19:43.5035316Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:19:43.5035683Z env:
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:19:43.5035997Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:19:43.5036411Z   WORKSPACE: @keycloak/keycloak-account-ui
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:19:43.5036796Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.9-10/x64
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:19:43.5037315Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.9-10/x64
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:19:43.5037703Z ##[endgroup]
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:19:43.8189104Z 
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:19:43.8190312Z > @keycloak/keycloak-account-ui@999.0.0-SNAPSHOT test /home/runner/work/keycloak/keycloak/js/apps/account-ui
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:19:43.8191331Z > wireit -- --project=firefox
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:19:43.8191704Z 
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:19:43.9217563Z Analyzing
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:19:44.9226238Z   0% [0 / 2] [1 running] ../../libs/keycloak-admin-client:build
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:19:45.5617770Z (node:5803) [DEP0190] DeprecationWarning: Passing args to a child process with shell option true can lead to security vulnerabilities, as the arguments are not escaped, only concatenated.
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:19:45.5618771Z (Use `node --trace-deprecation ...` to show where the warning was created)
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:19:45.9233406Z  50% [1 / 2] [1 running] test
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:19:47.6082233Z 
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:19:47.6083129Z Running 20 tests using 2 workers
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8300933Z ·················FFF
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8308362Z 
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8318341Z   1) [firefox] › test/resources.spec.ts:7:3 › Resources › shows the resources owned by the user ────
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8320086Z 
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8320550Z     Error: Duplicate resource error
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8320868Z 
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8321276Z        at ../../../libs/keycloak-admin-client/lib/utils/fetchWithError.js:16
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8321792Z 
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8322160Z       14 |         const responseData = await parseResponse(response);
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8323119Z       15 |         const message = getErrorMessage(responseData);
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8323771Z     > 16 |         throw new NetworkError(message, {
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8324266Z          |               ^
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8324715Z       17 |             response,
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8325257Z       18 |             responseData,
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8325702Z       19 |         });
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8326752Z         at fetchWithError (/home/runner/work/keycloak/keycloak/js/libs/keycloak-admin-client/lib/utils/fetchWithError.js:16:15)
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8328426Z         at Agent.#requestWithParams (/home/runner/work/keycloak/keycloak/js/libs/keycloak-admin-client/lib/resources/agent.js:127:25)
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8329903Z         at createTestBed (/home/runner/work/keycloak/keycloak/js/apps/account-ui/test/support/testbed.ts:12:32)
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8331102Z         at /home/runner/work/keycloak/keycloak/js/apps/account-ui/test/resources.spec.ts:9:27
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8331680Z 
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8332440Z     attachment #1: trace (application/zip) ─────────────────────────────────────────────────────────
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8333603Z     test-results/resources-Resources-shows-the-resources-owned-by-the-user-firefox/trace.zip
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8334445Z     Usage:
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8334620Z 
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8335542Z         pnpm exec playwright show-trace test-results/resources-Resources-shows-the-resources-owned-by-the-user-firefox/trace.zip
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8336275Z 
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8336959Z     ────────────────────────────────────────────────────────────────────────────────────────────────
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8337326Z 
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8337874Z   2) [firefox] › test/resources.spec.ts:24:3 › Resources › shows no resources are shared with another user 
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8338375Z 
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8338913Z     Error: Duplicate resource error
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8339103Z 
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8339333Z        at ../../../libs/keycloak-admin-client/lib/utils/fetchWithError.js:16
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8339598Z 
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8339789Z       14 |         const responseData = await parseResponse(response);
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8340193Z       15 |         const message = getErrorMessage(responseData);
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8340550Z     > 16 |         throw new NetworkError(message, {
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8340824Z          |               ^
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8341062Z       17 |             response,
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8341317Z       18 |             responseData,
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8341550Z       19 |         });
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8342139Z         at fetchWithError (/home/runner/work/keycloak/keycloak/js/libs/keycloak-admin-client/lib/utils/fetchWithError.js:16:15)
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8343328Z         at Agent.#requestWithParams (/home/runner/work/keycloak/keycloak/js/libs/keycloak-admin-client/lib/resources/agent.js:127:25)
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8344170Z         at createTestBed (/home/runner/work/keycloak/keycloak/js/apps/account-ui/test/support/testbed.ts:12:32)
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8344855Z         at /home/runner/work/keycloak/keycloak/js/apps/account-ui/test/resources.spec.ts:20:27
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8345194Z 
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8345600Z     attachment #1: trace (application/zip) ─────────────────────────────────────────────────────────
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8346259Z     test-results/resources-Resources-shows--ef5b7-re-shared-with-another-user-firefox/trace.zip
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8346717Z     Usage:
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8346817Z 
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8347290Z         pnpm exec playwright show-trace test-results/resources-Resources-shows--ef5b7-re-shared-with-another-user-firefox/trace.zip
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8347959Z 
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8348290Z     ────────────────────────────────────────────────────────────────────────────────────────────────
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8348525Z 
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8348896Z   3) [firefox] › test/resources.spec.ts:41:3 › Resources › shares a resource with another user ─────
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8349237Z 
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8349353Z     Error: Duplicate resource error
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8349527Z 
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8349741Z        at ../../../libs/keycloak-admin-client/lib/utils/fetchWithError.js:16
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8350005Z 
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8350197Z       14 |         const responseData = await parseResponse(response);
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8350591Z       15 |         const message = getErrorMessage(responseData);
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8350943Z     > 16 |         throw new NetworkError(message, {
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8351213Z          |               ^
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8351448Z       17 |             response,
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8351714Z       18 |             responseData,
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8351949Z       19 |         });
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8352693Z         at fetchWithError (/home/runner/work/keycloak/keycloak/js/libs/keycloak-admin-client/lib/utils/fetchWithError.js:16:15)
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8353733Z         at Agent.#requestWithParams (/home/runner/work/keycloak/keycloak/js/libs/keycloak-admin-client/lib/resources/agent.js:127:25)
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8354973Z         at createTestBed (/home/runner/work/keycloak/keycloak/js/apps/account-ui/test/support/testbed.ts:12:32)
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8355702Z         at /home/runner/work/keycloak/keycloak/js/apps/account-ui/test/resources.spec.ts:33:27
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8356306Z 
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8357041Z     attachment #1: trace (application/zip) ─────────────────────────────────────────────────────────
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8358276Z     test-results/resources-Resources-shares-a-resource-with-another-user-firefox/trace.zip
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8359144Z     Usage:
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8359328Z 
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8360170Z         pnpm exec playwright show-trace test-results/resources-Resources-shares-a-resource-with-another-user-firefox/trace.zip
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8361056Z 
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8361679Z     ────────────────────────────────────────────────────────────────────────────────────────────────
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8362353Z 
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8362458Z   3 failed
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8363240Z     [firefox] › test/resources.spec.ts:7:3 › Resources › shows the resources owned by the user ─────
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8363984Z     [firefox] › test/resources.spec.ts:24:3 › Resources › shows no resources are shared with another user 
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8364686Z     [firefox] › test/resources.spec.ts:41:3 › Resources › shares a resource with another user ──────
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8365091Z   17 passed (51.4s)
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8394060Z ##[error]  1) [firefox] › test/resources.spec.ts:7:3 › Resources › shows the resources owned by the user ────
+Account UI E2E (firefox)	Run Playwright tests	    Error: Duplicate resource error
+Account UI E2E (firefox)	Run Playwright tests	
+Account UI E2E (firefox)	Run Playwright tests	       at ../../../libs/keycloak-admin-client/lib/utils/fetchWithError.js:16
+Account UI E2E (firefox)	Run Playwright tests	
+Account UI E2E (firefox)	Run Playwright tests	      14 |         const responseData = await parseResponse(response);
+Account UI E2E (firefox)	Run Playwright tests	      15 |         const message = getErrorMessage(responseData);
+Account UI E2E (firefox)	Run Playwright tests	    > 16 |         throw new NetworkError(message, {
+Account UI E2E (firefox)	Run Playwright tests	         |               ^
+Account UI E2E (firefox)	Run Playwright tests	      17 |             response,
+Account UI E2E (firefox)	Run Playwright tests	      18 |             responseData,
+Account UI E2E (firefox)	Run Playwright tests	      19 |         });
+Account UI E2E (firefox)	Run Playwright tests	        at fetchWithError (/home/runner/work/keycloak/keycloak/js/libs/keycloak-admin-client/lib/utils/fetchWithError.js:16:15)
+Account UI E2E (firefox)	Run Playwright tests	        at Agent.#requestWithParams (/home/runner/work/keycloak/keycloak/js/libs/keycloak-admin-client/lib/resources/agent.js:127:25)
+Account UI E2E (firefox)	Run Playwright tests	        at createTestBed (/home/runner/work/keycloak/keycloak/js/apps/account-ui/test/support/testbed.ts:12:32)
+Account UI E2E (firefox)	Run Playwright tests	        at /home/runner/work/keycloak/keycloak/js/apps/account-ui/test/resources.spec.ts:9:27
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8409482Z ##[error]  2) [firefox] › test/resources.spec.ts:24:3 › Resources › shows no resources are shared with another user 
+Account UI E2E (firefox)	Run Playwright tests	    Error: Duplicate resource error
+Account UI E2E (firefox)	Run Playwright tests	
+Account UI E2E (firefox)	Run Playwright tests	       at ../../../libs/keycloak-admin-client/lib/utils/fetchWithError.js:16
+Account UI E2E (firefox)	Run Playwright tests	
+Account UI E2E (firefox)	Run Playwright tests	      14 |         const responseData = await parseResponse(response);
+Account UI E2E (firefox)	Run Playwright tests	      15 |         const message = getErrorMessage(responseData);
+Account UI E2E (firefox)	Run Playwright tests	    > 16 |         throw new NetworkError(message, {
+Account UI E2E (firefox)	Run Playwright tests	         |               ^
+Account UI E2E (firefox)	Run Playwright tests	      17 |             response,
+Account UI E2E (firefox)	Run Playwright tests	      18 |             responseData,
+Account UI E2E (firefox)	Run Playwright tests	      19 |         });
+Account UI E2E (firefox)	Run Playwright tests	        at fetchWithError (/home/runner/work/keycloak/keycloak/js/libs/keycloak-admin-client/lib/utils/fetchWithError.js:16:15)
+Account UI E2E (firefox)	Run Playwright tests	        at Agent.#requestWithParams (/home/runner/work/keycloak/keycloak/js/libs/keycloak-admin-client/lib/resources/agent.js:127:25)
+Account UI E2E (firefox)	Run Playwright tests	        at createTestBed (/home/runner/work/keycloak/keycloak/js/apps/account-ui/test/support/testbed.ts:12:32)
+Account UI E2E (firefox)	Run Playwright tests	        at /home/runner/work/keycloak/keycloak/js/apps/account-ui/test/resources.spec.ts:20:27
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8422244Z ##[error]  3) [firefox] › test/resources.spec.ts:41:3 › Resources › shares a resource with another user ─────
+Account UI E2E (firefox)	Run Playwright tests	    Error: Duplicate resource error
+Account UI E2E (firefox)	Run Playwright tests	
+Account UI E2E (firefox)	Run Playwright tests	       at ../../../libs/keycloak-admin-client/lib/utils/fetchWithError.js:16
+Account UI E2E (firefox)	Run Playwright tests	
+Account UI E2E (firefox)	Run Playwright tests	      14 |         const responseData = await parseResponse(response);
+Account UI E2E (firefox)	Run Playwright tests	      15 |         const message = getErrorMessage(responseData);
+Account UI E2E (firefox)	Run Playwright tests	    > 16 |         throw new NetworkError(message, {
+Account UI E2E (firefox)	Run Playwright tests	         |               ^
+Account UI E2E (firefox)	Run Playwright tests	      17 |             response,
+Account UI E2E (firefox)	Run Playwright tests	      18 |             responseData,
+Account UI E2E (firefox)	Run Playwright tests	      19 |         });
+Account UI E2E (firefox)	Run Playwright tests	        at fetchWithError (/home/runner/work/keycloak/keycloak/js/libs/keycloak-admin-client/lib/utils/fetchWithError.js:16:15)
+Account UI E2E (firefox)	Run Playwright tests	        at Agent.#requestWithParams (/home/runner/work/keycloak/keycloak/js/libs/keycloak-admin-client/lib/resources/agent.js:127:25)
+Account UI E2E (firefox)	Run Playwright tests	        at createTestBed (/home/runner/work/keycloak/keycloak/js/apps/account-ui/test/support/testbed.ts:12:32)
+Account UI E2E (firefox)	Run Playwright tests	        at /home/runner/work/keycloak/keycloak/js/apps/account-ui/test/resources.spec.ts:33:27
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8430359Z ##[notice]  3 failed
+Account UI E2E (firefox)	Run Playwright tests	    [firefox] › test/resources.spec.ts:7:3 › Resources › shows the resources owned by the user ─────
+Account UI E2E (firefox)	Run Playwright tests	    [firefox] › test/resources.spec.ts:24:3 › Resources › shows no resources are shared with another user 
+Account UI E2E (firefox)	Run Playwright tests	    [firefox] › test/resources.spec.ts:41:3 › Resources › shares a resource with another user ──────
+Account UI E2E (firefox)	Run Playwright tests	  17 passed (51.4s)
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8800936Z 
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8801839Z ❌ [test] exited with exit code 1.
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.8806681Z ❌ 1 script failed.
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.9040322Z /home/runner/work/keycloak/keycloak/js/apps/account-ui:
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.9042302Z  ERR_PNPM_RECURSIVE_RUN_FIRST_FAIL  @keycloak/keycloak-account-ui@999.0.0-SNAPSHOT test: `wireit -- --project=firefox`
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.9043610Z Exit status 1
+Account UI E2E (firefox)	Run Playwright tests	2025-12-12T04:20:37.9230062Z ##[error]Process completed with exit code 1.
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	﻿2025-12-12T04:39:50.3720984Z Prepare all required actions
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-12-12T04:39:50.3790281Z ##[group]Run ./.github/actions/status-check
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-12-12T04:39:50.3790677Z with:
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-12-12T04:39:50.3791989Z   jobs: {
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	  "conditional": {
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	    "outputs": {
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	      "js-ci": "true"
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	    }
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	  "build-keycloak": {
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	  "admin-client": {
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	  "ui-shared": {
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	  "account-ui": {
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	  "account-ui-e2e": {
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	    "result": "failure",
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	  "admin-ui": {
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	  "admin-ui-e2e": {
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	  "keycloak-admin-client": {
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	  }
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	}
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-12-12T04:39:50.3793671Z env:
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-12-12T04:39:50.3793975Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-12-12T04:39:50.3794339Z ##[endgroup]
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-12-12T04:39:50.3893619Z ##[group]Run JOBS='{
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-12-12T04:39:50.3894107Z [36;1mJOBS='{[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-12-12T04:39:50.3894347Z [36;1m  "conditional": {[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-12-12T04:39:50.3894624Z [36;1m    "result": "success",[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-12-12T04:39:50.3894898Z [36;1m    "outputs": {[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-12-12T04:39:50.3895148Z [36;1m      "js-ci": "true"[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-12-12T04:39:50.3895391Z [36;1m    }[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-12-12T04:39:50.3895602Z [36;1m  },[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-12-12T04:39:50.3895841Z [36;1m  "build-keycloak": {[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-12-12T04:39:50.3896124Z [36;1m    "result": "success",[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-12-12T04:39:50.3896390Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-12-12T04:39:50.3896621Z [36;1m  },[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-12-12T04:39:50.3896848Z [36;1m  "admin-client": {[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-12-12T04:39:50.3897103Z [36;1m    "result": "success",[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-12-12T04:39:50.3897379Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-12-12T04:39:50.3897642Z [36;1m  },[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-12-12T04:39:50.3897856Z [36;1m  "ui-shared": {[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-12-12T04:39:50.3898107Z [36;1m    "result": "success",[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-12-12T04:39:50.3898370Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-12-12T04:39:50.3898619Z [36;1m  },[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-12-12T04:39:50.3898829Z [36;1m  "account-ui": {[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-12-12T04:39:50.3899077Z [36;1m    "result": "success",[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-12-12T04:39:50.3899499Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-12-12T04:39:50.3899735Z [36;1m  },[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-12-12T04:39:50.3899955Z [36;1m  "account-ui-e2e": {[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-12-12T04:39:50.3900209Z [36;1m    "result": "failure",[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-12-12T04:39:50.3900467Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-12-12T04:39:50.3900693Z [36;1m  },[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-12-12T04:39:50.3900908Z [36;1m  "admin-ui": {[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-12-12T04:39:50.3901141Z [36;1m    "result": "success",[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-12-12T04:39:50.3901399Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-12-12T04:39:50.3901623Z [36;1m  },[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-12-12T04:39:50.3901832Z [36;1m  "admin-ui-e2e": {[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-12-12T04:39:50.3902087Z [36;1m    "result": "success",[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-12-12T04:39:50.3902344Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-12-12T04:39:50.3902576Z [36;1m  },[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-12-12T04:39:50.3902794Z [36;1m  "keycloak-admin-client": {[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-12-12T04:39:50.3903089Z [36;1m    "result": "success",[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-12-12T04:39:50.3903337Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-12-12T04:39:50.3903572Z [36;1m  }[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-12-12T04:39:50.3903766Z [36;1m}'[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-12-12T04:39:50.3903983Z [36;1m[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-12-12T04:39:50.3904190Z [36;1mecho "Job status:"[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-12-12T04:39:50.3904573Z [36;1mecho $JOBS | jq -r 'to_entries[] | " - \(.key): \(.value.result)"'[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-12-12T04:39:50.3904927Z [36;1m[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-12-12T04:39:50.3905215Z [36;1mfor i in $(echo $JOBS | jq -r 'to_entries[] | .value.result'); do[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-12-12T04:39:50.3905611Z [36;1m  if [ "$i" != "success" ] && [ "$i" != "skipped" ]; then[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-12-12T04:39:50.3905907Z [36;1m    echo ""[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-12-12T04:39:50.3906202Z [36;1m    echo "Status check not okay!"[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-12-12T04:39:50.3906475Z [36;1m    exit 1[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-12-12T04:39:50.3906691Z [36;1m  fi[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-12-12T04:39:50.3906885Z [36;1mdone[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-12-12T04:39:50.3945336Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-12-12T04:39:50.3946162Z env:
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-12-12T04:39:50.3946478Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-12-12T04:39:50.3946831Z ##[endgroup]
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-12-12T04:39:50.4025878Z Job status:
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-12-12T04:39:50.4053350Z  - conditional: success
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-12-12T04:39:50.4053704Z  - build-keycloak: success
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-12-12T04:39:50.4053982Z  - admin-client: success
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-12-12T04:39:50.4054245Z  - ui-shared: success
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-12-12T04:39:50.4054479Z  - account-ui: success
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-12-12T04:39:50.4054732Z  - account-ui-e2e: failure
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-12-12T04:39:50.4054981Z  - admin-ui: success
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-12-12T04:39:50.4055218Z  - admin-ui-e2e: success
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-12-12T04:39:50.4055479Z  - keycloak-admin-client: success
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-12-12T04:39:50.4090249Z 
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-12-12T04:39:50.4090460Z Status check not okay!
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2025-12-12T04:39:50.4103857Z ##[error]Process completed with exit code 1.
