@@ -1,0 +1,311 @@
+Build distribution	Build Keycloak	﻿2026-01-02T04:18:54.6677549Z Prepare all required actions
+Build distribution	Build Keycloak	2026-01-02T04:18:54.6677984Z Getting action download info
+Build distribution	Build Keycloak	2026-01-02T04:18:54.8548751Z Download action repository 'actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+Build distribution	Build Keycloak	2026-01-02T04:18:54.9822653Z ##[group]Run ./.github/actions/build-keycloak
+Build distribution	Build Keycloak	2026-01-02T04:18:54.9822971Z with:
+Build distribution	Build Keycloak	2026-01-02T04:18:54.9823156Z   upload-m2-repo: false
+Build distribution	Build Keycloak	2026-01-02T04:18:54.9823355Z   upload-dist: true
+Build distribution	Build Keycloak	2026-01-02T04:18:54.9823533Z env:
+Build distribution	Build Keycloak	2026-01-02T04:18:54.9823787Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Build distribution	Build Keycloak	2026-01-02T04:18:54.9824135Z   MINIKUBE_VERSION: v1.37.0
+Build distribution	Build Keycloak	2026-01-02T04:18:54.9824350Z   KUBERNETES_VERSION: v1.32.9
+Build distribution	Build Keycloak	2026-01-02T04:18:54.9824563Z   MINIKUBE_MEMORY: 4096
+Build distribution	Build Keycloak	2026-01-02T04:18:54.9824763Z ##[endgroup]
+Build distribution	Build Keycloak	2026-01-02T04:18:54.9894196Z Prepare all required actions
+Build distribution	Build Keycloak	2026-01-02T04:18:54.9894486Z Getting action download info
+Build distribution	Build Keycloak	2026-01-02T04:18:55.1463862Z Download action repository 'actions/setup-java@c5195efecf7bdfc987ee8bae7a71cb8b11521c00' (SHA:c5195efecf7bdfc987ee8bae7a71cb8b11521c00)
+Build distribution	Build Keycloak	2026-01-02T04:18:55.9661643Z ##[group]Run ./.github/actions/java-setup
+Build distribution	Build Keycloak	2026-01-02T04:18:55.9661995Z with:
+Build distribution	Build Keycloak	2026-01-02T04:18:55.9731076Z   distribution: temurin
+Build distribution	Build Keycloak	2026-01-02T04:18:55.9731324Z   java-version: 21
+Build distribution	Build Keycloak	2026-01-02T04:18:55.9731507Z env:
+Build distribution	Build Keycloak	2026-01-02T04:18:55.9731863Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Build distribution	Build Keycloak	2026-01-02T04:18:55.9732232Z   MINIKUBE_VERSION: v1.37.0
+Build distribution	Build Keycloak	2026-01-02T04:18:55.9732482Z   KUBERNETES_VERSION: v1.32.9
+Build distribution	Build Keycloak	2026-01-02T04:18:55.9732743Z   MINIKUBE_MEMORY: 4096
+Build distribution	Build Keycloak	2026-01-02T04:18:55.9732978Z ##[endgroup]
+Build distribution	Build Keycloak	2026-01-02T04:18:55.9822451Z ##[group]Run actions/setup-java@c5195efecf7bdfc987ee8bae7a71cb8b11521c00
+Build distribution	Build Keycloak	2026-01-02T04:18:55.9822822Z with:
+Build distribution	Build Keycloak	2026-01-02T04:18:55.9823002Z   distribution: temurin
+Build distribution	Build Keycloak	2026-01-02T04:18:55.9823199Z   java-version: 21
+Build distribution	Build Keycloak	2026-01-02T04:18:55.9823391Z   java-package: jdk
+Build distribution	Build Keycloak	2026-01-02T04:18:55.9823582Z   check-latest: false
+Build distribution	Build Keycloak	2026-01-02T04:18:55.9823776Z   server-id: github
+Build distribution	Build Keycloak	2026-01-02T04:18:55.9823979Z   server-username: GITHUB_ACTOR
+Build distribution	Build Keycloak	2026-01-02T04:18:55.9824216Z   server-password: GITHUB_TOKEN
+Build distribution	Build Keycloak	2026-01-02T04:18:55.9824445Z   overwrite-settings: true
+Build distribution	Build Keycloak	2026-01-02T04:18:55.9824655Z   job-status: success
+Build distribution	Build Keycloak	2026-01-02T04:18:55.9824964Z   token: ***
+Build distribution	Build Keycloak	2026-01-02T04:18:55.9825125Z env:
+Build distribution	Build Keycloak	2026-01-02T04:18:55.9825380Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Build distribution	Build Keycloak	2026-01-02T04:18:55.9825723Z   MINIKUBE_VERSION: v1.37.0
+Build distribution	Build Keycloak	2026-01-02T04:18:55.9825946Z   KUBERNETES_VERSION: v1.32.9
+Build distribution	Build Keycloak	2026-01-02T04:18:55.9826164Z   MINIKUBE_MEMORY: 4096
+Build distribution	Build Keycloak	2026-01-02T04:18:55.9826359Z ##[endgroup]
+Build distribution	Build Keycloak	2026-01-02T04:18:56.1751256Z ##[group]Installed distributions
+Build distribution	Build Keycloak	2026-01-02T04:18:56.1814679Z Resolved Java 21.0.9+10 from tool-cache
+Build distribution	Build Keycloak	2026-01-02T04:18:56.1816028Z Setting Java 21.0.9+10 as the default
+Build distribution	Build Keycloak	2026-01-02T04:18:56.1828612Z Creating toolchains.xml for JDK version 21 from temurin
+Build distribution	Build Keycloak	2026-01-02T04:18:56.1904612Z Writing to /home/runner/.m2/toolchains.xml
+Build distribution	Build Keycloak	2026-01-02T04:18:56.1905586Z 
+Build distribution	Build Keycloak	2026-01-02T04:18:56.1905797Z Java configuration:
+Build distribution	Build Keycloak	2026-01-02T04:18:56.1906996Z   Distribution: temurin
+Build distribution	Build Keycloak	2026-01-02T04:18:56.1907395Z   Version: 21.0.9+10
+Build distribution	Build Keycloak	2026-01-02T04:18:56.1908514Z   Path: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.9-10/x64
+Build distribution	Build Keycloak	2026-01-02T04:18:56.1909029Z 
+Build distribution	Build Keycloak	2026-01-02T04:18:56.1909491Z ##[endgroup]
+Build distribution	Build Keycloak	2026-01-02T04:18:56.1926645Z Creating settings.xml with server-id: github
+Build distribution	Build Keycloak	2026-01-02T04:18:56.1933462Z Writing to /home/runner/.m2/settings.xml
+Build distribution	Build Keycloak	2026-01-02T04:18:56.2089909Z Prepare all required actions
+Build distribution	Build Keycloak	2026-01-02T04:18:56.2090535Z Getting action download info
+Build distribution	Build Keycloak	2026-01-02T04:18:56.3697667Z Download action repository 'actions/cache@5a3ec84eff668545956fd18022155c47e93e2684' (SHA:5a3ec84eff668545956fd18022155c47e93e2684)
+Build distribution	Build Keycloak	2026-01-02T04:18:56.4877013Z ##[group]Run ./.github/actions/maven-cache
+Build distribution	Build Keycloak	2026-01-02T04:18:56.4877293Z with:
+Build distribution	Build Keycloak	2026-01-02T04:18:56.4877493Z   create-cache-if-it-doesnt-exist: true
+Build distribution	Build Keycloak	2026-01-02T04:18:56.4877740Z env:
+Build distribution	Build Keycloak	2026-01-02T04:18:56.4877992Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Build distribution	Build Keycloak	2026-01-02T04:18:56.4878331Z   MINIKUBE_VERSION: v1.37.0
+Build distribution	Build Keycloak	2026-01-02T04:18:56.4878757Z   KUBERNETES_VERSION: v1.32.9
+Build distribution	Build Keycloak	2026-01-02T04:18:56.4878976Z   MINIKUBE_MEMORY: 4096
+Build distribution	Build Keycloak	2026-01-02T04:18:56.4879287Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.9-10/x64
+Build distribution	Build Keycloak	2026-01-02T04:18:56.4879734Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.9-10/x64
+Build distribution	Build Keycloak	2026-01-02T04:18:56.4880261Z ##[endgroup]
+Build distribution	Build Keycloak	2026-01-02T04:18:56.4910903Z ##[group]Run echo "key=mvn-`date -u "+%Y-%U"`" >> $GITHUB_OUTPUT
+Build distribution	Build Keycloak	2026-01-02T04:18:56.4911356Z [36;1mecho "key=mvn-`date -u "+%Y-%U"`" >> $GITHUB_OUTPUT[0m
+Build distribution	Build Keycloak	2026-01-02T04:18:56.4950833Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Build distribution	Build Keycloak	2026-01-02T04:18:56.4951158Z env:
+Build distribution	Build Keycloak	2026-01-02T04:18:56.4951424Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Build distribution	Build Keycloak	2026-01-02T04:18:56.4951753Z   MINIKUBE_VERSION: v1.37.0
+Build distribution	Build Keycloak	2026-01-02T04:18:56.4951978Z   KUBERNETES_VERSION: v1.32.9
+Build distribution	Build Keycloak	2026-01-02T04:18:56.4952186Z   MINIKUBE_MEMORY: 4096
+Build distribution	Build Keycloak	2026-01-02T04:18:56.4952485Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.9-10/x64
+Build distribution	Build Keycloak	2026-01-02T04:18:56.4952962Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.9-10/x64
+Build distribution	Build Keycloak	2026-01-02T04:18:56.4953308Z ##[endgroup]
+Build distribution	Build Keycloak	2026-01-02T04:18:56.5107952Z ##[group]Run actions/cache@5a3ec84eff668545956fd18022155c47e93e2684
+Build distribution	Build Keycloak	2026-01-02T04:18:56.5108297Z with:
+Build distribution	Build Keycloak	2026-01-02T04:18:56.5108539Z   path: ~/.m2/repository/*/*
+Build distribution	Build Keycloak	!~/.m2/repository/org/keycloak
+Build distribution	Build Keycloak	
+Build distribution	Build Keycloak	2026-01-02T04:18:56.5108843Z   key: mvn-Linux-mvn-2026-00
+Build distribution	Build Keycloak	2026-01-02T04:18:56.5109077Z   restore-keys: mvn--mvn-2026-00
+Build distribution	Build Keycloak	
+Build distribution	Build Keycloak	2026-01-02T04:18:56.5109309Z   enableCrossOsArchive: true
+Build distribution	Build Keycloak	2026-01-02T04:18:56.5109530Z   fail-on-cache-miss: false
+Build distribution	Build Keycloak	2026-01-02T04:18:56.5109737Z   lookup-only: false
+Build distribution	Build Keycloak	2026-01-02T04:18:56.5109926Z   save-always: false
+Build distribution	Build Keycloak	2026-01-02T04:18:56.5110349Z env:
+Build distribution	Build Keycloak	2026-01-02T04:18:56.5110614Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Build distribution	Build Keycloak	2026-01-02T04:18:56.5110950Z   MINIKUBE_VERSION: v1.37.0
+Build distribution	Build Keycloak	2026-01-02T04:18:56.5111158Z   KUBERNETES_VERSION: v1.32.9
+Build distribution	Build Keycloak	2026-01-02T04:18:56.5111383Z   MINIKUBE_MEMORY: 4096
+Build distribution	Build Keycloak	2026-01-02T04:18:56.5111677Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.9-10/x64
+Build distribution	Build Keycloak	2026-01-02T04:18:56.5112123Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.9-10/x64
+Build distribution	Build Keycloak	2026-01-02T04:18:56.5112456Z ##[endgroup]
+Build distribution	Build Keycloak	2026-01-02T04:18:56.8252174Z Cache hit for: mvn-Linux-mvn-2026-00
+Build distribution	Build Keycloak	2026-01-02T04:18:58.0371562Z Received 50331648 of 701456867 (7.2%), 48.0 MBs/sec
+Build distribution	Build Keycloak	2026-01-02T04:18:59.0409490Z Received 222298112 of 701456867 (31.7%), 105.9 MBs/sec
+Build distribution	Build Keycloak	2026-01-02T04:19:00.0376777Z Received 390070272 of 701456867 (55.6%), 124.0 MBs/sec
+Build distribution	Build Keycloak	2026-01-02T04:19:01.0515604Z Received 536870912 of 701456867 (76.5%), 127.5 MBs/sec
+Build distribution	Build Keycloak	2026-01-02T04:19:02.0522791Z Received 671088640 of 701456867 (95.7%), 127.6 MBs/sec
+Build distribution	Build Keycloak	2026-01-02T04:19:02.2746899Z Received 701456867 of 701456867 (100.0%), 127.7 MBs/sec
+Build distribution	Build Keycloak	2026-01-02T04:19:02.2795884Z Cache Size: ~669 MB (701456867 B)
+Build distribution	Build Keycloak	2026-01-02T04:19:02.2861273Z [command]/usr/bin/tar -xf /home/runner/work/_temp/e36d9791-47ec-420d-adba-fc9f72dfd8f9/cache.tzst -P -C /home/runner/work/keycloak/keycloak --use-compress-program unzstd
+Build distribution	Build Keycloak	2026-01-02T04:19:04.2747807Z Cache restored successfully
+Build distribution	Build Keycloak	2026-01-02T04:19:04.4159824Z Cache restored from key: mvn-Linux-mvn-2026-00
+Build distribution	Build Keycloak	2026-01-02T04:19:04.4295881Z Prepare all required actions
+Build distribution	Build Keycloak	2026-01-02T04:19:04.4296186Z Getting action download info
+Build distribution	Build Keycloak	2026-01-02T04:19:04.6203861Z ##[group]Run ./.github/actions/node-cache
+Build distribution	Build Keycloak	2026-01-02T04:19:04.6204328Z env:
+Build distribution	Build Keycloak	2026-01-02T04:19:04.6204629Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Build distribution	Build Keycloak	2026-01-02T04:19:04.6204966Z   MINIKUBE_VERSION: v1.37.0
+Build distribution	Build Keycloak	2026-01-02T04:19:04.6205190Z   KUBERNETES_VERSION: v1.32.9
+Build distribution	Build Keycloak	2026-01-02T04:19:04.6205409Z   MINIKUBE_MEMORY: 4096
+Build distribution	Build Keycloak	2026-01-02T04:19:04.6205714Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.9-10/x64
+Build distribution	Build Keycloak	2026-01-02T04:19:04.6206153Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.9-10/x64
+Build distribution	Build Keycloak	2026-01-02T04:19:04.6206501Z ##[endgroup]
+Build distribution	Build Keycloak	2026-01-02T04:19:04.6223297Z ##[group]Run echo "node=$(cat js/pom.xml | grep '<node.version>' | cut -d '>' -f 2 | cut -d '<' -f 1 | cut -c 2-)" >> $GITHUB_OUTPUT
+Build distribution	Build Keycloak	2026-01-02T04:19:04.6224167Z [36;1mecho "node=$(cat js/pom.xml | grep '<node.version>' | cut -d '>' -f 2 | cut -d '<' -f 1 | cut -c 2-)" >> $GITHUB_OUTPUT[0m
+Build distribution	Build Keycloak	2026-01-02T04:19:04.6224770Z [36;1mecho "pnpm=$(cat js/pom.xml | grep '<pnpm.version>' | cut -d '>' -f 2 | cut -d '<' -f 1 | cut -c 1-)" >> $GITHUB_OUTPUT[0m
+Build distribution	Build Keycloak	2026-01-02T04:19:04.6259390Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Build distribution	Build Keycloak	2026-01-02T04:19:04.6259709Z env:
+Build distribution	Build Keycloak	2026-01-02T04:19:04.6259973Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Build distribution	Build Keycloak	2026-01-02T04:19:04.6280936Z   MINIKUBE_VERSION: v1.37.0
+Build distribution	Build Keycloak	2026-01-02T04:19:04.6281231Z   KUBERNETES_VERSION: v1.32.9
+Build distribution	Build Keycloak	2026-01-02T04:19:04.6281475Z   MINIKUBE_MEMORY: 4096
+Build distribution	Build Keycloak	2026-01-02T04:19:04.6281792Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.9-10/x64
+Build distribution	Build Keycloak	2026-01-02T04:19:04.6282249Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.9-10/x64
+Build distribution	Build Keycloak	2026-01-02T04:19:04.6282608Z ##[endgroup]
+Build distribution	Build Keycloak	2026-01-02T04:19:04.6433008Z ##[group]Run actions/cache@5a3ec84eff668545956fd18022155c47e93e2684
+Build distribution	Build Keycloak	2026-01-02T04:19:04.6433329Z with:
+Build distribution	Build Keycloak	2026-01-02T04:19:04.6433669Z   path: ~/.m2/repository/com/github/eirslett/node
+Build distribution	Build Keycloak	~/.m2/repository/com/github/eirslett/pnpm
+Build distribution	Build Keycloak	
+Build distribution	Build Keycloak	2026-01-02T04:19:04.6434142Z   key: Linux-frontend-plugin-artifacts-24.9.0-10.14.0
+Build distribution	Build Keycloak	2026-01-02T04:19:04.6434462Z   enableCrossOsArchive: false
+Build distribution	Build Keycloak	2026-01-02T04:19:04.6434694Z   fail-on-cache-miss: false
+Build distribution	Build Keycloak	2026-01-02T04:19:04.6434907Z   lookup-only: false
+Build distribution	Build Keycloak	2026-01-02T04:19:04.6435088Z   save-always: false
+Build distribution	Build Keycloak	2026-01-02T04:19:04.6435265Z env:
+Build distribution	Build Keycloak	2026-01-02T04:19:04.6435529Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Build distribution	Build Keycloak	2026-01-02T04:19:04.6435853Z   MINIKUBE_VERSION: v1.37.0
+Build distribution	Build Keycloak	2026-01-02T04:19:04.6436072Z   KUBERNETES_VERSION: v1.32.9
+Build distribution	Build Keycloak	2026-01-02T04:19:04.6436289Z   MINIKUBE_MEMORY: 4096
+Build distribution	Build Keycloak	2026-01-02T04:19:04.6436589Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.9-10/x64
+Build distribution	Build Keycloak	2026-01-02T04:19:04.6437030Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.9-10/x64
+Build distribution	Build Keycloak	2026-01-02T04:19:04.6437374Z ##[endgroup]
+Build distribution	Build Keycloak	2026-01-02T04:19:04.9932951Z Cache hit for: Linux-frontend-plugin-artifacts-24.9.0-10.14.0
+Build distribution	Build Keycloak	2026-01-02T04:19:06.2055879Z Received 50331648 of 178075408 (28.3%), 48.0 MBs/sec
+Build distribution	Build Keycloak	2026-01-02T04:19:07.0964433Z Received 178075408 of 178075408 (100.0%), 89.8 MBs/sec
+Build distribution	Build Keycloak	2026-01-02T04:19:07.0967469Z Cache Size: ~170 MB (178075408 B)
+Build distribution	Build Keycloak	2026-01-02T04:19:07.1027567Z [command]/usr/bin/tar -xf /home/runner/work/_temp/3b63d704-c8e3-4f56-bc14-736660867c6a/cache.tzst -P -C /home/runner/work/keycloak/keycloak --use-compress-program unzstd
+Build distribution	Build Keycloak	2026-01-02T04:19:07.6057058Z Cache restored successfully
+Build distribution	Build Keycloak	2026-01-02T04:19:07.6474896Z Cache restored from key: Linux-frontend-plugin-artifacts-24.9.0-10.14.0
+Build distribution	Build Keycloak	2026-01-02T04:19:07.6596670Z Prepare all required actions
+Build distribution	Build Keycloak	2026-01-02T04:19:07.6596983Z Getting action download info
+Build distribution	Build Keycloak	2026-01-02T04:19:07.8327343Z ##[group]Run ./.github/actions/pnpm-store-cache
+Build distribution	Build Keycloak	2026-01-02T04:19:07.8327623Z env:
+Build distribution	Build Keycloak	2026-01-02T04:19:07.8327921Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Build distribution	Build Keycloak	2026-01-02T04:19:07.8328276Z   MINIKUBE_VERSION: v1.37.0
+Build distribution	Build Keycloak	2026-01-02T04:19:07.8328515Z   KUBERNETES_VERSION: v1.32.9
+Build distribution	Build Keycloak	2026-01-02T04:19:07.8328746Z   MINIKUBE_MEMORY: 4096
+Build distribution	Build Keycloak	2026-01-02T04:19:07.8329050Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.9-10/x64
+Build distribution	Build Keycloak	2026-01-02T04:19:07.8329723Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.9-10/x64
+Build distribution	Build Keycloak	2026-01-02T04:19:07.8330226Z ##[endgroup]
+Build distribution	Build Keycloak	2026-01-02T04:19:07.8343892Z ##[group]Run echo "key=pnpm-store-`date -u "+%Y-%U"`" >> $GITHUB_OUTPUT
+Build distribution	Build Keycloak	2026-01-02T04:19:07.8344351Z [36;1mecho "key=pnpm-store-`date -u "+%Y-%U"`" >> $GITHUB_OUTPUT[0m
+Build distribution	Build Keycloak	2026-01-02T04:19:07.8376653Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Build distribution	Build Keycloak	2026-01-02T04:19:07.8376960Z env:
+Build distribution	Build Keycloak	2026-01-02T04:19:07.8377228Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Build distribution	Build Keycloak	2026-01-02T04:19:07.8377578Z   MINIKUBE_VERSION: v1.37.0
+Build distribution	Build Keycloak	2026-01-02T04:19:07.8377811Z   KUBERNETES_VERSION: v1.32.9
+Build distribution	Build Keycloak	2026-01-02T04:19:07.8378199Z   MINIKUBE_MEMORY: 4096
+Build distribution	Build Keycloak	2026-01-02T04:19:07.8378510Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.9-10/x64
+Build distribution	Build Keycloak	2026-01-02T04:19:07.8378959Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.9-10/x64
+Build distribution	Build Keycloak	2026-01-02T04:19:07.8379302Z ##[endgroup]
+Build distribution	Build Keycloak	2026-01-02T04:19:07.8477691Z ##[group]Run actions/cache@5a3ec84eff668545956fd18022155c47e93e2684
+Build distribution	Build Keycloak	2026-01-02T04:19:07.8478014Z with:
+Build distribution	Build Keycloak	2026-01-02T04:19:07.8478324Z   path: ~/.local/share/pnpm/store
+Build distribution	Build Keycloak	~/AppData/Local/pnpm/store
+Build distribution	Build Keycloak	~/Library/pnpm/store
+Build distribution	Build Keycloak	
+Build distribution	Build Keycloak	2026-01-02T04:19:07.8478717Z   key: Linux-pnpm-store-2026-00
+Build distribution	Build Keycloak	2026-01-02T04:19:07.8478965Z   enableCrossOsArchive: false
+Build distribution	Build Keycloak	2026-01-02T04:19:07.8479203Z   fail-on-cache-miss: false
+Build distribution	Build Keycloak	2026-01-02T04:19:07.8479425Z   lookup-only: false
+Build distribution	Build Keycloak	2026-01-02T04:19:07.8479620Z   save-always: false
+Build distribution	Build Keycloak	2026-01-02T04:19:07.8479798Z env:
+Build distribution	Build Keycloak	2026-01-02T04:19:07.8480320Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Build distribution	Build Keycloak	2026-01-02T04:19:07.8480679Z   MINIKUBE_VERSION: v1.37.0
+Build distribution	Build Keycloak	2026-01-02T04:19:07.8480914Z   KUBERNETES_VERSION: v1.32.9
+Build distribution	Build Keycloak	2026-01-02T04:19:07.8481135Z   MINIKUBE_MEMORY: 4096
+Build distribution	Build Keycloak	2026-01-02T04:19:07.8481442Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.9-10/x64
+Build distribution	Build Keycloak	2026-01-02T04:19:07.8481880Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.9-10/x64
+Build distribution	Build Keycloak	2026-01-02T04:19:07.8482236Z ##[endgroup]
+Build distribution	Build Keycloak	2026-01-02T04:19:08.1753573Z Cache hit for: Linux-pnpm-store-2026-00
+Build distribution	Build Keycloak	2026-01-02T04:19:09.3846112Z Received 50331648 of 140446345 (35.8%), 48.0 MBs/sec
+Build distribution	Build Keycloak	2026-01-02T04:19:09.9600678Z Received 140446345 of 140446345 (100.0%), 85.0 MBs/sec
+Build distribution	Build Keycloak	2026-01-02T04:19:09.9602947Z Cache Size: ~134 MB (140446345 B)
+Build distribution	Build Keycloak	2026-01-02T04:19:09.9698745Z [command]/usr/bin/tar -xf /home/runner/work/_temp/84950458-8213-47aa-893d-d175d8b2db4d/cache.tzst -P -C /home/runner/work/keycloak/keycloak --use-compress-program unzstd
+Build distribution	Build Keycloak	2026-01-02T04:19:12.7873684Z Cache restored successfully
+Build distribution	Build Keycloak	2026-01-02T04:19:12.8236594Z Cache restored from key: Linux-pnpm-store-2026-00
+Build distribution	Build Keycloak	2026-01-02T04:19:12.8341167Z ##[group]Run # Ensure this plugin is built first to avoid warnings in the build
+Build distribution	Build Keycloak	2026-01-02T04:19:12.8341696Z [36;1m# Ensure this plugin is built first to avoid warnings in the build[0m
+Build distribution	Build Keycloak	2026-01-02T04:19:12.8342220Z [36;1m./mvnw install -Pdistribution -am -pl distribution/maven-plugins/licenses-processor[0m
+Build distribution	Build Keycloak	2026-01-02T04:19:12.8342870Z [36;1m# By using "dependency:resolve", it will download all dependencies used in later stages for running the tests[0m
+Build distribution	Build Keycloak	2026-01-02T04:19:12.8343690Z [36;1m./mvnw install dependency:resolve -V -e -DskipTests -DskipExamples -DexcludeGroupIds=org.keycloak -Dsilent=true -DcommitProtoLockChanges=true[0m
+Build distribution	Build Keycloak	2026-01-02T04:19:12.8376050Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Build distribution	Build Keycloak	2026-01-02T04:19:12.8376378Z env:
+Build distribution	Build Keycloak	2026-01-02T04:19:12.8376657Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Build distribution	Build Keycloak	2026-01-02T04:19:12.8377005Z   MINIKUBE_VERSION: v1.37.0
+Build distribution	Build Keycloak	2026-01-02T04:19:12.8377238Z   KUBERNETES_VERSION: v1.32.9
+Build distribution	Build Keycloak	2026-01-02T04:19:12.8377465Z   MINIKUBE_MEMORY: 4096
+Build distribution	Build Keycloak	2026-01-02T04:19:12.8377790Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.9-10/x64
+Build distribution	Build Keycloak	2026-01-02T04:19:12.8378242Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.9-10/x64
+Build distribution	Build Keycloak	2026-01-02T04:19:12.8378588Z ##[endgroup]
+Build distribution	Build Keycloak	2026-01-02T04:19:13.0421575Z wget: Failed to fetch https://repo.maven.apache.org/maven2/org/apache/maven/apache-maven/3.9.8/apache-maven-3.9.8-bin.zip
+Build distribution	Build Keycloak	2026-01-02T04:19:13.0442820Z ##[error]Process completed with exit code 1.
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	﻿2026-01-02T04:19:27.3373511Z Prepare all required actions
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2026-01-02T04:19:27.3438462Z ##[group]Run ./.github/actions/status-check
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2026-01-02T04:19:27.3438821Z with:
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2026-01-02T04:19:27.3439679Z   jobs: {
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	  "conditional": {
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	    "outputs": {
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	      "operator": "true"
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	    }
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	  "build": {
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	    "result": "failure",
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	  "test-local-apiserver": {
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	    "result": "skipped",
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	  "test-remote": {
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	    "result": "skipped",
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	  "test-olm": {
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	    "result": "skipped",
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	  }
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	}
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2026-01-02T04:19:27.3440612Z env:
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2026-01-02T04:19:27.3440925Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2026-01-02T04:19:27.3441538Z   MINIKUBE_VERSION: v1.37.0
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2026-01-02T04:19:27.3441809Z   KUBERNETES_VERSION: v1.32.9
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2026-01-02T04:19:27.3442078Z   MINIKUBE_MEMORY: 4096
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2026-01-02T04:19:27.3442304Z ##[endgroup]
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2026-01-02T04:19:27.3538806Z ##[group]Run JOBS='{
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2026-01-02T04:19:27.3539183Z [36;1mJOBS='{[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2026-01-02T04:19:27.3539431Z [36;1m  "conditional": {[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2026-01-02T04:19:27.3539755Z [36;1m    "result": "success",[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2026-01-02T04:19:27.3540041Z [36;1m    "outputs": {[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2026-01-02T04:19:27.3540308Z [36;1m      "operator": "true"[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2026-01-02T04:19:27.3540608Z [36;1m    }[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2026-01-02T04:19:27.3540822Z [36;1m  },[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2026-01-02T04:19:27.3541035Z [36;1m  "build": {[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2026-01-02T04:19:27.3541266Z [36;1m    "result": "failure",[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2026-01-02T04:19:27.3541520Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2026-01-02T04:19:27.3541756Z [36;1m  },[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2026-01-02T04:19:27.3542039Z [36;1m  "test-local-apiserver": {[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2026-01-02T04:19:27.3542325Z [36;1m    "result": "skipped",[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2026-01-02T04:19:27.3542597Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2026-01-02T04:19:27.3542845Z [36;1m  },[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2026-01-02T04:19:27.3543061Z [36;1m  "test-remote": {[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2026-01-02T04:19:27.3543314Z [36;1m    "result": "skipped",[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2026-01-02T04:19:27.3543575Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2026-01-02T04:19:27.3543802Z [36;1m  },[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2026-01-02T04:19:27.3544014Z [36;1m  "test-olm": {[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2026-01-02T04:19:27.3544258Z [36;1m    "result": "skipped",[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2026-01-02T04:19:27.3544515Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2026-01-02T04:19:27.3544741Z [36;1m  }[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2026-01-02T04:19:27.3544940Z [36;1m}'[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2026-01-02T04:19:27.3545147Z [36;1m[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2026-01-02T04:19:27.3545361Z [36;1mecho "Job status:"[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2026-01-02T04:19:27.3545724Z [36;1mecho $JOBS | jq -r 'to_entries[] | " - \(.key): \(.value.result)"'[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2026-01-02T04:19:27.3546073Z [36;1m[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2026-01-02T04:19:27.3546376Z [36;1mfor i in $(echo $JOBS | jq -r 'to_entries[] | .value.result'); do[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2026-01-02T04:19:27.3546762Z [36;1m  if [ "$i" != "success" ] && [ "$i" != "skipped" ]; then[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2026-01-02T04:19:27.3547217Z [36;1m    echo ""[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2026-01-02T04:19:27.3547464Z [36;1m    echo "Status check not okay!"[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2026-01-02T04:19:27.3547742Z [36;1m    exit 1[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2026-01-02T04:19:27.3547955Z [36;1m  fi[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2026-01-02T04:19:27.3548160Z [36;1mdone[0m
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2026-01-02T04:19:27.3584820Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2026-01-02T04:19:27.3585264Z env:
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2026-01-02T04:19:27.3585577Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2026-01-02T04:19:27.3585958Z   MINIKUBE_VERSION: v1.37.0
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2026-01-02T04:19:27.3586230Z   KUBERNETES_VERSION: v1.32.9
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2026-01-02T04:19:27.3586492Z   MINIKUBE_MEMORY: 4096
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2026-01-02T04:19:27.3586718Z ##[endgroup]
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2026-01-02T04:19:27.3660803Z Job status:
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2026-01-02T04:19:27.3687953Z  - conditional: success
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2026-01-02T04:19:27.3688288Z  - build: failure
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2026-01-02T04:19:27.3688553Z  - test-local-apiserver: skipped
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2026-01-02T04:19:27.3688837Z  - test-remote: skipped
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2026-01-02T04:19:27.3689106Z  - test-olm: skipped
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2026-01-02T04:19:27.3722073Z 
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2026-01-02T04:19:27.3722283Z Status check not okay!
+Status Check - Keycloak Operator CI	Run /./.github/actions/status-check	2026-01-02T04:19:27.3736251Z ##[error]Process completed with exit code 1.
