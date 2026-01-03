@@ -1,0 +1,297 @@
+Build Keycloak	Build Keycloak	﻿2026-01-03T04:12:00.1437712Z Prepare all required actions
+Build Keycloak	Build Keycloak	2026-01-03T04:12:00.1438302Z Getting action download info
+Build Keycloak	Build Keycloak	2026-01-03T04:12:00.2568055Z Download action repository 'actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+Build Keycloak	Build Keycloak	2026-01-03T04:12:00.3890915Z ##[group]Run ./.github/actions/build-keycloak
+Build Keycloak	Build Keycloak	2026-01-03T04:12:00.3891309Z with:
+Build Keycloak	Build Keycloak	2026-01-03T04:12:00.3891543Z   upload-m2-repo: true
+Build Keycloak	Build Keycloak	2026-01-03T04:12:00.3891796Z   upload-dist: false
+Build Keycloak	Build Keycloak	2026-01-03T04:12:00.3892031Z env:
+Build Keycloak	Build Keycloak	2026-01-03T04:12:00.3892333Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Build Keycloak	Build Keycloak	2026-01-03T04:12:00.3892691Z ##[endgroup]
+Build Keycloak	Build Keycloak	2026-01-03T04:12:00.3969038Z Prepare all required actions
+Build Keycloak	Build Keycloak	2026-01-03T04:12:00.3969410Z Getting action download info
+Build Keycloak	Build Keycloak	2026-01-03T04:12:00.5018401Z Download action repository 'actions/setup-java@c5195efecf7bdfc987ee8bae7a71cb8b11521c00' (SHA:c5195efecf7bdfc987ee8bae7a71cb8b11521c00)
+Build Keycloak	Build Keycloak	2026-01-03T04:12:00.9145119Z ##[group]Run ./.github/actions/java-setup
+Build Keycloak	Build Keycloak	2026-01-03T04:12:00.9145479Z with:
+Build Keycloak	Build Keycloak	2026-01-03T04:12:00.9145782Z   distribution: temurin
+Build Keycloak	Build Keycloak	2026-01-03T04:12:00.9146050Z   java-version: 21
+Build Keycloak	Build Keycloak	2026-01-03T04:12:00.9146273Z env:
+Build Keycloak	Build Keycloak	2026-01-03T04:12:00.9146581Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Build Keycloak	Build Keycloak	2026-01-03T04:12:00.9146932Z ##[endgroup]
+Build Keycloak	Build Keycloak	2026-01-03T04:12:00.9239650Z ##[group]Run actions/setup-java@c5195efecf7bdfc987ee8bae7a71cb8b11521c00
+Build Keycloak	Build Keycloak	2026-01-03T04:12:00.9240323Z with:
+Build Keycloak	Build Keycloak	2026-01-03T04:12:00.9240627Z   distribution: temurin
+Build Keycloak	Build Keycloak	2026-01-03T04:12:00.9240955Z   java-version: 21
+Build Keycloak	Build Keycloak	2026-01-03T04:12:00.9241283Z   java-package: jdk
+Build Keycloak	Build Keycloak	2026-01-03T04:12:00.9241597Z   check-latest: false
+Build Keycloak	Build Keycloak	2026-01-03T04:12:00.9241937Z   server-id: github
+Build Keycloak	Build Keycloak	2026-01-03T04:12:00.9242250Z   server-username: GITHUB_ACTOR
+Build Keycloak	Build Keycloak	2026-01-03T04:12:00.9242678Z   server-password: GITHUB_TOKEN
+Build Keycloak	Build Keycloak	2026-01-03T04:12:00.9243134Z   overwrite-settings: true
+Build Keycloak	Build Keycloak	2026-01-03T04:12:00.9243501Z   job-status: success
+Build Keycloak	Build Keycloak	2026-01-03T04:12:00.9244034Z   token: ***
+Build Keycloak	Build Keycloak	2026-01-03T04:12:00.9244327Z env:
+Build Keycloak	Build Keycloak	2026-01-03T04:12:00.9244750Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Build Keycloak	Build Keycloak	2026-01-03T04:12:00.9245336Z ##[endgroup]
+Build Keycloak	Build Keycloak	2026-01-03T04:12:01.1193036Z ##[group]Installed distributions
+Build Keycloak	Build Keycloak	2026-01-03T04:12:01.1294200Z Resolved Java 21.0.9+10 from tool-cache
+Build Keycloak	Build Keycloak	2026-01-03T04:12:01.1295221Z Setting Java 21.0.9+10 as the default
+Build Keycloak	Build Keycloak	2026-01-03T04:12:01.1295578Z Creating toolchains.xml for JDK version 21 from temurin
+Build Keycloak	Build Keycloak	2026-01-03T04:12:01.1358443Z Writing to /home/runner/.m2/toolchains.xml
+Build Keycloak	Build Keycloak	2026-01-03T04:12:01.1358853Z 
+Build Keycloak	Build Keycloak	2026-01-03T04:12:01.1358998Z Java configuration:
+Build Keycloak	Build Keycloak	2026-01-03T04:12:01.1359992Z   Distribution: temurin
+Build Keycloak	Build Keycloak	2026-01-03T04:12:01.1360292Z   Version: 21.0.9+10
+Build Keycloak	Build Keycloak	2026-01-03T04:12:01.1361530Z   Path: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.9-10/x64
+Build Keycloak	Build Keycloak	2026-01-03T04:12:01.1361921Z 
+Build Keycloak	Build Keycloak	2026-01-03T04:12:01.1362252Z ##[endgroup]
+Build Keycloak	Build Keycloak	2026-01-03T04:12:01.1377978Z Creating settings.xml with server-id: github
+Build Keycloak	Build Keycloak	2026-01-03T04:12:01.1382518Z Writing to /home/runner/.m2/settings.xml
+Build Keycloak	Build Keycloak	2026-01-03T04:12:01.1541304Z Prepare all required actions
+Build Keycloak	Build Keycloak	2026-01-03T04:12:01.1541679Z Getting action download info
+Build Keycloak	Build Keycloak	2026-01-03T04:12:01.2938890Z Download action repository 'actions/cache@5a3ec84eff668545956fd18022155c47e93e2684' (SHA:5a3ec84eff668545956fd18022155c47e93e2684)
+Build Keycloak	Build Keycloak	2026-01-03T04:12:01.4806985Z ##[group]Run ./.github/actions/maven-cache
+Build Keycloak	Build Keycloak	2026-01-03T04:12:01.4807308Z with:
+Build Keycloak	Build Keycloak	2026-01-03T04:12:01.4807783Z   create-cache-if-it-doesnt-exist: true
+Build Keycloak	Build Keycloak	2026-01-03T04:12:01.4808039Z env:
+Build Keycloak	Build Keycloak	2026-01-03T04:12:01.4808303Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Build Keycloak	Build Keycloak	2026-01-03T04:12:01.4808739Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.9-10/x64
+Build Keycloak	Build Keycloak	2026-01-03T04:12:01.4809182Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.9-10/x64
+Build Keycloak	Build Keycloak	2026-01-03T04:12:01.4809546Z ##[endgroup]
+Build Keycloak	Build Keycloak	2026-01-03T04:12:01.4840984Z ##[group]Run echo "key=mvn-`date -u "+%Y-%U"`" >> $GITHUB_OUTPUT
+Build Keycloak	Build Keycloak	2026-01-03T04:12:01.4841488Z [36;1mecho "key=mvn-`date -u "+%Y-%U"`" >> $GITHUB_OUTPUT[0m
+Build Keycloak	Build Keycloak	2026-01-03T04:12:01.4882313Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Build Keycloak	Build Keycloak	2026-01-03T04:12:01.4882941Z env:
+Build Keycloak	Build Keycloak	2026-01-03T04:12:01.4883222Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Build Keycloak	Build Keycloak	2026-01-03T04:12:01.4883664Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.9-10/x64
+Build Keycloak	Build Keycloak	2026-01-03T04:12:01.4884112Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.9-10/x64
+Build Keycloak	Build Keycloak	2026-01-03T04:12:01.4884444Z ##[endgroup]
+Build Keycloak	Build Keycloak	2026-01-03T04:12:01.5046271Z ##[group]Run actions/cache@5a3ec84eff668545956fd18022155c47e93e2684
+Build Keycloak	Build Keycloak	2026-01-03T04:12:01.5046627Z with:
+Build Keycloak	Build Keycloak	2026-01-03T04:12:01.5046883Z   path: ~/.m2/repository/*/*
+Build Keycloak	Build Keycloak	!~/.m2/repository/org/keycloak
+Build Keycloak	Build Keycloak	
+Build Keycloak	Build Keycloak	2026-01-03T04:12:01.5047196Z   key: mvn-Linux-mvn-2026-00
+Build Keycloak	Build Keycloak	2026-01-03T04:12:01.5047921Z   restore-keys: mvn--mvn-2026-00
+Build Keycloak	Build Keycloak	
+Build Keycloak	Build Keycloak	2026-01-03T04:12:01.5048179Z   enableCrossOsArchive: true
+Build Keycloak	Build Keycloak	2026-01-03T04:12:01.5048432Z   fail-on-cache-miss: false
+Build Keycloak	Build Keycloak	2026-01-03T04:12:01.5048647Z   lookup-only: false
+Build Keycloak	Build Keycloak	2026-01-03T04:12:01.5048844Z   save-always: false
+Build Keycloak	Build Keycloak	2026-01-03T04:12:01.5049033Z env:
+Build Keycloak	Build Keycloak	2026-01-03T04:12:01.5049303Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Build Keycloak	Build Keycloak	2026-01-03T04:12:01.5049742Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.9-10/x64
+Build Keycloak	Build Keycloak	2026-01-03T04:12:01.5050208Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.9-10/x64
+Build Keycloak	Build Keycloak	2026-01-03T04:12:01.5050559Z ##[endgroup]
+Build Keycloak	Build Keycloak	2026-01-03T04:12:01.7052138Z Cache hit for: mvn-Linux-mvn-2026-00
+Build Keycloak	Build Keycloak	2026-01-03T04:12:02.7700217Z Received 226492416 of 701456867 (32.3%), 215.4 MBs/sec
+Build Keycloak	Build Keycloak	2026-01-03T04:12:03.7722025Z Received 520093696 of 701456867 (74.1%), 247.4 MBs/sec
+Build Keycloak	Build Keycloak	2026-01-03T04:12:04.5672923Z Received 701456867 of 701456867 (100.0%), 238.8 MBs/sec
+Build Keycloak	Build Keycloak	2026-01-03T04:12:04.5675787Z Cache Size: ~669 MB (701456867 B)
+Build Keycloak	Build Keycloak	2026-01-03T04:12:04.5717384Z [command]/usr/bin/tar -xf /home/runner/work/_temp/181d1f00-a035-4cf0-a898-575c8ed93689/cache.tzst -P -C /home/runner/work/keycloak/keycloak --use-compress-program unzstd
+Build Keycloak	Build Keycloak	2026-01-03T04:12:07.0030078Z Cache restored successfully
+Build Keycloak	Build Keycloak	2026-01-03T04:12:07.1567221Z Cache restored from key: mvn-Linux-mvn-2026-00
+Build Keycloak	Build Keycloak	2026-01-03T04:12:07.1739157Z Prepare all required actions
+Build Keycloak	Build Keycloak	2026-01-03T04:12:07.1739518Z Getting action download info
+Build Keycloak	Build Keycloak	2026-01-03T04:12:07.3147060Z ##[group]Run ./.github/actions/node-cache
+Build Keycloak	Build Keycloak	2026-01-03T04:12:07.3147365Z env:
+Build Keycloak	Build Keycloak	2026-01-03T04:12:07.3147862Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Build Keycloak	Build Keycloak	2026-01-03T04:12:07.3148300Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.9-10/x64
+Build Keycloak	Build Keycloak	2026-01-03T04:12:07.3148759Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.9-10/x64
+Build Keycloak	Build Keycloak	2026-01-03T04:12:07.3149265Z ##[endgroup]
+Build Keycloak	Build Keycloak	2026-01-03T04:12:07.3190928Z ##[group]Run echo "node=$(cat js/pom.xml | grep '<node.version>' | cut -d '>' -f 2 | cut -d '<' -f 1 | cut -c 2-)" >> $GITHUB_OUTPUT
+Build Keycloak	Build Keycloak	2026-01-03T04:12:07.3191624Z [36;1mecho "node=$(cat js/pom.xml | grep '<node.version>' | cut -d '>' -f 2 | cut -d '<' -f 1 | cut -c 2-)" >> $GITHUB_OUTPUT[0m
+Build Keycloak	Build Keycloak	2026-01-03T04:12:07.3192225Z [36;1mecho "pnpm=$(cat js/pom.xml | grep '<pnpm.version>' | cut -d '>' -f 2 | cut -d '<' -f 1 | cut -c 1-)" >> $GITHUB_OUTPUT[0m
+Build Keycloak	Build Keycloak	2026-01-03T04:12:07.3229572Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Build Keycloak	Build Keycloak	2026-01-03T04:12:07.3229908Z env:
+Build Keycloak	Build Keycloak	2026-01-03T04:12:07.3230193Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Build Keycloak	Build Keycloak	2026-01-03T04:12:07.3230631Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.9-10/x64
+Build Keycloak	Build Keycloak	2026-01-03T04:12:07.3231071Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.9-10/x64
+Build Keycloak	Build Keycloak	2026-01-03T04:12:07.3231419Z ##[endgroup]
+Build Keycloak	Build Keycloak	2026-01-03T04:12:07.3418940Z ##[group]Run actions/cache@5a3ec84eff668545956fd18022155c47e93e2684
+Build Keycloak	Build Keycloak	2026-01-03T04:12:07.3419303Z with:
+Build Keycloak	Build Keycloak	2026-01-03T04:12:07.3419681Z   path: ~/.m2/repository/com/github/eirslett/node
+Build Keycloak	Build Keycloak	~/.m2/repository/com/github/eirslett/pnpm
+Build Keycloak	Build Keycloak	
+Build Keycloak	Build Keycloak	2026-01-03T04:12:07.3420191Z   key: Linux-frontend-plugin-artifacts-24.9.0-10.14.0
+Build Keycloak	Build Keycloak	2026-01-03T04:12:07.3420522Z   enableCrossOsArchive: false
+Build Keycloak	Build Keycloak	2026-01-03T04:12:07.3420788Z   fail-on-cache-miss: false
+Build Keycloak	Build Keycloak	2026-01-03T04:12:07.3421063Z   lookup-only: false
+Build Keycloak	Build Keycloak	2026-01-03T04:12:07.3421279Z   save-always: false
+Build Keycloak	Build Keycloak	2026-01-03T04:12:07.3421698Z env:
+Build Keycloak	Build Keycloak	2026-01-03T04:12:07.3421972Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Build Keycloak	Build Keycloak	2026-01-03T04:12:07.3422441Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.9-10/x64
+Build Keycloak	Build Keycloak	2026-01-03T04:12:07.3422909Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.9-10/x64
+Build Keycloak	Build Keycloak	2026-01-03T04:12:07.3423255Z ##[endgroup]
+Build Keycloak	Build Keycloak	2026-01-03T04:12:07.5448291Z Cache hit for: Linux-frontend-plugin-artifacts-24.9.0-10.14.0
+Build Keycloak	Build Keycloak	2026-01-03T04:12:08.4223360Z Received 178075408 of 178075408 (100.0%), 210.2 MBs/sec
+Build Keycloak	Build Keycloak	2026-01-03T04:12:08.4224010Z Cache Size: ~170 MB (178075408 B)
+Build Keycloak	Build Keycloak	2026-01-03T04:12:08.4274772Z [command]/usr/bin/tar -xf /home/runner/work/_temp/0cf49ec8-0670-4624-80de-485f354d01c2/cache.tzst -P -C /home/runner/work/keycloak/keycloak --use-compress-program unzstd
+Build Keycloak	Build Keycloak	2026-01-03T04:12:08.9050874Z Cache restored successfully
+Build Keycloak	Build Keycloak	2026-01-03T04:12:08.9487124Z Cache restored from key: Linux-frontend-plugin-artifacts-24.9.0-10.14.0
+Build Keycloak	Build Keycloak	2026-01-03T04:12:08.9614618Z Prepare all required actions
+Build Keycloak	Build Keycloak	2026-01-03T04:12:08.9614956Z Getting action download info
+Build Keycloak	Build Keycloak	2026-01-03T04:12:09.0773769Z ##[group]Run ./.github/actions/pnpm-store-cache
+Build Keycloak	Build Keycloak	2026-01-03T04:12:09.0774087Z env:
+Build Keycloak	Build Keycloak	2026-01-03T04:12:09.0774380Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Build Keycloak	Build Keycloak	2026-01-03T04:12:09.0774834Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.9-10/x64
+Build Keycloak	Build Keycloak	2026-01-03T04:12:09.0775283Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.9-10/x64
+Build Keycloak	Build Keycloak	2026-01-03T04:12:09.0775633Z ##[endgroup]
+Build Keycloak	Build Keycloak	2026-01-03T04:12:09.0789998Z ##[group]Run echo "key=pnpm-store-`date -u "+%Y-%U"`" >> $GITHUB_OUTPUT
+Build Keycloak	Build Keycloak	2026-01-03T04:12:09.0790450Z [36;1mecho "key=pnpm-store-`date -u "+%Y-%U"`" >> $GITHUB_OUTPUT[0m
+Build Keycloak	Build Keycloak	2026-01-03T04:12:09.0825266Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Build Keycloak	Build Keycloak	2026-01-03T04:12:09.0825587Z env:
+Build Keycloak	Build Keycloak	2026-01-03T04:12:09.0825879Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Build Keycloak	Build Keycloak	2026-01-03T04:12:09.0826319Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.9-10/x64
+Build Keycloak	Build Keycloak	2026-01-03T04:12:09.0826796Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.9-10/x64
+Build Keycloak	Build Keycloak	2026-01-03T04:12:09.0827146Z ##[endgroup]
+Build Keycloak	Build Keycloak	2026-01-03T04:12:09.0930600Z ##[group]Run actions/cache@5a3ec84eff668545956fd18022155c47e93e2684
+Build Keycloak	Build Keycloak	2026-01-03T04:12:09.0930934Z with:
+Build Keycloak	Build Keycloak	2026-01-03T04:12:09.0931254Z   path: ~/.local/share/pnpm/store
+Build Keycloak	Build Keycloak	~/AppData/Local/pnpm/store
+Build Keycloak	Build Keycloak	~/Library/pnpm/store
+Build Keycloak	Build Keycloak	
+Build Keycloak	Build Keycloak	2026-01-03T04:12:09.0931649Z   key: Linux-pnpm-store-2026-00
+Build Keycloak	Build Keycloak	2026-01-03T04:12:09.0931912Z   enableCrossOsArchive: false
+Build Keycloak	Build Keycloak	2026-01-03T04:12:09.0932157Z   fail-on-cache-miss: false
+Build Keycloak	Build Keycloak	2026-01-03T04:12:09.0932381Z   lookup-only: false
+Build Keycloak	Build Keycloak	2026-01-03T04:12:09.0932597Z   save-always: false
+Build Keycloak	Build Keycloak	2026-01-03T04:12:09.0932782Z env:
+Build Keycloak	Build Keycloak	2026-01-03T04:12:09.0933060Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Build Keycloak	Build Keycloak	2026-01-03T04:12:09.0933498Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.9-10/x64
+Build Keycloak	Build Keycloak	2026-01-03T04:12:09.0933947Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.9-10/x64
+Build Keycloak	Build Keycloak	2026-01-03T04:12:09.0934319Z ##[endgroup]
+Build Keycloak	Build Keycloak	2026-01-03T04:12:09.2932471Z Cache hit for: Linux-pnpm-store-2026-00
+Build Keycloak	Build Keycloak	2026-01-03T04:12:10.0414297Z Received 140446345 of 140446345 (100.0%), 193.8 MBs/sec
+Build Keycloak	Build Keycloak	2026-01-03T04:12:10.0414885Z Cache Size: ~134 MB (140446345 B)
+Build Keycloak	Build Keycloak	2026-01-03T04:12:10.0443254Z [command]/usr/bin/tar -xf /home/runner/work/_temp/5c9f082c-1af0-4c80-a470-e833c222b68d/cache.tzst -P -C /home/runner/work/keycloak/keycloak --use-compress-program unzstd
+Build Keycloak	Build Keycloak	2026-01-03T04:12:12.6801254Z Cache restored successfully
+Build Keycloak	Build Keycloak	2026-01-03T04:12:12.7168284Z Cache restored from key: Linux-pnpm-store-2026-00
+Build Keycloak	Build Keycloak	2026-01-03T04:12:12.7275528Z ##[group]Run # Ensure this plugin is built first to avoid warnings in the build
+Build Keycloak	Build Keycloak	2026-01-03T04:12:12.7276083Z [36;1m# Ensure this plugin is built first to avoid warnings in the build[0m
+Build Keycloak	Build Keycloak	2026-01-03T04:12:12.7276602Z [36;1m./mvnw install -Pdistribution -am -pl distribution/maven-plugins/licenses-processor[0m
+Build Keycloak	Build Keycloak	2026-01-03T04:12:12.7277222Z [36;1m# By using "dependency:resolve", it will download all dependencies used in later stages for running the tests[0m
+Build Keycloak	Build Keycloak	2026-01-03T04:12:12.7278536Z [36;1m./mvnw install dependency:resolve -V -e -DskipTests -DskipExamples -DexcludeGroupIds=org.keycloak -Dsilent=true -DcommitProtoLockChanges=true[0m
+Build Keycloak	Build Keycloak	2026-01-03T04:12:12.7314029Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Build Keycloak	Build Keycloak	2026-01-03T04:12:12.7314352Z env:
+Build Keycloak	Build Keycloak	2026-01-03T04:12:12.7314644Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Build Keycloak	Build Keycloak	2026-01-03T04:12:12.7315104Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.9-10/x64
+Build Keycloak	Build Keycloak	2026-01-03T04:12:12.7315555Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.9-10/x64
+Build Keycloak	Build Keycloak	2026-01-03T04:12:12.7316076Z ##[endgroup]
+Build Keycloak	Build Keycloak	2026-01-03T04:12:12.9667191Z wget: Failed to fetch https://repo.maven.apache.org/maven2/org/apache/maven/apache-maven/3.9.8/apache-maven-3.9.8-bin.zip
+Build Keycloak	Build Keycloak	2026-01-03T04:12:12.9693696Z ##[error]Process completed with exit code 1.
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	﻿2026-01-03T04:13:37.0141709Z Prepare all required actions
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2026-01-03T04:13:37.0204977Z ##[group]Run ./.github/actions/status-check
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2026-01-03T04:13:37.0205284Z with:
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2026-01-03T04:13:37.0206620Z   jobs: {
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	  "conditional": {
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	    "outputs": {
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	      "js-ci": "true"
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	    }
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	  "build-keycloak": {
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	    "result": "failure",
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	  "admin-client": {
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	  "ui-shared": {
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	  "account-ui": {
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	  "account-ui-e2e": {
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	    "result": "skipped",
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	  "admin-ui": {
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	    "result": "success",
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	  "admin-ui-e2e": {
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	    "result": "skipped",
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	  },
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	  "keycloak-admin-client": {
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	    "result": "skipped",
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	    "outputs": {}
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	  }
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	}
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2026-01-03T04:13:37.0208306Z env:
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2026-01-03T04:13:37.0208585Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2026-01-03T04:13:37.0208916Z ##[endgroup]
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2026-01-03T04:13:37.0302052Z ##[group]Run JOBS='{
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2026-01-03T04:13:37.0302410Z [36;1mJOBS='{[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2026-01-03T04:13:37.0302614Z [36;1m  "conditional": {[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2026-01-03T04:13:37.0302860Z [36;1m    "result": "success",[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2026-01-03T04:13:37.0303112Z [36;1m    "outputs": {[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2026-01-03T04:13:37.0303333Z [36;1m      "js-ci": "true"[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2026-01-03T04:13:37.0303550Z [36;1m    }[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2026-01-03T04:13:37.0303734Z [36;1m  },[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2026-01-03T04:13:37.0303947Z [36;1m  "build-keycloak": {[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2026-01-03T04:13:37.0304197Z [36;1m    "result": "failure",[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2026-01-03T04:13:37.0304431Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2026-01-03T04:13:37.0304665Z [36;1m  },[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2026-01-03T04:13:37.0304849Z [36;1m  "admin-client": {[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2026-01-03T04:13:37.0305074Z [36;1m    "result": "success",[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2026-01-03T04:13:37.0305315Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2026-01-03T04:13:37.0305526Z [36;1m  },[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2026-01-03T04:13:37.0305702Z [36;1m  "ui-shared": {[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2026-01-03T04:13:37.0305910Z [36;1m    "result": "success",[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2026-01-03T04:13:37.0306126Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2026-01-03T04:13:37.0306331Z [36;1m  },[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2026-01-03T04:13:37.0306502Z [36;1m  "account-ui": {[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2026-01-03T04:13:37.0306713Z [36;1m    "result": "success",[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2026-01-03T04:13:37.0306927Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2026-01-03T04:13:37.0307124Z [36;1m  },[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2026-01-03T04:13:37.0307307Z [36;1m  "account-ui-e2e": {[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2026-01-03T04:13:37.0307526Z [36;1m    "result": "skipped",[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2026-01-03T04:13:37.0307749Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2026-01-03T04:13:37.0307942Z [36;1m  },[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2026-01-03T04:13:37.0308120Z [36;1m  "admin-ui": {[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2026-01-03T04:13:37.0308318Z [36;1m    "result": "success",[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2026-01-03T04:13:37.0308538Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2026-01-03T04:13:37.0308728Z [36;1m  },[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2026-01-03T04:13:37.0308906Z [36;1m  "admin-ui-e2e": {[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2026-01-03T04:13:37.0309125Z [36;1m    "result": "skipped",[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2026-01-03T04:13:37.0309344Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2026-01-03T04:13:37.0309538Z [36;1m  },[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2026-01-03T04:13:37.0309725Z [36;1m  "keycloak-admin-client": {[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2026-01-03T04:13:37.0309979Z [36;1m    "result": "skipped",[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2026-01-03T04:13:37.0310193Z [36;1m    "outputs": {}[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2026-01-03T04:13:37.0310392Z [36;1m  }[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2026-01-03T04:13:37.0310557Z [36;1m}'[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2026-01-03T04:13:37.0310732Z [36;1m[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2026-01-03T04:13:37.0310907Z [36;1mecho "Job status:"[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2026-01-03T04:13:37.0311238Z [36;1mecho $JOBS | jq -r 'to_entries[] | " - \(.key): \(.value.result)"'[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2026-01-03T04:13:37.0311755Z [36;1m[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2026-01-03T04:13:37.0312003Z [36;1mfor i in $(echo $JOBS | jq -r 'to_entries[] | .value.result'); do[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2026-01-03T04:13:37.0312367Z [36;1m  if [ "$i" != "success" ] && [ "$i" != "skipped" ]; then[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2026-01-03T04:13:37.0312635Z [36;1m    echo ""[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2026-01-03T04:13:37.0312849Z [36;1m    echo "Status check not okay!"[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2026-01-03T04:13:37.0313094Z [36;1m    exit 1[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2026-01-03T04:13:37.0313276Z [36;1m  fi[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2026-01-03T04:13:37.0313437Z [36;1mdone[0m
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2026-01-03T04:13:37.0351640Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2026-01-03T04:13:37.0352250Z env:
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2026-01-03T04:13:37.0352558Z   MAVEN_ARGS: -B -nsu -Daether.connector.http.connectionMaxTtl=25
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2026-01-03T04:13:37.0352886Z ##[endgroup]
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2026-01-03T04:13:37.1253819Z Job status:
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2026-01-03T04:13:37.1277242Z  - conditional: success
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2026-01-03T04:13:37.1277708Z  - build-keycloak: failure
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2026-01-03T04:13:37.1278090Z  - admin-client: success
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2026-01-03T04:13:37.1278446Z  - ui-shared: success
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2026-01-03T04:13:37.1278657Z  - account-ui: success
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2026-01-03T04:13:37.1278884Z  - account-ui-e2e: skipped
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2026-01-03T04:13:37.1279102Z  - admin-ui: success
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2026-01-03T04:13:37.1279316Z  - admin-ui-e2e: skipped
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2026-01-03T04:13:37.1279546Z  - keycloak-admin-client: skipped
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2026-01-03T04:13:37.1310876Z 
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2026-01-03T04:13:37.1311239Z Status check not okay!
+Status Check - Keycloak JavaScript CI	Run /./.github/actions/status-check	2026-01-03T04:13:37.1324726Z ##[error]Process completed with exit code 1.
